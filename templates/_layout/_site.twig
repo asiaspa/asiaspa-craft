@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html class="no-js" lang="{{ craft.app.sites.currentSite.language | default('en') }}">
+
+<head>
+    {# -------------------  meta ------------------- #}
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <title>Asiaspa</title>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="referrer" content="origin-when-cross-origin" />
+    {# -------------------  scss ------------------- #}
+    <link id="codyframe" rel="stylesheet" href="css/style.css">
+    <!-- browsers not supporting CSS variables -->
+    <script>
+        if (!('CSS' in window) || !CSS.supports('color', 'var(--color-var)')) {
+            var cfStyle = document.getElementById('codyframe');
+            if (cfStyle) {
+                var href = cfStyle.getAttribute('href');
+                href = href.replace('style.css', 'style-fallback.css');
+                cfStyle.setAttribute('href', href);
+            }
+        }
+    </script>
+</head>
+
+<body class="ltr">
+    {# ------------------- header  ------------------- #}
+    <div style="width:100%; height: 64px; text-align:center; background: #f2f2f2; vertical-align:center;">
+        <bold>Asiaspa Header</bold>
+    </div>
+
+    {# ------------------- main  ------------------- #}
+    <main>
+        {% block main %}
+        {% endblock %}
+    </main>
+
+    {# ------------------- footer  ------------------- #}
+    <div style="width:100%; height: 64px; text-align:center; background: #f2f2f2; vertical-align:center;">
+        <bold>Asiaspa Footer</bold>
+    </div>
+
+    {# -------------------  script ------------------- #}
+    <script src="/js/frontend.js"></script>
+</body>
+
+</html>
