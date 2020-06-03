@@ -1,7 +1,7 @@
 {% extends "_layout/_site" ~ craft.app.request.getParam("view") %}  
 
 {# ------------------- main ------------------- #}
-{% block main }
+{% block main %}
 {% cache %}
 
 {% set articles = craft.entries({
