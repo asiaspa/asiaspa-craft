@@ -21,8 +21,8 @@
 {% set location = craft.request.getQueryString('location') %}
 
 {% set entries = craft.entries.myMapField({
-    location: location',
-    country: country',
+    location: location,
+    country: country,
     radius: 100,
     unit: 'mi',
 }).all() %}
