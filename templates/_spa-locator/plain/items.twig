@@ -1,13 +1,14 @@
 
 {% if items %}
-    <div class="row">
+    <ul>
     {% for item in items %}
-        <div class="col-sm-12 col-md-6 my-3">
-            <div class="row">
-                <div class="col-md-12 offset-lg-2"></div>
+    <li>
+                <a href="item.url">{{ item.title }}</a>
+                </li>
+
+                {# <div class="col-md-12 offset-lg-2"></div>
                 <div class="col-md-12 col-lg-5 text-right">
                     {% set image  = item.getFieldStatus('superFilterAssets') != null ? item.superFilterAssets.first() : null %}
-                    {# Display the thumbnail list #}
 
                     {% if image %}
                         <img width="{{ image.width }}" height="{{ image.height }}" src="{{ image.url }}" alt="{{ image.title }}">
@@ -26,9 +27,8 @@
                         {{ item.superFilterDescription }}
                     </div>
                     <p><small><strong>Tags:</strong> {{ item.superFilterShowTags.select('title').column()|join(', ') }}</small></p>
-                </div>
-            </div>
-        </div>
+                </div> #}
     {% endfor %}
-    </div>
+
+    </ul>
 {% endif %}
