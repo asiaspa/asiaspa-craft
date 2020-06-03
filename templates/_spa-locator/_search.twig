@@ -20,7 +20,7 @@
 {% set country = craft.request.getQueryString('country') %}
 {% set location = craft.request.getQueryString('location') %}
 
-{% set entries = craft.entries.myMapField({
+{% set entries = craft.entries.spalocation({
     location: location,
     country: country,
     radius: 100,
