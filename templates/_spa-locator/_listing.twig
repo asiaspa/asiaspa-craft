@@ -9,8 +9,8 @@
 {% set myMapField = entry.spalocation %}
 <img
     src="{{ myMapField.img() }}"
-    srcset="{{ myMapField.imgSrcSet() }}"
-    alt="{{ spalocmyMapFieldation.address }}"
+    srcset="{{ myMapField.imgSrcSet() }}" 
+    alt="{{ myMapField.address }}"
 />
 
 <h5>Dynamic map</h5>
@@ -18,6 +18,11 @@
     id: 'map',
     markers: [{}],
 }) }}
+
+<h5>Related Articles</h5>
+{% for entry in entry.relatedArticles %}
+    <a href="{{ entry.url }}"> {{ entry.title }} </a>
+{% endfor %}
 
 </div>
 {% endblock %}
