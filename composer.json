@@ -1,6 +1,9 @@
 {
   "require": {
     "craftcms/cms": "^3.4.0",
+    "craftcms/redactor": "^2.6",
+    "ether/simplemap": "^3.8",
+    "venveo/craft-redactor-split": "^1.1",
     "vlucas/phpdotenv": "^3.4.0"
   },
   "require-dev": {
