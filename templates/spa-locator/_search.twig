@@ -1,7 +1,7 @@
 {% extends "_layout/_site" %}
 
 {% block main %}
-    <div id="search-app">
+    {# <div id="search-app">
 
         {{ craft.superFilter.setup('searchList') }}
         <div class="row">
@@ -15,6 +15,19 @@
                 {{ craft.superFilter.getPaginateLinks() }}
             </div>
         </div>
-    </div>
+    </div> #}
 
+{% set country = craft.request.getQueryString('country') %}
+{% set location = craft.request.getQueryString('location') %}
+
+{% set entries = craft.entries.myMapField({
+    location: location',
+    country: country',
+    radius: 100,
+    unit: 'mi',
+}).all() %}
+
+{% for entry in entries %}
+    <a href="{{ entry.url }}"> {{ entry.title }} </a>
+{% endfor %}
 {% endblock %}

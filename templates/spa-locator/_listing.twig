@@ -1,0 +1,23 @@
+{% extends "_layout/_site" ~ craft.app.request.getParam("view") %}
+
+{# ------------------- main ------------------- #}
+{% block main %}
+
+{{ entry.title }}
+<div style="width:100%; max-width: 800px; margin: 0 auto;">
+<h5>Static map</h5>
+{% set myMapField = entry.spalocation %}
+<img
+    src="{{ myMapField.img() }}"
+    srcset="{{ myMapField.imgSrcSet() }}"
+    alt="{{ spalocmyMapFieldation.address }}"
+/>
+
+<h5>Dynamic map</h5>
+{{ myMapField.embed({
+    id: 'map',
+    markers: [{}],
+}) }}
+
+</div>
+{% endblock %}
