@@ -9118,3 +9118,69 @@ mark {
   cursor: not-allowed;
 }
 
+.articles-v3__img {
+  display: block;
+  transition: opacity 0.3s;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.articles-v3__img img {
+  display: block;
+  width: 100%;
+}
+
+.articles-v3__img:hover {
+  opacity: 0.85;
+}
+
+.articles-v3__headline {
+  font-size: var(--text-xl);
+}
+
+.articles-v3__headline a {
+  color: var(--color-contrast-higher);
+  text-decoration: none;
+}
+
+.articles-v3__headline a:hover {
+  text-decoration: underline;
+}
+
+.articles-v3__author {
+  display: grid;
+  grid-template-columns: 3em 1fr;
+  grid-gap: var(--space-xs);
+  align-items: center;
+  margin-top: var(--space-md);
+}
+
+.articles-v3__author-img {
+  display: block;
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: transform 0.3s var(--bounce);
+}
+
+.articles-v3__author-img img {
+  display: block;
+  width: inherit;
+  height: inherit;
+}
+
+.articles-v3__author-img:hover {
+  transform: scale(1.1);
+}
+
+.articles-v3__author-name {
+  font-weight: bold;
+  color: var(--color-contrast-higher);
+  text-decoration: none;
+}
+
+.articles-v3__author-name:hover {
+  text-decoration: underline;
+}
+

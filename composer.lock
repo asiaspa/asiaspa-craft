@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f9ffb5089e27f181eb23ec7579680747",
+    "content-hash": "1bb832c12191edbb28412b5f74520c97",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -2405,6 +2405,57 @@
                 "random"
             ],
             "time": "2018-07-02T15:55:56+00:00"
+        },
+        {
+            "name": "pdaleramirez/super-filter",
+            "version": "1.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pdaleramirez/super-filter.git",
+                "reference": "9d6ba81617729ea50def85d5c73e54a4e491497d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pdaleramirez/super-filter/zipball/9d6ba81617729ea50def85d5c73e54a4e491497d",
+                "reference": "9d6ba81617729ea50def85d5c73e54a4e491497d",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Super Filter",
+                "handle": "super-filter",
+                "hasCpSettings": false,
+                "hasCpSection": false,
+                "changelogUrl": "https://raw.githubusercontent.com/pdaleramirez/super-filter/master/CHANGELOG.md",
+                "class": "pdaleramirez\\superfilter\\SuperFilter"
+            },
+            "autoload": {
+                "psr-4": {
+                    "pdaleramirez\\superfilter\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dale Ramirez",
+                    "homepage": "https://github.com/pdaleramirez"
+                }
+            ],
+            "description": "A Craft CMS 3 plugin that lets you build your search page with search filters from your element fields and filter element entries by categories, tags, element relations and other fields.",
+            "keywords": [
+                "Craft",
+                "cms",
+                "craft-plugin",
+                "craftcms",
+                "search filter"
+            ],
+            "time": "2020-05-18T13:27:04+00:00"
         },
         {
             "name": "phpdocumentor/reflection-common",
