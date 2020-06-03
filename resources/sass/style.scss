@@ -1,0 +1,6 @@
+// codyhouse
+@import '../../node_modules/codyhouse-framework/main/assets/css/base';
+
+// custom
+@import 'custom-style';
+@import 'components/**/*.scss'; // 👈import all the .scss files in the sass/components/* folder
