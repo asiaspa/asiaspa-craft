@@ -7,11 +7,7 @@
 {% set articles = craft.entries({
 	section: "article",
 	orderBy: 'postDate desc',
-	with: [
-		"articleDescription",
-        "articleHero",
-        "author"
-    ]
+
 }) %}
 
 <section class="articles-v3">
