@@ -28,3 +28,7 @@
 
 *.unison.tmp
 node_modules
+
+
+# ignore dev file
+.vscode
