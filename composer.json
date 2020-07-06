@@ -1,8 +1,22 @@
 {
   "require": {
+    "barrelstrength/sprout-forms": "3.12.2",
+    "clubstudioltd/craft-asset-rev": "6.0.2",
+    "craftcms/aws-s3": "1.2.8",
     "craftcms/cms": "^3.4.0",
     "craftcms/redactor": "^2.6",
-    "venveo/craft-redactor-split": "^1.1",
+    "croxton/imgixer": "1.0.1",
+    "ether/simplemap": "3.8.4.1",
+    "misterbk/mix": "1.5.2",
+    "nystudio107/craft-minify": "1.2.10",
+    "nystudio107/craft-retour": "3.1.39",
+    "nystudio107/craft-seomatic": "3.3.8",
+    "nystudio107/craft-twigprofiler": "1.0.1",
+    "putyourlightson/craft-blitz": "3.6.5",
+    "putyourlightson/craft-blitz-recommendations": "1.1.0",
+    "putyourlightson/craft-sprig": "1.0.0-beta.7",
+    "superbig/craft3-http2serverpush": "1.0.1",
+    "verbb/navigation": "1.3.21",
     "vlucas/phpdotenv": "^3.4.0"
   },
   "require-dev": {

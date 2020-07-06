@@ -41,6 +41,8 @@ return [
 
     'production' => [
         'siteUrl' => null,
+        // prevent conflict with project config
+        'allowAdminChanges' => false,
     ],
 
     'local' => [

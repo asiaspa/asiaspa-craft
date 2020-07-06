@@ -1,4 +1,4 @@
-dateModified: 1593966801
+dateModified: 1594076334
 email:
   fromEmail: chanwhab@gmail.com
   fromName: AsiaSpa
@@ -6,16 +6,637 @@ email:
 fieldGroups:
   8fb109e3-a54e-473f-9d11-1bb2bebb1483:
     name: Common
+fields:
+  099c3a31-e7ef-43be-83d2-b98248992c9d:
+    contentColumnType: text
+    fieldGroup: a7b23ced-f8be-4c09-bba7-84b5e4552f75
+    handle: spasection2
+    instructions: ''
+    name: spaSection2
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  15c64036-65ff-4185-9fc1-65270ef5bdcd:
+    contentColumnType: string
+    fieldGroup: 847d91f3-2f4a-4f56-9f9d-40c20e080811
+    handle: articleHero
+    instructions: ''
+    name: 'Article Hero'
+    searchable: true
+    settings:
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:ace0a884-2407-49b2-99dd-e0c609759687'
+      defaultUploadLocationSubpath: ''
+      limit: ''
+      localizeRelations: false
+      restrictFiles: '1'
+      selectionLabel: ''
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:ace0a884-2407-49b2-99dd-e0c609759687'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: true
+      validateRelatedElements: ''
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  563e2d82-3b66-4e55-acda-0f01c46cff69:
+    contentColumnType: string
+    fieldGroup: a7b23ced-f8be-4c09-bba7-84b5e4552f75
+    handle: spalocation
+    instructions: ''
+    name: spalocation
+    searchable: true
+    settings:
+      boundary: '""'
+      boundaryRestrictionNELat: null
+      boundaryRestrictionNELng: null
+      boundaryRestrictionSWLat: null
+      boundaryRestrictionSWLng: null
+      country: null
+      countryRestriction: null
+      height: null
+      hideAddress: ''
+      hideLatLng: null
+      hideMap: ''
+      hideSearch: ''
+      lat: 22.2850394
+      lng: 114.1583819
+      maxZoom: '18'
+      minZoom: '3'
+      showCurrentLocation: ''
+      showLatLng: ''
+      showW3WField: false
+      showW3WGrid: false
+      size: normal
+      typeRestriction: null
+      zoom: 17
+    translationKeyFormat: null
+    translationMethod: none
+    type: ether\simplemap\fields\MapField
+  601c23db-8824-4936-852f-900d836fe7c7:
+    contentColumnType: text
+    fieldGroup: a7b23ced-f8be-4c09-bba7-84b5e4552f75
+    handle: spasection5
+    instructions: ''
+    name: spaSection5
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  6338f75a-f60c-4695-8444-c10e052a2d3e:
+    contentColumnType: string
+    fieldGroup: a7b23ced-f8be-4c09-bba7-84b5e4552f75
+    handle: relatedArticles
+    instructions: ''
+    name: 'Related articles'
+    searchable: true
+    settings:
+      limit: ''
+      localizeRelations: false
+      selectionLabel: ''
+      source: null
+      sources:
+        - 'section:5e15a326-1e20-4d38-86df-6f2bc3183b14'
+      targetSiteId: null
+      validateRelatedElements: ''
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+  6cc55362-cf48-4b19-a5f3-a13c45148573:
+    contentColumnType: string
+    fieldGroup: 847d91f3-2f4a-4f56-9f9d-40c20e080811
+    handle: featuredInIssue
+    instructions: ''
+    name: 'Featured in Issue'
+    searchable: true
+    settings:
+      allowLimit: false
+      allowMultipleSources: false
+      branchLimit: '1'
+      limit: null
+      localizeRelations: false
+      selectionLabel: Issue
+      source: 'group:747402aa-105d-41d3-ace6-9e3de98971a4'
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: ''
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Categories
+  93e25175-322f-41f4-8314-40d076231cab:
+    contentColumnType: string
+    fieldGroup: 847d91f3-2f4a-4f56-9f9d-40c20e080811
+    handle: relatedSpa
+    instructions: ''
+    name: 'Related Spa'
+    searchable: true
+    settings:
+      limit: ''
+      localizeRelations: false
+      selectionLabel: ''
+      source: null
+      sources:
+        - 'section:c2929640-5995-4a0b-b490-deb3c54ab6d4'
+      targetSiteId: null
+      validateRelatedElements: ''
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+  a0c7658e-9ba3-482f-be6b-696ae5ec854e:
+    contentColumnType: string
+    fieldGroup: 847d91f3-2f4a-4f56-9f9d-40c20e080811
+    handle: relatedCategory
+    instructions: ''
+    name: 'related category'
+    searchable: true
+    settings:
+      allowLimit: false
+      allowMultipleSources: false
+      branchLimit: '1'
+      limit: null
+      localizeRelations: false
+      selectionLabel: category
+      source: 'group:b85be20d-3d22-431f-a700-c2d63cf40881'
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: ''
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Categories
+  a9f00eab-73ff-4659-9b15-ee56aa8c8531:
+    contentColumnType: string
+    fieldGroup: 847d91f3-2f4a-4f56-9f9d-40c20e080811
+    handle: storyContent
+    instructions: Matrix
+    name: 'Story Content'
+    searchable: true
+    settings:
+      contentTable: '{{%matrixcontent_storycontent}}'
+      maxBlocks: ''
+      minBlocks: ''
+      propagationMethod: all
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Matrix
+  aef63627-b393-48b4-a685-94c97739fdf1:
+    contentColumnType: text
+    fieldGroup: 847d91f3-2f4a-4f56-9f9d-40c20e080811
+    handle: articleDescription
+    instructions: ''
+    name: 'Article Description'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  b86e7b92-a45b-4e78-872e-aad22d5e770e:
+    contentColumnType: string
+    fieldGroup: 847d91f3-2f4a-4f56-9f9d-40c20e080811
+    handle: campaign
+    instructions: ''
+    name: Campaign
+    searchable: true
+    settings:
+      allowLimit: false
+      allowMultipleSources: false
+      branchLimit: '1'
+      limit: null
+      localizeRelations: false
+      selectionLabel: Campaign
+      source: 'group:dc068a49-9607-4bc7-9bd1-069f279dbf76'
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: ''
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Categories
+  bdc76393-e47c-4932-aa5b-74edb236fe64:
+    contentColumnType: string(4)
+    fieldGroup: a7b23ced-f8be-4c09-bba7-84b5e4552f75
+    handle: spaSection1
+    instructions: ''
+    name: 'Spa section 1'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: 1
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  ecd6680e-0319-4dc9-8dc9-c08bad2c97b2:
+    contentColumnType: text
+    fieldGroup: a7b23ced-f8be-4c09-bba7-84b5e4552f75
+    handle: spasection3
+    instructions: ''
+    name: spaSection3
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  fd704a3e-dfb4-498c-bddc-3b0e6b2b1403:
+    contentColumnType: text
+    fieldGroup: a7b23ced-f8be-4c09-bba7-84b5e4552f75
+    handle: spasection4
+    instructions: ''
+    name: spaSection4
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
 graphql:
   schemas:
     7c12686d-0f16-4307-b3f7-eba7f1d8a5d0:
       isPublic: true
       name: 'Public Schema'
 plugins:
+  assetrev:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  aws-s3:
+    edition: standard
+    enabled: true
+    schemaVersion: '1.2'
+  blitz:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.1.0
+    settings:
+      apiKey: ''
+      cacheControlHeader: 'public, s-maxage=31536000, max-age=0'
+      cacheDuration: null
+      cacheElementQueries: true
+      cacheElements: true
+      cachePurgerType: putyourlightson\blitz\drivers\purgers\DummyPurger
+      cacheStorageSettings:
+        __assoc__:
+          -
+            - folderPath
+            - '@webroot/cache/blitz'
+          -
+            - createGzipFiles
+            - ''
+      cacheStorageType: putyourlightson\blitz\drivers\storage\FileStorage
+      cacheWarmerSettings:
+        __assoc__:
+          -
+            - concurrency
+            - '3'
+      cacheWarmerType: putyourlightson\blitz\drivers\warmers\GuzzleWarmer
+      cachingEnabled: '1'
+      clearCacheAutomatically: '1'
+      customSiteUris: ''
+      debug: false
+      deployerType: putyourlightson\blitz\drivers\deployers\DummyDeployer
+      driverJobPriority: 100
+      excludedQueryStringParams:
+        - gclid
+        - fbclid
+      excludedUriPatterns: ''
+      includedUriPatterns:
+        -
+          __assoc__:
+            -
+              - uriPattern
+              - '.*'
+      injectScriptEvent: DOMContentLoaded
+      integrations:
+        - putyourlightson\blitz\drivers\integrations\FeedMeIntegration
+        - putyourlightson\blitz\drivers\integrations\SeomaticIntegration
+      mutexTimeout: 1
+      outputComments: true
+      queryStringCaching: '0'
+      refreshCacheAutomaticallyForGlobals: true
+      refreshCacheJobPriority: 10
+      refreshCacheWhenElementSavedNotLive: false
+      refreshCacheWhenElementSavedUnchanged: false
+      sendPoweredByHeader: true
+      warmCacheAutomatically: '1'
+  blitz-recommendations:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  http2-server-push:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  imgixer:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  minify:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  mix:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  navigation:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.17
   redactor:
     edition: standard
     enabled: true
     schemaVersion: 2.3.0
+  retour:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.9
+  seomatic:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.9
+  sprig:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  sprout-forms:
+    enabled: true
+    settings:
+      captchaSettings:
+        barrelstrength\sproutforms\captchas\DuplicateCaptcha:
+          enabled: 0
+        barrelstrength\sproutforms\captchas\HoneypotCaptcha:
+          enabled: 0
+          honeypotFieldName: sprout-forms-hc
+          honeypotScreenReaderMessage: 'Leave this field blank'
+        barrelstrength\sproutforms\captchas\JavascriptCaptcha:
+          enabled: 1
+      cleanupProbability: 1000
+      defaultSection: entries
+      enableEditFormEntryViaFrontEnd: false
+      enableSaveData: true
+      enableSaveDataDefaultValue: true
+      formTemplateId: barrelstrength\sproutforms\formtemplates\AccessibleTemplates
+      pluginNameOverride: ''
+      saveSpamToDatabase: false
+      showNotificationsTab: true
+      showReportsTab: true
+      spamLimit: 500
+      spamRedirectBehavior: redirectAsNormal
+      trackRemoteIp: false
+  twig-profiler:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+sections:
+  48ef7d40-ffba-45ee-8f7a-e812985c465e:
+    enableVersioning: true
+    entryTypes:
+      5e7a33cb-103a-43c5-9285-1591bb8f7e6f:
+        handle: spaLocator
+        hasTitleField: false
+        name: 'Spa Locator'
+        sortOrder: 1
+        titleFormat: '{section.name|raw}'
+        titleLabel: null
+    handle: spaLocator
+    name: 'Spa Locator'
+    previewTargets:
+      -
+        label: 'Primary entry page'
+        refresh: '1'
+        urlFormat: '{url}'
+    propagationMethod: all
+    siteSettings:
+      5058e36f-39fa-4fe2-982d-2a6082be4a27:
+        enabledByDefault: true
+        hasUrls: true
+        template: _spa-locator/_search.twig
+        uriFormat: spa-locator
+    type: single
+  5e15a326-1e20-4d38-86df-6f2bc3183b14:
+    enableVersioning: true
+    entryTypes:
+      1213ba85-ec03-4054-ad83-a781049b7296:
+        fieldLayouts:
+          946c8901-a593-48c5-9e33-438afcca6841:
+            tabs:
+              -
+                fields:
+                  15c64036-65ff-4185-9fc1-65270ef5bdcd:
+                    required: false
+                    sortOrder: 2
+                  6338f75a-f60c-4695-8444-c10e052a2d3e:
+                    required: false
+                    sortOrder: 6
+                  6cc55362-cf48-4b19-a5f3-a13c45148573:
+                    required: false
+                    sortOrder: 4
+                  93e25175-322f-41f4-8314-40d076231cab:
+                    required: false
+                    sortOrder: 7
+                  a0c7658e-9ba3-482f-be6b-696ae5ec854e:
+                    required: false
+                    sortOrder: 3
+                  aef63627-b393-48b4-a685-94c97739fdf1:
+                    required: false
+                    sortOrder: 1
+                  b86e7b92-a45b-4e78-872e-aad22d5e770e:
+                    required: false
+                    sortOrder: 5
+                name: 'Tab 1'
+                sortOrder: 1
+              -
+                fields:
+                  a9f00eab-73ff-4659-9b15-ee56aa8c8531:
+                    required: false
+                    sortOrder: 1
+                name: 'Tab 2'
+                sortOrder: 2
+        handle: article
+        hasTitleField: true
+        name: Article
+        sortOrder: 1
+        titleFormat: ''
+        titleLabel: Title
+    handle: story
+    name: Story
+    previewTargets:
+      -
+        label: 'Primary entry page'
+        refresh: '1'
+        urlFormat: '{url}'
+    propagationMethod: all
+    siteSettings:
+      5058e36f-39fa-4fe2-982d-2a6082be4a27:
+        enabledByDefault: true
+        hasUrls: true
+        template: _blog/_story.twig
+        uriFormat: 'story/{slug}'
+    type: channel
+  73c18577-4ee7-4d1d-be3f-133db7de04c5:
+    enableVersioning: true
+    entryTypes:
+      e2b0c80d-12b7-48b4-9c21-5546159e05a0:
+        fieldLayouts:
+          3e0f3127-6064-440e-a098-78b95b5a3b0d:
+            tabs:
+              -
+                fields:
+                  6338f75a-f60c-4695-8444-c10e052a2d3e:
+                    required: false
+                    sortOrder: 1
+                  b86e7b92-a45b-4e78-872e-aad22d5e770e:
+                    required: false
+                    sortOrder: 2
+                name: 'Tab 1'
+                sortOrder: 1
+        handle: index
+        hasTitleField: false
+        name: Index
+        sortOrder: 1
+        titleFormat: '{section.name|raw}'
+        titleLabel: ''
+    handle: index
+    name: Index
+    previewTargets:
+      -
+        label: 'Primary entry page'
+        refresh: '1'
+        urlFormat: '{url}'
+    propagationMethod: all
+    siteSettings:
+      5058e36f-39fa-4fe2-982d-2a6082be4a27:
+        enabledByDefault: true
+        hasUrls: true
+        template: index.twig
+        uriFormat: __home__
+    type: single
+  c2929640-5995-4a0b-b490-deb3c54ab6d4:
+    enableVersioning: true
+    entryTypes:
+      0735ae82-bf72-4472-bbc9-1752f2c58452:
+        fieldLayouts:
+          77d45d93-1ae6-4228-88ab-22bc4486992a:
+            tabs:
+              -
+                fields:
+                  563e2d82-3b66-4e55-acda-0f01c46cff69:
+                    required: false
+                    sortOrder: 2
+                  6338f75a-f60c-4695-8444-c10e052a2d3e:
+                    required: false
+                    sortOrder: 3
+                  a9f00eab-73ff-4659-9b15-ee56aa8c8531:
+                    required: false
+                    sortOrder: 1
+                name: Main
+                sortOrder: 1
+              -
+                fields:
+                  bdc76393-e47c-4932-aa5b-74edb236fe64:
+                    required: false
+                    sortOrder: 1
+                name: 'Tab 1'
+                sortOrder: 2
+              -
+                fields:
+                  099c3a31-e7ef-43be-83d2-b98248992c9d:
+                    required: false
+                    sortOrder: 1
+                name: 'Tab 2'
+                sortOrder: 3
+              -
+                fields:
+                  ecd6680e-0319-4dc9-8dc9-c08bad2c97b2:
+                    required: false
+                    sortOrder: 1
+                name: 'Tab 3'
+                sortOrder: 4
+              -
+                fields:
+                  fd704a3e-dfb4-498c-bddc-3b0e6b2b1403:
+                    required: false
+                    sortOrder: 1
+                name: 'Tab 4'
+                sortOrder: 5
+              -
+                fields:
+                  601c23db-8824-4936-852f-900d836fe7c7:
+                    required: false
+                    sortOrder: 1
+                name: 'Tab 5'
+                sortOrder: 6
+        handle: spaListings
+        hasTitleField: true
+        name: 'Spa Listings'
+        sortOrder: 1
+        titleFormat: ''
+        titleLabel: Title
+    handle: spaListings
+    name: 'Spa Listings'
+    previewTargets:
+      -
+        label: 'Primary entry page'
+        refresh: '1'
+        urlFormat: '{url}'
+    propagationMethod: all
+    siteSettings:
+      5058e36f-39fa-4fe2-982d-2a6082be4a27:
+        enabledByDefault: true
+        hasUrls: true
+        template: _spa-locator/_listing
+        uriFormat: 'spa-listings/{slug}'
+    type: channel
 siteGroups:
   fd01b8f7-faec-4a4c-9dff-5f0b23f5a043:
     name: AsiaSpa
@@ -41,3 +662,22 @@ users:
   photoSubpath: ''
   photoVolumeUid: null
   requireEmailVerification: true
+volumes:
+  9aadb40c-275a-45a4-9474-69052e27a867:
+    handle: assetTemp
+    hasUrls: true
+    name: 'Asset Temp'
+    settings:
+      path: /assetTemp
+    sortOrder: 2
+    type: craft\volumes\Local
+    url: /assettemp
+  ace0a884-2407-49b2-99dd-e0c609759687:
+    handle: temp
+    hasUrls: true
+    name: Temp
+    settings:
+      path: /temp
+    sortOrder: 1
+    type: craft\volumes\Local
+    url: /temp
