@@ -9,22 +9,19 @@
  */
 
 return [
-    // Global settings
     '*' => [
-        // Default Week Start Day (0 = Sunday, 1 = Monday...)
+        'useProjectConfigFile' => true,
         'defaultWeekStartDay' => 0,
-
-        // Enable CSRF Protection (recommended)
         'enableCsrfProtection' => true,
-
-        // Whether generated URLs should omit "index.php"
         'omitScriptNameInUrls' => true,
-
-        // Control Panel trigger word
         'cpTrigger' => 'admin',
-
-        // The secure key Craft will use for hashing and encrypting data
+        // SAME between local & hyperlane server
         'securityKey' => getenv('SECURITY_KEY'),
+
+        // options
+        // cache forever
+        'cacheDuration' => 0,
+        'siteName' => 'AsiaSpa',
 
         // Hyperlane defined aliases
         'aliases' => [
@@ -33,24 +30,21 @@ return [
         ]
     ],
 
-    // Dev environment settings
     'dev' => [
-        // Base site URL
         'siteUrl' => null,
-
-        // Dev Mode (see https://craftcms.com/support/dev-mode)
         'devMode' => true,
     ],
 
-    // Staging environment settings
     'staging' => [
-        // Base site URL
         'siteUrl' => null,
     ],
 
-    // Production environment settings
     'production' => [
-        // Base site URL
         'siteUrl' => null,
     ],
+
+    'local' => [
+        'siteUrl' => null,
+        'devMode' => true
+    ]
 ];

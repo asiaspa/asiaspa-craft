@@ -1,0 +1,43 @@
+dateModified: 1593966801
+email:
+  fromEmail: chanwhab@gmail.com
+  fromName: AsiaSpa
+  transportType: craft\mail\transportadapters\Sendmail
+fieldGroups:
+  8fb109e3-a54e-473f-9d11-1bb2bebb1483:
+    name: Common
+graphql:
+  schemas:
+    7c12686d-0f16-4307-b3f7-eba7f1d8a5d0:
+      isPublic: true
+      name: 'Public Schema'
+plugins:
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
+siteGroups:
+  fd01b8f7-faec-4a4c-9dff-5f0b23f5a043:
+    name: AsiaSpa
+sites:
+  9d973a4e-e003-44e6-b83a-ce81733a43cc:
+    baseUrl: $DEFAULT_SITE_URL
+    handle: default
+    hasUrls: true
+    language: en-US
+    name: AsiaSpa
+    primary: true
+    siteGroup: fd01b8f7-faec-4a4c-9dff-5f0b23f5a043
+    sortOrder: 1
+system:
+  edition: pro
+  live: true
+  name: AsiaSpa
+  schemaVersion: 3.4.10
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: ''
+  photoVolumeUid: null
+  requireEmailVerification: true
