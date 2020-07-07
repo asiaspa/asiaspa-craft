@@ -30,23 +30,23 @@ return [
         ]
     ],
 
-    'dev' => [
-        'siteUrl' => null,
-        'devMode' => true,
-    ],
+    // 'dev' => [
+    //     'siteUrl' => null,
+    //     'devMode' => true,
+    // ],
 
-    'staging' => [
-        'siteUrl' => null,
-    ],
+    // 'staging' => [
+    //     'siteUrl' => null,
+    // ],
 
-    'production' => [
-        'siteUrl' => null,
-        // prevent conflict with project config
-        'allowAdminChanges' => false,
-    ],
+    // 'production' => [
+    //     'siteUrl' => null,
+    //     // prevent conflict with project config
+    //     'allowAdminChanges' => false,
+    // ],
 
     'local' => [
-        'siteUrl' => null,
+        // 'siteUrl' => null,
         'devMode' => true
     ]
 ];
