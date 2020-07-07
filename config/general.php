@@ -10,7 +10,7 @@
 
 return [
     '*' => [
-        'useProjectConfigFile' => true,
+        'useProjectConfigFile' => false,
         'defaultWeekStartDay' => 0,
         'enableCsrfProtection' => true,
         'omitScriptNameInUrls' => true,

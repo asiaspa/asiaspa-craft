@@ -1,11 +1,51 @@
-dateModified: 1594076334
+categoryGroups:
+  747402aa-105d-41d3-ace6-9e3de98971a4:
+    handle: printIssue
+    name: 'Print Issue'
+    siteSettings:
+      5058e36f-39fa-4fe2-982d-2a6082be4a27:
+        hasUrls: true
+        template: _category/_print-issue.twig
+        uriFormat: 'print-issue/{slug}'
+    structure:
+      maxLevels: 1
+      uid: d3a91e7b-dae5-4b4c-aa4b-54b1aeaee2f7
+  b85be20d-3d22-431f-a700-c2d63cf40881:
+    handle: category
+    name: Category
+    siteSettings:
+      5058e36f-39fa-4fe2-982d-2a6082be4a27:
+        hasUrls: true
+        template: _category/_category.twig
+        uriFormat: '{parent.uri}/{slug}'
+    structure:
+      maxLevels: 2
+      uid: a91585f1-dc6d-4768-a9b1-daef1e672cdf
+  dc068a49-9607-4bc7-9bd1-069f279dbf76:
+    handle: campaign
+    name: Campaign
+    siteSettings:
+      5058e36f-39fa-4fe2-982d-2a6082be4a27:
+        hasUrls: true
+        template: _category/_campaign.twig
+        uriFormat: 'campaign/{slug}'
+    structure:
+      maxLevels: 1
+      uid: d78d195b-65bf-439f-8380-a34d4fb46731
+dateModified: 1594093719
 email:
   fromEmail: chanwhab@gmail.com
   fromName: AsiaSpa
   transportType: craft\mail\transportadapters\Sendmail
 fieldGroups:
-  8fb109e3-a54e-473f-9d11-1bb2bebb1483:
+  6ebe0a75-3257-417d-8c9b-c712a8dbf9c9:
     name: Common
+  847d91f3-2f4a-4f56-9f9d-40c20e080811:
+    name: Story
+  a7b23ced-f8be-4c09-bba7-84b5e4552f75:
+    name: 'Spa Listings'
+  edf833c9-3ba6-49e0-9a69-c10802ea4731:
+    name: 'Spa Locator'
 fields:
   099c3a31-e7ef-43be-83d2-b98248992c9d:
     contentColumnType: text
@@ -301,9 +341,83 @@ fields:
     type: craft\fields\PlainText
 graphql:
   schemas:
-    7c12686d-0f16-4307-b3f7-eba7f1d8a5d0:
+    6f936c24-522c-4cd5-af4c-a929545428fe:
       isPublic: true
       name: 'Public Schema'
+matrixBlockTypes:
+  53016dac-8369-4857-9ee8-1cf38fe11811:
+    field: a9f00eab-73ff-4659-9b15-ee56aa8c8531
+    fieldLayouts:
+      0c70d597-e7f3-4266-b839-7f98db6f7865:
+        tabs:
+          -
+            fields:
+              a847531d-9759-4c96-9316-2fd5fd03de36:
+                required: true
+                sortOrder: 1
+            name: Content
+            sortOrder: 1
+    fields:
+      a847531d-9759-4c96-9316-2fd5fd03de36:
+        contentColumnType: text
+        fieldGroup: null
+        handle: richTextEditor
+        instructions: ''
+        name: 'Rich Text Editor'
+        searchable: true
+        settings:
+          availableTransforms: '*'
+          availableVolumes: '*'
+          cleanupHtml: true
+          columnType: text
+          purifierConfig: ''
+          purifyHtml: '1'
+          redactorConfig: ''
+          removeEmptyTags: '1'
+          removeInlineStyles: '1'
+          removeNbsp: '1'
+          showUnpermittedFiles: false
+          showUnpermittedVolumes: false
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\redactor\Field
+    handle: richTextEditor
+    name: 'Rich Text Editor'
+    sortOrder: 1
+  5f669894-d096-4945-98f0-862ec5652424:
+    field: a9f00eab-73ff-4659-9b15-ee56aa8c8531
+    fieldLayouts:
+      d897db81-3c3e-4f8b-b564-55a7bfe9b14f:
+        tabs:
+          -
+            fields:
+              45986951-1b45-44d4-8caf-c1e6f6ab7f44:
+                required: true
+                sortOrder: 1
+            name: Content
+            sortOrder: 1
+    fields:
+      45986951-1b45-44d4-8caf-c1e6f6ab7f44:
+        contentColumnType: text
+        fieldGroup: null
+        handle: embed
+        instructions: ''
+        name: Embed
+        searchable: true
+        settings:
+          byteLimit: null
+          charLimit: null
+          code: ''
+          columnType: null
+          initialRows: '4'
+          multiline: ''
+          placeholder: ''
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\PlainText
+    handle: embed
+    name: Embed
+    sortOrder: 2
 plugins:
   assetrev:
     edition: standard
@@ -392,10 +506,14 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.17
+  oembed:
+    schemaVersion: 1.0.1
   redactor:
     edition: standard
     enabled: true
     schemaVersion: 2.3.0
+  redactor-split:
+    schemaVersion: 1.0.0
   retour:
     edition: standard
     enabled: true
@@ -404,12 +522,15 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 3.0.9
+  simplemap:
+    schemaVersion: 3.4.2
   sprig:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
   sprout-forms:
     enabled: true
+    schemaVersion: 3.11.8
     settings:
       captchaSettings:
         barrelstrength\sproutforms\captchas\DuplicateCaptcha:
@@ -433,6 +554,8 @@ plugins:
       spamLimit: 500
       spamRedirectBehavior: redirectAsNormal
       trackRemoteIp: false
+  super-filter:
+    schemaVersion: 1.0.0
   twig-profiler:
     edition: standard
     enabled: true
@@ -638,17 +761,17 @@ sections:
         uriFormat: 'spa-listings/{slug}'
     type: channel
 siteGroups:
-  fd01b8f7-faec-4a4c-9dff-5f0b23f5a043:
-    name: AsiaSpa
+  5be258b1-1d41-42f2-8f8c-ce504d6af2da:
+    name: 'Asiaspa - Craft CMS'
 sites:
-  9d973a4e-e003-44e6-b83a-ce81733a43cc:
-    baseUrl: $DEFAULT_SITE_URL
+  5058e36f-39fa-4fe2-982d-2a6082be4a27:
+    baseUrl: /
     handle: default
     hasUrls: true
     language: en-US
-    name: AsiaSpa
+    name: 'Asiaspa - Craft CMS'
     primary: true
-    siteGroup: fd01b8f7-faec-4a4c-9dff-5f0b23f5a043
+    siteGroup: 5be258b1-1d41-42f2-8f8c-ce504d6af2da
     sortOrder: 1
 system:
   edition: pro
