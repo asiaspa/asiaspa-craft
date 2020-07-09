@@ -52,7 +52,7 @@ categoryGroups:
     structure:
       maxLevels: 1
       uid: d78d195b-65bf-439f-8380-a34d4fb46731
-dateModified: 1594266301
+dateModified: 1594282553
 email:
   fromEmail: asiaspa.dev@gmail.com
   fromName: AsiaSpa
@@ -173,6 +173,25 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Lightswitch
+  1f182e2b-1f31-4ccb-bb2a-8479370cf19d:
+    contentColumnType: string
+    fieldGroup: 847d91f3-2f4a-4f56-9f9d-40c20e080811
+    handle: eventCalendar
+    instructions: ''
+    name: 'Event Calendar'
+    searchable: false
+    settings:
+      allDay: false
+      endDate: null
+      endRepeat: null
+      endRepeatDate: null
+      months: null
+      repeatType: null
+      repeats: false
+      startDate: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: unionco\calendarize\fields\CalendarizeField
   2b2910be-51fe-4ca0-90cf-f38ca4db5c39:
     contentColumnType: string(2000)
     fieldGroup: a51007da-85d5-4b44-a04b-e5b89e9ad454
@@ -260,6 +279,24 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
+  6812facd-eece-40bf-a3d3-5cb78aa30b46:
+    contentColumnType: text
+    fieldGroup: 847d91f3-2f4a-4f56-9f9d-40c20e080811
+    handle: storyEventDetail
+    instructions: ''
+    name: 'Event Detail'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: '1'
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
   68752c4e-cc58-4744-a1c4-20778860741f:
     contentColumnType: text
     fieldGroup: 6ebe0a75-3257-417d-8c9b-c712a8dbf9c9
@@ -271,9 +308,7 @@ fields:
       elementDisplayPreviewType: google
       facebookEnabledFields:
         - seoPreview
-        - ogType
         - ogTitle
-        - ogSiteNamePosition
         - ogDescription
         - ogImage
         - ogImageTransform
@@ -282,9 +317,7 @@ fields:
       facebookTabEnabled: '1'
       generalEnabledFields:
         - seoPreview
-        - mainEntityOfPage
         - seoTitle
-        - siteNamePosition
         - seoDescription
         - seoKeywords
         - seoImage
@@ -302,13 +335,11 @@ fields:
         - sitemapChangeFreq
         - sitemapPriority
         - sitemapLimit
-      sitemapTabEnabled: '1'
+      sitemapTabEnabled: ''
       twitterEnabledFields:
         - seoPreview
-        - twitterCardType
         - twitterCreator
         - twitterTitle
-        - twitterSiteNamePosition
         - twitterDescription
         - twitterImage
         - transformTwitterImage
@@ -536,6 +567,58 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Table
+  adf6f8af-24c8-4699-ace8-aa3a8a6dad50:
+    contentColumnType: text
+    fieldGroup: 847d91f3-2f4a-4f56-9f9d-40c20e080811
+    handle: storyEventName
+    instructions: ''
+    name: 'Event Name'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  aed6ce2b-3af8-4e8a-9062-06b6cc84313b:
+    contentColumnType: text
+    fieldGroup: 847d91f3-2f4a-4f56-9f9d-40c20e080811
+    handle: storyEventLocation
+    instructions: ''
+    name: 'Event Location'
+    searchable: true
+    settings:
+      boundary: '""'
+      boundaryRestrictionNELat: null
+      boundaryRestrictionNELng: null
+      boundaryRestrictionSWLat: null
+      boundaryRestrictionSWLng: null
+      country: null
+      countryRestriction: null
+      height: null
+      hideAddress: ''
+      hideLatLng: null
+      hideMap: ''
+      hideSearch: ''
+      lat: 22.350627
+      lng: 114.1849161
+      maxZoom: '18'
+      minZoom: '3'
+      showCurrentLocation: ''
+      showLatLng: ''
+      showW3WField: false
+      showW3WGrid: false
+      size: normal
+      typeRestriction: null
+      zoom: 15
+    translationKeyFormat: null
+    translationMethod: none
+    type: ether\simplemap\fields\MapField
   b357d9dd-f6da-4d5f-b00f-8769518e1b39:
     contentColumnType: string(400)
     fieldGroup: 847d91f3-2f4a-4f56-9f9d-40c20e080811
@@ -605,7 +688,7 @@ fields:
     fieldGroup: a7b23ced-f8be-4c09-bba7-84b5e4552f75
     handle: spaListingLogo
     instructions: 'Transparent PNG / SVG. 160x160 px'
-    name: Logo
+    name: 'Spa Logo'
     searchable: true
     settings:
       allowSelfRelations: ''
@@ -636,7 +719,7 @@ fields:
     fieldGroup: a7b23ced-f8be-4c09-bba7-84b5e4552f75
     handle: spaListingLocation
     instructions: '#TODO this will be changed to the map field later.'
-    name: Location
+    name: 'Spa Location'
     searchable: true
     settings:
       boundary: '""'
@@ -721,6 +804,13 @@ matrixBlockTypes:
                     -
                       - width
                       - ''
+              -
+                - 475ee74b-a539-4e6e-8e80-d4d24a18df18
+                -
+                  __assoc__:
+                    -
+                      - width
+                      - ''
           contentTable: '{{%stc_4_gallery}}'
           fieldLayout: row
           maxRows: ''
@@ -734,6 +824,43 @@ matrixBlockTypes:
     handle: gallery
     name: Gallery
     sortOrder: 2
+  2e70f998-ae36-43eb-b413-0a6605e58839:
+    field: a9f00eab-73ff-4659-9b15-ee56aa8c8531
+    fieldLayouts:
+      845ec257-1307-44e2-87d5-472a2700c0af:
+        tabs:
+          -
+            fields:
+              ce34e0fc-9997-4c71-9a50-5f97486011bc:
+                required: false
+                sortOrder: 1
+            name: Content
+            sortOrder: 1
+    fields:
+      ce34e0fc-9997-4c71-9a50-5f97486011bc:
+        contentColumnType: string
+        fieldGroup: null
+        handle: spaListing
+        instructions: ''
+        name: 'Spa Listing'
+        searchable: true
+        settings:
+          allowSelfRelations: ''
+          limit: ''
+          localizeRelations: false
+          selectionLabel: ''
+          source: null
+          sources:
+            - 'section:c2929640-5995-4a0b-b490-deb3c54ab6d4'
+          targetSiteId: null
+          validateRelatedElements: ''
+          viewMode: null
+        translationKeyFormat: null
+        translationMethod: site
+        type: craft\fields\Entries
+    handle: relatedSpaListing
+    name: 'Related Spa Listing'
+    sortOrder: 7
   53016dac-8369-4857-9ee8-1cf38fe11811:
     field: a9f00eab-73ff-4659-9b15-ee56aa8c8531
     fieldLayouts:
@@ -761,7 +888,7 @@ matrixBlockTypes:
           columnType: text
           purifierConfig: ''
           purifyHtml: '1'
-          redactorConfig: ''
+          redactorConfig: Standard.json
           removeEmptyTags: '1'
           removeInlineStyles: '1'
           removeNbsp: '1'
@@ -821,7 +948,7 @@ matrixBlockTypes:
         type: craft\fields\PlainText
     handle: embed
     name: Embed
-    sortOrder: 3
+    sortOrder: 4
   71010361-18ce-4820-9f1f-43aaba7a2f7e:
     field: a9f00eab-73ff-4659-9b15-ee56aa8c8531
     fieldLayouts:
@@ -875,8 +1002,24 @@ matrixBlockTypes:
         name: Hotspots
         searchable: true
         settings:
-          contentTable: '{{%stc_hotspots}}'
-          fieldLayout: table
+          columns:
+            __assoc__:
+              -
+                - 12adf5d8-5a0b-46bf-b44b-cf947479c4e2
+                -
+                  __assoc__:
+                    -
+                      - width
+                      - ''
+              -
+                - bbf16101-636a-4cbb-8c9b-2857a3ae00cc
+                -
+                  __assoc__:
+                    -
+                      - width
+                      - ''
+          contentTable: '{{%stc_5_hotspots}}'
+          fieldLayout: row
           maxRows: ''
           minRows: ''
           propagationMethod: all
@@ -885,9 +1028,155 @@ matrixBlockTypes:
         translationKeyFormat: null
         translationMethod: site
         type: verbb\supertable\fields\SuperTableField
-    handle: shoppableTag
-    name: 'Shoppable Tag'
-    sortOrder: 4
+    handle: imageHotspot
+    name: 'Image Hotspot'
+    sortOrder: 3
+  7779d2c8-8e7b-4e61-8f92-a16ee65a2874:
+    field: a9f00eab-73ff-4659-9b15-ee56aa8c8531
+    fieldLayouts:
+      4d8dcd2d-8f16-4f6f-b909-b20e71a87697:
+        tabs:
+          -
+            fields:
+              bf824c9f-3678-4076-873d-8c65e6053024:
+                required: false
+                sortOrder: 1
+            name: Content
+            sortOrder: 1
+    fields:
+      bf824c9f-3678-4076-873d-8c65e6053024:
+        contentColumnType: string
+        fieldGroup: null
+        handle: story
+        instructions: ''
+        name: Story
+        searchable: true
+        settings:
+          allowSelfRelations: ''
+          limit: ''
+          localizeRelations: false
+          selectionLabel: ''
+          source: null
+          sources:
+            - 'section:5e15a326-1e20-4d38-86df-6f2bc3183b14'
+          targetSiteId: null
+          validateRelatedElements: ''
+          viewMode: null
+        translationKeyFormat: null
+        translationMethod: site
+        type: craft\fields\Entries
+    handle: relatedStory
+    name: 'Related Story'
+    sortOrder: 6
+  926c8ede-4ce1-4c37-b359-989fd8aa9128:
+    field: a9f00eab-73ff-4659-9b15-ee56aa8c8531
+    fieldLayouts:
+      557972fe-f957-4ccb-b390-8f6aebd791d5:
+        tabs:
+          -
+            fields:
+              282c8692-5f84-4f7e-b097-487d716ece64:
+                required: false
+                sortOrder: 1
+              470599ac-c7ff-4a8d-86a9-ab610827a06b:
+                required: false
+                sortOrder: 3
+              4f8870e2-25fc-4e3c-9d9c-0af159afff66:
+                required: false
+                sortOrder: 4
+              e7a382e7-e457-412c-93bf-e5184d326ea7:
+                required: false
+                sortOrder: 2
+            name: Content
+            sortOrder: 1
+    fields:
+      282c8692-5f84-4f7e-b097-487d716ece64:
+        contentColumnType: string
+        fieldGroup: null
+        handle: image
+        instructions: ''
+        name: image
+        searchable: true
+        settings:
+          allowSelfRelations: ''
+          allowedKinds:
+            - image
+          defaultUploadLocationSource: 'volume:4a49b85a-e6f1-4ee3-8085-cbfb50f5ce42'
+          defaultUploadLocationSubpath: ''
+          limit: '1'
+          localizeRelations: false
+          restrictFiles: '1'
+          selectionLabel: 'Select an Image'
+          showUnpermittedFiles: false
+          showUnpermittedVolumes: false
+          singleUploadLocationSource: 'volume:4a49b85a-e6f1-4ee3-8085-cbfb50f5ce42'
+          singleUploadLocationSubpath: 'story/{owner.slug}'
+          source: null
+          sources: '*'
+          targetSiteId: null
+          useSingleFolder: true
+          validateRelatedElements: ''
+          viewMode: list
+        translationKeyFormat: null
+        translationMethod: site
+        type: craft\fields\Assets
+      470599ac-c7ff-4a8d-86a9-ab610827a06b:
+        contentColumnType: text
+        fieldGroup: null
+        handle: callToAction
+        instructions: ''
+        name: 'Call To Action'
+        searchable: true
+        settings:
+          byteLimit: null
+          charLimit: null
+          code: ''
+          columnType: null
+          initialRows: '4'
+          multiline: ''
+          placeholder: ''
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\PlainText
+      4f8870e2-25fc-4e3c-9d9c-0af159afff66:
+        contentColumnType: text
+        fieldGroup: null
+        handle: externalLink
+        instructions: ''
+        name: 'External Link'
+        searchable: true
+        settings:
+          byteLimit: null
+          charLimit: null
+          code: ''
+          columnType: null
+          initialRows: '4'
+          multiline: ''
+          placeholder: ''
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\PlainText
+      e7a382e7-e457-412c-93bf-e5184d326ea7:
+        contentColumnType: text
+        fieldGroup: null
+        handle: description
+        instructions: ''
+        name: Description
+        searchable: true
+        settings:
+          byteLimit: null
+          charLimit: null
+          code: ''
+          columnType: null
+          initialRows: '4'
+          multiline: ''
+          placeholder: ''
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\PlainText
+    handle: slider
+    name: Slider
+    sortOrder: 5
   fc4eaa5a-6f23-4094-8cc5-fcbcbba5ac6e:
     field: 98c6934c-a2ef-42d0-a29e-e9a9b45f9178
     fieldLayouts:
@@ -1285,11 +1574,27 @@ sections:
                 sortOrder: 2
               -
                 fields:
+                  1f182e2b-1f31-4ccb-bb2a-8479370cf19d:
+                    required: false
+                    sortOrder: 3
+                  6812facd-eece-40bf-a3d3-5cb78aa30b46:
+                    required: false
+                    sortOrder: 2
+                  adf6f8af-24c8-4699-ace8-aa3a8a6dad50:
+                    required: false
+                    sortOrder: 1
+                  aed6ce2b-3af8-4e8a-9062-06b6cc84313b:
+                    required: false
+                    sortOrder: 4
+                name: Event
+                sortOrder: 3
+              -
+                fields:
                   68752c4e-cc58-4744-a1c4-20778860741f:
                     required: false
                     sortOrder: 1
                 name: SEO
-                sortOrder: 3
+                sortOrder: 4
         handle: story
         hasTitleField: true
         name: Story
@@ -1308,19 +1613,13 @@ sections:
       5058e36f-39fa-4fe2-982d-2a6082be4a27:
         enabledByDefault: true
         hasUrls: true
-        template: _blog/_story.twig
+        template: _story/_story.twig
         uriFormat: 'story/{slug}'
     type: channel
   73c18577-4ee7-4d1d-be3f-133db7de04c5:
     enableVersioning: true
     entryTypes:
       e2b0c80d-12b7-48b4-9c21-5546159e05a0:
-        fieldLayouts:
-          3e0f3127-6064-440e-a098-78b95b5a3b0d:
-            tabs:
-              -
-                name: 'Tab 1'
-                sortOrder: 1
         handle: index
         hasTitleField: false
         name: Index
@@ -1502,14 +1801,6 @@ superTableBlockTypes:
         translationKeyFormat: null
         translationMethod: site
         type: craft\fields\Assets
-  ae2cbb6d-9ea6-4b77-b0e6-d821a29132a6:
-    field: b4d06e18-4a8c-4d72-8e3c-61038bd38b68
-    fieldLayouts:
-      0abbb677-791c-4377-9a76-c0a7f0be5427:
-        tabs:
-          -
-            name: Content
-            sortOrder: 1
   af4a8310-462b-46bf-8764-66f2d5f7db2f:
     field: 68dbb99e-c81a-4245-b0f8-001150796193
     fieldLayouts:
@@ -1518,19 +1809,19 @@ superTableBlockTypes:
           -
             fields:
               2814afad-c3d7-4473-a123-27ed56f411c3:
-                required: false
-                sortOrder: 1
+                required: '0'
+                sortOrder: '1'
               3ed9ffaf-ef87-4804-88e5-b1e9c6238161:
-                required: false
-                sortOrder: 2
+                required: '0'
+                sortOrder: '2'
               5c1542eb-5463-4966-aad4-b7c5378d233e:
-                required: false
-                sortOrder: 4
+                required: '0'
+                sortOrder: '4'
               67c6057f-3a47-44e8-9a69-42f53261ea07:
-                required: false
-                sortOrder: 3
+                required: '0'
+                sortOrder: '3'
             name: Content
-            sortOrder: 1
+            sortOrder: '1'
     fields:
       2814afad-c3d7-4473-a123-27ed56f411c3:
         contentColumnType: string
@@ -1538,7 +1829,7 @@ superTableBlockTypes:
         handle: image
         instructions: ''
         name: Image
-        searchable: true
+        searchable: '1'
         settings:
           allowSelfRelations: ''
           allowedKinds: null
@@ -1567,7 +1858,7 @@ superTableBlockTypes:
         handle: duration
         instructions: ''
         name: Duration
-        searchable: true
+        searchable: '1'
         settings:
           byteLimit: null
           charLimit: null
@@ -1585,7 +1876,7 @@ superTableBlockTypes:
         handle: description
         instructions: ''
         name: Description
-        searchable: true
+        searchable: '1'
         settings:
           byteLimit: null
           charLimit: null
@@ -1603,7 +1894,7 @@ superTableBlockTypes:
         handle: heading
         instructions: ''
         name: Heading
-        searchable: true
+        searchable: '1'
         settings:
           byteLimit: null
           charLimit: null
@@ -1653,11 +1944,11 @@ superTableBlockTypes:
         settings:
           byteLimit: null
           charLimit: null
-          code: false
+          code: ''
           columnType: null
-          initialRows: 4
-          multiline: false
-          placeholder: null
+          initialRows: '4'
+          multiline: '1'
+          placeholder: ''
         translationKeyFormat: null
         translationMethod: none
         type: craft\fields\PlainText
@@ -1699,7 +1990,6 @@ users:
       permissions:
         - accesssitewhensystemisoff
         - accesscpwhensystemisoff
-        - accessplugin-ad-wizard
         - accesscp
         - sproutforms-editforms
         - sproutforms-editentries
@@ -1708,6 +1998,7 @@ users:
         - sproutforms-viewnotifications
         - sproutforms-editreports
         - sproutforms-viewreports
+        - accessplugin-ad-wizard
     c56709c7-c3a2-404c-8fba-15175819c9d4:
       handle: editor
       name: Editor
@@ -1823,7 +2114,7 @@ volumes:
     hasUrls: true
     name: 'Server Storage'
     settings:
-      path: $ASSET_BASE_PATH/asset
+      path: '@webroot/asset'
     sortOrder: 3
     type: craft\volumes\Local
-    url: $ASSET_PUBLIC_PATH/asset
+    url: '@web/asset'
