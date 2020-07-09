@@ -10,7 +10,10 @@
 
 return [
     '*' => [
-        'useProjectConfigFile' => false,
+        // force local -> dev ,staging, production
+        'useProjectConfigFile' => true,       
+        'allowAdminChanges' => false,
+
         'defaultWeekStartDay' => 0,
         'enableCsrfProtection' => true,
         'omitScriptNameInUrls' => true,
@@ -43,10 +46,10 @@ return [
     //     'siteUrl' => null,
     //     // prevent conflict with project config
     //     'allowAdminChanges' => false,
-    // ],
+    // ]
 
     'local' => [
-        // 'siteUrl' => null,
+        'allowAdminChanges' => true,
         'devMode' => true
     ]
 ];

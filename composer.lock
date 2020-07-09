@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "a5c5c202f1ef37bd8b4ae57c20d9bd47",
+    "content-hash": "b62a54498db0e1f54a42fc17fa64b50a",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.145.1",
+            "version": "3.145.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "d1997c62de872eadb12b6633ae480e3139969a07"
+                "reference": "69b7e99246c64d75b16dd3e926da0ea9f73088ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/d1997c62de872eadb12b6633ae480e3139969a07",
-                "reference": "d1997c62de872eadb12b6633ae480e3139969a07",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/69b7e99246c64d75b16dd3e926da0ea9f73088ad",
+                "reference": "69b7e99246c64d75b16dd3e926da0ea9f73088ad",
                 "shasum": ""
             },
             "require": {
@@ -89,7 +89,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2020-07-06T18:14:57+00:00"
+            "time": "2020-07-08T18:13:01+00:00"
         },
         {
             "name": "barrelstrength/sprout-base",
@@ -334,6 +334,53 @@
             "time": "2020-05-28T11:26:02+00:00"
         },
         {
+            "name": "born05/craft-imagehotspots",
+            "version": "1.0.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/born05/craft-imagehotspots/zipball/1ea8e20f59ac22514e862669e11c0a4d3b6441d9",
+                "reference": "1ea8e20f59ac22514e862669e11c0a4d3b6441d9",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.3"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Image Hotspots",
+                "handle": "imagehotspots"
+            },
+            "autoload": {
+                "psr-4": {
+                    "born05\\imagehotspots\\": "src/"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Roel van Hintum",
+                    "email": "roel@born05.com"
+                }
+            ],
+            "description": "Image Hotspots fieldtype for Craft CMS",
+            "keywords": [
+                "assets",
+                "craftcms",
+                "fieldtype",
+                "hotspots"
+            ],
+            "support": {
+                "email": "development@born05.com",
+                "issues": "https://github.com/born05/craft-imagehotspots/issues",
+                "source": "https://github.com/born05/craft-imagehotspots",
+                "docs": "https://github.com/born05/craft-imagehotspots/blob/master/README.md",
+                "rss": "https://github.com/born05/craft-imagehotspots/releases.atom"
+            },
+            "time": "2020-05-15T07:46:58+00:00"
+        },
+        {
             "name": "cebe/markdown",
             "version": "1.2.1",
             "dist": {
@@ -387,42 +434,6 @@
                 "markdown-extra"
             ],
             "time": "2018-03-26T11:24:36+00:00"
-        },
-        {
-            "name": "clubstudioltd/craft-asset-rev",
-            "version": "6.0.2",
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/clubstudioltd/craft-asset-rev/zipball/b4d4ada7902af654ceb081103ab4f5abb6a7e19c",
-                "reference": "b4d4ada7902af654ceb081103ab4f5abb6a7e19c",
-                "shasum": ""
-            },
-            "require": {
-                "craftcms/cms": "^3.0.0-beta.29"
-            },
-            "type": "craft-plugin",
-            "extra": {
-                "name": "Asset Rev",
-                "handle": "assetrev",
-                "hasCpSettings": false,
-                "hasCpSection": false,
-                "changelogUrl": "https://github.com/clubstudioltd/craft-asset-rev/blob/master/CHANGELOG.md",
-                "documentationUrl": "https://github.com/clubstudioltd/craft-asset-rev",
-                "downloadUrl": "https://github.com/clubstudioltd/craft-asset-rev/archive/v6.zip",
-                "developer": "Club Studio Ltd",
-                "developerUrl": "https://clubstudio.co.uk",
-                "class": "club\\assetrev\\AssetRev"
-            },
-            "autoload": {
-                "psr-4": {
-                    "club\\assetrev\\": "src/"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "description": "A plugin to aid cache-busting in Craft 3",
-            "time": "2018-11-20T14:45:15+00:00"
         },
         {
             "name": "commerceguys/addressing",
@@ -1314,6 +1325,154 @@
             "time": "2019-06-08T11:03:04+00:00"
         },
         {
+            "name": "doublesecretagency/craft-adwizard",
+            "version": "3.0.4",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doublesecretagency/craft-adwizard/zipball/244824303033c2bda3116247a4045e032a1fd995",
+                "reference": "244824303033c2bda3116247a4045e032a1fd995",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Ad Wizard",
+                "handle": "ad-wizard",
+                "class": "doublesecretagency\\adwizard\\AdWizard"
+            },
+            "autoload": {
+                "psr-4": {
+                    "doublesecretagency\\adwizard\\": "src/"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Double Secret Agency",
+                    "homepage": "https://www.doublesecretagency.com/plugins"
+                }
+            ],
+            "description": "Easily manage custom advertisements on your website.",
+            "keywords": [
+                "ad-wizard",
+                "ads",
+                "cms",
+                "craft",
+                "craft-plugin",
+                "craftcms"
+            ],
+            "support": {
+                "docs": "https://www.doublesecretagency.com/plugins/ad-wizard/docs",
+                "issues": "https://github.com/doublesecretagency/craft-adwizard/issues"
+            },
+            "time": "2020-03-04T21:21:41+00:00"
+        },
+        {
+            "name": "doublesecretagency/craft-cpcss",
+            "version": "2.2.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doublesecretagency/craft-cpcss/zipball/e80b0ecf49d473b0e79f0c716693bc92f3f3ad86",
+                "reference": "e80b0ecf49d473b0e79f0c716693bc92f3f3ad86",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.1.5"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Control Panel CSS",
+                "handle": "cp-css",
+                "schemaVersion": "2.0.0",
+                "changelogUrl": "https://raw.githubusercontent.com/doublesecretagency/craft-cpcss/v2/CHANGELOG.md",
+                "class": "doublesecretagency\\cpcss\\CpCss"
+            },
+            "autoload": {
+                "psr-4": {
+                    "doublesecretagency\\cpcss\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Double Secret Agency",
+                    "homepage": "https://www.doublesecretagency.com/plugins"
+                }
+            ],
+            "description": "Add custom CSS to your Control Panel.",
+            "keywords": [
+                "cms",
+                "cp-css",
+                "craft",
+                "craft-plugin",
+                "craftcms",
+                "css"
+            ],
+            "support": {
+                "docs": "https://github.com/doublesecretagency/craft-cpcss/blob/v2/README.md",
+                "issues": "https://github.com/doublesecretagency/craft-cpcss/issues"
+            },
+            "time": "2020-04-04T21:55:05+00:00"
+        },
+        {
+            "name": "doublesecretagency/craft-smartmap",
+            "version": "3.3.3",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doublesecretagency/craft-smartmap/zipball/c696fd29eb6a21ed62eef36372ab6fec0451be4b",
+                "reference": "c696fd29eb6a21ed62eef36372ab6fec0451be4b",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.4.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Smart Map",
+                "handle": "smart-map",
+                "class": "doublesecretagency\\smartmap\\SmartMap"
+            },
+            "autoload": {
+                "psr-4": {
+                    "doublesecretagency\\smartmap\\": "src/"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Double Secret Agency",
+                    "homepage": "https://www.doublesecretagency.com/plugins"
+                }
+            ],
+            "description": "The most comprehensive proximity search and mapping tool for Craft.",
+            "keywords": [
+                "address",
+                "cms",
+                "craft",
+                "craft-plugin",
+                "craftcms",
+                "geolocation",
+                "google-maps",
+                "locations",
+                "map",
+                "proximity-search",
+                "smart-map"
+            ],
+            "support": {
+                "docs": "https://www.doublesecretagency.com/plugins/smart-map/docs",
+                "issues": "https://github.com/doublesecretagency/craft-smartmap/issues"
+            },
+            "time": "2020-06-19T06:42:12+00:00"
+        },
+        {
             "name": "egulias/email-validator",
             "version": "2.1.18",
             "dist": {
@@ -1478,6 +1637,73 @@
             ],
             "description": "An SVG sanitizer for PHP",
             "time": "2020-01-20T01:34:17+00:00"
+        },
+        {
+            "name": "ether/logs",
+            "version": "3.0.3",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ethercreative/logs/zipball/dd2861b3b76a8cd9a49e31d6756292218ca6fae9",
+                "reference": "dd2861b3b76a8cd9a49e31d6756292218ca6fae9",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0-RC1"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "handle": "logs",
+                "name": "Logs",
+                "developer": "Ether Creative",
+                "developerUrl": "https://ethercreative.co.uk",
+                "class": "ether\\logs\\Logs",
+                "schemaVersion": "3.0.0"
+            },
+            "autoload": {
+                "psr-4": {
+                    "ether\\logs\\": "src/"
+                }
+            },
+            "description": "Access logs from the CP",
+            "support": {
+                "issues": "https://github.com/ethercreative/logs"
+            },
+            "time": "2019-11-25T16:59:18+00:00"
+        },
+        {
+            "name": "ether/seo",
+            "version": "3.6.6",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ethercreative/seo/zipball/cfacc65fbea87ace4a40c0c0e5d35ce2e1167e60",
+                "reference": "cfacc65fbea87ace4a40c0c0e5d35ce2e1167e60",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.2.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "handle": "seo",
+                "name": "SEO",
+                "developer": "Ether Creative",
+                "developerUrl": "https://ethercreative.co.uk",
+                "class": "ether\\seo\\Seo"
+            },
+            "autoload": {
+                "psr-4": {
+                    "ether\\seo\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "SEO utilities including a unique field type, sitemap, & redirect manager",
+            "support": {
+                "issues": "https://github.com/ethercreative/seo",
+                "docs": "https://github.com/ethercreative/seo/blob/v3/README.md"
+            },
+            "time": "2020-06-30T13:44:29+00:00"
         },
         {
             "name": "ether/simplemap",
@@ -1666,15 +1892,27 @@
         },
         {
             "name": "giggsey/locale",
-            "version": "1.8",
+            "version": "1.9",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/giggsey/Locale/zipball/85a1b251bad11c986fec2a051b10d4b80a5caa1b",
-                "reference": "85a1b251bad11c986fec2a051b10d4b80a5caa1b",
+                "url": "https://api.github.com/repos/giggsey/Locale/zipball/b07f1eace8072ccc61445ad8fbd493ff9d783043",
+                "reference": "b07f1eace8072ccc61445ad8fbd493ff9d783043",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "pear/pear-core-minimal": "^1.9",
+                "pear/pear_exception": "^1.0",
+                "pear/versioncontrol_git": "^0.5",
+                "phing/phing": "~2.7",
+                "php-coveralls/php-coveralls": "^1.0|^2.0",
+                "phpunit/phpunit": "^4.8|^5.0",
+                "symfony/console": "^2.8|^3.0|^4.0",
+                "symfony/filesystem": "^2.8|^3.0|^4.0",
+                "symfony/finder": "^2.8|^3.0|^4.0",
+                "symfony/process": "^2.8|^3.0|^4.0"
             },
             "type": "library",
             "autoload": {
@@ -1682,6 +1920,7 @@
                     "Giggsey\\Locale\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1693,7 +1932,7 @@
                 }
             ],
             "description": "Locale functions required by libphonenumber-for-php",
-            "time": "2019-10-09T18:53:14+00:00"
+            "time": "2020-07-07T11:16:24+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -1946,6 +2185,45 @@
                 "laravel"
             ],
             "time": "2019-09-09T11:59:51+00:00"
+        },
+        {
+            "name": "jaybizzle/crawler-detect",
+            "version": "v1.2.96",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/JayBizzle/Crawler-Detect/zipball/5a53c78644c54a628c3f5ead915c35b489c92239",
+                "reference": "5a53c78644c54a628c3f5ead915c35b489c92239",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Jaybizzle\\CrawlerDetect\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mark Beech",
+                    "email": "m@rkbee.ch",
+                    "role": "Developer"
+                }
+            ],
+            "description": "CrawlerDetect is a PHP class for detecting bots/crawlers/spiders via the user agent",
+            "homepage": "https://github.com/JayBizzle/Crawler-Detect/",
+            "keywords": [
+                "crawler",
+                "crawler detect",
+                "crawler detector",
+                "crawlerdetect",
+                "php crawler detect"
+            ],
+            "time": "2020-06-14T20:37:24+00:00"
         },
         {
             "name": "justinrainbow/json-schema",
@@ -2729,6 +3007,56 @@
             "time": "2018-07-20T14:32:06+00:00"
         },
         {
+            "name": "mmikkel/cp-field-inspect",
+            "version": "1.1.3",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mmikkel/CpFieldInspect-Craft/zipball/ab5eb5536f01609d5b8ed047a493e81afcef0226",
+                "reference": "ab5eb5536f01609d5b8ed047a493e81afcef0226",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.4.2"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "CP Field Inspect",
+                "handle": "cp-field-inspect",
+                "schemaVersion": "1.0.0",
+                "hasCpSettings": false,
+                "hasCpSection": false,
+                "changelogUrl": "https://raw.githubusercontent.com/mmikkel/CpFieldInspect-Craft/master/CHANGELOG.md",
+                "class": "mmikkel\\cpfieldinspect\\CpFieldInspect"
+            },
+            "autoload": {
+                "psr-4": {
+                    "mmikkel\\cpfieldinspect\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mats Mikkel Rummelhoff",
+                    "homepage": "http://mmikkel.no"
+                }
+            ],
+            "description": "Inspect field handles and easily edit field and element source settings",
+            "keywords": [
+                "cms",
+                "cp field inspect",
+                "craft",
+                "craft-plugin",
+                "craftcms"
+            ],
+            "support": {
+                "docs": "https://github.com/mmikkel/CpFieldInspect-Craft/blob/master/README.md",
+                "issues": "https://github.com/mmikkel/CpFieldInspect-Craft/issues"
+            },
+            "time": "2020-02-29T10:00:32+00:00"
+        },
+        {
             "name": "monolog/monolog",
             "version": "1.25.4",
             "dist": {
@@ -3044,6 +3372,59 @@
             "time": "2020-07-02T17:12:47+00:00"
         },
         {
+            "name": "nystudio107/craft-cookies",
+            "version": "1.1.12",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nystudio107/craft-cookies/zipball/faa909cf7006f245d2a0ff1e63d14c67c04dc384",
+                "reference": "faa909cf7006f245d2a0ff1e63d14c67c04dc384",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Cookies",
+                "handle": "cookies",
+                "schemaVersion": "1.0.0",
+                "hasCpSettings": false,
+                "hasCpSection": false,
+                "changelogUrl": "https://raw.githubusercontent.com/nystudio107/craft-cookies/v1/CHANGELOG.md",
+                "class": "nystudio107\\cookies\\Cookies",
+                "components": {
+                    "cookies": "nystudio107\\cookies\\services\\CookiesService"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "nystudio107\\cookies\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "nystudio107",
+                    "homepage": "https://nystudio107.com/"
+                }
+            ],
+            "description": "A simple plugin for setting and getting cookies from within Craft CMS templates.",
+            "keywords": [
+                "cms",
+                "cookies",
+                "craft",
+                "craft-plugin",
+                "craftcms"
+            ],
+            "support": {
+                "docs": "https://nystudio107.com/plugins/cookies/documentation",
+                "issues": "https://nystudio107.com/plugins/cookies/support"
+            },
+            "time": "2020-02-14T03:31:27+00:00"
+        },
+        {
             "name": "nystudio107/craft-minify",
             "version": "1.2.10",
             "dist": {
@@ -3223,6 +3604,109 @@
                 "issues": "https://nystudio107.com/plugins/seomatic/support"
             },
             "time": "2020-06-05T02:41:22+00:00"
+        },
+        {
+            "name": "nystudio107/craft-templatecomments",
+            "version": "1.1.2",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nystudio107/craft-templatecomments/zipball/be9e5f916afc78b783c394d3d28931b37f33e864",
+                "reference": "be9e5f916afc78b783c394d3d28931b37f33e864",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.1.29"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Template Comments",
+                "handle": "templatecomments",
+                "hasCpSettings": false,
+                "hasCpSection": false,
+                "changelogUrl": "https://raw.githubusercontent.com/nystudio107/craft-templatecomments/v1/CHANGELOG.md",
+                "class": "nystudio107\\templatecomments\\TemplateComments"
+            },
+            "autoload": {
+                "psr-4": {
+                    "nystudio107\\templatecomments\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "nystudio107",
+                    "homepage": "https://nystudio107.com/"
+                }
+            ],
+            "description": "Adds a HTML comment with performance timings to demarcate `{% block %}`s and each Twig template that is included or extended.",
+            "keywords": [
+                "comments",
+                "craft-plugin",
+                "craftcms",
+                "debugging",
+                "twig"
+            ],
+            "support": {
+                "docs": "https://nystudio107.com/plugins/template-comments/documentation",
+                "issues": "https://nystudio107.com/plugins/template-comments/support"
+            },
+            "time": "2019-08-26T02:37:45+00:00"
+        },
+        {
+            "name": "nystudio107/craft-twigpack",
+            "version": "1.2.3",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nystudio107/craft-twigpack/zipball/f6b6a929621db6cc0e80fd77eb43317f2c87934d",
+                "reference": "f6b6a929621db6cc0e80fd77eb43317f2c87934d",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Twigpack",
+                "handle": "twigpack",
+                "hasCpSettings": false,
+                "hasCpSection": false,
+                "changelogUrl": "https://raw.githubusercontent.com/craft-nystudio107/twigpack/v1/CHANGELOG.md",
+                "components": {
+                    "manifest": "nystudio107\\twigpack\\services\\Manifest"
+                },
+                "class": "nystudio107\\twigpack\\Twigpack"
+            },
+            "autoload": {
+                "psr-4": {
+                    "nystudio107\\twigpack\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "nystudio107",
+                    "homepage": "https://nystudio107.com/"
+                }
+            ],
+            "description": "Twigpack is a bridge between Twig and webpack, with manifest.json & webpack-dev-server HMR support",
+            "keywords": [
+                "craft-plugin",
+                "craftcms",
+                "hmr-support",
+                "manifest-json",
+                "twig",
+                "webpack",
+                "webpack-dev-server"
+            ],
+            "support": {
+                "docs": "https://nystudio107.com/plugins/twigpack/documentation",
+                "issues": "https://nystudio107.com/plugins/twigpack/support"
+            },
+            "time": "2020-06-24T17:16:55+00:00"
         },
         {
             "name": "nystudio107/craft-twigprofiler",
@@ -3991,6 +4475,44 @@
             "time": "2020-06-29T07:52:05+00:00"
         },
         {
+            "name": "putyourlightson/craft-elements-panel",
+            "version": "1.1.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/putyourlightson/craft-elements-panel/zipball/dee3da095e224d97bcb7aaf99c8e57d7d201d27b",
+                "reference": "dee3da095e224d97bcb7aaf99c8e57d7d201d27b",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Elements Panel",
+                "handle": "elements-panel",
+                "developer": "PutYourLightsOn",
+                "developerUrl": "https://putyourlightson.com/",
+                "documentationUrl": "https://putyourlightson.com/plugins/elements-panel",
+                "changelogUrl": "https://raw.githubusercontent.com/putyourlightson/craft-elements-panel/v1/CHANGELOG.md",
+                "class": "putyourlightson\\elementspanel\\ElementsPanel"
+            },
+            "autoload": {
+                "psr-4": {
+                    "putyourlightson\\elementspanel\\": "src/"
+                }
+            },
+            "license": [
+                "mit"
+            ],
+            "description": "Adds an Elements and an Eager-Loading panel to the debug toolbar.",
+            "support": {
+                "docs": "https://putyourlightson.com/plugins/elements-panel",
+                "source": "https://github.com/putyourlightson/craft-elements-panel",
+                "issues": "https://github.com/putyourlightson/craft-elements-panel/issues"
+            },
+            "time": "2020-06-29T07:51:31+00:00"
+        },
+        {
             "name": "putyourlightson/craft-log-to-file",
             "version": "1.2.1",
             "dist": {
@@ -4105,6 +4627,91 @@
             "time": "2019-03-08T08:55:37+00:00"
         },
         {
+            "name": "rlanvin/php-rrule",
+            "version": "v1.6.3",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rlanvin/php-rrule/zipball/1373df401e0926cf7548716dabbc0d19603a144d",
+                "reference": "1373df401e0926cf7548716dabbc0d19603a144d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "suggest": {
+                "ext-intl": "Intl extension is needed for humanReadable()"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "RRule\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "Lightweight and fast recurrence rules for PHP (RFC 5545)",
+            "homepage": "https://github.com/rlanvin/php-rrule",
+            "keywords": [
+                "date",
+                "ical",
+                "recurrence",
+                "recurring",
+                "rrule"
+            ],
+            "time": "2019-01-13T09:49:03+00:00"
+        },
+        {
+            "name": "robuust/craft-reverserelations",
+            "version": "1.2.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/robuust/craft-reverserelations/zipball/ce55ae39664c690fcc843e4cb1a93402819cfc4e",
+                "reference": "ce55ae39664c690fcc843e4cb1a93402819cfc4e",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.1",
+                "php": "^7.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "schemaVersion": "1.0.1",
+                "handle": "reverserelations",
+                "name": "Reverse Relations",
+                "developer": "Robuust",
+                "developerUrl": "https://robuust.digital",
+                "documentationUrl": "https://github.com/robuust/craft-reverserelations/blob/master/README.md",
+                "changelogUrl": "https://github.com/robuust/craft-reverserelations/blob/master/CHANGELOG.md",
+                "downloadUrl": "https://github.com/robuust/craft-reverserelations/releases/latest",
+                "hasSettings": false,
+                "hasCpSection": false
+            },
+            "autoload": {
+                "psr-4": {
+                    "robuust\\reverserelations\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bob Olde Hampsink",
+                    "email": "bob@robuust.digital"
+                },
+                {
+                    "name": "Maarten de Graaf",
+                    "email": "wiejeben@gmail.com"
+                }
+            ],
+            "description": "Reverse Relations for Craft 3",
+            "support": {
+                "email": "bob@robuust.digital"
+            },
+            "time": "2020-05-13T15:46:31+00:00"
+        },
+        {
             "name": "seld/cli-prompt",
             "version": "1.0.3",
             "dist": {
@@ -4193,11 +4800,11 @@
         },
         {
             "name": "seld/phar-utils",
-            "version": "1.1.0",
+            "version": "1.1.1",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/phar-utils/zipball/8800503d56b9867d43d9c303b9cbcc26016e82f0",
-                "reference": "8800503d56b9867d43d9c303b9cbcc26016e82f0",
+                "url": "https://api.github.com/repos/Seldaek/phar-utils/zipball/8674b1d84ffb47cc59a101f5d5a3b61e87d23796",
+                "reference": "8674b1d84ffb47cc59a101f5d5a3b61e87d23796",
                 "shasum": ""
             },
             "require": {
@@ -4228,7 +4835,51 @@
             "keywords": [
                 "phar"
             ],
-            "time": "2020-02-14T15:25:33+00:00"
+            "time": "2020-07-07T18:42:57+00:00"
+        },
+        {
+            "name": "spatie/schema-org",
+            "version": "2.6.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/schema-org/zipball/d1994dc53647f3c8e9d962ee385193aa56a5a3c5",
+                "reference": "d1994dc53647f3c8e9d962ee385193aa56a5a3c5",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": "^7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\SchemaOrg\\": "src"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian De Deyne",
+                    "email": "sebastian@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Tom Witkowski",
+                    "email": "dev.gummibeer@gmail.com",
+                    "homepage": "https://gummibeer.de",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A fluent builder Schema.org types and ld+json generator",
+            "homepage": "https://github.com/spatie/schema-org",
+            "keywords": [
+                "schema-org",
+                "spatie"
+            ],
+            "time": "2019-09-26T09:18:53+00:00"
         },
         {
             "name": "sunra/php-simple-html-dom-parser",
@@ -5483,6 +6134,317 @@
             "time": "2020-02-11T15:31:23+00:00"
         },
         {
+            "name": "unionco/calendarize",
+            "version": "1.2.16",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/unionco/calendarize/zipball/5ef783f57bfcfe260ca7675ac31a944cce602816",
+                "reference": "5ef783f57bfcfe260ca7675ac31a944cce602816",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0-RC1",
+                "rlanvin/php-rrule": "~1.6.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Calendarize",
+                "handle": "calendarize",
+                "documentationUrl": "https://github.com/unionco/calendarize/blob/master/README.md",
+                "changelogUrl": "https://raw.githubusercontent.com/unionco/calendarize/master/CHANGELOG.md",
+                "class": "unionco\\calendarize\\Calendarize"
+            },
+            "autoload": {
+                "psr-4": {
+                    "unionco\\calendarize\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Franco Valdes",
+                    "homepage": "https://union.co"
+                }
+            ],
+            "description": "A calendar field type providing functionality for recurrence.",
+            "keywords": [
+                "calendarize",
+                "cms",
+                "craft",
+                "craft-plugin",
+                "craftcms"
+            ],
+            "support": {
+                "docs": "https://github.com/unionco/calendarize",
+                "issues": "https://github.com/unionco/calendarize/issues?state=open"
+            },
+            "time": "2019-08-29T16:25:19+00:00"
+        },
+        {
+            "name": "vaersaagod/geomate",
+            "version": "v1.2.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vaersaagod/geomate/zipball/39118cd5df86b91d6fcd1ec9bff85ce98f0d27f7",
+                "reference": "39118cd5df86b91d6fcd1ec9bff85ce98f0d27f7",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.1.0",
+                "geoip2/geoip2": "~2.0",
+                "jaybizzle/crawler-detect": "~1.0",
+                "zonuexe/http-accept-language": "^0.4"
+            },
+            "suggest": {
+                "ext-zlib": "Requires ext-zlib PHP extension to download database."
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "GeoMate",
+                "handle": "geomate",
+                "hasCpSettings": false,
+                "hasCpSection": false,
+                "changelogUrl": "https://raw.githubusercontent.com/vaersaagod/geomate/master/CHANGELOG.md",
+                "components": [],
+                "class": "vaersaagod\\geomate\\GeoMate"
+            },
+            "autoload": {
+                "psr-4": {
+                    "vaersaagod\\geomate\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Værsågod",
+                    "homepage": "https://www.vaersaagod.no"
+                }
+            ],
+            "description": "GeoMate is a friend in need for all things geolocation. IP to geo lookup, automatic redirects (based on country, continent, language, etc), site switcher... You name it.",
+            "keywords": [
+                "cms",
+                "craft",
+                "craft-plugin",
+                "craftcms",
+                "geo",
+                "ip",
+                "language",
+                "lookup",
+                "redirect"
+            ],
+            "support": {
+                "docs": "https://github.com/vaersaagod/geomate/blob/master/README.md",
+                "issues": "https://github.com/vaersaagod/geomate/issues"
+            },
+            "time": "2020-03-20T13:22:31+00:00"
+        },
+        {
+            "name": "vaersaagod/seomate",
+            "version": "1.1.4",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vaersaagod/seomate/zipball/45bf002b752e4fe42bbc1c9b662e4323a0ac6f1c",
+                "reference": "45bf002b752e4fe42bbc1c9b662e4323a0ac6f1c",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0",
+                "spatie/schema-org": "^2.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "SEOMate",
+                "handle": "seomate",
+                "hasCpSettings": false,
+                "hasCpSection": false,
+                "changelogUrl": "https://raw.githubusercontent.com/vaersaagod/seomate/master/CHANGELOG.md",
+                "components": [],
+                "class": "vaersaagod\\seomate\\SEOMate"
+            },
+            "autoload": {
+                "psr-4": {
+                    "vaersaagod\\seomate\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Værsågod",
+                    "homepage": "https://www.vaersaagod.no/"
+                }
+            ],
+            "description": "SEO, mate! It's important.",
+            "keywords": [
+                "cms",
+                "craft",
+                "craft-plugin",
+                "craftcms",
+                "json-ld",
+                "meta",
+                "seo",
+                "seomate"
+            ],
+            "support": {
+                "docs": "https://github.com/vaersaagod/seomate/blob/master/README.md",
+                "issues": "https://github.com/vaersaagod/seomate/issues"
+            },
+            "time": "2020-04-12T12:54:34+00:00"
+        },
+        {
+            "name": "vardump/geojsonmap",
+            "version": "1.0.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vardump-de/geojsonmap/zipball/cc309a7f60985f80d101f2e49fbe17ad583d1f98",
+                "reference": "cc309a7f60985f80d101f2e49fbe17ad583d1f98",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0-RC1"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "geojsonmap",
+                "handle": "geojsonmap",
+                "hasCpSettings": false,
+                "hasCpSection": false,
+                "changelogUrl": "https://raw.githubusercontent.com/vardump-de/geojsonmap/master/CHANGELOG.md",
+                "class": "vardump\\geojsonmap\\Geojsonmap"
+            },
+            "autoload": {
+                "psr-4": {
+                    "vardump\\geojsonmap\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andi Grether",
+                    "homepage": "https://vardump.de"
+                }
+            ],
+            "description": "A craft cms 3 field plugin to draw Leaflet Maps.",
+            "keywords": [
+                "cms",
+                "craft",
+                "craft-plugin",
+                "craftcms",
+                "field",
+                "geojsonmap",
+                "leaflet"
+            ],
+            "support": {
+                "docs": "https://github.com/vardump-de/geojsonmap/blob/master/README.md",
+                "issues": "https://github.com/vardump-de/geojsonmap/issues"
+            },
+            "time": "2019-06-28T09:06:31+00:00"
+        },
+        {
+            "name": "venveo/craft-bulkedit",
+            "version": "2.0.4",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/venveo/craft-bulkedit/zipball/5b053657d869b0f123261a26f8b503b515fa12e6",
+                "reference": "5b053657d869b0f123261a26f8b503b515fa12e6",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.2.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Bulk Edit",
+                "handle": "venveo-bulk-edit",
+                "changelogUrl": "https://raw.githubusercontent.com/venveo/craft-bulkedit/master/CHANGELOG.md",
+                "class": "venveo\\bulkedit\\Plugin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "venveo\\bulkedit\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Venveo",
+                    "homepage": "https://venveo.com"
+                }
+            ],
+            "description": "Bulk edit Craft CMS element fields",
+            "keywords": [
+                "bulk edit",
+                "cms",
+                "craft",
+                "craft-plugin",
+                "craftcms"
+            ],
+            "support": {
+                "docs": "https://github.com/venveo/craft-bulkedit/blob/master/README.md",
+                "issues": "https://github.com/venveo/craft-bulkedit/issues"
+            },
+            "time": "2020-02-25T22:09:37+00:00"
+        },
+        {
+            "name": "venveo/craft-redactor-split",
+            "version": "1.1.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/venveo/craft-redactor-split/zipball/edc6cdd67760a4a6aa84c898fb03ae555e74e24b",
+                "reference": "edc6cdd67760a4a6aa84c898fb03ae555e74e24b",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.4.0",
+                "craftcms/redactor": "^2.3"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Redactor Split",
+                "handle": "redactor-split",
+                "hasCpSettings": false,
+                "hasCpSection": false,
+                "changelogUrl": "https://raw.githubusercontent.com/venveo/craft-redactor-split/master/CHANGELOG.md",
+                "class": "venveo\\redactorsplit\\RedactorSplit"
+            },
+            "autoload": {
+                "psr-4": {
+                    "venveo\\redactorsplit\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Venveo",
+                    "homepage": "https://www.venveo.com"
+                }
+            ],
+            "description": "Split a redactor field within Matrix blocks into additional blocks",
+            "keywords": [
+                "cms",
+                "craft",
+                "craft-plugin",
+                "craftcms",
+                "redactor split"
+            ],
+            "support": {
+                "docs": "https://github.com/venveo/craft-redactor-split/blob/master/README.md",
+                "issues": "https://github.com/venveo/craft-redactor-split/issues"
+            },
+            "time": "2020-04-10T18:44:01+00:00"
+        },
+        {
             "name": "verbb/base",
             "version": "1.0.2",
             "dist": {
@@ -5610,6 +6572,55 @@
                 "super table"
             ],
             "time": "2020-06-10T06:44:31+00:00"
+        },
+        {
+            "name": "viget/craft-sidebar-toggle",
+            "version": "3.0.2",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vigetlabs/craft-sidebartoggle/zipball/8b9835670c0ae206a51903c5bf29612d099a62d6",
+                "reference": "8b9835670c0ae206a51903c5bf29612d099a62d6",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.4.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Sidebar Toggle",
+                "handle": "sidebar-toggle",
+                "hasCpSettings": false,
+                "hasCpSection": false,
+                "changelogUrl": "https://raw.githubusercontent.com/vigetlabs/craft-sidebartoggle/master/CHANGELOG.md",
+                "class": "viget\\sidebartoggle\\SidebarToggle"
+            },
+            "autoload": {
+                "psr-4": {
+                    "viget\\sidebartoggle\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Trevor Davis",
+                    "homepage": "https://www.viget.com/"
+                }
+            ],
+            "description": "Add the ability to toggle the sidebar",
+            "keywords": [
+                "cms",
+                "craft",
+                "craft-plugin",
+                "craftcms",
+                "sidebar toggle"
+            ],
+            "support": {
+                "docs": "https://github.com/vigetlabs/craft-sidebartoggle/blob/master/README.md",
+                "issues": "https://github.com/vigetlabs/craft-sidebartoggle/issues"
+            },
+            "time": "2020-04-30T18:02:38+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -6088,16 +7099,73 @@
             "time": "2019-09-03T19:11:20+00:00"
         },
         {
-            "name": "webmozart/assert",
-            "version": "1.9.0",
+            "name": "wbrowar/craft-grid",
+            "version": "1.2.3",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/assert/zipball/9dc4f203e36f2b486149058bade43c851dd97451",
-                "reference": "9dc4f203e36f2b486149058bade43c851dd97451",
+                "url": "https://api.github.com/repos/wbrowar/craft-grid/zipball/e3c24970effe13c2939e6eebe5fcd624ce5fe5c5",
+                "reference": "e3c24970effe13c2939e6eebe5fcd624ce5fe5c5",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.3.3 || ^7.0",
+                "craftcms/cms": "^3.2.5"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Grid",
+                "handle": "grid",
+                "hasCpSettings": false,
+                "hasCpSection": false,
+                "changelogUrl": "https://raw.githubusercontent.com/wbrowar/craft-grid/master/CHANGELOG.md",
+                "components": {
+                    "grid": "wbrowar\\grid\\services\\GridService"
+                },
+                "class": "wbrowar\\grid\\Grid"
+            },
+            "autoload": {
+                "psr-4": {
+                    "wbrowar\\grid\\": "src/"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Will Browar",
+                    "homepage": "http://wbrowar.com"
+                }
+            ],
+            "description": "A field that lets you content manage CSS Grid in Craft CMS.",
+            "keywords": [
+                "cms",
+                "craft",
+                "craft-plugin",
+                "craftcms",
+                "grid"
+            ],
+            "support": {
+                "docs": "https://github.com/wbrowar/craft-grid/blob/master/README.md",
+                "issues": "https://github.com/wbrowar/craft-grid/issues"
+            },
+            "time": "2019-10-06T14:37:34+00:00"
+        },
+        {
+            "name": "webmozart/assert",
+            "version": "1.9.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/webmozart/assert.git",
+                "reference": "bafc69caeb4d49c39fd0779086c03a3738cbb389"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/webmozart/assert/zipball/bafc69caeb4d49c39fd0779086c03a3738cbb389",
+                "reference": "bafc69caeb4d49c39fd0779086c03a3738cbb389",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.3.3 || ^7.0 || ^8.0",
                 "symfony/polyfill-ctype": "^1.8"
             },
             "conflict": {
@@ -6129,7 +7197,7 @@
                 "check",
                 "validate"
             ],
-            "time": "2020-06-16T10:16:42+00:00"
+            "time": "2020-07-08T17:02:28+00:00"
         },
         {
             "name": "webonyx/graphql-php",
@@ -6696,6 +7764,36 @@
                 "yii2"
             ],
             "time": "2018-09-23T22:00:47+00:00"
+        },
+        {
+            "name": "zonuexe/http-accept-language",
+            "version": "0.4.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/BaguettePHP/http-accept-language/zipball/f71422b1200737aa9d7c7fa83f07cbe4616198d5",
+                "reference": "f71422b1200737aa9d7c7fa83f07cbe4616198d5",
+                "shasum": ""
+            },
+            "require": {
+                "ext-intl": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Teto\\HTTP\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "USAMI Kenta",
+                    "email": "tadsan@zonu.me"
+                }
+            ],
+            "description": "HTTP Accept-Language Header parser",
+            "time": "2014-10-19T09:22:18+00:00"
         }
     ],
     "packages-dev": [],

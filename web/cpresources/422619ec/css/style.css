@@ -1,0 +1,81 @@
+/**
+ * Sidebar Toggle plugin for Craft CMS
+ *
+ * Sidebar Toggle CSS
+ *
+ * @author    Trevor Davis
+ * @copyright Copyright (c) 2018 Trevor Davis
+ * @link      https://www.viget.com/
+ * @package   SidebarToggle
+ * @since     1.0.0
+ */
+
+.sidebar-toggle-button {
+	display: none;
+}
+
+@media screen and (min-width: 999px) {
+	.sidebar-toggle-active {
+		position: relative;
+	}
+
+	.sidebar-toggle-active #tabs {
+		padding-right: 50px;
+	}
+
+	.sidebar-toggle-button {
+		height: 44px;
+		background-color: transparent;
+		border-radius: 0;
+		display: block;
+		position: absolute;
+		right: 388px;
+		top: 0;
+		z-index: 2;
+	}
+
+	.has-tabs .sidebar-toggle-button {
+		top: 40px;
+	}
+
+	.sidebar-toggle-button:focus,
+	.sidebar-toggle-button:hover {
+		background-color: transparent;
+	}
+
+	.sidebar-toggle-button .alt {
+		color: transparent;
+		display: block;
+		font-size: 0;
+		line-height: 0;
+		text-shadow: none;
+	}
+
+	.sidebar-toggle-button .icon::before {
+		content: 'expand';
+		display: block;
+	}
+
+	.sidebar-toggle-main-expanded #content-container {
+		flex: 0 0 100%;
+		max-width: none !important;
+		width: 100% !important;
+	}
+
+	.sidebar-toggle-main-expanded #details-container {
+		flex: 0 0 0;
+		width: 0;
+	}
+
+	.sidebar-toggle-main-expanded #details {
+		display: none;
+	}
+
+	.sidebar-toggle-main-expanded .sidebar-toggle-button {
+		right:  24px;
+	}
+
+	.sidebar-toggle-main-expanded .sidebar-toggle-button .icon::before {
+		content: 'collapse';
+	}
+}
