@@ -55,7 +55,7 @@ categoryGroups:
     structure:
       maxLevels: 1
       uid: d78d195b-65bf-439f-8380-a34d4fb46731
-dateModified: 1594833628
+dateModified: 1594857326
 email:
   fromEmail: asiaspa.dev@gmail.com
   fromName: AsiaSpa
@@ -1966,9 +1966,6 @@ sections:
                     sortOrder: 1
                 name: SEO
                 sortOrder: 4
-              -
-                name: 'Tab 5'
-                sortOrder: 5
         handle: story
         hasTitleField: true
         name: Story
@@ -2120,13 +2117,13 @@ superTableBlockTypes:
           -
             fields:
               475ee74b-a539-4e6e-8e80-d4d24a18df18:
-                required: false
-                sortOrder: 2
+                required: '0'
+                sortOrder: '2'
               c7853873-dc07-4748-90ff-6bb32d1b269d:
-                required: true
-                sortOrder: 1
+                required: '1'
+                sortOrder: '1'
             name: Content
-            sortOrder: 1
+            sortOrder: '1'
     fields:
       475ee74b-a539-4e6e-8e80-d4d24a18df18:
         contentColumnType: text
@@ -2134,7 +2131,7 @@ superTableBlockTypes:
         handle: caption
         instructions: ''
         name: caption
-        searchable: true
+        searchable: '1'
         settings:
           byteLimit: null
           charLimit: null
@@ -2152,7 +2149,7 @@ superTableBlockTypes:
         handle: image
         instructions: ''
         name: Image
-        searchable: true
+        searchable: '1'
         settings:
           allowSelfRelations: ''
           allowedKinds:
@@ -2290,13 +2287,13 @@ superTableBlockTypes:
           -
             fields:
               12adf5d8-5a0b-46bf-b44b-cf947479c4e2:
-                required: false
-                sortOrder: 1
+                required: '0'
+                sortOrder: '1'
               bbf16101-636a-4cbb-8c9b-2857a3ae00cc:
-                required: false
-                sortOrder: 2
+                required: '0'
+                sortOrder: '2'
             name: Content
-            sortOrder: 1
+            sortOrder: '1'
     fields:
       12adf5d8-5a0b-46bf-b44b-cf947479c4e2:
         contentColumnType: text
@@ -2304,7 +2301,7 @@ superTableBlockTypes:
         handle: hotspots
         instructions: ''
         name: Hotspots
-        searchable: true
+        searchable: '1'
         settings:
           relatedAssetHandle: image
         translationKeyFormat: null
@@ -2316,7 +2313,7 @@ superTableBlockTypes:
         handle: description
         instructions: ''
         name: Description
-        searchable: true
+        searchable: '1'
         settings:
           byteLimit: null
           charLimit: null
