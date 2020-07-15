@@ -37,6 +37,7 @@
 /node_modules/*
 /build/*
 /yarn-error.log
+/ssl/*
 
 # MISC FILES
 .cache
@@ -56,3 +57,4 @@
 !.vscode/extensions.json
 config.codekit3
 prepros-6.config
+node_modules

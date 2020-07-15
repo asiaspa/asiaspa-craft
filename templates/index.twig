@@ -1,54 +1,31 @@
-{% extends "_layout/_site" ~ craft.app.request.getParam("view") %}
+{% extends "_layout/_site" %}
 
-{# ------------------- main ------------------- #}
+
+
 {% block main %}
-
-{% set articles = craft.entries({
-section: "article",
-orderBy: 'postDate desc',
-
-}) %}
-
-<section class="articles-v3" style="margin: 0 48px;">
-    <div class="container max-width-adaptive-lg">
-        <ul class="grid gap-lg">
-            {% for article in articles %}
-            <li>
-                <div class="grid gap-md items-start">
-                    <a href="#0" class="articles-v3__img col-6@md col-7@xl">
-                        <figure class="media-wrprapper">
-                            <img src="https://source.unsplash.com/random/800x600" alt="Image description">
-                        </figure>
-                    </a>
-
-                    <div class="col-6@md col-5@xl">
-                        <div class="text-component">
-                            <h2 class="articles-v3__headline">
-                                <a href="{{ article.url }}">
-                                    {{ article.title }}
-                                </a>
-                            </h2>
-                            <p>{{ article.articleDescription }}</p>
-                        </div>
-
-                        <div class="articles-v3__author">
-                            <a href="#0" class="articles-v3__author-img">
-                                <img src="https://source.unsplash.com/random/50x50" alt="Author picture">
-                            </a>
-
-                            <div class="text-component text-sm line-height-xs v-space-xs">
-                                <p><a href="#0" class="articles-v3__author-name"
-                                        rel="author">{{ article.author.fullName }}</a></p>
-                                <p class="color-contrast-medium"><time>Oct 4, 2020</time>, &mdash; 5 min read</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            {% endfor %}
-
-        </ul>
+{# main section #}
+<section class="relative h-16 w-100">
+    {# backdrop #}
+    <div class="absolute bottom-0 left-0 w-8/12 h-full bg-primary-100"></div>
+    <div class="relative flex max-w-screen-xl mx-auto bg-gray-100 align center">
+        <div class="w-1/2">
+            <span>image</span>
+        </div>
+        <div class="w-1/2">
+            <span>cotnent</span>
+        </div>
     </div>
+    
 </section>
+
+
+
+<section class="container mx-auto">
+    {{ sprig('_components/_story-pagination', {limit: 5}) }}
+    {{ sprig.script }}
+</section>
+
+
+
 
 {% endblock %}

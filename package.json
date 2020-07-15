@@ -1,32 +1,40 @@
 {
-  "name": "asiaspa_craft_cms",
+  "name": "asiaspa",
   "version": "1.0.0",
-  "description": "Created by Hyperlane CI on 2020-06-01 11:22:45.",
+  "description": "AsiaSpa - dev based on Core tailwindCSS and alpineJS",
   "main": "index.js",
   "dependencies": {
-    "codyhouse-framework": "^2.7.1",
-    "cross-env": "^7.0.2",
-    "laravel-mix": "^5.0.4",
-    "postcss-calc": "^7.0.2"
+    "@tailwindcss/typography": "^0.1.3"
   },
   "devDependencies": {
-    "import-glob-loader": "^1.1.0",
-    "postcss-css-variables": "^0.17.0",
+    "alpinejs": "^2.4.1",
+    "browser-sync": "^2.26.7",
+    "browser-sync-webpack-plugin": "^2.0.1",
+    "clean-webpack-plugin": "^3.0.0",
+    "cross-env": "^7.0.2",
+    "laravel-mix": "^5.0.4",
+    "laravel-mix-filename-versioning": "^1.0.4",
+    "laravel-mix-purgecss": "^5.0.0",
+    "mix-tailwindcss": "^1.2.0",
     "resolve-url-loader": "^3.1.0",
-    "sass": "^1.26.7",
+    "sass": "^1.26.10",
     "sass-loader": "^8.0.2",
-    "vue-template-compiler": "^2.6.11",
-    "webpack-merge-and-include-globally": "^2.1.24"
+    "tailwindcss": "^1.4.6",
+    "vue-template-compiler": "^2.6.11"
   },
   "scripts": {
-    "dev": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "npm run development -- --watch",
+    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "npm run production",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
   },
   "repository": {
     "type": "git",
     "url": "git@git.hyperlane.co:team/traverse/asiaspa_craft_cms.git"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Hong@TRAVERSE",
+  "license": "ISC",
+  "keywords": []
 }

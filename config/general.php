@@ -50,6 +50,8 @@ return [
 
     'local' => [
         'allowAdminChanges' => true,
-        'devMode' => true
+        'devMode' => true,
+        'siteUrl' => 'http://asiaspa.test/'
     ]
 ];
+

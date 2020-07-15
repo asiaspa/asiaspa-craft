@@ -1,0 +1,86 @@
+table th.thin, table td.thin {
+    white-space: nowrap;
+}
+
+.welcome {
+    position: relative;
+    text-align: center;
+    padding: 30px;
+    background: #ECF8FF;
+    border-radius: 7px;
+}
+
+.welcome .logo {
+    opacity: 0.9;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 20px;
+    width: 120px;
+}
+
+@media (max-width: 768px) {
+    .welcome .logo {
+        display: none;
+    }
+}
+
+.welcome .main {
+    position: relative;
+}
+
+.welcome .icon {
+    height: 130px;
+}
+
+.spaced {
+    margin: 20px 0 30px;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 130px;
+    padding-right: 15px;
+    text-align: center;
+}
+.step-2 {
+    align-self: flex-start;
+    margin-top: 38px;
+}
+
+.step .number {
+    font-size: 20px;
+    font-weight: bold;
+    background: #ECF8FF;
+    border-radius: 100%;
+    width: 33px;
+    height: 33px;
+    line-height: 32px;
+    margin-bottom: 3px;
+}
+
+.info-hud {
+    max-width: 485px;
+}
+
+.info-hud li {
+    margin: 2px 0;
+}
+
+.info-hud code {
+    padding: 4px 5px;
+    background: #ececec;
+    border-radius: 3px;
+}
+
+table.editable tbody tr td {
+    text-align: left;
+}
+
+table.editable th.code {
+    font-family: inherit;
+    font-size: inherit !important;
+}

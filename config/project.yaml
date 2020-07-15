@@ -1,3 +1,6 @@
+assets:
+  tempSubpath: temp
+  tempVolumeUid: a63433bb-3666-4359-ade2-ddca22ffb12c
 categoryGroups:
   747402aa-105d-41d3-ace6-9e3de98971a4:
     handle: printIssue
@@ -52,7 +55,7 @@ categoryGroups:
     structure:
       maxLevels: 1
       uid: d78d195b-65bf-439f-8380-a34d4fb46731
-dateModified: 1594282553
+dateModified: 1594833628
 email:
   fromEmail: asiaspa.dev@gmail.com
   fromName: AsiaSpa
@@ -76,6 +79,8 @@ fieldGroups:
     name: 'Spa Listing'
   edf833c9-3ba6-49e0-9a69-c10802ea4731:
     name: 'Spa Locator'
+  f6ccb015-3533-491f-8f9c-775d16605b99:
+    name: 'Global / Branding'
 fields:
   02d38f73-db56-4fab-a533-0dc7400f81fe:
     contentColumnType: string
@@ -89,18 +94,18 @@ fields:
       allowedKinds:
         - image
       defaultUploadLocationSource: 'volume:4a49b85a-e6f1-4ee3-8085-cbfb50f5ce42'
-      defaultUploadLocationSubpath: ''
+      defaultUploadLocationSubpath: 'story/{slug}'
       limit: '1'
       localizeRelations: false
       restrictFiles: '1'
       selectionLabel: 'Select the Hero Image'
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
-      singleUploadLocationSource: 'volume:4a49b85a-e6f1-4ee3-8085-cbfb50f5ce42'
+      singleUploadLocationSource: 'volume:a63433bb-3666-4359-ade2-ddca22ffb12c'
       singleUploadLocationSubpath: 'story/{slug}'
       source: null
       sources:
-        - 'volume:4a49b85a-e6f1-4ee3-8085-cbfb50f5ce42'
+        - 'volume:a63433bb-3666-4359-ade2-ddca22ffb12c'
       targetSiteId: null
       useSingleFolder: true
       validateRelatedElements: ''
@@ -161,6 +166,30 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Assets
+  18629457-0daa-4ff0-a3a7-c6a088d8a601:
+    contentColumnType: string(7)
+    fieldGroup: f6ccb015-3533-491f-8f9c-775d16605b99
+    handle: colorGray100
+    instructions: ''
+    name: 'Color Gray 100'
+    searchable: true
+    settings:
+      defaultColor: '#f5f5f5'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Color
+  19575f50-047c-467e-a226-36b3c61065ce:
+    contentColumnType: string(7)
+    fieldGroup: f6ccb015-3533-491f-8f9c-775d16605b99
+    handle: colorBlack
+    instructions: ''
+    name: 'Color Black'
+    searchable: true
+    settings:
+      defaultColor: '#111111'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Color
   1ce6709a-2f35-4cbc-9d0f-7f69ef7d4e48:
     contentColumnType: boolean
     fieldGroup: 79916fca-0032-4f85-9653-20f333c8d7a2
@@ -261,6 +290,66 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Email
+  5e6710fa-b19d-4c11-bc85-252d5e99f99f:
+    contentColumnType: string
+    fieldGroup: f6ccb015-3533-491f-8f9c-775d16605b99
+    handle: favicon
+    instructions: 'Follow instructions and upload all assets generated from realfavicongenerator.net'
+    name: Favicon
+    searchable: true
+    settings:
+      allowSelfRelations: ''
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:4a49b85a-e6f1-4ee3-8085-cbfb50f5ce42'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: '1'
+      selectionLabel: ''
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:4a49b85a-e6f1-4ee3-8085-cbfb50f5ce42'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: true
+      validateRelatedElements: ''
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  633c8e4a-27cc-4fb1-b2e0-4660aee60c3d:
+    contentColumnType: text
+    fieldGroup: f6ccb015-3533-491f-8f9c-775d16605b99
+    handle: faviconCode
+    instructions: 'Place all the code generated from realfavicongenerator.net here.'
+    name: 'Favicon Code'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '10'
+      multiline: '1'
+      placeholder: '<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  63ab5077-9b21-4873-826e-fe37811594c8:
+    contentColumnType: string(7)
+    fieldGroup: f6ccb015-3533-491f-8f9c-775d16605b99
+    handle: colorPrimary300
+    instructions: ''
+    name: 'Color Primary 300'
+    searchable: true
+    settings:
+      defaultColor: '#a3d7d1'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Color
   6797e499-7808-4067-9b06-1d2989a94807:
     contentColumnType: text
     fieldGroup: a7b23ced-f8be-4c09-bba7-84b5e4552f75
@@ -418,19 +507,21 @@ fields:
     searchable: true
     settings:
       allowSelfRelations: ''
-      allowedKinds: null
-      defaultUploadLocationSource: 'volume:4a49b85a-e6f1-4ee3-8085-cbfb50f5ce42'
-      defaultUploadLocationSubpath: ''
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:a63433bb-3666-4359-ade2-ddca22ffb12c'
+      defaultUploadLocationSubpath: 'spa-listing/{slug}'
       limit: ''
       localizeRelations: false
-      restrictFiles: ''
+      restrictFiles: '1'
       selectionLabel: ''
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
-      singleUploadLocationSource: 'volume:4a49b85a-e6f1-4ee3-8085-cbfb50f5ce42'
+      singleUploadLocationSource: 'volume:a63433bb-3666-4359-ade2-ddca22ffb12c'
       singleUploadLocationSubpath: 'spalisting/{slug}'
       source: null
-      sources: '*'
+      sources:
+        - 'volume:a63433bb-3666-4359-ade2-ddca22ffb12c'
       targetSiteId: null
       useSingleFolder: true
       validateRelatedElements: ''
@@ -494,6 +585,18 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: barrelstrength\sproutforms\fields\Forms
+  a3848df8-3ec6-42be-bb89-98d08a96b138:
+    contentColumnType: string(7)
+    fieldGroup: f6ccb015-3533-491f-8f9c-775d16605b99
+    handle: colorPrimary900
+    instructions: ''
+    name: 'Color Primary 900'
+    searchable: true
+    settings:
+      defaultColor: '#357974'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Color
   a9f00eab-73ff-4659-9b15-ee56aa8c8531:
     contentColumnType: string
     fieldGroup: 847d91f3-2f4a-4f56-9f9d-40c20e080811
@@ -619,6 +722,60 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: ether\simplemap\fields\MapField
+  b0ed232c-05b4-416c-a519-b171be8eccdf:
+    contentColumnType: string(7)
+    fieldGroup: f6ccb015-3533-491f-8f9c-775d16605b99
+    handle: colorPrimary700
+    instructions: ''
+    name: 'Color Primary 700'
+    searchable: true
+    settings:
+      defaultColor: '#449c96'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Color
+  b1e8b572-fc23-4288-abb7-8090fcf58c57:
+    contentColumnType: string
+    fieldGroup: f6ccb015-3533-491f-8f9c-775d16605b99
+    handle: logoSimple
+    instructions: 'SVG only.'
+    name: 'Logo Simple'
+    searchable: true
+    settings:
+      allowSelfRelations: ''
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:4a49b85a-e6f1-4ee3-8085-cbfb50f5ce42'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: '1'
+      selectionLabel: ''
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:a63433bb-3666-4359-ade2-ddca22ffb12c'
+      singleUploadLocationSubpath: branding/
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: true
+      validateRelatedElements: ''
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  b326f54f-6df1-407c-a64d-e187c3fd9bad:
+    contentColumnType: string(7)
+    fieldGroup: f6ccb015-3533-491f-8f9c-775d16605b99
+    handle: colorGray900
+    instructions: ''
+    name: 'Color Gray 900'
+    searchable: true
+    settings:
+      defaultColor: '#212121'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Color
   b357d9dd-f6da-4d5f-b00f-8769518e1b39:
     contentColumnType: string(400)
     fieldGroup: 847d91f3-2f4a-4f56-9f9d-40c20e080811
@@ -637,6 +794,42 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
+  b46242ec-3e0f-40dd-b4db-3ca8bc4df997:
+    contentColumnType: string(7)
+    fieldGroup: f6ccb015-3533-491f-8f9c-775d16605b99
+    handle: colorWhite
+    instructions: ''
+    name: 'Color White'
+    searchable: true
+    settings:
+      defaultColor: '#ffffff'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Color
+  b68525ff-f890-4544-a9d2-0cb24b6cd9ee:
+    contentColumnType: string(7)
+    fieldGroup: f6ccb015-3533-491f-8f9c-775d16605b99
+    handle: colorGray300
+    instructions: ''
+    name: 'Color Gray 300'
+    searchable: true
+    settings:
+      defaultColor: '#e0e0e0'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Color
+  b8fc995f-9dfe-48a5-a072-27b6b4c7b634:
+    contentColumnType: string(7)
+    fieldGroup: f6ccb015-3533-491f-8f9c-775d16605b99
+    handle: colorGray700
+    instructions: ''
+    name: 'Color Gray 700'
+    searchable: true
+    settings:
+      defaultColor: '#616161'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Color
   c3bdaf00-a5d1-4f90-bbd2-62f4b2b2b886:
     contentColumnType: string
     fieldGroup: 847d91f3-2f4a-4f56-9f9d-40c20e080811
@@ -660,6 +853,30 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Categories
+  c4064289-5893-4cfc-94b7-5d952f4ba627:
+    contentColumnType: string(7)
+    fieldGroup: f6ccb015-3533-491f-8f9c-775d16605b99
+    handle: colorGray500
+    instructions: ''
+    name: 'Color Gray 500'
+    searchable: true
+    settings:
+      defaultColor: '#9e9e9e'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Color
+  ce4f233e-2914-41b3-9cef-f40271176d2d:
+    contentColumnType: string(7)
+    fieldGroup: f6ccb015-3533-491f-8f9c-775d16605b99
+    handle: colorPrimary500
+    instructions: 'Default Primary Color'
+    name: 'Color Primary 500'
+    searchable: true
+    settings:
+      defaultColor: '#5cb8b2'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Color
   ddbc3373-03b2-4ff9-a616-05ad1683a032:
     contentColumnType: string
     fieldGroup: 847d91f3-2f4a-4f56-9f9d-40c20e080811
@@ -694,19 +911,19 @@ fields:
       allowSelfRelations: ''
       allowedKinds:
         - image
-      defaultUploadLocationSource: 'volume:4a49b85a-e6f1-4ee3-8085-cbfb50f5ce42'
-      defaultUploadLocationSubpath: 'spalisting/{slug}'
+      defaultUploadLocationSource: 'volume:a63433bb-3666-4359-ade2-ddca22ffb12c'
+      defaultUploadLocationSubpath: 'spa-listing/{slug}'
       limit: '1'
       localizeRelations: false
       restrictFiles: '1'
       selectionLabel: ''
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
-      singleUploadLocationSource: 'volume:4a49b85a-e6f1-4ee3-8085-cbfb50f5ce42'
+      singleUploadLocationSource: 'volume:a63433bb-3666-4359-ade2-ddca22ffb12c'
       singleUploadLocationSubpath: ''
       source: null
       sources:
-        - 'volume:4a49b85a-e6f1-4ee3-8085-cbfb50f5ce42'
+        - 'volume:a63433bb-3666-4359-ade2-ddca22ffb12c'
       targetSiteId: null
       useSingleFolder: true
       validateRelatedElements: ''
@@ -768,6 +985,112 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: barrelstrength\sproutforms\fields\Forms
+  f799212b-683d-49c2-acf2-8adcb685edd6:
+    contentColumnType: string
+    fieldGroup: f6ccb015-3533-491f-8f9c-775d16605b99
+    handle: logo
+    instructions: 'SVG only.'
+    name: Logo
+    searchable: true
+    settings:
+      allowSelfRelations: ''
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:4a49b85a-e6f1-4ee3-8085-cbfb50f5ce42'
+      defaultUploadLocationSubpath: branding/
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: '1'
+      selectionLabel: 'Upload Logo'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:a63433bb-3666-4359-ade2-ddca22ffb12c'
+      singleUploadLocationSubpath: branding/
+      source: null
+      sources:
+        - 'volume:4a49b85a-e6f1-4ee3-8085-cbfb50f5ce42'
+      targetSiteId: null
+      useSingleFolder: true
+      validateRelatedElements: ''
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  fed18484-c2ef-48e0-876b-d8cb96c4fd97:
+    contentColumnType: string(7)
+    fieldGroup: f6ccb015-3533-491f-8f9c-775d16605b99
+    handle: colorPrimary100
+    instructions: ''
+    name: 'Color Primary 100'
+    searchable: true
+    settings:
+      defaultColor: '#e2f3f0'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Color
+globalSets:
+  94aa7177-3295-4bf7-8be0-8a81dd3c194d:
+    fieldLayouts:
+      3d150a4d-85a8-49bf-b1c1-c5b849896e95:
+        tabs:
+          -
+            fields:
+              5e6710fa-b19d-4c11-bc85-252d5e99f99f:
+                required: false
+                sortOrder: 3
+              633c8e4a-27cc-4fb1-b2e0-4660aee60c3d:
+                required: false
+                sortOrder: 4
+              b1e8b572-fc23-4288-abb7-8090fcf58c57:
+                required: false
+                sortOrder: 2
+              f799212b-683d-49c2-acf2-8adcb685edd6:
+                required: false
+                sortOrder: 1
+            name: Logo
+            sortOrder: 1
+          -
+            fields:
+              18629457-0daa-4ff0-a3a7-c6a088d8a601:
+                required: false
+                sortOrder: 6
+              19575f50-047c-467e-a226-36b3c61065ce:
+                required: false
+                sortOrder: 11
+              63ab5077-9b21-4873-826e-fe37811594c8:
+                required: false
+                sortOrder: 2
+              a3848df8-3ec6-42be-bb89-98d08a96b138:
+                required: false
+                sortOrder: 5
+              b0ed232c-05b4-416c-a519-b171be8eccdf:
+                required: false
+                sortOrder: 4
+              b326f54f-6df1-407c-a64d-e187c3fd9bad:
+                required: false
+                sortOrder: 10
+              b46242ec-3e0f-40dd-b4db-3ca8bc4df997:
+                required: false
+                sortOrder: 12
+              b68525ff-f890-4544-a9d2-0cb24b6cd9ee:
+                required: false
+                sortOrder: 7
+              b8fc995f-9dfe-48a5-a072-27b6b4c7b634:
+                required: false
+                sortOrder: 9
+              c4064289-5893-4cfc-94b7-5d952f4ba627:
+                required: false
+                sortOrder: 8
+              ce4f233e-2914-41b3-9cef-f40271176d2d:
+                required: false
+                sortOrder: 3
+              fed18484-c2ef-48e0-876b-d8cb96c4fd97:
+                required: false
+                sortOrder: 1
+            name: 'Color Palette'
+            sortOrder: 2
+    handle: branding
+    name: Branding
 graphql:
   schemas:
     6f936c24-522c-4cd5-af4c-a929545428fe:
@@ -883,7 +1206,8 @@ matrixBlockTypes:
         searchable: true
         settings:
           availableTransforms: '*'
-          availableVolumes: '*'
+          availableVolumes:
+            - a63433bb-3666-4359-ade2-ddca22ffb12c
           cleanupHtml: true
           columnType: text
           purifierConfig: ''
@@ -974,19 +1298,21 @@ matrixBlockTypes:
         searchable: true
         settings:
           allowSelfRelations: ''
-          allowedKinds: null
-          defaultUploadLocationSource: 'volume:4a49b85a-e6f1-4ee3-8085-cbfb50f5ce42'
-          defaultUploadLocationSubpath: ''
+          allowedKinds:
+            - image
+          defaultUploadLocationSource: 'volume:a63433bb-3666-4359-ade2-ddca22ffb12c'
+          defaultUploadLocationSubpath: 'story/{owner.slug}'
           limit: '1'
           localizeRelations: false
-          restrictFiles: ''
+          restrictFiles: '1'
           selectionLabel: ''
           showUnpermittedFiles: false
           showUnpermittedVolumes: false
-          singleUploadLocationSource: 'volume:4a49b85a-e6f1-4ee3-8085-cbfb50f5ce42'
+          singleUploadLocationSource: 'volume:a63433bb-3666-4359-ade2-ddca22ffb12c'
           singleUploadLocationSubpath: 'story/{owner.owner.slug}'
           source: null
-          sources: '*'
+          sources:
+            - 'volume:a63433bb-3666-4359-ade2-ddca22ffb12c'
           targetSiteId: null
           useSingleFolder: true
           validateRelatedElements: ''
@@ -1101,18 +1427,19 @@ matrixBlockTypes:
           allowSelfRelations: ''
           allowedKinds:
             - image
-          defaultUploadLocationSource: 'volume:4a49b85a-e6f1-4ee3-8085-cbfb50f5ce42'
-          defaultUploadLocationSubpath: ''
+          defaultUploadLocationSource: 'volume:a63433bb-3666-4359-ade2-ddca22ffb12c'
+          defaultUploadLocationSubpath: 'story/{owner.slug}'
           limit: '1'
           localizeRelations: false
           restrictFiles: '1'
           selectionLabel: 'Select an Image'
           showUnpermittedFiles: false
           showUnpermittedVolumes: false
-          singleUploadLocationSource: 'volume:4a49b85a-e6f1-4ee3-8085-cbfb50f5ce42'
+          singleUploadLocationSource: 'volume:a63433bb-3666-4359-ade2-ddca22ffb12c'
           singleUploadLocationSubpath: 'story/{owner.slug}'
           source: null
-          sources: '*'
+          sources:
+            - 'volume:a63433bb-3666-4359-ade2-ddca22ffb12c'
           targetSiteId: null
           useSingleFolder: true
           validateRelatedElements: ''
@@ -1262,11 +1589,39 @@ matrixBlockTypes:
     handle: tab
     name: Tab
     sortOrder: 1
+navigation:
+  navs:
+    9ef40309-6d64-4ade-b3da-24a47cd7b570:
+      fieldLayouts:
+        e31d8fc6-701b-4f23-a027-14fc9105510e:
+          tabs:
+            -
+              fields:
+                1468ef73-d157-46b7-ae06-706861d46c2d:
+                  required: false
+                  sortOrder: 2
+                1ce6709a-2f35-4cbc-9d0f-7f69ef7d4e48:
+                  required: false
+                  sortOrder: 1
+              name: 'Mega Menu'
+              sortOrder: 1
+      handle: megaMenu
+      instructions: ''
+      maxNodes: ''
+      name: 'Mega Menu'
+      propagateNodes: true
+      sortOrder: 3
+      structure:
+        maxLevels: '2'
+        uid: 59c44717-7d35-4d43-b9de-f593d2915fa0
 plugins:
   ad-wizard:
     edition: standard
     enabled: true
     schemaVersion: 2.1.0
+  assetrev:
+    enabled: true
+    schemaVersion: 1.0.0
   aws-s3:
     edition: standard
     enabled: true
@@ -1297,7 +1652,7 @@ plugins:
             - concurrency
             - '3'
       cacheWarmerType: putyourlightson\blitz\drivers\warmers\GuzzleWarmer
-      cachingEnabled: '1'
+      cachingEnabled: ''
       clearCacheAutomatically: '1'
       customSiteUris: ''
       debug: false
@@ -1338,6 +1693,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  cp-css:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
   cp-field-inspect:
     edition: standard
     enabled: true
@@ -1350,6 +1709,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  google-cloud:
+    edition: standard
+    enabled: true
+    schemaVersion: '1.1'
   grid:
     edition: standard
     enabled: true
@@ -1362,6 +1725,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  imager-x:
+    edition: pro
+    enabled: true
+    schemaVersion: 3.0.0
   imgixer:
     edition: standard
     enabled: true
@@ -1392,6 +1759,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 3.0.9
+  seo:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.1.1
   seomatic:
     edition: standard
     enabled: true
@@ -1595,6 +1966,9 @@ sections:
                     sortOrder: 1
                 name: SEO
                 sortOrder: 4
+              -
+                name: 'Tab 5'
+                sortOrder: 5
         handle: story
         hasTitleField: true
         name: Story
@@ -1781,19 +2155,21 @@ superTableBlockTypes:
         searchable: true
         settings:
           allowSelfRelations: ''
-          allowedKinds: null
-          defaultUploadLocationSource: 'volume:4a49b85a-e6f1-4ee3-8085-cbfb50f5ce42'
-          defaultUploadLocationSubpath: ''
+          allowedKinds:
+            - image
+          defaultUploadLocationSource: 'volume:a63433bb-3666-4359-ade2-ddca22ffb12c'
+          defaultUploadLocationSubpath: 'story/{owner.owner.slug}'
           limit: '1'
           localizeRelations: false
-          restrictFiles: ''
+          restrictFiles: '1'
           selectionLabel: ''
           showUnpermittedFiles: false
           showUnpermittedVolumes: false
-          singleUploadLocationSource: 'volume:4a49b85a-e6f1-4ee3-8085-cbfb50f5ce42'
+          singleUploadLocationSource: 'volume:a63433bb-3666-4359-ade2-ddca22ffb12c'
           singleUploadLocationSubpath: 'story/{owner.owner.slug}'
           source: null
-          sources: '*'
+          sources:
+            - 'volume:a63433bb-3666-4359-ade2-ddca22ffb12c'
           targetSiteId: null
           useSingleFolder: true
           validateRelatedElements: ''
@@ -2118,3 +2494,17 @@ volumes:
     sortOrder: 3
     type: craft\volumes\Local
     url: '@web/asset'
+  a63433bb-3666-4359-ade2-ddca22ffb12c:
+    handle: googleCloud
+    hasUrls: true
+    name: 'Google Cloud'
+    settings:
+      bucket: asiaspa
+      bucketSelectionMode: choose
+      expires: ''
+      keyFileContents: '{   "type": "service_account",   "project_id": "scenic-treat-283413",   "private_key_id": "0ed11faff3273c4af70a1258dd29d33e71d2215d",   "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQClg4Btx+I7SCNg\n5S4yFnEmFfEn6EELR/6kMd4ZYkcMTvactGgGlW5wUJuetY9JYR92OatqF/NUvEML\nrddzhSM3u8hDIOB9vqLcZnHAGmCXIBT9svCiSHy4pEu5yrJrYG61ZEzsUnCkGCyG\nUA0TfaVZLjGENV2FXYgOYQexChavcZ3/GUjVlOWvYXOd8OLedmUmlg5VmT+fsqBf\ndbsIhT4jq6p52I9O/NqpSzNFESBMB4la+iGAqDgdd6wao5W+2SPRX/rOM1LKOMAj\nEBGK4EkiWz1zvv1wmorSPt1YGQj5kQ5cqZZvZFCVMpd7Ro6RYzleQED6yK/iVbGq\n75Gbg41VAgMBAAECggEABA0xRF6veMSGCy3pANRgTi6c0d2DVBed0d6foW7wrsoz\nCrh20GxxgOHUQWEP4hu0xbPZMJZoADPAj2VgwATrDQb1esEwBZv4SB1g3PM4WJKy\nONibv9k25l0tNl3SGsNISnvrTyCgfb/SvTHx8/9wH/v7vdEBmk1lEncJFWoaDo7X\nEDb47hpuv1wy2qPpXHsp+DO4PNs7zhyCh36bgo8P+sGk58x3tDzW9J0qEcXZdyIc\nWTRhL0ifL2PWsczi9pwFWPQUIoCe8jVC+uM3dtcEmz6+0EcFsfI2rh2D2UMIB1uq\nUTL/SjeBXhZA7u2/PEMK6BcPFaDrLaWWyYQTVQzoYQKBgQDiJKlmb3QeeSuBRipp\n+q1VuqbH3pUlpJWBWAUuZotyPoxIoeL/TRN6Kg2555kGhNzEo6dQNdeHgiIpw93j\nRBR1m4rDj5ahrWuRi1/Xem0sp7dQxGVFOnCeunGSnve1W+iG2NsYFgpENTge31eJ\nJ4lojkS3HDRWNz+0GMFJ2+Lp9QKBgQC7XaSPr8Ei125czkxGzM1qpAkOcQlXe3t8\n8FvsZEm87Hu2B3QQ6YeGpKRAckRR85jMkJcDnMnVRHsdn84nDPFJ9e82bwrjKrsz\nHdxLIT91AHfzs+J7Dx9AGONHfMom1R61GHEGCMxpO8ZyMmzSG7veRoNjx9biaiK6\nLFptY28Z4QKBgBisA0dHtZV1hseNzibN0Idf275GjGMU97Kq1bXgPipypH9wGgHc\neNmFKQY1PD631BYn/KMFnMQN8Ig59EVNMiY6mAMJ8VcmQmwYlpY9pxeOHLPVGW9a\nFttaX/WtHj1ND6tWkWCpVulmHP9RQo2WIKmli92mWBdn461UXhIeyTzZAoGBAIiI\ns5tVOst162FLn7/UDDiSslrIukL6o8EmsgWwCx/VwEykX8rXMkBGh77CxdBmT8l5\n7+HdBiMYFRNAWYyRXN9FjPzArFFf2SxlrRs+biyHm+GGCxsbqO0fdbepUvI7SXY0\nCmCYVsS0n2amIjB1r1BJWAOFI6y4JPg/y+F8nQBhAoGADC881aqI3dPsiWCUXSxT\ncAgQPAaguy8v+alJuip934RAyk1ooLdJXqN+jTzl61IzvwDiq2L9ZpP0yW5rrU1p\nU8gEgqdsIL/P3YK61u2Z1/ycaCRZfY/zobPwZe0+mv8SIkU2QH1xKdB1FBBFWf2S\n8ABhbhqZy1gfEjC+HseJEQE=\n-----END PRIVATE KEY-----\n",   "client_email": "asiaspa-craft-cms@scenic-treat-283413.iam.gserviceaccount.com",   "client_id": "110632895405925616567",   "auth_uri": "https://accounts.google.com/o/oauth2/auth",   "token_uri": "https://oauth2.googleapis.com/token",   "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",   "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/asiaspa-craft-cms%40scenic-treat-283413.iam.gserviceaccount.com" }'
+      projectId: $GOOGLE_CLOUD_PROJECT_ID
+      subfolder: ''
+    sortOrder: 4
+    type: craft\googlecloud\Volume
+    url: 'https://storage.googleapis.com/asiaspa/'
