@@ -24,7 +24,9 @@
         </div>
         <div class="self-center w-1/2 py-8 pl-16">
             {# category #}
-            <a href="{{ entry.storyCategory ?? entry.storyCategory.one().link }}">{{ entry.storyCategory.one().title}}</a>
+            {% if entry.storyCategory | length %}
+            <a href="{{ entry.storyCategory.one().link }}">{{ entry.storyCategory.one().title}}</a>
+            {% endif %}
             <h1 class="mt-4 font-serif text-5xl font-semibold leading-tight tracking-tight">{{ entry.title }}</h1>
             <h2 class="mt-4 text-2xl color-gray-900">{{ entry.storyStandfirst }}</h2>
             {# avator #}
