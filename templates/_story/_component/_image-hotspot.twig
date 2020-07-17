@@ -1,6 +1,6 @@
 <section class="max-w-screen-lg mx-auto my-16">
     <div class="relative">
-        {% include "_components/_imgix" with {image : block.image.one(), ratio : block.image.one().width / block.image.one().height , caption : '' } %}
+        {% include "_components/_imager" with { img : block.image.one() } %}
         {% for hotspot in block.hotspots %}
             <span class="absolute w-6 h-6 rounded-full bg-primary-500" style="top:; left:0"></span>
             {{ hotspot }} |

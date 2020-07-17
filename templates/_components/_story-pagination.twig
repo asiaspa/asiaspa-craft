@@ -25,10 +25,16 @@
 {% for entry in entries %}
     <div class="flex py-8 mx-4 border-b border-gray-300">   
         <div class="w-4/12 mr-6 md:w-3/12">
-            {% include "_components/_imgix" with {image : entry.storyHeroImage[0], ratio : 8/9 } %}
+            {% if entry.storyHeroImage | length %}
+                {% include "_components/_imager" with { img : entry.storyHeroImage[0], w : 8, h : 9 } %}
+            {% else %}
+                <figure class="relative w-full overflow-hidden bg-gray-100" style="padding-bottom: {{ 9/8*100 }}%">
+                    <div class="absolute w-full h-full pin object-fit-cover" />
+                </figure>
+            {% endif %}
         </div>
         <div class="w-8/12 md:w-9/12">
-        {% if entry.storyCategory | length %}<a href="{{ entry.storyCategory.one().uri }}">{{ entry.storyCategory.one().title }}</a>{% endif %}
+        {% if entry.storyCategory | length %}<a href="{{ entry.storyCategory[0].uri }}">{{ entry.storyCategory[0].title }}</a>{% endif %}
         <a href="/{{ entry.uri }}">
             <h6 class="font-serif text-2xl leading-tight md:text-3xl">{{ entry.title }}</h6> 
             <p class="text-gray-900">{{ entry.storyStandfirst ?? "This should be a Standfirst" }}</p>

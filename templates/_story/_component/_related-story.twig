@@ -2,7 +2,7 @@
     {% for entry in block.story %}
         <div class="flex py-8 mx-4 border-b border-gray-300">   
             <div class="w-4/12 mr-6 md:w-3/12">
-                {% include "_components/_imgix" with {image : entry.storyHeroImage.one(), ratio : 8/9 } %}
+                {% include "_components/_imager" with { img : entry.storyHeroImage, w : 8, h : 9 } %}
             </div>
             <div class="w-8/12 md:w-9/12">
             {% if entry.storyCategory | length %}<a href="{{ entry.storyCategory.one().uri }}">{{ entry.storyCategory.one().title }}</a>{% endif %}

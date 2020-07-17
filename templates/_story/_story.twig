@@ -14,7 +14,13 @@
     <div class="absolute top-0 left-0 w-7/12 h-full mt-24 bg-primary-100"></div>
     <div class="relative flex max-w-screen-xl mx-auto">
         <div class="w-1/2 ">
-            {% include "_components/_imgix" with {image : entry.storyHeroImage[0], ratio : 8/9 } %}
+            {% if entry.storyHeroImage | length %}
+                {% include "_components/_imager" with { img : entry.storyHeroImage[0], w : 8, h : 9 } %}
+            {% else %}
+                <figure class="relative w-full overflow-hidden bg-gray-100" style="padding-bottom: {{ 9/8*100 }}%">
+                    <div class="absolute w-full h-full pin object-fit-cover" />
+                </figure>
+            {% endif %}
         </div>
         <div class="self-center w-1/2 py-8 pl-16">
             {# category #}
