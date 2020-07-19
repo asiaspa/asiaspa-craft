@@ -11,7 +11,7 @@
 return [
     '*' => [
         // force local -> dev ,staging, production
-        'useProjectConfigFile' => false,       
+        'useProjectConfigFile' => true,       
         'allowAdminChanges' => false,
 
         'defaultWeekStartDay' => 0,
