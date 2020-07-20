@@ -33,15 +33,12 @@ return [
         ]
     ],
 
-    'dev' => [
+    'staging' => [
         'siteUrl' => null,
         'devMode' => true,
         'allowAdminChanges' => true
     ],
 
-    'staging' => [
-        'allowAdminChanges' => true
-    ]
 
 
     // 'staging' => [
@@ -54,7 +51,7 @@ return [
     //     'allowAdminChanges' => false,
     // ]
 
-    'local' => [
+    'dev' => [
         'allowAdminChanges' => true,
         'devMode' => true,
         'siteUrl' => 'http://asiaspa.test/'
