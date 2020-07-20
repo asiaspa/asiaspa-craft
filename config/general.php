@@ -12,7 +12,7 @@ return [
     '*' => [
         // force local -> dev ,staging, production
         'useProjectConfigFile' => true,       
-        // 'allowAdminChanges' => false,
+        'allowAdminChanges' => false,
 
         'defaultWeekStartDay' => 0,
         'enableCsrfProtection' => true,
