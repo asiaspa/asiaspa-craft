@@ -55,7 +55,7 @@ categoryGroups:
     structure:
       maxLevels: 1
       uid: d78d195b-65bf-439f-8380-a34d4fb46731
-dateModified: 1595257325
+dateModified: 1595257985
 email:
   fromEmail: asiaspa.dev@gmail.com
   fromName: AsiaSpa
@@ -2289,7 +2289,7 @@ system:
   edition: pro
   live: true
   name: AsiaSpa
-  schemaVersion: 3.4.10
+  schemaVersion: 3.4.11
   timeZone: Asia/Hong_Kong
 users:
   allowPublicRegistration: false
