@@ -39,6 +39,11 @@ return [
         'allowAdminChanges' => true
     ],
 
+    'staging' => [
+        'allowAdminChanges' => true
+    ]
+
+
     // 'staging' => [
     //     'siteUrl' => null,
     // ],
