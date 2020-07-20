@@ -1,21 +1,23 @@
-# Must Do
+# Brief
+Asiaspa website running on AWS EC2 server provisioned by runcloud.io.
+
+## TODO
 1. Amazon AWS reset contact & billing informaiton
-
-## Backend UX issue / discussion
-1. how to manage asset pool? -> lets set a large pool first?
 2. Redactor -> Pasted images are not managable.
-
-## Misc issues to discuss
-1. email sent/reply issue
-2. 
+3. email sent/reply issue 
 
 ## Security Protocol & Account Management
 Passwords is managed via Lastpass with 1 master password.
 1. Craft ID / Craft Cloud
-2. Google Cloud
-3. Imgix
-4. 
+2. Google Cloud (removed)
+3. Imgix (removed)
+4. Runcloud
+5. Amazon AWS
 
+## Billing & Invoice 
+
+### One off Service Fee
+1. Runcloud subscription - July - paid by TRAVERSE - $8 USD
 
 ### Application Cost for quotation part II
 1. Craft CMS License (1 Year update)
