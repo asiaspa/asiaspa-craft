@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.146.0",
+            "version": "3.147.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "3975a494888375b5bdabf21285f86b47d6e9d531"
+                "reference": "e63974c002c0f6520da597d44a3f83ce46d7a612"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/3975a494888375b5bdabf21285f86b47d6e9d531",
-                "reference": "3975a494888375b5bdabf21285f86b47d6e9d531",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/e63974c002c0f6520da597d44a3f83ce46d7a612",
+                "reference": "e63974c002c0f6520da597d44a3f83ce46d7a612",
                 "shasum": ""
             },
             "require": {
@@ -89,7 +89,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2020-07-15T18:18:08+00:00"
+            "time": "2020-07-17T18:14:13+00:00"
         },
         {
             "name": "barrelstrength/sprout-base",
@@ -924,16 +924,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "3.4.27",
+            "version": "3.4.28.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "68d7e40efc7630fc319a27e0536426028d7baa50"
+                "reference": "34c8dd510522b6108a17aa6172ec7aa5ad84e30e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/68d7e40efc7630fc319a27e0536426028d7baa50",
-                "reference": "68d7e40efc7630fc319a27e0536426028d7baa50",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/34c8dd510522b6108a17aa6172ec7aa5ad84e30e",
+                "reference": "34c8dd510522b6108a17aa6172ec7aa5ad84e30e",
                 "shasum": ""
             },
             "require": {
@@ -1018,7 +1018,7 @@
                 "craftcms",
                 "yii2"
             ],
-            "time": "2020-07-03T19:20:14+00:00"
+            "time": "2020-07-16T14:28:18+00:00"
         },
         {
             "name": "craftcms/google-cloud",
@@ -3330,20 +3330,20 @@
         },
         {
             "name": "league/oauth2-client",
-            "version": "2.4.1",
+            "version": "2.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/oauth2-client.git",
-                "reference": "cc114abc622a53af969e8664722e84ca36257530"
+                "reference": "d9f2a1e000dc14eb3c02e15d15759385ec7ff0fb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/oauth2-client/zipball/cc114abc622a53af969e8664722e84ca36257530",
-                "reference": "cc114abc622a53af969e8664722e84ca36257530",
+                "url": "https://api.github.com/repos/thephpleague/oauth2-client/zipball/d9f2a1e000dc14eb3c02e15d15759385ec7ff0fb",
+                "reference": "d9f2a1e000dc14eb3c02e15d15759385ec7ff0fb",
                 "shasum": ""
             },
             "require": {
-                "guzzlehttp/guzzle": "^6.0",
+                "guzzlehttp/guzzle": "^6.0 || ^7.0",
                 "paragonie/random_compat": "^1|^2|^9.99",
                 "php": "^5.6|^7.0"
             },
@@ -3393,7 +3393,7 @@
                 "oauth2",
                 "single sign on"
             ],
-            "time": "2018-11-22T18:33:57+00:00"
+            "time": "2020-07-18T17:54:32+00:00"
         },
         {
             "name": "mapkit/jwt",
@@ -7911,16 +7911,16 @@
         },
         {
             "name": "voku/portable-utf8",
-            "version": "5.4.45",
+            "version": "5.4.46",
             "source": {
                 "type": "git",
                 "url": "https://github.com/voku/portable-utf8.git",
-                "reference": "5445d44086ea7b53dcd6dd1b182ae5bdcb1fbb07"
+                "reference": "664a710cc07c83c5d023a3ae8be22d69e3622286"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/voku/portable-utf8/zipball/5445d44086ea7b53dcd6dd1b182ae5bdcb1fbb07",
-                "reference": "5445d44086ea7b53dcd6dd1b182ae5bdcb1fbb07",
+                "url": "https://api.github.com/repos/voku/portable-utf8/zipball/664a710cc07c83c5d023a3ae8be22d69e3622286",
+                "reference": "664a710cc07c83c5d023a3ae8be22d69e3622286",
                 "shasum": ""
             },
             "require": {
@@ -7980,7 +7980,7 @@
                 "utf-8",
                 "utf8"
             ],
-            "time": "2020-05-26T07:35:55+00:00"
+            "time": "2020-07-18T00:16:14+00:00"
         },
         {
             "name": "voku/stop-words",
