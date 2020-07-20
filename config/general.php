@@ -12,7 +12,7 @@ return [
     '*' => [
         // force local -> dev ,staging, production
         'useProjectConfigFile' => true,       
-        'allowAdminChanges' => false,
+        // 'allowAdminChanges' => false,
 
         'defaultWeekStartDay' => 0,
         'enableCsrfProtection' => true,
@@ -36,20 +36,9 @@ return [
     'staging' => [
         'siteUrl' => null,
         'devMode' => true,
-        'allowAdminChanges' => true
+        // 'allowAdminChanges' => true
     ],
 
-
-
-    // 'staging' => [
-    //     'siteUrl' => null,
-    // ],
-
-    // 'production' => [
-    //     'siteUrl' => null,
-    //     // prevent conflict with project config
-    //     'allowAdminChanges' => false,
-    // ]
 
     'dev' => [
         'allowAdminChanges' => true,
