@@ -55,7 +55,7 @@ categoryGroups:
     structure:
       maxLevels: 1
       uid: d78d195b-65bf-439f-8380-a34d4fb46731
-dateModified: 1595256499
+dateModified: 1595257325
 email:
   fromEmail: asiaspa.dev@gmail.com
   fromName: AsiaSpa
@@ -93,21 +93,21 @@ fields:
       allowSelfRelations: ''
       allowedKinds:
         - image
-      defaultUploadLocationSource: 'volume:4a49b85a-e6f1-4ee3-8085-cbfb50f5ce42'
-      defaultUploadLocationSubpath: 'story/{slug}'
+      defaultUploadLocationSource: 'volume:883ab42c-10f1-4e32-a559-61f23e4e3775'
+      defaultUploadLocationSubpath: ''
       limit: '1'
       localizeRelations: false
       restrictFiles: '1'
       selectionLabel: 'Select the Hero Image'
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
-      singleUploadLocationSource: 'volume:a63433bb-3666-4359-ade2-ddca22ffb12c'
+      singleUploadLocationSource: 'volume:4a49b85a-e6f1-4ee3-8085-cbfb50f5ce42'
       singleUploadLocationSubpath: 'story/{slug}'
       source: null
       sources:
-        - 'volume:a63433bb-3666-4359-ade2-ddca22ffb12c'
+        - 'volume:883ab42c-10f1-4e32-a559-61f23e4e3775'
       targetSiteId: null
-      useSingleFolder: true
+      useSingleFolder: false
       validateRelatedElements: ''
       viewMode: large
     translationKeyFormat: null
@@ -136,36 +136,6 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Categories
-  1468ef73-d157-46b7-ae06-706861d46c2d:
-    contentColumnType: string
-    fieldGroup: 79916fca-0032-4f85-9653-20f333c8d7a2
-    handle: megaMenuPinnedLinkHeroImage
-    instructions: 'Upload alternative key visual. (Aspect Ratio: 8x9)'
-    name: 'Pinned Link Hero Image'
-    searchable: false
-    settings:
-      allowSelfRelations: ''
-      allowedKinds:
-        - image
-      defaultUploadLocationSource: 'volume:4a49b85a-e6f1-4ee3-8085-cbfb50f5ce42'
-      defaultUploadLocationSubpath: ''
-      limit: '1'
-      localizeRelations: false
-      restrictFiles: '1'
-      selectionLabel: 'Upload Key Visual'
-      showUnpermittedFiles: false
-      showUnpermittedVolumes: false
-      singleUploadLocationSource: 'volume:4a49b85a-e6f1-4ee3-8085-cbfb50f5ce42'
-      singleUploadLocationSubpath: /navigation
-      source: null
-      sources: '*'
-      targetSiteId: null
-      useSingleFolder: true
-      validateRelatedElements: ''
-      viewMode: list
-    translationKeyFormat: null
-    translationMethod: site
-    type: craft\fields\Assets
   18629457-0daa-4ff0-a3a7-c6a088d8a601:
     contentColumnType: string(7)
     fieldGroup: f6ccb015-3533-491f-8f9c-775d16605b99
@@ -190,18 +160,6 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Color
-  1ce6709a-2f35-4cbc-9d0f-7f69ef7d4e48:
-    contentColumnType: boolean
-    fieldGroup: 79916fca-0032-4f85-9653-20f333c8d7a2
-    handle: megaMenuPinnedLink
-    instructions: 'Pin at the center & right column of the Mega Menu Panel'
-    name: 'Pinned Link'
-    searchable: false
-    settings:
-      default: ''
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\Lightswitch
   1f182e2b-1f31-4ccb-bb2a-8479370cf19d:
     contentColumnType: string
     fieldGroup: 847d91f3-2f4a-4f56-9f9d-40c20e080811
@@ -509,21 +467,21 @@ fields:
       allowSelfRelations: ''
       allowedKinds:
         - image
-      defaultUploadLocationSource: 'volume:a63433bb-3666-4359-ade2-ddca22ffb12c'
-      defaultUploadLocationSubpath: 'spa-listing/{slug}'
+      defaultUploadLocationSource: 'volume:883ab42c-10f1-4e32-a559-61f23e4e3775'
+      defaultUploadLocationSubpath: ''
       limit: ''
       localizeRelations: false
       restrictFiles: '1'
       selectionLabel: ''
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
-      singleUploadLocationSource: 'volume:a63433bb-3666-4359-ade2-ddca22ffb12c'
-      singleUploadLocationSubpath: 'spalisting/{slug}'
+      singleUploadLocationSource: 'volume:883ab42c-10f1-4e32-a559-61f23e4e3775'
+      singleUploadLocationSubpath: ''
       source: null
       sources:
-        - 'volume:a63433bb-3666-4359-ade2-ddca22ffb12c'
+        - 'volume:883ab42c-10f1-4e32-a559-61f23e4e3775'
       targetSiteId: null
-      useSingleFolder: true
+      useSingleFolder: false
       validateRelatedElements: ''
       viewMode: large
     translationKeyFormat: null
@@ -745,18 +703,19 @@ fields:
       allowSelfRelations: ''
       allowedKinds:
         - image
-      defaultUploadLocationSource: 'volume:4a49b85a-e6f1-4ee3-8085-cbfb50f5ce42'
-      defaultUploadLocationSubpath: ''
+      defaultUploadLocationSource: 'volume:f6b6a0a2-13b7-4a96-892e-19f882d66b20'
+      defaultUploadLocationSubpath: branding/
       limit: '1'
       localizeRelations: false
       restrictFiles: '1'
       selectionLabel: ''
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
-      singleUploadLocationSource: 'volume:a63433bb-3666-4359-ade2-ddca22ffb12c'
+      singleUploadLocationSource: 'volume:f6b6a0a2-13b7-4a96-892e-19f882d66b20'
       singleUploadLocationSubpath: branding/
       source: null
-      sources: '*'
+      sources:
+        - 'volume:f6b6a0a2-13b7-4a96-892e-19f882d66b20'
       targetSiteId: null
       useSingleFolder: true
       validateRelatedElements: ''
@@ -911,21 +870,21 @@ fields:
       allowSelfRelations: ''
       allowedKinds:
         - image
-      defaultUploadLocationSource: 'volume:a63433bb-3666-4359-ade2-ddca22ffb12c'
-      defaultUploadLocationSubpath: 'spa-listing/{slug}'
+      defaultUploadLocationSource: 'volume:883ab42c-10f1-4e32-a559-61f23e4e3775'
+      defaultUploadLocationSubpath: ''
       limit: '1'
       localizeRelations: false
       restrictFiles: '1'
       selectionLabel: ''
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
-      singleUploadLocationSource: 'volume:a63433bb-3666-4359-ade2-ddca22ffb12c'
+      singleUploadLocationSource: 'volume:4a49b85a-e6f1-4ee3-8085-cbfb50f5ce42'
       singleUploadLocationSubpath: ''
       source: null
       sources:
-        - 'volume:a63433bb-3666-4359-ade2-ddca22ffb12c'
+        - 'volume:883ab42c-10f1-4e32-a559-61f23e4e3775'
       targetSiteId: null
-      useSingleFolder: true
+      useSingleFolder: false
       validateRelatedElements: ''
       viewMode: large
     translationKeyFormat: null
@@ -996,7 +955,7 @@ fields:
       allowSelfRelations: ''
       allowedKinds:
         - image
-      defaultUploadLocationSource: 'volume:4a49b85a-e6f1-4ee3-8085-cbfb50f5ce42'
+      defaultUploadLocationSource: 'volume:f6b6a0a2-13b7-4a96-892e-19f882d66b20'
       defaultUploadLocationSubpath: branding/
       limit: '1'
       localizeRelations: false
@@ -1004,11 +963,11 @@ fields:
       selectionLabel: 'Upload Logo'
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
-      singleUploadLocationSource: 'volume:a63433bb-3666-4359-ade2-ddca22ffb12c'
+      singleUploadLocationSource: 'volume:f6b6a0a2-13b7-4a96-892e-19f882d66b20'
       singleUploadLocationSubpath: branding/
       source: null
       sources:
-        - 'volume:4a49b85a-e6f1-4ee3-8085-cbfb50f5ce42'
+        - 'volume:f6b6a0a2-13b7-4a96-892e-19f882d66b20'
       targetSiteId: null
       useSingleFolder: true
       validateRelatedElements: ''
@@ -1207,7 +1166,7 @@ matrixBlockTypes:
         settings:
           availableTransforms: '*'
           availableVolumes:
-            - a63433bb-3666-4359-ade2-ddca22ffb12c
+            - 883ab42c-10f1-4e32-a559-61f23e4e3775
           cleanupHtml: true
           columnType: text
           purifierConfig: ''
@@ -1300,21 +1259,21 @@ matrixBlockTypes:
           allowSelfRelations: ''
           allowedKinds:
             - image
-          defaultUploadLocationSource: 'volume:a63433bb-3666-4359-ade2-ddca22ffb12c'
-          defaultUploadLocationSubpath: 'story/{owner.slug}'
+          defaultUploadLocationSource: 'volume:883ab42c-10f1-4e32-a559-61f23e4e3775'
+          defaultUploadLocationSubpath: ''
           limit: '1'
           localizeRelations: false
           restrictFiles: '1'
           selectionLabel: ''
           showUnpermittedFiles: false
           showUnpermittedVolumes: false
-          singleUploadLocationSource: 'volume:a63433bb-3666-4359-ade2-ddca22ffb12c'
+          singleUploadLocationSource: 'volume:4a49b85a-e6f1-4ee3-8085-cbfb50f5ce42'
           singleUploadLocationSubpath: 'story/{owner.owner.slug}'
           source: null
           sources:
-            - 'volume:a63433bb-3666-4359-ade2-ddca22ffb12c'
+            - 'volume:883ab42c-10f1-4e32-a559-61f23e4e3775'
           targetSiteId: null
-          useSingleFolder: true
+          useSingleFolder: false
           validateRelatedElements: ''
           viewMode: list
         translationKeyFormat: null
@@ -1427,7 +1386,7 @@ matrixBlockTypes:
           allowSelfRelations: ''
           allowedKinds:
             - image
-          defaultUploadLocationSource: 'volume:a63433bb-3666-4359-ade2-ddca22ffb12c'
+          defaultUploadLocationSource: 'volume:4a49b85a-e6f1-4ee3-8085-cbfb50f5ce42'
           defaultUploadLocationSubpath: 'story/{owner.slug}'
           limit: '1'
           localizeRelations: false
@@ -1435,13 +1394,13 @@ matrixBlockTypes:
           selectionLabel: 'Select an Image'
           showUnpermittedFiles: false
           showUnpermittedVolumes: false
-          singleUploadLocationSource: 'volume:a63433bb-3666-4359-ade2-ddca22ffb12c'
-          singleUploadLocationSubpath: 'story/{owner.slug}'
+          singleUploadLocationSource: 'volume:883ab42c-10f1-4e32-a559-61f23e4e3775'
+          singleUploadLocationSubpath: ''
           source: null
           sources:
-            - 'volume:a63433bb-3666-4359-ade2-ddca22ffb12c'
+            - 'volume:883ab42c-10f1-4e32-a559-61f23e4e3775'
           targetSiteId: null
-          useSingleFolder: true
+          useSingleFolder: false
           validateRelatedElements: ''
           viewMode: list
         translationKeyFormat: null
@@ -2154,23 +2113,23 @@ superTableBlockTypes:
           allowSelfRelations: ''
           allowedKinds:
             - image
-          defaultUploadLocationSource: 'volume:a63433bb-3666-4359-ade2-ddca22ffb12c'
-          defaultUploadLocationSubpath: 'story/{owner.owner.slug}'
+          defaultUploadLocationSource: 'volume:883ab42c-10f1-4e32-a559-61f23e4e3775'
+          defaultUploadLocationSubpath: ''
           limit: '1'
           localizeRelations: false
           restrictFiles: '1'
           selectionLabel: ''
           showUnpermittedFiles: false
           showUnpermittedVolumes: false
-          singleUploadLocationSource: 'volume:a63433bb-3666-4359-ade2-ddca22ffb12c'
+          singleUploadLocationSource: 'volume:4a49b85a-e6f1-4ee3-8085-cbfb50f5ce42'
           singleUploadLocationSubpath: 'story/{owner.owner.slug}'
           source: null
           sources:
-            - 'volume:a63433bb-3666-4359-ade2-ddca22ffb12c'
+            - 'volume:883ab42c-10f1-4e32-a559-61f23e4e3775'
           targetSiteId: null
-          useSingleFolder: true
+          useSingleFolder: false
           validateRelatedElements: ''
-          viewMode: list
+          viewMode: large
         translationKeyFormat: null
         translationMethod: site
         type: craft\fields\Assets
@@ -2206,7 +2165,7 @@ superTableBlockTypes:
         settings:
           allowSelfRelations: ''
           allowedKinds: null
-          defaultUploadLocationSource: 'volume:4a49b85a-e6f1-4ee3-8085-cbfb50f5ce42'
+          defaultUploadLocationSource: 'volume:883ab42c-10f1-4e32-a559-61f23e4e3775'
           defaultUploadLocationSubpath: ''
           limit: ''
           localizeRelations: false
@@ -2217,9 +2176,10 @@ superTableBlockTypes:
           singleUploadLocationSource: 'volume:4a49b85a-e6f1-4ee3-8085-cbfb50f5ce42'
           singleUploadLocationSubpath: 'spalisting/{owner.slug}'
           source: null
-          sources: '*'
+          sources:
+            - 'volume:883ab42c-10f1-4e32-a559-61f23e4e3775'
           targetSiteId: null
-          useSingleFolder: true
+          useSingleFolder: false
           validateRelatedElements: ''
           viewMode: list
         translationKeyFormat: null
@@ -2346,20 +2306,26 @@ users:
           sortOrder: 1
   groups:
     023d7185-42c7-404d-80de-c5204d985b64:
-      handle: writer
-      name: Writer
+      handle: editor
+      name: Editor
       permissions:
         - accesscp
         - 'createentries:c2929640-5995-4a0b-b490-deb3c54ab6d4'
         - 'editentries:c2929640-5995-4a0b-b490-deb3c54ab6d4'
         - 'createentries:5e15a326-1e20-4d38-86df-6f2bc3183b14'
         - 'editentries:5e15a326-1e20-4d38-86df-6f2bc3183b14'
+        - permission_bulkedit_entries
+        - 'saveassetinvolume:883ab42c-10f1-4e32-a559-61f23e4e3775'
+        - 'createfoldersinvolume:883ab42c-10f1-4e32-a559-61f23e4e3775'
+        - 'deletefilesandfoldersinvolume:883ab42c-10f1-4e32-a559-61f23e4e3775'
+        - 'editimagesinvolume:883ab42c-10f1-4e32-a559-61f23e4e3775'
+        - 'viewvolume:883ab42c-10f1-4e32-a559-61f23e4e3775'
     38dbac55-ad80-4a18-9634-44f75296e47d:
       handle: user
       name: User
     52223dd3-3c6f-4a69-a2f6-15dee35cbac9:
-      handle: salesMarketing
-      name: 'Sales & Marketing'
+      handle: advertiser
+      name: 'Advertiser '
       permissions:
         - accesssitewhensystemisoff
         - accesscpwhensystemisoff
@@ -2372,9 +2338,19 @@ users:
         - sproutforms-editreports
         - sproutforms-viewreports
         - accessplugin-ad-wizard
+        - 'saveassetinvolume:24d9488c-1c58-436d-abd8-a556676705be'
+        - 'createfoldersinvolume:24d9488c-1c58-436d-abd8-a556676705be'
+        - 'deletefilesandfoldersinvolume:24d9488c-1c58-436d-abd8-a556676705be'
+        - 'editimagesinvolume:24d9488c-1c58-436d-abd8-a556676705be'
+        - 'editpeerfilesinvolume:24d9488c-1c58-436d-abd8-a556676705be'
+        - 'replacepeerfilesinvolume:24d9488c-1c58-436d-abd8-a556676705be'
+        - 'deletepeerfilesinvolume:24d9488c-1c58-436d-abd8-a556676705be'
+        - 'editpeerimagesinvolume:24d9488c-1c58-436d-abd8-a556676705be'
+        - 'viewpeerfilesinvolume:24d9488c-1c58-436d-abd8-a556676705be'
+        - 'viewvolume:24d9488c-1c58-436d-abd8-a556676705be'
     c56709c7-c3a2-404c-8fba-15175819c9d4:
-      handle: editor
-      name: Editor
+      handle: publisher
+      name: Publisher
       permissions:
         - accesssitewhensystemisoff
         - accesscpwhensystemisoff
@@ -2468,20 +2444,59 @@ users:
         - 'retour:dashboard'
         - 'retour:redirects'
         - 'retour:settings'
-        - 'saveassetinvolume:4a49b85a-e6f1-4ee3-8085-cbfb50f5ce42'
-        - 'createfoldersinvolume:4a49b85a-e6f1-4ee3-8085-cbfb50f5ce42'
-        - 'deletefilesandfoldersinvolume:4a49b85a-e6f1-4ee3-8085-cbfb50f5ce42'
-        - 'editimagesinvolume:4a49b85a-e6f1-4ee3-8085-cbfb50f5ce42'
-        - 'editpeerfilesinvolume:4a49b85a-e6f1-4ee3-8085-cbfb50f5ce42'
-        - 'replacepeerfilesinvolume:4a49b85a-e6f1-4ee3-8085-cbfb50f5ce42'
-        - 'deletepeerfilesinvolume:4a49b85a-e6f1-4ee3-8085-cbfb50f5ce42'
-        - 'editpeerimagesinvolume:4a49b85a-e6f1-4ee3-8085-cbfb50f5ce42'
-        - 'viewpeerfilesinvolume:4a49b85a-e6f1-4ee3-8085-cbfb50f5ce42'
-        - 'viewvolume:4a49b85a-e6f1-4ee3-8085-cbfb50f5ce42'
+        - permission_bulkedit_entries
+        - 'createentries:417974cf-15b0-4807-b344-075e1687f290'
+        - 'publishentries:417974cf-15b0-4807-b344-075e1687f290'
+        - 'deleteentries:417974cf-15b0-4807-b344-075e1687f290'
+        - 'publishpeerentries:417974cf-15b0-4807-b344-075e1687f290'
+        - 'deletepeerentries:417974cf-15b0-4807-b344-075e1687f290'
+        - 'editpeerentries:417974cf-15b0-4807-b344-075e1687f290'
+        - 'publishpeerentrydrafts:417974cf-15b0-4807-b344-075e1687f290'
+        - 'deletepeerentrydrafts:417974cf-15b0-4807-b344-075e1687f290'
+        - 'editpeerentrydrafts:417974cf-15b0-4807-b344-075e1687f290'
+        - 'editentries:417974cf-15b0-4807-b344-075e1687f290'
+        - 'editglobalset:94aa7177-3295-4bf7-8be0-8a81dd3c194d'
+        - permission_bulkedit_assets
+        - permission_bulkedit_categories
+        - permission_bulkedit_users
+        - 'saveassetinvolume:f6b6a0a2-13b7-4a96-892e-19f882d66b20'
+        - 'createfoldersinvolume:f6b6a0a2-13b7-4a96-892e-19f882d66b20'
+        - 'deletefilesandfoldersinvolume:f6b6a0a2-13b7-4a96-892e-19f882d66b20'
+        - 'editimagesinvolume:f6b6a0a2-13b7-4a96-892e-19f882d66b20'
+        - 'editpeerfilesinvolume:f6b6a0a2-13b7-4a96-892e-19f882d66b20'
+        - 'replacepeerfilesinvolume:f6b6a0a2-13b7-4a96-892e-19f882d66b20'
+        - 'deletepeerfilesinvolume:f6b6a0a2-13b7-4a96-892e-19f882d66b20'
+        - 'editpeerimagesinvolume:f6b6a0a2-13b7-4a96-892e-19f882d66b20'
+        - 'viewpeerfilesinvolume:f6b6a0a2-13b7-4a96-892e-19f882d66b20'
+        - 'viewvolume:f6b6a0a2-13b7-4a96-892e-19f882d66b20'
+        - 'saveassetinvolume:883ab42c-10f1-4e32-a559-61f23e4e3775'
+        - 'createfoldersinvolume:883ab42c-10f1-4e32-a559-61f23e4e3775'
+        - 'deletefilesandfoldersinvolume:883ab42c-10f1-4e32-a559-61f23e4e3775'
+        - 'editimagesinvolume:883ab42c-10f1-4e32-a559-61f23e4e3775'
+        - 'editpeerfilesinvolume:883ab42c-10f1-4e32-a559-61f23e4e3775'
+        - 'replacepeerfilesinvolume:883ab42c-10f1-4e32-a559-61f23e4e3775'
+        - 'deletepeerfilesinvolume:883ab42c-10f1-4e32-a559-61f23e4e3775'
+        - 'editpeerimagesinvolume:883ab42c-10f1-4e32-a559-61f23e4e3775'
+        - 'viewpeerfilesinvolume:883ab42c-10f1-4e32-a559-61f23e4e3775'
+        - 'viewvolume:883ab42c-10f1-4e32-a559-61f23e4e3775'
   photoSubpath: 'user/{username}'
   photoVolumeUid: 4a49b85a-e6f1-4ee3-8085-cbfb50f5ce42
   requireEmailVerification: false
 volumes:
+  24d9488c-1c58-436d-abd8-a556676705be:
+    handle: googleCloudAd
+    hasUrls: true
+    name: 'Google Cloud / Ad'
+    settings:
+      bucket: asiaspa
+      bucketSelectionMode: choose
+      expires: ''
+      keyFileContents: '{   "type": "service_account",   "project_id": "scenic-treat-283413",   "private_key_id": "0ed11faff3273c4af70a1258dd29d33e71d2215d",   "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQClg4Btx+I7SCNg\n5S4yFnEmFfEn6EELR/6kMd4ZYkcMTvactGgGlW5wUJuetY9JYR92OatqF/NUvEML\nrddzhSM3u8hDIOB9vqLcZnHAGmCXIBT9svCiSHy4pEu5yrJrYG61ZEzsUnCkGCyG\nUA0TfaVZLjGENV2FXYgOYQexChavcZ3/GUjVlOWvYXOd8OLedmUmlg5VmT+fsqBf\ndbsIhT4jq6p52I9O/NqpSzNFESBMB4la+iGAqDgdd6wao5W+2SPRX/rOM1LKOMAj\nEBGK4EkiWz1zvv1wmorSPt1YGQj5kQ5cqZZvZFCVMpd7Ro6RYzleQED6yK/iVbGq\n75Gbg41VAgMBAAECggEABA0xRF6veMSGCy3pANRgTi6c0d2DVBed0d6foW7wrsoz\nCrh20GxxgOHUQWEP4hu0xbPZMJZoADPAj2VgwATrDQb1esEwBZv4SB1g3PM4WJKy\nONibv9k25l0tNl3SGsNISnvrTyCgfb/SvTHx8/9wH/v7vdEBmk1lEncJFWoaDo7X\nEDb47hpuv1wy2qPpXHsp+DO4PNs7zhyCh36bgo8P+sGk58x3tDzW9J0qEcXZdyIc\nWTRhL0ifL2PWsczi9pwFWPQUIoCe8jVC+uM3dtcEmz6+0EcFsfI2rh2D2UMIB1uq\nUTL/SjeBXhZA7u2/PEMK6BcPFaDrLaWWyYQTVQzoYQKBgQDiJKlmb3QeeSuBRipp\n+q1VuqbH3pUlpJWBWAUuZotyPoxIoeL/TRN6Kg2555kGhNzEo6dQNdeHgiIpw93j\nRBR1m4rDj5ahrWuRi1/Xem0sp7dQxGVFOnCeunGSnve1W+iG2NsYFgpENTge31eJ\nJ4lojkS3HDRWNz+0GMFJ2+Lp9QKBgQC7XaSPr8Ei125czkxGzM1qpAkOcQlXe3t8\n8FvsZEm87Hu2B3QQ6YeGpKRAckRR85jMkJcDnMnVRHsdn84nDPFJ9e82bwrjKrsz\nHdxLIT91AHfzs+J7Dx9AGONHfMom1R61GHEGCMxpO8ZyMmzSG7veRoNjx9biaiK6\nLFptY28Z4QKBgBisA0dHtZV1hseNzibN0Idf275GjGMU97Kq1bXgPipypH9wGgHc\neNmFKQY1PD631BYn/KMFnMQN8Ig59EVNMiY6mAMJ8VcmQmwYlpY9pxeOHLPVGW9a\nFttaX/WtHj1ND6tWkWCpVulmHP9RQo2WIKmli92mWBdn461UXhIeyTzZAoGBAIiI\ns5tVOst162FLn7/UDDiSslrIukL6o8EmsgWwCx/VwEykX8rXMkBGh77CxdBmT8l5\n7+HdBiMYFRNAWYyRXN9FjPzArFFf2SxlrRs+biyHm+GGCxsbqO0fdbepUvI7SXY0\nCmCYVsS0n2amIjB1r1BJWAOFI6y4JPg/y+F8nQBhAoGADC881aqI3dPsiWCUXSxT\ncAgQPAaguy8v+alJuip934RAyk1ooLdJXqN+jTzl61IzvwDiq2L9ZpP0yW5rrU1p\nU8gEgqdsIL/P3YK61u2Z1/ycaCRZfY/zobPwZe0+mv8SIkU2QH1xKdB1FBBFWf2S\n8ABhbhqZy1gfEjC+HseJEQE=\n-----END PRIVATE KEY-----\n",   "client_email": "asiaspa-craft-cms@scenic-treat-283413.iam.gserviceaccount.com",   "client_id": "110632895405925616567",   "auth_uri": "https://accounts.google.com/o/oauth2/auth",   "token_uri": "https://oauth2.googleapis.com/token",   "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",   "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/asiaspa-craft-cms%40scenic-treat-283413.iam.gserviceaccount.com" }'
+      projectId: scenic-treat-283413
+      subfolder: ad
+    sortOrder: 7
+    type: craft\googlecloud\Volume
+    url: 'http://storage.googleapis.com/asiaspa/'
   4a49b85a-e6f1-4ee3-8085-cbfb50f5ce42:
     handle: serverStorage
     hasUrls: true
@@ -2491,17 +2506,31 @@ volumes:
     sortOrder: 3
     type: craft\volumes\Local
     url: '@web/asset'
-  a63433bb-3666-4359-ade2-ddca22ffb12c:
-    handle: googleCloud
+  883ab42c-10f1-4e32-a559-61f23e4e3775:
+    handle: googleCloudUpload
     hasUrls: true
-    name: 'Google Cloud'
+    name: 'Google Cloud / Upload'
     settings:
       bucket: asiaspa
       bucketSelectionMode: choose
       expires: ''
       keyFileContents: '{   "type": "service_account",   "project_id": "scenic-treat-283413",   "private_key_id": "0ed11faff3273c4af70a1258dd29d33e71d2215d",   "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQClg4Btx+I7SCNg\n5S4yFnEmFfEn6EELR/6kMd4ZYkcMTvactGgGlW5wUJuetY9JYR92OatqF/NUvEML\nrddzhSM3u8hDIOB9vqLcZnHAGmCXIBT9svCiSHy4pEu5yrJrYG61ZEzsUnCkGCyG\nUA0TfaVZLjGENV2FXYgOYQexChavcZ3/GUjVlOWvYXOd8OLedmUmlg5VmT+fsqBf\ndbsIhT4jq6p52I9O/NqpSzNFESBMB4la+iGAqDgdd6wao5W+2SPRX/rOM1LKOMAj\nEBGK4EkiWz1zvv1wmorSPt1YGQj5kQ5cqZZvZFCVMpd7Ro6RYzleQED6yK/iVbGq\n75Gbg41VAgMBAAECggEABA0xRF6veMSGCy3pANRgTi6c0d2DVBed0d6foW7wrsoz\nCrh20GxxgOHUQWEP4hu0xbPZMJZoADPAj2VgwATrDQb1esEwBZv4SB1g3PM4WJKy\nONibv9k25l0tNl3SGsNISnvrTyCgfb/SvTHx8/9wH/v7vdEBmk1lEncJFWoaDo7X\nEDb47hpuv1wy2qPpXHsp+DO4PNs7zhyCh36bgo8P+sGk58x3tDzW9J0qEcXZdyIc\nWTRhL0ifL2PWsczi9pwFWPQUIoCe8jVC+uM3dtcEmz6+0EcFsfI2rh2D2UMIB1uq\nUTL/SjeBXhZA7u2/PEMK6BcPFaDrLaWWyYQTVQzoYQKBgQDiJKlmb3QeeSuBRipp\n+q1VuqbH3pUlpJWBWAUuZotyPoxIoeL/TRN6Kg2555kGhNzEo6dQNdeHgiIpw93j\nRBR1m4rDj5ahrWuRi1/Xem0sp7dQxGVFOnCeunGSnve1W+iG2NsYFgpENTge31eJ\nJ4lojkS3HDRWNz+0GMFJ2+Lp9QKBgQC7XaSPr8Ei125czkxGzM1qpAkOcQlXe3t8\n8FvsZEm87Hu2B3QQ6YeGpKRAckRR85jMkJcDnMnVRHsdn84nDPFJ9e82bwrjKrsz\nHdxLIT91AHfzs+J7Dx9AGONHfMom1R61GHEGCMxpO8ZyMmzSG7veRoNjx9biaiK6\nLFptY28Z4QKBgBisA0dHtZV1hseNzibN0Idf275GjGMU97Kq1bXgPipypH9wGgHc\neNmFKQY1PD631BYn/KMFnMQN8Ig59EVNMiY6mAMJ8VcmQmwYlpY9pxeOHLPVGW9a\nFttaX/WtHj1ND6tWkWCpVulmHP9RQo2WIKmli92mWBdn461UXhIeyTzZAoGBAIiI\ns5tVOst162FLn7/UDDiSslrIukL6o8EmsgWwCx/VwEykX8rXMkBGh77CxdBmT8l5\n7+HdBiMYFRNAWYyRXN9FjPzArFFf2SxlrRs+biyHm+GGCxsbqO0fdbepUvI7SXY0\nCmCYVsS0n2amIjB1r1BJWAOFI6y4JPg/y+F8nQBhAoGADC881aqI3dPsiWCUXSxT\ncAgQPAaguy8v+alJuip934RAyk1ooLdJXqN+jTzl61IzvwDiq2L9ZpP0yW5rrU1p\nU8gEgqdsIL/P3YK61u2Z1/ycaCRZfY/zobPwZe0+mv8SIkU2QH1xKdB1FBBFWf2S\n8ABhbhqZy1gfEjC+HseJEQE=\n-----END PRIVATE KEY-----\n",   "client_email": "asiaspa-craft-cms@scenic-treat-283413.iam.gserviceaccount.com",   "client_id": "110632895405925616567",   "auth_uri": "https://accounts.google.com/o/oauth2/auth",   "token_uri": "https://oauth2.googleapis.com/token",   "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",   "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/asiaspa-craft-cms%40scenic-treat-283413.iam.gserviceaccount.com" }'
-      projectId: $GOOGLE_CLOUD_PROJECT_ID
-      subfolder: ''
-    sortOrder: 4
+      projectId: scenic-treat-283413
+      subfolder: upload
+    sortOrder: 6
+    type: craft\googlecloud\Volume
+    url: 'https://storage.googleapis.com/asiaspa/'
+  f6b6a0a2-13b7-4a96-892e-19f882d66b20:
+    handle: googleCloudSite
+    hasUrls: true
+    name: 'Google Cloud / Site'
+    settings:
+      bucket: asiaspa
+      bucketSelectionMode: choose
+      expires: ''
+      keyFileContents: '{   "type": "service_account",   "project_id": "scenic-treat-283413",   "private_key_id": "0ed11faff3273c4af70a1258dd29d33e71d2215d",   "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQClg4Btx+I7SCNg\n5S4yFnEmFfEn6EELR/6kMd4ZYkcMTvactGgGlW5wUJuetY9JYR92OatqF/NUvEML\nrddzhSM3u8hDIOB9vqLcZnHAGmCXIBT9svCiSHy4pEu5yrJrYG61ZEzsUnCkGCyG\nUA0TfaVZLjGENV2FXYgOYQexChavcZ3/GUjVlOWvYXOd8OLedmUmlg5VmT+fsqBf\ndbsIhT4jq6p52I9O/NqpSzNFESBMB4la+iGAqDgdd6wao5W+2SPRX/rOM1LKOMAj\nEBGK4EkiWz1zvv1wmorSPt1YGQj5kQ5cqZZvZFCVMpd7Ro6RYzleQED6yK/iVbGq\n75Gbg41VAgMBAAECggEABA0xRF6veMSGCy3pANRgTi6c0d2DVBed0d6foW7wrsoz\nCrh20GxxgOHUQWEP4hu0xbPZMJZoADPAj2VgwATrDQb1esEwBZv4SB1g3PM4WJKy\nONibv9k25l0tNl3SGsNISnvrTyCgfb/SvTHx8/9wH/v7vdEBmk1lEncJFWoaDo7X\nEDb47hpuv1wy2qPpXHsp+DO4PNs7zhyCh36bgo8P+sGk58x3tDzW9J0qEcXZdyIc\nWTRhL0ifL2PWsczi9pwFWPQUIoCe8jVC+uM3dtcEmz6+0EcFsfI2rh2D2UMIB1uq\nUTL/SjeBXhZA7u2/PEMK6BcPFaDrLaWWyYQTVQzoYQKBgQDiJKlmb3QeeSuBRipp\n+q1VuqbH3pUlpJWBWAUuZotyPoxIoeL/TRN6Kg2555kGhNzEo6dQNdeHgiIpw93j\nRBR1m4rDj5ahrWuRi1/Xem0sp7dQxGVFOnCeunGSnve1W+iG2NsYFgpENTge31eJ\nJ4lojkS3HDRWNz+0GMFJ2+Lp9QKBgQC7XaSPr8Ei125czkxGzM1qpAkOcQlXe3t8\n8FvsZEm87Hu2B3QQ6YeGpKRAckRR85jMkJcDnMnVRHsdn84nDPFJ9e82bwrjKrsz\nHdxLIT91AHfzs+J7Dx9AGONHfMom1R61GHEGCMxpO8ZyMmzSG7veRoNjx9biaiK6\nLFptY28Z4QKBgBisA0dHtZV1hseNzibN0Idf275GjGMU97Kq1bXgPipypH9wGgHc\neNmFKQY1PD631BYn/KMFnMQN8Ig59EVNMiY6mAMJ8VcmQmwYlpY9pxeOHLPVGW9a\nFttaX/WtHj1ND6tWkWCpVulmHP9RQo2WIKmli92mWBdn461UXhIeyTzZAoGBAIiI\ns5tVOst162FLn7/UDDiSslrIukL6o8EmsgWwCx/VwEykX8rXMkBGh77CxdBmT8l5\n7+HdBiMYFRNAWYyRXN9FjPzArFFf2SxlrRs+biyHm+GGCxsbqO0fdbepUvI7SXY0\nCmCYVsS0n2amIjB1r1BJWAOFI6y4JPg/y+F8nQBhAoGADC881aqI3dPsiWCUXSxT\ncAgQPAaguy8v+alJuip934RAyk1ooLdJXqN+jTzl61IzvwDiq2L9ZpP0yW5rrU1p\nU8gEgqdsIL/P3YK61u2Z1/ycaCRZfY/zobPwZe0+mv8SIkU2QH1xKdB1FBBFWf2S\n8ABhbhqZy1gfEjC+HseJEQE=\n-----END PRIVATE KEY-----\n",   "client_email": "asiaspa-craft-cms@scenic-treat-283413.iam.gserviceaccount.com",   "client_id": "110632895405925616567",   "auth_uri": "https://accounts.google.com/o/oauth2/auth",   "token_uri": "https://oauth2.googleapis.com/token",   "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",   "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/asiaspa-craft-cms%40scenic-treat-283413.iam.gserviceaccount.com" }'
+      projectId: scenic-treat-283413
+      subfolder: site
+    sortOrder: 5
     type: craft\googlecloud\Volume
     url: 'https://storage.googleapis.com/asiaspa/'
