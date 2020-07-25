@@ -1,0 +1,75 @@
+{# -------------------  global variable ------------------- #}
+{% spaceless %}
+{% set prefetchUrls = [ 
+    alias("@assetsUrl"), alias("@imgixDefaultUrl"),alias("@imgixExternalUrl")
+] %}
+{% set baseUrl = alias('@assetsUrl') ~ '/' %}
+{% endspaceless %}
+{# -------------------  Body Class ------------------- #}
+{# -------------------  html ------------------- #}
+{% minify %}
+<!DOCTYPE html>
+<html class="no-js" lang="{{ craft.app.language |slice(0,2) }}" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+
+<head>
+    {# -------------------  meta ------------------- #}
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+
+    {# ------------------- Prefetch & Preconnects ------------------- #}
+    {% set headerLink = "Link: " %}
+    {% for url in prefetchUrls %}
+        {% set url = url | slice(0,4) == 'http' ? url : 'https://' ~ url %}
+        {% set headerLink = headerLink ~ "<#{url}>; rel=dns-prefetch;," %}
+        {% set headerLink = headerLink ~ "<#{url}>; rel=preconnect; crossorigin;" %}
+        {% if not loop.last %}
+            {% set headerLink = headerLink ~ "," %}
+        {% endif %}
+        <link rel="dns-prefetch" href="{{ url }}">
+        <link rel="preconnect" href="{{ url }}" crossorigin>
+    {% endfor %}
+    {% header headerLink %}
+    
+    {# ------------------- SEO meta ------------------- #}
+    <title>AsiaSpa</title>
+    {% hook 'seomateMeta' %}
+    {% include '_layouts/_snippets/_branding' %}
+    <link rel="stylesheet" href="{{ mix('/dist/app.css') }}">
+
+    {# ------------------- CSS ------------------- #}
+    <style>
+        {{ source("_inline/_font.css") }}
+    </style>
+    {# temp typekit #}
+    <link rel="stylesheet" href="https://use.typekit.net/xus1aud.css">
+
+    {# ------------------- Head JS ------------------- #}
+    {# -- Polyfills detected by User-Agent as per: https://polyfill.io/v2/docs/examples#feature-detection -- #}
+    <script src="https://cdn.polyfill.io/v3/polyfill.min.js?callback=polyfillsAreLoaded&flags=gated" defer async></script>
+    {# -- Handle tabs gracefully as per https://hackernoon.com/removing-that-ugly-focus-ring-and-keeping-it-too-6c8727fefcd2 -- #}
+    {% include "_layouts/_snippets/_tab-handler.twig" %}
+    
+    <script>
+        {{ source("_inline/_tiny-cookie.min.js") }}
+        {# ------------------- Service Worker ------------------- #}
+        {% if not craft.app.config.general.devMode %}
+        {{ source("_inline/_service-worker.js") }}
+        {% endif %}
+    </script>
+</head>
+
+<body class="overflow-x-hidden antialiased">
+    {# ------------------- SVG ------------------- #}
+    {{ source("_inline/_icons.twig") }}
+
+    {% block layout %}
+    {% endblock %}    
+    
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js" defer></script>
+    <script src="{{ mix('/dist/app.js') }}"> </script>
+    {{ sprig.script }}
+</body>
+</html>
+{% endminify %}

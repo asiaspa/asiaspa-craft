@@ -1,9 +1,11 @@
 @tailwind base;
 @tailwind components;
 
+// plugin
+@import "_plugin/_flickity";
+@import "_plugin/_flickity-custom";
 
 @import "_component/_layout";
-
 
 
 @tailwind utilities;

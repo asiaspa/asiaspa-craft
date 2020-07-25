@@ -1,9 +1,10 @@
 {# need to modify to external image version #}
 {% if img | length %}
+
 {% set caption = caption ?? '' %}
 {# follow ratio, if not follow original size, or otherwise enforce defaultio aspect #}
-{% set h = h | default(img.getHeight ?? 9 ) %}
-{% set w = w | default(img.getWidth ?? 8 ) %}
+{% set h = h | default(img.getHeight ?? '9' ) %}
+{% set w = w | default(img.getWidth ?? '8' ) %}
 {% set aspect = w / h %}
 {% set x = x | default (img.focalPoint.x ?? '0.5') %}
 {% set x = x | default (img.focalPoint.y ?? '0.5') %}
@@ -15,7 +16,7 @@
     { fillTransforms: true }) 
 %}
 
-<img class="w-full h-auto overflow-hidden" sizes="100vw"  
+<img class="w-full h-auto over-flow-hidden" sizes="100vw"  
     src="{{ craft.imager.placeholder({ width: w, height: h}) }}"  
     srcset="{{ transformedImages | srcset }}" >
 
@@ -32,10 +33,7 @@
 </figure> #}
 
 {% else %}
-{% set h = h | default(9) %}
-{% set w = w | default(8) %}
-{% set aspect = w / h %}
-<figure class="relative w-full overflow-hidden bg-gray-100" style="padding-bottom: {{ aspect * 100 }}%">
+<figure class="relative w-full overflow-hidden bg-gray-100" style="padding-bottom: {{ 9/8*100 }}%">
     <div class="absolute w-full h-full pin object-fit-cover" />
 </figure>
 

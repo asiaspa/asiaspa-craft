@@ -1,9 +1,10 @@
 let mix = require('laravel-mix');
 
 const LaravelMixFilenameVersioning = require('laravel-mix-filename-versioning');
-
+require('laravel-mix-clean');
 require('mix-tailwindcss');
 require('laravel-mix-purgecss');
+require('laravel-mix-workbox');
 
 /*
  |--------------------------------------------------------------------------
@@ -28,18 +29,21 @@ mix
     ],
     browser: 'Firefox Developer Edition'
 })
-    .js('src/js/app.js', 'web/dist')
-    // .postCss('src/css/app.css', 'web/dist')
-    .sass('src/scss/app.scss', 'web/dist')
-    .setPublicPath('web')
+    .sass('src/scss/app.scss', 'web/dist/')
+    .scripts([
+        'src/js/app.js'
+    ], 'web/dist/app.js')
+    .setPublicPath('web/dist/')
     .tailwind()
+    .clean()
+    // .generateSW()
 
 if (mix.inProduction()) {
 mix
-    .purgeCss({
-        folders: ['src', 'templates'],
-        extensions: ['twig', 'html', 'js', 'php', 'vue'],
-    })
+    // .purgeCss({
+    //     folders: ['src', 'templates'],
+    //     extensions: ['twig', 'html', 'js', 'php', 'vue'],
+    // })
     .version()
     .webpackConfig({
         plugins: [

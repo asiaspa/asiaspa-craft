@@ -1,0 +1,84 @@
+{% extends "_layouts/_empty" %}
+{% block main %}
+<div class="cssgrid">
+    <div class="backdrop"></div>
+    <div class="menu ">
+        <p class="py-4 ml-16 font-serif text-4xl font-bold">Asiaspa</p>
+        <ul class="px-16 pb-16 font-serif text-3xl p">
+            <span class="mr-4 font-sans text-sm underline">Topics</span>
+            <span class="mr-4 font-sans text-sm">Events</span>
+            <span class="mr-4 font-sans text-sm">Awards</span>
+            <li class="my-4">Spas</li>
+            <li class="my-4">Beauty</li>
+            <li class="my-4">Wellness</li>
+            <li class="my-4">Travel</li>
+            <li class="my-4">Sport</li>
+            <li class="my-4">Explore</li>
+        </ul>
+    </div>
+    <div class="story-hero-image"></div>
+    <div class="story-hero-content">
+        <div class="p-16">
+            <a class="py-1 font-medium border-black hover:border-b-2"
+               href="http://asiaspa.test/spas">Spas</a>
+            <h1 class="font-serif text-3xl font-medium leading-tight tracking-tight md:text-4xl lg:text-5xl">I Saved
+                More Than $2K by Tiling My Counter-to-Ceiling Kitchen Backsplash</h1>
+            <hr class="block w-32 my-6 border-t-2 border-primary-500">
+            <h2 class="text-xl lg:text-2xl color-gray-900">A leveler is critical.</h2>
+            <div class="flex items-center mt-6">
+                <div class="w-16 h-16 mr-4 overflow-hidden rounded-full">
+                    <figure class="relative w-full overflow-hidden bg-gray-100"
+                            style="padding-bottom: 100%">
+                        <div class="absolute w-full h-full pin object-fit-cover">
+                        </div>
+                    </figure>
+                </div>
+                <div>
+                    <p class="leading-none text-gray-900">hong chan</p>
+                    <p class="mt-2 text-gray-500">Jul 14, 2020</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="spa-locator"></div>
+    <div class="ad"></div>
+</div>
+
+
+<style>
+    .cssgrid {
+        height: 100vh;
+        width: 100vw;
+        display: grid;
+        grid-template-columns: 260px 60px 60px 1fr minmax(0, 500px) 60px 60px;
+        grid-template-rows: 60px 60px 1fr 60px 60px 100px;
+    }
+
+    .cssgrid .menu {
+        grid-area: 1 / 1 / 4 / 4;
+        background: #f4e6d6;
+        align-self: start;
+    }
+
+    .cssgrid .backdrop {
+        grid-area: 3 / 2 / 6 / 6;
+        background: #e8d0b2;
+    }
+
+    .cssgrid .story-hero-image {
+        grid-area: 2 / 3 / 5 / 5;
+        background: url('https://images.unsplash.com/photo-1509660933844-6910e12765a0');
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .cssgrid .story-hero-content {
+        grid-area: 3 / 5 / 5 / 6;
+         align-self: center;
+    }
+    .cssgrid .ad {
+        grid-area: 6 / 1 / 7 / end; 
+        background: #333;
+    }
+</style>
+{% endblock %}

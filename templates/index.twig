@@ -1,31 +1,112 @@
-{% extends "_layout/_site" %}
+{# {% extends craft.app.request.isAjax() and not craft.app.request.getIsPreview()
+    ? "_layout/_ajax.twig"
+    : "_layout/_web.twig"
+%} #}
 
+{% extends "_layouts/_generic" %}
+
+
+{# ------------------- Eager Loading ------------------- #}
+{% do craft.app.elements.eagerLoadElements(
+    className(entry),
+    [entry],
+    ['indexHeroEntry', 
+    'indexHeroEntry.storyHeroImage',
+    'indexFeaturedCampaign',
+    'indexFeaturedCampaign.campaignFeaturedStory.storyHeroImage',
+    'indexFeaturedCampaign.campaignFeaturedStory.storyCategory',
+    'indexFeaturedCampaign.campaignFeaturedStory.author',
+    'indexFeaturedCampaign.campaignFeaturedStory.author.photo'
+    ]
+) %}
 
 
 {% block main %}
-{# main section #}
-<section class="relative h-16 w-100">
-    {# backdrop #}
-    <div class="absolute bottom-0 left-0 w-8/12 h-full bg-primary-100"></div>
-    <div class="relative flex max-w-screen-xl mx-auto bg-gray-100 align center">
-        <div class="w-1/2">
-            <span>image</span>
+{# ------------------- Hero Story ------------------- #}
+{% include "_components/_hero-story" with { entry:entry.indexHeroStory[0] ?? craft.entries.one() } %}
+
+{# ------------------- Campaign Slider------------------- #}
+
+
+
+<section class="w-full h-auto py-16 bg-gray-100"
+         x-data="carouselFilter()">
+
+  {# category list #}
+  <div class="max-w-screen-xl mx-auto">
+    <button class="py-4 mr-8 text-2xl lg:mr-16 lg:text-3xl border-primary-500"
+            @click.prevent="changeActive(0)"
+            :class="{'border-b-2': active === 0}">{{ 'Trending' |t }}</button>
+      {% for category in entry.indexFeaturedCampaign %}
+      <button class="py-4 mr-8 text-2xl lg:mr-16 lg:text-3xl border-primary-500"
+              @click.prevent="changeActive({{ loop.index }})"
+              :class="{'border-b-2': active === {{ loop.index }}'}">{{ category.title }}</button>
+        {% endfor %}
+  </div>
+
+  {# listing slider #}
+  {# Trending #}
+  {% set query = craft.entries.section('story').limit(5) %}
+  {% do craft.views_work.sortPopular(query) %}
+  {% set entries = query.all %}
+  <div x-show="active == 0">
+    <div x-data="carousel()"
+         x-init="init()">
+      <div class="col-start-1 row-start-1 carousel"
+           x-ref="carousel">
+
+        <div class="w-3/5 px-2">
+          <img src="https://images.unsplash.com/photo-1581375221876-8f287f7cd2cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=770&q=80"
+               loading="lazy">
         </div>
-        <div class="w-1/2">
-            <span>cotnent</span>
+        <div class="w-3/5 px-2">
+          <img src="https://images.unsplash.com/photo-1581375279144-bb3b381c7046?ixlib=rb-1.2.1&auto=format&fit=crop&w=770&q=80"
+               loading="lazy">
         </div>
+        <div class="w-3/5 px-2">
+          <img src="https://images.unsplash.com/photo-1581375303816-4a17124934f7?ixlib=rb-1.2.1&auto=format&fit=crop&w=770&q=80"
+               loading="lazy">
+        </div>
+        <div class="w-3/5 px-2">
+          <img src="https://images.unsplash.com/photo-1494253109108-2e30c049369b?ixlib=rb-1.2.1&auto=format&fit=crop&w=770&q=80"
+               loading="lazy">
+        </div>
+      </div>
     </div>
-    
+  </div>
+
+  {% for category in entry.indexFeaturedCampaign %}
+  {% set entries = category.categoryFeaturedStory %}
+  <div x-show="active == {{ loop.index }}">
+    <div x-data="carousel()"
+         x-init="init()">
+      <div class="w-3/5 px-2">
+        <img src="https://images.unsplash.com/photo-1581375221876-8f287f7cd2cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=770&q=80"
+             loading="lazy">
+      </div>
+      <div class="w-3/5 px-2">
+        <img src="https://images.unsplash.com/photo-1581375279144-bb3b381c7046?ixlib=rb-1.2.1&auto=format&fit=crop&w=770&q=80"
+             loading="lazy">
+      </div>
+      <div class="w-3/5 px-2">
+        <img src="https://images.unsplash.com/photo-1581375303816-4a17124934f7?ixlib=rb-1.2.1&auto=format&fit=crop&w=770&q=80"
+             loading="lazy">
+      </div>
+      <div class="w-3/5 px-2">
+        <img src="https://images.unsplash.com/photo-1494253109108-2e30c049369b?ixlib=rb-1.2.1&auto=format&fit=crop&w=770&q=80"
+             loading="lazy">
+      </div>
+    </div>
+  </div>
+  {# {% include "_components/_story-slider" with {entry : entries} %} #}
+  </div>
+  {% endfor %}
+
 </section>
-
-
 
 <section class="container mx-auto">
-    {{ sprig('_components/_story-pagination', {limit: 5}) }}
-    {{ sprig.script }}
+  {{ sprig('_components/_story-pagination', {limit: 5}) }}
 </section>
-
-
 
 
 {% endblock %}

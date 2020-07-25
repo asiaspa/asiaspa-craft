@@ -1,7 +1,9 @@
-{% extends "_layout/_site" %}  
+{% extends "_layouts/_web" %}  
 
 {# ------------------- main ------------------- #}
-{% block main %}
+{% block content %}
+{# track #}
+{{ entry | views_work_image }}
 
 {% set entry = craft.entries({
     slug: entry.slug,

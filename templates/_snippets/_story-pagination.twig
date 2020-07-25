@@ -1,0 +1,69 @@
+{% minify %}
+{# -------------------  query ------------------- #}
+
+{% set limit = limit ?? 5 %}
+{% set page = page ?? 1 %}
+{% set offset = (page - 1) * limit %}
+
+{% set query = craft.entries({
+    section : 'story',
+    offset: offset,
+    limit: limit,
+    with: [
+        'author',
+        'storyHeroImage',
+        'storyCategory',
+        'storyPrintIssue',
+        'storyCampaign'
+    ]
+}) %}
+
+{% set entries = query.all() %}
+{% set totalEntries = query.count() %}
+{% set totalPages = (totalEntries / limit) | round(0, 'ceil') %}
+
+{% for entry in entries %}
+    <div class="flex py-8 mx-4 border-b border-gray-300">   
+        <div class="w-4/12 mr-6 md:w-3/12">
+            {% if entry.storyHeroImage | length %}
+                {% include "_components/_imager" with { img : entry.storyHeroImage[0], w : 8, h : 9 } %}
+            {% else %}
+                <figure class="relative w-full overflow-hidden bg-gray-100" style="padding-bottom: {{ 9/8*100 }}%">
+                    <div class="absolute w-full h-full pin object-fit-cover" />
+                </figure>
+            {% endif %}
+        </div>
+        <div class="w-8/12 md:w-9/12">
+        {% if entry.storyCategory | length %}<a href="{{ entry.storyCategory[0].uri }}">{{ entry.storyCategory[0].title }}</a>{% endif %}
+        <a href="/{{ entry.uri }}">
+            <h6 class="font-serif text-2xl leading-tight md:text-3xl">{{ entry.title }}</h6> 
+            <p class="text-gray-900">{{ entry.storyStandfirst ?? "This should be a Standfirst" }}</p>
+        </a>
+        <span class="text-sm text-gray-700">{{ entry.postDate | date("M d, Y") }}, by {{ entry.author.fullName }}</span>
+        </div>
+    </div>
+{% endfor %}
+
+{# =================== pagination widget ======================== #}
+{% if entries %}
+    {% if page > 1 %}
+        <button sprig s-vars="page: {{ page - 1 }}" s-push-url="?page={{ page - 1 }}">Previous</button>
+    {% endif %}
+    {% if page < totalPages %}
+        <button sprig s-vars="page: {{ page + 1 }}" s-push-url="?page={{ page + 1 }}">Next</button>
+    {% endif %}
+    <p>
+        <em>Showing {{ offset + 1 }} - {{ offset + entries | length }}  of {{ totalEntries }} entries.</em><br>
+        <em>Page {{ page }} of {{ totalPages }} pages.</em><br>
+        {% for i in 1..totalPages %}
+            {% if i == page %}
+                {{ i }}
+            {% else %}
+                <button class="p-4 bg-gray-100" sprig s-vars="page: {{ i }}" s-push-url="?page={{ i }}">{{ i }}</button>
+            {% endif %}
+        {% endfor %}
+    </p>
+{% endif %}
+
+
+{% endminify %}

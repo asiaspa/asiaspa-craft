@@ -1,11 +1,21 @@
 module.exports = {
-  purge: false,
+  purge: {
+    // mode: 'all',
+    content: ['./templates/**/*.twig'],
+  },
   theme: {
+    screens: {
+      'sm': '640px',
+      'md': '960px',
+      'lg': '1280px',
+      'xl': '1600px'
+    },
     fontFamily: {
       'sans': ["brandon-grotesque", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue","Arial", "Noto Sans", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"],
       'serif': ['freight-text-pro', "Georgia, Cambria", "Times New Roman", "Times", "serif"]
     },
     colors: {
+      transparent: 'transparent',
       primary: {
         '100': 'var(--color-primary-100)',
         '300': 'var(--color-primary-300)',
@@ -23,10 +33,14 @@ module.exports = {
       black: 'var(--color-black)',
       white: 'var(--color-white)'
     },
-    extend: {},
+    extend: {
+      height: {
+        '60': '60%'
+      }
+    },
   },
   variants: {
-    
+    borderWidth: ['responsive', 'hover', 'focus'],
   },
   plugins: [
     require('tailwindcss'),

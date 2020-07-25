@@ -1,0 +1,14 @@
+{% if user %}
+<div class="flex items-center mt-6">
+    <div class="w-16 h-16 mr-4 overflow-hidden rounded-full" >
+        {% include "_components/_imager" with { img : user.photo , w : 1, h : 1 } %}
+    </div>
+    <div>
+        <p class="leading-none text-gray-900">{{ user.fullName }}</p>
+        {% if date %}
+        <p class="mt-2 text-gray-500">{{ date | date("M d, Y") }}</p>
+        {% endif %}
+    </div>
+</div>
+
+{% endif %}
