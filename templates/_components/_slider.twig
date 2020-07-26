@@ -1,0 +1,17 @@
+{% set section = entries[0].section.handle %}
+
+<div class="swiper-container p-x-max-screen-lg">
+	<div class="swiper-wrapper">
+		{% for entry in entries %}
+			<div class="swiper-slide" style="width: 400px; max-width:80%;">
+				{% include "_components/_" ~ section ~ "-card" with { entry: entry } %}
+			</div>
+		{% endfor %}
+	</div>
+	{# <div class="swiper-button-prev"></div>
+	<div class="swiper-button-next"></div> #}
+	<div class="max-w-screen-lg mt-16">
+		<div class="h-1 swiper-scrollbar"></div>
+	</div>
+</div>
+

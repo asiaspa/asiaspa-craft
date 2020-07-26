@@ -1,0 +1,40 @@
+{# css grid experiment #}
+    <ul class="hs p-x-max-screen-lg">
+        {% for entry in campaignStories %}
+        <li class="item">
+            {% include "_components/_story-card" with { entry: entry } %}
+        </li>
+        {% endfor %}
+    </ul>
+    <div class="h-4 max-w-screen-lg mx-auto mt-24 bg-primary-300"></div>
+    
+    <style>
+    .hs {
+        display: grid;
+        grid-gap: var(--space-layout);
+        /* grid-template-columns: var(--space-x-max-screen-lg); */
+        /* grid-template-rows: minmax(300px, 1fr); */
+        grid-auto-flow: column;
+        /* grid-auto-columns: calc(50% - var(--gutter) * 2); */
+        grid-auto-columns: minmax(300px, 1fr);
+        overflow-x: scroll;
+        /* scroll-snap-type: x proximity; */
+    }
+    /* .hs:before {
+        content: "";
+    } */
+    .hs:after {
+        content: "";
+        display: block;
+        position: relative;
+        width: calc(var(--space-x-max-screen-lg) - var(--space-layout));
+    }
+    .no-scrollbar {
+        scrollbar-width: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+    </style>

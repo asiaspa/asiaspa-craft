@@ -1,19 +1,21 @@
-{# need to modify to external image version #}
-{% if img | length %}
 {% set caption = caption ?? '' %}
-{# follow ratio, if not follow original size, or otherwise enforce defaultio aspect #}
-{% set h = h | default(img.getHeight ?? 9 ) %}
-{% set w = w | default(img.getWidth ?? 8 ) %}
+
+{% set h = h | default(image.getHeight ?? 9 ) %}
+{% set w = w | default(image.getWidth ?? 8 ) %}
 {% set aspect = w / h %}
-{% set x = x | default (img.focalPoint.x ?? '0.5') %}
-{% set y = y | default (img.focalPoint.y ?? '0.5') %}
+{% set x = x | default(image.focalPoint.x ?? '0.5') %}
+{% set y = y | default(image.focalPoint.y ?? '0.5') %}
+
+
+{% if image | length %}
 
 {% set transformedImages = craft.imager.transformImage(
-    img, 
+    image, 
     [{ width: 160 },{ width: 1920 }], 
     { ratio: aspect }, 
     { fillTransforms: true }) 
 %}
+
 <figure>
     <div class="relative block w-full overflow-hidden bg-primary-100" style="padding-bottom: {{ 1/aspect*100 }}%">
         <img class="absolute block w-full h-full lazyload pin"
@@ -29,11 +31,8 @@
 </figure> 
 
 {% else %}
-{% set h = h | default(9) %}
-{% set w = w | default(8) %}
-{% set aspect = w / h %}
-<figure class="relative w-full overflow-hidden bg-gray-100" style="padding-bottom: {{ aspect * 100 }}%">
-    <div class="absolute w-full h-full pin object-fit-cover" />
-</figure>
+<div class="relative w-full overflow-hidden bg-gray-100" style="padding-bottom: {{ 1 / aspect * 100 }}%">
+    <div class="absolute w-full h-full pin object-fit-cover"></div>
+</div>
 
 {% endif %}

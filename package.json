@@ -11,6 +11,7 @@
     "glob": "^7.1.6",
     "lazysizes": "^5.2.2",
     "purgecss-webpack-plugin": "^2.3.0",
+    "scrollbooster": "^3.0.2",
     "smoothscroll-polyfill": "^0.4.4",
     "swiper": "^6.0.4"
   },

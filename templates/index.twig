@@ -5,57 +5,84 @@
 
 {% extends "_layouts/_generic" %}
 
-
 {# ------------------- Eager Loading ------------------- #}
+{# set hero story #}
 {% do craft.app.elements.eagerLoadElements(
     className(entry),
     [entry],
     ['indexHeroEntry', 
     'indexHeroEntry.storyHeroImage',
     'indexFeaturedCampaign',
-    'indexFeaturedCampaign.campaignFeaturedStory.storyHeroImage',
-    'indexFeaturedCampaign.campaignFeaturedStory.storyCategory',
-    'indexFeaturedCampaign.campaignFeaturedStory.author',
-    'indexFeaturedCampaign.campaignFeaturedStory.author.photo'
+    'indexFeaturedCampaign.categoryFeaturedStory.storyHeroImage',
+    'indexFeaturedCampaign.categoryFeaturedStory.storyCategory',
+    'indexFeaturedCampaign.categoryFeaturedStory.author',
+    'indexFeaturedCampaign.categoryFeaturedStory.author.photo'
     ]
 ) %}
 
+{# set campaign #}
+{% set trendingStories = craft.entries
+    .section('story')
+    .with([
+        'storyHeroImage',
+        'storyCategory',
+        'storyPrintIssue',
+        'author',
+        'author.photo'
+    ])
+    .order('RAND()')
+    .limit(10)
+    .all() %}
+
+{# set spa listing #}
+{% set spaListings = craft.entries
+.section('spa')
+.with([
+    'spaListingGallery'
+])
+.order('RAND()')
+.limit(10)
+.all() %}
 
 {% block main %}
 {# ------------------- Hero Story ------------------- #}
 {% include "_components/_story-hero" with { entry:entry.indexHeroStory[0] ?? craft.entries.one() } %}
 
 {# ------------------- Campaign Slider------------------- #}
-<section class="w-full h-auto py-16">
-  {# <div class="grid max-w-screen-lg grid-cols-4 mx-auto">
-    {% for entry in craft.entries.limit(10).all() %}
-      {% include "_components/_story-card" with { entry: entry } %}
+<section class="w-full h-auto py-32 "
+         x-data="{ tab:0 }">
+         
+    <div class="flex max-w-screen-lg mx-6 mb-16 space-x-8 font-serif leading-none tracking-tight lg:mx-auto">
+        <button class="text-2xl text-left transition duration-300 lg:text-3xl"
+                @click="tab=0"
+                :class="{'text-gray-500':tab != 0}">{{ 'Trending Story'|t }}</button>
+
+        {% for campaign in entry.indexFeaturedCampaign %}
+        <button class="text-2xl text-left transition duration-300 lg:text-3xl"
+                @click="tab={{ loop.index }}"
+                :class="{'text-gray-500':tab != {{ loop.index }} }">{{ campaign.title }}</button>
+        {% endfor %}
+    </div>
+    
+    <div x-show="tab===0">
+        {% include "_components/_slider" with { entries: trendingStories } %}
+    </div>
+    {% for campaign in entry.indexFeaturedCampaign %}
+    <div x-show="tab==={{ loop.index }}">
+        {% include "_components/_slider" with { entries: campaign.categoryFeaturedStory } %}
+    </div>
     {% endfor %}
-  <div> #}
-
-
-
-  {# listing slider #}
-<div class="my-32">
-  <div class="swiper-container p-x-max-screen-lg">
-      <!-- Additional required wrapper -->
-      <div class="swiper-wrapper">
-          <!-- Slides -->
-      {% for entry in craft.entries.limit(10).all() %}
-        <div class="swiper-slide" style="max-width:300px">
-          {% include "_components/_story-card" with { entry: entry } %}
-        </div>
-      {% endfor %}
-      </div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
-  </div>
 </section>
 
+{# ------------------- Spa Locator ------------------- #}
+{% include "_components/_spa-locator-section" %}
 
-<section class="container mx-auto">
-  {{ sprig('_components/_story-pagination', {limit: 5}) }}
+{# ------------------- Story Pagination ------------------- #}
+<section class="w-full py-24 ">
+    <div class="max-w-screen-lg px-6 pb-4 mx-auto lg:px-0">
+        <h3 class="font-serif text-3xl lg:text-4xl">{{ 'Latest Story'|t }}</h3>
+    </div>
+    {{ sprig('_components/_story-pagination', {limit: 5}) }}
 </section>
-
 
 {% endblock %}

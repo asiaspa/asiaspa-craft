@@ -11,6 +11,7 @@ Asiaspa website running on AWS EC2 server provisioned by runcloud.io.
 6. imager-x vs craft image optimiser + serverless-sharp for cheaper cost
 7. improve js/css loading
 8. logo -> svg insert
+9. slim the swiper js
 
 ## Security Protocol & Account Management
 Passwords is managed via Lastpass with 1 master password.

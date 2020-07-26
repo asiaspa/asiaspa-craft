@@ -86,7 +86,7 @@ categoryGroups:
     structure:
       maxLevels: 1
       uid: d78d195b-65bf-439f-8380-a34d4fb46731
-dateModified: 1595726466
+dateModified: 1595784166
 email:
   fromEmail: asiaspa.dev@gmail.com
   fromName: AsiaSpa
@@ -2372,20 +2372,27 @@ sections:
         sortOrder: 1
         titleFormat: ''
         titleLabel: Title
-    handle: spaListings
-    name: 'Spa Listings'
+    handle: spa
+    name: Spa
     previewTargets:
       -
-        label: 'Primary entry page'
-        refresh: '1'
-        urlFormat: '{url}'
+        __assoc__:
+          -
+            - label
+            - 'Primary entry page'
+          -
+            - urlFormat
+            - '{url}'
+          -
+            - refresh
+            - '1'
     propagationMethod: all
     siteSettings:
       5058e36f-39fa-4fe2-982d-2a6082be4a27:
         enabledByDefault: true
         hasUrls: true
-        template: _spa-locator/_listing
-        uriFormat: 'spa-listings/{slug}'
+        template: _spa/_listing
+        uriFormat: 'spa/{slug}'
     type: channel
 siteGroups:
   5be258b1-1d41-42f2-8f8c-ce504d6af2da:

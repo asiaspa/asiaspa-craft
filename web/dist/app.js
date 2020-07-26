@@ -10818,25 +10818,52 @@ __webpack_require__.r(__webpack_exports__);
 
  // import Swiper styles
 
+ // import ScrollBooster from 'scrollbooster';
+// new ScrollBooster({
+//   viewport: document.querySelector('.hs'),
+//   scrollMode: 'native',
+//   direction: 'horizontal',
+//   emulateScroll: true,
+//   lockScrollOnDragDirection: true
+// });
 
 var swiper = new swiper_bundle__WEBPACK_IMPORTED_MODULE_3__["default"]('.swiper-container', {
   // Optional parameters
   // loop: true,
   //   autoHeight: true,
-  spaceBetween: 24,
+  speed: 300,
+  watchOverflow: true,
+  spaceBetween: 32,
   slidesPerView: 'auto',
   // slidesPerGroup: 4,
-  grapCursor: true,
+  grabCursor: true,
   freeMode: true,
   freeModeSticky: true,
   observer: true,
   observeParents: true,
+  mousewheel: {
+    releaseOnEdges: true,
+    sensitivity: 1.5
+  },
   // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev'
+  },
+  scrollbar: {
+    el: '.swiper-scrollbar',
+    draggable: true
   }
-}); // window.carousel = function () {
+});
+
+window.setTrueVw = function () {
+  var vw = document.documentElement.clientWidth / 100;
+  document.documentElement.style.setProperty('--true-vw', "".concat(vw, "px"));
+  console.log('screen size now is ' + vw + '*100');
+};
+
+setTrueVw();
+window.addEventListener('resize', setTrueVw); // window.carousel = function () {
 //     return {
 //         active: 0,
 //         init() {

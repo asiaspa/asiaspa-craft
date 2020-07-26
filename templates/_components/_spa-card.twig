@@ -1,0 +1,10 @@
+{% if entry | length %}
+	<div class="flex flex-col block w-full pb-8" href="{{ entry.url }}">
+		<div class="w-full">
+			{% include "_components/_imager" with { image : entry.spaListingGallery[0] ?? '', w : 16, h : 9 } %}
+		</div>
+		<div class="w-full">
+			<p class="font-serif text-xl font-medium lg:text-2xl">{{ entry.title }}</p>
+		</div>
+	</div>
+{% endif %}
