@@ -6,7 +6,7 @@
 {% set w = w | default(img.getWidth ?? 8 ) %}
 {% set aspect = w / h %}
 {% set x = x | default (img.focalPoint.x ?? '0.5') %}
-{% set x = x | default (img.focalPoint.y ?? '0.5') %}
+{% set y = y | default (img.focalPoint.y ?? '0.5') %}
 
 {% set transformedImages = craft.imager.transformImage(
     img, 
@@ -14,22 +14,19 @@
     { ratio: aspect }, 
     { fillTransforms: true }) 
 %}
-
-<img class="w-full h-auto overflow-hidden" sizes="100vw"  
-    src="{{ craft.imager.placeholder({ width: w, height: h}) }}"  
-    srcset="{{ transformedImages | srcset }}" >
-
-
-{# 
-<figure class="relative w-full overflow-hidden bg-gray-100" style="padding-bottom: {{ 1/aspect*100 }}%">
-    <img class="absolute w-full h-full pin object-fit-cover"          
-        srcset="{{ craft.imager.placeholder({ width: w, height: h }) }}"
-        src="{{ image.path | imgix({ ar: ratio| replace({'/':':'}), w:1024 }) }}"
-    />
+<figure>
+    <div class="relative block w-full overflow-hidden bg-primary-100" style="padding-bottom: {{ 1/aspect*100 }}%">
+        <img class="absolute block w-full h-full lazyload pin"
+            src="{{ transformedImages | first }}" 
+            srcset="{{ transformedImages | first }}" 
+            data-srcset="{{ transformedImages | srcset }}"
+            data-sizes="auto"
+        />
+    </div>
     {% if caption %}
-    <figcaption class="absolute bottom-0 left-0 right-0">{{ caption }}</figcaption>
+    <figcaption class="relative block text-sm text-gray-500">{{ caption|default('this is caption') }}</figcaption>
     {% endif %}
-</figure> #}
+</figure> 
 
 {% else %}
 {% set h = h | default(9) %}

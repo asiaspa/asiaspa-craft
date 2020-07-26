@@ -1,0 +1,24 @@
+{# 
+    Hero story will apply background color below the header
+    and compensate spacing using margin & padding
+#}
+
+
+<section class="pt-16 mb-16 -mt-16 lg:pt-8 bg-primary-300">
+    <div class="flex flex-col max-w-screen-md p-6 mx-auto lg:p-0 lg:flex-row"> 
+        <div class="w-full transform lg:p-0 lg:translate-y-16 lg:w-7/12 " >
+            {% if entry.storyHeroImage | length %}
+                {% include "_components/_imager" with { img : entry.storyHeroImage[0], w : 8, h : 9 } %}
+            {% endif %}
+        </div>
+        <div class="self-center w-full py-4 lg:pt-0 lg:ml-8 lg:w-5/12">
+            {% include "_components/_category-tag" with { category : entry.storyCategory } %}
+            {% include "_components/_category-tag" with { category : entry.storyPrintIssue } %}
+            <h1 class="font-serif text-3xl font-medium leading-tight tracking-tight lg:text-5xl ">{{ entry.title }}</h1>
+            <hr class="block w-32 my-6 border-t-2 border-primary-500" />
+            <h2 class="text-xl lg:text-2xl color-gray-900">{{ entry.storyStandfirst }}</h2>
+            {% include "_components/_user" with { user : entry.author, date : entry.postDate } %}
+        </div>
+    </div>
+</section>
+

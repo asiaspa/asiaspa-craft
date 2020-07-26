@@ -23,86 +23,35 @@
 
 {% block main %}
 {# ------------------- Hero Story ------------------- #}
-{% include "_components/_hero-story" with { entry:entry.indexHeroStory[0] ?? craft.entries.one() } %}
+{% include "_components/_story-hero" with { entry:entry.indexHeroStory[0] ?? craft.entries.one() } %}
 
 {# ------------------- Campaign Slider------------------- #}
+<section class="w-full h-auto py-16">
+  {# <div class="grid max-w-screen-lg grid-cols-4 mx-auto">
+    {% for entry in craft.entries.limit(10).all() %}
+      {% include "_components/_story-card" with { entry: entry } %}
+    {% endfor %}
+  <div> #}
 
 
-
-<section class="w-full h-auto py-16 bg-gray-100"
-         x-data="carouselFilter()">
-
-  {# category list #}
-  <div class="max-w-screen-xl mx-auto">
-    <button class="py-4 mr-8 text-2xl lg:mr-16 lg:text-3xl border-primary-500"
-            @click.prevent="changeActive(0)"
-            :class="{'border-b-2': active === 0}">{{ 'Trending' |t }}</button>
-      {% for category in entry.indexFeaturedCampaign %}
-      <button class="py-4 mr-8 text-2xl lg:mr-16 lg:text-3xl border-primary-500"
-              @click.prevent="changeActive({{ loop.index }})"
-              :class="{'border-b-2': active === {{ loop.index }}'}">{{ category.title }}</button>
-        {% endfor %}
-  </div>
 
   {# listing slider #}
-  {# Trending #}
-  {% set query = craft.entries.section('story').limit(5) %}
-  {% do craft.views_work.sortPopular(query) %}
-  {% set entries = query.all %}
-  <div x-show="active == 0">
-    <div x-data="carousel()"
-         x-init="init()">
-      <div class="col-start-1 row-start-1 carousel"
-           x-ref="carousel">
-
-        <div class="w-3/5 px-2">
-          <img src="https://images.unsplash.com/photo-1581375221876-8f287f7cd2cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=770&q=80"
-               loading="lazy">
+<div class="my-32">
+  <div class="swiper-container p-x-max-screen-lg">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+          <!-- Slides -->
+      {% for entry in craft.entries.limit(10).all() %}
+        <div class="swiper-slide" style="max-width:300px">
+          {% include "_components/_story-card" with { entry: entry } %}
         </div>
-        <div class="w-3/5 px-2">
-          <img src="https://images.unsplash.com/photo-1581375279144-bb3b381c7046?ixlib=rb-1.2.1&auto=format&fit=crop&w=770&q=80"
-               loading="lazy">
-        </div>
-        <div class="w-3/5 px-2">
-          <img src="https://images.unsplash.com/photo-1581375303816-4a17124934f7?ixlib=rb-1.2.1&auto=format&fit=crop&w=770&q=80"
-               loading="lazy">
-        </div>
-        <div class="w-3/5 px-2">
-          <img src="https://images.unsplash.com/photo-1494253109108-2e30c049369b?ixlib=rb-1.2.1&auto=format&fit=crop&w=770&q=80"
-               loading="lazy">
-        </div>
+      {% endfor %}
       </div>
-    </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
   </div>
-
-  {% for category in entry.indexFeaturedCampaign %}
-  {% set entries = category.categoryFeaturedStory %}
-  <div x-show="active == {{ loop.index }}">
-    <div x-data="carousel()"
-         x-init="init()">
-      <div class="w-3/5 px-2">
-        <img src="https://images.unsplash.com/photo-1581375221876-8f287f7cd2cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=770&q=80"
-             loading="lazy">
-      </div>
-      <div class="w-3/5 px-2">
-        <img src="https://images.unsplash.com/photo-1581375279144-bb3b381c7046?ixlib=rb-1.2.1&auto=format&fit=crop&w=770&q=80"
-             loading="lazy">
-      </div>
-      <div class="w-3/5 px-2">
-        <img src="https://images.unsplash.com/photo-1581375303816-4a17124934f7?ixlib=rb-1.2.1&auto=format&fit=crop&w=770&q=80"
-             loading="lazy">
-      </div>
-      <div class="w-3/5 px-2">
-        <img src="https://images.unsplash.com/photo-1494253109108-2e30c049369b?ixlib=rb-1.2.1&auto=format&fit=crop&w=770&q=80"
-             loading="lazy">
-      </div>
-    </div>
-  </div>
-  {# {% include "_components/_story-slider" with {entry : entries} %} #}
-  </div>
-  {% endfor %}
-
 </section>
+
 
 <section class="container mx-auto">
   {{ sprig('_components/_story-pagination', {limit: 5}) }}

@@ -1,1 +1,0 @@
-function carousel(){return{active:0,init(){new Flickity(this.$refs.carousel,{}).on("change",e=>this.active=e)}}}function carouselFilter(){return{active:0,changeActive(e){console.log(e),this.active=e,this.$nextTick(()=>{let t=Flickity.data(this.$el.querySelectorAll(".carousel")[e]);t.resize(),console.log(t)})}}}

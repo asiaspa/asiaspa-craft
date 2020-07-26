@@ -34,8 +34,8 @@ module.exports = {
       white: 'var(--color-white)'
     },
     extend: {
-      height: {
-        '60': '60%'
+      inset: {
+        '1/2': '50%',
       }
     },
   },

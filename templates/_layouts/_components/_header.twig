@@ -1,13 +1,15 @@
 {% set nodes = craft.navigation.nodes()
-    .handle('megamenu')
+    .handle('header')
     .level(1)
     .all()
 %}
 
-<header class="sticky top-0 z-50 w-full bg-white"
-        x-data="{dropdown: false, search: false}">
+<header class="sticky top-0 z-50 w-full transition duration-300"
+        x-data="{dropdown: false, search: false, atTop: true}"
+        x-on:scroll.window="atTop = (window.pageYOffset > 1) ? false : true; "
+        :class="{'bg-white': atTop === false }"
+        >
     <nav class="flex flex-wrap justify-between">
-
         <a href="{{ siteUrl }}"
            class="flex items-center flex-shrink-0 w-32 h-16 p-2 ml-2 mr-6">
             {% if branding.logo is defined and branding.logo is not empty  %}
@@ -33,7 +35,7 @@
         </div>
 
         {# ------------------- nav list ------------------- #}
-        <div class="absolute items-center flex-grow w-full h-screen mt-16 overflow-hidden transition duration-300 ease-in bg-white opacity-0 hidcden lg:h-auto lg:mt-0 lg:relative lg:opacity-100 lg:visible lg:flex lg:w-auto"
+        <div class="absolute items-center flex-grow w-full h-screen mt-16 overflow-hidden transition duration-300 ease-in bg-white opacity-0 lg:bg-transparent hidcden lg:h-auto lg:mt-0 lg:relative lg:opacity-100 lg:visible lg:flex lg:w-auto"
              :class="{'hidden opacity-0': dropdown === false}"
              @click.away="dropdown = false">
             <ul class="lg:flex-grow">

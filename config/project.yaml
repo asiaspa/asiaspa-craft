@@ -86,7 +86,7 @@ categoryGroups:
     structure:
       maxLevels: 1
       uid: d78d195b-65bf-439f-8380-a34d4fb46731
-dateModified: 1595688070
+dateModified: 1595726466
 email:
   fromEmail: asiaspa.dev@gmail.com
   fromName: AsiaSpa
@@ -454,6 +454,18 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Entries
+  6da1042f-ed76-40d4-b4ac-0fad7092788f:
+    contentColumnType: string(7)
+    fieldGroup: 8abee871-cc81-4240-9273-aeeb35aac866
+    handle: assetDominantColor
+    instructions: ''
+    name: 'Asset Dominant Color'
+    searchable: true
+    settings:
+      defaultColor: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Color
   77997e62-b092-44ea-8614-00f71e072b16:
     contentColumnType: text
     fieldGroup: 8abee871-cc81-4240-9273-aeeb35aac866
@@ -1105,7 +1117,7 @@ fields:
     type: craft\fields\Categories
 formie:
   statuses:
-    36161929-f2b3-424b-bb60-32fd4f5ffa50:
+    69b8e703-cb08-4b7d-acc6-4d1f4d67cacd:
       color: green
       description: null
       handle: new
@@ -1113,7 +1125,7 @@ formie:
       name: New
       sortOrder: 1
   stencils:
-    bab5120b-b870-45ea-ac2b-745d3ec54a7d:
+    f9a06851-4da6-4c64-8acc-d93a37ca8848:
       data:
         availability: always
         availabilityFrom: null
@@ -1832,23 +1844,10 @@ matrixBlockTypes:
 navigation:
   navs:
     9ef40309-6d64-4ade-b3da-24a47cd7b570:
-      fieldLayouts:
-        e31d8fc6-701b-4f23-a027-14fc9105510e:
-          tabs:
-            -
-              fields:
-                1468ef73-d157-46b7-ae06-706861d46c2d:
-                  required: false
-                  sortOrder: 2
-                1ce6709a-2f35-4cbc-9d0f-7f69ef7d4e48:
-                  required: false
-                  sortOrder: 1
-              name: 'Mega Menu'
-              sortOrder: 1
-      handle: megaMenu
+      handle: header
       instructions: ''
       maxNodes: ''
-      name: 'Mega Menu'
+      name: Header
       propagateNodes: true
       sortOrder: 3
       structure:
@@ -1860,6 +1859,10 @@ plugins:
     enabled: true
     schemaVersion: 2.1.0
   assetrev:
+    enabled: true
+    schemaVersion: 1.0.0
+  async-queue:
+    edition: standard
     enabled: true
     schemaVersion: 1.0.0
   aws-s3:
@@ -2040,8 +2043,8 @@ plugins:
     settings:
       authorField: assetAuthour
       authorUrlField: assetAuthorUrl
-      colorField: ''
-      volume: '11'
+      colorField: assetDominantColor
+      volume: '8'
   splashing-images:
     edition: standard
     enabled: true
@@ -2915,6 +2918,9 @@ volumes:
         tabs:
           -
             fields:
+              6da1042f-ed76-40d4-b4ac-0fad7092788f:
+                required: false
+                sortOrder: 3
               77997e62-b092-44ea-8614-00f71e072b16:
                 required: false
                 sortOrder: 2

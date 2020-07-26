@@ -30,12 +30,19 @@ mix
     browser: 'Firefox Developer Edition'
 })
     .sass('src/scss/app.scss', 'web/dist/')
-    .scripts([
-        'src/js/app.js'
-    ], 'web/dist/app.js')
-    .setPublicPath('web/dist/')
+    .js('src/js/app.js', 'web/dist/')
+    .extract([
+        'alpinejs',
+        'lazysizes'
+    ])
+// .scripts([
+    //     'src/js/app.js'
+    // ], 'web/dist/app.js')
+    .setPublicPath('web/')
     .tailwind()
-    .clean()
+    .clean({
+        cleanOnceBeforeBuildPatterns:['dist/']
+    })
     // .generateSW()
 
 if (mix.inProduction()) {

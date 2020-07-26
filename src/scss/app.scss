@@ -1,11 +1,43 @@
 @tailwind base;
 @tailwind components;
 
-// plugin
-@import "_plugin/_flickity";
-@import "_plugin/_flickity-custom";
+// vendor
+@import "_vendor/_lazysizes";
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
 
-@import "_component/_layout";
+// breakpoint spacing
+.p-x-max-screen-sm,
+.p-x-max-screen-md,
+.p-x-max-screen-lg,
+.p-x-max-screen-xl  {
+    @apply pl-6 pr-6; 
+}
+
+@screen sm {
+    .p-x-max-screen-sm { 
+        padding-left: calc((100vw - theme('screens.sm')) / 2) !important; 
+        padding-right: calc((100vw - theme('screens.sm')) / 2) !important; 
+    }   
+}
+@screen md {
+    .p-x-max-screen-md { 
+        padding-left: calc((100vw - theme('screens.md')) / 2) !important; 
+        padding-right: calc((100vw - theme('screens.md')) / 2) !important; 
+    }   
+}
+
+@screen lg {
+    .p-x-max-screen-lg { 
+        padding-left: calc((100vw - theme('screens.lg')) / 2) !important; 
+        padding-right: calc((100vw - theme('screens.lg')) / 2) !important; 
+    }   
+}
+@screen xl {
+    .p-x-max-screen-xl { 
+        padding-left: calc((100vw - theme('screens.xl')) / 2) !important;
+        padding-right: calc((100vw - theme('screens.xl')) / 2) !important;
+    }   
+}
 
 
 @tailwind utilities;
