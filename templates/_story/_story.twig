@@ -6,71 +6,63 @@
 {{ entry | views_work_image }}
 
 {% set entry = craft.entries({
+    section: 'story',
     slug: entry.slug,
-    section: 'story'
+    with: [
+        'storyHeroImage',
+        'storyCategory',
+        'storyPrintIssue',
+        'author',
+        'author.photo'
+    ]
 }).one() %}
 
-
-
 {# main section #}
-<section class="relative h-16 h-auto my-16 w-100">
-    <div class="absolute top-0 left-0 w-7/12 h-full mt-16 bg-primary-100"></div>
-    <div class="relative flex max-w-screen-lg mx-auto">
-        <div class="self-center w-1/2 py-8 pl-16">
-        {# category #}
-        {% if entry.storyCategory | length %}
-            <a href="{{ entry.storyCategory.one().link }}">{{ entry.storyCategory.one().title}}</a>
-        {% endif %}
-        <h1 class="mt-4 font-serif text-5xl font-semibold leading-tight tracking-tight">{{ entry.title }}</h1>
-        <h2 class="mt-4 text-2xl color-gray-900">{{ entry.storyStandfirst }}</h2>
-        {# avator #}
-        <div class="flex items-center mt-6">
-            <img class="w-16 h-16 mr-8 rounded-full" src="https://source.unsplash.com/64x64/?avator" alt="Avatar of Jonathan Reinink">
-            <div>
-                <p class="leading-none text-gray-900">{{ entry.author.fullName }}</p>
-                <p class="text-gray-500">{{ entry.postDate | date("M d, Y") }}</p>
-            </div>
+<article>
+    <section class="max-w-screen-md px-6 mx-auto ">
+        <div class="self-center w-full py-12 lg:w-3/4">
+        <div class="flex space-x-2">
+            {% include "_components/_category-tag" with { category : entry.storyCategory } %}
+            {% include "_components/_category-tag" with { category : entry.storyPrintIssue } %}
         </div>
-        </div>
-
-        <div class="w-1/2 ">
-            {% if entry.storyHeroImage | length %}
-                {% include "_components/_imager" with { image : entry.storyHeroImage[0], w : 8, h : 9 } %}
-            {% else %}
-                <figure class="relative w-full overflow-hidden bg-gray-100" style="padding-bottom: {{ 9/8*100 }}%">
-                    <div class="absolute w-full h-full pin object-fit-cover" />
-                </figure>
-            {% endif %}
-        </div>
-        
-    </div>    
-</section>
-
-
-{# matrix #}
-<article class="mt-48">
-{% if entry.storyContent |length %}
-	{% for block in entry.storyContent %}
-		{% switch block.type %}
-			{% case 'richTextEditor' %}
-				{% include '_story/_component/_rich-text-editor' %}
-			{% case 'gallery' %}
-				{% include '_story/_component/_gallery' %}
-            {% case 'embed' %}
-                {% include '_story/_component/_embed' %}
-			{% case 'imageHotspot' %}
-                {% include '_story/_component/_image-hotspot' %}
-            {% case 'relatedStory' %}
-                {% include '_story/_component/_related-story' %}
-          {#   {% case 'slider' %}
-                {% include '_story/_component/_slider' %}
-            
-            
-            {% case 'relatedSpaListing' %}
-                {% include '_story/_component/_relatedSpaListing' %} #}
-		{% endswitch %}
-	{% endfor %}
-{% endif %}
+        <h1 class="mt-4 font-serif text-4xl font-medium leading-tight tracking-tight lg:text-5xl">{{ entry.title }}</h1>
+        <h2 class="mt-4 mb-4 text-2xl color-gray-900">{{ entry.storyStandfirst }}</h2>
+        {% include "_components/_user" with { user: entry.author, date: entry.postDate } %}
+    </section>
+    <section class="max-w-screen-lg mx-auto">
+            {% include "_components/_imager" with { image : entry.storyHeroImage[0] } %}
+    </section>
+    
+    {# matrix #}
+    {% if entry.storyContent |length %}
+        {% for block in entry.storyContent %}
+            {% switch block.type %}
+                {% case 'richTextEditor' %}
+                    {% include '_story/_components/_rich-text-editor' %}
+                {% case 'gallery' %}
+                    {% include '_story/_components/_gallery' %}
+                {% case 'embed' %}
+                    {% include '_story/_components/_embed' %}
+                {% case 'imageHotspot' %}
+                    {% include '_story/_components/_image-hotspot' %}
+                {% case 'relatedStory' %}
+                    {% include '_story/_components/_related-story' %}
+                {#  
+                {% case 'listicle' %}
+                    {% include '_story/_component/_listlicle' %}
+                {% case 'slider' %}
+                    {% include '_story/_component/_slider' %}
+                {% case 'relatedSpaListing' %}
+                    {% include '_story/_component/_relatedSpaListing' %}
+                {% case 'form' %}
+                    {% include '_story/_component/_form' %}
+                {% case 'faq' %}
+                    {% include '_story/_component/_faq' %}                
+                 #}
+            {% endswitch %}
+        {% endfor %}
+    {% endif %}
+    
 </article>
 
 

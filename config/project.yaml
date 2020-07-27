@@ -86,7 +86,7 @@ categoryGroups:
     structure:
       maxLevels: 1
       uid: d78d195b-65bf-439f-8380-a34d4fb46731
-dateModified: 1595784166
+dateModified: 1595845484
 email:
   fromEmail: asiaspa.dev@gmail.com
   fromName: AsiaSpa
@@ -484,6 +484,26 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
+  78679b14-60f1-49c6-bb2c-8b877dbbaf8f:
+    contentColumnType: string
+    fieldGroup: 847d91f3-2f4a-4f56-9f9d-40c20e080811
+    handle: byline
+    instructions: ''
+    name: byline
+    searchable: true
+    settings:
+      allowSelfRelations: ''
+      limit: ''
+      localizeRelations: false
+      selectionLabel: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: ''
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Users
   7b2762c9-7ef7-4196-b8ec-6d1fa1aecf71:
     contentColumnType: text
     fieldGroup: a7b23ced-f8be-4c09-bba7-84b5e4552f75
@@ -1119,9 +1139,8 @@ formie:
   statuses:
     69b8e703-cb08-4b7d-acc6-4d1f4d67cacd:
       color: green
-      description: null
       handle: new
-      isDefault: true
+      isDefault: '1'
       name: New
       sortOrder: 1
   stencils:
@@ -2188,12 +2207,15 @@ sections:
                   02d38f73-db56-4fab-a533-0dc7400f81fe:
                     required: false
                     sortOrder: 2
-                  a9f00eab-73ff-4659-9b15-ee56aa8c8531:
+                  78679b14-60f1-49c6-bb2c-8b877dbbaf8f:
                     required: false
                     sortOrder: 3
-                  aa058ac8-5cdd-4c29-8ea3-19f5c15ff138:
+                  a9f00eab-73ff-4659-9b15-ee56aa8c8531:
                     required: false
                     sortOrder: 4
+                  aa058ac8-5cdd-4c29-8ea3-19f5c15ff138:
+                    required: false
+                    sortOrder: 5
                   b357d9dd-f6da-4d5f-b00f-8769518e1b39:
                     required: false
                     sortOrder: 1
@@ -2376,16 +2398,9 @@ sections:
     name: Spa
     previewTargets:
       -
-        __assoc__:
-          -
-            - label
-            - 'Primary entry page'
-          -
-            - urlFormat
-            - '{url}'
-          -
-            - refresh
-            - '1'
+        label: 'Primary entry page'
+        refresh: '1'
+        urlFormat: '{url}'
     propagationMethod: all
     siteSettings:
       5058e36f-39fa-4fe2-982d-2a6082be4a27:
