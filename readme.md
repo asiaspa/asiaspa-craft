@@ -1,18 +1,15 @@
 # Brief
-Asiaspa website running on AWS EC2 server provisioned by runcloud.io.
-
+Asiaspa website revamp project
 
 ## TODO
-1. Amazon AWS reset contact & billing informaiton
-2. Redactor -> Pasted images are not managable.
-3. email sent/reply issue 
-4. register-service-worker
-5. criticalcss
-6. imager-x vs craft image optimiser + serverless-sharp for cheaper cost
-7. improve js/css loading
-8. logo -> svg insert
-9. slim the swiper js
-
+- [ ] Google Cloud Storage reset contact & billing informaiton
+- [ ] Gmail sent/reply issue 
+- [ ] Register-service-worker
+- [ ] criticalcss
+- [ ] logo -> svg insert
+- [ ] slim the swiper js
+- [ ] searchit template query predefined
+ 
 ## Security Protocol & Account Management
 Passwords is managed via Lastpass with 1 master password.
 1. Craft ID / Craft Cloud
