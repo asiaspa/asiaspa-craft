@@ -1,0 +1,31 @@
+contentColumnType: string
+fieldGroup: f6ccb015-3533-491f-8f9c-775d16605b99
+handle: websiteLogo
+instructions: 'SVG only.'
+name: 'Website Logo'
+searchable: true
+settings:
+  allowSelfRelations: false
+  allowedKinds:
+    - image
+  defaultUploadLocationSource: 'volume:f6b6a0a2-13b7-4a96-892e-19f882d66b20'
+  defaultUploadLocationSubpath: branding/
+  limit: '1'
+  localizeRelations: false
+  restrictFiles: '1'
+  selectionLabel: 'Upload Logo'
+  showSiteMenu: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  singleUploadLocationSource: 'volume:f6b6a0a2-13b7-4a96-892e-19f882d66b20'
+  singleUploadLocationSubpath: branding
+  source: null
+  sources:
+    - 'volume:f6b6a0a2-13b7-4a96-892e-19f882d66b20'
+  targetSiteId: null
+  useSingleFolder: true
+  validateRelatedElements: false
+  viewMode: large
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Assets

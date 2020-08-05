@@ -1,0 +1,63 @@
+field: a9f00eab-73ff-4659-9b15-ee56aa8c8531
+fieldLayouts:
+  557972fe-f957-4ccb-b390-8f6aebd791d5:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 8cecd4b6-d87b-4fdd-a8fe-8591c158612a
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  8cecd4b6-d87b-4fdd-a8fe-8591c158612a:
+    contentColumnType: string
+    fieldGroup: null
+    handle: slide
+    instructions: ''
+    name: Slide
+    searchable: false
+    settings:
+      columns:
+        __assoc__:
+          -
+            - 6029fdd9-fddc-4a87-984c-a3a00ad087ce
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - 94e3fe9e-d935-4f1e-a761-48928f522fe6
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - ad371891-7a09-4d0e-a67b-653b3ad44d9e
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+      contentTable: '{{%stc_6_slide_1}}'
+      fieldLayout: table
+      maxRows: ''
+      minRows: ''
+      placeholderKey: null
+      propagationMethod: all
+      selectionLabel: ''
+      staticField: ''
+    translationKeyFormat: null
+    translationMethod: site
+    type: verbb\supertable\fields\SuperTableField
+handle: slider
+name: Slider
+sortOrder: 5

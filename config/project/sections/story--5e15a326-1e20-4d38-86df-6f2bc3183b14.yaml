@@ -1,0 +1,23 @@
+enableVersioning: true
+handle: story
+name: Story
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  5058e36f-39fa-4fe2-982d-2a6082be4a27:
+    enabledByDefault: true
+    hasUrls: true
+    template: _stories/_story.twig
+    uriFormat: 'story/{slug}'
+type: channel

@@ -1,0 +1,58 @@
+field: f6d10ba5-aed1-46fb-a735-ed888cebd848
+fieldLayouts:
+  0fcb5096-1206-45dc-a6f4-0a1982c71f1b:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 12adf5d8-5a0b-46bf-b44b-cf947479c4e2
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: bbf16101-636a-4cbb-8c9b-2857a3ae00cc
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  12adf5d8-5a0b-46bf-b44b-cf947479c4e2:
+    contentColumnType: text
+    fieldGroup: null
+    handle: hotspots
+    instructions: ''
+    name: Hotspots
+    searchable: true
+    settings:
+      relatedAssetHandle: image
+    translationKeyFormat: null
+    translationMethod: none
+    type: born05\imagehotspots\fields\ImageHotspots
+  bbf16101-636a-4cbb-8c9b-2857a3ae00cc:
+    contentColumnType: text
+    fieldGroup: null
+    handle: description
+    instructions: ''
+    name: Description
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: '1'
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText

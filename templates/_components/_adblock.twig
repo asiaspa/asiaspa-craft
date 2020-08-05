@@ -1,0 +1,13 @@
+{% set adQuery = craft.adWizard.ads
+    .group(adgroup)
+    .orderBy('Rand()')
+    .onlyValid()
+ %}
+{% if adQuery.count() %}
+{% set ad = adQuery.one() %}
+
+<div class="flex justify-center py-6 ">
+    {{ ad.displayAd() }}
+</div>
+
+{% endif %}

@@ -1,0 +1,8 @@
+handle: serverStorage
+hasUrls: true
+name: 'Server Storage'
+settings:
+  path: '@webroot/asset'
+sortOrder: 5
+type: craft\volumes\Local
+url: '@web/asset'

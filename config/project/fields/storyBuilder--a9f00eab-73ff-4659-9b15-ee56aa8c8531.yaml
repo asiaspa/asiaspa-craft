@@ -1,0 +1,14 @@
+contentColumnType: string
+fieldGroup: 3c7968d3-974b-4238-bfe2-0dfcefb8ce1e
+handle: storyBuilder
+instructions: ''
+name: 'Story Builder '
+searchable: true
+settings:
+  contentTable: '{{%matrixcontent_storybuilder}}'
+  maxBlocks: ''
+  minBlocks: ''
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

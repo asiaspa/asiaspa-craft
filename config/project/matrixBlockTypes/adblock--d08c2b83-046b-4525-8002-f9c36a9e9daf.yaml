@@ -1,0 +1,73 @@
+field: 51f3339a-5e27-4c65-95cf-82085401023d
+fieldLayouts:
+  f2748f28-ea06-41f8-b6d3-b61741d7eef0:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: a2e9b882-d276-49cb-a354-01b9db5378ae
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 75
+          -
+            fieldUid: 01202169-856c-4120-a83a-280516822d0a
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: 13756d6e-c3e4-43d5-ac9f-07316fa710f4
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+        name: Content
+        sortOrder: 1
+fields:
+  01202169-856c-4120-a83a-280516822d0a:
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: visibleOnDesktop
+    instructions: ''
+    name: 'Visible On Desktop'
+    searchable: false
+    settings:
+      default: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
+  13756d6e-c3e4-43d5-ac9f-07316fa710f4:
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: visibleOnMobile
+    instructions: ''
+    name: 'Visible on Mobile'
+    searchable: false
+    settings:
+      default: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
+  a2e9b882-d276-49cb-a354-01b9db5378ae:
+    contentColumnType: text
+    fieldGroup: null
+    handle: adgroup
+    instructions: ''
+    name: Adgroup
+    searchable: false
+    translationKeyFormat: null
+    translationMethod: none
+    type: doublesecretagency\adwizard\fields\AdGroups
+handle: adblock
+name: Adblock
+sortOrder: 4

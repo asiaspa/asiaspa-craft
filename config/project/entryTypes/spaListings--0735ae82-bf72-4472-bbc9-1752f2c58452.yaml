@@ -1,0 +1,167 @@
+fieldLayouts:
+  77d45d93-1ae6-4228-88ab-22bc4486992a:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            autofocus: false
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            required: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\EntryTitleField
+            warning: null
+            width: 100
+          -
+            fieldUid: 6797e499-7808-4067-9b06-1d2989a94807
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: e3b691f5-de3d-41de-bdf5-81ab0c454f70
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 8c1e90a8-1cba-4ad9-9ecc-1412fda51b4c
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 3aaf3cbe-e82c-4577-9a14-9dd2e6aa159c
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 7b2762c9-7ef7-4196-b8ec-6d1fa1aecf71
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 98c6934c-a2ef-42d0-a29e-e9a9b45f9178
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 51c0af81-306b-4113-887b-f8ed4ea28b0b
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Main
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: 7dd727bb-67c2-4ab1-adc7-4cd11a80231b
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 55a03740-1687-40ab-acb2-6bb3b16c5143
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 89bc5559-38ba-48c4-ac2d-5fed336e2864
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: ecd23e17-3480-4d45-8517-af15ab0f4239
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Contact
+        sortOrder: 2
+      -
+        elements:
+          -
+            fieldUid: f5167c07-befd-463c-a645-eb2efff6b291
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: 'Asiaspa Perks'
+        sortOrder: 3
+      -
+        elements:
+          -
+            fieldUid: 68752c4e-cc58-4744-a1c4-20778860741f
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: SEO
+        sortOrder: 4
+handle: spaListings
+hasTitleField: true
+name: 'Spa Listings'
+section: c2929640-5995-4a0b-b490-deb3c54ab6d4
+sortOrder: 1
+titleFormat: ''

@@ -1,0 +1,51 @@
+contentColumnType: text
+fieldGroup: 6ebe0a75-3257-417d-8c9b-c712a8dbf9c9
+handle: seomatic
+instructions: 'General SEO settings for the page.'
+name: SEOmatic
+searchable: false
+settings:
+  elementDisplayPreviewType: google
+  facebookEnabledFields:
+    - seoPreview
+    - ogTitle
+    - ogDescription
+    - ogImage
+    - ogImageTransform
+    - ogImageTransformMode
+    - ogImageDescription
+  facebookTabEnabled: '1'
+  generalEnabledFields:
+    - seoPreview
+    - seoTitle
+    - seoDescription
+    - seoKeywords
+    - seoImage
+    - seoImageTransform
+    - seoImageTransformMode
+    - seoImageDescription
+    - robots
+    - canonicalUrl
+  generalTabEnabled: '1'
+  sitemapEnabledFields:
+    - sitemapUrls
+    - sitemapAssets
+    - sitemapFiles
+    - sitemapAltLinks
+    - sitemapChangeFreq
+    - sitemapPriority
+    - sitemapLimit
+  sitemapTabEnabled: ''
+  twitterEnabledFields:
+    - seoPreview
+    - twitterCreator
+    - twitterTitle
+    - twitterDescription
+    - twitterImage
+    - transformTwitterImage
+    - twitterImageTransformMode
+    - twitterImageDescription
+  twitterTabEnabled: '1'
+translationKeyFormat: null
+translationMethod: none
+type: nystudio107\seomatic\fields\SeoSettings

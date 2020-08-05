@@ -1,0 +1,55 @@
+{
+  "buttons": [
+    "formatting",
+    "bold",
+    "italic", 
+    "unorderedlist", 
+    "orderedlist", 
+    "link", 
+    "image", 
+    "video",
+    "etc",
+    "line",
+    "redo",
+    "undo", 
+    "underline", 
+    "indent", 
+    "outdent", 
+    "sup", 
+    "sub"
+  ],
+  "plugins": [
+    "fullscreen", 
+    "video",
+    "alignment",
+    "counter",
+
+    "definedlinks",
+    "filemanager",
+    "handle",
+    "imagemanager",
+    "limiter",
+    "pagebreak",
+
+    "table",
+    
+    "variable",
+    "widget",
+    "redactor-split"
+  ],
+  "linkNewTab": true,
+  "toolbarFixed": true,
+  "_plugin-buttons": [
+    "file"
+  ],
+  "_plugin-comments": [
+    "clips",
+    "fontcolor",
+    "fontfamily",
+    "fontsize",
+    "properties",
+    "specialchars",
+    "textdirection",
+    "textexpander"
+  ]
+}

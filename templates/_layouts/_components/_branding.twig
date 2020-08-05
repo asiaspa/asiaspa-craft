@@ -1,0 +1,21 @@
+{{ website.faviconCode | raw }}
+
+{% set websiteColorQuery = website.websiteColor.type('colorPalette') %}
+{% set websiteColorPalette = websiteColorQuery.one() %}
+
+<style>
+:root {
+    --color-black: {{ websiteColorPalette.colorBlack }};
+    --color-white: {{ websiteColorPalette.colorWhite }};
+    --color-primary-100: {{ websiteColorPalette.colorPrimary100 }};
+    --color-primary-300: {{ websiteColorPalette.colorPrimary300 }};
+    --color-primary-500: {{ websiteColorPalette.colorPrimary500 }};
+    --color-primary-700: {{ websiteColorPalette.colorPrimary700 }};
+    --color-primary-900 : {{ websiteColorPalette.colorPrimary900 }};
+    --color-gray-100 : {{ websiteColorPalette.colorGray100 }};
+    --color-gray-300 : {{ websiteColorPalette.colorGray300 }};
+    --color-gray-500: {{ websiteColorPalette.colorGray500 }};
+    --color-gray-700 : {{ websiteColorPalette.colorGray700 }};
+    --color-gray-900: {{ websiteColorPalette.colorGray900 }};
+}
+</style>

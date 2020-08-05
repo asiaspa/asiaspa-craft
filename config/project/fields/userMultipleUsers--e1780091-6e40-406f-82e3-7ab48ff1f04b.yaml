@@ -1,0 +1,20 @@
+contentColumnType: string
+fieldGroup: 6ebe0a75-3257-417d-8c9b-c712a8dbf9c9
+handle: userMultipleUsers
+instructions: ''
+name: 'User - Multiple Users'
+searchable: false
+settings:
+  allowSelfRelations: false
+  limit: ''
+  localizeRelations: false
+  selectionLabel: ''
+  showSiteMenu: true
+  source: null
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Users

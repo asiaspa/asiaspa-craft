@@ -1,0 +1,45 @@
+field: a9f00eab-73ff-4659-9b15-ee56aa8c8531
+fieldLayouts:
+  0c70d597-e7f3-4266-b839-7f98db6f7865:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: a847531d-9759-4c96-9316-2fd5fd03de36
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  a847531d-9759-4c96-9316-2fd5fd03de36:
+    contentColumnType: text
+    fieldGroup: null
+    handle: richTextEditor
+    instructions: ''
+    name: 'Rich Text Editor'
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes:
+        - 883ab42c-10f1-4e32-a559-61f23e4e3775
+      cleanupHtml: true
+      columnType: text
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: Standard.json
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+handle: richTextEditor
+name: 'Rich Text Editor'
+sortOrder: 1

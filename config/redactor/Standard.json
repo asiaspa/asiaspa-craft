@@ -12,16 +12,11 @@
     "line",
     "redo",
     "undo", 
-    "underline", 
-    "indent", 
-    "outdent", 
-    "sup", 
-    "sub"
+    "underline"
   ],
   "plugins": [
     "fullscreen", 
     "video",
-    "alignment",
     "counter",
 
     "definedlinks",
@@ -29,7 +24,6 @@
     "handle",
     "imagemanager",
     "limiter",
-    "pagebreak",
 
     "table",
     

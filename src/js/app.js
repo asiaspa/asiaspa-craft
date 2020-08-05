@@ -1,20 +1,10 @@
 import lazySizes from 'lazysizes';
 import 'lazysizes/plugins/blur-up/ls.blur-up';
 import 'alpinejs';
-
+import sal from 'sal.js'
 import Swiper from 'swiper/bundle'; // import Swiper styles
-import 'swiper/swiper-bundle.css';
 
-// import ScrollBooster from 'scrollbooster';
-
-// new ScrollBooster({
-//   viewport: document.querySelector('.hs'),
-//   scrollMode: 'native',
-//   direction: 'horizontal',
-//   emulateScroll: true,
-//   lockScrollOnDragDirection: true
-// });
-
+sal();
 
 const swiper = new Swiper('.swiper-container', {
   // Optional parameters
@@ -22,7 +12,7 @@ const swiper = new Swiper('.swiper-container', {
 //   autoHeight: true,
   speed:300,
   watchOverflow: true,
-  spaceBetween: 32,
+  spaceBetween: 48,
   slidesPerView: 'auto',
   // slidesPerGroup: 4,
   grabCursor: true,
@@ -53,29 +43,3 @@ window.setTrueVw = function () {
 
 setTrueVw();
 window.addEventListener('resize', setTrueVw);
-
-
-// window.carousel = function () {
-//     return {
-//         active: 0,
-//         init() {
-//             var flkty = new Flickity(this.$refs.carousel, {});
-//             flkty.on('change', i => this.active = i);
-//         }
-//     }
-// }
-
-// window.carouselFilter = function() {
-//     return {
-//         active: 0,
-//         changeActive(i) {
-//             console.log(i);
-//             this.active = i;
-//             this.$nextTick(() => {
-//                 let flkty = Flickity.data(this.$el.querySelectorAll('.carousel')[i]);
-//                 flkty.resize();
-//                 console.log(flkty);
-//             });
-//         }
-//     }
-// }

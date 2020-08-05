@@ -1,0 +1,14 @@
+handle: editor
+name: Editor
+permissions:
+  - accesscp
+  - 'createentries:c2929640-5995-4a0b-b490-deb3c54ab6d4'
+  - 'editentries:c2929640-5995-4a0b-b490-deb3c54ab6d4'
+  - 'createentries:5e15a326-1e20-4d38-86df-6f2bc3183b14'
+  - 'editentries:5e15a326-1e20-4d38-86df-6f2bc3183b14'
+  - permission_bulkedit_entries
+  - 'saveassetinvolume:883ab42c-10f1-4e32-a559-61f23e4e3775'
+  - 'createfoldersinvolume:883ab42c-10f1-4e32-a559-61f23e4e3775'
+  - 'deletefilesandfoldersinvolume:883ab42c-10f1-4e32-a559-61f23e4e3775'
+  - 'editimagesinvolume:883ab42c-10f1-4e32-a559-61f23e4e3775'
+  - 'viewvolume:883ab42c-10f1-4e32-a559-61f23e4e3775'

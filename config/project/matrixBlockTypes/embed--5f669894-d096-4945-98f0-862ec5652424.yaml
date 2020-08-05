@@ -1,0 +1,61 @@
+field: a9f00eab-73ff-4659-9b15-ee56aa8c8531
+fieldLayouts:
+  d897db81-3c3e-4f8b-b564-55a7bfe9b14f:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 45986951-1b45-44d4-8caf-c1e6f6ab7f44
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 7d6883b2-2574-47f4-ad36-510d3997ea73
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  45986951-1b45-44d4-8caf-c1e6f6ab7f44:
+    contentColumnType: text
+    fieldGroup: null
+    handle: embed
+    instructions: 'Support for all popular providers and websites including Youtube, Vimeo, Google Maps, Facebook, Twitter, Github, Flickr, Wikipedia and many more.'
+    name: Embed
+    searchable: true
+    settings:
+      url: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: wrav\oembed\fields\OembedField
+  7d6883b2-2574-47f4-ad36-510d3997ea73:
+    contentColumnType: text
+    fieldGroup: null
+    handle: caption
+    instructions: ''
+    name: Caption
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: embed
+name: Embed
+sortOrder: 4

@@ -1,0 +1,6 @@
+adminOnly: 1
+allowSources: '*'
+enabledSiteGroups: '*'
+handle: header
+levels: 1
+title: Header

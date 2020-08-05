@@ -1,0 +1,213 @@
+field: 51f3339a-5e27-4c65-95cf-82085401023d
+fieldLayouts:
+  530dce51-eb38-4f14-887a-7cedd19c4e48:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 1a3a3163-37ed-4004-aece-697b593dd10f
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: dbbaa234-0e14-4f42-ad82-b3ae0fc63335
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: deb2e8aa-73a2-43fd-8cfc-218c5ebe1bf7
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 25
+          -
+            fieldUid: ecc98d15-5ded-48d0-af22-bedf808296dd
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 25
+          -
+            fieldUid: f33b5584-1ce5-469d-b7a6-cf10e0b56350
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 25
+          -
+            fieldUid: a34ae540-b25d-438b-96d8-6420f087f9d8
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  1a3a3163-37ed-4004-aece-697b593dd10f:
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: ''
+    name: Heading
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  a34ae540-b25d-438b-96d8-6420f087f9d8:
+    contentColumnType: string
+    fieldGroup: null
+    handle: filledEntries
+    instructions: ''
+    name: 'Filled Entries'
+    searchable: false
+    settings:
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Trending
+            -
+              - value
+              - trending
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Latest
+            -
+              - value
+              - latest
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\RadioButtons
+  dbbaa234-0e14-4f42-ad82-b3ae0fc63335:
+    contentColumnType: string
+    fieldGroup: null
+    handle: pinnedStories
+    instructions: ''
+    name: 'Pinned Stories'
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      limit: '8'
+      localizeRelations: false
+      selectionLabel: ''
+      showSiteMenu: true
+      source: null
+      sources:
+        - 'section:5e15a326-1e20-4d38-86df-6f2bc3183b14'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+  deb2e8aa-73a2-43fd-8cfc-218c5ebe1bf7:
+    contentColumnType: string
+    fieldGroup: null
+    handle: entriesFromCategory
+    instructions: '[depreciated]'
+    name: 'Entries from Category'
+    searchable: false
+    settings:
+      allowLimit: false
+      allowMultipleSources: false
+      allowSelfRelations: false
+      branchLimit: '1'
+      limit: null
+      localizeRelations: false
+      selectionLabel: ''
+      showSiteMenu: true
+      source: 'group:b85be20d-3d22-431f-a700-c2d63cf40881'
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Categories
+  ecc98d15-5ded-48d0-af22-bedf808296dd:
+    contentColumnType: string
+    fieldGroup: null
+    handle: entriesFromPrintIssue
+    instructions: '[depreciated]'
+    name: 'Entries from Print Issue'
+    searchable: false
+    settings:
+      allowLimit: false
+      allowMultipleSources: false
+      allowSelfRelations: false
+      branchLimit: '1'
+      limit: null
+      localizeRelations: false
+      selectionLabel: ''
+      showSiteMenu: true
+      source: 'group:747402aa-105d-41d3-ace6-9e3de98971a4'
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Categories
+  f33b5584-1ce5-469d-b7a6-cf10e0b56350:
+    contentColumnType: string
+    fieldGroup: null
+    handle: entriesFromTag
+    instructions: '[depreciated]'
+    name: 'Entries from Tag'
+    searchable: false
+    settings:
+      allowLimit: false
+      allowMultipleSources: false
+      allowSelfRelations: false
+      branchLimit: '1'
+      limit: null
+      localizeRelations: false
+      selectionLabel: ''
+      showSiteMenu: true
+      source: 'group:dc068a49-9607-4bc7-9bd1-069f279dbf76'
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Categories
+handle: storyCarousel
+name: 'Story Carousel'
+sortOrder: 2

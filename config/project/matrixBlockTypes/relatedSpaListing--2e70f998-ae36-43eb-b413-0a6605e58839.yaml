@@ -1,0 +1,43 @@
+field: a9f00eab-73ff-4659-9b15-ee56aa8c8531
+fieldLayouts:
+  845ec257-1307-44e2-87d5-472a2700c0af:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: ce34e0fc-9997-4c71-9a50-5f97486011bc
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  ce34e0fc-9997-4c71-9a50-5f97486011bc:
+    contentColumnType: string
+    fieldGroup: null
+    handle: spaListing
+    instructions: ''
+    name: 'Spa Listing'
+    searchable: true
+    settings:
+      allowSelfRelations: false
+      limit: ''
+      localizeRelations: false
+      selectionLabel: ''
+      showSiteMenu: true
+      source: null
+      sources:
+        - 'section:c2929640-5995-4a0b-b490-deb3c54ab6d4'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+handle: relatedSpaListing
+name: 'Related Spa Listing'
+sortOrder: 7

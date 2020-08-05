@@ -1,0 +1,119 @@
+field: b02731a5-4105-4dbf-b19f-26510c3a0080
+fieldLayouts:
+  320dc74b-0737-4dfb-92f5-dcbd0aed2e9b:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: c9bc962f-f488-4026-adcb-403cf9a490cd
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: cc038d7e-0d1c-40fa-b621-39f01ac8074a
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+        name: Content
+        sortOrder: 1
+fields:
+  c9bc962f-f488-4026-adcb-403cf9a490cd:
+    contentColumnType: string
+    fieldGroup: null
+    handle: story
+    instructions: ''
+    name: Story
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      limit: '1'
+      localizeRelations: false
+      selectionLabel: ''
+      showSiteMenu: true
+      source: null
+      sources:
+        - 'section:5e15a326-1e20-4d38-86df-6f2bc3183b14'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+  cc038d7e-0d1c-40fa-b621-39f01ac8074a:
+    contentColumnType: string
+    fieldGroup: null
+    handle: heroImageAspectRatio
+    instructions: ''
+    name: 'Hero Image Aspect Ratio'
+    searchable: false
+    settings:
+      optgroups: true
+      options:
+        -
+          __assoc__:
+            -
+              - optgroup
+              - Landscapae
+        -
+          __assoc__:
+            -
+              - label
+              - 16/9
+            -
+              - value
+              - 16/9
+            -
+              - default
+              - '1'
+        -
+          __assoc__:
+            -
+              - label
+              - 4/3
+            -
+              - value
+              - 4/3
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - optgroup
+              - Portrait
+        -
+          __assoc__:
+            -
+              - label
+              - 1/1
+            -
+              - value
+              - 1/1
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 9/8
+            -
+              - value
+              - 9/8
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+handle: heroStory
+name: 'Hero Story'
+sortOrder: 1

@@ -1,0 +1,43 @@
+field: a9f00eab-73ff-4659-9b15-ee56aa8c8531
+fieldLayouts:
+  4d8dcd2d-8f16-4f6f-b909-b20e71a87697:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: bf824c9f-3678-4076-873d-8c65e6053024
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  bf824c9f-3678-4076-873d-8c65e6053024:
+    contentColumnType: string
+    fieldGroup: null
+    handle: story
+    instructions: ''
+    name: Story
+    searchable: true
+    settings:
+      allowSelfRelations: false
+      limit: ''
+      localizeRelations: false
+      selectionLabel: ''
+      showSiteMenu: true
+      source: null
+      sources:
+        - 'section:5e15a326-1e20-4d38-86df-6f2bc3183b14'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+handle: relatedStory
+name: 'Related Story'
+sortOrder: 6

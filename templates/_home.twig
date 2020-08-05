@@ -1,0 +1,25 @@
+{% extends "_layouts/_generic" %}
+
+{#  TODO:
+    ! user routing
+
+    ! Collect exclude IDs 
+    ! Make story carousel, story gallery to accept multiple entries source (becomes tab)
+    ! Add Multicategory widget (tatler reference)
+    ! Add Trending widget (allure.com reference)
+    ! Add Newsletter widget
+    ! Add Spa Locator widget
+    ! Add Subscription widget
+    ! Add Print issue widget
+
+    !text-underline using background style (https://codyhouse.co/ds/components/app/text-background-effects)
+#}
+
+{% block main %}
+
+{% embed "_pages/_layout-builder" with {'matrix': entry.layoutBuilder} %}
+    {% block content %}   
+    {{ sprig('_categories/_story-filter') }}
+    {% endblock %}
+{% endembed %}
+{% endblock %}

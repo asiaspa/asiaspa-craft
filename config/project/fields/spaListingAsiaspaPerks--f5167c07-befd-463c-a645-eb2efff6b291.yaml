@@ -1,0 +1,19 @@
+contentColumnType: string
+fieldGroup: a7b23ced-f8be-4c09-bba7-84b5e4552f75
+handle: spaListingAsiaspaPerks
+instructions: ''
+name: 'AsiaSpa Perks'
+searchable: false
+settings:
+  allowSelfRelations: ''
+  limit: '1'
+  localizeRelations: false
+  selectionLabel: ''
+  source: null
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: ''
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: barrelstrength\sproutforms\fields\Forms

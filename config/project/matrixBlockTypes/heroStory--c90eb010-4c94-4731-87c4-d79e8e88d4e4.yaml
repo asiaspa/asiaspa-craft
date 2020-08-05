@@ -1,0 +1,141 @@
+field: 51f3339a-5e27-4c65-95cf-82085401023d
+fieldLayouts:
+  ef873075-ae9d-4a39-9d7c-d59dae6d7e5e:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: d1bc7bc8-60ab-4092-bde6-fe9bfd39aeb4
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: 06103948-5d90-4da7-a1bb-5a4800a9693b
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+        name: Content
+        sortOrder: 1
+fields:
+  06103948-5d90-4da7-a1bb-5a4800a9693b:
+    contentColumnType: string
+    fieldGroup: null
+    handle: aspectRatio
+    instructions: '[depreciated]'
+    name: 'Aspect Ratio'
+    searchable: false
+    settings:
+      optgroups: true
+      options:
+        -
+          __assoc__:
+            -
+              - optgroup
+              - Landscape
+        -
+          __assoc__:
+            -
+              - label
+              - '16:9'
+            -
+              - value
+              - 9/16
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - '9:8'
+            -
+              - value
+              - 8/9
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - '4:3'
+            -
+              - value
+              - 3/4
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - optgroup
+              - Protrait
+        -
+          __assoc__:
+            -
+              - label
+              - '1:1'
+            -
+              - value
+              - 1/1
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - '3:4'
+            -
+              - value
+              - 4/3
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - '8:9'
+            -
+              - value
+              - 9/8
+            -
+              - default
+              - '1'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+  d1bc7bc8-60ab-4092-bde6-fe9bfd39aeb4:
+    contentColumnType: string
+    fieldGroup: null
+    handle: heroStory
+    instructions: ''
+    name: 'Hero Story'
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      limit: '1'
+      localizeRelations: false
+      selectionLabel: ''
+      showSiteMenu: true
+      source: null
+      sources:
+        - 'section:5e15a326-1e20-4d38-86df-6f2bc3183b14'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+handle: heroStory
+name: 'Hero Story'
+sortOrder: 1

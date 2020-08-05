@@ -1,0 +1,58 @@
+fieldLayouts:
+  3d150a4d-85a8-49bf-b1c1-c5b849896e95:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: f799212b-683d-49c2-acf2-8adcb685edd6
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: eed72883-2977-4af8-8576-1fe442ba702c
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: 5e6710fa-b19d-4c11-bc85-252d5e99f99f
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 633c8e4a-27cc-4fb1-b2e0-4660aee60c3d
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Logo
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: b20b94fe-9217-4e07-9dba-be1318298ea6
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Color
+        sortOrder: 2
+handle: website
+name: Website

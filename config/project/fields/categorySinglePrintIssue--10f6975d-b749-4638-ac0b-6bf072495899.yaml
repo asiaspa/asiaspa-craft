@@ -1,0 +1,23 @@
+contentColumnType: string
+fieldGroup: 6ebe0a75-3257-417d-8c9b-c712a8dbf9c9
+handle: categorySinglePrintIssue
+instructions: ''
+name: 'Category - Single Print Issue'
+searchable: true
+settings:
+  allowLimit: false
+  allowMultipleSources: false
+  allowSelfRelations: false
+  branchLimit: '1'
+  limit: null
+  localizeRelations: false
+  selectionLabel: ''
+  showSiteMenu: true
+  source: 'group:747402aa-105d-41d3-ace6-9e3de98971a4'
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Categories

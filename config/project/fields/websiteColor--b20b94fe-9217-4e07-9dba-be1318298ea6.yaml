@@ -1,0 +1,14 @@
+contentColumnType: string
+fieldGroup: f6ccb015-3533-491f-8f9c-775d16605b99
+handle: websiteColor
+instructions: ''
+name: 'Website Color'
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_websitecolor}}'
+  maxBlocks: ''
+  minBlocks: '1'
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix
