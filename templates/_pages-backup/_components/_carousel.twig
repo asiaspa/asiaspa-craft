@@ -1,0 +1,65 @@
+{# ------------------- Query ------------------- #}
+
+{# get entries Ids from source #}
+{% set source = block.entrySource[0] %}
+{% set entriesIds = [] %}
+{% switch source.type.handle %}
+    {% case 'category' or 'tag' or 'printIssue' %}
+    {% set section = 'story' %}
+
+    {# if no pinned stories #}
+    {% if not source.pinnedStories | length %}
+    {% set sourceEntriesIds = craft.entries
+        .relatedTo(source.category)
+        .limit(8 - entriesIds | length )
+        .ids
+    %}
+
+    {% else %}
+    {# get pinned entries ID #}
+    {% for entry in source.pinnedStories %}
+    {% set entriesIds = entriesIds | merge([entry.id]) %}
+    {% endfor %}
+    
+    {# get extra entries ID #}
+    {% set entriesIdsString = entriesIds | join(', not ') %}
+    {% set sourceEntriesIds = craft.entries
+        .relatedTo(source.category)
+        .id('and, not ' ~ entriesIdsString)
+        .limit(8 - entriesIds | length )
+        .ids
+    %}
+    {% endif %}
+    
+    {# merge to get 12 entries #}
+    {% set entriesIds = entriesIds | merge(sourceEntriesIds) %}
+
+{% endswitch %}
+
+{% set entriesQuery = craft.entries
+    .section(section)
+    .id(entriesIds)
+    .with([
+        'assetUploadSingleImage',
+        'categorySingleCategory',
+        'categorySinglePrintIssue',
+        'userSingleUser',
+        'author'
+    ])
+%}
+{% set entries = entriesQuery.all() %}
+
+{# ------------------- Content ------------------- #}
+
+{% if block.level == 1 %}
+{% embed "_containers/_container" with {'breakpoint':'lg'} %}
+{% block content %}
+    <div class="mt-16 mb-8">
+        <h3 class="inline-block py-2 font-serif text-2xl border-b-2 lg:text-3xl border-primary-500">{{ block.contentHeading }}</h3>
+    </div>
+{% endblock %}
+{% endembed %}
+{% endif %}
+
+
+{% include '_components/_carousel' with {'entries':entries} %}

@@ -1,0 +1,18 @@
+contentColumnType: text
+fieldGroup: f6ccb015-3533-491f-8f9c-775d16605b99
+handle: faviconCode
+instructions: 'Place all the code generated from realfavicongenerator.net here.'
+name: 'Favicon Code'
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '10'
+  multiline: '1'
+  placeholder: '<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">'
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

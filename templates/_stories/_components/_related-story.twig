@@ -1,0 +1,20 @@
+<div class="space-y-2 divide-y divide-gray-300">
+<h3 class="font-serif text-xl italic font-medium">You might be interested in: </h3>
+{% for entry in block.story %}
+    <div class="flex pt-2 space-x-4">   
+        <div class="w-3/12 md:w-2/12" >
+            {% include "_components/_imager" with { image : entry.storyHeroImage[0] ?? '', w : 8, h : 9 } %}
+        </div>
+        <div class="self-center w-9/12 md:w-10/12">
+            <div class="flex space-x-2">
+                {% include "_components/_category-tag" with { category : entry.storyCategory } %}
+                {% include "_components/_category-tag" with { category : entry.storyPrintIssue } %}
+            </div>
+            <h4 class="font-serif leading-tight text-md sm:text-lg lg:text-xl">{{ entry.title }}</h4> 
+            {# <hr class="block w-24 my-2 border-t-2 lg:my-6 border-primary-500" /> #}
+            {# <p class="text-gray-900 lg:text-sm">{{ entry.storyStandfirst ?? "This should be a Standfirst" }}</p> #}
+            {# <p class="block mt-2 text-sm text-gray-700">{{ entry.postDate | date("M d, Y") }}, by {{ entry.author.fullName }}</p> #}
+        </div>
+    </div>
+{% endfor %}
+</div>

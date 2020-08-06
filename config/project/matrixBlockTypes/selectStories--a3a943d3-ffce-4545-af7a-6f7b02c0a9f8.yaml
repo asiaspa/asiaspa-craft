@@ -1,0 +1,97 @@
+field: 96fa1892-cf99-4484-bcfb-1a89207fbf00
+fieldLayouts:
+  765b93a3-8395-4ec3-b290-4d3c8193cd54:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: ac7d8efd-c7ef-4401-b07c-ab2bfa5e76ca
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: 49e67a6b-a10a-4eb0-b924-37d4f354b767
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+        name: Content
+        sortOrder: 1
+fields:
+  49e67a6b-a10a-4eb0-b924-37d4f354b767:
+    contentColumnType: string
+    fieldGroup: null
+    handle: fillEntries
+    instructions: ''
+    name: 'Fill Entries'
+    searchable: false
+    settings:
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - 'Fill Nothing'
+            -
+              - value
+              - fillNothing
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Fill Latest'
+            -
+              - value
+              - fillLatest
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Fill Trending'
+            -
+              - value
+              - fillTrending
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\RadioButtons
+  ac7d8efd-c7ef-4401-b07c-ab2bfa5e76ca:
+    contentColumnType: string
+    fieldGroup: null
+    handle: pinnedStories
+    instructions: ''
+    name: 'Pinned Stories'
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      limit: '12'
+      localizeRelations: false
+      selectionLabel: ''
+      showSiteMenu: true
+      source: null
+      sources:
+        - 'section:5e15a326-1e20-4d38-86df-6f2bc3183b14'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+handle: selectStories
+name: 'Select Stories'
+sortOrder: 4

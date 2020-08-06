@@ -1,0 +1,29 @@
+contentColumnType: string
+fieldGroup: f6ccb015-3533-491f-8f9c-775d16605b99
+handle: websiteLogoSimple
+instructions: ''
+name: 'Website Logo Simple'
+searchable: false
+settings:
+  allowSelfRelations: false
+  allowedKinds: null
+  defaultUploadLocationSource: 'volume:883ab42c-10f1-4e32-a559-61f23e4e3775'
+  defaultUploadLocationSubpath: ''
+  limit: '1'
+  localizeRelations: false
+  restrictFiles: ''
+  selectionLabel: ''
+  showSiteMenu: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  singleUploadLocationSource: 'volume:f6b6a0a2-13b7-4a96-892e-19f882d66b20'
+  singleUploadLocationSubpath: branding
+  source: null
+  sources: '*'
+  targetSiteId: null
+  useSingleFolder: true
+  validateRelatedElements: false
+  viewMode: large
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Assets

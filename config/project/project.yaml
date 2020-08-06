@@ -1,0 +1,229 @@
+dateModified: 1596685755
+email:
+  fromEmail: asiaspa.dev@gmail.com
+  fromName: AsiaSpa
+  replyToEmail: asiaspa.dev@gmail.com
+  template: ''
+  transportSettings:
+    password: Lufad49q
+    timeout: '10'
+    username: asiaspa.dev@gmail.com
+  transportType: craft\mail\transportadapters\Gmail
+plugins:
+  ad-wizard:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.1.0
+  assetrev:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  async-queue:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  aws-s3:
+    edition: standard
+    enabled: true
+    schemaVersion: '1.2'
+  blitz-recommendations:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  calendarize:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.3.0
+  cp-field-inspect:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  elements-panel:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  feed-me:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.1.2
+  google-cloud:
+    edition: standard
+    enabled: true
+    schemaVersion: '1.1'
+  http2-server-push:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  imagehotspots:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  imager-x:
+    edition: pro
+    enabled: true
+    schemaVersion: 3.0.0
+  logs:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0
+  mailchimp-subscribe:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+  matrixmate:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  minify:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  navigate:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.4.0
+  navigation:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.17
+  neo:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.8.0
+  oembed:
+    enabled: true
+    schemaVersion: 1.0.1
+  queue-manager:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
+  redactor-split:
+    enabled: true
+    schemaVersion: 1.0.0
+  retour:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.9
+  searchit:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.4
+  seomatic:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.9
+  sidebar-toggle:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+  simplemap:
+    enabled: true
+    schemaVersion: 3.4.2
+  smart-map:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.2.3
+  smith:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  splash:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0
+    settings:
+      authorField: ''
+      authorUrlField: ''
+      colorField: ''
+      volume: '8'
+  spoon:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.5.0
+  sprig:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  sprout-forms:
+    enabled: true
+    schemaVersion: 3.11.8
+    settings:
+      captchaSettings:
+        barrelstrength\sproutforms\captchas\DuplicateCaptcha:
+          enabled: 0
+        barrelstrength\sproutforms\captchas\HoneypotCaptcha:
+          enabled: 0
+          honeypotFieldName: sprout-forms-hc
+          honeypotScreenReaderMessage: 'Leave this field blank'
+        barrelstrength\sproutforms\captchas\JavascriptCaptcha:
+          enabled: 1
+      cleanupProbability: 1000
+      defaultSection: entries
+      enableEditFormEntryViaFrontEnd: false
+      enableSaveData: true
+      enableSaveDataDefaultValue: true
+      formTemplateId: barrelstrength\sproutforms\formtemplates\AccessibleTemplates
+      pluginNameOverride: ''
+      saveSpamToDatabase: false
+      showNotificationsTab: true
+      showReportsTab: true
+      spamLimit: 500
+      spamRedirectBehavior: redirectAsNormal
+      trackRemoteIp: false
+  super-table:
+    enabled: true
+    schemaVersion: 2.2.1
+  support:
+    edition: standard
+    enabled: true
+    schemaVersion: 0.1.0
+  templatecomments:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  twig-profiler:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  twigpack:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  venveo-bulk-edit:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.1.0
+  views-work:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  workflow:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.1.5
+    settings:
+      editorNotesRequired: '1'
+      editorNotifications: '1'
+      editorNotificationsOptions: ''
+      editorUserGroup: 023d7185-42c7-404d-80de-c5204d985b64
+      enabledSections:
+        - 5e15a326-1e20-4d38-86df-6f2bc3183b14
+        - c2929640-5995-4a0b-b490-deb3c54ab6d4
+      publisherNotesRequired: '1'
+      publisherNotifications: '1'
+      publisherUserGroup: c56709c7-c3a2-404c-8fba-15175819c9d4
+      reviewerNotifications: '1'
+      reviewerUserGroups:
+        -
+          - c56709c7-c3a2-404c-8fba-15175819c9d4
+      selectedPublishers: '*'
+system:
+  edition: pro
+  live: true
+  name: $SITE_NAME
+  schemaVersion: 3.5.12
+  timeZone: Asia/Hong_Kong

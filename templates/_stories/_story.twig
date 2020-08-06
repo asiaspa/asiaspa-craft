@@ -1,0 +1,78 @@
+{% extends "_layouts/_generic" %}
+
+{#  TODO:
+    ! print issue highlight
+#}
+
+{# ------------------- main ------------------- #}
+{% block main %}
+
+{% do 
+    craft.app.elements.eagerLoadElements(className(entry), [entry], [
+        'assetUploadSingleImage',
+        'cateogrySingleCategory',
+        'categorySinglePrintIssue',
+        'byline',
+        'byline.photo',
+        'author',
+        'author.photo'
+]) %}
+
+{# main section #}
+<article class="flex flex-col md:flex-row">
+    <section class="w-full md:h-screen md:sticky md:w-1/2" style="top:64px">
+        <div id="target" class="md:p-edge">
+            {% include "_components/_imager" with { image : entry.assetUploadSingleImage[0] ?? ''} %}
+        </div>
+    </section>
+    <section class="w-full h-full md:w-1/2 ">
+        <div class="py-16 md:py-32 px-edge">
+            <div class="flex space-x-6">
+                {% include "_components/_category-tag" with { category : entry.categorySingleCategory } %}
+                {% include "_components/_category-tag" with { category : entry.categorySinglePrintIssue } %}
+            </div>
+            <a href="{{ entry.url }}">
+                <h1 class="font-serif text-3xl font-medium leading-tight tracking-tight lg:text-4xl xl:text-5xl ">{{ entry.title }}</h1>
+                <hr class="block w-32 my-6 border-t-2 border-primary-500" />
+                <h2 class="mb-4 text-lg lg:text-xl color-gray-900">{{ entry.contentStandfirst }}</h2>
+            </a>
+            {% include "_components/_user" with { user : entry.userSingleUser[0] ?? entry.author, date : entry.postDate } %}
+        </div>
+        {% include "_stories/_story-builder" with {'matrix': entry.storyBuilder} %}
+    </section>
+    {# {% include "_stories/_story-hero" with { 'entry': entry } %} #}
+    
+
+    
+    {# <section class="max-w-screen-md mx-auto ">
+        <div class="px-6">
+            <div class="self-center w-full py-12 lg:w-3/4">
+                <div class="flex space-x-2">
+                    {% include "_components/_category-tag" with { category : entry.storyCategory } %}
+                    {% include "_components/_category-tag" with { category : entry.storyPrintIssue } %}
+                </div>
+                <h1 class="mt-4 font-serif text-3xl font-medium leading-tight tracking-tight lg:text-4xl">
+                    {{ entry.title }}</h1>
+                <h2 class="mt-4 mb-4 text-xl color-gray-900">{{ entry.storyStandfirst }}</h2>
+                {% include "_components/_user" with { user: entry.author, date: entry.postDate } %}
+            </div>
+    </section>
+    <section class="max-w-screen-lg mx-auto">
+        {% include "_components/_imager" with { image : entry.storyHeroImage[0] } %}
+    </section> #}
+
+
+  
+
+{# track #}
+</article>
+<section class="h-64 bg-gray-100">space</section>
+
+
+<div class="invisible hidden">{{ entry | views_work_image }}</div>
+
+
+
+
+
+{% endblock %}

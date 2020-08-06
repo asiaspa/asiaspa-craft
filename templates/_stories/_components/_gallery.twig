@@ -1,0 +1,10 @@
+<div class="flex flex-wrap">
+	{% set rows = block.gallery.all()  %}
+	{% for row in rows %}
+	{% set aspect = row.image.one().width*300 / (row.image.one().height )  %} 
+	<div class="relative m-1" style="width:{{ aspect }}px ;flex-grow:{{ aspect }}">
+		{% include "_components/_imager" with { image : row.image.one() } %}
+	</div>
+	{% endfor %}
+	{# <div class="m-1 " style="flex-grow: 999999999; min-width: 200px;"></div> #}
+</div>

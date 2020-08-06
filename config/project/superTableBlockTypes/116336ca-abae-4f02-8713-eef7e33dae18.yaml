@@ -1,0 +1,82 @@
+field: 8cecd4b6-d87b-4fdd-a8fe-8591c158612a
+fieldLayouts:
+  39dcc0c9-d6f8-41f8-a1cf-0522682f33d0:
+    tabs:
+      -
+        fields:
+          6029fdd9-fddc-4a87-984c-a3a00ad087ce:
+            required: '0'
+            sortOrder: '0'
+          94e3fe9e-d935-4f1e-a761-48928f522fe6:
+            required: '0'
+            sortOrder: '1'
+          ad371891-7a09-4d0e-a67b-653b3ad44d9e:
+            required: '0'
+            sortOrder: '2'
+        name: Content
+        sortOrder: '1'
+fields:
+  6029fdd9-fddc-4a87-984c-a3a00ad087ce:
+    contentColumnType: string
+    fieldGroup: null
+    handle: heroImage
+    instructions: ''
+    name: 'Hero Image'
+    searchable: '0'
+    settings:
+      allowSelfRelations: false
+      allowedKinds: null
+      defaultUploadLocationSource: 'volume:883ab42c-10f1-4e32-a559-61f23e4e3775'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: ''
+      selectionLabel: ''
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:883ab42c-10f1-4e32-a559-61f23e4e3775'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources:
+        - 'volume:883ab42c-10f1-4e32-a559-61f23e4e3775'
+        - 'volume:9f801622-9f26-40c9-9126-ac4041a76554'
+      targetSiteId: null
+      useSingleFolder: false
+      validateRelatedElements: false
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  94e3fe9e-d935-4f1e-a761-48928f522fe6:
+    contentColumnType: text
+    fieldGroup: null
+    handle: description
+    instructions: ''
+    name: Description
+    searchable: '1'
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  ad371891-7a09-4d0e-a67b-653b3ad44d9e:
+    contentColumnType: string(255)
+    fieldGroup: null
+    handle: hyperlink
+    instructions: ''
+    name: Hyperlink
+    searchable: '1'
+    settings:
+      maxLength: '255'
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Url

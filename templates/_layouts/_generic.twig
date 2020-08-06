@@ -1,0 +1,19 @@
+{% extends "_layouts/_html/_web" %}
+
+{% block bodyClass %}bg-primary-100{% endblock %}
+
+{% block layout %}
+{# ------------------- Header ------------------- #}
+{% block beginBody %}{% endblock %}
+{% include "_components/_header" only %}
+
+{# ------------------- Main  ------------------- #}
+<main>
+    {% block main %}
+    {% endblock %}
+</main>
+
+{# ------------------- Footer ------------------- #}
+{% include "_components/_footer" only%}
+
+{% endblock %}

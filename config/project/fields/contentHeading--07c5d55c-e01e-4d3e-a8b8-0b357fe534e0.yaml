@@ -1,0 +1,18 @@
+contentColumnType: text
+fieldGroup: 6ebe0a75-3257-417d-8c9b-c712a8dbf9c9
+handle: contentHeading
+instructions: ''
+name: 'Content - Heading'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: ''
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

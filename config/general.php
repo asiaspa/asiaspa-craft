@@ -8,42 +8,44 @@
  * @see craft\config\GeneralConfig
  */
 
+use craft\helpers\App;
+
 return [
-    '*' => [
-        // force local -> dev ,staging, production
-        'useProjectConfigFile' => true,       
-        // 'allowAdminChanges' => false,
-
-        'defaultWeekStartDay' => 0,
-        'enableCsrfProtection' => true,
-        'omitScriptNameInUrls' => true,
-        'cpTrigger' => 'admin',
-        // SAME between local & hyperlane server
-        'securityKey' => getenv('SECURITY_KEY'),
-
-        // options
-        // cache forever
-        'cacheDuration' => 0,
-        'siteName' => 'AsiaSpa',
-
-        // Hyperlane defined aliases
-        'aliases' => [
-            '@assetBasePath' => getenv('ASSET_BASE_PATH'),
-            '@assetPublicPath' => getenv('ASSET_PUBLIC_PATH')
-        ]
+    'aliases' => [
+        '@assetsUrl' => App::env('ASSETS_URL'),
+        '@imgixDefaultUrl' => App::env('IMGIX_DEFAULT_URL'),
+        '@imgixExternalUrl' => App::env('IMGIX_EXTERNAL_URL'),
+        '@web' => App::env('SITE_URL'),
+        '@webroot' => App::env('WEB_ROOT_PATH'),
     ],
-
-    'staging' => [
-        'siteUrl' => null,
-        'devMode' => true,
-        // 'allowAdminChanges' => true
+    'useProjectConfigFile' => (bool)App::env('USE_PROJECT_CONFIG_FILE'),
+    'allowUpdates' => (bool)App::env('ALLOW_UPDATES'),
+    'allowAdminChanges' => (bool)App::env('ALLOW_ADMIN_CHANGES'),
+    'backupOnUpdate' => (bool)App::env('BACKUP_ON_UPDATE'),
+    'devMode' => (bool)App::env('DEV_MODE'),
+    'enableTemplateCaching' => (bool)App::env('ENABLE_TEMPLATE_CACHING'),
+    'isSystemLive' => (bool)App::env('IS_SYSTEM_LIVE'),
+    'resourceBasePath' => App::env('WEB_ROOT_PATH').'/cpresources',
+    'runQueueAutomatically' => (bool)App::env('RUN_QUEUE_AUTOMATICALLY'),
+    'securityKey' => App::env('SECURITY_KEY'),
+    'siteUrl' => App::env('SITE_URL'),
+    'siteName' => App::Env('SITE_NAME'),
+        
+    // Craft config settings from constants
+    'cacheDuration' => false,
+    'defaultSearchTermOptions' => [
+        'subLeft' => true,
+        'subRight' => true,
     ],
+    'defaultTokenDuration' => 'P2W',
+    'enableCsrfProtection' => true,
+    // 'errorTemplatePrefix' => 'errors/',
+    // 'generateTransformsBeforePageLoad' => true,
+    'maxCachedCloudImageSize' => 3000,
+    'maxUploadFileSize' => '100M',
+    'omitScriptNameInUrls' => true,
+    // 'useEmailAsUsername' => true,
+    'usePathInfo' => true,
 
-
-    'dev' => [
-        'allowAdminChanges' => true,
-        'devMode' => true,
-        'siteUrl' => 'http://asiaspa.test/'
-    ]
 ];
 

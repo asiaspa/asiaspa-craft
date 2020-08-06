@@ -1,25 +1,102 @@
-{% set nodes = craft.navigation.nodes()
-    .handle('megamenu')
-    .level(1)
-    .all()
-%}
+{# TODO: slow rendering time. ~250ms #}
 
-<header class="flex justify-between h-16 bg-gray-100 w-100">
-    <div class="">Asiaspa Logo</div>
+{% set headerNodes = craft.navigate.raw('header ') %}
 
-    <div class="container">
-        <ul class="flex">
-            {% nav node in nodes %}
-                <li class="p-4">
-                    {{ node.link }}
+{% set globalWebsite = craft.globalSets()
+    .handle('website')
+    .with([
+        'websiteLogo',
+        'websiteLogoSimple'
+    ]).one() %}
+
+{# :class="{'sticky': atTop === false } #}
+<header class="sticky top-0 z-50 w-full transition duration-300 bg-white border-b border-primary-300"
+        x-data="{dropdown: false, search: false, atTop: true}"
+        x-on:scroll.window.debounce="atTop = (window.pageYOffset > 1) ? false : true;">
+        
+    <nav class="flex flex-wrap justify-between">
+        {# ------------------- menu logo ------------------- #}
+        <a class="flex flex-shrink-0 w-40 h-16 px-6 py-4 border-none"
+           href="{{ siteUrl }}">
+            {% if globalWebsite.websiteLogo | length and globalWebsite.websiteLogoSimple | length %}
+            <img class="block w-auto h-full"
+                 :class="{'hidden': atTop === false }"
+                 src="{{ rev(globalWebsite.websiteLogo[0].url()) }}" />
+            <img class="hidden block w-auto h-full"
+                 :class="{'hidden': atTop === true }"
+                 src="{{ rev(globalWebsite.websiteLogoSimple[0].url()) }}" />
+            {% else %}
+            <span class="h-8 p-4 text-xl font-semibold tracking-tight">{{ siteName }}</span>
+            {% endif %}
+        </a>
+
+        {# ------------------- menu toggle ------------------- #}
+        <div class="self-center block lg:hidden">
+            <button class="items-center inline-block px-3 py-2 text-black transition duration-300 hover:text-primary-500"
+                    @click="dropdown = false; search = !search">
+                <span x-show="search === false">{% include "_components/_icon" with { 'icon':'icon-zoom' } %}</span>
+                <span x-show="search === true">{% include "_components/_icon" with { 'icon':'icon-e-remove'} %}</span>
+            </button>
+            <button class="items-center inline-block px-3 py-2 text-black transition duration-300 hover:text-primary-500"
+                    @click="dropdown = !dropdown; search = false">
+                <span
+                      x-show="dropdown === false">{% include "_components/_icon" with { 'icon':'icon-menu-8' } %}</span>
+                <span
+                      x-show="dropdown === true">{% include "_components/_icon" with { 'icon':'icon-e-remove' } %}</span>
+            </button>
+        </div>
+
+        {# ------------------- nav list ------------------- #}
+        <div class="absolute items-center flex-grow hidden w-full h-screen mt-16 overflow-hidden transition duration-300 ease-in bg-white opacity-0 lg:bg-transparent lg:h-auto lg:mt-0 lg:relative lg:opacity-100 lg:visible lg:flex lg:w-auto"
+             :class="{'hidden opacity-0': dropdown === false}"
+             @click.away="dropdown = false">
+            <ul class="lg:flex-grow">
+                {% for node in headerNodes %}
+                <li class="lg:inline-block">
+                    <a class="block p-4 text-2xl transition duration-300 lg:text-lg h-min-16 lg:inline-block hover:text-primary-500"
+                       href="{{ node.url }}">{{ node.name }}</a>
                 </li>
-            {% endnav %}
-        </ul>
-    </div>
+                {% endfor %}
+            </ul>
+            <div>
+                <ul class="flex flex-col text-xl lg:flex-row lg:flex-grow">
+                    <li class="self-center hidden lg:inline-block">
+                        <button class="items-center inline-block px-3 py-2 text-black transition duration-300 hover:text-primary-500"
+                                @click="dropdown = false; search = !search">
+                            <span
+                                  x-show="search === false">{% include "_components/_icon" with { 'icon':'icon-zoom' } %}</span>
+                            <span
+                                  x-show="search === true">{% include "_components/_icon" with { 'icon':'icon-e-remove' } %}</span>
+                        </button>
+                    </li>
+                    <li class="border-t lg:border-0 lg:inline-block">
+                        <a class="block p-4 text-2xl transition duration-300 lg:text-xl h-min-16 lg:inline-block hover:text-primary-500"
+                           href="/spa-locator">Spa Locator</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     
-    <ul class="flex">
-        <li><a class="p-4" href="#search">Right hand list</a></li>
-        {# <li><a class="p-4" href="#follow">Follow</a></li> #}
-        {# <li><a class="p-4" href="#spa-locator">Spa Locator</a></li> #}
-    </ul>
+    {# ------------------- search bar ------------------- #}
+    <div class="absolute w-full h-16 bg-gray-100 border-t border-b"
+         x-show="search"
+         @click.away="dropdown = false; search = false">
+        <div class="max-w-screen-sm px-4 mx-auto">
+            <form class="w-full"
+                  action="{{ url('search/results') }}">
+                <div class="flex items-center py-4 ">
+                    <input class="w-full mr-4 text-xl placeholder-gray-700 bg-transparent border-none appearance-none focus:outline-none"
+                           type="text"
+                           placeholder="Search..."
+                           aria-label="Search Keywords">
+                    <button class="flex-shrink-0 "
+                            type="submit">
+                        {% include "_components/_icon" with { 'icon':'icon-zoom' } %}
+                    </button>
+                </div>
+            </form>
+
+        </div>
+    </div>
 </header>

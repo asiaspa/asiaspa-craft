@@ -1,0 +1,68 @@
+field: a9f00eab-73ff-4659-9b15-ee56aa8c8531
+fieldLayouts:
+  70c42221-6e61-4c62-a38e-b35421e0f0ca:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 53acb601-e614-47e3-9992-80f9a317bdfc
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: bbc84bdf-3fc4-49b3-b5d9-3611e0fde58c
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  53acb601-e614-47e3-9992-80f9a317bdfc:
+    contentColumnType: text
+    fieldGroup: null
+    handle: quote
+    instructions: ''
+    name: Quote
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: '1'
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  bbc84bdf-3fc4-49b3-b5d9-3611e0fde58c:
+    contentColumnType: text
+    fieldGroup: null
+    handle: cite
+    instructions: ''
+    name: Cite
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: blockquote
+name: Blockquote
+sortOrder: 8

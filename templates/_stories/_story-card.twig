@@ -1,0 +1,27 @@
+{% if entry | length %}
+    <div class="w-full">
+        <a href="{{ entry.url }}">
+            {% if featured is defined and featured == true %}
+            <div class="hidden md:block">
+                {% include "_components/_imager" with { image : entry.assetUploadSingleImage[0] ?? '', w : 16, h : 9 } %}
+            </div>
+            <div class="md:hidden">
+                {% include "_components/_imager" with { image : entry.assetUploadSingleImage[0] ?? '', w : 8, h : 9 } %}
+            </div>
+            {% else %}
+                {% include "_components/_imager" with { image : entry.assetUploadSingleImage[0] ?? '', w : 8, h : 9 } %}
+            {% endif %}
+        </a>
+        <div class="flex flex-row justify-between mt-3 mb-1">
+            <div class="space-x-2">
+                {% include "_components/_category-tag" with { category : entry.categorySingleCategory } %}
+                {% include "_components/_category-tag" with { category : entry.categorySinglePrintIssue } %}
+            </div>
+            <a class="self-center text-sm text-gray-500" href="/user/{{ entry.author.username }}"> {{ 'By '|t ~ entry.author.fullName }}</a>
+        </div>
+        <a href="{{ entry.url }}">
+            <p class="font-serif text-xl font-medium leading-tight hover:underline lg:text-2xl">{{ entry.title }}</p>
+            <p class="mt-2 text-gray-500 text-md">{{ entry.contentStandfirst }}</p>
+        </a>
+    </div>
+{% endif %}

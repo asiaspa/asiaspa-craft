@@ -1,0 +1,71 @@
+field: 43a5129a-290b-49c4-a6f1-84ec574575a7
+fieldLayouts:
+  dcaf9e96-7dbf-4535-b8f8-0749dfb64dfd:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: a6416edd-fd15-4f85-b6e9-f22ee90d8eae
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: e23d1f13-581e-43ee-8a46-ffd4f66d5185
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+        name: Content
+        sortOrder: 1
+fields:
+  a6416edd-fd15-4f85-b6e9-f22ee90d8eae:
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: 'If empty, default to "Trending"'
+    name: Heading
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: Trending
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  e23d1f13-581e-43ee-8a46-ffd4f66d5185:
+    contentColumnType: string
+    fieldGroup: null
+    handle: pinnedStory
+    instructions: 'You can pin stories on this tab. These stories will be shown first.'
+    name: 'Pinned Story'
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      limit: '12'
+      localizeRelations: false
+      selectionLabel: ''
+      showSiteMenu: true
+      source: null
+      sources:
+        - 'section:5e15a326-1e20-4d38-86df-6f2bc3183b14'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+handle: trending
+name: Trending
+sortOrder: 1

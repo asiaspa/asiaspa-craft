@@ -1,0 +1,105 @@
+field: 29eed9a9-ee36-411c-8358-86eb329e2587
+fieldLayouts:
+  071b9161-281f-4462-95ec-766555cded73:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: f5fd9eb8-0f27-4c8f-a058-5c57e093262e
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 6e775281-3848-44a2-9a0f-7a1eb55a821a
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  6e775281-3848-44a2-9a0f-7a1eb55a821a:
+    contentColumnType: string
+    fieldGroup: null
+    handle: service
+    instructions: ''
+    name: Service
+    searchable: false
+    settings:
+      columns:
+        __assoc__:
+          -
+            - d80728da-6be0-4fc7-b6c8-f7b1fee32dd0
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - 0cbc45a9-ba30-422e-b2c8-5fe9d240396b
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - 3f9c9cdf-4080-4130-b5c5-5e9eee1e8acd
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - d5a14fa3-b422-4bf6-8a6f-732aa3d6550a
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - 3d276877-74f7-4380-8cea-bf3835912f05
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+      contentTable: '{{%stc_33_service}}'
+      fieldLayout: row
+      maxRows: ''
+      minRows: ''
+      placeholderKey: null
+      propagationMethod: all
+      selectionLabel: ''
+      staticField: ''
+    translationKeyFormat: null
+    translationMethod: site
+    type: verbb\supertable\fields\SuperTableField
+  f5fd9eb8-0f27-4c8f-a058-5c57e093262e:
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: ''
+    name: Heading
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: tab
+name: Tab
+sortOrder: 1

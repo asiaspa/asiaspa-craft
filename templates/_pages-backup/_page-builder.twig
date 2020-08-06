@@ -1,0 +1,52 @@
+{# ! with: ['matrixField.blockType:assetsField']
+
+ #}
+{# ------------------- Eager Loading ------------------- #}
+{# 
+{% do 
+    craft.app.elements.eagerLoadElements(className(entry), [entry], [
+]) %} #}
+
+{% set blocksQuery = element
+    .with([
+        'heroStory', 
+        'heroStory:entrySingleStory.assetUploadSingleImage',
+        'heroStory:entrySingleStory.categorySingleCategory',
+        'heroStory:entrySingleStory.categorySinglePrintIssue',
+        'heroStory:entrySingleStory.userSingleUser',
+        'heroStory:entrySingleStory.userSingleUser.photo',
+        'heroStory:entrySingleStory.author',
+        'heroStory:entrySingleStory.author.photo',
+
+        'carousel',
+        'carousel:entrySource',
+        'carousel:entrySource.category:category',
+        'carousel:entrySource.category:pinnedStories',
+        'carousel:entrySource.tag:tag',
+        'carousel:entrySource.tag:pinnedStories',
+        'carousel:entrySource.printIssue:printIssue',
+        'carousel:entrySource.printIssue:pinnedStories',
+
+        'tab:',
+        'tab:carousel:entrySource',
+        'tab:carousel:entrySource.category:category',
+        'tab:carousel:entrySource.category:pinnedStories',
+        'tab:carousel:entrySource.tag:tag',
+        'tab:carousel:entrySource.tag:pinnedStories',
+        'tab:carousel:entrySource.printIssue:printIssue',
+        'tab:carousel:entrySource.printIssue:pinnedStories',
+
+    ])
+    .level(1)
+%}
+
+{% set blocks = blocksQuery.all() %}
+
+{% for block in blocks %}
+    {% do block.useMemoized(element) %}
+{% endfor %}
+{# ------------------- Content ------------------- #}
+{% for block in blocks if block.level == 1 %}
+    {% do block.useMemoized(element) %}
+        {% include "_pages/_components/_" ~ block.type | lower with {'block':block} %}
+{% endfor %}

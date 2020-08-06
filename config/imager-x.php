@@ -6,39 +6,39 @@
  * @see https://imager-x.spacecat.ninja/configuration.html#general-configuration
  */
 
+use craft\helpers\App;
+
  return [
-     '*'  => [
-        'transformer' => 'imgix',
-        'useForCpThumbs' => true,
-        'fillTransform' => 160,
-        'imgixApiKey' => getenv('IMGIX_API_KEY'),
-        'imgixConfig' => [
-            'default' => [
-                'domain' => 'asiaspa.imgix.net',
-                'useHttps' => true,
-                'signKey' => 'rR8eGFaeXzU763Yx',
-                'sourceIsWebProxy' => false,
-                'useCloudSourcePath' => true,
-                'getExternalImageDimensions' => true,
-                'defaultParams' => ['auto'=>'compress,format', 'q'=>80]
-            ],
-            'external' => [
-                'domain' => 'asiaspa-external.imgix.net',
-                'useHttps' => true,
-                'signKey' => 'RvgwbW4JdG4uKPCK',
-                'sourceIsWebProxy' => true,
-                'useCloudSourcePath' => true,
-                'getExternalImageDimensions' => true,
-                'defaultParams' => ['auto'=>'compress,format', 'q'=>80],
-            ]
+    'transformer' => 'imgix',
+    'useForCpThumbs' => true,
+    'fillTransform' => 160,
+    'imgixApiKey' => App::env('IMGIX_API_KEY'),
+    'imgixConfig' => [
+        'default' => [
+            'domain' => App::env('IMGIX_DEFAULT_URL'),
+            'useHttps' => true,
+            'signKey' => App::env('IMGIX_DEFAULT_SIGNKEY'),
+            'sourceIsWebProxy' => false,
+            'useCloudSourcePath' => true,
+            'getExternalImageDimensions' => true,
+            'defaultParams' => ['auto'=>'compress,format', 'q'=>80]
         ],
-        'storage' => 'gcs',
-        'storageConfig' => [
-            'gcs' => [
-                'keyFile' => 'https://storage.googleapis.com/asiaspa/site/key/scenic-treat-283413-0ed11faff327.json',
-                'bucket' => 'asiaspa',
-                'folder' => 'trasnforms'
-            ]
+        'external' => [
+            'domain' => App::env('IMGIX_EXTERNAL_URL'),
+            'useHttps' => true,
+            'signKey' => App::env('IMGIX_EXTERNAL_SIGNKEY'),
+            'sourceIsWebProxy' => true,
+            'useCloudSourcePath' => true,
+            'getExternalImageDimensions' => true,
+            'defaultParams' => ['auto'=>'compress,format', 'q'=>80],
+        ]
+    ],
+    'storage' => 'gcs',
+    'storageConfig' => [
+        'gcs' => [
+            'keyFile' => App::env('GCS_KEY_URL'),
+            'bucket' =>  App::env('GCS_BUCKET'),
+            'folder' => 'trasnforms'
         ]
     ]
 ];

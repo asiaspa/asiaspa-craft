@@ -1,9 +1,49 @@
 @tailwind base;
 @tailwind components;
 
+// vendor
+@import "_vendor/_lazysizes";
+@import "_vendor/_swiper-vars";
+@import "_vendor/_swiper";
 
-@import "_component/_layout";
+// breakpoint spacing
+:root {
+    --edge-padding: 24px; // default edge = 24px;
+    --margin-screen-sm: 0px;
+    --margin-screen-md: 0px;
+    --margin-screen-lg: 0px;
+    --margin-screen-xl: 0px;
+    --true-vw: 1vw; // default
+}
 
+@screen md {
+    :root {
+        --edge-padding: 64px;
+    }
+}
 
+@screen sm {
+    :root {
+        --margin-screen-sm: calc((var(--true-vw, 1vw)*100 - theme('screens.sm')) / 2);
+    }
+}
+
+@screen md {
+    :root {
+        --margin-screen-md: calc((var(--true-vw, 1vw)*100 - theme('screens.md')) / 2);
+    }
+}
+
+@screen lg {
+    :root {
+        --margin-screen-lg: calc((var(--true-vw, 1vw)*100 - theme('screens.lg')) / 2);
+    }
+}
+
+@screen xl {
+    :root {
+        --margin-screen-xl: calc((var(--true-vw, 1vw)*100 - theme('screens.xl')) / 2);
+    }
+}
 
 @tailwind utilities;

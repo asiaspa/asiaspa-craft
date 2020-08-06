@@ -1,0 +1,45 @@
+fieldLayouts:
+  b7f48349-bffa-4b71-9c6f-cc8e70a41d05:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            autofocus: false
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            required: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: googleCloudAd
+hasUrls: true
+name: 'Google Cloud / Ad'
+settings:
+  bucket: asiaspa
+  bucketSelectionMode: choose
+  expires: ''
+  keyFileContents: '{   "type": "service_account",   "project_id": "scenic-treat-283413",   "private_key_id": "0ed11faff3273c4af70a1258dd29d33e71d2215d",   "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQClg4Btx+I7SCNg\n5S4yFnEmFfEn6EELR/6kMd4ZYkcMTvactGgGlW5wUJuetY9JYR92OatqF/NUvEML\nrddzhSM3u8hDIOB9vqLcZnHAGmCXIBT9svCiSHy4pEu5yrJrYG61ZEzsUnCkGCyG\nUA0TfaVZLjGENV2FXYgOYQexChavcZ3/GUjVlOWvYXOd8OLedmUmlg5VmT+fsqBf\ndbsIhT4jq6p52I9O/NqpSzNFESBMB4la+iGAqDgdd6wao5W+2SPRX/rOM1LKOMAj\nEBGK4EkiWz1zvv1wmorSPt1YGQj5kQ5cqZZvZFCVMpd7Ro6RYzleQED6yK/iVbGq\n75Gbg41VAgMBAAECggEABA0xRF6veMSGCy3pANRgTi6c0d2DVBed0d6foW7wrsoz\nCrh20GxxgOHUQWEP4hu0xbPZMJZoADPAj2VgwATrDQb1esEwBZv4SB1g3PM4WJKy\nONibv9k25l0tNl3SGsNISnvrTyCgfb/SvTHx8/9wH/v7vdEBmk1lEncJFWoaDo7X\nEDb47hpuv1wy2qPpXHsp+DO4PNs7zhyCh36bgo8P+sGk58x3tDzW9J0qEcXZdyIc\nWTRhL0ifL2PWsczi9pwFWPQUIoCe8jVC+uM3dtcEmz6+0EcFsfI2rh2D2UMIB1uq\nUTL/SjeBXhZA7u2/PEMK6BcPFaDrLaWWyYQTVQzoYQKBgQDiJKlmb3QeeSuBRipp\n+q1VuqbH3pUlpJWBWAUuZotyPoxIoeL/TRN6Kg2555kGhNzEo6dQNdeHgiIpw93j\nRBR1m4rDj5ahrWuRi1/Xem0sp7dQxGVFOnCeunGSnve1W+iG2NsYFgpENTge31eJ\nJ4lojkS3HDRWNz+0GMFJ2+Lp9QKBgQC7XaSPr8Ei125czkxGzM1qpAkOcQlXe3t8\n8FvsZEm87Hu2B3QQ6YeGpKRAckRR85jMkJcDnMnVRHsdn84nDPFJ9e82bwrjKrsz\nHdxLIT91AHfzs+J7Dx9AGONHfMom1R61GHEGCMxpO8ZyMmzSG7veRoNjx9biaiK6\nLFptY28Z4QKBgBisA0dHtZV1hseNzibN0Idf275GjGMU97Kq1bXgPipypH9wGgHc\neNmFKQY1PD631BYn/KMFnMQN8Ig59EVNMiY6mAMJ8VcmQmwYlpY9pxeOHLPVGW9a\nFttaX/WtHj1ND6tWkWCpVulmHP9RQo2WIKmli92mWBdn461UXhIeyTzZAoGBAIiI\ns5tVOst162FLn7/UDDiSslrIukL6o8EmsgWwCx/VwEykX8rXMkBGh77CxdBmT8l5\n7+HdBiMYFRNAWYyRXN9FjPzArFFf2SxlrRs+biyHm+GGCxsbqO0fdbepUvI7SXY0\nCmCYVsS0n2amIjB1r1BJWAOFI6y4JPg/y+F8nQBhAoGADC881aqI3dPsiWCUXSxT\ncAgQPAaguy8v+alJuip934RAyk1ooLdJXqN+jTzl61IzvwDiq2L9ZpP0yW5rrU1p\nU8gEgqdsIL/P3YK61u2Z1/ycaCRZfY/zobPwZe0+mv8SIkU2QH1xKdB1FBBFWf2S\n8ABhbhqZy1gfEjC+HseJEQE=\n-----END PRIVATE KEY-----\n",   "client_email": "asiaspa-craft-cms@scenic-treat-283413.iam.gserviceaccount.com",   "client_id": "110632895405925616567",   "auth_uri": "https://accounts.google.com/o/oauth2/auth",   "token_uri": "https://oauth2.googleapis.com/token",   "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",   "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/asiaspa-craft-cms%40scenic-treat-283413.iam.gserviceaccount.com" }'
+  projectId: scenic-treat-283413
+  subfolder: ad
+sortOrder: 3
+type: craft\googlecloud\Volume
+url: 'http://storage.googleapis.com/asiaspa/'

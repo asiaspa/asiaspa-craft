@@ -1,0 +1,45 @@
+field: 43a5129a-290b-49c4-a6f1-84ec574575a7
+fieldLayouts:
+  a0c694c9-4d85-44ba-882e-bc6b6a756689:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 39b4ec20-241e-4f04-9f0b-ff60e2c1d561
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  39b4ec20-241e-4f04-9f0b-ff60e2c1d561:
+    contentColumnType: string
+    fieldGroup: null
+    handle: printIssue
+    instructions: ''
+    name: 'Print Issue'
+    searchable: false
+    settings:
+      allowLimit: false
+      allowMultipleSources: false
+      allowSelfRelations: false
+      branchLimit: '1'
+      limit: null
+      localizeRelations: false
+      selectionLabel: ''
+      showSiteMenu: true
+      source: 'group:747402aa-105d-41d3-ace6-9e3de98971a4'
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Categories
+handle: printIssue
+name: 'Print Issue'
+sortOrder: 4

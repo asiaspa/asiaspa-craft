@@ -1,0 +1,264 @@
+field: b20b94fe-9217-4e07-9dba-be1318298ea6
+fieldLayouts:
+  6ef18964-86cc-4b71-b638-eb01372afa49:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 96e28dc1-ce23-4586-a674-3e7ea6176889
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 25
+          -
+            fieldUid: 44480320-c1b2-41b0-85fc-d49a41c38c6b
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 25
+          -
+            fieldUid: 25e442f5-5400-45c2-abd0-5fccb07acc70
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 25
+          -
+            fieldUid: 1366aeb8-a1f4-4c39-9790-e0e45187a2f2
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 25
+          -
+            fieldUid: 927cc457-da05-40ad-8643-3324c8ff70a4
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 25
+          -
+            fieldUid: 48a910fa-a44f-4adb-a759-1a267f7c19a9
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 25
+          -
+            fieldUid: cf70a9e9-5ba9-4a62-9475-e3f62ee58893
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 25
+          -
+            fieldUid: 5dfd645e-c8b5-49ed-b701-6501b516c53c
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 25
+          -
+            fieldUid: 953a334f-0e1f-4aee-9137-30c883e3023c
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 25
+          -
+            fieldUid: b8a2cf31-3ba5-4142-a3f3-28bf81696abf
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 25
+          -
+            fieldUid: 32294f1b-3308-41c3-b71f-4dd7de985396
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 25
+          -
+            fieldUid: a8cd0c50-0e8a-43e8-9c0d-34f81ee9d0df
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 25
+        name: Content
+        sortOrder: 1
+fields:
+  1366aeb8-a1f4-4c39-9790-e0e45187a2f2:
+    contentColumnType: string(7)
+    fieldGroup: null
+    handle: colorPrimary700
+    instructions: ''
+    name: 'Color Primary 700'
+    searchable: false
+    settings:
+      defaultColor: '#987550'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Color
+  25e442f5-5400-45c2-abd0-5fccb07acc70:
+    contentColumnType: string(7)
+    fieldGroup: null
+    handle: colorPrimary500
+    instructions: ''
+    name: 'Color Primary 500'
+    searchable: false
+    settings:
+      defaultColor: '#dfac76'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Color
+  32294f1b-3308-41c3-b71f-4dd7de985396:
+    contentColumnType: string(7)
+    fieldGroup: null
+    handle: colorWhite
+    instructions: ''
+    name: 'Color White'
+    searchable: false
+    settings:
+      defaultColor: '#ffffff'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Color
+  44480320-c1b2-41b0-85fc-d49a41c38c6b:
+    contentColumnType: string(7)
+    fieldGroup: null
+    handle: colorPrimary300
+    instructions: ''
+    name: 'Color Primary 300'
+    searchable: false
+    settings:
+      defaultColor: '#eed4b8'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Color
+  48a910fa-a44f-4adb-a759-1a267f7c19a9:
+    contentColumnType: string(7)
+    fieldGroup: null
+    handle: colorGray100
+    instructions: ''
+    name: 'Color Gray 100'
+    searchable: false
+    settings:
+      defaultColor: '#f4f4f4'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Color
+  5dfd645e-c8b5-49ed-b701-6501b516c53c:
+    contentColumnType: string(7)
+    fieldGroup: null
+    handle: colorGray500
+    instructions: ''
+    name: 'Color Gray 500'
+    searchable: false
+    settings:
+      defaultColor: '#8d8d8d'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Color
+  927cc457-da05-40ad-8643-3324c8ff70a4:
+    contentColumnType: string(7)
+    fieldGroup: null
+    handle: colorPrimary900
+    instructions: ''
+    name: 'Color Primary 900'
+    searchable: false
+    settings:
+      defaultColor: '#2d2218'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Color
+  953a334f-0e1f-4aee-9137-30c883e3023c:
+    contentColumnType: string(7)
+    fieldGroup: null
+    handle: colorGray700
+    instructions: ''
+    name: 'Color Gray 700'
+    searchable: false
+    settings:
+      defaultColor: '#525252'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Color
+  96e28dc1-ce23-4586-a674-3e7ea6176889:
+    contentColumnType: string(7)
+    fieldGroup: null
+    handle: colorPrimary100
+    instructions: ''
+    name: 'Color Primary 100'
+    searchable: false
+    settings:
+      defaultColor: '#f7f5f3'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Color
+  a8cd0c50-0e8a-43e8-9c0d-34f81ee9d0df:
+    contentColumnType: string(7)
+    fieldGroup: null
+    handle: colorBlack
+    instructions: ''
+    name: 'Color Black'
+    searchable: false
+    settings:
+      defaultColor: '#000000'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Color
+  b8a2cf31-3ba5-4142-a3f3-28bf81696abf:
+    contentColumnType: string(7)
+    fieldGroup: null
+    handle: colorGray900
+    instructions: ''
+    name: 'Color Gray 900'
+    searchable: false
+    settings:
+      defaultColor: '#262626'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Color
+  cf70a9e9-5ba9-4a62-9475-e3f62ee58893:
+    contentColumnType: string(7)
+    fieldGroup: null
+    handle: colorGray300
+    instructions: ''
+    name: 'Color Gray 300'
+    searchable: false
+    settings:
+      defaultColor: '#c6c6c6'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Color
+handle: colorPalette
+name: 'Color Palette'
+sortOrder: 1

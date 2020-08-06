@@ -1,0 +1,14 @@
+contentColumnType: string
+fieldGroup: 6ebe0a75-3257-417d-8c9b-c712a8dbf9c9
+handle: tabRichTextEditor
+instructions: ''
+name: 'Tab - Rich Text Editor'
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_tabrichtexteditor}}'
+  maxBlocks: ''
+  minBlocks: ''
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

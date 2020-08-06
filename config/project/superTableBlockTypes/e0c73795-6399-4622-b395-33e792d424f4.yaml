@@ -1,0 +1,132 @@
+field: 6e775281-3848-44a2-9a0f-7a1eb55a821a
+fieldLayouts:
+  68191372-cd70-4d53-8ebd-b4b751694b76:
+    tabs:
+      -
+        fields:
+          0cbc45a9-ba30-422e-b2c8-5fe9d240396b:
+            required: '0'
+            sortOrder: '1'
+          3d276877-74f7-4380-8cea-bf3835912f05:
+            required: '0'
+            sortOrder: '4'
+          3f9c9cdf-4080-4130-b5c5-5e9eee1e8acd:
+            required: '0'
+            sortOrder: '2'
+          d5a14fa3-b422-4bf6-8a6f-732aa3d6550a:
+            required: '0'
+            sortOrder: '3'
+          d80728da-6be0-4fc7-b6c8-f7b1fee32dd0:
+            required: '0'
+            sortOrder: '0'
+        name: Content
+        sortOrder: '1'
+fields:
+  0cbc45a9-ba30-422e-b2c8-5fe9d240396b:
+    contentColumnType: text
+    fieldGroup: null
+    handle: label
+    instructions: ''
+    name: Label
+    searchable: '1'
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  3d276877-74f7-4380-8cea-bf3835912f05:
+    contentColumnType: text
+    fieldGroup: null
+    handle: duration
+    instructions: ''
+    name: Duration
+    searchable: '1'
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  3f9c9cdf-4080-4130-b5c5-5e9eee1e8acd:
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: ''
+    name: Heading
+    searchable: '1'
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  d5a14fa3-b422-4bf6-8a6f-732aa3d6550a:
+    contentColumnType: text
+    fieldGroup: null
+    handle: description
+    instructions: ''
+    name: Description
+    searchable: '1'
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  d80728da-6be0-4fc7-b6c8-f7b1fee32dd0:
+    contentColumnType: string
+    fieldGroup: null
+    handle: heroImage
+    instructions: ''
+    name: 'Hero Image'
+    searchable: '1'
+    settings:
+      allowSelfRelations: false
+      allowedKinds: null
+      defaultUploadLocationSource: 'volume:883ab42c-10f1-4e32-a559-61f23e4e3775'
+      defaultUploadLocationSubpath: ''
+      limit: ''
+      localizeRelations: false
+      restrictFiles: ''
+      selectionLabel: ''
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:883ab42c-10f1-4e32-a559-61f23e4e3775'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources:
+        - 'volume:883ab42c-10f1-4e32-a559-61f23e4e3775'
+        - 'volume:9f801622-9f26-40c9-9126-ac4041a76554'
+      targetSiteId: null
+      useSingleFolder: false
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets

@@ -1,0 +1,18 @@
+contentColumnType: string(400)
+fieldGroup: 6ebe0a75-3257-417d-8c9b-c712a8dbf9c9
+handle: contentStandfirst
+instructions: ''
+name: 'Content - Standfirst'
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: 100
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: ''
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

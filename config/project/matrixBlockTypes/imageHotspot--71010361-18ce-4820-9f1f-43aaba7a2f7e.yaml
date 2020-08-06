@@ -1,0 +1,97 @@
+field: a9f00eab-73ff-4659-9b15-ee56aa8c8531
+fieldLayouts:
+  6518309d-a111-4e78-ac02-5c33cf31b883:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: cde9c3d3-af0b-4065-8ef3-07f36866213e
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: f6d10ba5-aed1-46fb-a735-ed888cebd848
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  cde9c3d3-af0b-4065-8ef3-07f36866213e:
+    contentColumnType: string
+    fieldGroup: null
+    handle: image
+    instructions: ''
+    name: Image
+    searchable: true
+    settings:
+      allowSelfRelations: false
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:883ab42c-10f1-4e32-a559-61f23e4e3775'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: '1'
+      selectionLabel: ''
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:4a49b85a-e6f1-4ee3-8085-cbfb50f5ce42'
+      singleUploadLocationSubpath: 'story/{owner.owner.slug}'
+      source: null
+      sources:
+        - 'volume:883ab42c-10f1-4e32-a559-61f23e4e3775'
+      targetSiteId: null
+      useSingleFolder: false
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  f6d10ba5-aed1-46fb-a735-ed888cebd848:
+    contentColumnType: string
+    fieldGroup: null
+    handle: hotspots
+    instructions: ''
+    name: Hotspots
+    searchable: true
+    settings:
+      columns:
+        __assoc__:
+          -
+            - 12adf5d8-5a0b-46bf-b44b-cf947479c4e2
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - bbf16101-636a-4cbb-8c9b-2857a3ae00cc
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+      contentTable: '{{%stc_5_hotspots}}'
+      fieldLayout: row
+      maxRows: ''
+      minRows: ''
+      placeholderKey: null
+      propagationMethod: all
+      selectionLabel: ''
+      staticField: ''
+    translationKeyFormat: null
+    translationMethod: site
+    type: verbb\supertable\fields\SuperTableField
+handle: imageHotspot
+name: 'Image Hotspot'
+sortOrder: 3
