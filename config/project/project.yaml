@@ -1,4 +1,4 @@
-dateModified: 1596677358
+dateModified: 1596685755
 email:
   fromEmail: asiaspa.dev@gmail.com
   fromName: AsiaSpa
@@ -42,6 +42,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  feed-me:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.1.2
   google-cloud:
     edition: standard
     enabled: true

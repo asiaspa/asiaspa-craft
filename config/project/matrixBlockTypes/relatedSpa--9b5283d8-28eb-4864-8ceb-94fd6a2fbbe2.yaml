@@ -1,11 +1,11 @@
 field: a9f00eab-73ff-4659-9b15-ee56aa8c8531
 fieldLayouts:
-  845ec257-1307-44e2-87d5-472a2700c0af:
+  945a31be-1a8c-4cdf-b538-9298b39bfbb3:
     tabs:
       -
         elements:
           -
-            fieldUid: ce34e0fc-9997-4c71-9a50-5f97486011bc
+            fieldUid: fa457786-fbdd-4345-bfcd-d42df49c2645
             instructions: null
             label: null
             required: false
@@ -16,13 +16,13 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  ce34e0fc-9997-4c71-9a50-5f97486011bc:
+  fa457786-fbdd-4345-bfcd-d42df49c2645:
     contentColumnType: string
     fieldGroup: null
-    handle: spaListing
+    handle: spa
     instructions: ''
-    name: 'Spa Listing'
-    searchable: true
+    name: Spa
+    searchable: false
     settings:
       allowSelfRelations: false
       limit: ''
@@ -38,6 +38,6 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Entries
-handle: relatedSpaListing
-name: 'Related Spa Listing'
+handle: relatedSpa
+name: 'Related Spa'
 sortOrder: 7

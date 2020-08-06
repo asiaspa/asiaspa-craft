@@ -44,24 +44,24 @@ fieldLayouts:
         sortOrder: 1
 fields:
   8b5a104d-c67c-4030-9843-11ad9a3a1012:
-    contentColumnType: text
+    contentColumnType: string
     fieldGroup: null
     handle: calendar
     instructions: ''
     name: Calendar
     searchable: false
     settings:
-      byteLimit: null
-      charLimit: null
-      code: ''
-      columnType: null
-      initialRows: '4'
-      multiline: ''
-      placeholder: ''
-      uiMode: normal
+      allDay: false
+      endDate: null
+      endRepeat: null
+      endRepeatDate: null
+      months: null
+      repeatType: null
+      repeats: false
+      startDate: null
     translationKeyFormat: null
     translationMethod: none
-    type: craft\fields\PlainText
+    type: unionco\calendarize\fields\CalendarizeField
   a7e7adde-f2bd-4f58-bac0-14f5b6c2a643:
     contentColumnType: text
     fieldGroup: null
@@ -70,17 +70,32 @@ fields:
     name: Location
     searchable: false
     settings:
-      byteLimit: null
-      charLimit: null
-      code: ''
-      columnType: null
-      initialRows: '4'
-      multiline: ''
-      placeholder: ''
-      uiMode: normal
+      boundary: '""'
+      boundaryRestrictionNELat: null
+      boundaryRestrictionNELng: null
+      boundaryRestrictionSWLat: null
+      boundaryRestrictionSWLng: null
+      country: null
+      countryRestriction: null
+      height: null
+      hideAddress: ''
+      hideLatLng: null
+      hideMap: ''
+      hideSearch: ''
+      lat: 51.272154
+      lng: 0.514951
+      maxZoom: '18'
+      minZoom: '3'
+      showCurrentLocation: ''
+      showLatLng: ''
+      showW3WField: false
+      showW3WGrid: false
+      size: normal
+      typeRestriction: null
+      zoom: 15
     translationKeyFormat: null
     translationMethod: none
-    type: craft\fields\PlainText
+    type: ether\simplemap\fields\MapField
   b24aec88-d28a-42d9-9eea-87887195be9f:
     contentColumnType: text
     fieldGroup: null
@@ -94,7 +109,7 @@ fields:
       code: ''
       columnType: null
       initialRows: '4'
-      multiline: ''
+      multiline: '1'
       placeholder: ''
       uiMode: normal
     translationKeyFormat: null

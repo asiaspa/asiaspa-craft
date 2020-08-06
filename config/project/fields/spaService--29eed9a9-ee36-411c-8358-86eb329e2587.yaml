@@ -1,11 +1,11 @@
 contentColumnType: string
-fieldGroup: 3c7968d3-974b-4238-bfe2-0dfcefb8ce1e
-handle: storyBuilder
+fieldGroup: a7b23ced-f8be-4c09-bba7-84b5e4552f75
+handle: spaService
 instructions: ''
-name: 'Story Builder'
-searchable: true
+name: 'Spa - Service'
+searchable: false
 settings:
-  contentTable: '{{%matrixcontent_storybuilder}}'
+  contentTable: '{{%matrixcontent_spaservice}}'
   maxBlocks: ''
   minBlocks: ''
   propagationMethod: all

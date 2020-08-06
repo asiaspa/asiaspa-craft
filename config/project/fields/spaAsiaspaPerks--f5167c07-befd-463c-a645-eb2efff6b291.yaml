@@ -1,8 +1,8 @@
 contentColumnType: string
 fieldGroup: a7b23ced-f8be-4c09-bba7-84b5e4552f75
-handle: spaListingAsiaspaPerks
+handle: spaAsiaspaPerks
 instructions: ''
-name: 'AsiaSpa Perks'
+name: 'Spa AsiaSpa Perks'
 searchable: false
 settings:
   allowSelfRelations: false

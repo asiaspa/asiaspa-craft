@@ -29,10 +29,46 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 7b2762c9-7ef7-4196-b8ec-6d1fa1aecf71
+            fieldUid: b357d9dd-f6da-4d5f-b00f-8769518e1b39
+            instructions: ''
+            label: 'Short Descritpion'
+            required: ''
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 89fd36a1-4dcd-4072-a783-e98a64d62423
+            instructions: 'First image will be used as hero image as well'
+            label: Gallery
+            required: ''
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: d4b1abfe-50b2-47a3-a92f-4db8524d4dca
             instructions: null
             label: null
-            required: '0'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 25ae8551-db14-40c5-9631-e1352ff4b706
+            instructions: ''
+            label: Detail
+            required: ''
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 29eed9a9-ee36-411c-8358-86eb329e2587
+            instructions: ''
+            label: Service
+            required: ''
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
@@ -41,6 +77,24 @@ fieldLayouts:
         sortOrder: 1
       -
         elements:
+          -
+            fieldUid: 02d38f73-db56-4fab-a533-0dc7400f81fe
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: aed6ce2b-3af8-4e8a-9062-06b6cc84313b
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
           -
             fieldUid: 7dd727bb-67c2-4ab1-adc7-4cd11a80231b
             instructions: null
@@ -74,14 +128,23 @@ fieldLayouts:
         elements:
           -
             fieldUid: f5167c07-befd-463c-a645-eb2efff6b291
-            instructions: null
-            label: null
-            required: '0'
+            instructions: ''
+            label: 'Form for Asiaspa Perks'
+            required: ''
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
-        name: 'Asiaspa Perks'
+          -
+            fieldUid: 0c465ef4-3419-4c61-b509-3493ed02e3f3
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Relation
         sortOrder: 3
       -
         elements:

@@ -1,11 +1,11 @@
-field: a9f00eab-73ff-4659-9b15-ee56aa8c8531
+field: 25ae8551-db14-40c5-9631-e1352ff4b706
 fieldLayouts:
-  70c42221-6e61-4c62-a38e-b35421e0f0ca:
+  01d15c76-08f7-4225-8da1-5648e1571c7e:
     tabs:
       -
         elements:
           -
-            fieldUid: 53acb601-e614-47e3-9992-80f9a317bdfc
+            fieldUid: 8ddcc4b4-4584-4798-8624-b30e0f70754f
             instructions: null
             label: null
             required: false
@@ -14,7 +14,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: bbc84bdf-3fc4-49b3-b5d9-3611e0fde58c
+            fieldUid: bcbdc31e-52e0-4ce6-9bc8-ff7f558ead0f
             instructions: null
             label: null
             required: false
@@ -25,31 +25,12 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  53acb601-e614-47e3-9992-80f9a317bdfc:
+  8ddcc4b4-4584-4798-8624-b30e0f70754f:
     contentColumnType: text
     fieldGroup: null
-    handle: quote
+    handle: heading
     instructions: ''
-    name: Quote
-    searchable: false
-    settings:
-      byteLimit: null
-      charLimit: null
-      code: ''
-      columnType: null
-      initialRows: '4'
-      multiline: '1'
-      placeholder: ''
-      uiMode: normal
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\PlainText
-  bbc84bdf-3fc4-49b3-b5d9-3611e0fde58c:
-    contentColumnType: text
-    fieldGroup: null
-    handle: cite
-    instructions: ''
-    name: Cite
+    name: Heading
     searchable: false
     settings:
       byteLimit: null
@@ -63,6 +44,31 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-handle: blockquote
-name: Blockquote
-sortOrder: 8
+  bcbdc31e-52e0-4ce6-9bc8-ff7f558ead0f:
+    contentColumnType: text
+    fieldGroup: null
+    handle: richTextEditor
+    instructions: ''
+    name: 'Rich Text Editor'
+    searchable: false
+    settings:
+      availableTransforms: '*'
+      availableVolumes:
+        - 883ab42c-10f1-4e32-a559-61f23e4e3775
+        - 9f801622-9f26-40c9-9126-ac4041a76554
+      cleanupHtml: true
+      columnType: text
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: ''
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+handle: tab
+name: Tab
+sortOrder: 1

@@ -1,11 +1,11 @@
 contentColumnType: string
-fieldGroup: 3c7968d3-974b-4238-bfe2-0dfcefb8ce1e
-handle: storyBuilder
+fieldGroup: 6ebe0a75-3257-417d-8c9b-c712a8dbf9c9
+handle: tabRichTextEditor
 instructions: ''
-name: 'Story Builder'
-searchable: true
+name: 'Tab - Rich Text Editor'
+searchable: false
 settings:
-  contentTable: '{{%matrixcontent_storybuilder}}'
+  contentTable: '{{%matrixcontent_tabrichtexteditor}}'
   maxBlocks: ''
   minBlocks: ''
   propagationMethod: all

@@ -8,6 +8,7 @@
     "clubstudioltd/craft-asset-rev": "6.0.2",
     "craftcms/aws-s3": "1.2.9",
     "craftcms/cms": "^3.5.0-rc5",
+    "craftcms/feed-me": "4.2.3",
     "craftcms/google-cloud": "^1.4",
     "craftcms/redactor": "^2.6",
     "doublesecretagency/craft-adwizard": "3.1.0",

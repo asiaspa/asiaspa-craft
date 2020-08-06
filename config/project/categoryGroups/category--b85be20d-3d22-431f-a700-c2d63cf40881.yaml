@@ -39,19 +39,6 @@ fieldLayouts:
             width: 100
         name: 'Tab 1'
         sortOrder: 1
-      -
-        elements:
-          -
-            fieldUid: 68752c4e-cc58-4744-a1c4-20778860741f
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-        name: SEO
-        sortOrder: 2
 handle: category
 name: Category
 siteSettings:

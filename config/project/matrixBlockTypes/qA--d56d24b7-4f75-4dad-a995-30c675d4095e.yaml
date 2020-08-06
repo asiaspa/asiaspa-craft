@@ -40,7 +40,7 @@ fields:
                 -
                   - width
                   - ''
-      contentTable: '{{%stc_40_qa}}'
+      contentTable: '{{%stc_11_qa}}'
       fieldLayout: row
       maxRows: ''
       minRows: ''
