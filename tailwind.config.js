@@ -31,8 +31,7 @@ module.exports = {
                 '900': 'var(--color-gray-900)'
             },
             black: 'var(--color-black)',
-            white: 'var(--color-white)',
-            text-primary-300: '',
+            white: 'var(--color-white)'
         },
         extend: {
             padding: {

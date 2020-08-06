@@ -1,9 +1,0 @@
-handle: footer
-instructions: ''
-maxNodes: ''
-name: Footer
-propagateNodes: true
-sortOrder: 2
-structure:
-  maxLevels: '1'
-  uid: 3dec0b36-d100-4c2c-9411-14aff4f1f467

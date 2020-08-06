@@ -1,7 +1,9 @@
 import lazySizes from 'lazysizes';
 import 'lazysizes/plugins/blur-up/ls.blur-up';
 import 'alpinejs';
-import sal from 'sal.js'
+import "intersection-observer";
+import scrollama from "scrollama";
+import sal from 'sal.js';
 import Swiper from 'swiper/bundle'; // import Swiper styles
 
 sal();

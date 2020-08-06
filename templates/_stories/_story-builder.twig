@@ -3,34 +3,20 @@
 ]) %}
 
 
-{% embed "_containers/_container" %}
-{% block content %}
-    <div class="flex flex-row items-start px-6 pt-16 lg:space-x-12">
-        <div class="sticky hidden lg:w-1/2 lg:block" 
-                style="top:80px">
-            <div id="trigger-target" x-html="innerhtml"></div>
-        </div>
-        <div class="w-full space-y-16 lg:w-1/2">
-            {% for block in matrix %}
-                {% include  "_stories/_components/_" ~ block.type | lower with {'block':block} %}
-            {% endfor %}
+{% for block in matrix %}
+    {% include  "_stories/_components/_" ~ block.type | lower with {'block':block} %}
+{% endfor %}
 
-            {# {% switch block.type %}
-            {% case 'gallery' %}
-            {% include '_story/_components/_trigger' with { type: 'gallery'} %}
-            {% case 'embed' %}
-            {% include '_story/_components/_trigger' with { type: 'embed'} %}
-            {% case 'relatedStory' %}
-            {% include '_story/_components/_trigger' with { type: 'related-story' } %}
-            {% case 'richTextEditor' %}
-            {% include '_story/_components/_rich-text-editor' %}
-            {% case 'imageHotspot' %}
-            {% include '_story/_components/_image-hotspot' %}
-            {% endswitch %} #}
-        </div>
-    </div>
-{% endblock %}
-{% endembed %}
-
-
-
+{# {% switch block.type %}
+{% case 'gallery' %}
+{% include '_story/_components/_trigger' with { type: 'gallery'} %}
+{% case 'embed' %}
+{% include '_story/_components/_trigger' with { type: 'embed'} %}
+{% case 'relatedStory' %}
+{% include '_story/_components/_trigger' with { type: 'related-story' } %}
+{% case 'richTextEditor' %}
+{% include '_story/_components/_rich-text-editor' %}
+{% case 'imageHotspot' %}
+{% include '_story/_components/_image-hotspot' %}
+{% endswitch %} #}
+ 

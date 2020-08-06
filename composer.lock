@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f50407318e9edc3ce4ac97a03ec5bfa3",
+    "content-hash": "931eee3829c8bf18669de3a57cf61961",
     "packages": [
         {
             "name": "aelvan/mailchimp-subscribe",
@@ -893,64 +893,6 @@
                 "performance"
             ],
             "time": "2020-06-04T11:16:35+00:00"
-        },
-        {
-            "name": "cpliakas/git-wrapper",
-            "version": "v3.0.2",
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/cpliakas/git-wrapper/zipball/d118ce6a31ff09ae830872ebe9f60eef79c770a3",
-                "reference": "d118ce6a31ff09ae830872ebe9f60eef79c770a3",
-                "shasum": ""
-            },
-            "require": {
-                "nette/utils": "^3.0",
-                "php": "^7.2",
-                "symfony/event-dispatcher": "^4.4|^5.0",
-                "symfony/process": "^4.4|^5.0"
-            },
-            "require-dev": {
-                "phpstan/phpstan": "^0.12.4",
-                "phpstan/phpstan-phpunit": "^0.12",
-                "phpunit/phpunit": "^8.5",
-                "psr/log": "^1.1",
-                "rector/rector": "^0.6.7",
-                "symfony/filesystem": "^4.4|^5.0",
-                "symplify/changelog-linker": "^7.2",
-                "symplify/easy-coding-standard": "^7.2",
-                "symplify/phpstan-extensions": "^7.2",
-                "tracy/tracy": "^2.7"
-            },
-            "suggest": {
-                "monolog/monolog": "Enables logging of executed git commands"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "GitWrapper\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Chris Pliakas",
-                    "email": "opensource@chrispliakas.com"
-                },
-                {
-                    "name": "Tomas Votruba",
-                    "email": "tomas.vot@gmail.com"
-                }
-            ],
-            "description": "A PHP wrapper around the Git command line utility.",
-            "keywords": [
-                "cli",
-                "git",
-                "git wrapper"
-            ],
-            "time": "2020-02-04T08:42:22+00:00"
         },
         {
             "name": "craftcms/aws-s3",
@@ -4088,79 +4030,6 @@
             "time": "2020-08-04T19:12:46+00:00"
         },
         {
-            "name": "nette/utils",
-            "version": "v3.1.2",
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/nette/utils/zipball/488f58378bba71767e7831c83f9e0fa808bf83b9",
-                "reference": "488f58378bba71767e7831c83f9e0fa808bf83b9",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.1"
-            },
-            "require-dev": {
-                "nette/tester": "~2.0",
-                "phpstan/phpstan": "^0.12",
-                "tracy/tracy": "^2.3"
-            },
-            "suggest": {
-                "ext-gd": "to use Image",
-                "ext-iconv": "to use Strings::webalize(), toAscii(), chr() and reverse()",
-                "ext-intl": "to use Strings::webalize(), toAscii(), normalize() and compare()",
-                "ext-json": "to use Nette\\Utils\\Json",
-                "ext-mbstring": "to use Strings::lower() etc...",
-                "ext-tokenizer": "to use Nette\\Utils\\Reflection::getUseStatements()",
-                "ext-xml": "to use Strings::length() etc. when mbstring is not available"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.1-dev"
-                }
-            },
-            "autoload": {
-                "classmap": [
-                    "src/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause",
-                "GPL-2.0-only",
-                "GPL-3.0-only"
-            ],
-            "authors": [
-                {
-                    "name": "David Grudl",
-                    "homepage": "https://davidgrudl.com"
-                },
-                {
-                    "name": "Nette Community",
-                    "homepage": "https://nette.org/contributors"
-                }
-            ],
-            "description": "🛠 Nette Utils: lightweight utilities for string & array manipulation, image handling, safe JSON encoding/decoding, validation, slug or strong password generating etc.",
-            "homepage": "https://nette.org",
-            "keywords": [
-                "array",
-                "core",
-                "datetime",
-                "images",
-                "json",
-                "nette",
-                "paginator",
-                "password",
-                "slugify",
-                "string",
-                "unicode",
-                "utf-8",
-                "utility",
-                "validation"
-            ],
-            "time": "2020-05-27T09:58:51+00:00"
-        },
-        {
             "name": "nystudio107/craft-minify",
             "version": "1.2.10",
             "dist": {
@@ -5039,47 +4908,6 @@
             "time": "2017-02-14T16:28:37+00:00"
         },
         {
-            "name": "psr/event-dispatcher",
-            "version": "1.0.0",
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/event-dispatcher/zipball/dbefd12671e8a14ec7f180cab83036ed26714bb0",
-                "reference": "dbefd12671e8a14ec7f180cab83036ed26714bb0",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.2.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Psr\\EventDispatcher\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "PHP-FIG",
-                    "homepage": "http://www.php-fig.org/"
-                }
-            ],
-            "description": "Standard interfaces for event handling.",
-            "keywords": [
-                "events",
-                "psr",
-                "psr-14"
-            ],
-            "time": "2019-01-08T18:20:26+00:00"
-        },
-        {
             "name": "psr/http-message",
             "version": "1.0.1",
             "dist": {
@@ -5209,60 +5037,6 @@
             "time": "2017-10-23T01:57:42+00:00"
         },
         {
-            "name": "putyourlightson/craft-blitz",
-            "version": "3.6.6",
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/putyourlightson/craft-blitz/zipball/c591742724e837383ff1768039e1461c6e3f9213",
-                "reference": "c591742724e837383ff1768039e1461c6e3f9213",
-                "shasum": ""
-            },
-            "require": {
-                "cpliakas/git-wrapper": "^1.7.0 || ^2.2.0 || ^3.0.0",
-                "craftcms/cms": "^3.2.1",
-                "ext-json": "*",
-                "putyourlightson/craft-log-to-file": "^1.1.0"
-            },
-            "type": "craft-plugin",
-            "extra": {
-                "name": "Blitz",
-                "handle": "blitz",
-                "developer": "PutYourLightsOn",
-                "developerUrl": "https://putyourlightson.com/",
-                "documentationUrl": "https://putyourlightson.com/plugins/blitz",
-                "changelogUrl": "https://raw.githubusercontent.com/putyourlightson/craft-blitz/v3/CHANGELOG.md",
-                "class": "putyourlightson\\blitz\\Blitz",
-                "schemaVersion": "3.6.6",
-                "hasCpSettings": true
-            },
-            "autoload": {
-                "psr-4": {
-                    "putyourlightson\\blitz\\": "src/"
-                }
-            },
-            "license": [
-                "proprietary"
-            ],
-            "description": "Intelligent static page caching for creating lightning-fast sites.",
-            "homepage": "https://putyourlightson.com/plugins/blitz",
-            "keywords": [
-                "cache",
-                "caching",
-                "cms",
-                "craft",
-                "craftcms",
-                "performance",
-                "plugin",
-                "speed"
-            ],
-            "support": {
-                "docs": "https://putyourlightson.com/plugins/blitz",
-                "source": "https://github.com/putyourlightson/craft-blitz",
-                "issues": "https://github.com/putyourlightson/craft-blitz/issues"
-            },
-            "time": "2020-07-27T08:25:21+00:00"
-        },
-        {
             "name": "putyourlightson/craft-blitz-recommendations",
             "version": "1.1.0",
             "dist": {
@@ -5337,47 +5111,6 @@
                 "issues": "https://github.com/putyourlightson/craft-elements-panel/issues"
             },
             "time": "2020-06-29T07:51:31+00:00"
-        },
-        {
-            "name": "putyourlightson/craft-log-to-file",
-            "version": "1.2.1",
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/putyourlightson/craft-log-to-file/zipball/b357bb2a68749ab8211b36fe9d080384ffad6048",
-                "reference": "b357bb2a68749ab8211b36fe9d080384ffad6048",
-                "shasum": ""
-            },
-            "require": {
-                "craftcms/cms": "^3.0.0",
-                "yiisoft/yii2": "^2.0.0"
-            },
-            "type": "library",
-            "extra": {
-                "name": "Log To File",
-                "developer": "PutYourLightsOn",
-                "developerUrl": "https://putyourlightson.com/",
-                "documentationUrl": "https://github.com/putyourlightson/craft-log-to-file",
-                "changelogUrl": "https://raw.githubusercontent.com/putyourlightson/craft-log-to-file/v1/CHANGELOG.md"
-            },
-            "autoload": {
-                "psr-4": {
-                    "putyourlightson\\logtofile\\": "src/"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "description": "Logs messages to a specific log file for Craft CMS.",
-            "homepage": "https://github.com/putyourlightson/craft-log-to-file",
-            "keywords": [
-                "Craft",
-                "cms",
-                "craftcms",
-                "file",
-                "log",
-                "plugin"
-            ],
-            "time": "2020-07-01T15:10:43+00:00"
         },
         {
             "name": "putyourlightson/craft-sprig",
@@ -6188,51 +5921,6 @@
             "time": "2020-03-16T08:31:04+00:00"
         },
         {
-            "name": "symfony/deprecation-contracts",
-            "version": "v2.1.3",
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/5e20b83385a77593259c9f8beb2c43cd03b2ac14",
-                "reference": "5e20b83385a77593259c9f8beb2c43cd03b2ac14",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.1"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.1-dev"
-                },
-                "thanks": {
-                    "name": "symfony/contracts",
-                    "url": "https://github.com/symfony/contracts"
-                }
-            },
-            "autoload": {
-                "files": [
-                    "function.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Nicolas Grekas",
-                    "email": "p@tchwork.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "A generic function and convention to trigger deprecation notices",
-            "homepage": "https://symfony.com",
-            "time": "2020-06-06T08:49:21+00:00"
-        },
-        {
             "name": "symfony/dom-crawler",
             "version": "v3.4.43",
             "dist": {
@@ -6283,130 +5971,6 @@
             "description": "Symfony DomCrawler Component",
             "homepage": "https://symfony.com",
             "time": "2020-07-16T09:41:49+00:00"
-        },
-        {
-            "name": "symfony/event-dispatcher",
-            "version": "v5.1.3",
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/7827d55911f91c070fc293ea51a06eec80797d76",
-                "reference": "7827d55911f91c070fc293ea51a06eec80797d76",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.2.5",
-                "symfony/deprecation-contracts": "^2.1",
-                "symfony/event-dispatcher-contracts": "^2",
-                "symfony/polyfill-php80": "^1.15"
-            },
-            "conflict": {
-                "symfony/dependency-injection": "<4.4"
-            },
-            "provide": {
-                "psr/event-dispatcher-implementation": "1.0",
-                "symfony/event-dispatcher-implementation": "2.0"
-            },
-            "require-dev": {
-                "psr/log": "~1.0",
-                "symfony/config": "^4.4|^5.0",
-                "symfony/dependency-injection": "^4.4|^5.0",
-                "symfony/expression-language": "^4.4|^5.0",
-                "symfony/http-foundation": "^4.4|^5.0",
-                "symfony/service-contracts": "^1.1|^2",
-                "symfony/stopwatch": "^4.4|^5.0"
-            },
-            "suggest": {
-                "symfony/dependency-injection": "",
-                "symfony/http-kernel": ""
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "5.1-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\EventDispatcher\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony EventDispatcher Component",
-            "homepage": "https://symfony.com",
-            "time": "2020-06-18T18:24:02+00:00"
-        },
-        {
-            "name": "symfony/event-dispatcher-contracts",
-            "version": "v2.1.3",
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/event-dispatcher-contracts/zipball/f6f613d74cfc5a623fc36294d3451eb7fa5a042b",
-                "reference": "f6f613d74cfc5a623fc36294d3451eb7fa5a042b",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.2.5",
-                "psr/event-dispatcher": "^1"
-            },
-            "suggest": {
-                "symfony/event-dispatcher-implementation": ""
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.1-dev"
-                },
-                "thanks": {
-                    "name": "symfony/contracts",
-                    "url": "https://github.com/symfony/contracts"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Contracts\\EventDispatcher\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Nicolas Grekas",
-                    "email": "p@tchwork.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Generic abstractions related to dispatching event",
-            "homepage": "https://symfony.com",
-            "keywords": [
-                "abstractions",
-                "contracts",
-                "decoupling",
-                "interfaces",
-                "interoperability",
-                "standards"
-            ],
-            "time": "2020-07-06T13:23:11+00:00"
         },
         {
             "name": "symfony/filesystem",
@@ -8011,109 +7575,6 @@
             "time": "2020-04-14T23:40:29+00:00"
         },
         {
-            "name": "verbb/field-manager",
-            "version": "2.1.8",
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/verbb/field-manager/zipball/fa53c354869477d367fefbc6c186b0f6ed9874fa",
-                "reference": "fa53c354869477d367fefbc6c186b0f6ed9874fa",
-                "shasum": ""
-            },
-            "require": {
-                "craftcms/cms": "^3.1.0",
-                "verbb/base": "^1.0.2"
-            },
-            "type": "craft-plugin",
-            "extra": {
-                "name": "Field Manager",
-                "handle": "field-manager",
-                "changelogUrl": "https://raw.githubusercontent.com/verbb/field-manager/craft-3/CHANGELOG.md",
-                "class": "verbb\\fieldmanager\\FieldManager"
-            },
-            "autoload": {
-                "psr-4": {
-                    "verbb\\fieldmanager\\": "src/"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Verbb",
-                    "homepage": "https://verbb.io"
-                }
-            ],
-            "description": "Manage your fields and field groups with ease with simple field or group cloning and quicker overall management.",
-            "keywords": [
-                "cms",
-                "craft",
-                "craft-plugin",
-                "craftcms",
-                "field manager"
-            ],
-            "support": {
-                "email": "support@verbb.io",
-                "issues": "https://github.com/verbb/field-manager/issues?state=open",
-                "source": "https://github.com/verbb/field-manager",
-                "docs": "https://github.com/verbb/field-manager",
-                "rss": "https://github.com/verbb/field-manager/commits/v2.atom"
-            },
-            "time": "2020-07-26T13:29:27+00:00"
-        },
-        {
-            "name": "verbb/navigation",
-            "version": "1.3.22",
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/verbb/navigation/zipball/b6d5952f1e2ddd3ea36fdb1735bf77c52aa00ec3",
-                "reference": "b6d5952f1e2ddd3ea36fdb1735bf77c52aa00ec3",
-                "shasum": ""
-            },
-            "require": {
-                "craftcms/cms": "^3.4.0",
-                "verbb/base": "^1.0.2"
-            },
-            "type": "craft-plugin",
-            "extra": {
-                "name": "Navigation",
-                "handle": "navigation",
-                "changelogUrl": "https://raw.githubusercontent.com/verbb/navigation/craft-3/CHANGELOG.md",
-                "class": "verbb\\navigation\\Navigation"
-            },
-            "autoload": {
-                "psr-4": {
-                    "verbb\\navigation\\": "src/"
-                }
-            },
-            "license": [
-                "proprietary"
-            ],
-            "authors": [
-                {
-                    "name": "Verbb",
-                    "homepage": "https://verbb.io"
-                }
-            ],
-            "description": "A Craft CMS plugin to create navigation menus for your site.",
-            "keywords": [
-                "cms",
-                "craft",
-                "craft-plugin",
-                "craftcms",
-                "menu",
-                "navigation"
-            ],
-            "support": {
-                "email": "support@verbb.io",
-                "issues": "https://github.com/verbb/navigation/issues?state=open",
-                "source": "https://github.com/verbb/navigation",
-                "docs": "https://github.com/verbb/navigation",
-                "rss": "https://github.com/verbb/navigation/commits/v2.atom"
-            },
-            "time": "2020-07-22T10:50:39+00:00"
-        },
-        {
             "name": "verbb/smith",
             "version": "1.1.5",
             "dist": {
@@ -9359,6 +8820,51 @@
     ],
     "packages-dev": [
         {
+            "name": "cpliakas/git-wrapper",
+            "version": "v3.0.2",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cpliakas/git-wrapper/zipball/d118ce6a31ff09ae830872ebe9f60eef79c770a3",
+                "reference": "d118ce6a31ff09ae830872ebe9f60eef79c770a3",
+                "shasum": ""
+            },
+            "require": {
+                "nette/utils": "^3.0",
+                "php": "^7.2",
+                "symfony/event-dispatcher": "^4.4|^5.0",
+                "symfony/process": "^4.4|^5.0"
+            },
+            "suggest": {
+                "monolog/monolog": "Enables logging of executed git commands"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "GitWrapper\\": "src"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Chris Pliakas",
+                    "email": "opensource@chrispliakas.com"
+                },
+                {
+                    "name": "Tomas Votruba",
+                    "email": "tomas.vot@gmail.com"
+                }
+            ],
+            "description": "A PHP wrapper around the Git command line utility.",
+            "keywords": [
+                "cli",
+                "git",
+                "git wrapper"
+            ],
+            "time": "2020-02-04T08:42:22+00:00"
+        },
+        {
             "name": "dnoegel/php-xdg-base-dir",
             "version": "v0.1.1",
             "dist": {
@@ -9381,6 +8887,73 @@
             ],
             "description": "implementation of xdg base directory specification for php",
             "time": "2019-12-04T15:06:13+00:00"
+        },
+        {
+            "name": "nette/utils",
+            "version": "v3.1.2",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nette/utils/zipball/488f58378bba71767e7831c83f9e0fa808bf83b9",
+                "reference": "488f58378bba71767e7831c83f9e0fa808bf83b9",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "suggest": {
+                "ext-gd": "to use Image",
+                "ext-iconv": "to use Strings::webalize(), toAscii(), chr() and reverse()",
+                "ext-intl": "to use Strings::webalize(), toAscii(), normalize() and compare()",
+                "ext-json": "to use Nette\\Utils\\Json",
+                "ext-mbstring": "to use Strings::lower() etc...",
+                "ext-tokenizer": "to use Nette\\Utils\\Reflection::getUseStatements()",
+                "ext-xml": "to use Strings::length() etc. when mbstring is not available"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.1-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0-only",
+                "GPL-3.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "David Grudl",
+                    "homepage": "https://davidgrudl.com"
+                },
+                {
+                    "name": "Nette Community",
+                    "homepage": "https://nette.org/contributors"
+                }
+            ],
+            "description": "🛠 Nette Utils: lightweight utilities for string & array manipulation, image handling, safe JSON encoding/decoding, validation, slug or strong password generating etc.",
+            "homepage": "https://nette.org",
+            "keywords": [
+                "array",
+                "core",
+                "datetime",
+                "images",
+                "json",
+                "nette",
+                "paginator",
+                "password",
+                "slugify",
+                "string",
+                "unicode",
+                "utf-8",
+                "utility",
+                "validation"
+            ],
+            "time": "2020-05-27T09:58:51+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -9423,6 +8996,46 @@
                 "php"
             ],
             "time": "2020-07-25T13:18:53+00:00"
+        },
+        {
+            "name": "psr/event-dispatcher",
+            "version": "1.0.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/event-dispatcher/zipball/dbefd12671e8a14ec7f180cab83036ed26714bb0",
+                "reference": "dbefd12671e8a14ec7f180cab83036ed26714bb0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\EventDispatcher\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Standard interfaces for event handling.",
+            "keywords": [
+                "events",
+                "psr",
+                "psr-14"
+            ],
+            "time": "2019-01-08T18:20:26+00:00"
         },
         {
             "name": "psy/psysh",
@@ -9485,6 +9098,204 @@
                 "shell"
             ],
             "time": "2020-05-03T19:32:03+00:00"
+        },
+        {
+            "name": "putyourlightson/craft-log-to-file",
+            "version": "1.2.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/putyourlightson/craft-log-to-file/zipball/b357bb2a68749ab8211b36fe9d080384ffad6048",
+                "reference": "b357bb2a68749ab8211b36fe9d080384ffad6048",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0",
+                "yiisoft/yii2": "^2.0.0"
+            },
+            "type": "library",
+            "extra": {
+                "name": "Log To File",
+                "developer": "PutYourLightsOn",
+                "developerUrl": "https://putyourlightson.com/",
+                "documentationUrl": "https://github.com/putyourlightson/craft-log-to-file",
+                "changelogUrl": "https://raw.githubusercontent.com/putyourlightson/craft-log-to-file/v1/CHANGELOG.md"
+            },
+            "autoload": {
+                "psr-4": {
+                    "putyourlightson\\logtofile\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "Logs messages to a specific log file for Craft CMS.",
+            "homepage": "https://github.com/putyourlightson/craft-log-to-file",
+            "keywords": [
+                "Craft",
+                "cms",
+                "craftcms",
+                "file",
+                "log",
+                "plugin"
+            ],
+            "time": "2020-07-01T15:10:43+00:00"
+        },
+        {
+            "name": "symfony/deprecation-contracts",
+            "version": "v2.1.3",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/5e20b83385a77593259c9f8beb2c43cd03b2ac14",
+                "reference": "5e20b83385a77593259c9f8beb2c43cd03b2ac14",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.1-dev"
+                },
+                "thanks": {
+                    "name": "symfony/contracts",
+                    "url": "https://github.com/symfony/contracts"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "function.php"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "A generic function and convention to trigger deprecation notices",
+            "homepage": "https://symfony.com",
+            "time": "2020-06-06T08:49:21+00:00"
+        },
+        {
+            "name": "symfony/event-dispatcher",
+            "version": "v5.1.3",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/7827d55911f91c070fc293ea51a06eec80797d76",
+                "reference": "7827d55911f91c070fc293ea51a06eec80797d76",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2.5",
+                "symfony/deprecation-contracts": "^2.1",
+                "symfony/event-dispatcher-contracts": "^2",
+                "symfony/polyfill-php80": "^1.15"
+            },
+            "conflict": {
+                "symfony/dependency-injection": "<4.4"
+            },
+            "provide": {
+                "psr/event-dispatcher-implementation": "1.0",
+                "symfony/event-dispatcher-implementation": "2.0"
+            },
+            "suggest": {
+                "symfony/dependency-injection": "",
+                "symfony/http-kernel": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "5.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\EventDispatcher\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony EventDispatcher Component",
+            "homepage": "https://symfony.com",
+            "time": "2020-06-18T18:24:02+00:00"
+        },
+        {
+            "name": "symfony/event-dispatcher-contracts",
+            "version": "v2.1.3",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher-contracts/zipball/f6f613d74cfc5a623fc36294d3451eb7fa5a042b",
+                "reference": "f6f613d74cfc5a623fc36294d3451eb7fa5a042b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2.5",
+                "psr/event-dispatcher": "^1"
+            },
+            "suggest": {
+                "symfony/event-dispatcher-implementation": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.1-dev"
+                },
+                "thanks": {
+                    "name": "symfony/contracts",
+                    "url": "https://github.com/symfony/contracts"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Contracts\\EventDispatcher\\": ""
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Generic abstractions related to dispatching event",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "abstractions",
+                "contracts",
+                "decoupling",
+                "interfaces",
+                "interoperability",
+                "standards"
+            ],
+            "time": "2020-07-06T13:23:11+00:00"
         },
         {
             "name": "yiisoft/yii2-shell",
