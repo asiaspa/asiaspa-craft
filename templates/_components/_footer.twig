@@ -1,8 +1,8 @@
-{% set footerNodeQuery = craft.navigation.nodes()
+{# {% set footerNodeQuery = craft.navigation.nodes()
     .handle('footer')
     .level(1)
 %}
-{% set footerNodes = footerNodeQuery.all() %}
+{% set footerNodes = footerNodeQuery.all() %} #}
 
 <section class="py-16 bg-primary-300">
         {% embed "_containers/_container" with {'breakpoint':'lg'} %}
@@ -36,10 +36,10 @@
                 <span class="text-md">{{ "© 2020 Copyright by Two 2 Press"|t }} </span>
             </div>
             <div class="w-full text-right lg:w-1/2">
-                {% for node in footerNodes %}
+                {# {% for node in footerNodes %}
                 <a class="text-md"
                     href="{{ node.url }}">{{ node.title }}</a>
-                {% endfor %}
+                {% endfor %} #}
                 <a class="text-md"
                     href="#">Placeholder</a>
             </div>
