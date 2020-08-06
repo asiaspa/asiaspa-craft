@@ -29,7 +29,8 @@ return [
     'runQueueAutomatically' => (bool)App::env('RUN_QUEUE_AUTOMATICALLY'),
     'securityKey' => App::env('SECURITY_KEY'),
     'siteUrl' => App::env('SITE_URL'),
-    
+    'siteName' => App::Env('SITE_NAME'),
+        
     // Craft config settings from constants
     'cacheDuration' => false,
     'defaultSearchTermOptions' => [
