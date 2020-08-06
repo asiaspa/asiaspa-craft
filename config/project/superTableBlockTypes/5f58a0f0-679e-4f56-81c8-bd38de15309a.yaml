@@ -3,18 +3,12 @@ fieldLayouts:
   3ca11f2e-130d-4b26-af2e-88c431dab6ba:
     tabs:
       -
-        elements:
-          -
-            fieldUid: 43a5129a-290b-49c4-a6f1-84ec574575a7
-            instructions: null
-            label: null
-            required: true
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
+        fields:
+          43a5129a-290b-49c4-a6f1-84ec574575a7:
+            required: '1'
+            sortOrder: '0'
         name: Content
-        sortOrder: 1
+        sortOrder: '1'
 fields:
   43a5129a-290b-49c4-a6f1-84ec574575a7:
     contentColumnType: string
@@ -22,7 +16,7 @@ fields:
     handle: contentSource
     instructions: ''
     name: 'Content Source'
-    searchable: true
+    searchable: '1'
     settings:
       contentTable: '{{%matrixcontent_contentsource}}'
       maxBlocks: '1'

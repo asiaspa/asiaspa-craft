@@ -28,15 +28,6 @@ fieldLayouts:
             type: craft\fieldlayoutelements\EntryTitleField
             warning: null
             width: 100
-          -
-            fieldUid: 99cff717-c3d5-4e1d-baf4-fc4ca97b8604
-            instructions: null
-            label: null
-            required: '0'
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
         name: Pages
         sortOrder: 1
       -
@@ -57,4 +48,6 @@ hasTitleField: true
 name: Pages
 section: 417974cf-15b0-4807-b344-075e1687f290
 sortOrder: 1
-titleFormat: ''
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

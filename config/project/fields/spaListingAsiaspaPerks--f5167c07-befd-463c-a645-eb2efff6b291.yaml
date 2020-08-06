@@ -5,14 +5,15 @@ instructions: ''
 name: 'AsiaSpa Perks'
 searchable: false
 settings:
-  allowSelfRelations: ''
+  allowSelfRelations: false
   limit: '1'
   localizeRelations: false
   selectionLabel: ''
+  showSiteMenu: true
   source: null
   sources: '*'
   targetSiteId: null
-  validateRelatedElements: ''
+  validateRelatedElements: false
   viewMode: null
 translationKeyFormat: null
 translationMethod: site

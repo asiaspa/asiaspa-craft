@@ -1,20 +1,15 @@
+description: ''
 handle: advertiser
 name: 'Advertiser '
 permissions:
   - accesssitewhensystemisoff
   - accesscpwhensystemisoff
-  - accesscp
-  - sproutforms-editforms
-  - sproutforms-editentries
-  - sproutforms-viewentries
-  - sproutforms-editnotifications
-  - sproutforms-viewnotifications
-  - sproutforms-editreports
-  - sproutforms-viewreports
   - accessplugin-ad-wizard
+  - accesscp
   - 'saveassetinvolume:24d9488c-1c58-436d-abd8-a556676705be'
   - 'createfoldersinvolume:24d9488c-1c58-436d-abd8-a556676705be'
   - 'deletefilesandfoldersinvolume:24d9488c-1c58-436d-abd8-a556676705be'
+  - 'replacefilesinvolume:24d9488c-1c58-436d-abd8-a556676705be'
   - 'editimagesinvolume:24d9488c-1c58-436d-abd8-a556676705be'
   - 'editpeerfilesinvolume:24d9488c-1c58-436d-abd8-a556676705be'
   - 'replacepeerfilesinvolume:24d9488c-1c58-436d-abd8-a556676705be'
@@ -22,4 +17,10 @@ permissions:
   - 'editpeerimagesinvolume:24d9488c-1c58-436d-abd8-a556676705be'
   - 'viewpeerfilesinvolume:24d9488c-1c58-436d-abd8-a556676705be'
   - 'viewvolume:24d9488c-1c58-436d-abd8-a556676705be'
-  - 'replacefilesinvolume:24d9488c-1c58-436d-abd8-a556676705be'
+  - sproutforms-editforms
+  - sproutforms-editentries
+  - sproutforms-viewentries
+  - sproutforms-editnotifications
+  - sproutforms-viewnotifications
+  - sproutforms-editreports
+  - sproutforms-viewreports

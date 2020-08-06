@@ -12,6 +12,7 @@ settings:
   initialRows: '10'
   multiline: '1'
   placeholder: '<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">'
+  uiMode: normal
 translationKeyFormat: null
 translationMethod: none
 type: craft\fields\PlainText

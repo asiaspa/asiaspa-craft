@@ -5,7 +5,7 @@ instructions: 'Follow instructions and upload all assets generated from realfavi
 name: Favicon
 searchable: true
 settings:
-  allowSelfRelations: ''
+  allowSelfRelations: false
   allowedKinds:
     - image
   defaultUploadLocationSource: 'volume:4a49b85a-e6f1-4ee3-8085-cbfb50f5ce42'
@@ -14,6 +14,7 @@ settings:
   localizeRelations: false
   restrictFiles: '1'
   selectionLabel: ''
+  showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
   singleUploadLocationSource: 'volume:4a49b85a-e6f1-4ee3-8085-cbfb50f5ce42'
@@ -22,7 +23,7 @@ settings:
   sources: '*'
   targetSiteId: null
   useSingleFolder: true
-  validateRelatedElements: ''
+  validateRelatedElements: false
   viewMode: list
 translationKeyFormat: null
 translationMethod: site
