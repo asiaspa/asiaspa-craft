@@ -1,4 +1,18 @@
 {
-  "buttons": ["bold", "italic"],
-  "toolbarFixed": true
+  "buttons": [
+    "bold",
+    "italic",
+    "link",
+    "redo",
+    "undo"
+  ],
+  "plugins": [
+    "counter",
+    "limiter"
+  ],
+  "linkNewTab": true,
+  "toolbarFixed": true,
+  "_plugin-buttons": [
+    "file"
+  ]
 }

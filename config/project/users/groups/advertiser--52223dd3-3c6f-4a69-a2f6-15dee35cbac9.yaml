@@ -6,6 +6,11 @@ permissions:
   - accesscpwhensystemisoff
   - accessplugin-ad-wizard
   - accesscp
+  - 'publishentries:73c18577-4ee7-4d1d-be3f-133db7de04c5'
+  - 'publishpeerentrydrafts:73c18577-4ee7-4d1d-be3f-133db7de04c5'
+  - 'deletepeerentrydrafts:73c18577-4ee7-4d1d-be3f-133db7de04c5'
+  - 'editpeerentrydrafts:73c18577-4ee7-4d1d-be3f-133db7de04c5'
+  - 'editentries:73c18577-4ee7-4d1d-be3f-133db7de04c5'
   - 'saveassetinvolume:24d9488c-1c58-436d-abd8-a556676705be'
   - 'createfoldersinvolume:24d9488c-1c58-436d-abd8-a556676705be'
   - 'deletefilesandfoldersinvolume:24d9488c-1c58-436d-abd8-a556676705be'

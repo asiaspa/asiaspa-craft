@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9c884fbad686537e8705364cc75df9dd",
+    "content-hash": "f987b26a188a7d63a4c820dea7d62ed6",
     "packages": [
         {
             "name": "aelvan/mailchimp-subscribe",
@@ -113,11 +113,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.147.13",
+            "version": "3.147.14",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/aws/aws-sdk-php.git",
+                "reference": "2ac5757aee4333c382c222880a51bd56930dafc4"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/e3354b0aedea5f2b0e22e6932cc9e65d98657836",
-                "reference": "e3354b0aedea5f2b0e22e6932cc9e65d98657836",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/2ac5757aee4333c382c222880a51bd56930dafc4",
+                "reference": "2ac5757aee4333c382c222880a51bd56930dafc4",
                 "shasum": ""
             },
             "require": {
@@ -189,7 +194,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2020-08-05T18:16:36+00:00"
+            "time": "2020-08-06T18:18:37+00:00"
         },
         {
             "name": "barrelstrength/sprout-base",
@@ -570,6 +575,55 @@
                 "utility"
             ],
             "time": "2020-06-14T02:01:05+00:00"
+        },
+        {
+            "name": "carlcs/craft-redactorcustomstyles",
+            "version": "3.0.3",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/carlcs/craft-redactorcustomstyles/zipball/4f51a97a07ed0e88e33343b08ebe2b3c401ccf26",
+                "reference": "4f51a97a07ed0e88e33343b08ebe2b3c401ccf26",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0",
+                "craftcms/redactor": "^2.0.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Redactor Custom Styles",
+                "handle": "redactor-custom-styles",
+                "changelogUrl": "https://github.com/carlcs/craft-redactorcustomstyles/raw/v3/CHANGELOG.md",
+                "downloadUrl": "https://github.com/carlcs/craft-redactorcustomstyles/archive/v3.zip"
+            },
+            "autoload": {
+                "psr-4": {
+                    "carlcs\\redactorcustomstyles\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "carlcs",
+                    "homepage": "https://github.com/carlcs"
+                }
+            ],
+            "description": "Redactor Custom Styles plugin for Craft CMS",
+            "keywords": [
+                "buttons",
+                "craftcms",
+                "redactor",
+                "styles"
+            ],
+            "support": {
+                "issues": "https://github.com/carlcs/craft-redactorcustomstyles/issues?state=open",
+                "source": "https://github.com/carlcs/craft-redactorcustomstyles",
+                "docs": "https://github.com/carlcs/craft-redactorcustomstyles",
+                "rss": "https://github.com/carlcs/craft-redactorcustomstyles/commits/v3.atom"
+            },
+            "time": "2020-04-02T06:48:27+00:00"
         },
         {
             "name": "cebe/markdown",
@@ -5291,11 +5345,11 @@
         },
         {
             "name": "putyourlightson/craft-sprig",
-            "version": "1.0.0-beta.9",
+            "version": "1.0.0-beta.10",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/putyourlightson/craft-sprig/zipball/9aac2b44e24ac5c3630217936f87743b6d05cc85",
-                "reference": "9aac2b44e24ac5c3630217936f87743b6d05cc85",
+                "url": "https://api.github.com/repos/putyourlightson/craft-sprig/zipball/0b824ac78314faa9d36bbd8ddb13244932ba38ff",
+                "reference": "0b824ac78314faa9d36bbd8ddb13244932ba38ff",
                 "shasum": ""
             },
             "require": {
@@ -5325,7 +5379,7 @@
                 "source": "https://github.com/putyourlightson/craft-sprig",
                 "issues": "https://github.com/putyourlightson/craft-sprig/issues"
             },
-            "time": "2020-07-21T17:32:37+00:00"
+            "time": "2020-08-04T15:09:27+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
@@ -5590,11 +5644,11 @@
         },
         {
             "name": "spacecatninja/imager-x",
-            "version": "v3.1.2",
+            "version": "v3.1.3",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spacecatninja/craft-imager-x/zipball/94e35e2a8d64f82570797b45b38a2f6ba46764cb",
-                "reference": "94e35e2a8d64f82570797b45b38a2f6ba46764cb",
+                "url": "https://api.github.com/repos/spacecatninja/craft-imager-x/zipball/691ca41034594bb4b788c684096411b9083f7a86",
+                "reference": "691ca41034594bb4b788c684096411b9083f7a86",
                 "shasum": ""
             },
             "require": {
@@ -5650,19 +5704,19 @@
                 "docs": "http://imager-x.spacecat.ninja/",
                 "issues": "https://github.com/spacecatninja/craft-imager-x/issues"
             },
-            "time": "2020-07-22T18:29:11+00:00"
+            "time": "2020-08-05T18:03:31+00:00"
         },
         {
             "name": "spicyweb/craft-neo",
-            "version": "2.8.1",
+            "version": "2.8.2",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spicywebau/craft-neo/zipball/589e79c8156b33064ba4adc285b997b82e79e7c9",
-                "reference": "589e79c8156b33064ba4adc285b997b82e79e7c9",
+                "url": "https://api.github.com/repos/spicywebau/craft-neo/zipball/dd16027e4321a63cad84326eddea6800d910cfa0",
+                "reference": "dd16027e4321a63cad84326eddea6800d910cfa0",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "^3.5.0-RC6"
+                "craftcms/cms": "^3.5.0"
             },
             "type": "craft-plugin",
             "extra": {
@@ -5678,7 +5732,6 @@
                     "benf\\neo\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "proprietary"
             ],
@@ -5690,14 +5743,20 @@
             ],
             "description": "A Matrix-like field type that uses existing fields",
             "keywords": [
-                "Neo",
                 "cms",
                 "craftcms",
                 "field",
                 "matrix",
+                "neo",
                 "plugin"
             ],
-            "time": "2020-08-04T10:46:32+00:00"
+            "support": {
+                "issues": "https://github.com/spicywebau/craft-neo/issues",
+                "source": "https://github.com/spicywebau/craft-neo",
+                "docs": "https://github.com/spicywebau/craft-neo/wiki",
+                "rss": "https://github.com/spicywebau/craft-neo/commits/master.atom"
+            },
+            "time": "2020-08-05T10:53:21+00:00"
         },
         {
             "name": "ssnepenthe/color-utils",

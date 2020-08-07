@@ -54,5 +54,18 @@ fieldLayouts:
             width: 100
         name: Color
         sortOrder: 2
+      -
+        elements:
+          -
+            fieldUid: 98b082d9-b236-4af0-bd96-c69c6ef1821b
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: 'Tab 3'
+        sortOrder: 3
 handle: website
 name: Website

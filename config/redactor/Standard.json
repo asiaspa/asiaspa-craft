@@ -1,49 +1,52 @@
-{
-  "buttons": [
-    "formatting",
-    "bold",
-    "italic", 
-    "unorderedlist", 
-    "orderedlist", 
-    "link", 
-    "image", 
-    "video",
-    "etc",
-    "line",
-    "redo",
-    "undo", 
-    "underline"
-  ],
-  "plugins": [
-    "fullscreen", 
-    "video",
-    "counter",
+{  
+    "buttons": [
+        "formatting",
+        "bold",
+        "italic", 
+        "underline",
+        "unorderedlist", 
+        "orderedlist", 
+        "link", 
+        "image", 
+        "video",
+        "line",
+        "redo",
+        "undo"
+    ],
+    "formattingHide": [
+        "pre", "h3", "h4", "h5", "h6"
+    ],
+    "plugins": [
+        "fullscreen", 
+        "video",
+        "counter",
+        
+        "definedlinks",
+        "filemanager",
+        "handle",
+        "imagemanager",
+        "limiter",
+        
+        "table",
 
-    "definedlinks",
-    "filemanager",
-    "handle",
-    "imagemanager",
-    "limiter",
-
-    "table",
-    
-    "variable",
-    "widget",
-    "redactor-split"
-  ],
-  "linkNewTab": true,
-  "toolbarFixed": true,
-  "_plugin-buttons": [
-    "file"
-  ],
-  "_plugin-comments": [
-    "clips",
-    "fontcolor",
-    "fontfamily",
-    "fontsize",
-    "properties",
-    "specialchars",
-    "textdirection",
-    "textexpander"
-  ]
+        "variable",
+        "widget",
+        "redactor-split"
+    ],
+ 
+    "linkNewTab": true,
+    "toolbarFixed": true,
+    "_plugin-buttons": [
+        "file"
+    ],
+    "_plugin-comments": [
+        "clips",
+        "fontcolor",
+        "fontfamily",
+        "fontsize",
+        "properties",
+        "specialchars",
+        "textdirection",
+        "textexpander"
+    ]
 }

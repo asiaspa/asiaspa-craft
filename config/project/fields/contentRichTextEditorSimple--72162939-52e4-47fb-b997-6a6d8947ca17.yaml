@@ -1,0 +1,22 @@
+contentColumnType: text
+fieldGroup: 6ebe0a75-3257-417d-8c9b-c712a8dbf9c9
+handle: contentRichTextEditorSimple
+instructions: 'No image / embed allows.'
+name: 'Content - Rich Text Editor - Simple'
+searchable: false
+settings:
+  availableTransforms: '*'
+  availableVolumes: ''
+  cleanupHtml: true
+  columnType: text
+  purifierConfig: ''
+  purifyHtml: '1'
+  redactorConfig: Simple.json
+  removeEmptyTags: '1'
+  removeInlineStyles: '1'
+  removeNbsp: '1'
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\redactor\Field
