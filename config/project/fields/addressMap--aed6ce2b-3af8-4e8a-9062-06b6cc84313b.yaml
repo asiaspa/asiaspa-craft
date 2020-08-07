@@ -3,7 +3,7 @@ fieldGroup: 6ebe0a75-3257-417d-8c9b-c712a8dbf9c9
 handle: addressMap
 instructions: ''
 name: 'Address - Map'
-searchable: true
+searchable: false
 settings:
   boundary: '""'
   boundaryRestrictionNELat: null

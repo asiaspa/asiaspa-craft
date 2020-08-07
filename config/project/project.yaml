@@ -1,4 +1,4 @@
-dateModified: 1596778289
+dateModified: 1596789314
 email:
   fromEmail: asiaspa.dev@gmail.com
   fromName: AsiaSpa
@@ -123,10 +123,22 @@ plugins:
   simplemap:
     enabled: true
     schemaVersion: 3.4.2
-  smart-map:
-    edition: standard
-    enabled: true
-    schemaVersion: 3.2.3
+    settings:
+      apiKey: null
+      browserApiKey: null
+      disablePopulateMissingFieldData: false
+      geoLocationAutoRedirect: false
+      geoLocationCacheDuration: 5270400
+      geoLocationService: none
+      geoLocationToken: ''
+      geoService: google
+      geoToken: AIzaSyCLIh-0zZUM7jtfeGBqtoumMP2B8lgsssM
+      mapTiles: google.roadmap
+      mapToken: AIzaSyCLIh-0zZUM7jtfeGBqtoumMP2B8lgsssM
+      serverApiKey: null
+      unrestrictedApiKey: null
+      w3wEnabled: ''
+      w3wToken: ''
   smith:
     edition: standard
     enabled: true
@@ -206,14 +218,14 @@ plugins:
     enabled: true
     schemaVersion: 2.1.5
     settings:
-      editorNotesRequired: '1'
+      editorNotesRequired: ''
       editorNotifications: '1'
       editorNotificationsOptions: ''
       editorUserGroup: 023d7185-42c7-404d-80de-c5204d985b64
       enabledSections:
         - 5e15a326-1e20-4d38-86df-6f2bc3183b14
         - c2929640-5995-4a0b-b490-deb3c54ab6d4
-      publisherNotesRequired: '1'
+      publisherNotesRequired: ''
       publisherNotifications: '1'
       publisherUserGroup: c56709c7-c3a2-404c-8fba-15175819c9d4
       reviewerNotifications: '1'

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f987b26a188a7d63a4c820dea7d62ed6",
+    "content-hash": "ad1241e7952486539e4d2ba357aed838",
     "packages": [
         {
             "name": "aelvan/mailchimp-subscribe",
@@ -114,11 +114,6 @@
         {
             "name": "aws/aws-sdk-php",
             "version": "3.147.14",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "2ac5757aee4333c382c222880a51bd56930dafc4"
-            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/2ac5757aee4333c382c222880a51bd56930dafc4",
@@ -1807,58 +1802,6 @@
                 "issues": "https://github.com/doublesecretagency/craft-adwizard/issues"
             },
             "time": "2020-07-30T20:56:59+00:00"
-        },
-        {
-            "name": "doublesecretagency/craft-smartmap",
-            "version": "3.3.3",
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/doublesecretagency/craft-smartmap/zipball/c696fd29eb6a21ed62eef36372ab6fec0451be4b",
-                "reference": "c696fd29eb6a21ed62eef36372ab6fec0451be4b",
-                "shasum": ""
-            },
-            "require": {
-                "craftcms/cms": "^3.4.0"
-            },
-            "type": "craft-plugin",
-            "extra": {
-                "name": "Smart Map",
-                "handle": "smart-map",
-                "class": "doublesecretagency\\smartmap\\SmartMap"
-            },
-            "autoload": {
-                "psr-4": {
-                    "doublesecretagency\\smartmap\\": "src/"
-                }
-            },
-            "license": [
-                "proprietary"
-            ],
-            "authors": [
-                {
-                    "name": "Double Secret Agency",
-                    "homepage": "https://www.doublesecretagency.com/plugins"
-                }
-            ],
-            "description": "The most comprehensive proximity search and mapping tool for Craft.",
-            "keywords": [
-                "address",
-                "cms",
-                "craft",
-                "craft-plugin",
-                "craftcms",
-                "geolocation",
-                "google-maps",
-                "locations",
-                "map",
-                "proximity-search",
-                "smart-map"
-            ],
-            "support": {
-                "docs": "https://www.doublesecretagency.com/plugins/smart-map/docs",
-                "issues": "https://github.com/doublesecretagency/craft-smartmap/issues"
-            },
-            "time": "2020-06-19T06:42:12+00:00"
         },
         {
             "name": "egulias/email-validator",
