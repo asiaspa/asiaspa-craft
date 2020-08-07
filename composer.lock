@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f987b26a188a7d63a4c820dea7d62ed6",
+    "content-hash": "1fe6f8e30bccc203e47064675da16f1f",
     "packages": [
         {
             "name": "aelvan/mailchimp-subscribe",
@@ -114,11 +114,6 @@
         {
             "name": "aws/aws-sdk-php",
             "version": "3.147.14",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "2ac5757aee4333c382c222880a51bd56930dafc4"
-            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/2ac5757aee4333c382c222880a51bd56930dafc4",
@@ -575,55 +570,6 @@
                 "utility"
             ],
             "time": "2020-06-14T02:01:05+00:00"
-        },
-        {
-            "name": "carlcs/craft-redactorcustomstyles",
-            "version": "3.0.3",
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/carlcs/craft-redactorcustomstyles/zipball/4f51a97a07ed0e88e33343b08ebe2b3c401ccf26",
-                "reference": "4f51a97a07ed0e88e33343b08ebe2b3c401ccf26",
-                "shasum": ""
-            },
-            "require": {
-                "craftcms/cms": "^3.0.0",
-                "craftcms/redactor": "^2.0.0"
-            },
-            "type": "craft-plugin",
-            "extra": {
-                "name": "Redactor Custom Styles",
-                "handle": "redactor-custom-styles",
-                "changelogUrl": "https://github.com/carlcs/craft-redactorcustomstyles/raw/v3/CHANGELOG.md",
-                "downloadUrl": "https://github.com/carlcs/craft-redactorcustomstyles/archive/v3.zip"
-            },
-            "autoload": {
-                "psr-4": {
-                    "carlcs\\redactorcustomstyles\\": "src/"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "carlcs",
-                    "homepage": "https://github.com/carlcs"
-                }
-            ],
-            "description": "Redactor Custom Styles plugin for Craft CMS",
-            "keywords": [
-                "buttons",
-                "craftcms",
-                "redactor",
-                "styles"
-            ],
-            "support": {
-                "issues": "https://github.com/carlcs/craft-redactorcustomstyles/issues?state=open",
-                "source": "https://github.com/carlcs/craft-redactorcustomstyles",
-                "docs": "https://github.com/carlcs/craft-redactorcustomstyles",
-                "rss": "https://github.com/carlcs/craft-redactorcustomstyles/commits/v3.atom"
-            },
-            "time": "2020-04-02T06:48:27+00:00"
         },
         {
             "name": "cebe/markdown",
@@ -1807,58 +1753,6 @@
                 "issues": "https://github.com/doublesecretagency/craft-adwizard/issues"
             },
             "time": "2020-07-30T20:56:59+00:00"
-        },
-        {
-            "name": "doublesecretagency/craft-smartmap",
-            "version": "3.3.3",
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/doublesecretagency/craft-smartmap/zipball/c696fd29eb6a21ed62eef36372ab6fec0451be4b",
-                "reference": "c696fd29eb6a21ed62eef36372ab6fec0451be4b",
-                "shasum": ""
-            },
-            "require": {
-                "craftcms/cms": "^3.4.0"
-            },
-            "type": "craft-plugin",
-            "extra": {
-                "name": "Smart Map",
-                "handle": "smart-map",
-                "class": "doublesecretagency\\smartmap\\SmartMap"
-            },
-            "autoload": {
-                "psr-4": {
-                    "doublesecretagency\\smartmap\\": "src/"
-                }
-            },
-            "license": [
-                "proprietary"
-            ],
-            "authors": [
-                {
-                    "name": "Double Secret Agency",
-                    "homepage": "https://www.doublesecretagency.com/plugins"
-                }
-            ],
-            "description": "The most comprehensive proximity search and mapping tool for Craft.",
-            "keywords": [
-                "address",
-                "cms",
-                "craft",
-                "craft-plugin",
-                "craftcms",
-                "geolocation",
-                "google-maps",
-                "locations",
-                "map",
-                "proximity-search",
-                "smart-map"
-            ],
-            "support": {
-                "docs": "https://www.doublesecretagency.com/plugins/smart-map/docs",
-                "issues": "https://github.com/doublesecretagency/craft-smartmap/issues"
-            },
-            "time": "2020-06-19T06:42:12+00:00"
         },
         {
             "name": "egulias/email-validator",
