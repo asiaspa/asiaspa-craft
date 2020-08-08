@@ -31,7 +31,7 @@ fieldLayouts:
           -
             fieldUid: b357d9dd-f6da-4d5f-b00f-8769518e1b39
             instructions: ''
-            label: 'Short Descritpion'
+            label: 'Short Description'
             required: ''
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -73,37 +73,37 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
+          -
+            fieldUid: 0c465ef4-3419-4c61-b509-3493ed02e3f3
+            instructions: ''
+            label: 'Related Stories'
+            required: ''
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: Main
         sortOrder: 1
       -
         elements:
           -
             fieldUid: 02d38f73-db56-4fab-a533-0dc7400f81fe
-            instructions: null
-            label: null
-            required: false
+            instructions: ''
+            label: 'Logo of the Spa'
+            required: ''
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
-            width: 100
+            width: 50
           -
-            fieldUid: 64663023-dc04-407b-98e2-aa59d80473ac
-            instructions: null
-            label: null
-            required: false
+            fieldUid: 89bc5559-38ba-48c4-ac2d-5fed336e2864
+            instructions: ''
+            label: 'Website URL'
+            required: ''
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
-            width: 100
-          -
-            fieldUid: aed6ce2b-3af8-4e8a-9062-06b6cc84313b
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
+            width: 50
           -
             fieldUid: 7dd727bb-67c2-4ab1-adc7-4cd11a80231b
             instructions: null
@@ -112,7 +112,7 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
-            width: 100
+            width: 50
           -
             fieldUid: 55a03740-1687-40ab-acb2-6bb3b16c5143
             instructions: null
@@ -121,39 +121,48 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
-            width: 100
+            width: 50
           -
-            fieldUid: 89bc5559-38ba-48c4-ac2d-5fed336e2864
-            instructions: null
-            label: null
-            required: '0'
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-        name: Contact
-        sortOrder: 2
-      -
-        elements:
-          -
-            fieldUid: f5167c07-befd-463c-a645-eb2efff6b291
+            fieldUid: 07c5d55c-e01e-4d3e-a8b8-0b357fe534e0
             instructions: ''
-            label: 'Form for Asiaspa Perks'
+            label: Address
             required: ''
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
           -
-            fieldUid: 0c465ef4-3419-4c61-b509-3493ed02e3f3
-            instructions: null
-            label: null
-            required: false
+            fieldUid: aed6ce2b-3af8-4e8a-9062-06b6cc84313b
+            instructions: ''
+            label: 'Google Map Pin'
+            required: ''
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
-        name: Relation
+        name: 'Spa Contact Detail'
+        sortOrder: 2
+      -
+        elements:
+          -
+            fieldUid: 2b2910be-51fe-4ca0-90cf-f38ca4db5c39
+            instructions: ''
+            label: 'AsiaSpa Perks Award'
+            required: ''
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: f5167c07-befd-463c-a645-eb2efff6b291
+            instructions: ''
+            label: 'AsiaSpa Perks Form'
+            required: ''
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: 'AsiaSpa Perks'
         sortOrder: 3
       -
         elements:
