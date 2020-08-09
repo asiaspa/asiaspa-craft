@@ -17,8 +17,8 @@
 %}
 
 <figure>
-    <div class="relative block w-full overflow-hidden bg-primary-100" style="padding-bottom: {{ 1/aspect*100 }}%">
-        <img class="absolute block w-full h-full lazyload pin"
+    <div class="relative w-full overflow-hidden bg-primary-100" style="padding-bottom: {{ 1/aspect*100 }}%">
+        <img class="absolute w-full h-full lazyload pin"
             src="{{ transformedImages | first }}" 
             srcset="{{ transformedImages | first }}" 
             data-srcset="{{ transformedImages | srcset }}"
@@ -26,7 +26,7 @@
         />
     </div>
     {% if caption %}
-    <figcaption class="relative block text-sm text-gray-500">{{ caption|default('this is caption') }}</figcaption>
+    <figcaption class="relative block text-sm italic text-gray-700">{{ caption|default('this is caption') }}</figcaption>
     {% endif %}
 </figure> 
 

@@ -1,33 +1,11 @@
-contentColumnType: string
+contentColumnType: boolean
 fieldGroup: 847d91f3-2f4a-4f56-9f9d-40c20e080811
 handle: storyHeroImageOrientation
-instructions: ''
+instructions: 'Switch to Landscape style (larger image)'
 name: 'Story - Hero Image Orientation'
 searchable: false
 settings:
-  options:
-    -
-      __assoc__:
-        -
-          - label
-          - Portrait
-        -
-          - value
-          - portrait
-        -
-          - default
-          - '1'
-    -
-      __assoc__:
-        -
-          - label
-          - Landscape
-        -
-          - value
-          - landscape
-        -
-          - default
-          - ''
+  default: ''
 translationKeyFormat: null
 translationMethod: none
-type: craft\fields\RadioButtons
+type: craft\fields\Lightswitch
