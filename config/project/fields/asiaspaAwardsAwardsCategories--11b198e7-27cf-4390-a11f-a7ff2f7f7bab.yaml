@@ -1,0 +1,23 @@
+contentColumnType: string
+fieldGroup: c988c230-88d1-42da-86a6-8a60a7a243f8
+handle: asiaspaAwardsAwardsCategories
+instructions: ''
+name: 'AsiaSpa Awards - Awards Categories'
+searchable: true
+settings:
+  allowLimit: false
+  allowMultipleSources: false
+  allowSelfRelations: false
+  branchLimit: ''
+  limit: null
+  localizeRelations: false
+  selectionLabel: ''
+  showSiteMenu: true
+  source: 'group:f30eb0b3-b181-4162-a646-a4218d837a43'
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Categories

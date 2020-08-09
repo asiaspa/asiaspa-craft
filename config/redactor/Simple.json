@@ -3,6 +3,8 @@
     "bold",
     "italic",
     "link",
+    "unorderedlist",
+    "orderedlist",
     "redo",
     "undo"
   ],

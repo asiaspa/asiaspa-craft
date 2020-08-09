@@ -1,3 +1,3 @@
-description: null
+description: "The username will be used for /users/username for browsing all his related stories.\r\nFor email, you can just fake it as it is not required."
 handle: user
 name: User

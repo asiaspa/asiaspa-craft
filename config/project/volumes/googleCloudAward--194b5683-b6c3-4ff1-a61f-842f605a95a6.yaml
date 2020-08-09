@@ -1,0 +1,54 @@
+fieldLayouts:
+  c7b91b30-3252-4d6c-a1b3-b1934de7c23a:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            autofocus: false
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            required: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            warning: null
+            width: 100
+          -
+            fieldUid: f406c8e9-d661-4a05-8ef1-5391cd2c6542
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: googleCloudAward
+hasUrls: true
+name: 'Google Cloud / Award'
+settings:
+  bucket: asiaspa
+  bucketSelectionMode: choose
+  expires: ''
+  keyFileContents: $GCS_KEY
+  projectId: $GCS_PROJECT_ID
+  subfolder: award
+sortOrder: 4
+type: craft\googlecloud\Volume
+url: 'http://storage.googleapis.com/asiaspa/'

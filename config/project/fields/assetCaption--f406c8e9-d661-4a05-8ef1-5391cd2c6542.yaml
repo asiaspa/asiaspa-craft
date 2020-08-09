@@ -1,0 +1,22 @@
+contentColumnType: text
+fieldGroup: b3d816bc-8f24-4620-9c29-3cabc185b44e
+handle: assetCaption
+instructions: ''
+name: 'Asset  - Caption'
+searchable: false
+settings:
+  availableTransforms: '*'
+  availableVolumes: ''
+  cleanupHtml: true
+  columnType: text
+  purifierConfig: ''
+  purifyHtml: '1'
+  redactorConfig: Simple.json
+  removeEmptyTags: '1'
+  removeInlineStyles: '1'
+  removeNbsp: '1'
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\redactor\Field

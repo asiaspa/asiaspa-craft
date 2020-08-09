@@ -415,7 +415,7 @@ ul {
  */
 
 html {
-  font-family: brandon-grotesque, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji; /* 1 */
+  font-family: var(--font-sans); /* 1 */
   line-height: 1.5; /* 2 */
 }
 
@@ -4134,11 +4134,11 @@ video {
 }
 
 .font-sans {
-  font-family: brandon-grotesque, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-family: var(--font-sans);
 }
 
 .font-serif {
-  font-family: freight-text-pro, Georgia, Cambria, Times New Roman, Times, serif;
+  font-family: var(--font-serif);
 }
 
 .font-hairline {
@@ -4177,6 +4177,22 @@ video {
   font-weight: 900;
 }
 
+.font-sans-regular {
+  font-weight: var(--font-sans-regular);
+}
+
+.font-sans-bold {
+  font-weight: var(--font-sans-bold);
+}
+
+.font-serif-regular {
+  font-weight: var(--font-serif-regular);
+}
+
+.font-serif-bold {
+  font-weight: var(--font-serif-bold);
+}
+
 .hover\:font-hairline:hover {
   font-weight: 100;
 }
@@ -4213,6 +4229,22 @@ video {
   font-weight: 900;
 }
 
+.hover\:font-sans-regular:hover {
+  font-weight: var(--font-sans-regular);
+}
+
+.hover\:font-sans-bold:hover {
+  font-weight: var(--font-sans-bold);
+}
+
+.hover\:font-serif-regular:hover {
+  font-weight: var(--font-serif-regular);
+}
+
+.hover\:font-serif-bold:hover {
+  font-weight: var(--font-serif-bold);
+}
+
 .focus\:font-hairline:focus {
   font-weight: 100;
 }
@@ -4247,6 +4279,22 @@ video {
 
 .focus\:font-black:focus {
   font-weight: 900;
+}
+
+.focus\:font-sans-regular:focus {
+  font-weight: var(--font-sans-regular);
+}
+
+.focus\:font-sans-bold:focus {
+  font-weight: var(--font-sans-bold);
+}
+
+.focus\:font-serif-regular:focus {
+  font-weight: var(--font-serif-regular);
+}
+
+.focus\:font-serif-bold:focus {
+  font-weight: var(--font-serif-bold);
 }
 
 .h-0 {
@@ -14006,11 +14054,11 @@ video {
   }
 
   .sm\:font-sans {
-    font-family: brandon-grotesque, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-family: var(--font-sans);
   }
 
   .sm\:font-serif {
-    font-family: freight-text-pro, Georgia, Cambria, Times New Roman, Times, serif;
+    font-family: var(--font-serif);
   }
 
   .sm\:font-hairline {
@@ -14049,6 +14097,22 @@ video {
     font-weight: 900;
   }
 
+  .sm\:font-sans-regular {
+    font-weight: var(--font-sans-regular);
+  }
+
+  .sm\:font-sans-bold {
+    font-weight: var(--font-sans-bold);
+  }
+
+  .sm\:font-serif-regular {
+    font-weight: var(--font-serif-regular);
+  }
+
+  .sm\:font-serif-bold {
+    font-weight: var(--font-serif-bold);
+  }
+
   .sm\:hover\:font-hairline:hover {
     font-weight: 100;
   }
@@ -14085,6 +14149,22 @@ video {
     font-weight: 900;
   }
 
+  .sm\:hover\:font-sans-regular:hover {
+    font-weight: var(--font-sans-regular);
+  }
+
+  .sm\:hover\:font-sans-bold:hover {
+    font-weight: var(--font-sans-bold);
+  }
+
+  .sm\:hover\:font-serif-regular:hover {
+    font-weight: var(--font-serif-regular);
+  }
+
+  .sm\:hover\:font-serif-bold:hover {
+    font-weight: var(--font-serif-bold);
+  }
+
   .sm\:focus\:font-hairline:focus {
     font-weight: 100;
   }
@@ -14119,6 +14199,22 @@ video {
 
   .sm\:focus\:font-black:focus {
     font-weight: 900;
+  }
+
+  .sm\:focus\:font-sans-regular:focus {
+    font-weight: var(--font-sans-regular);
+  }
+
+  .sm\:focus\:font-sans-bold:focus {
+    font-weight: var(--font-sans-bold);
+  }
+
+  .sm\:focus\:font-serif-regular:focus {
+    font-weight: var(--font-serif-regular);
+  }
+
+  .sm\:focus\:font-serif-bold:focus {
+    font-weight: var(--font-serif-bold);
   }
 
   .sm\:h-0 {
@@ -23879,11 +23975,11 @@ video {
   }
 
   .md\:font-sans {
-    font-family: brandon-grotesque, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-family: var(--font-sans);
   }
 
   .md\:font-serif {
-    font-family: freight-text-pro, Georgia, Cambria, Times New Roman, Times, serif;
+    font-family: var(--font-serif);
   }
 
   .md\:font-hairline {
@@ -23922,6 +24018,22 @@ video {
     font-weight: 900;
   }
 
+  .md\:font-sans-regular {
+    font-weight: var(--font-sans-regular);
+  }
+
+  .md\:font-sans-bold {
+    font-weight: var(--font-sans-bold);
+  }
+
+  .md\:font-serif-regular {
+    font-weight: var(--font-serif-regular);
+  }
+
+  .md\:font-serif-bold {
+    font-weight: var(--font-serif-bold);
+  }
+
   .md\:hover\:font-hairline:hover {
     font-weight: 100;
   }
@@ -23958,6 +24070,22 @@ video {
     font-weight: 900;
   }
 
+  .md\:hover\:font-sans-regular:hover {
+    font-weight: var(--font-sans-regular);
+  }
+
+  .md\:hover\:font-sans-bold:hover {
+    font-weight: var(--font-sans-bold);
+  }
+
+  .md\:hover\:font-serif-regular:hover {
+    font-weight: var(--font-serif-regular);
+  }
+
+  .md\:hover\:font-serif-bold:hover {
+    font-weight: var(--font-serif-bold);
+  }
+
   .md\:focus\:font-hairline:focus {
     font-weight: 100;
   }
@@ -23992,6 +24120,22 @@ video {
 
   .md\:focus\:font-black:focus {
     font-weight: 900;
+  }
+
+  .md\:focus\:font-sans-regular:focus {
+    font-weight: var(--font-sans-regular);
+  }
+
+  .md\:focus\:font-sans-bold:focus {
+    font-weight: var(--font-sans-bold);
+  }
+
+  .md\:focus\:font-serif-regular:focus {
+    font-weight: var(--font-serif-regular);
+  }
+
+  .md\:focus\:font-serif-bold:focus {
+    font-weight: var(--font-serif-bold);
   }
 
   .md\:h-0 {
@@ -33752,11 +33896,11 @@ video {
   }
 
   .lg\:font-sans {
-    font-family: brandon-grotesque, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-family: var(--font-sans);
   }
 
   .lg\:font-serif {
-    font-family: freight-text-pro, Georgia, Cambria, Times New Roman, Times, serif;
+    font-family: var(--font-serif);
   }
 
   .lg\:font-hairline {
@@ -33795,6 +33939,22 @@ video {
     font-weight: 900;
   }
 
+  .lg\:font-sans-regular {
+    font-weight: var(--font-sans-regular);
+  }
+
+  .lg\:font-sans-bold {
+    font-weight: var(--font-sans-bold);
+  }
+
+  .lg\:font-serif-regular {
+    font-weight: var(--font-serif-regular);
+  }
+
+  .lg\:font-serif-bold {
+    font-weight: var(--font-serif-bold);
+  }
+
   .lg\:hover\:font-hairline:hover {
     font-weight: 100;
   }
@@ -33831,6 +33991,22 @@ video {
     font-weight: 900;
   }
 
+  .lg\:hover\:font-sans-regular:hover {
+    font-weight: var(--font-sans-regular);
+  }
+
+  .lg\:hover\:font-sans-bold:hover {
+    font-weight: var(--font-sans-bold);
+  }
+
+  .lg\:hover\:font-serif-regular:hover {
+    font-weight: var(--font-serif-regular);
+  }
+
+  .lg\:hover\:font-serif-bold:hover {
+    font-weight: var(--font-serif-bold);
+  }
+
   .lg\:focus\:font-hairline:focus {
     font-weight: 100;
   }
@@ -33865,6 +34041,22 @@ video {
 
   .lg\:focus\:font-black:focus {
     font-weight: 900;
+  }
+
+  .lg\:focus\:font-sans-regular:focus {
+    font-weight: var(--font-sans-regular);
+  }
+
+  .lg\:focus\:font-sans-bold:focus {
+    font-weight: var(--font-sans-bold);
+  }
+
+  .lg\:focus\:font-serif-regular:focus {
+    font-weight: var(--font-serif-regular);
+  }
+
+  .lg\:focus\:font-serif-bold:focus {
+    font-weight: var(--font-serif-bold);
   }
 
   .lg\:h-0 {
@@ -43625,11 +43817,11 @@ video {
   }
 
   .xl\:font-sans {
-    font-family: brandon-grotesque, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-family: var(--font-sans);
   }
 
   .xl\:font-serif {
-    font-family: freight-text-pro, Georgia, Cambria, Times New Roman, Times, serif;
+    font-family: var(--font-serif);
   }
 
   .xl\:font-hairline {
@@ -43668,6 +43860,22 @@ video {
     font-weight: 900;
   }
 
+  .xl\:font-sans-regular {
+    font-weight: var(--font-sans-regular);
+  }
+
+  .xl\:font-sans-bold {
+    font-weight: var(--font-sans-bold);
+  }
+
+  .xl\:font-serif-regular {
+    font-weight: var(--font-serif-regular);
+  }
+
+  .xl\:font-serif-bold {
+    font-weight: var(--font-serif-bold);
+  }
+
   .xl\:hover\:font-hairline:hover {
     font-weight: 100;
   }
@@ -43704,6 +43912,22 @@ video {
     font-weight: 900;
   }
 
+  .xl\:hover\:font-sans-regular:hover {
+    font-weight: var(--font-sans-regular);
+  }
+
+  .xl\:hover\:font-sans-bold:hover {
+    font-weight: var(--font-sans-bold);
+  }
+
+  .xl\:hover\:font-serif-regular:hover {
+    font-weight: var(--font-serif-regular);
+  }
+
+  .xl\:hover\:font-serif-bold:hover {
+    font-weight: var(--font-serif-bold);
+  }
+
   .xl\:focus\:font-hairline:focus {
     font-weight: 100;
   }
@@ -43738,6 +43962,22 @@ video {
 
   .xl\:focus\:font-black:focus {
     font-weight: 900;
+  }
+
+  .xl\:focus\:font-sans-regular:focus {
+    font-weight: var(--font-sans-regular);
+  }
+
+  .xl\:focus\:font-sans-bold:focus {
+    font-weight: var(--font-sans-bold);
+  }
+
+  .xl\:focus\:font-serif-regular:focus {
+    font-weight: var(--font-serif-regular);
+  }
+
+  .xl\:focus\:font-serif-bold:focus {
+    font-weight: var(--font-serif-bold);
   }
 
   .xl\:h-0 {

@@ -1,4 +1,7 @@
-dateModified: 1596790761
+assets:
+  tempSubpath: temp
+  tempVolumeUid: 883ab42c-10f1-4e32-a559-61f23e4e3775
+dateModified: 1596970775
 email:
   fromEmail: asiaspa.dev@gmail.com
   fromName: AsiaSpa
@@ -46,6 +49,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 2.1.2
+  field-manager:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
   google-cloud:
     edition: standard
     enabled: true

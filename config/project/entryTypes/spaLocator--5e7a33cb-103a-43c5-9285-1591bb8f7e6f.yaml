@@ -31,7 +31,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 handle: spaLocator
-hasTitleField: false
+hasTitleField: true
 name: 'Spa Locator'
 section: 48ef7d40-ffba-45ee-8f7a-e812985c465e
 sortOrder: 1

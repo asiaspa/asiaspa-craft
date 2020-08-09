@@ -11,8 +11,8 @@ module.exports = {
             'xl': '1600px'
         },
         fontFamily: {
-            'sans': ["brandon-grotesque", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue","Arial", "Noto Sans", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"],
-            'serif': ['freight-text-pro', "Georgia, Cambria", "Times New Roman", "Times", "serif"]
+            'sans': 'var(--font-sans)',
+            'serif': 'var(--font-serif)',
         },
         colors: {
             transparent: 'transparent',
@@ -34,6 +34,12 @@ module.exports = {
             white: 'var(--color-white)'
         },
         extend: {
+            fontWeight: {
+                'sans-regular': 'var(--font-sans-regular)',
+                'sans-bold': 'var(--font-sans-bold)',
+                'serif-regular': 'var(--font-serif-regular)',
+                'serif-bold': 'var(--font-serif-bold)'
+            },
             padding: {
                 'edge': 'var(--edge-padding)',
                 'screen-sm': 'calc(var(--edge-padding) + var(--margin-screen-sm)) !important',

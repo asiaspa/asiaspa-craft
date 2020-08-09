@@ -1,0 +1,11 @@
+contentColumnType: string(7)
+fieldGroup: f6ccb015-3533-491f-8f9c-775d16605b99
+handle: websiteColorWhite
+instructions: ''
+name: 'Website - Color - White'
+searchable: false
+settings:
+  defaultColor: '#ffffff'
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Color

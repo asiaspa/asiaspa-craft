@@ -1,0 +1,18 @@
+contentColumnType: string(400)
+fieldGroup: 847d91f3-2f4a-4f56-9f9d-40c20e080811
+handle: storyStandfirst
+instructions: ''
+name: 'Story - Standfirst'
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: 100
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: 'Brief introductory summary of the story'
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

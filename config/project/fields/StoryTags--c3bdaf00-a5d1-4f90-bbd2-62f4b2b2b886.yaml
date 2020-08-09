@@ -1,0 +1,23 @@
+contentColumnType: string
+fieldGroup: 847d91f3-2f4a-4f56-9f9d-40c20e080811
+handle: StoryTags
+instructions: ''
+name: 'Story - Multiple Tags'
+searchable: false
+settings:
+  allowLimit: false
+  allowMultipleSources: false
+  allowSelfRelations: false
+  branchLimit: ''
+  limit: null
+  localizeRelations: false
+  selectionLabel: ''
+  showSiteMenu: true
+  source: 'group:dc068a49-9607-4bc7-9bd1-069f279dbf76'
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Categories

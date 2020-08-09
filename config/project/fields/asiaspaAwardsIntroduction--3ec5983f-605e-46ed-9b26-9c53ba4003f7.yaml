@@ -1,0 +1,22 @@
+contentColumnType: text
+fieldGroup: c988c230-88d1-42da-86a6-8a60a7a243f8
+handle: asiaspaAwardsIntroduction
+instructions: ''
+name: 'AsiaSpa Awards - Introduction'
+searchable: false
+settings:
+  availableTransforms: '*'
+  availableVolumes: ''
+  cleanupHtml: true
+  columnType: text
+  purifierConfig: ''
+  purifyHtml: '1'
+  redactorConfig: Simple.json
+  removeEmptyTags: '1'
+  removeInlineStyles: '1'
+  removeNbsp: '1'
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\redactor\Field

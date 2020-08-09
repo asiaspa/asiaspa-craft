@@ -1,0 +1,15 @@
+contentColumnType: datetime
+fieldGroup: c988c230-88d1-42da-86a6-8a60a7a243f8
+handle: asiaspaAwardsEnterOpenDate
+instructions: ''
+name: 'AsiaSpa Awards - Enter - Open Date'
+searchable: false
+settings:
+  max: null
+  min: null
+  minuteIncrement: '30'
+  showDate: true
+  showTime: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Date

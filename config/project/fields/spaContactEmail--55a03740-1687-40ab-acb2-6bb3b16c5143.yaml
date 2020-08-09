@@ -1,0 +1,11 @@
+contentColumnType: string
+fieldGroup: a7b23ced-f8be-4c09-bba7-84b5e4552f75
+handle: spaContactEmail
+instructions: ''
+name: 'Spa - Contact - Email'
+searchable: true
+settings:
+  placeholder: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Email

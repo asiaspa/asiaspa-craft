@@ -1,0 +1,20 @@
+contentColumnType: string
+fieldGroup: c988c230-88d1-42da-86a6-8a60a7a243f8
+handle: asiaspaAwardsOtherJudges
+instructions: ''
+name: 'AsiaSpa Awards - Other Judges'
+searchable: false
+settings:
+  allowSelfRelations: false
+  limit: ''
+  localizeRelations: false
+  selectionLabel: Judges
+  showSiteMenu: true
+  source: null
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Users

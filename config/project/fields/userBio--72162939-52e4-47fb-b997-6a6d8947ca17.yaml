@@ -1,0 +1,22 @@
+contentColumnType: text
+fieldGroup: e90928b8-0894-4ab9-ab3f-9ca369f52f3e
+handle: userBio
+instructions: 'No image / embed allows.'
+name: 'User - Bio'
+searchable: false
+settings:
+  availableTransforms: '*'
+  availableVolumes: ''
+  cleanupHtml: true
+  columnType: text
+  purifierConfig: ''
+  purifyHtml: '1'
+  redactorConfig: Simple.json
+  removeEmptyTags: '1'
+  removeInlineStyles: '1'
+  removeNbsp: '1'
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\redactor\Field

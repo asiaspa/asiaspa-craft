@@ -1,0 +1,57 @@
+contentColumnType: text
+fieldGroup: 847d91f3-2f4a-4f56-9f9d-40c20e080811
+handle: storyCredit
+instructions: ''
+name: 'Story - Credit'
+searchable: true
+settings:
+  addRowLabel: 'Add a row'
+  columnType: text
+  columns:
+    __assoc__:
+      -
+        - col1
+        -
+          __assoc__:
+            -
+              - heading
+              - Credit
+            -
+              - handle
+              - credit
+            -
+              - width
+              - ''
+            -
+              - type
+              - singleline
+      -
+        - col2
+        -
+          __assoc__:
+            -
+              - heading
+              - Name
+            -
+              - handle
+              - name
+            -
+              - width
+              - ''
+            -
+              - type
+              - singleline
+  defaults:
+    -
+      __assoc__:
+        -
+          - col1
+          - ''
+        -
+          - col2
+          - ''
+  maxRows: ''
+  minRows: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Table

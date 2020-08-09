@@ -1,0 +1,23 @@
+contentColumnType: string
+fieldGroup: a7b23ced-f8be-4c09-bba7-84b5e4552f75
+handle: spaAsiaspaAwardNominee
+instructions: ''
+name: 'Spa - AsiaSpa Award -  Nominee'
+searchable: true
+settings:
+  allowLimit: false
+  allowMultipleSources: false
+  allowSelfRelations: false
+  branchLimit: ''
+  limit: null
+  localizeRelations: false
+  selectionLabel: ''
+  showSiteMenu: true
+  source: 'group:f30eb0b3-b181-4162-a646-a4218d837a43'
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Categories
