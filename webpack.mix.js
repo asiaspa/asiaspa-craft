@@ -25,6 +25,7 @@ mix
         'web/**/*.+(html|twig)',
         'templates/**/*.+(html|twig)',
         'web/dist/**/*.+(js|css)',
+        'src/**/*.+(js|css)'
         // 'laravel/resources/views/**/*.php'
     ],
     browser: 'Firefox Developer Edition'

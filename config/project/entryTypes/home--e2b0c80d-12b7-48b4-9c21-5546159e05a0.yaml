@@ -29,6 +29,24 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            fieldUid: 83b77bee-5073-446c-a265-945387192ef9
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 8d5c2b9b-99f3-43a4-bdeb-7e46a35a55f5
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
             fieldUid: 51f3339a-5e27-4c65-95cf-82085401023d
             instructions: null
             label: null
@@ -42,19 +60,6 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: b02731a5-4105-4dbf-b19f-26510c3a0080
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-        name: 'Page Builder Old'
-        sortOrder: 2
-      -
-        elements:
-          -
             fieldUid: 68752c4e-cc58-4744-a1c4-20778860741f
             instructions: null
             label: null
@@ -64,7 +69,7 @@ fieldLayouts:
             warning: null
             width: 100
         name: SEO
-        sortOrder: 3
+        sortOrder: 2
 handle: home
 hasTitleField: true
 name: Home

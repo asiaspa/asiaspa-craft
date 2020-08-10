@@ -1,0 +1,34 @@
+contentColumnType: string
+fieldGroup: 6ebe0a75-3257-417d-8c9b-c712a8dbf9c9
+handle: homeHeroStoryTextAlignment
+instructions: ''
+name: 'Home - Hero Story Text Alignment'
+searchable: false
+settings:
+  optgroups: true
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Left
+        -
+          - value
+          - left
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Right
+        -
+          - value
+          - right
+        -
+          - default
+          - '1'
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

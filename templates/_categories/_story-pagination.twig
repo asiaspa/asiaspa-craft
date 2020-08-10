@@ -31,14 +31,14 @@
 {% embed "_containers/_container"%}
 {% block content %}
 <div class="flex items-start my-12 md:space-x-6 lg:space-x-12">
-    <div class="w-full divide-y divide-primary-300 md:w-auto">
+    <div class="flex-grow divide-y divide-primary-300">
         {% for entry in entries %}
             <div class="py-6">
                 {% include "_stories/_story-listing" with { 'entry':entry } %}
             </div>
         {% endfor %}
     </div>
-    <div class="sticky hidden w-full md:block " style="top:96px; width: 300px" >
+    <div class="sticky hidden h-24 md:block bg-primary-300" style="top:96px; width: 300px" >
         {% include '_components/_adblock' with {'adgroup': 'halfPageMediumRectangle'} %}
     </div>
 </div>

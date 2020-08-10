@@ -6,6 +6,13 @@
 {% set baseUrl = alias('@assetsUrl') ~ '/' %}
 {% endspaceless %}
 
+{% set website = craft.globalSets()
+    .handle('website')
+    .with([
+        'websiteLogo',
+        'websiteLogoSimple'
+    ]).one() %}
+
 
 {# -------------------  html ------------------- #}
 {% minify %}
@@ -33,7 +40,7 @@
     {% header headerLink %}
     
     {# ------------------- SEO meta ------------------- #}
-    <title>AsiaSpa</title>
+    <title>{{ siteName }}</title>
     {% hook 'seomateMeta' %}
     {% include '_layouts/_components/_branding' %}
     <link rel="stylesheet" href="{{ rev('/dist/app.css') }}">
@@ -60,7 +67,7 @@
     </script>
 </head>
 
-<body class="overflow-x-hidden antialiased">
+<body class="overflow-x-hidden antialiased {{ block('bodyClass') }}">
     {# ------------------- SVG ------------------- #}
     {{ source("_layouts/_inline/_icons.twig") }}
 

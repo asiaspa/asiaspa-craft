@@ -1,27 +1,39 @@
 {% if entry | length %}
- <section class="bg-primary-300">
-    {% embed "_containers/_container" with {'class':'bg-primary-300'} %}
-    {% block content %}
-        <div class="flex flex-col -mx-6 lg:mx-0 lg:py-16 lg:space-x-12 lg:flex-row"> 
-            <div class="w-full lg:p-0 lg:w-7/12">
-                <a href="{{ entry.url }}">
-                {% include "_components/_imager" with { image : entry.assetUploadSingleImage[0] ?? '', w:4, h:3} %}
-                </a>
-            </div>
-            <div class="self-center w-full px-6 pt-6 pb-12 lg:p-0 lg:w-5/12">
-                <div class="flex space-x-6">
-                    {% include "_components/_category-tag" with { category : entry.categorySingleCategory } %}
-                    {% include "_components/_category-tag" with { category : entry.categorySinglePrintIssue } %}
-                </div>
-                <a href="{{ entry.url }}">
-                    <h1 class="font-serif text-3xl font-medium leading-tight tracking-tight lg:text-4xl xl:text-5xl ">{{ entry.title }}</h1>
-                    <hr class="block w-32 my-6 border-t-2 border-primary-500" />
-                    <h2 class="mb-4 text-lg lg:text-xl color-gray-900">{{ entry.contentStandfirst }}</h2>
-                </a>
-                {% include "_components/_user" with { user : entry.userSingleUser[0] ?? entry.author, date : entry.postDate } %}
-            </div>
+
+{# -------- query ------ #}
+{% set storyContent %}
+<div class="flex space-x-6">
+    {% include "_components/_category-tag" with { category : entry.storyCategory } %}
+    {% include "_components/_category-tag" with { category : entry.storyPrintIssue } %}
+</div>
+    <a class="space-y-4" href="{{ entry.url }}">
+        <h4 class="font-serif text-3xl leading-tight tracking-tight lg:text-4xl xl:text-5xl text-bg">{{ entry.title }}</h4>
+        <hr class="block w-20 border-t-2 lg:my-4 border-primary-500" />
+        <p class="text-xl lg:text-lg">{{ entry.storyStandfirst }}</p>
+    </a>
+    <p class="block mt-2 text-sm text-gray-700">{{ entry.postDate | date("M d, Y") }}, by <a href="{{ url('authors/' ~ entry.storyByline[0].username ?? entry.author.username ) }}">{{ entry.storyByline[0] ??  entry.author }}</a></p>
+    {# {% include "_components/_user" with { user : entry.storyByline ?? entry.author, date : entry.postDate } %} #}
+{% endset %}
+
+
+<section class="temp">
+
+{% embed "_containers/_container" %}
+{% block content %}
+{% if entry.storyHeroImageSetLandscape %}
+    <div class="flex flex-col items-end lg:mx-0 lg:flex-row -mx-edge"> 
+        <div class="w-full lg:p-0 lg:w-8/12">
+            <a class="block -ml-screen-xl" href="{{ entry.url }}">
+                {% include "_components/_imager" with { image : entry.storyHeroImage[0] ?? '', w:16, h:9} %}
+            </a>
         </div>
-    {% endblock %}
-    {% endembed %}
+        <div class="w-full bg-white p-edge lg:w-4/12">
+          {{ storyContent }}
+        </div>
+    </div>
+{% endif %}
+{% endblock %}
+{% endembed %}
 </section>
+
 {% endif %}

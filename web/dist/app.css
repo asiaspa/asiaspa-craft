@@ -2059,6 +2059,31 @@ video {
   }
 }
 
+.text-bg {
+  display: inline !important;
+  background-size: 0% 100%;
+  background-image: linear-gradient(transparent 50%, var(--color-primary-300) 50%);
+  background-repeat: no-repeat;
+  will-change: background-size;
+  transition: background-size 0.3s ease-in-out;
+}
+
+.text-bg:hover {
+  background-size: 100% 100%;
+}
+
+body {
+  font-weight: var(--font-sans-regular);
+}
+
+.font-serif {
+  font-weight: var(--font-serif-regular);
+}
+
+.font-sans {
+  font-weight: var(--font-sans-regular);
+}
+
 .space-y-0 > :not(template) ~ :not(template) {
   --space-y-reverse: 0;
   margin-top: calc(0px * calc(1 - var(--space-y-reverse)));
