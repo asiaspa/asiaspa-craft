@@ -47,5 +47,10 @@ return [
     // 'useEmailAsUsername' => true,
     'usePathInfo' => true,
 
+    'dev' => [
+        // existing settings ...
+        'backupCommand' => getenv('BACKUP_COMMAND'),
+        'restoreCommand' => getenv('RESTORE_COMMAND'),
+    ],
 ];
 
