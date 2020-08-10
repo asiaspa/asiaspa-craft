@@ -1,0 +1,12 @@
+contentColumnType: string(255)
+fieldGroup: a7b23ced-f8be-4c09-bba7-84b5e4552f75
+handle: spaContactWebsite
+instructions: ''
+name: 'Spa - Contact - Website'
+searchable: true
+settings:
+  maxLength: '255'
+  placeholder: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Url

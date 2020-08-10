@@ -1,0 +1,22 @@
+contentColumnType: text
+fieldGroup: bb7ac3d9-894e-474f-a3d3-b4041b128417
+handle: asiaspaAwardsCategoryCriteria
+instructions: ''
+name: 'AsiaSpa Awards Category - Criteria'
+searchable: false
+settings:
+  availableTransforms: '*'
+  availableVolumes: '*'
+  cleanupHtml: true
+  columnType: text
+  purifierConfig: ''
+  purifyHtml: '1'
+  redactorConfig: Simple.json
+  removeEmptyTags: '1'
+  removeInlineStyles: '1'
+  removeNbsp: '1'
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\redactor\Field

@@ -6,6 +6,13 @@
 {% set baseUrl = alias('@assetsUrl') ~ '/' %}
 {% endspaceless %}
 
+{% set website = craft.globalSets()
+    .handle('website')
+    .with([
+        'websiteLogo',
+        'websiteLogoSimple'
+    ]).one() %}
+
 
 {# -------------------  html ------------------- #}
 {% minify %}
@@ -33,7 +40,7 @@
     {% header headerLink %}
     
     {# ------------------- SEO meta ------------------- #}
-    <title>AsiaSpa</title>
+    <title>{{ siteName }}</title>
     {% hook 'seomateMeta' %}
     {% include '_layouts/_components/_branding' %}
     <link rel="stylesheet" href="{{ rev('/dist/app.css') }}">
@@ -43,7 +50,7 @@
         {{ source("_layouts/_inline/_font.css") }}
     </style>
     {# temp typekit #}
-    <link rel="stylesheet" href="https://use.typekit.net/xus1aud.css">
+    <link rel="stylesheet" href="https://use.typekit.net/{{ website.websiteTypekitId }}.css">
 
     {# ------------------- Head JS ------------------- #}
     {# -- Polyfills detected by User-Agent as per: https://polyfill.io/v2/docs/examples#feature-detection -- #}
@@ -60,7 +67,7 @@
     </script>
 </head>
 
-<body class="overflow-x-hidden antialiased">
+<body class="overflow-x-hidden antialiased {{ block('bodyClass') }}">
     {# ------------------- SVG ------------------- #}
     {{ source("_layouts/_inline/_icons.twig") }}
 

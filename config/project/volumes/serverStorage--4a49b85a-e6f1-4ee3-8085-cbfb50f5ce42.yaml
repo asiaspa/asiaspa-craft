@@ -35,6 +35,6 @@ hasUrls: true
 name: 'Server Storage'
 settings:
   path: '@webroot/asset'
-sortOrder: 5
+sortOrder: 9
 type: craft\volumes\Local
 url: '@web/asset'

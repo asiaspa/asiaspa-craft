@@ -1,0 +1,194 @@
+fieldLayouts:
+  e05ef23d-ae02-43b6-a4ae-b5f79af0b313:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            autofocus: false
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            required: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\EntryTitleField
+            warning: null
+            width: 100
+          -
+            heading: Schedule
+            type: craft\fieldlayoutelements\Heading
+          -
+            style: tip
+            tip: 'The schedule here will automatically publish new tab. Yet you might need to go to Utilities > Clear Cache. '
+            type: craft\fieldlayoutelements\Tip
+          -
+            fieldUid: 6820d7e4-82e5-48f3-8d95-ffa1d923571d
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: 025e414c-d1b5-48ef-9105-89124641563c
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: fa12cbac-8d01-4a7a-9450-510f20c652c8
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: c318faaf-1083-4bec-8d61-699074c99339
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+        name: Details
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: 169958d1-dd60-4c0d-a595-5b4846c90410
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 3ec5983f-605e-46ed-9b26-9c53ba4003f7
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            type: craft\fieldlayoutelements\HorizontalRule
+          -
+            fieldUid: 4c1ebe46-2710-44f3-ba56-e4d0e7a3135d
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: 123697cb-e398-4943-8570-7241dd6b451a
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            type: craft\fieldlayoutelements\HorizontalRule
+          -
+            fieldUid: feb675da-2fb3-458d-912e-3bf9a45b80c2
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Intro
+        sortOrder: 2
+      -
+        elements:
+          -
+            fieldUid: dca2e8b9-2efd-4200-93d6-21693bae7cb6
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 596aba60-f2b2-44dd-88bb-4b7939a90312
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            type: craft\fieldlayoutelements\HorizontalRule
+          -
+            fieldUid: 11b198e7-27cf-4390-a11f-a7ff2f7f7bab
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Enter
+        sortOrder: 3
+      -
+        elements:
+          -
+            style: tip
+            tip: 'To set up the list of nominees, you should create all the ''spa'' entry for all the nominees, and configure the ''asiaspa award - nominee'' field in the ''spa'' entry.'
+            type: craft\fieldlayoutelements\Tip
+        name: Nominee
+        sortOrder: 4
+      -
+        elements:
+          -
+            style: tip
+            tip: 'To set up the list of nominees, you should create all the ''spa'' entry for all the winners, and configure the ''asiaspa award - winners'' field in the ''spa'' entry.'
+            type: craft\fieldlayoutelements\Tip
+          -
+            fieldUid: 35afec06-b8b4-47a9-a1a0-2f2333c71c96
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Winners
+        sortOrder: 5
+handle: generic
+hasTitleField: true
+name: generic
+section: c5da7e72-17dd-4006-bc25-85818dd2dccb
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

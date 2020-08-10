@@ -1,0 +1,11 @@
+contentColumnType: string(7)
+fieldGroup: f6ccb015-3533-491f-8f9c-775d16605b99
+handle: websiteColorGray300
+instructions: ''
+name: 'Website - Color - Gray 300'
+searchable: false
+settings:
+  defaultColor: '#c6c6c6'
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Color

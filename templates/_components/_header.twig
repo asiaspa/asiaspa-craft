@@ -1,14 +1,6 @@
 {# TODO: slow rendering time. ~250ms #}
 
 {% set headerNodes = craft.navigate.raw('header ') %}
-
-{% set globalWebsite = craft.globalSets()
-    .handle('website')
-    .with([
-        'websiteLogo',
-        'websiteLogoSimple'
-    ]).one() %}
-
 {# :class="{'sticky': atTop === false } #}
 <header class="sticky top-0 z-50 w-full transition duration-300 bg-white border-b border-primary-300"
         x-data="{dropdown: false, search: false, atTop: true}"
@@ -18,13 +10,13 @@
         {# ------------------- menu logo ------------------- #}
         <a class="flex flex-shrink-0 w-40 h-16 px-6 py-4 border-none"
            href="{{ siteUrl }}">
-            {% if globalWebsite.websiteLogo | length and globalWebsite.websiteLogoSimple | length %}
+            {% if website.websiteLogo | length and website.websiteLogoSimple | length %}
             <img class="block w-auto h-full"
                  :class="{'hidden': atTop === false }"
-                 src="{{ rev(globalWebsite.websiteLogo[0].url()) }}" />
+                 src="{{ rev(website.websiteLogo[0].url()) }}" />
             <img class="hidden block w-auto h-full"
                  :class="{'hidden': atTop === true }"
-                 src="{{ rev(globalWebsite.websiteLogoSimple[0].url()) }}" />
+                 src="{{ rev(website.websiteLogoSimple[0].url()) }}" />
             {% else %}
             <span class="h-8 p-4 text-xl font-semibold tracking-tight">{{ siteName }}</span>
             {% endif %}

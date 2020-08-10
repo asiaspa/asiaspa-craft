@@ -1,0 +1,21 @@
+contentColumnType: string
+fieldGroup: 847d91f3-2f4a-4f56-9f9d-40c20e080811
+handle: storyRelatedStories
+instructions: ''
+name: 'Story - Related Stories'
+searchable: false
+settings:
+  allowSelfRelations: false
+  limit: ''
+  localizeRelations: false
+  selectionLabel: ''
+  showSiteMenu: true
+  source: null
+  sources:
+    - 'section:5e15a326-1e20-4d38-86df-6f2bc3183b14'
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

@@ -1,0 +1,45 @@
+fieldLayouts:
+  79d1009e-9c00-487e-9d5e-b212231cd723:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            autofocus: false
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            required: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: googleCloudSpa
+hasUrls: true
+name: 'Google Cloud / Spa'
+settings:
+  bucket: asiaspa
+  bucketSelectionMode: choose
+  expires: ''
+  keyFileContents: $GCS_KEY
+  projectId: $GCS_PROJECT_ID
+  subfolder: spa
+sortOrder: 3
+type: craft\googlecloud\Volume
+url: 'http://storage.googleapis.com/asiaspa/'

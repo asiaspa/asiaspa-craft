@@ -1,0 +1,33 @@
+contentColumnType: text
+fieldGroup: a7b23ced-f8be-4c09-bba7-84b5e4552f75
+handle: spaContactMap
+instructions: ''
+name: 'Spa - Contact - Map'
+searchable: false
+settings:
+  boundary: '""'
+  boundaryRestrictionNELat: null
+  boundaryRestrictionNELng: null
+  boundaryRestrictionSWLat: null
+  boundaryRestrictionSWLng: null
+  country: null
+  countryRestriction: null
+  height: null
+  hideAddress: ''
+  hideLatLng: null
+  hideMap: ''
+  hideSearch: ''
+  lat: 22.350627
+  lng: 114.1849161
+  maxZoom: '18'
+  minZoom: '3'
+  showCurrentLocation: ''
+  showLatLng: ''
+  showW3WField: false
+  showW3WGrid: false
+  size: normal
+  typeRestriction: null
+  zoom: 16
+translationKeyFormat: null
+translationMethod: none
+type: ether\simplemap\fields\MapField

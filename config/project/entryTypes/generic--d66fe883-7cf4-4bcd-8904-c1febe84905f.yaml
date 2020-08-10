@@ -1,0 +1,53 @@
+fieldLayouts:
+  7ba5cbcb-147e-4110-9696-04e259edea69:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            autofocus: false
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            required: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\EntryTitleField
+            warning: null
+            width: 100
+        name: Pages
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: 68752c4e-cc58-4744-a1c4-20778860741f
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: 'Tab 1'
+        sortOrder: 2
+handle: generic
+hasTitleField: true
+name: Generic
+section: 417974cf-15b0-4807-b344-075e1687f290
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

@@ -1,0 +1,23 @@
+contentColumnType: string
+fieldGroup: 847d91f3-2f4a-4f56-9f9d-40c20e080811
+handle: storyCategory
+instructions: ''
+name: 'Story - Category'
+searchable: true
+settings:
+  allowLimit: false
+  allowMultipleSources: false
+  allowSelfRelations: false
+  branchLimit: '1'
+  limit: null
+  localizeRelations: false
+  selectionLabel: ''
+  showSiteMenu: true
+  source: 'group:b85be20d-3d22-431f-a700-c2d63cf40881'
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Categories

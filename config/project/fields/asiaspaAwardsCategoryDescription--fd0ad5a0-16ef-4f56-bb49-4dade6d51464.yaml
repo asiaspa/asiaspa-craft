@@ -1,0 +1,18 @@
+contentColumnType: text
+fieldGroup: bb7ac3d9-894e-474f-a3d3-b4041b128417
+handle: asiaspaAwardsCategoryDescription
+instructions: ''
+name: 'AsiaSpa Awards Category - Description'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: '1'
+  placeholder: ''
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

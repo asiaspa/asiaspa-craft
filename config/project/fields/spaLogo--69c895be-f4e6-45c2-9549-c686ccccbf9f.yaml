@@ -1,0 +1,31 @@
+contentColumnType: string
+fieldGroup: a7b23ced-f8be-4c09-bba7-84b5e4552f75
+handle: spaLogo
+instructions: 'Transparent / White background only.'
+name: 'Spa - Logo'
+searchable: false
+settings:
+  allowSelfRelations: false
+  allowedKinds:
+    - image
+  defaultUploadLocationSource: 'volume:883ab42c-10f1-4e32-a559-61f23e4e3775'
+  defaultUploadLocationSubpath: ''
+  limit: '1'
+  localizeRelations: false
+  restrictFiles: '1'
+  selectionLabel: 'Select the Hero Image'
+  showSiteMenu: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  singleUploadLocationSource: 'volume:4a49b85a-e6f1-4ee3-8085-cbfb50f5ce42'
+  singleUploadLocationSubpath: 'story/{slug}'
+  source: null
+  sources:
+    - 'volume:571cb7c1-00fa-4aef-9106-c5f0d93ffd03'
+  targetSiteId: null
+  useSingleFolder: false
+  validateRelatedElements: false
+  viewMode: large
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Assets

@@ -1,0 +1,11 @@
+contentColumnType: string(7)
+fieldGroup: f6ccb015-3533-491f-8f9c-775d16605b99
+handle: websiteColorBlack
+instructions: ''
+name: 'Website - Color - Black'
+searchable: false
+settings:
+  defaultColor: '#000000'
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Color

@@ -3,15 +3,27 @@ fieldLayouts:
   0fcb5096-1206-45dc-a6f4-0a1982c71f1b:
     tabs:
       -
-        fields:
-          12adf5d8-5a0b-46bf-b44b-cf947479c4e2:
-            required: '0'
-            sortOrder: '0'
-          bbf16101-636a-4cbb-8c9b-2857a3ae00cc:
-            required: '0'
-            sortOrder: '1'
+        elements:
+          -
+            fieldUid: 12adf5d8-5a0b-46bf-b44b-cf947479c4e2
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: bbf16101-636a-4cbb-8c9b-2857a3ae00cc
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: Content
-        sortOrder: '1'
+        sortOrder: 1
 fields:
   12adf5d8-5a0b-46bf-b44b-cf947479c4e2:
     contentColumnType: text
@@ -19,7 +31,7 @@ fields:
     handle: hotspots
     instructions: ''
     name: Hotspots
-    searchable: '1'
+    searchable: true
     settings:
       relatedAssetHandle: image
     translationKeyFormat: null
@@ -31,7 +43,7 @@ fields:
     handle: description
     instructions: ''
     name: Description
-    searchable: '1'
+    searchable: true
     settings:
       byteLimit: null
       charLimit: null

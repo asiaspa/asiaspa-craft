@@ -3,15 +3,27 @@ fieldLayouts:
   cbb8c0c1-def8-4686-b572-838620d2d909:
     tabs:
       -
-        fields:
-          475ee74b-a539-4e6e-8e80-d4d24a18df18:
-            required: '0'
-            sortOrder: '1'
-          c7853873-dc07-4748-90ff-6bb32d1b269d:
-            required: '1'
-            sortOrder: '0'
+        elements:
+          -
+            fieldUid: c7853873-dc07-4748-90ff-6bb32d1b269d
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 475ee74b-a539-4e6e-8e80-d4d24a18df18
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: Content
-        sortOrder: '1'
+        sortOrder: 1
 fields:
   475ee74b-a539-4e6e-8e80-d4d24a18df18:
     contentColumnType: text
@@ -19,7 +31,7 @@ fields:
     handle: caption
     instructions: ''
     name: caption
-    searchable: '1'
+    searchable: true
     settings:
       byteLimit: null
       charLimit: null
@@ -38,7 +50,7 @@ fields:
     handle: image
     instructions: ''
     name: Image
-    searchable: '1'
+    searchable: true
     settings:
       allowSelfRelations: false
       allowedKinds:
