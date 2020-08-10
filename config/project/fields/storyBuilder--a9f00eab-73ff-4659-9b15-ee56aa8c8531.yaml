@@ -1,11 +1,11 @@
 contentColumnType: string
 fieldGroup: 847d91f3-2f4a-4f56-9f9d-40c20e080811
-handle: storyContentBuilder
+handle: storyBuilder
 instructions: ''
-name: 'Story - Content Builder'
+name: 'Story - Builder'
 searchable: true
 settings:
-  contentTable: '{{%matrixcontent_storycontentbuilder_1}}'
+  contentTable: '{{%matrixcontent_storybuilder_1}}'
   maxBlocks: ''
   minBlocks: ''
   propagationMethod: all
