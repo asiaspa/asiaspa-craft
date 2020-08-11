@@ -1,0 +1,15 @@
+{% set coordinates = [] %}
+{% set coordinates = coordinates | merge(['[' ~ entry.spaContactMap.lat ~ ',' ~ entry.spaContactMap.lng ~ ']']) %}
+
+{{ dump(coordinates) }}
+{{ entry.spaContactMap.lat }} , {{ entry.spaContactMap.lng }}
+
+{% for coordinate in coordinates %}
+{{ coordinate }}
+{% endfor %}
+
+{{  coordinates[0]  }}
+
+<img
+    src="{{ craft.maps.img({ center: [entry.spaContactMap.lat, entry.spaContactMap.lng] }) }}"
+/> 

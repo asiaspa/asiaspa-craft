@@ -46,7 +46,7 @@
 <div class="mb-16 swiper-container px-screen-xl">
 	<div class="swiper-wrapper">
 		{% for entry in entries %}
-			{% if entry.storyHeroImageSetLandscape %}
+			{% if entry.storyLandscape %}
 			<div class="w-3/4 swiper-slide sm:w-1/2 md:w-2/3 lg:w-1/2">
 				{% include "_stories/_story-card" with { 'entry': entry, 'landscape': true} %}
 			</div>

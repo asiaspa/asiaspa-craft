@@ -1,13 +1,12 @@
+
 {{ website.faviconCode | raw }}
 
 <style>
 :root {
-    --font-sans: "{{ website.websiteSansSerifFontFontName }}", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue","Arial", "Noto Sans", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --font-sans-regular: {{ website.websiteSansSerifFontRegularFontWeight }};
-    --font-sans-bold: {{ website.websiteSansSerifFontBoldFontWeight }};
-    --font-serif: "{{ website.websiteSerifFontFontName }}", "Georgia, Cambria", "Times New Roman", "Times", "serif";
-    --font-serif-regular: {{ website.websiteSerifFontRegularFontWeight }};
-    --font-serif-bold: {{ website.websiteSerifFontBoldFontWeight }}; 
+    --font-sans: "brandon-grotesque", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue","Arial", "Noto Sans", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-serif: "ivypresto-text", "Georgia, Cambria", "Times New Roman", "Times", "serif";
+    --font-headline: "ivypresto-headline", "Georgia, Cambria", "Times New Roman", "Times", "serif";
+    --font-display: "ivypresto-display", "Georgia, Cambria", "Times New Roman", "Times", "serif";
     --color-black: {{ website.websiteColorBlack }};
     --color-white: {{ website.websiteColorWhite }};
     --color-primary-100: {{ website.websiteColorPrimary100 }};

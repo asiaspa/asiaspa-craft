@@ -1,0 +1,62 @@
+{% set layouts = (':' ~ layout)|split(' ') %}
+
+{%- set imageLayout -%}
+{% for layout in layouts %}
+{% set pattern = layout|split(':') %}
+{% set p = pattern|first == "" ? "" : pattern|first ~ ":" %}
+{% switch pattern|first %}
+    {% case '' %}
+        {% switch pattern|last %}
+            {% case 'card' or 'widecard' or 'widelist' %}{{ p }}w-full
+            {% case 'list' %}{{ p }}w-1/3
+        {% endswitch %}
+    {% case 'sm' %}
+        {% switch pattern|last %}
+            {% case 'card' or 'widecard' %}{{ p }}w-full
+            {% case 'list' %}{{ p }}w-1/3
+            {% case 'widelist' %}{{ p }}w-1/2
+        {% endswitch %}
+    {% case 'md' or 'lg' %}
+        {% switch pattern|last %}
+            {% case 'card' or 'widecard' %}{{ p }}w-full
+            {% case 'list' %}{{ p }}w-1/3
+            {% case 'widelist' %}{{ p }}w-2/3
+        {% endswitch %}
+    {% endswitch %}
+{% endfor %}
+{% endset %}
+
+{%- set contentLayout -%}
+{% for layout in layouts %}
+{% set pattern = layout|split(':') %}
+{% set p = pattern|first == "" ? "" : pattern|first ~ ":" %}
+{% switch pattern|first %}
+    {% case '' %}
+        {% switch pattern|last %}
+            {% case 'card' or 'widecard' or 'widelist' %}{{ p }}w-full {{ p }}pt-4 {{ p }}pl-0
+            {% case 'list' %}{{ p }}w-2/3 {{ p }}pt-0 {{ p }}pl-4
+        {% endswitch %}
+    {% case 'sm' %}
+        {% switch pattern|last %}
+            {% case 'card' or 'widecard' %}{{ p }}w-full {{ p }}pt-4 {{ p }}pl-0
+            {% case 'list' %}{{ p }}w-2/3 {{ p }}pt-0 {{ p }}pl-4
+            {% case 'widelist' %}{{ p }}w-1/2 {{ p }}pt-0 {{ p }}pl-4
+        {% endswitch %}
+    {% case 'md' or 'lg' %}
+        {% switch pattern|last %}
+            {% case 'card' or 'widecard' %}{{ p }}w-full {{ p }}pt-4 {{ p }}pl-0
+            {% case 'list' %}{{ p }}w-2/3 {{ p }}pt-0 {{ p }}pl-6
+            {% case 'widelist' %}{{ p }}w-1/3 {{ p }}pt-0 {{ p }}pl-6
+        {% endswitch %}
+    {% endswitch %}
+{% endfor %}
+{% endset %}
+
+<div class="flex flex-wrap">
+    <a class="block {{ imageLayout }}" href="{{ entry.url }}">
+        {{ block('image') }}
+    </a>
+    <div class="self-center {{ contentLayout }}">
+        {{ block('content') }}
+    </div>
+</div>
