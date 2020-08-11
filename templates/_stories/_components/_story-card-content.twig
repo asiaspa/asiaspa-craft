@@ -1,20 +1,32 @@
-{% set breakpoints = ['', 'sm', 'md', 'lg'] %}
+{% set break = false %}
 
-{%- set headline -%}
-{% for breakpoint in breakpoints %}
-    
-
+{%- set headlineStyle -%}
+{% for layout in layouts if not break %}
+{% set pattern = layout|split(':') %}
+{% set p = pattern|first == "" ? "" : pattern|first ~ ":" %}
+    {% if size == pattern|first %}
+        {% set break = true %}
+    {% endif %}
+    {% switch pattern|first %}
+        {% case '' %}{% if pattern|last == 'card' or pattern|last == 'widecard' %}text-3xl {% else %}text-2xl {% endif %}
+        {% case 'sm' %}{{ p }}text-3xl
+        {% case 'md' %}{{ p }}text-4xl {{p}}font-display
+        {% case 'lg' %}{{ p }}text-5xl {{p}}font-display
+    {% endswitch %}
 {% endfor %}
-{% endset %}
+{%- endset -%}
 
-<div class="space-y-4">
+<div class="space-y-2">
     <div class="space-x-4">
         {% include "_components/_category-tag" with { category : entry.storyCategory } %}
         {% include "_components/_category-tag" with { category : entry.storyPrintIssue } %}
     </div>
     <a class="space-y-4" href="{{ entry.url }}">
-        <h4 class="text-2xl font-thin leading-tight tracking-wide font-headline lg:text-3xl text-bg">{{ entry.title }}</h4>
+        <h4 class="font-hairline leading-tight font-headline text-bg {{ headlineStyle }} ">{{ entry.title }}</h4>
         <hr class="block w-20 border-t-2 lg:my-4 border-primary-500" />
         <p class="lg:text-lg text-md">{{ entry.storyStandfirst }}</p>
     </a>
+    {% if byline %}
+    <p class="block mt-2 text-sm text-gray-700">{{ entry.postDate | date("M d, Y") }}, by <a href="{{ url('authors/' ~ entry.storyByline[0].username ?? entry.author.username ) }}">{{ entry.storyByline[0] ?? entry.author }}</a></p>
+    {% endif %}
 </div>

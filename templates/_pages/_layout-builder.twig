@@ -24,7 +24,7 @@
 
 
 {% for block in matrix %}
-    {% include  "_pages/_components/_" ~ block.type | lower with {'block':block} %}
+    {% include  "_pages/_blocks/_" ~ block.type | lower with {'block':block} %}
 {% endfor %}
 
 {% block content %}{% endblock %}

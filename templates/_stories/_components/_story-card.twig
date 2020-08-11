@@ -4,8 +4,9 @@
     ! scale: specific the element scale on the website #}
 
 {% set layout = layout ?? 'list sm:list md:list lg:list' %}
-{% set scale = scale ?? 'lg' %}
-{% set exclude = exclude ?? null %}
+{% set size = size ?? 'lg' %}
+{% set byline = byline ?? true %}
+
 
 {% embed "_stories/_components/_story-card-container" %}
 {% block image %}

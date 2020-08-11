@@ -28,23 +28,6 @@
 {# -------------------  Content  ------------------- #}
 {% block main %}
 
-{% embed "_containers/_container"%}
-{% block content %}
-    {% include "_stories/_components/_story-card" with {
-        'entry': craft.entries.section('story').orderBy('RAND()').one(),
-        'layout': 'list sm:widelist',
-        'scale':  'md',
-        'exclude': null
-    } %}
-
-    {# {% include "_stories/_components/_story-card" with {
-        'entry': craft.entries.section('story').orderBy('RAND()').one(),
-        'layout': [2,2,0,0],
-    } %} #}
-
-{% endblock %}
-{% endembed %}
-
 {# logo #}
 {% embed "_containers/_container"%}
 {% block content %}
