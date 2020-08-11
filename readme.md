@@ -9,6 +9,7 @@ Asiaspa website revamp project
 - [ ] logo -> svg insert
 - [ ] slim the swiper js
 - [ ] searchit template query predefined
+- [ ] pagebulder - flip gallery
 
 ## Development Guideline
 ### Twig Template Development

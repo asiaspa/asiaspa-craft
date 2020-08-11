@@ -1,22 +1,8 @@
 {% set blocks = matrix.with([
-
+    
 ]) %}
 
 
 {% for block in matrix %}
-    {% include  "_stories/_components/_" ~ block.type | lower with {'block':block} %}
+    {% include  "_stories/_blocks/_" ~ block.type | lower with {'block':block} %}
 {% endfor %}
-
-{# {% switch block.type %}
-{% case 'gallery' %}
-{% include '_story/_components/_trigger' with { type: 'gallery'} %}
-{% case 'embed' %}
-{% include '_story/_components/_trigger' with { type: 'embed'} %}
-{% case 'relatedStory' %}
-{% include '_story/_components/_trigger' with { type: 'related-story' } %}
-{% case 'richTextEditor' %}
-{% include '_story/_components/_rich-text-editor' %}
-{% case 'imageHotspot' %}
-{% include '_story/_components/_image-hotspot' %}
-{% endswitch %} #}
- 

@@ -11,7 +11,7 @@
         {% case '' %}{% if pattern|last == 'card' or pattern|last == 'widecard' %}text-3xl {% else %}text-2xl {% endif %}
         {% case 'sm' %}{{ p }}text-3xl
         {% case 'md' %}{{ p }}text-4xl {{p}}font-display
-        {% case 'lg' %}{{ p }}text-5xl {{p}}font-display
+        {% case 'lg' %}{{ p }}text-4xl {{p}}font-display
     {% endswitch %}
 {% endfor %}
 {%- endset -%}

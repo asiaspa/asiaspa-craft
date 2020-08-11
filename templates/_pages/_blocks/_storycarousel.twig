@@ -46,7 +46,7 @@
 <div class="mb-16 swiper-container px-screen-xl">
 	<div class="swiper-wrapper">
 		{% for entry in entries %}
-			{% if not entry.storyLandscape and loop.index is even %}
+			{% if entry.storyLandscape %}
 			<div class="w-10/12 swiper-slide sm:w-1/2 md:w-2/3 lg:w-1/2">
 				{% include "_stories/_components/_story-card" with {
 					'entry': entry,
@@ -62,7 +62,8 @@
 					'layout': 'card sm:card md:card lg:card',
 					'size': 'md',
 					'byline': false	
-				} %}</div>
+				} %}
+			</div>
 
 			{% endif %}
 		{% endfor %}

@@ -1,5 +1,14 @@
-<div class="px-edge">
-<div class="font-serif leading-normal prose prose-lg text-black md:prose-xl">
-    {{ block.richTextEditor }}
-</div>
-</div>
+{# ! TODO: adblock #}
+{% embed "_containers/_container" with {'breakpoint':'lg'} %}
+{% block content %}
+    <section class="flex flex-row pt-16 md:space-x-16">
+        <div class="sticky hidden h-32 bg-primary-100 md:block" style="width:300px; top:64px"></div>
+        <div class="flex justify-end">
+            <div class="font-serif leading-normal prose prose-lg text-black md:prose-xl">
+                {{ block.richTextEditor }}
+            </div>
+        </div>
+    </section>
+{% endblock %}
+{% endembed %}
+
