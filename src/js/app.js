@@ -8,7 +8,7 @@ import Swiper from 'swiper/bundle'; // import Swiper styles
 
 sal();
 
-const swiper = new Swiper('.swiper-container', {
+const swiperCarousel = new Swiper('.js-swiper-carousel', {
   // Optional parameters
   // loop: true,
 //   autoHeight: true,
@@ -17,6 +17,35 @@ const swiper = new Swiper('.swiper-container', {
   spaceBetween: 48,
   slidesPerView: 'auto',
   // slidesPerGroup: 4,
+  grabCursor: true,
+  freeMode: true,
+  freeModeSticky: true,
+  observer: true,
+  observeParents: true,
+  mousewheel: {
+    releaseOnEdges: true,
+    sensitivity: 1.5
+  },
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  scrollbar: {
+    el: '.swiper-scrollbar',
+    draggable: true
+  }
+})
+
+const swiperSlider = new Swiper('.js-swiper-slider', {
+  // Optional parameters
+  // loop: true,
+  // autoHeight: true,
+  speed: 300,
+  watchOverflow: true,
+  spaceBetween: 48,
+  slidesPerView: 'auto',
+  // slidesPerGroup: 3,
   grabCursor: true,
   freeMode: true,
   freeModeSticky: true,

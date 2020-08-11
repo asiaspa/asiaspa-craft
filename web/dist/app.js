@@ -11895,7 +11895,7 @@ __webpack_require__.r(__webpack_exports__);
  // import Swiper styles
 
 sal_js__WEBPACK_IMPORTED_MODULE_5___default()();
-var swiper = new swiper_bundle__WEBPACK_IMPORTED_MODULE_6__["default"]('.swiper-container', {
+var swiperCarousel = new swiper_bundle__WEBPACK_IMPORTED_MODULE_6__["default"]('.js-swiper-carousel', {
   // Optional parameters
   // loop: true,
   //   autoHeight: true,
@@ -11904,6 +11904,34 @@ var swiper = new swiper_bundle__WEBPACK_IMPORTED_MODULE_6__["default"]('.swiper-
   spaceBetween: 48,
   slidesPerView: 'auto',
   // slidesPerGroup: 4,
+  grabCursor: true,
+  freeMode: true,
+  freeModeSticky: true,
+  observer: true,
+  observeParents: true,
+  mousewheel: {
+    releaseOnEdges: true,
+    sensitivity: 1.5
+  },
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
+  },
+  scrollbar: {
+    el: '.swiper-scrollbar',
+    draggable: true
+  }
+});
+var swiperSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_6__["default"]('.js-swiper-slider', {
+  // Optional parameters
+  // loop: true,
+  // autoHeight: true,
+  speed: 300,
+  watchOverflow: true,
+  spaceBetween: 48,
+  slidesPerView: 'auto',
+  // slidesPerGroup: 3,
   grabCursor: true,
   freeMode: true,
   freeModeSticky: true,

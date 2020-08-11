@@ -17,7 +17,7 @@
 <article>
     {% embed "_containers/_container" with {'breakpoint':'xl'} %}
     {% block content %}
-        <section class="flex flex-col mt-16 md:flex-row -mx-edge">
+        <section class="flex flex-col md:mt-16 md:flex-row -mx-edge">
             <div class="w-full md:w-1/2 ">
                 <div class="-ml-screen-xl">
                     {% include "_components/_imager" with { image : entry.storyHeroImage[0] ?? ''} %}

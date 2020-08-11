@@ -94,4 +94,4 @@ fields:
     type: verbb\supertable\fields\SuperTableField
 handle: imageHotspot
 name: 'Image Hotspot'
-sortOrder: 3
+sortOrder: 5

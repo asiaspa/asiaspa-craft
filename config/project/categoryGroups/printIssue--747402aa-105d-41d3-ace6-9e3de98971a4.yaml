@@ -66,7 +66,7 @@ name: 'Print Issue'
 siteSettings:
   5058e36f-39fa-4fe2-982d-2a6082be4a27:
     hasUrls: true
-    template: _categories/_category
+    template: _categories/_generic
     uriFormat: 'print-issue/{slug}'
 structure:
   maxLevels: 1

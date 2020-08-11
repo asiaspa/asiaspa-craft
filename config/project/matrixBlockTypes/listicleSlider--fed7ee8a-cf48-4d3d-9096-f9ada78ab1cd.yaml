@@ -1,11 +1,11 @@
 field: a9f00eab-73ff-4659-9b15-ee56aa8c8531
 fieldLayouts:
-  e5b54909-cc62-4c99-80c1-6f0746748fb2:
+  754eef24-cd6c-4ae4-b32c-c9abc560b5b8:
     tabs:
       -
         elements:
           -
-            fieldUid: a3d41890-6851-45de-8d47-b1e6a809da40
+            fieldUid: 672eb021-171d-4eee-81d0-fe90018c3534
             instructions: null
             label: null
             required: false
@@ -14,7 +14,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: b955502d-2b5f-48fa-b90f-5cc740cb4fd5
+            fieldUid: 8fd13f01-7952-450b-8ca6-325a4b4f4867
             instructions: null
             label: null
             required: false
@@ -23,7 +23,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 4a336fb2-d2ca-4881-9be7-c91acb061b37
+            fieldUid: 3c50f491-f27b-4d1e-a9f9-817ad051ece7
             instructions: null
             label: null
             required: false
@@ -34,28 +34,30 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  4a336fb2-d2ca-4881-9be7-c91acb061b37:
-    contentColumnType: string
+  3c50f491-f27b-4d1e-a9f9-817ad051ece7:
+    contentColumnType: text
     fieldGroup: null
-    handle: form
+    handle: richTextEditor
     instructions: ''
-    name: Form
+    name: 'Rich Text Editor'
     searchable: false
     settings:
-      allowSelfRelations: false
-      limit: '1'
-      localizeRelations: false
-      selectionLabel: ''
-      showSiteMenu: true
-      source: null
-      sources: '*'
-      targetSiteId: null
-      validateRelatedElements: false
-      viewMode: null
+      availableTransforms: '*'
+      availableVolumes: ''
+      cleanupHtml: true
+      columnType: text
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: Simple.json
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
     translationKeyFormat: null
-    translationMethod: site
-    type: barrelstrength\sproutforms\fields\Forms
-  a3d41890-6851-45de-8d47-b1e6a809da40:
+    translationMethod: none
+    type: craft\redactor\Field
+  672eb021-171d-4eee-81d0-fe90018c3534:
     contentColumnType: text
     fieldGroup: null
     handle: heading
@@ -74,25 +76,25 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-  b955502d-2b5f-48fa-b90f-5cc740cb4fd5:
-    contentColumnType: text
+  8fd13f01-7952-450b-8ca6-325a4b4f4867:
+    contentColumnType: string
     fieldGroup: null
-    handle: description
+    handle: slide
     instructions: ''
-    name: Description
+    name: Slide
     searchable: false
     settings:
-      byteLimit: null
-      charLimit: null
-      code: ''
-      columnType: null
-      initialRows: '4'
-      multiline: ''
-      placeholder: ''
-      uiMode: normal
+      contentTable: '{{%stc_slide}}'
+      fieldLayout: row
+      maxRows: ''
+      minRows: ''
+      placeholderKey: null
+      propagationMethod: all
+      selectionLabel: ''
+      staticField: ''
     translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\PlainText
-handle: form
-name: Form
-sortOrder: 8
+    translationMethod: site
+    type: verbb\supertable\fields\SuperTableField
+handle: listicleSlider
+name: 'Listicle Slider'
+sortOrder: 12
