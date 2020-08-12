@@ -2073,15 +2073,7 @@ video {
 }
 
 body {
-  font-weight: var(--font-sans-regular);
-}
-
-.font-serif {
-  font-weight: var(--font-serif-regular);
-}
-
-.font-sans {
-  font-weight: var(--font-sans-regular);
+  font-weight: 300;
 }
 
 .space-y-0 > :not(template) ~ :not(template) {
@@ -4166,6 +4158,14 @@ body {
   font-family: var(--font-serif);
 }
 
+.font-headline {
+  font-family: var(--font-headline);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
 .font-hairline {
   font-weight: 100;
 }
@@ -4200,22 +4200,6 @@ body {
 
 .font-black {
   font-weight: 900;
-}
-
-.font-sans-regular {
-  font-weight: var(--font-sans-regular);
-}
-
-.font-sans-bold {
-  font-weight: var(--font-sans-bold);
-}
-
-.font-serif-regular {
-  font-weight: var(--font-serif-regular);
-}
-
-.font-serif-bold {
-  font-weight: var(--font-serif-bold);
 }
 
 .hover\:font-hairline:hover {
@@ -4254,22 +4238,6 @@ body {
   font-weight: 900;
 }
 
-.hover\:font-sans-regular:hover {
-  font-weight: var(--font-sans-regular);
-}
-
-.hover\:font-sans-bold:hover {
-  font-weight: var(--font-sans-bold);
-}
-
-.hover\:font-serif-regular:hover {
-  font-weight: var(--font-serif-regular);
-}
-
-.hover\:font-serif-bold:hover {
-  font-weight: var(--font-serif-bold);
-}
-
 .focus\:font-hairline:focus {
   font-weight: 100;
 }
@@ -4304,22 +4272,6 @@ body {
 
 .focus\:font-black:focus {
   font-weight: 900;
-}
-
-.focus\:font-sans-regular:focus {
-  font-weight: var(--font-sans-regular);
-}
-
-.focus\:font-sans-bold:focus {
-  font-weight: var(--font-sans-bold);
-}
-
-.focus\:font-serif-regular:focus {
-  font-weight: var(--font-serif-regular);
-}
-
-.focus\:font-serif-bold:focus {
-  font-weight: var(--font-serif-bold);
 }
 
 .h-0 {
@@ -14086,6 +14038,14 @@ body {
     font-family: var(--font-serif);
   }
 
+  .sm\:font-headline {
+    font-family: var(--font-headline);
+  }
+
+  .sm\:font-display {
+    font-family: var(--font-display);
+  }
+
   .sm\:font-hairline {
     font-weight: 100;
   }
@@ -14120,22 +14080,6 @@ body {
 
   .sm\:font-black {
     font-weight: 900;
-  }
-
-  .sm\:font-sans-regular {
-    font-weight: var(--font-sans-regular);
-  }
-
-  .sm\:font-sans-bold {
-    font-weight: var(--font-sans-bold);
-  }
-
-  .sm\:font-serif-regular {
-    font-weight: var(--font-serif-regular);
-  }
-
-  .sm\:font-serif-bold {
-    font-weight: var(--font-serif-bold);
   }
 
   .sm\:hover\:font-hairline:hover {
@@ -14174,22 +14118,6 @@ body {
     font-weight: 900;
   }
 
-  .sm\:hover\:font-sans-regular:hover {
-    font-weight: var(--font-sans-regular);
-  }
-
-  .sm\:hover\:font-sans-bold:hover {
-    font-weight: var(--font-sans-bold);
-  }
-
-  .sm\:hover\:font-serif-regular:hover {
-    font-weight: var(--font-serif-regular);
-  }
-
-  .sm\:hover\:font-serif-bold:hover {
-    font-weight: var(--font-serif-bold);
-  }
-
   .sm\:focus\:font-hairline:focus {
     font-weight: 100;
   }
@@ -14224,22 +14152,6 @@ body {
 
   .sm\:focus\:font-black:focus {
     font-weight: 900;
-  }
-
-  .sm\:focus\:font-sans-regular:focus {
-    font-weight: var(--font-sans-regular);
-  }
-
-  .sm\:focus\:font-sans-bold:focus {
-    font-weight: var(--font-sans-bold);
-  }
-
-  .sm\:focus\:font-serif-regular:focus {
-    font-weight: var(--font-serif-regular);
-  }
-
-  .sm\:focus\:font-serif-bold:focus {
-    font-weight: var(--font-serif-bold);
   }
 
   .sm\:h-0 {
@@ -24007,6 +23919,14 @@ body {
     font-family: var(--font-serif);
   }
 
+  .md\:font-headline {
+    font-family: var(--font-headline);
+  }
+
+  .md\:font-display {
+    font-family: var(--font-display);
+  }
+
   .md\:font-hairline {
     font-weight: 100;
   }
@@ -24041,22 +23961,6 @@ body {
 
   .md\:font-black {
     font-weight: 900;
-  }
-
-  .md\:font-sans-regular {
-    font-weight: var(--font-sans-regular);
-  }
-
-  .md\:font-sans-bold {
-    font-weight: var(--font-sans-bold);
-  }
-
-  .md\:font-serif-regular {
-    font-weight: var(--font-serif-regular);
-  }
-
-  .md\:font-serif-bold {
-    font-weight: var(--font-serif-bold);
   }
 
   .md\:hover\:font-hairline:hover {
@@ -24095,22 +23999,6 @@ body {
     font-weight: 900;
   }
 
-  .md\:hover\:font-sans-regular:hover {
-    font-weight: var(--font-sans-regular);
-  }
-
-  .md\:hover\:font-sans-bold:hover {
-    font-weight: var(--font-sans-bold);
-  }
-
-  .md\:hover\:font-serif-regular:hover {
-    font-weight: var(--font-serif-regular);
-  }
-
-  .md\:hover\:font-serif-bold:hover {
-    font-weight: var(--font-serif-bold);
-  }
-
   .md\:focus\:font-hairline:focus {
     font-weight: 100;
   }
@@ -24145,22 +24033,6 @@ body {
 
   .md\:focus\:font-black:focus {
     font-weight: 900;
-  }
-
-  .md\:focus\:font-sans-regular:focus {
-    font-weight: var(--font-sans-regular);
-  }
-
-  .md\:focus\:font-sans-bold:focus {
-    font-weight: var(--font-sans-bold);
-  }
-
-  .md\:focus\:font-serif-regular:focus {
-    font-weight: var(--font-serif-regular);
-  }
-
-  .md\:focus\:font-serif-bold:focus {
-    font-weight: var(--font-serif-bold);
   }
 
   .md\:h-0 {
@@ -33928,6 +33800,14 @@ body {
     font-family: var(--font-serif);
   }
 
+  .lg\:font-headline {
+    font-family: var(--font-headline);
+  }
+
+  .lg\:font-display {
+    font-family: var(--font-display);
+  }
+
   .lg\:font-hairline {
     font-weight: 100;
   }
@@ -33962,22 +33842,6 @@ body {
 
   .lg\:font-black {
     font-weight: 900;
-  }
-
-  .lg\:font-sans-regular {
-    font-weight: var(--font-sans-regular);
-  }
-
-  .lg\:font-sans-bold {
-    font-weight: var(--font-sans-bold);
-  }
-
-  .lg\:font-serif-regular {
-    font-weight: var(--font-serif-regular);
-  }
-
-  .lg\:font-serif-bold {
-    font-weight: var(--font-serif-bold);
   }
 
   .lg\:hover\:font-hairline:hover {
@@ -34016,22 +33880,6 @@ body {
     font-weight: 900;
   }
 
-  .lg\:hover\:font-sans-regular:hover {
-    font-weight: var(--font-sans-regular);
-  }
-
-  .lg\:hover\:font-sans-bold:hover {
-    font-weight: var(--font-sans-bold);
-  }
-
-  .lg\:hover\:font-serif-regular:hover {
-    font-weight: var(--font-serif-regular);
-  }
-
-  .lg\:hover\:font-serif-bold:hover {
-    font-weight: var(--font-serif-bold);
-  }
-
   .lg\:focus\:font-hairline:focus {
     font-weight: 100;
   }
@@ -34066,22 +33914,6 @@ body {
 
   .lg\:focus\:font-black:focus {
     font-weight: 900;
-  }
-
-  .lg\:focus\:font-sans-regular:focus {
-    font-weight: var(--font-sans-regular);
-  }
-
-  .lg\:focus\:font-sans-bold:focus {
-    font-weight: var(--font-sans-bold);
-  }
-
-  .lg\:focus\:font-serif-regular:focus {
-    font-weight: var(--font-serif-regular);
-  }
-
-  .lg\:focus\:font-serif-bold:focus {
-    font-weight: var(--font-serif-bold);
   }
 
   .lg\:h-0 {
@@ -43849,6 +43681,14 @@ body {
     font-family: var(--font-serif);
   }
 
+  .xl\:font-headline {
+    font-family: var(--font-headline);
+  }
+
+  .xl\:font-display {
+    font-family: var(--font-display);
+  }
+
   .xl\:font-hairline {
     font-weight: 100;
   }
@@ -43883,22 +43723,6 @@ body {
 
   .xl\:font-black {
     font-weight: 900;
-  }
-
-  .xl\:font-sans-regular {
-    font-weight: var(--font-sans-regular);
-  }
-
-  .xl\:font-sans-bold {
-    font-weight: var(--font-sans-bold);
-  }
-
-  .xl\:font-serif-regular {
-    font-weight: var(--font-serif-regular);
-  }
-
-  .xl\:font-serif-bold {
-    font-weight: var(--font-serif-bold);
   }
 
   .xl\:hover\:font-hairline:hover {
@@ -43937,22 +43761,6 @@ body {
     font-weight: 900;
   }
 
-  .xl\:hover\:font-sans-regular:hover {
-    font-weight: var(--font-sans-regular);
-  }
-
-  .xl\:hover\:font-sans-bold:hover {
-    font-weight: var(--font-sans-bold);
-  }
-
-  .xl\:hover\:font-serif-regular:hover {
-    font-weight: var(--font-serif-regular);
-  }
-
-  .xl\:hover\:font-serif-bold:hover {
-    font-weight: var(--font-serif-bold);
-  }
-
   .xl\:focus\:font-hairline:focus {
     font-weight: 100;
   }
@@ -43987,22 +43795,6 @@ body {
 
   .xl\:focus\:font-black:focus {
     font-weight: 900;
-  }
-
-  .xl\:focus\:font-sans-regular:focus {
-    font-weight: var(--font-sans-regular);
-  }
-
-  .xl\:focus\:font-sans-bold:focus {
-    font-weight: var(--font-sans-bold);
-  }
-
-  .xl\:focus\:font-serif-regular:focus {
-    font-weight: var(--font-serif-regular);
-  }
-
-  .xl\:focus\:font-serif-bold:focus {
-    font-weight: var(--font-serif-bold);
   }
 
   .xl\:h-0 {

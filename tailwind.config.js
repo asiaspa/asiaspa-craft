@@ -13,6 +13,9 @@ module.exports = {
         fontFamily: {
             'sans': 'var(--font-sans)',
             'serif': 'var(--font-serif)',
+            'headline': 'var(--font-headline)',
+            'display': 'var(--font-display)',
+            
         },
         colors: {
             transparent: 'transparent',
@@ -34,12 +37,6 @@ module.exports = {
             white: 'var(--color-white)'
         },
         extend: {
-            fontWeight: {
-                'sans-regular': 'var(--font-sans-regular)',
-                'sans-bold': 'var(--font-sans-bold)',
-                'serif-regular': 'var(--font-serif-regular)',
-                'serif-bold': 'var(--font-serif-bold)'
-            },
             padding: {
                 'edge': 'var(--edge-padding)',
                 'screen-sm': 'calc(var(--edge-padding) + var(--margin-screen-sm)) !important',

@@ -1,7 +1,7 @@
 assets:
   tempSubpath: temp
   tempVolumeUid: 883ab42c-10f1-4e32-a559-61f23e4e3775
-dateModified: 1597029880
+dateModified: 1597192407
 email:
   fromEmail: asiaspa.dev@gmail.com
   fromName: AsiaSpa
@@ -81,6 +81,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  matrixtoolbar:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.4
   minify:
     edition: standard
     enabled: true
@@ -93,10 +97,6 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.17
-  neo:
-    edition: standard
-    enabled: true
-    schemaVersion: 2.8.0
   oembed:
     enabled: true
     schemaVersion: 1.0.1
@@ -128,6 +128,7 @@ plugins:
     enabled: true
     schemaVersion: 2.0.0
   simplemap:
+    edition: pro
     enabled: true
     schemaVersion: 3.4.2
     settings:
@@ -146,10 +147,6 @@ plugins:
       unrestrictedApiKey: null
       w3wEnabled: ''
       w3wToken: ''
-  smith:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.0
   splash:
     edition: standard
     enabled: true
@@ -159,15 +156,12 @@ plugins:
       authorUrlField: ''
       colorField: ''
       volume: '8'
-  spoon:
-    edition: standard
-    enabled: true
-    schemaVersion: 3.5.0
   sprig:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
   sprout-forms:
+    edition: pro
     enabled: true
     schemaVersion: 3.11.8
     settings:

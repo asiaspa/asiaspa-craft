@@ -48,10 +48,10 @@ mix
 
 if (mix.inProduction()) {
 mix
-    // .purgeCss({
-    //     folders: ['src', 'templates'],
-    //     extensions: ['twig', 'html', 'js', 'php', 'vue'],
-    // })
+    .purgeCss({
+        folders: ['src', 'templates'],
+        extensions: ['twig', 'html', 'js', 'php', 'vue'],
+    })
     .version()
     .webpackConfig({
         plugins: [

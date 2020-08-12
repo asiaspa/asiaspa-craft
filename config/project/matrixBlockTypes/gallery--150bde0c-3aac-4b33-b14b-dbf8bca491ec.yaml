@@ -24,33 +24,31 @@ fields:
     name: Gallery
     searchable: true
     settings:
-      columns:
-        __assoc__:
-          -
-            - c7853873-dc07-4748-90ff-6bb32d1b269d
-            -
-              __assoc__:
-                -
-                  - width
-                  - ''
-          -
-            - 475ee74b-a539-4e6e-8e80-d4d24a18df18
-            -
-              __assoc__:
-                -
-                  - width
-                  - ''
-      contentTable: '{{%stc_4_gallery}}'
-      fieldLayout: row
-      maxRows: ''
-      minRows: ''
-      placeholderKey: null
-      propagationMethod: all
+      allowSelfRelations: false
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:883ab42c-10f1-4e32-a559-61f23e4e3775'
+      defaultUploadLocationSubpath: ''
+      limit: ''
+      localizeRelations: false
+      restrictFiles: '1'
       selectionLabel: ''
-      staticField: ''
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:883ab42c-10f1-4e32-a559-61f23e4e3775'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources:
+        - 'volume:883ab42c-10f1-4e32-a559-61f23e4e3775'
+        - 'volume:9f801622-9f26-40c9-9126-ac4041a76554'
+      targetSiteId: null
+      useSingleFolder: false
+      validateRelatedElements: false
+      viewMode: large
     translationKeyFormat: null
     translationMethod: site
-    type: verbb\supertable\fields\SuperTableField
+    type: craft\fields\Assets
 handle: gallery
 name: Gallery
 sortOrder: 2

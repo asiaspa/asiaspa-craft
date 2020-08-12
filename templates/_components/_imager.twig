@@ -16,7 +16,7 @@
     { fillTransforms: true }) 
 %}
 
-<figure>
+<figure class="{{ class|default('') }}">
     <div class="relative w-full overflow-hidden bg-primary-100" style="padding-bottom: {{ 1/aspect*100 }}%">
         <img class="absolute w-full h-full lazyload pin"
             src="{{ transformedImages | first }}" 

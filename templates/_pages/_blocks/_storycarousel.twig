@@ -43,17 +43,28 @@
 {% endblock %}
 {% endembed %}
 
-<div class="mb-16 swiper-container px-screen-xl">
+<div class="mb-16 js-swiper-carousel swiper-container px-screen-xl">
 	<div class="swiper-wrapper">
 		{% for entry in entries %}
-			{% if entry.storyHeroImageSetLandscape %}
-			<div class="w-3/4 swiper-slide sm:w-1/2 md:w-2/3 lg:w-1/2">
-				{% include "_stories/_story-card" with { 'entry': entry, 'landscape': true} %}
+			{% if entry.storyLandscape %}
+			<div class="w-10/12 swiper-slide sm:w-1/2 md:w-2/3 lg:w-1/2">
+				{% include "_stories/_components/_story-card" with {
+					'entry': entry,
+					'layout': 'card sm:card md:widecard lg:widecard',
+					'size': 'md',
+					'byline': false
+				} %}
 			</div>
 			{% else %}
-			<div class="w-3/4 swiper-slide sm:w-1/2 md:w-1/3 lg:w-1/4" >
-				{% include "_stories/_story-card" with { entry: entry } %}
+			<div class="w-10/12 swiper-slide sm:w-1/2 md:w-1/3 lg:w-1/4" >
+				{% include "_stories/_components/_story-card" with {
+					'entry': entry,
+					'layout': 'card sm:card md:card lg:card',
+					'size': 'md',
+					'byline': false	
+				} %}
 			</div>
+
 			{% endif %}
 		{% endfor %}
 	</div>

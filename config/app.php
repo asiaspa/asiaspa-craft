@@ -20,6 +20,8 @@
 return [
     'modules' => [
         'my-module' => \modules\Module::class,
+        'mamp-helper' => \modules\MampHelper::class
     ],
+    'bootstrap' => ['mamp-helper']
     //'bootstrap' => ['my-module'],
 ];

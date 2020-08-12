@@ -1,0 +1,18 @@
+{#  ! embed need to recheck on 2020/10/24 
+    ! https://developers.facebook.com/docs/instagram/oembed #}
+
+
+{%- set breakpoint -%}
+{% switch block.embed.media.providerName %}
+    {% case 'Instagram' %}sm
+    {% default %}lg
+{% endswitch %}
+{%- endset -%}
+
+{% embed "_containers/_container" with {'breakpoint': breakpoint } %} 
+{% block content %}
+<div class="pt-16">
+    {% include "_stories/_components/_embed" %}
+</div>
+{% endblock %}
+{% endembed %}

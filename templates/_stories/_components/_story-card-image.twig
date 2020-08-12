@@ -1,0 +1,29 @@
+{% if entry.storyLandscape == true %}
+
+{%- set landscapeVisibility -%}
+{% for layout in layouts %}
+{% set pattern = layout|split(':') %}
+{% set p = pattern|first == "" ? "" : pattern|first ~ ":" %}
+{% switch pattern|last %}
+    {% case 'card' or 'list' %}{{ p }}hidden
+    {% case 'widecard' or 'widelist'  %}{{ p }}block
+{% endswitch %}
+{% endfor %}
+{% endset %}
+
+{%- set protraitVisibility -%}
+{% for layout in layouts %}
+{% set pattern = layout|split(':') %}
+{% set p = pattern|first == "" ? "" : pattern|first ~ ":" %}
+{% switch pattern|last %}
+    {% case 'card' or 'list' %}{{ p }}block
+    {% case 'widecard' or 'widelist'  %}{{ p }}hidden
+{% endswitch %}
+{% endfor %}
+{% endset %}
+
+    {% include "_components/_imager" with { 'image' : entry.storyHeroImage[0] ?? "", 'w':16, 'h':9, 'class': landscapeVisibility } %}
+    {% include "_components/_imager" with { 'image' : entry.storyHeroImage[0] ?? "", 'w':8, 'h':9, 'class': protraitVisibility} %}
+{% else %}
+    {% include "_components/_imager" with { 'image' : entry.storyHeroImage[0] ?? "", 'w':8, 'h':9 } %}
+{% endif %}

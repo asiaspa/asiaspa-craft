@@ -1,25 +1,35 @@
-field: 4be7265a-1f2f-4bbe-a6e2-10d0cfccb205
+field: 8fd13f01-7952-450b-8ca6-325a4b4f4867
 fieldLayouts:
-  7104a75d-151e-4c5e-a2be-ef50810cb61d:
+  759fa279-5a52-4bea-915a-e8b5e1b0aa1a:
     tabs:
       -
         fields:
-          17b940bb-1abe-4368-9ccd-ba94b9d5257a:
-            required: '0'
-            sortOrder: '1'
-          4e7f0a84-494e-4c94-836a-1fc0a77db557:
+          2ef9cd0d-784e-48bd-ae19-6f7b189072f7:
             required: '0'
             sortOrder: '2'
-          81ffaa57-a57c-43a1-abfc-c810f668fcd2:
+          b633ffb7-1271-4b54-85be-a6edb1cedddb:
             required: '0'
-            sortOrder: '3'
-          bf8d9686-a59f-47ab-88e7-f52608216e2b:
+            sortOrder: '1'
+          c35b5513-a0d3-458a-8e1c-a3080b855c8d:
             required: '0'
             sortOrder: '0'
         name: Content
         sortOrder: '1'
 fields:
-  17b940bb-1abe-4368-9ccd-ba94b9d5257a:
+  2ef9cd0d-784e-48bd-ae19-6f7b189072f7:
+    contentColumnType: string(255)
+    fieldGroup: null
+    handle: hyperlink
+    instructions: ''
+    name: Hyperlink
+    searchable: '1'
+    settings:
+      maxLength: '255'
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Url
+  b633ffb7-1271-4b54-85be-a6edb1cedddb:
     contentColumnType: text
     fieldGroup: null
     handle: description
@@ -38,7 +48,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-  4e7f0a84-494e-4c94-836a-1fc0a77db557:
+  c35b5513-a0d3-458a-8e1c-a3080b855c8d:
     contentColumnType: string
     fieldGroup: null
     handle: heroImage
@@ -50,7 +60,7 @@ fields:
       allowedKinds: null
       defaultUploadLocationSource: 'volume:883ab42c-10f1-4e32-a559-61f23e4e3775'
       defaultUploadLocationSubpath: ''
-      limit: '1'
+      limit: ''
       localizeRelations: false
       restrictFiles: ''
       selectionLabel: ''
@@ -62,42 +72,11 @@ fields:
       source: null
       sources:
         - 'volume:883ab42c-10f1-4e32-a559-61f23e4e3775'
+        - 'volume:9f801622-9f26-40c9-9126-ac4041a76554'
       targetSiteId: null
-      useSingleFolder: true
+      useSingleFolder: false
       validateRelatedElements: false
-      viewMode: large
+      viewMode: list
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Assets
-  81ffaa57-a57c-43a1-abfc-c810f668fcd2:
-    contentColumnType: string(255)
-    fieldGroup: null
-    handle: hyperlink
-    instructions: ''
-    name: Hyperlink
-    searchable: '1'
-    settings:
-      maxLength: '255'
-      placeholder: ''
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\Url
-  bf8d9686-a59f-47ab-88e7-f52608216e2b:
-    contentColumnType: text
-    fieldGroup: null
-    handle: heading
-    instructions: ''
-    name: Heading
-    searchable: '1'
-    settings:
-      byteLimit: null
-      charLimit: null
-      code: ''
-      columnType: null
-      initialRows: '4'
-      multiline: ''
-      placeholder: ''
-      uiMode: normal
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\PlainText

@@ -11,14 +11,7 @@
 @import "_components/_text-background";
 
 body {
-    font-weight: var(--font-sans-regular);    
+    font-weight: 300;
 }
-.font-serif {
-    font-weight: var(--font-serif-regular);
-}
-.font-sans {
-    font-weight: var(--font-sans-regular);
-}
-
 
 @tailwind utilities;

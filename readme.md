@@ -9,6 +9,7 @@ Asiaspa website revamp project
 - [ ] logo -> svg insert
 - [ ] slim the swiper js
 - [ ] searchit template query predefined
+- [ ] pagebulder - flip gallery
 
 ## Development Guideline
 ### Twig Template Development
@@ -44,7 +45,7 @@ Passwords is managed via Lastpass with 1 master password.
 
 ### Application Cost for quotation part II
 1. Craft CMS License (1 Year update)
-2. 
+2. Map (1 Year update, $49)
 
 
 ### Monthly Recurring Cost

@@ -2,7 +2,7 @@
 
 {% set headerNodes = craft.navigate.raw('header ') %}
 {# :class="{'sticky': atTop === false } #}
-<header class="sticky top-0 z-50 w-full transition duration-300 bg-white border-b border-primary-300"
+<header class="sticky top-0 z-50 w-full transition duration-300 bg-white "
         x-data="{dropdown: false, search: false, atTop: true}"
         x-on:scroll.window.debounce="atTop = (window.pageYOffset > 1) ? false : true;">
         
