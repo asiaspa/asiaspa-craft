@@ -1,9 +1,23 @@
 {% set blocks = matrix.with([
     'slider:slide.heroImage',
+    'listicleSlider:slide.heroImage',
+
+    'gallery:gallery',
+    'listicleGallery:gallery',
     
 ]) %}
 
+{# for listicles #}
+{% set listicleTypes = ['listicleGallery','listicleSlider','listicleEmbed'] %}
+{% set listicleCount = clone(blocks)
+    .type(listicleTypes)
+    .count()
+%}
+{% set listicleNumber = 0 %}
 
 {% for block in matrix %}
+    {% if block.type.handle in listicleTypes %}
+    {% set listicleNumber = listicleNumber + 1 %}
+    {% endif %}
     {% include  "_stories/_blocks/_" ~ block.type | lower with {'block':block} %}
 {% endfor %}

@@ -1,0 +1,12 @@
+<h2 class="text-2xl font-hairline font-headline md:text-3xl lg:text-4xl ">
+    {% if entry.storyListicleNumbering %}
+    <span>
+	    <span class="text-primary-500">{{ listicleNumber }}</span>
+	    <span>/ {{ listicleCount }}</span>
+    </span>
+    {% endif %}
+    {{ block.heading }}
+</h2>
+
+
+
