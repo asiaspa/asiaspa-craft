@@ -12,24 +12,75 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
-            width: 50
+            width: 100
           -
-            fieldUid: dcf1654e-9b1b-4f81-a2ae-5d31c5750d25
+            fieldUid: 3785f85a-d93b-47a3-aa02-003f4edef64f
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
-            width: 100
+            width: 25
+          -
+            fieldUid: f1c77e06-6781-4987-b6ea-0e34c56fde17
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 25
+          -
+            fieldUid: 12d8d502-a3d2-481c-8599-22d7be4d0187
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 25
+          -
+            fieldUid: abbe9b89-99b5-40a6-8781-80b8009b387e
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 25
         name: Content
         sortOrder: 1
 fields:
+  12d8d502-a3d2-481c-8599-22d7be4d0187:
+    contentColumnType: string
+    fieldGroup: null
+    handle: sourcePrintIssue
+    instructions: ''
+    name: 'Source - Print Issue'
+    searchable: false
+    settings:
+      allowLimit: false
+      allowMultipleSources: false
+      allowSelfRelations: false
+      branchLimit: '1'
+      limit: null
+      localizeRelations: false
+      selectionLabel: ''
+      showSiteMenu: true
+      source: 'group:747402aa-105d-41d3-ace6-9e3de98971a4'
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Categories
   1a3a3163-37ed-4004-aece-697b593dd10f:
     contentColumnType: text
     fieldGroup: null
     handle: heading
-    instructions: ''
+    instructions: 'Only the first source will be used'
     name: Heading
     searchable: false
     settings:
@@ -44,34 +95,76 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-  dcf1654e-9b1b-4f81-a2ae-5d31c5750d25:
+  3785f85a-d93b-47a3-aa02-003f4edef64f:
     contentColumnType: string
     fieldGroup: null
-    handle: entries
+    handle: sourceStories
     instructions: 'Max 12 Entries'
-    name: Entries
+    name: 'Source - Stories'
     searchable: false
     settings:
-      columns:
-        __assoc__:
-          -
-            - 49c5d010-deb6-4e8a-baa7-ad2d87b82917
-            -
-              __assoc__:
-                -
-                  - width
-                  - ''
-      contentTable: '{{%stc_16_entries}}'
-      fieldLayout: table
-      maxRows: '1'
-      minRows: '1'
-      placeholderKey: null
-      propagationMethod: all
-      selectionLabel: Source
-      staticField: '1'
+      allowSelfRelations: false
+      limit: '12'
+      localizeRelations: false
+      selectionLabel: ''
+      showSiteMenu: true
+      source: null
+      sources:
+        - 'section:5e15a326-1e20-4d38-86df-6f2bc3183b14'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
     translationKeyFormat: null
     translationMethod: site
-    type: verbb\supertable\fields\SuperTableField
+    type: craft\fields\Entries
+  abbe9b89-99b5-40a6-8781-80b8009b387e:
+    contentColumnType: string
+    fieldGroup: null
+    handle: sourceTag
+    instructions: ''
+    name: 'Source - Tag'
+    searchable: false
+    settings:
+      allowLimit: false
+      allowMultipleSources: false
+      allowSelfRelations: false
+      branchLimit: '1'
+      limit: null
+      localizeRelations: false
+      selectionLabel: ''
+      showSiteMenu: true
+      source: 'group:dc068a49-9607-4bc7-9bd1-069f279dbf76'
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Categories
+  f1c77e06-6781-4987-b6ea-0e34c56fde17:
+    contentColumnType: string
+    fieldGroup: null
+    handle: sourceCategory
+    instructions: ''
+    name: 'Source - Category'
+    searchable: false
+    settings:
+      allowLimit: false
+      allowMultipleSources: false
+      allowSelfRelations: false
+      branchLimit: '1'
+      limit: null
+      localizeRelations: false
+      selectionLabel: ''
+      showSiteMenu: true
+      source: 'group:b85be20d-3d22-431f-a700-c2d63cf40881'
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Categories
 handle: storyCarousel
 name: 'Story Carousel'
 sortOrder: 2

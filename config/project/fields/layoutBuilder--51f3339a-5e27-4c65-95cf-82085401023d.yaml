@@ -3,7 +3,7 @@ fieldGroup: 6ebe0a75-3257-417d-8c9b-c712a8dbf9c9
 handle: layoutBuilder
 instructions: ''
 name: 'Layout Builder'
-searchable: false
+searchable: true
 settings:
   contentTable: '{{%matrixcontent_layoutbuilder}}'
   maxBlocks: ''
