@@ -1,7 +1,7 @@
 assets:
   tempSubpath: temp
   tempVolumeUid: 883ab42c-10f1-4e32-a559-61f23e4e3775
-dateModified: 1597255183
+dateModified: 1597256183
 email:
   fromEmail: asiaspa.dev@gmail.com
   fromName: AsiaSpa
@@ -155,9 +155,9 @@ plugins:
     enabled: true
     schemaVersion: 3.0.0
     settings:
-      authorField: ''
-      authorUrlField: ''
-      colorField: ''
+      authorField: assetUnsplashAuthor
+      authorUrlField: assetUnsplashAuthorUrl
+      colorField: assetUnsplashDominantColor
       volume: '8'
   sprig:
     edition: standard
