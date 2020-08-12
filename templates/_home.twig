@@ -27,7 +27,7 @@
 
 {# -------------------  Content  ------------------- #}
 {% block main %}
-
+{% if entry.homeHeroStory %}
 {# logo #}
 {% embed "_containers/_container"%}
 {% block content %}
@@ -65,6 +65,7 @@
 </div>
 {% endblock %}
 {% endembed %}
+{% endif %}
 
 {# 
 <div class="relative">

@@ -44,8 +44,8 @@
             </div>
         {% endfor %}
     </div>
-    <div class="sticky hidden h-24 md:block bg-primary-300" style="top:96px; width: 300px" >
-        {% include '_components/_adblock' with {'adgroup': 'halfPageMediumRectangle'} %}
+    <div class="sticky hidden md:block " style="top:96px;" >
+    {% include '_components/_adblock' with {'adgroup': global.globalSidebarAdgroup ?? ''} %}
     </div>
 </div>
 {% endblock %}
@@ -54,7 +54,7 @@
 {# =================== Load more Ad ======================== #}
 {% if entries %}
 <div s-target="this" s-swap="afterend" sprig s-trigger="revealed">
-    {% include '_components/_adblock' with {'adgroup': 'billboardLeaderboard'} %}
+{% include '_components/_adblock' with {'adgroup': global.globalPaginationAdgroup ?? ''} %}
     <input type="hidden" name="offset" value="{{ offset + limit }}">
 </div>
 {% endif %} 
