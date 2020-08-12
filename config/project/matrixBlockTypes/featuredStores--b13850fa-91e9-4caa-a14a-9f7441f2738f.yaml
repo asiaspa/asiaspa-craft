@@ -1,0 +1,43 @@
+field: 49c5d010-deb6-4e8a-baa7-ad2d87b82917
+fieldLayouts:
+  de69a78d-20ce-470c-84aa-763c89ff9934:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 4629d3a3-be64-4ac0-8e64-45c2fdc80e8d
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  4629d3a3-be64-4ac0-8e64-45c2fdc80e8d:
+    contentColumnType: string
+    fieldGroup: null
+    handle: entries
+    instructions: ''
+    name: Entries
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      limit: '12'
+      localizeRelations: false
+      selectionLabel: ''
+      showSiteMenu: true
+      source: null
+      sources:
+        - 'section:5e15a326-1e20-4d38-86df-6f2bc3183b14'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+handle: featuredStores
+name: 'Featured Stores'
+sortOrder: 1

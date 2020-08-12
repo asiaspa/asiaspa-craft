@@ -1,0 +1,66 @@
+field: 966c12fd-d63c-47b6-a024-8bea37fb7a21
+fieldLayouts:
+  6e718dfc-064a-4fab-9559-434619860b07:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 5a705b73-41f8-4b2f-8fc0-8cbb1537a98d
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 25
+          -
+            fieldUid: 5bfc7fea-4fa1-4913-9b04-d4f0f6b04fa8
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 25
+        name: Content
+        sortOrder: 1
+fields:
+  5a705b73-41f8-4b2f-8fc0-8cbb1537a98d:
+    contentColumnType: string
+    fieldGroup: null
+    handle: category
+    instructions: ''
+    name: Category
+    searchable: false
+    settings:
+      allowLimit: false
+      allowMultipleSources: false
+      allowSelfRelations: false
+      branchLimit: '1'
+      limit: null
+      localizeRelations: false
+      selectionLabel: ''
+      showSiteMenu: true
+      source: 'group:b85be20d-3d22-431f-a700-c2d63cf40881'
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Categories
+  5bfc7fea-4fa1-4913-9b04-d4f0f6b04fa8:
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: showLink
+    instructions: ''
+    name: 'Show Link?'
+    searchable: false
+    settings:
+      default: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
+handle: category
+name: Category
+sortOrder: 2

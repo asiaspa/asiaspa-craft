@@ -62,7 +62,7 @@ fields:
     contentColumnType: text
     fieldGroup: null
     handle: adgroup
-    instructions: ''
+    instructions: 'Special Ad insert'
     name: Adgroup
     searchable: false
     translationKeyFormat: null
@@ -70,4 +70,4 @@ fields:
     type: doublesecretagency\adwizard\fields\AdGroups
 handle: adblock
 name: Adblock
-sortOrder: 4
+sortOrder: 6

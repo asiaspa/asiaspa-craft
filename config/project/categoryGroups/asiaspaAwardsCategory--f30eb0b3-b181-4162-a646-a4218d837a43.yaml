@@ -31,15 +31,6 @@ fieldLayouts:
           -
             type: craft\fieldlayoutelements\HorizontalRule
           -
-            fieldUid: fd0ad5a0-16ef-4f56-bb49-4dade6d51464
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-          -
             fieldUid: 12570f9f-d945-4b47-b469-2c11fb90b92a
             instructions: null
             label: null
