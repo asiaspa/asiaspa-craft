@@ -12,7 +12,7 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
-            width: 75
+            width: 25
           -
             fieldUid: 01202169-856c-4120-a83a-280516822d0a
             instructions: null
@@ -21,7 +21,7 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
-            width: 50
+            width: 25
           -
             fieldUid: 13756d6e-c3e4-43d5-ac9f-07316fa710f4
             instructions: null
@@ -30,7 +30,7 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
-            width: 50
+            width: 25
         name: Content
         sortOrder: 1
 fields:
@@ -70,4 +70,4 @@ fields:
     type: doublesecretagency\adwizard\fields\AdGroups
 handle: adblock
 name: Adblock
-sortOrder: 6
+sortOrder: 4

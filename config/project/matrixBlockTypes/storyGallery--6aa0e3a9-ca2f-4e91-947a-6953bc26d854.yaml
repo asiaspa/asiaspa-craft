@@ -12,7 +12,7 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
-            width: 50
+            width: 100
           -
             fieldUid: 0f76637a-5172-4397-aa8c-2cfbc9f7ebcd
             instructions: null
@@ -21,64 +21,136 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
-            width: 100
+            width: 25
           -
-            fieldUid: bc3fd734-3f25-4e27-976f-90b86e217f78
+            fieldUid: 427f0d5d-b61a-46ba-a4e4-129e5b0356ff
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
-            width: 100
+            width: 25
+          -
+            fieldUid: 099fa088-bcfc-4245-b8eb-d89f14eb2e01
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 25
+          -
+            fieldUid: 32743c26-788c-430c-9ff2-00f966bb1f81
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 25
         name: Content
         sortOrder: 1
 fields:
+  099fa088-bcfc-4245-b8eb-d89f14eb2e01:
+    contentColumnType: string
+    fieldGroup: null
+    handle: sourcePrintIssue
+    instructions: ''
+    name: 'Source - Print Issue'
+    searchable: false
+    settings:
+      allowLimit: false
+      allowMultipleSources: false
+      allowSelfRelations: false
+      branchLimit: '1'
+      limit: null
+      localizeRelations: false
+      selectionLabel: ''
+      showSiteMenu: true
+      source: 'group:747402aa-105d-41d3-ace6-9e3de98971a4'
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Categories
   0f76637a-5172-4397-aa8c-2cfbc9f7ebcd:
     contentColumnType: string
     fieldGroup: null
-    handle: entries
-    instructions: 'Max 4 Entries'
-    name: Entries
+    handle: sourceStories
+    instructions: 'Max 4 stories'
+    name: 'Source - Stories'
     searchable: false
     settings:
-      columns:
-        __assoc__:
-          -
-            - 966c12fd-d63c-47b6-a024-8bea37fb7a21
-            -
-              __assoc__:
-                -
-                  - width
-                  - ''
-      contentTable: '{{%stc_24_entries}}'
-      fieldLayout: table
-      maxRows: '1'
-      minRows: '1'
-      placeholderKey: null
-      propagationMethod: all
+      allowSelfRelations: false
+      limit: '4'
+      localizeRelations: false
       selectionLabel: ''
-      staticField: '1'
+      showSiteMenu: true
+      source: null
+      sources:
+        - 'section:5e15a326-1e20-4d38-86df-6f2bc3183b14'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
     translationKeyFormat: null
     translationMethod: site
-    type: verbb\supertable\fields\SuperTableField
-  bc3fd734-3f25-4e27-976f-90b86e217f78:
-    contentColumnType: boolean
+    type: craft\fields\Entries
+  32743c26-788c-430c-9ff2-00f966bb1f81:
+    contentColumnType: string
     fieldGroup: null
-    handle: rtl
-    instructions: 'Layout directing change.'
-    name: 'From Right to Left'
+    handle: sourceTag
+    instructions: ''
+    name: 'Source - Tag'
     searchable: false
     settings:
-      default: ''
+      allowLimit: false
+      allowMultipleSources: false
+      allowSelfRelations: false
+      branchLimit: '1'
+      limit: null
+      localizeRelations: false
+      selectionLabel: ''
+      showSiteMenu: true
+      source: 'group:dc068a49-9607-4bc7-9bd1-069f279dbf76'
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
     translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\Lightswitch
+    translationMethod: site
+    type: craft\fields\Categories
+  427f0d5d-b61a-46ba-a4e4-129e5b0356ff:
+    contentColumnType: string
+    fieldGroup: null
+    handle: sourceCategory
+    instructions: ''
+    name: 'Source - Category'
+    searchable: false
+    settings:
+      allowLimit: false
+      allowMultipleSources: false
+      allowSelfRelations: false
+      branchLimit: '1'
+      limit: null
+      localizeRelations: false
+      selectionLabel: ''
+      showSiteMenu: true
+      source: 'group:b85be20d-3d22-431f-a700-c2d63cf40881'
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Categories
   f42799bb-710a-462a-9c2c-bef4a6b92c26:
     contentColumnType: text
     fieldGroup: null
     handle: heading
-    instructions: ''
+    instructions: 'Only the first source will be used'
     name: Heading
     searchable: false
     settings:

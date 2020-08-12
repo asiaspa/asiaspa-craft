@@ -12,7 +12,7 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
-            width: 50
+            width: 25
           -
             fieldUid: 51145013-4a5f-4673-b14b-80ede78e212e
             instructions: null
@@ -21,7 +21,7 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
-            width: 100
+            width: 25
         name: Content
         sortOrder: 1
 fields:
