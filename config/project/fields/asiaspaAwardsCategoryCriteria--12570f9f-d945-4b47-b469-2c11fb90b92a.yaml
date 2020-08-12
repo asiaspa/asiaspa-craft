@@ -5,18 +5,14 @@ instructions: ''
 name: 'AsiaSpa Awards Category - Criteria'
 searchable: false
 settings:
-  availableTransforms: '*'
-  availableVolumes: '*'
-  cleanupHtml: true
-  columnType: text
-  purifierConfig: ''
-  purifyHtml: '1'
-  redactorConfig: Simple.json
-  removeEmptyTags: '1'
-  removeInlineStyles: '1'
-  removeNbsp: '1'
-  showUnpermittedFiles: false
-  showUnpermittedVolumes: false
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: '1'
+  placeholder: ''
+  uiMode: normal
 translationKeyFormat: null
 translationMethod: none
-type: craft\redactor\Field
+type: craft\fields\PlainText
