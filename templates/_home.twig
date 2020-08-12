@@ -65,54 +65,11 @@
 </div>
 {% endblock %}
 {% endembed %}
+
 {% endif %}
 
-{# 
-<div class="relative">
-    <div class="absolute bg-primary-300 inset" style="transform:translateY(50%)"></
-{% embed "_containers/_container" %}
-{% block content %}
-<div class="flex flex-col py-16 space-x-16 md:flex-row">
-     <div class="w-1/2 space-y-4">
-        <a class="block"  href="{{ entry.homeHeroStories[1].url }}">
-            {% include "_components/_imager" with { image : entry.homeHeroStories[1].storyHeroImage[0] ?? '', w : 16, h : 9 } %}
-        </a>
-        <div class="space-x-2">
-            {% include "_components/_category-tag" with { category : entry.homeHeroStories[1].storyCategory } %}
-            {% include "_components/_category-tag" with { category : entry.homeHeroStories[1].storyPrintIssue } %}
-        </div>
-        <a  class="block" href="{{ entry.homeHeroStories[1].url }}">
-            <p class="font-serif text-xl font-medium leading-tight hover:underline lg:text-2xl">{{ entry.homeHeroStories[1].title }}</p>
-            <p class="mt-2 text-gray-500 text-md">{{ entry.homeHeroStories[1].storyStandfirst }}</p>
-        </a>
-    </div>
 
-     <div class="w-1/2 space-y-4">
-        <div class="space-x-6">
-            {% include "_components/_category-tag" with { category : entry.homeHeroStories[2].storyCategory } %}
-            {% include "_components/_category-tag" with { category : entry.homeHeroStories[2].storyPrintIssue } %}
-        </div>
-        <a  class="block" href="{{ entry.homeHeroStories[2].url }}">
-            <p class="font-serif text-xl font-medium leading-tight hover:underline lg:text-2xl">{{ entry.homeHeroStories[2].title }}</p>
-            <p class="mt-2 text-gray-500 text-md">{{ entry.homeHeroStories[2].storyStandfirst }}</p>
-        </a>
-        <a class="block" href="{{ entry.homeHeroStories[2].url }}">
-            {% include "_components/_imager" with { image : entry.homeHeroStories[2].storyHeroImage[0] ?? '', w : 16, h : 9 } %}
-        </a>
-       
-    </div>
-</div>
-{% endblock %}
-{% endembed %}
-</div> #}
-
-
-
-
-{% embed "_pages/_layout-builder" with {'matrix': entry.layoutBuilder, 'featured': true} %}
-    {% block content %}   
-    {{ sprig('_categories/_story-filter') }}
-    {% endblock %}
-{% endembed %}
+{% include "_pages/_layout-builder" with {'matrix': entry.layoutBuilder } %}
+{{ sprig('_categories/_story-filter') }}
 
 {% endblock %}

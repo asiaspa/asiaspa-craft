@@ -2,7 +2,7 @@
 
 {# get pinned entries ids #}
 {% set entriesIds = [] %}
-{% for entry in block.pinnedStories %}
+{% for entry in block.sourceStories %}
 {% set entriesIds = entriesIds | merge([entry.id]) %}
 {% endfor %}
 

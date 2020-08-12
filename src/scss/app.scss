@@ -10,8 +10,38 @@
 @import "_components/_edge-spacing";
 @import "_components/_text-background";
 
+
 body {
     font-weight: 300;
+    height: 100vh;
+    overflow: hidden;
 }
 
-@tailwind utilities;
+main {
+    height:100%;
+    overflow: auto;
+}
+#nav,#aside {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    bottom: 0; 
+    right: 0;
+    left: 0;
+    transition: transform .3s ease;
+    overflow-y: auto;
+    &:target {
+        transform: translateY(0) translateX(0);
+    }
+}
+
+#nav {
+    transform: translateY(-100%);
+}
+
+#aside {
+    transform: translateX(-100%);
+}
+
+
+@tailwind utilities; 
