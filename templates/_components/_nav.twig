@@ -1,0 +1,32 @@
+<nav id="nav" class="bg-primary-300">
+    {% embed "_containers/_container" %}
+    {% block content %}
+    <div class="relative z-20 flex justify-between w-full">
+        <a class="block h-16 py-4" href="{{ siteUrl }}">
+            {% if website.websiteLogoSimple | length %}
+                <img class="block w-auto h-full" src="{{ rev(website.websiteLogoSimple[0].url()) }}"/>
+            {% else %}
+                <span class="h-8 p-4 text-xl font-semibold tracking-tight">{{ siteName }}</span>
+            {% endif %}
+        </a>
+        <div class="flex h-16 py-4">
+            <a href="#">CLOSE</a>
+        </div>
+    </div>
+    <ul class="py-16 space-y-4">
+        {% for node in headerNodes %}
+        <li>
+            <a class="block text-6xl font-hairline tracking-wide transition duration-300 border-black font-display hover:border-b"
+                href="{{ node.url }}">{{ node.name }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+    <div class="flex flex-wrap py-16 space-y-6 md:space-x-6">
+        <div class="w-full md:w-1/4">Column for social channel</div>
+        <div class="w-1/2 md:w-1/4">footer linklist 1</div>
+        <div class="w-1/2 md:w-1/4">footer linklist 2</div>
+        <div class="w-full md:w-1/4">Column for copyright & comapny logo</div>
+    </div>
+    {% endblock %}
+    {% endembed %}
+</nav>

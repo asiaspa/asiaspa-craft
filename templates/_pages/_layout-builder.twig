@@ -1,6 +1,4 @@
 {# TODO: Need to exclude items #}
-
-{% block layoutBuilder %}
 {% set excludeIds = [] %}
 
 {% set blocks = matrix.with([
@@ -13,18 +11,18 @@
     'heroStory:heroStory.storyByline',
 
     'storyCarousel',
-    'storyCarousel:pinnedStories',
-    'storyCarousel:pinnedStories.storyHeroImage',
-    'storyCarousel:pinnedStories.storyCategory',
-    'storyCarousel:pinnedStories.storyPrintIssue',
+    'storyCarousel:sourceStories',
+    'storyCarousel:sourceStories.storyHeroImage',
+    'storyCarousel:sourceStories.storyCategory',
+    'storyCarousel:sourceStories.storyPrintIssue',
     'storyCarousel:entriesFromCategory',
     'storyCarousel:entriesFromprintIssue',
     'storyCarousel:entriesFromTag',
 
     'storyGallery',
-    'storyGallery:pinnedStories.storyHeroImage',
-    'storyGallery:pinnedStories.storyCategory',
-    'storyGallery:pinnedStories.storyPrintIssue'
+    'storyGallery:sourceStories.storyHeroImage',
+    'storyGallery:sourceStories.storyCategory',
+    'storyGallery:sourceStories.storyPrintIssue'
 
 ]) %}
 
@@ -33,6 +31,3 @@
     {% include  "_pages/_blocks/_" ~ block.type | lower with {'block':block} %}
 {% endfor %}
 
-{% block content %}{% endblock %}
-
-{% endblock %}

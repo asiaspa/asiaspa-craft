@@ -2074,6 +2074,36 @@ video {
 
 body {
   font-weight: 300;
+  height: 100vh;
+  overflow: hidden;
+}
+
+main {
+  height: 100%;
+  overflow: auto;
+}
+
+#nav, #aside {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  transition: transform 0.3s ease;
+  overflow-y: auto;
+}
+
+#nav:target, #aside:target {
+  transform: translateY(0) translateX(0);
+}
+
+#nav {
+  transform: translateY(-100%);
+}
+
+#aside {
+  transform: translateX(-100%);
 }
 
 .space-y-0 > :not(template) ~ :not(template) {
