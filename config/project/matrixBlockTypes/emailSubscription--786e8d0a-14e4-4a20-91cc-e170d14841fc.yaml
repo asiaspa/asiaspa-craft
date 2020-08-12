@@ -1,0 +1,40 @@
+field: 51f3339a-5e27-4c65-95cf-82085401023d
+fieldLayouts:
+  25451ba3-dccf-4905-8152-23e427b0ee0e:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 243df33e-ab57-4f8f-ae85-5f654de35664
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  243df33e-ab57-4f8f-ae85-5f654de35664:
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: ''
+    name: Heading
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: emailSubscription
+name: 'Email Subscription'
+sortOrder: 4

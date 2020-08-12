@@ -1,64 +1,66 @@
-field: 51f3339a-5e27-4c65-95cf-82085401023d
+field: 49c5d010-deb6-4e8a-baa7-ad2d87b82917
 fieldLayouts:
-  ef873075-ae9d-4a39-9d7c-d59dae6d7e5e:
+  66f90342-7189-4eae-8b50-9f913762091b:
     tabs:
       -
         elements:
           -
-            fieldUid: d1bc7bc8-60ab-4092-bde6-fe9bfd39aeb4
-            instructions: null
-            label: null
-            required: true
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 50
-          -
-            fieldUid: 51145013-4a5f-4673-b14b-80ede78e212e
+            fieldUid: db5dc28b-21d2-4b09-8ff2-a8a846b0c884
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
-            width: 100
+            width: 25
+          -
+            fieldUid: 10ad73b7-4db2-4650-8f67-d941394a16ef
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 25
         name: Content
         sortOrder: 1
 fields:
-  51145013-4a5f-4673-b14b-80ede78e212e:
+  10ad73b7-4db2-4650-8f67-d941394a16ef:
     contentColumnType: boolean
     fieldGroup: null
-    handle: rtl
+    handle: showLink
     instructions: ''
-    name: 'From Right to Left'
+    name: 'Show Link?'
     searchable: false
     settings:
       default: ''
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Lightswitch
-  d1bc7bc8-60ab-4092-bde6-fe9bfd39aeb4:
+  db5dc28b-21d2-4b09-8ff2-a8a846b0c884:
     contentColumnType: string
     fieldGroup: null
-    handle: heroStory
+    handle: category
     instructions: ''
-    name: 'Hero Story'
+    name: Category
     searchable: false
     settings:
+      allowLimit: false
+      allowMultipleSources: false
       allowSelfRelations: false
-      limit: '1'
+      branchLimit: '1'
+      limit: null
       localizeRelations: false
       selectionLabel: ''
       showSiteMenu: true
-      source: null
-      sources:
-        - 'section:5e15a326-1e20-4d38-86df-6f2bc3183b14'
+      source: 'group:b85be20d-3d22-431f-a700-c2d63cf40881'
+      sources: '*'
       targetSiteId: null
       validateRelatedElements: false
       viewMode: null
     translationKeyFormat: null
     translationMethod: site
-    type: craft\fields\Entries
-handle: heroStory
-name: 'Hero Story'
-sortOrder: 1
+    type: craft\fields\Categories
+handle: category
+name: Category
+sortOrder: 2

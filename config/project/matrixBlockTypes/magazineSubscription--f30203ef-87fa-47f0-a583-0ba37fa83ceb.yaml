@@ -1,0 +1,40 @@
+field: 51f3339a-5e27-4c65-95cf-82085401023d
+fieldLayouts:
+  9b1e4e5f-88e6-4e48-9833-228e22674634:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 9d0ac6e0-4f3c-4ac2-ac19-ad24c22e26f6
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  9d0ac6e0-4f3c-4ac2-ac19-ad24c22e26f6:
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: ''
+    name: Heading
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: magazineSubscription
+name: 'Magazine Subscription'
+sortOrder: 5

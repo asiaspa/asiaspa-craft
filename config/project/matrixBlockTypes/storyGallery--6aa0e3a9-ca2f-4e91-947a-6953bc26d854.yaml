@@ -12,9 +12,18 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
-            width: 100
+            width: 50
           -
             fieldUid: 0f76637a-5172-4397-aa8c-2cfbc9f7ebcd
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: bc3fd734-3f25-4e27-976f-90b86e217f78
             instructions: null
             label: null
             required: false
@@ -28,30 +37,48 @@ fields:
   0f76637a-5172-4397-aa8c-2cfbc9f7ebcd:
     contentColumnType: string
     fieldGroup: null
-    handle: pinnedStories
-    instructions: ''
-    name: 'Pinned Stories'
+    handle: entries
+    instructions: 'Max 4 Entries'
+    name: Entries
     searchable: false
     settings:
-      allowSelfRelations: false
-      limit: ''
-      localizeRelations: false
+      columns:
+        __assoc__:
+          -
+            - 966c12fd-d63c-47b6-a024-8bea37fb7a21
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+      contentTable: '{{%stc_24_entries}}'
+      fieldLayout: table
+      maxRows: '1'
+      minRows: '1'
+      placeholderKey: null
+      propagationMethod: all
       selectionLabel: ''
-      showSiteMenu: true
-      source: null
-      sources:
-        - 'section:5e15a326-1e20-4d38-86df-6f2bc3183b14'
-      targetSiteId: null
-      validateRelatedElements: false
-      viewMode: null
+      staticField: '1'
     translationKeyFormat: null
     translationMethod: site
-    type: craft\fields\Entries
+    type: verbb\supertable\fields\SuperTableField
+  bc3fd734-3f25-4e27-976f-90b86e217f78:
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: rtl
+    instructions: 'Layout directing change.'
+    name: 'From Right to Left'
+    searchable: false
+    settings:
+      default: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
   f42799bb-710a-462a-9c2c-bef4a6b92c26:
     contentColumnType: text
     fieldGroup: null
     handle: heading
-    instructions: 'Select up to 4 / 7 entries.'
+    instructions: ''
     name: Heading
     searchable: false
     settings:
