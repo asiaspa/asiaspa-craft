@@ -13,13 +13,13 @@
 
 body {
     font-weight: 300;
-    height: 100vh;
-    overflow: hidden;
+    // height: 100vh;
+    // overflow: hidden;
 }
 
 main {
-    height:100%;
-    overflow: auto;
+    // height:100%;
+    // overflow: auto;
 }
 #nav,#aside {
     z-index: 999;
@@ -42,6 +42,5 @@ main {
 #aside {
     transform: translateX(-100%);
 }
-
 
 @tailwind utilities; 

@@ -1,8 +1,10 @@
 {# ! TODO: adblock #}
 {% embed "_containers/_container" with {'breakpoint':'lg'} %}
 {% block content %}
-    <section class="flex flex-row pt-16 md:space-x-16">
-        <div class="sticky hidden h-32 bg-primary-100 md:block" style="width:300px; top:64px"></div>
+    <section class="flex flex-row items-start pt-16 md:space-x-16">
+        <div class="sticky hidden md:block" style=" top:64px">
+                {% include '_components/_adblock' with {'adgroup': ['or', ad.adHalfPage, ad.adMediumRectangle] } %}
+        </div>
         <div class="flex justify-end w-full">
             <div class="w-full font-serif leading-normal prose prose-lg text-black md:prose-xl">
                 {{ block.richTextEditor }}
