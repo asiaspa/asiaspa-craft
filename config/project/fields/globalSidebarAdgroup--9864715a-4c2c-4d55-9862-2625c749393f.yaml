@@ -1,0 +1,9 @@
+contentColumnType: text
+fieldGroup: f6ccb015-3533-491f-8f9c-775d16605b99
+handle: globalSidebarAdgroup
+instructions: ''
+name: 'Global - Sidebar - Adgroup'
+searchable: false
+translationKeyFormat: null
+translationMethod: none
+type: doublesecretagency\adwizard\fields\AdGroups
