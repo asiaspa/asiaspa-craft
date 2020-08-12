@@ -2074,13 +2074,6 @@ video {
 
 body {
   font-weight: 300;
-  height: 100vh;
-  overflow: hidden;
-}
-
-main {
-  height: 100%;
-  overflow: auto;
 }
 
 #nav, #aside {

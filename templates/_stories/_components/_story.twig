@@ -1,0 +1,50 @@
+{% set entry = craft.entries
+    .id(entryId)
+    .with([
+        'storyHeroImage',
+        'storyCategory',
+        'storyPrintIssue',
+        'storyByline',
+        'storyByline.photo',
+        'author',
+        'author.photo'
+]).one() %}
+
+{% set nextEntry = entry.getNext({section:'story', orderBy:'postDate' }) %}
+
+{# main section #}
+<article>
+    <div class="invisible hidden">{{ entry | views_work_image }}</div>
+    
+    {% embed "_containers/_container" with {'breakpoint':'xl'} %}
+    {% block content %}
+        <section class="flex flex-col md:mt-16 md:flex-row -mx-edge">
+            <div class="w-full md:w-1/2 ">
+                <div class="-ml-screen-xl">
+                    {% include "_components/_imager" with { image : entry.storyHeroImage[0] ?? ''} %}
+                </div>
+            </div>
+            <div class="self-start w-full md:w-1/2 md:pr-0 md:py-0 p-edge md:sticky" style="top:64px;">
+                <div class="flex space-x-6">
+                    {% include "_components/_category-tag" with { category : entry.storyCategory } %}
+                    {% include "_components/_category-tag" with { category : entry.storyPrintIssue } %}
+                </div>
+                <h1 class="text-4xl font-hairline leading-tight font-display md:text-5xl ">{{ entry.title }}</h1>
+                <hr class="block w-32 my-6 border-t-2 border-primary-500"/>
+                <h2 class="mb-4 text-lg lg:text-xl color-gray-900">{{ entry.storyStandfirst }}</h2>
+                {% include "_components/_user" with { user : entry.storyByline[0] ?? entry.author, date : entry.postDate } %}
+            </div>
+        </section>
+    {% endblock %}
+    {% endembed %}
+    
+    {% include '_components/_adblock' with {'adgroup': ['or', ad.adBillboard, ad.adLeaderboard]} %}
+    {% include "_stories/_story-builder" with {'matrix': entry.storyBuilder } %}
+</article>
+
+{% if nextEntry %}
+<div class="pb-32 border-b border-primary-300" s-target="this" s-swap="afterend" sprig s-trigger="revealed">
+{% include '_components/_adblock' with {'adgroup': ['or', ad.adBillboard, ad.adLeaderboard]} %}
+    <input type="hidden" name="entryId" value="{{ nextEntry.id }}">
+</div>
+{% endif %} 

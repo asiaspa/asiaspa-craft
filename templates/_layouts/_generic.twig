@@ -7,8 +7,8 @@
 {# ------------------- Main  ------------------- #}
 {% set headerNodes = craft.navigate.raw('header ') %}
 {% include "_components/_nav" %}
+{% include "_components/_header" %}
 <main>
-    {% include "_components/_header" %}
     {% block main %}
     {% endblock %}
 </main>
