@@ -28,7 +28,7 @@
                     {% include "_components/_category-tag" with { category : entry.storyCategory } %}
                     {% include "_components/_category-tag" with { category : entry.storyPrintIssue } %}
                 </div>
-                <h1 class="text-4xl font-hairline leading-tight font-display md:text-5xl xl:text-6xl ">{{ entry.title }}</h1>
+                <h1 class="text-4xl font-hairline leading-tight font-display md:text-5xl ">{{ entry.title }}</h1>
                 <hr class="block w-32 my-6 border-t-2 border-primary-500"/>
                 <h2 class="mb-4 text-lg lg:text-xl color-gray-900">{{ entry.storyStandfirst }}</h2>
                 {% include "_components/_user" with { user : entry.storyByline[0] ?? entry.author, date : entry.postDate } %}

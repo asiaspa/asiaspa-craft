@@ -52,7 +52,7 @@
             </ul>
             <div>
                 <ul class="flex flex-col text-xl lg:flex-row lg:flex-grow">
-                    <li class="self-center hidden lg:inline-block">
+                    {# <li class="self-center hidden lg:inline-block">
                         <button class="items-center inline-block px-3 py-2 text-black transition duration-300 hover:text-primary-500"
                                 @click="dropdown = false; search = !search">
                             <span
@@ -60,11 +60,11 @@
                             <span
                                   x-show="search === true">{% include "_components/_icon" with { 'icon':'icon-e-remove' } %}</span>
                         </button>
-                    </li>
-                    <li class="border-t lg:border-0 lg:inline-block">
+                    </li> #}
+                    {# <li class="border-t lg:border-0 lg:inline-block">
                         <a class="block p-4 text-2xl transition duration-300 lg:text-xl h-min-16 lg:inline-block hover:text-primary-500"
                            href="/spa-locator">Spa Locator</a>
-                    </li>
+                    </li> #}
                 </ul>
             </div>
         </div>
