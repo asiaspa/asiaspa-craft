@@ -1,0 +1,72 @@
+fieldLayouts:
+  7a3cc5a0-b87c-43f3-b7e9-a1acc303bca0:
+    tabs:
+      -
+        elements:
+          -
+            heading: 'Above Header'
+            type: craft\fieldlayoutelements\Heading
+          -
+            fieldUid: f838edc2-c252-49b3-a8ca-d352be911f97
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 25
+          -
+            fieldUid: b99c9db9-387f-433d-b994-4dd8efaaaaec
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 25
+          -
+            heading: 'Between Section'
+            type: craft\fieldlayoutelements\Heading
+          -
+            fieldUid: 3934f0f2-04d2-4400-8a01-6ebee06221f6
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 25
+          -
+            fieldUid: 1f4c97fd-1684-4402-bd30-0d0b187b3569
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 25
+          -
+            heading: Sidebar
+            type: craft\fieldlayoutelements\Heading
+          -
+            fieldUid: f8d13ade-0da9-4c0a-9155-0bd58013e8fe
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 25
+          -
+            fieldUid: e980f0ec-f797-4224-8790-ddc64e4e6196
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 25
+        name: 'Ad Group'
+        sortOrder: 1
+handle: ad
+name: Ad

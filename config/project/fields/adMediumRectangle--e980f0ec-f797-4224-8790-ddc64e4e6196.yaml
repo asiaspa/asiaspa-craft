@@ -1,8 +1,8 @@
 contentColumnType: text
-fieldGroup: 6ebe0a75-3257-417d-8c9b-c712a8dbf9c9
-handle: adgroupDesktop
-instructions: ''
-name: 'Adgroup - Desktop'
+fieldGroup: 0a3d02f5-f5e6-4b6e-85c4-e6f83226cf91
+handle: adMediumRectangle
+instructions: 300x250
+name: 'Ad Medium Rectangle'
 searchable: false
 translationKeyFormat: null
 translationMethod: none
