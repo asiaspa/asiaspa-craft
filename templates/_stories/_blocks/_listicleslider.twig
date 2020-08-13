@@ -1,6 +1,5 @@
-{% embed "_containers/_container"%}
-	{% block content %}
-		{{ block.type.handle }}
-	{% endblock %}
+{% embed "_stories/_containers/_listicle" %}
+{% block listicle %}
+{# {% include "_stories/_components/_gallery" with {'gallery':block.gallery} %} #}
+{% endblock %}
 {% endembed %}
-

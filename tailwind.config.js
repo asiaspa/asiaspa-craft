@@ -34,7 +34,35 @@ module.exports = {
                 '900': 'var(--color-gray-900)'
             },
             black: 'var(--color-black)',
-            white: 'var(--color-white)'
+            white: 'var(--color-white)',
+        },
+        typography: {
+            default: {
+                css: {
+                    color: 'var(--color-black)',
+                    strong: {
+                        fontWeight: '300'
+                    },
+                    h1: {
+                        fontWeight: '300',
+                    },
+                    h2: {
+                        fontWeight: '300',
+                    },
+                    h3: {
+                        fontWeight: '300',
+                    },
+                    h4: {
+                        fontWeight: '300',
+                    },
+                    a: {
+                        color: 'var(--color-primary-500)',
+                        '&:hover': {
+                            color: 'var(--color-primary-300)',
+                        },
+                    },
+                },
+            },
         },
         extend: {
             padding: {
@@ -53,6 +81,7 @@ module.exports = {
             },
             inset: {
                 '1/2': '50%',
+                '8': '8rem'
             }
         },
     },

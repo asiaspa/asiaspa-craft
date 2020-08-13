@@ -13,10 +13,10 @@
             <a href="#">CLOSE</a>
         </div>
     </div>
-    <ul class="py-16 space-y-4">
+    <ul class="py-16 ">
         {% for node in headerNodes %}
         <li>
-            <a class="block text-6xl font-hairline tracking-wide transition duration-300 border-black font-display hover:border-b"
+            <a class="block text-6xl font-hairline tracking-wide transition duration-300 border-b border-primary-300 font-display hover:border-black"
                 href="{{ node.url }}">{{ node.name }}</a>
         </li>
         {% endfor %}

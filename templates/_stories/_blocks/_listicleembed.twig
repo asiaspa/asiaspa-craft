@@ -1,12 +1,5 @@
-{% embed "_containers/_container" with {'breakpoint':'md'} %}
-	{% block content %}
-		<div class="flex flex-col pt-16 space-y-4">
-			{% include "_stories/_components/_listicle-header" %}
-			{% include "_stories/_components/_embed" with {'block': block } %}
-			<div class="w-full font-serif leading-normal prose prose-lg text-black md:prose-xl">
-				{{ block.richTextEditor }}
-			</div>
-		</div>
-	{% endblock %}
+{% embed "_stories/_containers/_listicle" %}
+{% block listicle %}
+{% include "_stories/_components/_embed" with {'block': block } %}
+{% endblock %}
 {% endembed %}
-
