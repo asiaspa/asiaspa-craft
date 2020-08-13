@@ -620,7 +620,7 @@ video {
 }
 
 .prose {
-  color: #4a5568;
+  color: var(--color-black);
   max-width: 65ch;
 }
 
@@ -633,13 +633,17 @@ video {
 }
 
 .prose a {
-  color: #1a202c;
+  color: var(--color-primary-500);
   text-decoration: underline;
+}
+
+.prose a:hover {
+  color: var(--color-primary-300);
 }
 
 .prose strong {
   color: #1a202c;
-  font-weight: 600;
+  font-weight: 300;
 }
 
 .prose ol {
@@ -706,7 +710,7 @@ video {
 
 .prose h1 {
   color: #1a202c;
-  font-weight: 800;
+  font-weight: 300;
   font-size: 2.25em;
   margin-top: 0;
   margin-bottom: 0.8888889em;
@@ -715,7 +719,7 @@ video {
 
 .prose h2 {
   color: #1a202c;
-  font-weight: 700;
+  font-weight: 300;
   font-size: 1.5em;
   margin-top: 2em;
   margin-bottom: 1em;
@@ -724,7 +728,7 @@ video {
 
 .prose h3 {
   color: #1a202c;
-  font-weight: 600;
+  font-weight: 300;
   font-size: 1.25em;
   margin-top: 1.6em;
   margin-bottom: 0.6em;
@@ -733,7 +737,7 @@ video {
 
 .prose h4 {
   color: #1a202c;
-  font-weight: 600;
+  font-weight: 300;
   margin-top: 1.5em;
   margin-bottom: 0.5em;
   line-height: 1.5;
@@ -7409,6 +7413,13 @@ body {
   left: 0;
 }
 
+.inset-8 {
+  top: 8rem;
+  right: 8rem;
+  bottom: 8rem;
+  left: 8rem;
+}
+
 .inset-auto {
   top: auto;
   right: auto;
@@ -7431,6 +7442,16 @@ body {
 .inset-x-0 {
   right: 0;
   left: 0;
+}
+
+.inset-y-8 {
+  top: 8rem;
+  bottom: 8rem;
+}
+
+.inset-x-8 {
+  right: 8rem;
+  left: 8rem;
 }
 
 .inset-y-auto {
@@ -7467,6 +7488,22 @@ body {
 
 .left-0 {
   left: 0;
+}
+
+.top-8 {
+  top: 8rem;
+}
+
+.right-8 {
+  right: 8rem;
+}
+
+.bottom-8 {
+  bottom: 8rem;
+}
+
+.left-8 {
+  left: 8rem;
 }
 
 .top-auto {
@@ -10753,7 +10790,7 @@ body {
 
 @media (min-width: 640px) {
   .sm\:prose {
-    color: #4a5568;
+    color: var(--color-black);
     max-width: 65ch;
   }
 
@@ -10766,13 +10803,17 @@ body {
   }
 
   .sm\:prose a {
-    color: #1a202c;
+    color: var(--color-primary-500);
     text-decoration: underline;
+  }
+
+  .sm\:prose a:hover {
+    color: var(--color-primary-300);
   }
 
   .sm\:prose strong {
     color: #1a202c;
-    font-weight: 600;
+    font-weight: 300;
   }
 
   .sm\:prose ol {
@@ -10839,7 +10880,7 @@ body {
 
   .sm\:prose h1 {
     color: #1a202c;
-    font-weight: 800;
+    font-weight: 300;
     font-size: 2.25em;
     margin-top: 0;
     margin-bottom: 0.8888889em;
@@ -10848,7 +10889,7 @@ body {
 
   .sm\:prose h2 {
     color: #1a202c;
-    font-weight: 700;
+    font-weight: 300;
     font-size: 1.5em;
     margin-top: 2em;
     margin-bottom: 1em;
@@ -10857,7 +10898,7 @@ body {
 
   .sm\:prose h3 {
     color: #1a202c;
-    font-weight: 600;
+    font-weight: 300;
     font-size: 1.25em;
     margin-top: 1.6em;
     margin-bottom: 0.6em;
@@ -10866,7 +10907,7 @@ body {
 
   .sm\:prose h4 {
     color: #1a202c;
-    font-weight: 600;
+    font-weight: 300;
     margin-top: 1.5em;
     margin-bottom: 0.5em;
     line-height: 1.5;
@@ -17289,6 +17330,13 @@ body {
     left: 0;
   }
 
+  .sm\:inset-8 {
+    top: 8rem;
+    right: 8rem;
+    bottom: 8rem;
+    left: 8rem;
+  }
+
   .sm\:inset-auto {
     top: auto;
     right: auto;
@@ -17311,6 +17359,16 @@ body {
   .sm\:inset-x-0 {
     right: 0;
     left: 0;
+  }
+
+  .sm\:inset-y-8 {
+    top: 8rem;
+    bottom: 8rem;
+  }
+
+  .sm\:inset-x-8 {
+    right: 8rem;
+    left: 8rem;
   }
 
   .sm\:inset-y-auto {
@@ -17347,6 +17405,22 @@ body {
 
   .sm\:left-0 {
     left: 0;
+  }
+
+  .sm\:top-8 {
+    top: 8rem;
+  }
+
+  .sm\:right-8 {
+    right: 8rem;
+  }
+
+  .sm\:bottom-8 {
+    bottom: 8rem;
+  }
+
+  .sm\:left-8 {
+    left: 8rem;
   }
 
   .sm\:top-auto {
@@ -20634,7 +20708,7 @@ body {
 
 @media (min-width: 960px) {
   .md\:prose {
-    color: #4a5568;
+    color: var(--color-black);
     max-width: 65ch;
   }
 
@@ -20647,13 +20721,17 @@ body {
   }
 
   .md\:prose a {
-    color: #1a202c;
+    color: var(--color-primary-500);
     text-decoration: underline;
+  }
+
+  .md\:prose a:hover {
+    color: var(--color-primary-300);
   }
 
   .md\:prose strong {
     color: #1a202c;
-    font-weight: 600;
+    font-weight: 300;
   }
 
   .md\:prose ol {
@@ -20720,7 +20798,7 @@ body {
 
   .md\:prose h1 {
     color: #1a202c;
-    font-weight: 800;
+    font-weight: 300;
     font-size: 2.25em;
     margin-top: 0;
     margin-bottom: 0.8888889em;
@@ -20729,7 +20807,7 @@ body {
 
   .md\:prose h2 {
     color: #1a202c;
-    font-weight: 700;
+    font-weight: 300;
     font-size: 1.5em;
     margin-top: 2em;
     margin-bottom: 1em;
@@ -20738,7 +20816,7 @@ body {
 
   .md\:prose h3 {
     color: #1a202c;
-    font-weight: 600;
+    font-weight: 300;
     font-size: 1.25em;
     margin-top: 1.6em;
     margin-bottom: 0.6em;
@@ -20747,7 +20825,7 @@ body {
 
   .md\:prose h4 {
     color: #1a202c;
-    font-weight: 600;
+    font-weight: 300;
     margin-top: 1.5em;
     margin-bottom: 0.5em;
     line-height: 1.5;
@@ -27170,6 +27248,13 @@ body {
     left: 0;
   }
 
+  .md\:inset-8 {
+    top: 8rem;
+    right: 8rem;
+    bottom: 8rem;
+    left: 8rem;
+  }
+
   .md\:inset-auto {
     top: auto;
     right: auto;
@@ -27192,6 +27277,16 @@ body {
   .md\:inset-x-0 {
     right: 0;
     left: 0;
+  }
+
+  .md\:inset-y-8 {
+    top: 8rem;
+    bottom: 8rem;
+  }
+
+  .md\:inset-x-8 {
+    right: 8rem;
+    left: 8rem;
   }
 
   .md\:inset-y-auto {
@@ -27228,6 +27323,22 @@ body {
 
   .md\:left-0 {
     left: 0;
+  }
+
+  .md\:top-8 {
+    top: 8rem;
+  }
+
+  .md\:right-8 {
+    right: 8rem;
+  }
+
+  .md\:bottom-8 {
+    bottom: 8rem;
+  }
+
+  .md\:left-8 {
+    left: 8rem;
   }
 
   .md\:top-auto {
@@ -30515,7 +30626,7 @@ body {
 
 @media (min-width: 1280px) {
   .lg\:prose {
-    color: #4a5568;
+    color: var(--color-black);
     max-width: 65ch;
   }
 
@@ -30528,13 +30639,17 @@ body {
   }
 
   .lg\:prose a {
-    color: #1a202c;
+    color: var(--color-primary-500);
     text-decoration: underline;
+  }
+
+  .lg\:prose a:hover {
+    color: var(--color-primary-300);
   }
 
   .lg\:prose strong {
     color: #1a202c;
-    font-weight: 600;
+    font-weight: 300;
   }
 
   .lg\:prose ol {
@@ -30601,7 +30716,7 @@ body {
 
   .lg\:prose h1 {
     color: #1a202c;
-    font-weight: 800;
+    font-weight: 300;
     font-size: 2.25em;
     margin-top: 0;
     margin-bottom: 0.8888889em;
@@ -30610,7 +30725,7 @@ body {
 
   .lg\:prose h2 {
     color: #1a202c;
-    font-weight: 700;
+    font-weight: 300;
     font-size: 1.5em;
     margin-top: 2em;
     margin-bottom: 1em;
@@ -30619,7 +30734,7 @@ body {
 
   .lg\:prose h3 {
     color: #1a202c;
-    font-weight: 600;
+    font-weight: 300;
     font-size: 1.25em;
     margin-top: 1.6em;
     margin-bottom: 0.6em;
@@ -30628,7 +30743,7 @@ body {
 
   .lg\:prose h4 {
     color: #1a202c;
-    font-weight: 600;
+    font-weight: 300;
     margin-top: 1.5em;
     margin-bottom: 0.5em;
     line-height: 1.5;
@@ -37051,6 +37166,13 @@ body {
     left: 0;
   }
 
+  .lg\:inset-8 {
+    top: 8rem;
+    right: 8rem;
+    bottom: 8rem;
+    left: 8rem;
+  }
+
   .lg\:inset-auto {
     top: auto;
     right: auto;
@@ -37073,6 +37195,16 @@ body {
   .lg\:inset-x-0 {
     right: 0;
     left: 0;
+  }
+
+  .lg\:inset-y-8 {
+    top: 8rem;
+    bottom: 8rem;
+  }
+
+  .lg\:inset-x-8 {
+    right: 8rem;
+    left: 8rem;
   }
 
   .lg\:inset-y-auto {
@@ -37109,6 +37241,22 @@ body {
 
   .lg\:left-0 {
     left: 0;
+  }
+
+  .lg\:top-8 {
+    top: 8rem;
+  }
+
+  .lg\:right-8 {
+    right: 8rem;
+  }
+
+  .lg\:bottom-8 {
+    bottom: 8rem;
+  }
+
+  .lg\:left-8 {
+    left: 8rem;
   }
 
   .lg\:top-auto {
@@ -40396,7 +40544,7 @@ body {
 
 @media (min-width: 1600px) {
   .xl\:prose {
-    color: #4a5568;
+    color: var(--color-black);
     max-width: 65ch;
   }
 
@@ -40409,13 +40557,17 @@ body {
   }
 
   .xl\:prose a {
-    color: #1a202c;
+    color: var(--color-primary-500);
     text-decoration: underline;
+  }
+
+  .xl\:prose a:hover {
+    color: var(--color-primary-300);
   }
 
   .xl\:prose strong {
     color: #1a202c;
-    font-weight: 600;
+    font-weight: 300;
   }
 
   .xl\:prose ol {
@@ -40482,7 +40634,7 @@ body {
 
   .xl\:prose h1 {
     color: #1a202c;
-    font-weight: 800;
+    font-weight: 300;
     font-size: 2.25em;
     margin-top: 0;
     margin-bottom: 0.8888889em;
@@ -40491,7 +40643,7 @@ body {
 
   .xl\:prose h2 {
     color: #1a202c;
-    font-weight: 700;
+    font-weight: 300;
     font-size: 1.5em;
     margin-top: 2em;
     margin-bottom: 1em;
@@ -40500,7 +40652,7 @@ body {
 
   .xl\:prose h3 {
     color: #1a202c;
-    font-weight: 600;
+    font-weight: 300;
     font-size: 1.25em;
     margin-top: 1.6em;
     margin-bottom: 0.6em;
@@ -40509,7 +40661,7 @@ body {
 
   .xl\:prose h4 {
     color: #1a202c;
-    font-weight: 600;
+    font-weight: 300;
     margin-top: 1.5em;
     margin-bottom: 0.5em;
     line-height: 1.5;
@@ -46932,6 +47084,13 @@ body {
     left: 0;
   }
 
+  .xl\:inset-8 {
+    top: 8rem;
+    right: 8rem;
+    bottom: 8rem;
+    left: 8rem;
+  }
+
   .xl\:inset-auto {
     top: auto;
     right: auto;
@@ -46954,6 +47113,16 @@ body {
   .xl\:inset-x-0 {
     right: 0;
     left: 0;
+  }
+
+  .xl\:inset-y-8 {
+    top: 8rem;
+    bottom: 8rem;
+  }
+
+  .xl\:inset-x-8 {
+    right: 8rem;
+    left: 8rem;
   }
 
   .xl\:inset-y-auto {
@@ -46990,6 +47159,22 @@ body {
 
   .xl\:left-0 {
     left: 0;
+  }
+
+  .xl\:top-8 {
+    top: 8rem;
+  }
+
+  .xl\:right-8 {
+    right: 8rem;
+  }
+
+  .xl\:bottom-8 {
+    bottom: 8rem;
+  }
+
+  .xl\:left-8 {
+    left: 8rem;
   }
 
   .xl\:top-auto {
