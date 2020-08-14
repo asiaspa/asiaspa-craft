@@ -1,0 +1,27 @@
+{% set listicleContent %}
+
+<div class="flex flex-col items-start mt-32 space-y-4 md:flex-row md:space-y-0 md:space-x-6">
+	<div class="w-full md:sticky top-8 md:w-1/3" >
+		{% if entry.storyListicleNumbering %}
+		<div class="inline-block w-12 h-12 mr-2 text-center border border-black rounded-full" >
+			<span class="inline-block text-3xl tracking-wide font-display" style="line-height:48px; font-variant-numeric: diagonal-fractions;">{{ listicleNumber }}/{{ listicleCount }}</span>
+		</div>
+		{% endif %}
+		<h2 class="inline-block text-2xl font-headline md:text-3xl ">{{ block.heading }}</h2>
+		<div class="mt-2">
+			{% include "_stories/_components/_rich-text-editor" with {'richTextEditor': block.richTextEditor } %}
+		</div>
+	</div>
+	
+	<div class="w-full md:w-2/3">
+	{% block listicle %}{% endblock %}
+	</div>
+</div>
+
+{% endset %}
+
+{% embed "_containers/_container" %}
+{% block content %}
+	{{ listicleContent }}
+{% endblock %}
+{% endembed %}

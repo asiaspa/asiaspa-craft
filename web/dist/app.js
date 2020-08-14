@@ -2786,6 +2786,641 @@ window.IntersectionObserverEntry = IntersectionObserverEntry;
 
 /***/ }),
 
+/***/ "./node_modules/medium-zoom/dist/medium-zoom.esm.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/medium-zoom/dist/medium-zoom.esm.js ***!
+  \**********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/*! medium-zoom 1.0.6 | MIT License | https://github.com/francoischalifour/medium-zoom */
+var _extends = Object.assign || function (target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i];
+
+    for (var key in source) {
+      if (Object.prototype.hasOwnProperty.call(source, key)) {
+        target[key] = source[key];
+      }
+    }
+  }
+
+  return target;
+};
+
+var isSupported = function isSupported(node) {
+  return node.tagName === 'IMG';
+};
+
+/* eslint-disable-next-line no-prototype-builtins */
+var isNodeList = function isNodeList(selector) {
+  return NodeList.prototype.isPrototypeOf(selector);
+};
+
+var isNode = function isNode(selector) {
+  return selector && selector.nodeType === 1;
+};
+
+var isSvg = function isSvg(image) {
+  var source = image.currentSrc || image.src;
+  return source.substr(-4).toLowerCase() === '.svg';
+};
+
+var getImagesFromSelector = function getImagesFromSelector(selector) {
+  try {
+    if (Array.isArray(selector)) {
+      return selector.filter(isSupported);
+    }
+
+    if (isNodeList(selector)) {
+      // Do not use spread operator or Array.from() for IE support
+      return [].slice.call(selector).filter(isSupported);
+    }
+
+    if (isNode(selector)) {
+      return [selector].filter(isSupported);
+    }
+
+    if (typeof selector === 'string') {
+      // Do not use spread operator or Array.from() for IE support
+      return [].slice.call(document.querySelectorAll(selector)).filter(isSupported);
+    }
+
+    return [];
+  } catch (err) {
+    throw new TypeError('The provided selector is invalid.\n' + 'Expects a CSS selector, a Node element, a NodeList or an array.\n' + 'See: https://github.com/francoischalifour/medium-zoom');
+  }
+};
+
+var createOverlay = function createOverlay(background) {
+  var overlay = document.createElement('div');
+  overlay.classList.add('medium-zoom-overlay');
+  overlay.style.background = background;
+
+  return overlay;
+};
+
+var cloneTarget = function cloneTarget(template) {
+  var _template$getBounding = template.getBoundingClientRect(),
+      top = _template$getBounding.top,
+      left = _template$getBounding.left,
+      width = _template$getBounding.width,
+      height = _template$getBounding.height;
+
+  var clone = template.cloneNode();
+  var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+  var scrollLeft = window.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft || 0;
+
+  clone.removeAttribute('id');
+  clone.style.position = 'absolute';
+  clone.style.top = top + scrollTop + 'px';
+  clone.style.left = left + scrollLeft + 'px';
+  clone.style.width = width + 'px';
+  clone.style.height = height + 'px';
+  clone.style.transform = '';
+
+  return clone;
+};
+
+var createCustomEvent = function createCustomEvent(type, params) {
+  var eventParams = _extends({
+    bubbles: false,
+    cancelable: false,
+    detail: undefined
+  }, params);
+
+  if (typeof window.CustomEvent === 'function') {
+    return new CustomEvent(type, eventParams);
+  }
+
+  var customEvent = document.createEvent('CustomEvent');
+  customEvent.initCustomEvent(type, eventParams.bubbles, eventParams.cancelable, eventParams.detail);
+
+  return customEvent;
+};
+
+var mediumZoom = function mediumZoom(selector) {
+  var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+
+  /**
+   * Ensure the compatibility with IE11 if no Promise polyfill are used.
+   */
+  var Promise = window.Promise || function Promise(fn) {
+    function noop() {}
+    fn(noop, noop);
+  };
+
+  var _handleClick = function _handleClick(event) {
+    var target = event.target;
+
+
+    if (target === overlay) {
+      close();
+      return;
+    }
+
+    if (images.indexOf(target) === -1) {
+      return;
+    }
+
+    toggle({ target: target });
+  };
+
+  var _handleScroll = function _handleScroll() {
+    if (isAnimating || !active.original) {
+      return;
+    }
+
+    var currentScroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+
+    if (Math.abs(scrollTop - currentScroll) > zoomOptions.scrollOffset) {
+      setTimeout(close, 150);
+    }
+  };
+
+  var _handleKeyUp = function _handleKeyUp(event) {
+    var key = event.key || event.keyCode;
+
+    // Close if escape key is pressed
+    if (key === 'Escape' || key === 'Esc' || key === 27) {
+      close();
+    }
+  };
+
+  var update = function update() {
+    var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
+    var newOptions = options;
+
+    if (options.background) {
+      overlay.style.background = options.background;
+    }
+
+    if (options.container && options.container instanceof Object) {
+      newOptions.container = _extends({}, zoomOptions.container, options.container);
+    }
+
+    if (options.template) {
+      var template = isNode(options.template) ? options.template : document.querySelector(options.template);
+
+      newOptions.template = template;
+    }
+
+    zoomOptions = _extends({}, zoomOptions, newOptions);
+
+    images.forEach(function (image) {
+      image.dispatchEvent(createCustomEvent('medium-zoom:update', {
+        detail: { zoom: zoom }
+      }));
+    });
+
+    return zoom;
+  };
+
+  var clone = function clone() {
+    var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+    return mediumZoom(_extends({}, zoomOptions, options));
+  };
+
+  var attach = function attach() {
+    for (var _len = arguments.length, selectors = Array(_len), _key = 0; _key < _len; _key++) {
+      selectors[_key] = arguments[_key];
+    }
+
+    var newImages = selectors.reduce(function (imagesAccumulator, currentSelector) {
+      return [].concat(imagesAccumulator, getImagesFromSelector(currentSelector));
+    }, []);
+
+    newImages.filter(function (newImage) {
+      return images.indexOf(newImage) === -1;
+    }).forEach(function (newImage) {
+      images.push(newImage);
+      newImage.classList.add('medium-zoom-image');
+    });
+
+    eventListeners.forEach(function (_ref) {
+      var type = _ref.type,
+          listener = _ref.listener,
+          options = _ref.options;
+
+      newImages.forEach(function (image) {
+        image.addEventListener(type, listener, options);
+      });
+    });
+
+    return zoom;
+  };
+
+  var detach = function detach() {
+    for (var _len2 = arguments.length, selectors = Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+      selectors[_key2] = arguments[_key2];
+    }
+
+    if (active.zoomed) {
+      close();
+    }
+
+    var imagesToDetach = selectors.length > 0 ? selectors.reduce(function (imagesAccumulator, currentSelector) {
+      return [].concat(imagesAccumulator, getImagesFromSelector(currentSelector));
+    }, []) : images;
+
+    imagesToDetach.forEach(function (image) {
+      image.classList.remove('medium-zoom-image');
+      image.dispatchEvent(createCustomEvent('medium-zoom:detach', {
+        detail: { zoom: zoom }
+      }));
+    });
+
+    images = images.filter(function (image) {
+      return imagesToDetach.indexOf(image) === -1;
+    });
+
+    return zoom;
+  };
+
+  var on = function on(type, listener) {
+    var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+
+    images.forEach(function (image) {
+      image.addEventListener('medium-zoom:' + type, listener, options);
+    });
+
+    eventListeners.push({ type: 'medium-zoom:' + type, listener: listener, options: options });
+
+    return zoom;
+  };
+
+  var off = function off(type, listener) {
+    var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+
+    images.forEach(function (image) {
+      image.removeEventListener('medium-zoom:' + type, listener, options);
+    });
+
+    eventListeners = eventListeners.filter(function (eventListener) {
+      return !(eventListener.type === 'medium-zoom:' + type && eventListener.listener.toString() === listener.toString());
+    });
+
+    return zoom;
+  };
+
+  var open = function open() {
+    var _ref2 = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
+        target = _ref2.target;
+
+    var _animate = function _animate() {
+      var container = {
+        width: document.documentElement.clientWidth,
+        height: document.documentElement.clientHeight,
+        left: 0,
+        top: 0,
+        right: 0,
+        bottom: 0
+      };
+      var viewportWidth = void 0;
+      var viewportHeight = void 0;
+
+      if (zoomOptions.container) {
+        if (zoomOptions.container instanceof Object) {
+          // The container is given as an object with properties like width, height, left, top
+          container = _extends({}, container, zoomOptions.container);
+
+          // We need to adjust custom options like container.right or container.bottom
+          viewportWidth = container.width - container.left - container.right - zoomOptions.margin * 2;
+          viewportHeight = container.height - container.top - container.bottom - zoomOptions.margin * 2;
+        } else {
+          // The container is given as an element
+          var zoomContainer = isNode(zoomOptions.container) ? zoomOptions.container : document.querySelector(zoomOptions.container);
+
+          var _zoomContainer$getBou = zoomContainer.getBoundingClientRect(),
+              _width = _zoomContainer$getBou.width,
+              _height = _zoomContainer$getBou.height,
+              _left = _zoomContainer$getBou.left,
+              _top = _zoomContainer$getBou.top;
+
+          container = _extends({}, container, {
+            width: _width,
+            height: _height,
+            left: _left,
+            top: _top
+          });
+        }
+      }
+
+      viewportWidth = viewportWidth || container.width - zoomOptions.margin * 2;
+      viewportHeight = viewportHeight || container.height - zoomOptions.margin * 2;
+
+      var zoomTarget = active.zoomedHd || active.original;
+      var naturalWidth = isSvg(zoomTarget) ? viewportWidth : zoomTarget.naturalWidth || viewportWidth;
+      var naturalHeight = isSvg(zoomTarget) ? viewportHeight : zoomTarget.naturalHeight || viewportHeight;
+
+      var _zoomTarget$getBoundi = zoomTarget.getBoundingClientRect(),
+          top = _zoomTarget$getBoundi.top,
+          left = _zoomTarget$getBoundi.left,
+          width = _zoomTarget$getBoundi.width,
+          height = _zoomTarget$getBoundi.height;
+
+      var scaleX = Math.min(naturalWidth, viewportWidth) / width;
+      var scaleY = Math.min(naturalHeight, viewportHeight) / height;
+      var scale = Math.min(scaleX, scaleY);
+      var translateX = (-left + (viewportWidth - width) / 2 + zoomOptions.margin + container.left) / scale;
+      var translateY = (-top + (viewportHeight - height) / 2 + zoomOptions.margin + container.top) / scale;
+      var transform = 'scale(' + scale + ') translate3d(' + translateX + 'px, ' + translateY + 'px, 0)';
+
+      active.zoomed.style.transform = transform;
+
+      if (active.zoomedHd) {
+        active.zoomedHd.style.transform = transform;
+      }
+    };
+
+    return new Promise(function (resolve) {
+      if (target && images.indexOf(target) === -1) {
+        resolve(zoom);
+        return;
+      }
+
+      var _handleOpenEnd = function _handleOpenEnd() {
+        isAnimating = false;
+        active.zoomed.removeEventListener('transitionend', _handleOpenEnd);
+        active.original.dispatchEvent(createCustomEvent('medium-zoom:opened', {
+          detail: { zoom: zoom }
+        }));
+
+        resolve(zoom);
+      };
+
+      if (active.zoomed) {
+        resolve(zoom);
+        return;
+      }
+
+      if (target) {
+        // The zoom was triggered manually via a click
+        active.original = target;
+      } else if (images.length > 0) {
+var _images = images;
+        active.original = _images[0];
+      } else {
+        resolve(zoom);
+        return;
+      }
+
+      active.original.dispatchEvent(createCustomEvent('medium-zoom:open', {
+        detail: { zoom: zoom }
+      }));
+
+      scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+      isAnimating = true;
+      active.zoomed = cloneTarget(active.original);
+
+      document.body.appendChild(overlay);
+
+      if (zoomOptions.template) {
+        var template = isNode(zoomOptions.template) ? zoomOptions.template : document.querySelector(zoomOptions.template);
+        active.template = document.createElement('div');
+        active.template.appendChild(template.content.cloneNode(true));
+
+        document.body.appendChild(active.template);
+      }
+
+      document.body.appendChild(active.zoomed);
+
+      window.requestAnimationFrame(function () {
+        document.body.classList.add('medium-zoom--opened');
+      });
+
+      active.original.classList.add('medium-zoom-image--hidden');
+      active.zoomed.classList.add('medium-zoom-image--opened');
+
+      active.zoomed.addEventListener('click', close);
+      active.zoomed.addEventListener('transitionend', _handleOpenEnd);
+
+      if (active.original.getAttribute('data-zoom-src')) {
+        active.zoomedHd = active.zoomed.cloneNode();
+
+        // Reset the `scrset` property or the HD image won't load.
+        active.zoomedHd.removeAttribute('srcset');
+        active.zoomedHd.removeAttribute('sizes');
+
+        active.zoomedHd.src = active.zoomed.getAttribute('data-zoom-src');
+
+        active.zoomedHd.onerror = function () {
+          clearInterval(getZoomTargetSize);
+          console.warn('Unable to reach the zoom image target ' + active.zoomedHd.src);
+          active.zoomedHd = null;
+          _animate();
+        };
+
+        // We need to access the natural size of the full HD
+        // target as fast as possible to compute the animation.
+        var getZoomTargetSize = setInterval(function () {
+          if ( active.zoomedHd.complete) {
+            clearInterval(getZoomTargetSize);
+            active.zoomedHd.classList.add('medium-zoom-image--opened');
+            active.zoomedHd.addEventListener('click', close);
+            document.body.appendChild(active.zoomedHd);
+            _animate();
+          }
+        }, 10);
+      } else if (active.original.hasAttribute('srcset')) {
+        // If an image has a `srcset` attribuet, we don't know the dimensions of the
+        // zoomed (HD) image (like when `data-zoom-src` is specified).
+        // Therefore the approach is quite similar.
+        active.zoomedHd = active.zoomed.cloneNode();
+
+        // Resetting the sizes attribute tells the browser to load the
+        // image best fitting the current viewport size, respecting the `srcset`.
+        active.zoomedHd.removeAttribute('sizes');
+
+        // In Firefox, the `loading` attribute needs to be set to `eager` (default
+        // value) for the load event to be fired.
+        active.zoomedHd.removeAttribute('loading');
+
+        // Wait for the load event of the hd image. This will fire if the image
+        // is already cached.
+        var loadEventListener = active.zoomedHd.addEventListener('load', function () {
+          active.zoomedHd.removeEventListener('load', loadEventListener);
+          active.zoomedHd.classList.add('medium-zoom-image--opened');
+          active.zoomedHd.addEventListener('click', close);
+          document.body.appendChild(active.zoomedHd);
+          _animate();
+        });
+      } else {
+        _animate();
+      }
+    });
+  };
+
+  var close = function close() {
+    return new Promise(function (resolve) {
+      if (isAnimating || !active.original) {
+        resolve(zoom);
+        return;
+      }
+
+      var _handleCloseEnd = function _handleCloseEnd() {
+        active.original.classList.remove('medium-zoom-image--hidden');
+        document.body.removeChild(active.zoomed);
+        if (active.zoomedHd) {
+          document.body.removeChild(active.zoomedHd);
+        }
+        document.body.removeChild(overlay);
+        active.zoomed.classList.remove('medium-zoom-image--opened');
+        if (active.template) {
+          document.body.removeChild(active.template);
+        }
+
+        isAnimating = false;
+        active.zoomed.removeEventListener('transitionend', _handleCloseEnd);
+
+        active.original.dispatchEvent(createCustomEvent('medium-zoom:closed', {
+          detail: { zoom: zoom }
+        }));
+
+        active.original = null;
+        active.zoomed = null;
+        active.zoomedHd = null;
+        active.template = null;
+
+        resolve(zoom);
+      };
+
+      isAnimating = true;
+      document.body.classList.remove('medium-zoom--opened');
+      active.zoomed.style.transform = '';
+
+      if (active.zoomedHd) {
+        active.zoomedHd.style.transform = '';
+      }
+
+      // Fade out the template so it's not too abrupt
+      if (active.template) {
+        active.template.style.transition = 'opacity 150ms';
+        active.template.style.opacity = 0;
+      }
+
+      active.original.dispatchEvent(createCustomEvent('medium-zoom:close', {
+        detail: { zoom: zoom }
+      }));
+
+      active.zoomed.addEventListener('transitionend', _handleCloseEnd);
+    });
+  };
+
+  var toggle = function toggle() {
+    var _ref3 = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
+        target = _ref3.target;
+
+    if (active.original) {
+      return close();
+    }
+
+    return open({ target: target });
+  };
+
+  var getOptions = function getOptions() {
+    return zoomOptions;
+  };
+
+  var getImages = function getImages() {
+    return images;
+  };
+
+  var getZoomedImage = function getZoomedImage() {
+    return active.original;
+  };
+
+  var images = [];
+  var eventListeners = [];
+  var isAnimating = false;
+  var scrollTop = 0;
+  var zoomOptions = options;
+  var active = {
+    original: null,
+    zoomed: null,
+    zoomedHd: null,
+    template: null
+
+    // If the selector is omitted, it's replaced by the options
+  };if (Object.prototype.toString.call(selector) === '[object Object]') {
+    zoomOptions = selector;
+  } else if (selector || typeof selector === 'string' // to process empty string as a selector
+  ) {
+      attach(selector);
+    }
+
+  // Apply the default option values
+  zoomOptions = _extends({
+    margin: 0,
+    background: '#fff',
+    scrollOffset: 40,
+    container: null,
+    template: null
+  }, zoomOptions);
+
+  var overlay = createOverlay(zoomOptions.background);
+
+  document.addEventListener('click', _handleClick);
+  document.addEventListener('keyup', _handleKeyUp);
+  document.addEventListener('scroll', _handleScroll);
+  window.addEventListener('resize', close);
+
+  var zoom = {
+    open: open,
+    close: close,
+    toggle: toggle,
+    update: update,
+    clone: clone,
+    attach: attach,
+    detach: detach,
+    on: on,
+    off: off,
+    getOptions: getOptions,
+    getImages: getImages,
+    getZoomedImage: getZoomedImage
+  };
+
+  return zoom;
+};
+
+function styleInject(css, ref) {
+  if ( ref === void 0 ) ref = {};
+  var insertAt = ref.insertAt;
+
+  if (!css || typeof document === 'undefined') { return; }
+
+  var head = document.head || document.getElementsByTagName('head')[0];
+  var style = document.createElement('style');
+  style.type = 'text/css';
+
+  if (insertAt === 'top') {
+    if (head.firstChild) {
+      head.insertBefore(style, head.firstChild);
+    } else {
+      head.appendChild(style);
+    }
+  } else {
+    head.appendChild(style);
+  }
+
+  if (style.styleSheet) {
+    style.styleSheet.cssText = css;
+  } else {
+    style.appendChild(document.createTextNode(css));
+  }
+}
+
+var css = ".medium-zoom-overlay{position:fixed;top:0;right:0;bottom:0;left:0;opacity:0;transition:opacity .3s;will-change:opacity}.medium-zoom--opened .medium-zoom-overlay{cursor:pointer;cursor:zoom-out;opacity:1}.medium-zoom-image{cursor:pointer;cursor:zoom-in;transition:transform .3s cubic-bezier(.2,0,.2,1)!important}.medium-zoom-image--hidden{visibility:hidden}.medium-zoom-image--opened{position:relative;cursor:pointer;cursor:zoom-out;will-change:transform}";
+styleInject(css);
+
+/* harmony default export */ __webpack_exports__["default"] = (mediumZoom);
+
+
+/***/ }),
+
 /***/ "./node_modules/sal.js/dist/sal.js":
 /*!*****************************************!*\
   !*** ./node_modules/sal.js/dist/sal.js ***!
@@ -2795,711 +3430,6 @@ window.IntersectionObserverEntry = IntersectionObserverEntry;
 
 !function(e,t){ true?module.exports=t():undefined}(this,(function(){return function(e){var t={};function n(r){if(t[r])return t[r].exports;var o=t[r]={i:r,l:!1,exports:{}};return e[r].call(o.exports,o,o.exports,n),o.l=!0,o.exports}return n.m=e,n.c=t,n.d=function(e,t,r){n.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:r})},n.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},n.t=function(e,t){if(1&t&&(e=n(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var r=Object.create(null);if(n.r(r),Object.defineProperty(r,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var o in e)n.d(r,o,function(t){return e[t]}.bind(null,o));return r},n.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return n.d(t,"a",t),t},n.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},n.p="dist/",n(n.s=0)}([function(e,t,n){"use strict";n.r(t);n(1);function r(e,t){var n=Object.keys(e);if(Object.getOwnPropertySymbols){var r=Object.getOwnPropertySymbols(e);t&&(r=r.filter((function(t){return Object.getOwnPropertyDescriptor(e,t).enumerable}))),n.push.apply(n,r)}return n}function o(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}var i="Sal was not initialised! Probably it is used in SSR.",a="Your browser does not support IntersectionObserver!\nGet a polyfill from here:\nhttps://github.com/w3c/IntersectionObserver/tree/master/polyfill",s={rootMargin:"0% 50%",threshold:.5,animateClassName:"sal-animate",disabledClassName:"sal-disabled",enterEventName:"sal:in",exitEventName:"sal:out",selector:"[data-sal]",once:!0,disabled:!1},l=[],c=null,u=function(e){e&&e!==s&&(s=function(e){for(var t=1;t<arguments.length;t++){var n=null!=arguments[t]?arguments[t]:{};t%2?r(Object(n),!0).forEach((function(t){o(e,t,n[t])})):Object.getOwnPropertyDescriptors?Object.defineProperties(e,Object.getOwnPropertyDescriptors(n)):r(Object(n)).forEach((function(t){Object.defineProperty(e,t,Object.getOwnPropertyDescriptor(n,t))}))}return e}({},s,{},e))},f=function(e){e.classList.remove(s.animateClassName)},d=function(e,t){var n=new CustomEvent(e,{bubbles:!0,detail:t});t.target.dispatchEvent(n)},b=function(){document.body.classList.add(s.disabledClassName)},p=function(){c.disconnect(),c=null},m=function(){return s.disabled||"function"==typeof s.disabled&&s.disabled()},y=function(e,t){e.forEach((function(e){e.intersectionRatio>=s.threshold?(!function(e){e.target.classList.add(s.animateClassName),d(s.enterEventName,e)}(e),s.once&&t.unobserve(e.target)):s.once||function(e){f(e.target),d(s.exitEventName,e)}(e)}))},v=function(){b(),p()},O=function(){document.body.classList.remove(s.disabledClassName),c=new IntersectionObserver(y,{rootMargin:s.rootMargin,threshold:s.threshold}),(l=[].filter.call(document.querySelectorAll(s.selector),(function(e){return!function(e){return e.classList.contains(s.animateClassName)}(e,s.animateClassName)}))).forEach((function(e){return c.observe(e)}))},g=function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};p(),Array.from(document.querySelectorAll(s.selector)).forEach(f),u(e),O()};t.default=function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:s;if(u(e),"undefined"==typeof window)return console.warn(i),{elements:l,disable:v,enable:O,reset:g};if(!window.IntersectionObserver)throw b(),Error(a);return m()?b():O(),{elements:l,disable:v,enable:O,reset:g}}},function(e,t,n){}]).default}));
 //# sourceMappingURL=sal.js.map
-
-/***/ }),
-
-/***/ "./node_modules/scrollama/build/scrollama.js":
-/*!***************************************************!*\
-  !*** ./node_modules/scrollama/build/scrollama.js ***!
-  \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-(function (global, factory) {
-	 true ? module.exports = factory() :
-	undefined;
-}(this, (function () { 'use strict';
-
-// DOM helper functions
-
-// public
-function selectAll(selector, parent) {
-  if ( parent === void 0 ) parent = document;
-
-  if (typeof selector === 'string') {
-    return Array.from(parent.querySelectorAll(selector));
-  } else if (selector instanceof Element) {
-    return [selector];
-  } else if (selector instanceof NodeList) {
-    return Array.from(selector);
-  } else if (selector instanceof Array) {
-    return selector;
-  }
-  return [];
-}
-
-function getOffsetId(id) {
-  return ("scrollama__debug-offset--" + id);
-}
-
-// SETUP
-function setupOffset(ref) {
-  var id = ref.id;
-  var offsetVal = ref.offsetVal;
-  var stepClass = ref.stepClass;
-
-  var el = document.createElement("div");
-  el.id = getOffsetId(id);
-  el.className = "scrollama__debug-offset";
-  el.style.position = "fixed";
-  el.style.left = "0";
-  el.style.width = "100%";
-  el.style.height = "0";
-  el.style.borderTop = "2px dashed black";
-  el.style.zIndex = "9999";
-
-  var p = document.createElement("p");
-  p.innerHTML = "\"." + stepClass + "\" trigger: <span>" + offsetVal + "</span>";
-  p.style.fontSize = "12px";
-  p.style.fontFamily = "monospace";
-  p.style.color = "black";
-  p.style.margin = "0";
-  p.style.padding = "6px";
-  el.appendChild(p);
-  document.body.appendChild(el);
-}
-
-function setup(ref) {
-  var id = ref.id;
-  var offsetVal = ref.offsetVal;
-  var stepEl = ref.stepEl;
-
-  var stepClass = stepEl[0].className;
-  setupOffset({ id: id, offsetVal: offsetVal, stepClass: stepClass });
-}
-
-// UPDATE
-function update(ref) {
-  var id = ref.id;
-  var offsetMargin = ref.offsetMargin;
-  var offsetVal = ref.offsetVal;
-  var format = ref.format;
-
-  var post = format === "pixels" ? "px" : "";
-  var idVal = getOffsetId(id);
-  var el = document.getElementById(idVal);
-  el.style.top = offsetMargin + "px";
-  el.querySelector("span").innerText = "" + offsetVal + post;
-}
-
-function notifyStep(ref) {
-  var id = ref.id;
-  var index = ref.index;
-  var state = ref.state;
-
-  var prefix = "scrollama__debug-step--" + id + "-" + index;
-  var elA = document.getElementById((prefix + "_above"));
-  var elB = document.getElementById((prefix + "_below"));
-  var display = state === "enter" ? "block" : "none";
-
-  if (elA) { elA.style.display = display; }
-  if (elB) { elB.style.display = display; }
-}
-
-function scrollama() {
-  var OBSERVER_NAMES = [
-    "stepAbove",
-    "stepBelow",
-    "stepProgress",
-    "viewportAbove",
-    "viewportBelow"
-  ];
-
-  var cb = {};
-  var io = {};
-
-  var id = null;
-  var stepEl = [];
-  var stepOffsetHeight = [];
-  var stepOffsetTop = [];
-  var stepStates = [];
-
-  var offsetVal = 0;
-  var offsetMargin = 0;
-  var viewH = 0;
-  var pageH = 0;
-  var previousYOffset = 0;
-  var progressThreshold = 0;
-
-  var isReady = false;
-  var isEnabled = false;
-  var isDebug = false;
-
-  var progressMode = false;
-  var preserveOrder = false;
-  var triggerOnce = false;
-
-  var direction = "down";
-  var format = "percent";
-
-  var exclude = [];
-
-  /* HELPERS */
-  function err(msg) {
-    console.error(("scrollama error: " + msg));
-  }
-
-  function reset() {
-    cb = {
-      stepEnter: function () {},
-      stepExit: function () {},
-      stepProgress: function () {}
-    };
-    io = {};
-  }
-
-  function generateInstanceID() {
-    var a = "abcdefghijklmnopqrstuv";
-    var l = a.length;
-    var t = Date.now();
-    var r = [0, 0, 0].map(function (d) { return a[Math.floor(Math.random() * l)]; }).join("");
-    return ("" + r + t);
-  }
-
-  function getOffsetTop(el) {
-    var ref = el.getBoundingClientRect();
-    var top = ref.top;
-    var scrollTop = window.pageYOffset;
-    var clientTop = document.body.clientTop || 0;
-    return top + scrollTop - clientTop;
-  }
-
-  function getPageHeight() {
-    var body = document.body;
-    var html = document.documentElement;
-
-    return Math.max(
-      body.scrollHeight,
-      body.offsetHeight,
-      html.clientHeight,
-      html.scrollHeight,
-      html.offsetHeight
-    );
-  }
-
-  function getIndex(element) {
-    return +element.getAttribute("data-scrollama-index");
-  }
-
-  function updateDirection() {
-    if (window.pageYOffset > previousYOffset) { direction = "down"; }
-    else if (window.pageYOffset < previousYOffset) { direction = "up"; }
-    previousYOffset = window.pageYOffset;
-  }
-
-  function disconnectObserver(name) {
-    if (io[name]) { io[name].forEach(function (d) { return d.disconnect(); }); }
-  }
-
-  function handleResize() {
-    viewH = window.innerHeight;
-    pageH = getPageHeight();
-
-    var mult = format === "pixels" ? 1 : viewH;
-    offsetMargin = offsetVal * mult;
-
-    if (isReady) {
-      stepOffsetHeight = stepEl.map(function (el) { return el.getBoundingClientRect().height; });
-      stepOffsetTop = stepEl.map(getOffsetTop);
-      if (isEnabled) { updateIO(); }
-    }
-
-    if (isDebug) { update({ id: id, offsetMargin: offsetMargin, offsetVal: offsetVal, format: format }); }
-  }
-
-  function handleEnable(enable) {
-    if (enable && !isEnabled) {
-      // enable a disabled scroller
-      if (isReady) {
-        // enable a ready scroller
-        updateIO();
-      } else {
-        // can't enable an unready scroller
-        err("scrollama error: enable() called before scroller was ready");
-        isEnabled = false;
-        return; // all is not well, don't set the requested state
-      }
-    }
-    if (!enable && isEnabled) {
-      // disable an enabled scroller
-      OBSERVER_NAMES.forEach(disconnectObserver);
-    }
-    isEnabled = enable; // all is well, set requested state
-  }
-
-  function createThreshold(height) {
-    var count = Math.ceil(height / progressThreshold);
-    var t = [];
-    var ratio = 1 / count;
-    for (var i = 0; i < count; i += 1) {
-      t.push(i * ratio);
-    }
-    return t;
-  }
-
-  /* NOTIFY CALLBACKS */
-  function notifyStepProgress(element, progress) {
-    var index = getIndex(element);
-    if (progress !== undefined) { stepStates[index].progress = progress; }
-    var resp = { element: element, index: index, progress: stepStates[index].progress };
-
-    if (stepStates[index].state === "enter") { cb.stepProgress(resp); }
-  }
-
-  function notifyOthers(index, location) {
-    if (location === "above") {
-      // check if steps above/below were skipped and should be notified first
-      for (var i = 0; i < index; i += 1) {
-        var ss = stepStates[i];
-        if (ss.state !== "enter" && ss.direction !== "down") {
-          notifyStepEnter(stepEl[i], "down", false);
-          notifyStepExit(stepEl[i], "down");
-        } else if (ss.state === "enter") { notifyStepExit(stepEl[i], "down"); }
-        // else if (ss.direction === 'up') {
-        //   notifyStepEnter(stepEl[i], 'down', false);
-        //   notifyStepExit(stepEl[i], 'down');
-        // }
-      }
-    } else if (location === "below") {
-      for (var i$1 = stepStates.length - 1; i$1 > index; i$1 -= 1) {
-        var ss$1 = stepStates[i$1];
-        if (ss$1.state === "enter") {
-          notifyStepExit(stepEl[i$1], "up");
-        }
-        if (ss$1.direction === "down") {
-          notifyStepEnter(stepEl[i$1], "up", false);
-          notifyStepExit(stepEl[i$1], "up");
-        }
-      }
-    }
-  }
-
-  function notifyStepEnter(element, dir, check) {
-    if ( check === void 0 ) check = true;
-
-    var index = getIndex(element);
-    var resp = { element: element, index: index, direction: dir };
-
-    // store most recent trigger
-    stepStates[index].direction = dir;
-    stepStates[index].state = "enter";
-    if (preserveOrder && check && dir === "down") { notifyOthers(index, "above"); }
-
-    if (preserveOrder && check && dir === "up") { notifyOthers(index, "below"); }
-
-    if (cb.stepEnter && !exclude[index]) {
-      cb.stepEnter(resp, stepStates);
-      if (isDebug) { notifyStep({ id: id, index: index, state: "enter" }); }
-      if (triggerOnce) { exclude[index] = true; }
-    }
-
-    if (progressMode) { notifyStepProgress(element); }
-  }
-
-  function notifyStepExit(element, dir) {
-    var index = getIndex(element);
-    var resp = { element: element, index: index, direction: dir };
-
-    if (progressMode) {
-      if (dir === "down" && stepStates[index].progress < 1)
-        { notifyStepProgress(element, 1); }
-      else if (dir === "up" && stepStates[index].progress > 0)
-        { notifyStepProgress(element, 0); }
-    }
-
-    // store most recent trigger
-    stepStates[index].direction = dir;
-    stepStates[index].state = "exit";
-
-    cb.stepExit(resp, stepStates);
-    if (isDebug) { notifyStep({ id: id, index: index, state: "exit" }); }
-  }
-
-  /* OBSERVER - INTERSECT HANDLING */
-  // this is good for entering while scrolling down + leaving while scrolling up
-  function intersectStepAbove(ref) {
-    var entry = ref[0];
-
-    updateDirection();
-    var isIntersecting = entry.isIntersecting;
-    var boundingClientRect = entry.boundingClientRect;
-    var target = entry.target;
-
-    // bottom = bottom edge of element from top of viewport
-    // bottomAdjusted = bottom edge of element from trigger
-    var top = boundingClientRect.top;
-    var bottom = boundingClientRect.bottom;
-    var topAdjusted = top - offsetMargin;
-    var bottomAdjusted = bottom - offsetMargin;
-    var index = getIndex(target);
-    var ss = stepStates[index];
-
-    // entering above is only when topAdjusted is negative
-    // and bottomAdjusted is positive
-    if (
-      isIntersecting &&
-      topAdjusted <= 0 &&
-      bottomAdjusted >= 0 &&
-      direction === "down" &&
-      ss.state !== "enter"
-    )
-      { notifyStepEnter(target, direction); }
-
-    // exiting from above is when topAdjusted is positive and not intersecting
-    if (
-      !isIntersecting &&
-      topAdjusted > 0 &&
-      direction === "up" &&
-      ss.state === "enter"
-    )
-      { notifyStepExit(target, direction); }
-  }
-
-  // this is good for entering while scrolling up + leaving while scrolling down
-  function intersectStepBelow(ref) {
-    var entry = ref[0];
-
-    updateDirection();
-    var isIntersecting = entry.isIntersecting;
-    var boundingClientRect = entry.boundingClientRect;
-    var target = entry.target;
-
-    // bottom = bottom edge of element from top of viewport
-    // bottomAdjusted = bottom edge of element from trigger
-    var top = boundingClientRect.top;
-    var bottom = boundingClientRect.bottom;
-    var topAdjusted = top - offsetMargin;
-    var bottomAdjusted = bottom - offsetMargin;
-    var index = getIndex(target);
-    var ss = stepStates[index];
-
-    // entering below is only when bottomAdjusted is positive
-    // and topAdjusted is negative
-    if (
-      isIntersecting &&
-      topAdjusted <= 0 &&
-      bottomAdjusted >= 0 &&
-      direction === "up" &&
-      ss.state !== "enter"
-    )
-      { notifyStepEnter(target, direction); }
-
-    // exiting from above is when bottomAdjusted is negative and not intersecting
-    if (
-      !isIntersecting &&
-      bottomAdjusted < 0 &&
-      direction === "down" &&
-      ss.state === "enter"
-    )
-      { notifyStepExit(target, direction); }
-  }
-
-  /*
-	if there is a scroll event where a step never intersects (therefore
-	skipping an enter/exit trigger), use this fallback to detect if it is
-	in view
-	*/
-  function intersectViewportAbove(ref) {
-    var entry = ref[0];
-
-    updateDirection();
-    var isIntersecting = entry.isIntersecting;
-    var target = entry.target;
-    var index = getIndex(target);
-    var ss = stepStates[index];
-
-    if (
-      isIntersecting &&
-      direction === "down" &&
-      ss.direction !== "down" &&
-      ss.state !== "enter"
-    ) {
-      notifyStepEnter(target, "down");
-      notifyStepExit(target, "down");
-    }
-  }
-
-  function intersectViewportBelow(ref) {
-    var entry = ref[0];
-
-    updateDirection();
-    var isIntersecting = entry.isIntersecting;
-    var target = entry.target;
-    var index = getIndex(target);
-    var ss = stepStates[index];
-    if (
-      isIntersecting &&
-      direction === "up" &&
-      ss.direction === "down" &&
-      ss.state !== "enter"
-    ) {
-      notifyStepEnter(target, "up");
-      notifyStepExit(target, "up");
-    }
-  }
-
-  function intersectStepProgress(ref) {
-    var entry = ref[0];
-
-    updateDirection();
-    var isIntersecting = entry.isIntersecting;
-    var intersectionRatio = entry.intersectionRatio;
-    var boundingClientRect = entry.boundingClientRect;
-    var target = entry.target;
-    var bottom = boundingClientRect.bottom;
-    var bottomAdjusted = bottom - offsetMargin;
-    if (isIntersecting && bottomAdjusted >= 0) {
-      notifyStepProgress(target, +intersectionRatio);
-    }
-  }
-
-  /*  OBSERVER - CREATION */
-  // jump into viewport
-  function updateViewportAboveIO() {
-    io.viewportAbove = stepEl.map(function (el, i) {
-      var marginTop = pageH - stepOffsetTop[i];
-      var marginBottom = offsetMargin - viewH - stepOffsetHeight[i];
-      var rootMargin = marginTop + "px 0px " + marginBottom + "px 0px";
-      var options = { rootMargin: rootMargin };
-      // console.log(options);
-      var obs = new IntersectionObserver(intersectViewportAbove, options);
-      obs.observe(el);
-      return obs;
-    });
-  }
-
-  function updateViewportBelowIO() {
-    io.viewportBelow = stepEl.map(function (el, i) {
-      var marginTop = -offsetMargin - stepOffsetHeight[i];
-      var marginBottom = offsetMargin - viewH + stepOffsetHeight[i] + pageH;
-      var rootMargin = marginTop + "px 0px " + marginBottom + "px 0px";
-      var options = { rootMargin: rootMargin };
-      // console.log(options);
-      var obs = new IntersectionObserver(intersectViewportBelow, options);
-      obs.observe(el);
-      return obs;
-    });
-  }
-
-  // look above for intersection
-  function updateStepAboveIO() {
-    io.stepAbove = stepEl.map(function (el, i) {
-      var marginTop = -offsetMargin + stepOffsetHeight[i];
-      var marginBottom = offsetMargin - viewH;
-      var rootMargin = marginTop + "px 0px " + marginBottom + "px 0px";
-      var options = { rootMargin: rootMargin };
-      // console.log(options);
-      var obs = new IntersectionObserver(intersectStepAbove, options);
-      obs.observe(el);
-      return obs;
-    });
-  }
-
-  // look below for intersection
-  function updateStepBelowIO() {
-    io.stepBelow = stepEl.map(function (el, i) {
-      var marginTop = -offsetMargin;
-      var marginBottom = offsetMargin - viewH + stepOffsetHeight[i];
-      var rootMargin = marginTop + "px 0px " + marginBottom + "px 0px";
-      var options = { rootMargin: rootMargin };
-      // console.log(options);
-      var obs = new IntersectionObserver(intersectStepBelow, options);
-      obs.observe(el);
-      return obs;
-    });
-  }
-
-  // progress progress tracker
-  function updateStepProgressIO() {
-    io.stepProgress = stepEl.map(function (el, i) {
-      var marginTop = stepOffsetHeight[i] - offsetMargin;
-      var marginBottom = -viewH + offsetMargin;
-      var rootMargin = marginTop + "px 0px " + marginBottom + "px 0px";
-      var threshold = createThreshold(stepOffsetHeight[i]);
-      var options = { rootMargin: rootMargin, threshold: threshold };
-      // console.log(options);
-      var obs = new IntersectionObserver(intersectStepProgress, options);
-      obs.observe(el);
-      return obs;
-    });
-  }
-
-  function updateIO() {
-    OBSERVER_NAMES.forEach(disconnectObserver);
-
-    updateViewportAboveIO();
-    updateViewportBelowIO();
-    updateStepAboveIO();
-    updateStepBelowIO();
-
-    if (progressMode) { updateStepProgressIO(); }
-  }
-
-  /* SETUP FUNCTIONS */
-
-  function indexSteps() {
-    stepEl.forEach(function (el, i) { return el.setAttribute("data-scrollama-index", i); });
-  }
-
-  function setupStates() {
-    stepStates = stepEl.map(function () { return ({
-      direction: null,
-      state: null,
-      progress: 0
-    }); });
-  }
-
-  function addDebug() {
-    if (isDebug) { setup({ id: id, stepEl: stepEl, offsetVal: offsetVal }); }
-  }
-
-  function isYScrollable(element) {
-    var style = window.getComputedStyle(element);
-    return (
-      (style.overflowY === "scroll" || style.overflowY === "auto") &&
-      element.scrollHeight > element.clientHeight
-    );
-  }
-
-  // recursively search the DOM for a parent container with overflowY: scroll and fixed height
-  // ends at document
-  function anyScrollableParent(element) {
-    if (element && element.nodeType === 1) {
-      // check dom elements only, stop at document
-      // if a scrollable element is found return the element
-      // if not continue to next parent
-      return isYScrollable(element)
-        ? element
-        : anyScrollableParent(element.parentNode);
-    }
-    return false; // didn't find a scrollable parent
-  }
-
-  var S = {};
-
-  S.setup = function (ref) {
-    var step = ref.step;
-    var offset = ref.offset; if ( offset === void 0 ) offset = 0.5;
-    var progress = ref.progress; if ( progress === void 0 ) progress = false;
-    var threshold = ref.threshold; if ( threshold === void 0 ) threshold = 4;
-    var debug = ref.debug; if ( debug === void 0 ) debug = false;
-    var order = ref.order; if ( order === void 0 ) order = true;
-    var once = ref.once; if ( once === void 0 ) once = false;
-
-    reset();
-    // create id unique to this scrollama instance
-    id = generateInstanceID();
-
-    stepEl = selectAll(step);
-
-    if (!stepEl.length) {
-      err("no step elements");
-      return S;
-    }
-
-    // ensure that no step has a scrollable parent element in the dom tree
-    // check current step for scrollable parent
-    // assume no scrollable parents to start
-    var scrollableParent = stepEl.reduce(
-      function (foundScrollable, s) { return foundScrollable || anyScrollableParent(s.parentNode); },
-      false
-    );
-    if (scrollableParent) {
-      console.error(
-        "scrollama error: step elements cannot be children of a scrollable element. Remove any css on the parent element with overflow: scroll; or overflow: auto; on elements with fixed height.",
-        scrollableParent
-      );
-    }
-
-    // options
-    isDebug = debug;
-    progressMode = progress;
-    preserveOrder = order;
-    triggerOnce = once;
-
-    S.offsetTrigger(offset);
-    progressThreshold = Math.max(1, +threshold);
-
-    isReady = true;
-
-    // customize
-    addDebug();
-    indexSteps();
-    setupStates();
-    handleResize();
-    S.enable();
-    return S;
-  };
-
-  S.resize = function () {
-    handleResize();
-    return S;
-  };
-
-  S.enable = function () {
-    handleEnable(true);
-    return S;
-  };
-
-  S.disable = function () {
-    handleEnable(false);
-    return S;
-  };
-
-  S.destroy = function () {
-    handleEnable(false);
-    reset();
-  };
-
-  S.offsetTrigger = function (x) {
-    if (x === null) { return offsetVal; }
-
-    if (typeof x === "number") {
-      format = "percent";
-      if (x > 1) { err("offset value is greater than 1. Fallback to 1."); }
-      if (x < 0) { err("offset value is lower than 0. Fallback to 0."); }
-      offsetVal = Math.min(Math.max(0, x), 1);
-    } else if (typeof x === "string" && x.indexOf("px") > 0) {
-      var v = +x.replace("px", "");
-      if (!isNaN(v)) {
-        format = "pixels";
-        offsetVal = v;
-      } else {
-        err("offset value must be in 'px' format. Fallback to 0.5.");
-        offsetVal = 0.5;
-      }
-    } else {
-      err("offset value does not include 'px'. Fallback to 0.5.");
-      offsetVal = 0.5;
-    }
-    return S;
-  };
-
-  S.onStepEnter = function (f) {
-    if (typeof f === "function") { cb.stepEnter = f; }
-    else { err("onStepEnter requires a function"); }
-    return S;
-  };
-
-  S.onStepExit = function (f) {
-    if (typeof f === "function") { cb.stepExit = f; }
-    else { err("onStepExit requires a function"); }
-    return S;
-  };
-
-  S.onStepProgress = function (f) {
-    if (typeof f === "function") { cb.stepProgress = f; }
-    else { err("onStepProgress requires a function"); }
-    return S;
-  };
-
-  return S;
-}
-
-return scrollama;
-
-})));
-
 
 /***/ }),
 
@@ -11881,10 +11811,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var alpinejs__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(alpinejs__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var intersection_observer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! intersection-observer */ "./node_modules/intersection-observer/intersection-observer.js");
 /* harmony import */ var intersection_observer__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(intersection_observer__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var scrollama__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! scrollama */ "./node_modules/scrollama/build/scrollama.js");
-/* harmony import */ var scrollama__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(scrollama__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var sal_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! sal.js */ "./node_modules/sal.js/dist/sal.js");
-/* harmony import */ var sal_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(sal_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var sal_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! sal.js */ "./node_modules/sal.js/dist/sal.js");
+/* harmony import */ var sal_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(sal_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var medium_zoom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! medium-zoom */ "./node_modules/medium-zoom/dist/medium-zoom.esm.js");
 /* harmony import */ var swiper_bundle__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! swiper/bundle */ "./node_modules/swiper/swiper-bundle.esm.js");
 
 
@@ -11893,8 +11822,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
  // import Swiper styles
+// import 'swiper/swiper-bundle.css';
 
-sal_js__WEBPACK_IMPORTED_MODULE_5___default()();
+sal_js__WEBPACK_IMPORTED_MODULE_4___default()();
+Object(medium_zoom__WEBPACK_IMPORTED_MODULE_5__["default"])('[data-zoomable]');
 var swiperCarousel = new swiper_bundle__WEBPACK_IMPORTED_MODULE_6__["default"]('.js-swiper-carousel', {
   // Optional parameters
   // loop: true,
@@ -11937,6 +11868,34 @@ var swiperSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_6__["default"]('.j
   freeModeSticky: true,
   observer: true,
   observeParents: true,
+  mousewheel: {
+    releaseOnEdges: true,
+    sensitivity: 1.5
+  },
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
+  },
+  scrollbar: {
+    el: '.swiper-scrollbar',
+    draggable: true
+  }
+});
+var swiperSimpleSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_6__["default"]('.js-swiper-simple-slider', {
+  // Optional parameters
+  loop: true,
+  autoHeight: true,
+  speed: 300,
+  // watchOverflow: true,
+  // spaceBetween: 48,
+  slidesPerView: 1,
+  // slidesPerGroup: 4,
+  grabCursor: true,
+  // freeMode: true,
+  // freeModeSticky: true,
+  // observer: true,
+  // observeParents: true,
   mousewheel: {
     releaseOnEdges: true,
     sensitivity: 1.5
