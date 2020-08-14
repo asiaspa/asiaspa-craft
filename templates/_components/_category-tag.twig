@@ -1,6 +1,6 @@
 {% if category | length %}
-{% for category in category %}
-<a class="block font-sans-bold text-bg text-primary-500"
+{% for category in category if category.level == 1 %}
+<a class="block text-sm font-sans-bold text-bg text-primary-500"
    href="{{ category.url }}">{{ category.title}}</a>
 {% endfor %}
 {% endif %}

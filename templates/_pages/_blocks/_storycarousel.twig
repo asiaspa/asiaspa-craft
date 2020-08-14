@@ -1,12 +1,10 @@
-{# ------------------- Query ------------------- #}
+{# ------------------- Query ------------------- 
 
-{# get pinned entries ids #}
 {% set entriesIds = [] %}
 {% for entry in block.sourceStories %}
 {% set entriesIds = entriesIds | merge([entry.id]) %}
 {% endfor %}
 
-{# fill source enteries ids #}
 {% set entriesIdsString = entriesIds | join(', not ') %}
 {% set source = block.entriesFromCategory ?? (block.entriesFromPrintIssue ?? block.entriesFromTag) %}
 
@@ -17,7 +15,6 @@
     .ids
 %}
 
-{# merge to get 12 entries #}
 {% set entriesIds = entriesIds | merge(sourceEntriesIds) %}
 
 {% set entriesQuery = craft.entries
@@ -33,8 +30,12 @@
 %}
 
 {% set entries = entriesQuery.all() %}
+#}
+
+{% set entries = block.sourceStories %}
 
 {# ------------------- Content ------------------- #}
+{% if entries %}
 {% embed "_containers/_container" %}
 {% block content %}
     <div class="mt-16 mb-8">
@@ -74,7 +75,7 @@
 		<div class="h-1 swiper-scrollbar"></div>
 	</div>
 </div>
-
+{% endif %}
 
 {# ------------------- Record ID ------------------- #}
 {# {% set excludeIds = excludeIds|merge([entriesIds])%}

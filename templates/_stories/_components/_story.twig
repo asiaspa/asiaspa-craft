@@ -1,3 +1,5 @@
+{% set entryId = entryId ?? entry.id %}
+
 {% set entry = craft.entries
     .id(entryId)
     .with([
@@ -21,7 +23,7 @@
         <section class="flex flex-col md:mt-16 md:flex-row -mx-edge">
             <div class="w-full md:w-7/12">
                 <div class="-ml-screen-xl">
-                    {% include "_components/_imager" with { image : entry.storyHeroImage[0] ?? ''} %}
+                    {% include "_components/_imager" with { image : entry.storyHeroImage[0] ?? '', 'zoom': true} %}
                 </div>
             </div>
             <div class="self-start w-full md:w-5/12 md:py-0 p-edge md:sticky" style="top:64px;">

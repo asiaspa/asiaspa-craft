@@ -14,8 +14,7 @@ module.exports = {
             'sans': 'var(--font-sans)',
             'serif': 'var(--font-serif)',
             'headline': 'var(--font-headline)',
-            'display': 'var(--font-display)',
-            
+            'display': 'var(--font-display)'
         },
         colors: {
             transparent: 'transparent',

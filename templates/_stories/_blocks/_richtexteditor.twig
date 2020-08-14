@@ -1,14 +1,7 @@
-{% embed "_containers/_container" with {'breakpoint':'lg'} %}
+{% embed "_containers/_container" with {'breakpoint':'md'} %}
 {% block content %}
-    <section class="flex flex-row items-start mt-16 md:space-x-16">
-        <div class="sticky hidden md:block top-8">
-                {% include '_components/_adblock' with {'adgroup': ['or', ad.adHalfPage, ad.adMediumRectangle] } %}
-        </div>
-        <div class="flex justify-end flex-grow">
-            <div class="w-full font-serif prose prose-lg text-black ">
-                {{ block.richTextEditor }}
-            </div>
-        </div>
+    <section class="flex flex-row justify-end mt-16 md:space-x-16">
+        {% include "_stories/_components/_rich-text-editor" with {'richTextEditor': block.richTextEditor} %}
     </section>
 {% endblock %}
 {% endembed %}
