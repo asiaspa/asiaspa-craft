@@ -1,11 +1,11 @@
 field: a9f00eab-73ff-4659-9b15-ee56aa8c8531
 fieldLayouts:
-  754eef24-cd6c-4ae4-b32c-c9abc560b5b8:
+  b1c28c3d-1c2f-4d06-bb0c-658eb7708482:
     tabs:
       -
         elements:
           -
-            fieldUid: 672eb021-171d-4eee-81d0-fe90018c3534
+            fieldUid: a6598bd4-962d-4e24-bd63-11908b2ca653
             instructions: null
             label: null
             required: false
@@ -14,7 +14,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 8fd13f01-7952-450b-8ca6-325a4b4f4867
+            fieldUid: f8f96ad6-77b3-416f-8196-3c86bb5cd1e9
             instructions: null
             label: null
             required: false
@@ -23,7 +23,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 3c50f491-f27b-4d1e-a9f9-817ad051ece7
+            fieldUid: 1a29b2a9-ae4b-431f-8b39-394e37e0c2b0
             instructions: null
             label: null
             required: false
@@ -34,7 +34,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  3c50f491-f27b-4d1e-a9f9-817ad051ece7:
+  1a29b2a9-ae4b-431f-8b39-394e37e0c2b0:
     contentColumnType: text
     fieldGroup: null
     handle: richTextEditor
@@ -43,7 +43,7 @@ fields:
     searchable: false
     settings:
       availableTransforms: '*'
-      availableVolumes: ''
+      availableVolumes: '*'
       cleanupHtml: true
       columnType: text
       configSelectionMode: choose
@@ -55,14 +55,14 @@ fields:
       removeEmptyTags: '1'
       removeInlineStyles: '1'
       removeNbsp: '1'
-      showHtmlButtonForNonAdmins: false
+      showHtmlButtonForNonAdmins: ''
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
       uiMode: enlarged
     translationKeyFormat: null
     translationMethod: none
     type: craft\redactor\Field
-  672eb021-171d-4eee-81d0-fe90018c3534:
+  a6598bd4-962d-4e24-bd63-11908b2ca653:
     contentColumnType: text
     fieldGroup: null
     handle: heading
@@ -81,25 +81,39 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-  8fd13f01-7952-450b-8ca6-325a4b4f4867:
+  f8f96ad6-77b3-416f-8196-3c86bb5cd1e9:
     contentColumnType: string
     fieldGroup: null
-    handle: slide
+    handle: image
     instructions: ''
-    name: Slide
+    name: Image
     searchable: false
     settings:
-      contentTable: '{{%stc_slide}}'
-      fieldLayout: row
-      maxRows: ''
-      minRows: ''
-      placeholderKey: null
-      propagationMethod: all
+      allowSelfRelations: false
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:883ab42c-10f1-4e32-a559-61f23e4e3775'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: '1'
       selectionLabel: ''
-      staticField: ''
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:883ab42c-10f1-4e32-a559-61f23e4e3775'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources:
+        - 'volume:883ab42c-10f1-4e32-a559-61f23e4e3775'
+        - 'volume:9f801622-9f26-40c9-9126-ac4041a76554'
+      targetSiteId: null
+      useSingleFolder: false
+      validateRelatedElements: false
+      viewMode: large
     translationKeyFormat: null
     translationMethod: site
-    type: verbb\supertable\fields\SuperTableField
-handle: listicleSlider
-name: 'Listicle Slider'
-sortOrder: 12
+    type: craft\fields\Assets
+handle: listicleImage
+name: 'Listicle / Image'
+sortOrder: 11

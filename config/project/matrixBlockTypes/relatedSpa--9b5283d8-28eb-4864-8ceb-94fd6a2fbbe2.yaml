@@ -40,4 +40,4 @@ fields:
     type: craft\fields\Entries
 handle: relatedSpa
 name: 'Related Spa'
-sortOrder: 7
+sortOrder: 10

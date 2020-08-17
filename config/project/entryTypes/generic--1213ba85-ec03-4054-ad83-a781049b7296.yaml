@@ -4,6 +4,9 @@ fieldLayouts:
       -
         elements:
           -
+            heading: null
+            type: craft\fieldlayoutelements\Heading
+          -
             autocapitalize: true
             autocomplete: false
             autocorrect: true
@@ -30,69 +33,69 @@ fieldLayouts:
             width: 100
           -
             fieldUid: b357d9dd-f6da-4d5f-b00f-8769518e1b39
-            instructions: null
-            label: null
-            required: '0'
+            instructions: ''
+            label: Standfirst
+            required: ''
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
           -
-            type: craft\fieldlayoutelements\HorizontalRule
+            fieldUid: 3f41492f-97e1-4608-8456-655f094e4284
+            instructions: 'This will link to user profile page with matching name'
+            label: Byline
+            required: ''
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            heading: 'Hero Image'
+            type: craft\fieldlayoutelements\Heading
           -
             fieldUid: 02d38f73-db56-4fab-a533-0dc7400f81fe
-            instructions: null
-            label: null
-            required: '0'
+            instructions: ''
+            label: 'Hero Image'
+            required: ''
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 50
-          -
-            fieldUid: 3f41492f-97e1-4608-8456-655f094e4284
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 50
-          -
-            type: craft\fieldlayoutelements\HorizontalRule
           -
             fieldUid: c704e0b8-fa98-4653-a2a2-ef9937e6764a
-            instructions: null
-            label: null
-            required: false
+            instructions: ''
+            label: 'Landscape Mode'
+            required: ''
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 50
+          -
+            heading: Content
+            type: craft\fieldlayoutelements\Heading
           -
             fieldUid: 3c6974ea-4e49-4ab8-a603-0751e5cfd4bf
-            instructions: null
-            label: null
-            required: false
+            instructions: ''
+            label: 'Set Number for Listicles'
+            required: ''
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
-            width: 50
-          -
-            type: craft\fieldlayoutelements\HorizontalRule
+            width: 100
           -
             fieldUid: a9f00eab-73ff-4659-9b15-ee56aa8c8531
-            instructions: null
-            label: null
-            required: '0'
+            instructions: ''
+            label: 'Story Content'
+            required: ''
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
           -
             fieldUid: aa058ac8-5cdd-4c29-8ea3-19f5c15ff138
-            instructions: null
-            label: null
-            required: '0'
+            instructions: ''
+            label: Credit
+            required: ''
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
@@ -103,47 +106,47 @@ fieldLayouts:
         elements:
           -
             fieldUid: ddbc3373-03b2-4ff9-a616-05ad1683a032
-            instructions: null
-            label: null
-            required: '0'
+            instructions: ''
+            label: Category
+            required: ''
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
-            width: 25
+            width: 50
           -
             fieldUid: 10f6975d-b749-4638-ac0b-6bf072495899
-            instructions: null
-            label: null
-            required: '0'
+            instructions: ''
+            label: 'Print Issue'
+            required: ''
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
-            width: 25
+            width: 50
           -
             fieldUid: c3bdaf00-a5d1-4f90-bbd2-62f4b2b2b886
-            instructions: null
-            label: null
-            required: '0'
+            instructions: ''
+            label: Tag
+            required: ''
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
-            width: 25
+            width: 50
           -
             type: craft\fieldlayoutelements\HorizontalRule
           -
             fieldUid: 0c465ef4-3419-4c61-b509-3493ed02e3f3
-            instructions: null
-            label: null
-            required: false
+            instructions: ''
+            label: 'Related Story'
+            required: ''
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 50
           -
             fieldUid: 93e25175-322f-41f4-8314-40d076231cab
-            instructions: null
-            label: null
-            required: '0'
+            instructions: ''
+            label: 'Related Spa'
+            required: ''
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
