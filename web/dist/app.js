@@ -11822,7 +11822,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
  // import Swiper styles
-// import 'swiper/swiper-bundle.css';
+// sal.js
 
 sal_js__WEBPACK_IMPORTED_MODULE_4___default()();
 Object(medium_zoom__WEBPACK_IMPORTED_MODULE_5__["default"])('[data-zoomable]');
@@ -11909,34 +11909,7 @@ var swiperSimpleSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_6__["default
     el: '.swiper-scrollbar',
     draggable: true
   }
-}); // const swiperSlider = new Swiper('.js-swiper-slider', {
-//   // Optional parameters
-//   // loop: true,
-//   // autoHeight: true,
-//   speed: 300,
-//   watchOverflow: true,
-//   spaceBetween: 48,
-//   slidesPerView: 'auto',
-//   // slidesPerGroup: 3,
-//   grabCursor: true,
-//   freeMode: true,
-//   freeModeSticky: true,
-//   observer: true,
-//   observeParents: true,
-//   mousewheel: {
-//     releaseOnEdges: true,
-//     sensitivity: 1.5
-//   },
-//   // Navigation arrows
-//   navigation: {
-//     nextEl: '.swiper-button-next',
-//     prevEl: '.swiper-button-prev',
-//   },
-//   scrollbar: {
-//     el: '.swiper-scrollbar',
-//     draggable: true
-//   }
-// })
+});
 
 window.setTrueVw = function () {
   var vw = document.documentElement.clientWidth / 100;

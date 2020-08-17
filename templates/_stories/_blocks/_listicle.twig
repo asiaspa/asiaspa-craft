@@ -1,10 +1,10 @@
 {% set listicleContent %}
 
 <div class="flex flex-col items-start mt-32 space-y-4 md:flex-row md:space-y-0 md:space-x-6">
-	<div class="w-full md:sticky top-8 md:w-1/3" >
+	<div class="w-full space-y-2 md:sticky top-8 md:w-1/3" >
 		{% if entry.storyListicleNumbering %}
-		<div class="inline-block w-12 h-12 mr-2 text-center border border-black rounded-full" >
-			<span class="inline-block text-3xl tracking-wide font-display" style="line-height:48px; font-variant-numeric: diagonal-fractions;">{{ listicleNumber }}/{{ listicleCount }}</span>
+		<div class="inline-block w-16 h-16 mr-2 text-center border border-black rounded-full" >
+			<span class="inline-block text-4xl tracking-wide font-display" style="line-height:64px; font-variant-numeric: diagonal-fractions;">{{ listicleNumber }}/{{ listicleCount }}</span>
 		</div>
 		{% endif %}
 		<h2 class="inline-block text-2xl font-headline md:text-3xl ">{{ block.heading }}</h2>
@@ -20,7 +20,8 @@
 
 {% endset %}
 
-{% embed "_containers/_container" %}
+
+{% embed "_containers/_container" with {'breakpoint':'lg' } %}
 {% block content %}
 	{{ listicleContent }}
 {% endblock %}

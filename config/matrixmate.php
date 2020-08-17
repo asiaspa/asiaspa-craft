@@ -16,7 +16,8 @@ return [
                     'label' => 'Relation',
                     'types' => ['relatedStory', 'relatedSpa']
                 ]
-            ]
+            ],
+            'hiddenTypes' => ['form', 'qa', 'event', 'imageHotspot','relatedSpa', 'blockquote']
         ]
     ]   
 ];
