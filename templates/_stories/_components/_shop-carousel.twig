@@ -2,9 +2,10 @@
 <div class="mb-16 js-swiper-simple-slider swiper-container">
 	<div class="swiper-wrapper">
 		{% for slide in slider %}
-        <div class="swiper-slide">
-            {% include "_components/_imager" with {'image': slide, 'zoom':true } %}
-        </div>
+        <a class="swiper-slide" href="{{ slide.hyperlink  }}">
+            {% include "_components/_imager" with {'image': slide.heroImage[0] } %}
+            <p class="mt-2">{{ slide.description }}</p>
+        </a>
 		{% endfor %}
 	</div>
 	<div class="swiper-button-prev"></div>

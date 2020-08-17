@@ -1,8 +1,10 @@
-{% embed "_containers/_container" with {'breakpoint':'lg'} %}
+{% embed "_containers/_container" with {'breakpoint':'lg' } %}
 {% block content %}
-    <section class="flex flex-row justify-end mt-16 md:space-x-16">
+	<div class="flex flex-row justify-end mt-32">
+	<div class="w-full md:w-10/12 lg:w-8/12" >
         {% include "_stories/_components/_rich-text-editor" with {'richTextEditor': block.richTextEditor} %}
-    </section>
+    </div>
+    </div>
 {% endblock %}
 {% endembed %}
 

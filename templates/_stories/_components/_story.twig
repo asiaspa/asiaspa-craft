@@ -1,40 +1,43 @@
+
 {% set entryId = entryId ?? entry.id %}
 
 {% set entry = craft.entries
+    .section('story')
     .id(entryId)
     .with([
         'storyHeroImage',
         'storyCategory',
         'storyPrintIssue',
-        'storyByline',
-        'storyByline.photo',
-        'author',
-        'author.photo'
-]).one() %}
+        'storyTag'
+    ]).one() %}
+
+
+{% set matchedUser = craft.users
+    .search(entry.storyByline)
+    .one() %}
 
 {% set prevEntry = entry.getPrev({section:'story', orderBy:'postDate' }) %}
 
-{# main section #}
-<article>
-    <div class="invisible hidden">{{ entry | views_work_image }}</div>
-    
+<article>    
     {% embed "_containers/_container" with {'breakpoint':'xl'} %}
     {% block content %}
         <section class="flex flex-col md:mt-16 md:flex-row -mx-edge">
-            <div class="w-full md:w-7/12">
-                <div class="-ml-screen-xl">
-                    {% include "_components/_imager" with { image : entry.storyHeroImage[0] ?? '', 'zoom': true} %}
-                </div>
-            </div>
-            <div class="self-start w-full md:w-5/12 md:py-0 p-edge md:sticky" style="top:64px;">
+            <div class="self-start w-full md:w-5/12 md:py-0 p-edge md:sticky top-8">
                 <div class="flex space-x-6">
                     {% include "_components/_category-tag" with { category : entry.storyCategory } %}
                     {% include "_components/_category-tag" with { category : entry.storyPrintIssue } %}
                 </div>
-                <h1 class="text-3xl font-hairline leading-tight md:text-4xl font-display lg:text-5xl ">{{ entry.title }}</h1>
+                <h1 class="text-3xl font-hairline leading-tight tracking-wide md:text-4xl font-display lg:text-5xl ">{{ entry.title }}</h1>
                 <hr class="block w-32 my-6 border-t-2 border-primary-500"/>
                 <h2 class="mb-4 text-lg lg:text-xl color-gray-900">{{ entry.storyStandfirst }}</h2>
-                {% include "_components/_user" with { user : entry.storyByline[0] ?? entry.author, date : entry.postDate } %}
+                {% if matchedUser %}
+                {% include "_components/_user" with { 'user' : matchedUser, 'date' : entry.postDate } %}
+                {% endif %}
+            </div>
+            <div class="w-full md:w-7/12">
+                <div class="-mr-screen-xl">
+                    {% include "_components/_imager" with { image : entry.storyHeroImage[0] ?? '', 'zoom': true, 'caption': true } %}
+                </div>
             </div>
         </section>
     {% endblock %}
@@ -51,3 +54,4 @@
 </div>
 {% endif %} 
 
+<div class="invisible hidden">{{ entry | views_work_image }}</div> #}

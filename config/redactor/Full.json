@@ -37,7 +37,8 @@
     "widget",
     "redactor-split"
   ],
-  "linkNewTab": true,
+  "linkNewTab": false,
+  "linkTarget": "_blank",
   "toolbarFixed": true,
   "_plugin-buttons": [
     "file"

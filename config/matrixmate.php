@@ -6,18 +6,44 @@ return [
             'groups' => [
                 [
                     'label' => 'Listicle',
-                    'types' => ['listicleGallery', 'listicleSlider', 'listicleEmbed' ]
+                    'types' => [
+                        'listicleImage', 
+                        'listicleSlider',
+                        'listicleEmbed',
+                        'listicleShopItem',
+                        'listicleShopCarousel'
+                    ]
                 ],
                 [
                     'label' => 'Story',
-                    'types' => ['richTextEditor','gallery', 'slider', 'embed', 'qa', 'blockquote', 'form', 'event', 'imageHotspot']
+                    'types' => [
+                        'richTextEditor',
+                        'gallery', 
+                        'slider', 
+                        'embed', 
+                        'qa', 
+                        'blockquote', 
+                        'form', 
+                        'event', 
+                        'imageHotspot'
+                    ]
                 ],
                 [
                     'label' => 'Relation',
-                    'types' => ['relatedStory', 'relatedSpa']
+                    'types' => [
+                        'relatedStory', 
+                        'relatedSpa'
+                    ]
                 ]
             ],
-            'hiddenTypes' => ['form', 'qa', 'event', 'imageHotspot','relatedSpa', 'blockquote']
+            'hiddenTypes' => [
+                'form', 
+                'qa',
+                'event', 
+                'imageHotspot',
+                'relatedSpa', 
+                'blockquote'
+            ]
         ]
     ]   
 ];

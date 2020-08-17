@@ -10,6 +10,7 @@
     "counter",
     "limiter"
   ],
-  "linkNewTab": true,
+  "linkNewTab": false,
+  "linkTarget": "_blank",
   "toolbarFixed": true
 }

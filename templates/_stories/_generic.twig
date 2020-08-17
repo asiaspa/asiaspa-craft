@@ -1,6 +1,8 @@
 {% extends "_layouts/_generic" %}
 {# ------------------- main ------------------- #}
 {% block main %}
-{# {{ sprig("_stories/_components/_story", {'entryId': entry.id }) }} #}
-{% include "_stories/_components/_story" with {'entryId': entry.id } %}
+{{ sprig("_stories/_components/_story", {'entryId': entry.id }) }}
+{# {{ include("_stories/_components/_story", {'entryId': entry.id }) }} #}
+
+{# {{ entry.title }} #}
 {% endblock %}

@@ -99,6 +99,13 @@ fields:
                   - width
                   - ''
           -
+            - 8997b296-7fc0-4c5d-9de0-2a7229c60a83
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
             - b633ffb7-1271-4b54-85be-a6edb1cedddb
             -
               __assoc__:
@@ -123,6 +130,6 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: verbb\supertable\fields\SuperTableField
-handle: listicleCarousel
+handle: listicleShopCarousel
 name: 'Listicle / Shop Carousel'
 sortOrder: 15
