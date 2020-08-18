@@ -1,4 +1,4 @@
-{% set caption = caption ?? '' %}
+{% set caption = caption ?? false %}
 
 {% set zoom = zoom ?? '' %}
 {% set h = h | default(image.getHeight ?? 9 ) %}
@@ -28,7 +28,7 @@
         />
     </div>
     {% if caption %}
-    <figcaption class="relative block text-sm italic text-gray-700">{{ caption|default('this is caption') }}</figcaption>
+    <figcaption class="relative block my-1 italic text-gray-300 text-md">{{ image.assetCaption ?? "" }}</figcaption>
     {% endif %}
 </figure> 
 

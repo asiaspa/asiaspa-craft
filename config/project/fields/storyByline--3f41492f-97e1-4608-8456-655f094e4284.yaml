@@ -1,20 +1,18 @@
-contentColumnType: string
+contentColumnType: text
 fieldGroup: 847d91f3-2f4a-4f56-9f9d-40c20e080811
 handle: storyByline
 instructions: ''
 name: 'Story - Byline'
 searchable: false
 settings:
-  allowSelfRelations: false
-  limit: '1'
-  localizeRelations: false
-  selectionLabel: User
-  showSiteMenu: true
-  source: null
-  sources: '*'
-  targetSiteId: null
-  validateRelatedElements: false
-  viewMode: null
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: ''
+  uiMode: normal
 translationKeyFormat: null
-translationMethod: site
-type: craft\fields\Users
+translationMethod: none
+type: craft\fields\PlainText

@@ -1,0 +1,21 @@
+{% if slider %}
+<div class="mb-16 js-swiper-listicle-shop-carousel swiper-container">
+	<div class="swiper-wrapper">
+		{% for slide in slider %}
+        <a class="space-y-4 swiper-slide" href="{{ slide.hyperlink  }}">
+		{% if slide.image %}
+            {% include "_components/_imager" with {'image': slide.image[0] } %}
+		{% endif %}
+			<h3 class="font-serif">{{ slide.itemName }}</h3>
+            <p>{{ slide.description }}</p>
+			<div><span class="underline text-bg">Shop now</span></div>
+        </a>
+
+		{% endfor %}
+	</div>
+	<div class="swiper-button-prev"></div>
+	<div class="swiper-button-next"></div>
+</div>
+{% endif %}
+
+

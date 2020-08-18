@@ -4,17 +4,13 @@
     "italic",
     "link",
     "unorderedlist",
-    "orderedlist",
-    "redo",
-    "undo"
+    "orderedlist"
   ],
   "plugins": [
     "counter",
     "limiter"
   ],
-  "linkNewTab": true,
-  "toolbarFixed": true,
-  "_plugin-buttons": [
-    "file"
-  ]
+  "linkNewTab": false,
+  "linkTarget": "_blank",
+  "toolbarFixed": true
 }

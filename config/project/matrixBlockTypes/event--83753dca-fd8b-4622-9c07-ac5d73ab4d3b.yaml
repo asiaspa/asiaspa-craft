@@ -136,4 +136,4 @@ fields:
     type: craft\fields\PlainText
 handle: event
 name: Event
-sortOrder: 9
+sortOrder: 7

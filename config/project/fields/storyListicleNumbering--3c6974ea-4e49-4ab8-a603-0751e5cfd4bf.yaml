@@ -5,7 +5,9 @@ instructions: ''
 name: 'Story - Listicle Numbering'
 searchable: false
 settings:
-  default: '1'
+  default: true
+  offLabel: null
+  onLabel: null
 translationKeyFormat: null
 translationMethod: none
 type: craft\fields\Lightswitch

@@ -65,4 +65,4 @@ fields:
     type: craft\fields\PlainText
 handle: blockquote
 name: Blockquote
-sortOrder: 10
+sortOrder: 4

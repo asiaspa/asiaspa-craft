@@ -1,11 +1,13 @@
 contentColumnType: boolean
 fieldGroup: 847d91f3-2f4a-4f56-9f9d-40c20e080811
 handle: storyLandscape
-instructions: 'Set the hero image to 16:9 Landscape Ratio'
+instructions: "\r\n"
 name: 'Story - Landscape'
 searchable: false
 settings:
-  default: ''
+  default: false
+  offLabel: null
+  onLabel: null
 translationKeyFormat: null
 translationMethod: none
 type: craft\fields\Lightswitch
