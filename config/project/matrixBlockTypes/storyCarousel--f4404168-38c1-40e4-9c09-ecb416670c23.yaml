@@ -40,15 +40,6 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 25
-          -
-            fieldUid: abbe9b89-99b5-40a6-8781-80b8009b387e
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 25
         name: Content
         sortOrder: 1
 fields:
@@ -117,30 +108,6 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Entries
-  abbe9b89-99b5-40a6-8781-80b8009b387e:
-    contentColumnType: string
-    fieldGroup: null
-    handle: sourceTag
-    instructions: ''
-    name: 'Source - Tag'
-    searchable: false
-    settings:
-      allowLimit: false
-      allowMultipleSources: false
-      allowSelfRelations: false
-      branchLimit: '1'
-      limit: null
-      localizeRelations: false
-      selectionLabel: ''
-      showSiteMenu: true
-      source: 'group:dc068a49-9607-4bc7-9bd1-069f279dbf76'
-      sources: '*'
-      targetSiteId: null
-      validateRelatedElements: false
-      viewMode: null
-    translationKeyFormat: null
-    translationMethod: site
-    type: craft\fields\Categories
   f1c77e06-6781-4987-b6ea-0e34c56fde17:
     contentColumnType: string
     fieldGroup: null

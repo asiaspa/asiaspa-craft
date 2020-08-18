@@ -38,10 +38,9 @@
         <link rel="preconnect" href="{{ url }}" crossorigin>
     {% endfor %}
     {% header headerLink %}
+    {% hook 'seomateMeta' %}
     
     {# ------------------- SEO meta ------------------- #}
-    <title>{{ siteName }}</title>
-    {% hook 'seomateMeta' %}
     {% include '_layouts/_components/_branding' %}
     <link rel="stylesheet" href="{{ rev('/dist/app.css') }}">
 

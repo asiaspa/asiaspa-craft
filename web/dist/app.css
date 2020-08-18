@@ -2377,7 +2377,7 @@ button.swiper-pagination-bullet {
   background-size: 100% 100%;
 }
 
-.medium-zoom-image {
+.medium-zoom-image--opened {
   z-index: 99;
 }
 
