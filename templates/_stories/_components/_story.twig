@@ -1,9 +1,9 @@
 
-{% set entryId = entryId ?? entry.id %}
+{% set entrySlug = entrySlug ?? entry.slug %}
 
 {% set entry = craft.entries
     .section('story')
-    .id(entryId)
+    .slug(entrySlug)
     .with([
         'storyHeroImage',
         'storyCategory',

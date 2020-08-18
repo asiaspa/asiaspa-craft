@@ -2,7 +2,7 @@
 <div class="mb-16 js-swiper-listicle-shop-carousel swiper-container">
 	<div class="swiper-wrapper">
 		{% for slide in slider %}
-        <a class="space-y-4 swiper-slide" href="{{ slide.hyperlink  }}">
+        <a class="space-y-4 swiper-slide" href="{{ slide.hyperlink }}" target="_blank">
 		{% if slide.image %}
             {% include "_components/_imager" with {'image': slide.image[0] } %}
 		{% endif %}

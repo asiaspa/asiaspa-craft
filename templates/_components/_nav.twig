@@ -1,5 +1,5 @@
 <nav id="nav" class="bg-primary-300">
-    {% embed "_containers/_container" %}
+    {% embed "_containers/_container" with { 'class': 'flex flex-col justify-between w-full h-full' } %}
     {% block content %}
     <div class="relative z-20 flex justify-between w-full">
         <a class="block h-16 py-4" href="{{ siteUrl }}">
@@ -13,19 +13,29 @@
             <a href="#">CLOSE</a>
         </div>
     </div>
-    <ul class="py-16 ">
-        {% for node in headerNodes %}
-        <li>
-            <a class="block text-6xl font-hairline tracking-wide transition duration-300 border-b border-primary-300 font-display hover:border-black"
-                href="{{ node.url }}">{{ node.name }}</a>
-        </li>
-        {% endfor %}
-    </ul>
-    <div class="flex flex-wrap py-16 space-y-6 md:flex-no-wrap md:space-x-6 md:space-y-0">
-        <div class="w-full md:w-1/4">Column for social channel</div>
-        <div class="w-1/2 md:w-1/4">footer linklist 1</div>
-        <div class="w-1/2 md:w-1/4">footer linklist 2</div>
-        <div class="w-full md:w-1/4">Column for copyright & comapny logo</div>
+    <div class="flex-grow" id="searchResult">
+        {{ sprig("_components/_search-result",{
+            offset: 0,
+            _limit: 12,
+        }) }}
+    </div>
+    <div class="flex flex-wrap pb-16 space-y-6 md:flex-no-wrap md:space-x-6 md:space-y-0">
+        <ul class="flex flex-row w-full space-x-4 md:w-1/4">
+            <li><a>{% include "_components/_icon" with { 'icon':'icon-logo-facebook', 'w': 32, 'h': 32} only %}</a></li>
+            <li><a>{% include "_components/_icon" with { 'icon':'icon-logo-instagram', 'w': 32, 'h': 32 } only %}</a></li>
+            <li><a>{% include "_components/_icon" with { 'icon':'icon-logo-linkedin', 'w': 32, 'h': 32 } only %}</a></li>
+        </ul>
+        <ul class="w-1/2 md:w-1/4">
+            <li><a>Advertise With Us</a></li>
+            <li><a>Contact Us</a></li>
+        </ul>
+        <ul class="w-1/2 md:w-1/4">
+            <li><a>Privacy Policy</a></li>
+            <li><a>Terms & Conditions</a></li>
+        </ul>        
+        <div class="w-full md:w-1/4">
+            <span>Copyright 2020 AsiaSpa</span>
+        </div>
     </div>
     {% endblock %}
     {% endembed %}

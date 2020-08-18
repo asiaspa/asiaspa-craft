@@ -52,13 +52,13 @@ fieldLayouts:
             width: 100
         name: SEO
         sortOrder: 2
-handle: category
-name: Category
+handle: categoryTag
+name: 'Category & Tag'
 siteSettings:
   5058e36f-39fa-4fe2-982d-2a6082be4a27:
     hasUrls: true
     template: _categories/_generic
-    uriFormat: 'category/{slug}'
+    uriFormat: '{parent.uri}/{slug}'
 structure:
   maxLevels: 2
   uid: a91585f1-dc6d-4768-a9b1-daef1e672cdf
