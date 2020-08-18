@@ -29,5 +29,5 @@
     {% if block.type.handle in listicleTypes %}
     {% set listicleNumber = listicleNumber + 1 %}
     {% endif %}
-    {% include  "_stories/_blocks/_" ~ block.type | lower with {'block':block} %}
+    {% include  "_stories/_blocks/_" ~ block.type with {'block':block} %}
 {% endfor %}
