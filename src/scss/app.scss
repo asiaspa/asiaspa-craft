@@ -2,13 +2,21 @@
 @tailwind components;
 
 // vendor
-@import "_vendors/_lazysizes";
-@import "_vendors/_swiper-vars";
-@import "_vendors/_swiper";
+@import "_lazysizes/_lazysizes";
+@import "_swiper/swiper-vars";
+@import "_swiper/swiper";
+@import "_swiper/components/navigation/navigation";
+@import "_swiper/components/pagination/pagination";
+@import "_swiper/components/scrollbar/scrollbar";
+@import "_swiper/components/thumbs/thumbs";
 
 // custom
 @import "_components/_edge-spacing";
 @import "_components/_text-background";
+
+
+// fix
+.medium-zoom-image  { z-index: 99;}
 
 
 body {
@@ -21,6 +29,7 @@ main {
     // height:100%;
     // overflow: auto;
 }
+
 #nav,#aside {
     z-index: 999;
     position: fixed;
@@ -42,5 +51,6 @@ main {
 #aside {
     transform: translateX(-100%);
 }
+
 
 @tailwind utilities; 

@@ -5,7 +5,9 @@ instructions: "\r\n"
 name: 'Story - Landscape'
 searchable: false
 settings:
-  default: ''
+  default: false
+  offLabel: null
+  onLabel: null
 translationKeyFormat: null
 translationMethod: none
 type: craft\fields\Lightswitch

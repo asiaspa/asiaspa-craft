@@ -106,7 +106,7 @@ fields:
       allowedKinds: null
       defaultUploadLocationSource: 'volume:883ab42c-10f1-4e32-a559-61f23e4e3775'
       defaultUploadLocationSubpath: ''
-      limit: ''
+      limit: '1'
       localizeRelations: false
       restrictFiles: ''
       selectionLabel: ''

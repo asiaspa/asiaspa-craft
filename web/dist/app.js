@@ -11822,6 +11822,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
  // import Swiper styles
+// import 'swiper/swiper-bundle.css';
 // sal.js
 
 sal_js__WEBPACK_IMPORTED_MODULE_4___default()();
@@ -11882,32 +11883,36 @@ var swiperSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_6__["default"]('.j
     draggable: true
   }
 });
-var swiperSimpleSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_6__["default"]('.js-swiper-simple-slider', {
-  // Optional parameters
+var swiperListicleSimpleSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_6__["default"]('.js-swiper-listicle-simple-slider', {
   loop: true,
   autoHeight: true,
   speed: 300,
-  // watchOverflow: true,
-  // spaceBetween: 48,
   slidesPerView: 1,
-  // slidesPerGroup: 4,
   grabCursor: true,
-  // freeMode: true,
-  // freeModeSticky: true,
-  // observer: true,
-  // observeParents: true,
   mousewheel: {
     releaseOnEdges: true,
     sensitivity: 1.5
   },
-  // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev'
+  }
+});
+var swiperListicleShopCarousel = new swiper_bundle__WEBPACK_IMPORTED_MODULE_6__["default"]('.js-swiper-listicle-shop-carousel', {
+  loop: true,
+  spaceBetween: 24,
+  autoHeight: true,
+  speed: 300,
+  slidesPerView: 2,
+  slidesPerGroup: 2,
+  grabCursor: true,
+  mousewheel: {
+    releaseOnEdges: true,
+    sensitivity: 1.5
   },
-  scrollbar: {
-    el: '.swiper-scrollbar',
-    draggable: true
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
   }
 });
 

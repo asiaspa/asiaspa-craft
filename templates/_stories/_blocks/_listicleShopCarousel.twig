@@ -1,5 +1,5 @@
 {% embed "_stories/_blocks/_listicle" %}
 {% block listicle %}
-    {# {% include "_components/_imager" with { 'image':block.image[0] ?? '', 'zoom': true, 'caption': true } %} #}
+    {% include "_stories/_components/_shop-carousel" with {'slider':block.slides} %}
 {% endblock %}
 {% endembed %}

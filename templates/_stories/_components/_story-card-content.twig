@@ -11,7 +11,7 @@
         {% case '' %}{% if pattern|last == 'card' or pattern|last == 'widecard' %}text-xl {% else %}text-lg {% endif %}
         {% case 'sm' %}{{ p }}text-xl
         {% case 'md' %}{{ p }}text-2xl
-        {% case 'lg' %}{{ p }}text-2xl
+        {% case 'lg' %}{{ p }}text-3xl
     {% endswitch %}
 {% endfor %}
 {%- endset -%}
@@ -24,9 +24,9 @@
     <a class="space-y-4" href="{{ entry.url }}">
         <h4 class="font-light leading-tight tracking-wide font-display text-bg {{ headlineStyle }} ">{{ entry.title }}</h4>
         {% include "_components/_hr" %}
-        <p class="text-sm md:text-md">{{ entry.storyStandfirst }}</p>
+        <p class="text-sm md:text-base">{{ entry.storyStandfirst }}</p>
     </a>
     {% if byline %}
-    <p class="block mt-2 text-sm text-gray-700">By <a href="{{ url('authors/' ~ entry.storyByline[0].username ?? entry.author.username ) }}">{{ entry.storyByline[0] ?? entry.author }}</a></p>
+    <p class="block mt-2 text-sm text-gray-700">By {{ entry.storyByline }}</p>
     {% endif %}
 </div>

@@ -1,16 +1,13 @@
 {% if slider %}
-<div class="mb-16 js-swiper-simple-slider swiper-container">
+<div class="mb-16 js-swiper-listicle-simple-slider swiper-container">
 	<div class="swiper-wrapper">
 		{% for slide in slider %}
         <div class="swiper-slide">
-            {% include "_components/_imager" with {'image': slide, 'zoom':true } %}
+            {% include "_components/_imager" with {'image': slide, 'zoom':true, 'caption': true} %}
         </div>
 		{% endfor %}
 	</div>
 	<div class="swiper-button-prev"></div>
 	<div class="swiper-button-next"></div>
-	<div class="max-w-screen-lg mt-8">
-		<div class="h-1 swiper-scrollbar"></div>
-	</div>
 </div>
 {% endif %}
