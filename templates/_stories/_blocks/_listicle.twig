@@ -13,8 +13,8 @@
 	</div>
 	{% endif %}
 
-	<div class="w-full md:pt-4 md:border-t md:w-10/12 lg:w-8/12 md:border-primary-300" >
-		<h2 class="inline-block mb-4 text-3xl tracking-wide md:mt-6 font-headline">{{ block.heading }}</h2>
+	<div class="w-full space-y-4 md:pt-4 md:border-t md:w-10/12 lg:w-8/12 md:border-primary-300" >
+		<h2 class="inline-block text-3xl tracking-wide md:mt-6 font-headline">{{ block.heading }}</h2>
 		{{ listicleContent }}
         {% include "_stories/_components/_rich-text-editor" with {'richTextEditor': block.richTextEditor} %}
 	</div>
