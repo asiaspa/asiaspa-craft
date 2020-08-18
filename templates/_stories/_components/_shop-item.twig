@@ -1,0 +1,11 @@
+
+<a class="flex flex-col items-end md:flex-row md:space-x-6" href="{{ block.hyperlink }}">
+    <div class="w-full md:w-1/2">
+		{% include "_components/_imager" with { image: block.image[0] } %}
+	</div>
+    <div class="w-full space-y-2 md:w-1/2 ">
+		<h3 class="text-2xl tracking-wide font-headline">{{ block.itemName }}</h3>
+		<p class="text-md">{{ block.description }}</p>
+		<div><span class="underline text-bg">Shop now</span></div>
+    </div>
+</a>
