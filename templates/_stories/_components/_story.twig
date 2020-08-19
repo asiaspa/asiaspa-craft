@@ -17,8 +17,8 @@
 <article>    
     {% embed "_containers/_container" with {'breakpoint':'xl'} %}
     {% block content %}
-        <section class="flex flex-col md:mt-16 md:flex-row -mx-edge">
-            <div class="self-start w-full md:w-5/12 md:py-0 p-edge md:sticky top-8">
+        <section class="flex flex-col items-center md:mt-16 md:flex-row -mx-edge">
+            <div class="w-full md:w-5/12 md:py-0 p-edge md:sticky top-8">
                 <div class="flex space-x-6">
                     {% include "_components/_category-tag" with { category : entry.storyCategory } %}
                     {% include "_components/_category-tag" with { category : entry.storyPrintIssue } %}
