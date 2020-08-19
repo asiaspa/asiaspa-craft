@@ -26,9 +26,11 @@
         {% include "_components/_hr" %}
         <p class="text-sm md:text-base">{{ entry.storyStandfirst }}</p>
     </a>
-    {% if byline == true  and entry.storyByline | length %}
+    {% if byline == true %}
+    {% if entry.storyByline | length %}
     <p class="text-gray-500">By {{ entry.storyByline[0].title }}</p>
     {% else %}
     <p class="text-gray-500">By AsiaSpa</p>
+    {% endif %}
     {% endif %}
 </div>
