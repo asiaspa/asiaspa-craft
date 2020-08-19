@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "81ecd75785ba19275e3771bbaa350dae",
+    "content-hash": "e4007fa5329164bdc8d17cdfe31060c6",
     "packages": [
         {
             "name": "aelvan/mailchimp-subscribe",
@@ -1970,6 +1970,53 @@
             "notification-url": "https://packagist.org/downloads/",
             "description": "Quickly and easily get beautiful Unsplash images in Craft!",
             "time": "2019-04-16T10:33:50+00:00"
+        },
+        {
+            "name": "ether/tags",
+            "version": "1.0.7",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ethercreative/tags/zipball/ce4155b2fe53e436b5b13b51472d0154991843d1",
+                "reference": "ce4155b2fe53e436b5b13b51472d0154991843d1",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0-RC17"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Tags",
+                "handle": "tag-manager",
+                "changelogUrl": "https://raw.githubusercontent.com/ethercreative/tags/master/CHANGELOG.md",
+                "class": "ether\\tagManager\\TagManager"
+            },
+            "autoload": {
+                "psr-4": {
+                    "ether\\tagManager\\": "src/"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Ether Creative",
+                    "homepage": "https://ethercreative.co.uk"
+                }
+            ],
+            "description": "A tag manager for Craft 3",
+            "keywords": [
+                "cms",
+                "craft",
+                "craft-plugin",
+                "craftcms",
+                "tags"
+            ],
+            "support": {
+                "docs": "https://github.com/ethercreative/tags/blob/master/README.md",
+                "issues": "https://github.com/ethercreative/tags/issues"
+            },
+            "time": "2020-04-15T12:16:13+00:00"
         },
         {
             "name": "ezyang/htmlpurifier",

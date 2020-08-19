@@ -14,6 +14,7 @@
     "ether/logs": "3.0.3",
     "ether/simplemap": "3.8.4.1",
     "ether/splash": "^3.0",
+    "ether/tags": "1.0.7",
     "fruitstudios/searchit": "1.0.8",
     "jalendport/craft-queuemanager": "1.2.0",
     "mmikkel/cp-field-inspect": "1.2.1",

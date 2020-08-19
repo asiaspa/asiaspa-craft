@@ -9,7 +9,10 @@
 	
 	{% if entry.storyListicleNumbering %}
 	<div class="w-full pt-4 border-t md:w-1/12 border-primary-300">
-		<span class="inline-block text-6xl tracking-wide font-display" style="font-variant-numeric: diagonal-fractions;"><span class="text-primary-500">{{ listicleNumber }}</span><span class="text-gray-300">/{{ listicleCount }}</span></span>
+		<div class="inline-block font-display">
+			<span class="text-5xl text-primary-500 ">{{ listicleNumber }}</span>
+			<span class="text-xl">/ {{ listicleCount }}</span>
+		</div>
 	</div>
 	{% endif %}
 

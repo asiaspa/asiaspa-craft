@@ -6,12 +6,18 @@
 
 {% minify %}
 {# -------------------  query ------------------- #}
-{% set categoryId = categoryId ?? null %}
+{% set tag = tag ?? '' %}
 {% set offset = offset ?? 0 %}
 {% set limit = limit ?? 5 %}
 
+{% set tagObject = craft.tags 
+    .group('user')
+    .title(tag)
+    .one()
+%} 
+
 {% set entriesQuery = craft.entries({
-    relatedTo: categoryId,
+    relatedTo: tagObject,
     section : 'story',
     offset: offset,
     limit: limit,
@@ -26,6 +32,6 @@
 {% set entries = entriesQuery.all() %}
 
 {# -------------------  content  ------------------- #}
-{% include "_stories/_story-pagination" with {'entries': entries} %}
+{% include "_stories/_story-pagination"  %}
 
 {% endminify %}
