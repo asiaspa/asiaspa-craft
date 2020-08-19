@@ -42,8 +42,8 @@ fieldLayouts:
             width: 100
           -
             fieldUid: 3f41492f-97e1-4608-8456-655f094e4284
-            instructions: 'This will link to user profile page with matching name'
-            label: Byline
+            instructions: ''
+            label: 'Sponsor Note'
             required: ''
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -51,9 +51,9 @@ fieldLayouts:
             width: 50
           -
             fieldUid: 65bad440-2ce9-4205-93f3-4f17fc67fa67
-            instructions: null
-            label: null
-            required: false
+            instructions: 'Double Click to edit Bio & upload profile pic.'
+            label: Byline
+            required: ''
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
