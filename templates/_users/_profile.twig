@@ -6,7 +6,7 @@
 <div class="mt-32">
     <div class="flex flex-1 w-full item-center md:w-2/3 lg:w-1/2">
         <div class="flex-none w-24 h-24 overflow-hidden rounded-full" >
-            {% include "_components/_imager" with { image : user.userProfilePic ?? '' , w : 1, h : 1 } %}
+            {% include "_components/_imager" with { image : user.userProfilePic[0] ?? '' , w : 1, h : 1 } %}
         </div>
         <div class="ml-6">
             <h2 class="text-2xl tracking-wide font-headline">{{ user.title }}</h2>
