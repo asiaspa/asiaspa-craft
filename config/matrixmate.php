@@ -42,7 +42,6 @@ return [
                 'event', 
                 'imageHotspot',
                 'relatedSpa', 
-                'blockquote'
             ]
         ]
     ]   

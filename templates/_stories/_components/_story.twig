@@ -6,14 +6,11 @@
     .slug(entrySlug)
     .with([
         'storyHeroImage',
+        'storyByline',
         'storyCategory',
         'storyPrintIssue',
         'storyTag'
     ]).one() %}
-
-{% set matchedUser = craft.users
-    .search(entry.storyByline)
-    .one() %}
 
 {% set prevEntry = entry.getPrev({section:'story', orderBy:'postDate' }) %}
 
@@ -29,8 +26,11 @@
                 <h1 class="text-3xl font-hairline leading-tight tracking-wide md:text-4xl font-display lg:text-5xl ">{{ entry.title }}</h1>
                 <hr class="block w-32 my-6 border-t-2 border-primary-500"/>
                 <h2 class="mb-4 text-lg lg:text-xl color-gray-900">{{ entry.storyStandfirst }}</h2>
-                {% if matchedUser %}
-                {% include "_components/_user" with { 'user' : matchedUser, 'date' : entry.postDate } %}
+                {% if entry.storyByline %}
+                {% include "_users/_short-profile" with { 'user' : entry.storyByline[0], 'date' : entry.postDate } %}
+                {% else %}
+                <span class="text-gray-500">By AsiaSpa</span>
+                <span class="block mt-1 text-gray-500">{{ entry.postDate | date("M d, Y") }}</span>
                 {% endif %}
             </div>
             <div class="w-full md:w-7/12">

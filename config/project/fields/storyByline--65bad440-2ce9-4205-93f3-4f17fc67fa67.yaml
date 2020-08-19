@@ -1,0 +1,22 @@
+contentColumnType: string
+fieldGroup: 847d91f3-2f4a-4f56-9f9d-40c20e080811
+handle: storyByline
+instructions: "User profile linking will only works if you fill in the user bio.\r\n"
+name: 'Story - Byline'
+searchable: false
+settings:
+  allowLimit: false
+  allowMultipleSources: false
+  allowSelfRelations: false
+  limit: null
+  localizeRelations: false
+  selectionLabel: 'Add a user'
+  showSiteMenu: true
+  source: 'taggroup:e4c28802-98a3-4c73-87b2-043d530285ff'
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Tags

@@ -50,6 +50,15 @@ fieldLayouts:
             warning: null
             width: 50
           -
+            fieldUid: 65bad440-2ce9-4205-93f3-4f17fc67fa67
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
             heading: 'Hero Image'
             type: craft\fieldlayoutelements\Heading
           -
@@ -117,15 +126,6 @@ fieldLayouts:
             fieldUid: 10f6975d-b749-4638-ac0b-6bf072495899
             instructions: ''
             label: 'Print Issue'
-            required: ''
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 50
-          -
-            fieldUid: c3bdaf00-a5d1-4f90-bbd2-62f4b2b2b886
-            instructions: ''
-            label: Tag
             required: ''
             tip: null
             type: craft\fieldlayoutelements\CustomField
