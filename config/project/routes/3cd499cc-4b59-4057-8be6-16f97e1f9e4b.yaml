@@ -1,0 +1,10 @@
+siteUid: null
+sortOrder: 7
+template: /freeform/bootstrap/view
+uriParts:
+  - freeform/bootstrap/
+  -
+    - slug
+    - '[^\/]+'
+  - /success
+uriPattern: 'freeform/bootstrap/<slug:[^\/]+>/success'

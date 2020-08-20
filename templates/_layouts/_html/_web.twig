@@ -66,20 +66,17 @@
     </script>
 </head>
 
-<body class="overflow-x-hidden ">
+<body class="overflow-x-hidden">
     {# ------------------- SVG ------------------- #}
     {{ source("_layouts/_inline/_icons.twig") }}
 
     {% block layout %}
-    {% endblock %}     
+    {% endblock %} 
     
     {{ sprig.script }} 
     <script src="{{ rev('/dist/manifest.js') }}"> </script>
     <script src="{{ rev('/dist/vendor.js') }}"> </script>
     <script src="{{ rev('/dist/app.js') }}"> </script>
-
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     
 </script>
 </body>

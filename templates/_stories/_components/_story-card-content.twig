@@ -18,8 +18,8 @@
 
 <div class="space-y-2">
     <div class="space-x-4">
-        {% include "_components/_category-tag" with { category : entry.storyCategory } %}
-        {% include "_components/_category-tag" with { category : entry.storyPrintIssue } %}
+        {% include "_categories/_category-tag" with { category : entry.storyCategory } %}
+        {% include "_categories/_category-tag" with { category : entry.storyPrintIssue } %}
     </div>
     <a class="space-y-4" href="{{ entry.url }}">
         <h4 class="font-light leading-tight tracking-wide font-headline text-bg {{ headlineStyle }} ">{{ entry.title }}</h4>
@@ -27,10 +27,6 @@
         <p class="text-sm md:text-base">{{ entry.storyStandfirst }}</p>
     </a>
     {% if byline == true %}
-    {% if entry.storyByline | length %}
-    <p class="text-gray-500">By {{ entry.storyByline[0].title }}</p>
-    {% else %}
-    <p class="text-gray-500">By AsiaSpa</p>
-    {% endif %}
+        {% include "_users/_byline" %}
     {% endif %}
 </div>

@@ -11823,10 +11823,26 @@ __webpack_require__.r(__webpack_exports__);
 
  // import Swiper styles
 // import 'swiper/swiper-bundle.css';
-// sal.js
+// key - retrigger script after htmx works
 
-sal_js__WEBPACK_IMPORTED_MODULE_4___default()();
-Object(medium_zoom__WEBPACK_IMPORTED_MODULE_5__["default"])('[data-zoomable]');
+function initScript() {
+  console.log('init Script Run');
+  sal_js__WEBPACK_IMPORTED_MODULE_4___default()();
+  Object(medium_zoom__WEBPACK_IMPORTED_MODULE_5__["default"])('[data-zoomable]');
+} // ================ trigger script when window.onload ================ 
+
+
+window.onload = function () {
+  console.log('window onload');
+  initScript();
+}; // ================ trigger script when htmx loaded ================
+
+
+document.body.addEventListener('htmx:afterSettle', function (evt) {
+  // evt.detail.parameters['auth_token'] = getAuthToken(); // add a new parameter into the mi
+  console.log('htmx:afterSettle init');
+  initScript();
+});
 var swiperCarousel = new swiper_bundle__WEBPACK_IMPORTED_MODULE_6__["default"]('.js-swiper-carousel', {
   // Optional parameters
   // loop: true,
@@ -11914,7 +11930,7 @@ var swiperListicleShopCarousel = new swiper_bundle__WEBPACK_IMPORTED_MODULE_6__[
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev'
   }
-});
+}); // need for calculation
 
 window.setTrueVw = function () {
   var vw = document.documentElement.clientWidth / 100;

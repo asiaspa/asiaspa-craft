@@ -20,10 +20,10 @@
         <section class="flex flex-col items-center md:mt-16 md:flex-row -mx-edge">
             <div class="w-full md:w-5/12 md:py-0 p-edge md:sticky top-8">
                 <div class="flex space-x-6">
-                    {% include "_components/_category-tag" with { category : entry.storyCategory } %}
-                    {% include "_components/_category-tag" with { category : entry.storyPrintIssue } %}
+                    {% include "_categories/_category-tag" with { category : entry.storyCategory } %}
+                    {% include "_categories/_category-tag" with { category : entry.storyPrintIssue } %}
                 </div>
-                <h1 class="text-3xl font-hairline leading-tight tracking-wide md:text-4xl font-display lg:text-5xl ">{{ entry.title }}</h1>
+                <h1 class="text-4xl font-hairline leading-tight font-display lg:text-5xl ">{{ entry.title }}</h1>
                 <hr class="block w-32 my-6 border-t-2 border-primary-500"/>
                 <h2 class="mb-4 text-lg lg:text-xl color-gray-900">{{ entry.storyStandfirst }}</h2>
                 {% if entry.storyByline %}
@@ -49,7 +49,7 @@
 {% if prevEntry %}
 <div class="pb-32 border-b border-primary-300" s-target="this" s-swap="afterend" sprig s-trigger="revealed" s-push-url="{{ prevEntry.url }}">
 {% include '_components/_adblock' with {'adgroup': ['or', ad.adBillboard, ad.adLeaderboard]} %}
-    <input type="hidden" name="entryId" value="{{ prevEntry.id }}">
+    <input type="hidden" name="entrySlug" value="{{ prevEntry.slug }}">
 </div>
 {% endif %} 
 

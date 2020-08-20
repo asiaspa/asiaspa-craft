@@ -3,14 +3,31 @@ import 'lazysizes/plugins/blur-up/ls.blur-up';
 import 'alpinejs';
 import "intersection-observer";
 import sal from 'sal.js';
-import mediumZoom from 'medium-zoom'
+import mediumZoom from 'medium-zoom';
 import Swiper from 'swiper/bundle'; // import Swiper styles
 // import 'swiper/swiper-bundle.css';
 
+// key - retrigger script after htmx works
+function initScript() {
+    console.log('init Script Run');
+    sal();
+    mediumZoom('[data-zoomable]')
+}
 
-// sal.js
-sal();
-mediumZoom('[data-zoomable]');
+// ================ trigger script when window.onload ================ 
+window.onload = function () {
+    console.log('window onload');
+    initScript();
+}
+
+// ================ trigger script when htmx loaded ================
+document.body.addEventListener('htmx:afterSettle', function(evt) {
+    // evt.detail.parameters['auth_token'] = getAuthToken(); // add a new parameter into the mi
+    console.log('htmx:afterSettle init')
+    initScript()
+});
+
+
 
 const swiperCarousel = new Swiper('.js-swiper-carousel', {
     // Optional parameters
@@ -105,7 +122,7 @@ const swiperListicleShopCarousel = new Swiper('.js-swiper-listicle-shop-carousel
 })
 
 
-
+// need for calculation
 window.setTrueVw = function () {
     let vw = document.documentElement.clientWidth / 100;
     document.documentElement.style.setProperty('--true-vw', `${vw}px`);

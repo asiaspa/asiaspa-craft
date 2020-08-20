@@ -1,8 +1,8 @@
 contentColumnType: string
 fieldGroup: c988c230-88d1-42da-86a6-8a60a7a243f8
-handle: asiaspaAwardsOtherJudges
+handle: asiaspaAwardsAsiaspaJudges
 instructions: ''
-name: 'AsiaSpa Awards - Other Judges'
+name: 'AsiaSpa Awards - AsiaSpa Judges'
 searchable: false
 settings:
   columns:
@@ -35,7 +35,7 @@ settings:
             -
               - width
               - ''
-  contentTable: '{{%stc_asiaspaawardsotherjudges}}'
+  contentTable: '{{%stc_asiaspaawardsasiaspajudges}}'
   fieldLayout: table
   maxRows: ''
   minRows: '1'

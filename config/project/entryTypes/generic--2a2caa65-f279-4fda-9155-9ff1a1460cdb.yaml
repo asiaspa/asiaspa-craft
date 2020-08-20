@@ -103,7 +103,7 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
-            width: 50
+            width: 100
           -
             fieldUid: 123697cb-e398-4943-8570-7241dd6b451a
             instructions: null
@@ -112,7 +112,7 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
-            width: 50
+            width: 100
           -
             type: craft\fieldlayoutelements\HorizontalRule
           -

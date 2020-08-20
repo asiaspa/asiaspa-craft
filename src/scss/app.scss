@@ -3,6 +3,7 @@
 
 // vendor
 @import "_lazysizes/_lazysizes";
+@import './node_modules/sal.js/src/sal';
 @import "_swiper/swiper-vars";
 @import "_swiper/swiper";
 @import "_swiper/components/navigation/navigation";
@@ -17,7 +18,6 @@
 
 // fix
 .medium-zoom-image--opened  { z-index: 99;}
-
 
 body {
     font-weight: 300;

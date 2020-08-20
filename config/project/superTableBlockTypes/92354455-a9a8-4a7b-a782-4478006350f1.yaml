@@ -1,0 +1,133 @@
+field: 123697cb-e398-4943-8570-7241dd6b451a
+fieldLayouts:
+  b1d01eda-cc8c-4bd7-9453-63dbbfc97c03:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 8e22b5ce-635b-4aa7-9745-70baca4d30c4
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 4c840440-07d0-4ac2-8eac-d23837109ed8
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: d63b538b-f7c2-4960-9347-8c9de51a229b
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: bf8abcfa-32e6-42f6-9fdc-5241b23f6103
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  4c840440-07d0-4ac2-8eac-d23837109ed8:
+    contentColumnType: string
+    fieldGroup: null
+    handle: profilePic
+    instructions: ''
+    name: 'Profile Pic'
+    searchable: true
+    settings:
+      allowSelfRelations: false
+      allowedKinds: null
+      defaultUploadLocationSource: 'volume:883ab42c-10f1-4e32-a559-61f23e4e3775'
+      defaultUploadLocationSubpath: ''
+      limit: ''
+      localizeRelations: false
+      restrictFiles: ''
+      selectionLabel: ''
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:b790afbb-ab07-4fbd-bdfa-1fba3afb5fbd'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources:
+        - 'volume:b790afbb-ab07-4fbd-bdfa-1fba3afb5fbd'
+      targetSiteId: null
+      useSingleFolder: true
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  8e22b5ce-635b-4aa7-9745-70baca4d30c4:
+    contentColumnType: text
+    fieldGroup: null
+    handle: judgesName
+    instructions: ''
+    name: 'Judges Name'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  bf8abcfa-32e6-42f6-9fdc-5241b23f6103:
+    contentColumnType: text
+    fieldGroup: null
+    handle: bio
+    instructions: ''
+    name: Bio
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '2'
+      multiline: '1'
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  d63b538b-f7c2-4960-9347-8c9de51a229b:
+    contentColumnType: text
+    fieldGroup: null
+    handle: judgesTitle
+    instructions: ''
+    name: 'Judges Title'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText

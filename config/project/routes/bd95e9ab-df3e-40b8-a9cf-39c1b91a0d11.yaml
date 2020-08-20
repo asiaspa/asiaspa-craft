@@ -1,0 +1,13 @@
+siteUid: null
+sortOrder: 2
+template: /freeform/bootstrap/view_submission
+uriParts:
+  - freeform/bootstrap/
+  -
+    - slug
+    - '[^\/]+'
+  - /submissions/
+  -
+    - id
+    - \d+
+uriPattern: 'freeform/bootstrap/<slug:[^\/]+>/submissions/<id:\d+>'

@@ -1,0 +1,15 @@
+{% set storyByline %}
+    <p class="text-gray-700">By {{ entry.storyByline | length ? entry.storyByline[0].title : siteName }}</p>
+{% endset %}
+
+{% if entry.storyByline | length and entry.storyByline[0].userBio is not empty and entry.storyByline[0].userProfilePic is not empty %}
+<a class="text-bg" href="{{ url('/user/' ~ entry.storyByline[0].title|url_encode ) }}">
+    {{ storyByline }}
+</a>
+{% else %}
+{{ storyByline }}
+{% endif %}
+
+
+
+
