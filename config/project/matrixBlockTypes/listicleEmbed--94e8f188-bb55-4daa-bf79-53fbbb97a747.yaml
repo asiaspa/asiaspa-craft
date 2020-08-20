@@ -95,4 +95,4 @@ fields:
     type: craft\redactor\Field
 handle: listicleEmbed
 name: 'Listicle / Embed'
-sortOrder: 13
+sortOrder: 14

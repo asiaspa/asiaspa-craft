@@ -2,9 +2,9 @@
 {% block content %}
 	<div class="flex flex-row justify-end mt-16">
         <div class="w-full md:w-10/12 lg:w-8/12" >
-            <div class="font-serif tracking-wide prose md:prose-lg">
+            <div class="self-end font-serif prose-lg md:prose-xl text-primary-700">
                 {% include "_stories/_components/_rich-text-editor" with {'richTextEditor': block.richTextEditor} %}
-            </div>
+            </div>      
         </div>
     </div>
 {% endblock %}

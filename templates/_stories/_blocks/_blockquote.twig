@@ -2,10 +2,10 @@
 	{% block content %}
         <div class="flex flex-col items-center mt-32 space-y-8">
             {% include "_components/_hr" %}
-		    <blockquote class="text-3xl italic tracking-wide text-center font-display md:text-4xl lg:text-5xl">
+		    <blockquote class="text-3xl tracking-wide text-center font-display md:text-4xl">
                 {{ block.quote }}
             </blockquote>
-            {% if block.cite is not empty %}<cite>{{ block.cite }}</cite>{% endif %}
+            {% if block.cite is not empty %}<cite class="text-lg not-italic text-gray-500">{{ block.cite }}</cite>{% endif %}
             {% include "_components/_hr" %}
         </div>
 

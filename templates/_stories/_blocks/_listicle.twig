@@ -5,23 +5,24 @@
 
 {% embed "_containers/_container" with {'breakpoint':'lg' } %}
 {% block content %}
-	<div class="flex flex-col justify-end pt-16 md:flex-row">
-	
-	{% if entry.storyListicleNumbering %}
-	<div class="w-full pt-4 border-t md:w-1/12 border-primary-300">
-		<div class="inline-block font-display">
-			<span class="text-5xl text-primary-500 ">{{ listicleNumber }}</span>
-			<span class="text-xl">/ {{ listicleCount }}</span>
+<div class="flex flex-col flex-wrap justify-end pt-8 space-y-4 md:flex-row">
+	<div class="w-full lg:w-10/12">
+		{% if entry.storyListicleNumbering %}
+		<div class="inline-block mr-4">
+			<span class="text-5xl font-hairline md:text-6xl text-primary-500 font-display ">{{ listicleNumber }}</span>
+			<span class="font-sans text-base">/ {{ listicleCount }}</span>
+		</div>
+		{% endif %}
+		<h2 class="inline-block text-3xl tracking-wide font-headline">{{ block.heading }}</h2>
+	</div>
+	<div class="w-full lg:w-10/12">
+			{{ listicleContent }}
+	</div>
+	<div class="w-full pb-4 border-b md:w-10/12 lg:w-8/12 border-primary-300">
+		<div class="font-serif prose md:prose-lg">
+        	{% include "_stories/_components/_rich-text-editor" with {'richTextEditor': block.richTextEditor} %}
 		</div>
 	</div>
-	{% endif %}
-
-	<div class="w-full space-y-4 md:pt-4 md:border-t md:w-10/12 lg:w-8/12 md:border-primary-300" >
-		<h2 class="inline-block text-3xl tracking-wide md:mt-6 font-headline">{{ block.heading }}</h2>
-		{{ listicleContent }}
-        {% include "_stories/_components/_rich-text-editor" with {'richTextEditor': block.richTextEditor} %}
-	</div>
-
 </div>
 {% endblock %}
 {% endembed %}

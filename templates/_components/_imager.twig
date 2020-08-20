@@ -18,7 +18,7 @@
 %}
 
 <figure class="w-full {{ class|default('') }}">
-    <div class="relative w-full overflow-hidden bg-primary-100" style="padding-bottom: {{ 1/aspect*100 }}%">
+    <div class="relative w-full overflow-hidden bg-primary-100" style="padding-bottom: {{ 1 / aspect * 100 }}%">
         <img class="absolute w-full h-full lazyload pin"
             src="{{ transformedImages | first }}" 
             srcset="{{ transformedImages | first }}" 
@@ -33,7 +33,7 @@
 </figure> 
 
 {% else %}
-<div class="relative w-full overflow-hidden bg-gray-100" style="padding-bottom: {{ 1 / aspect * 100 }}%">
+<div class="relative w-full overflow-hidden bg-primmary-100" style="padding-bottom: {{ 1 / aspect * 100 }}%">
     <div class="absolute w-full h-full pin object-fit-cover"></div>
 </div>
 

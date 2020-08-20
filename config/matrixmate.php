@@ -18,21 +18,17 @@ return [
                     'label' => 'Story',
                     'types' => [
                         'richTextEditor',
+                        'introduction',
                         'gallery', 
                         'slider', 
                         'embed', 
-                        'qa', 
-                        'blockquote', 
-                        'form', 
-                        'event', 
-                        'imageHotspot'
+                        'blockquote',
                     ]
                 ],
                 [
                     'label' => 'Relation',
                     'types' => [
                         'relatedStory', 
-                        'relatedSpa'
                     ]
                 ]
             ],

@@ -156,4 +156,4 @@ fields:
     type: craft\fields\PlainText
 handle: listicleShopItem
 name: 'Listicle / Shop Item'
-sortOrder: 14
+sortOrder: 15

@@ -1,11 +1,11 @@
 field: a9f00eab-73ff-4659-9b15-ee56aa8c8531
 fieldLayouts:
-  0c70d597-e7f3-4266-b839-7f98db6f7865:
+  03cd57ad-fe46-46e0-8d40-14873a2a8d1f:
     tabs:
       -
         elements:
           -
-            fieldUid: a847531d-9759-4c96-9316-2fd5fd03de36
+            fieldUid: 75471cfc-b412-499d-9ae6-2721d64fe92c
             instructions: null
             label: null
             required: false
@@ -16,16 +16,18 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  a847531d-9759-4c96-9316-2fd5fd03de36:
+  75471cfc-b412-499d-9ae6-2721d64fe92c:
     contentColumnType: text
     fieldGroup: null
     handle: richTextEditor
     instructions: ''
     name: 'Rich Text Editor'
-    searchable: true
+    searchable: false
     settings:
       availableTransforms: '*'
-      availableVolumes: '*'
+      availableVolumes:
+        - 883ab42c-10f1-4e32-a559-61f23e4e3775
+        - 9f801622-9f26-40c9-9126-ac4041a76554
       cleanupHtml: true
       columnType: text
       configSelectionMode: choose
@@ -33,7 +35,7 @@ fields:
       manualConfig: ''
       purifierConfig: ''
       purifyHtml: '1'
-      redactorConfig: Standard.json
+      redactorConfig: Simple.json
       removeEmptyTags: '1'
       removeInlineStyles: '1'
       removeNbsp: '1'
@@ -44,6 +46,6 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\redactor\Field
-handle: richTextEditor
-name: 'Rich Text Editor'
-sortOrder: 2
+handle: introduction
+name: Introduction
+sortOrder: 1
