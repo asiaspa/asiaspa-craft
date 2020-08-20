@@ -23,8 +23,10 @@
     </div>
     <a class="space-y-4" href="{{ entry.url }}">
         <h4 class="font-light leading-tight tracking-wide font-headline text-bg {{ headlineStyle }} ">{{ entry.title }}</h4>
+        {% if standfirst == true %}
         {% include "_components/_hr" %}
         <p class="text-sm md:text-base">{{ entry.storyStandfirst }}</p>
+        {% endif %}
     </a>
     {% if byline == true %}
         {% include "_users/_byline" %}

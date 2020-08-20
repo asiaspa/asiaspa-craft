@@ -11829,6 +11829,98 @@ function initScript() {
   console.log('init Script Run');
   sal_js__WEBPACK_IMPORTED_MODULE_4___default()();
   Object(medium_zoom__WEBPACK_IMPORTED_MODULE_5__["default"])('[data-zoomable]');
+  var swiperCarousel = new swiper_bundle__WEBPACK_IMPORTED_MODULE_6__["default"]('.js-swiper-carousel', {
+    // Optional parameters
+    // loop: true,
+    //   autoHeight: true,
+    speed: 300,
+    watchOverflow: true,
+    spaceBetween: 48,
+    slidesPerView: 'auto',
+    // slidesPerGroup: 4,
+    grabCursor: true,
+    freeMode: true,
+    freeModeSticky: true,
+    observer: true,
+    observeParents: true,
+    mousewheel: {
+      releaseOnEdges: true,
+      sensitivity: 1.5
+    },
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+    scrollbar: {
+      el: '.swiper-scrollbar',
+      draggable: true
+    }
+  });
+  var swiperSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_6__["default"]('.js-swiper-slider', {
+    // Optional parameters
+    // loop: true,
+    // autoHeight: true,
+    speed: 300,
+    watchOverflow: true,
+    spaceBetween: 48,
+    slidesPerView: 'auto',
+    // slidesPerGroup: 3,
+    grabCursor: true,
+    freeMode: true,
+    freeModeSticky: true,
+    observer: true,
+    observeParents: true,
+    mousewheel: {
+      releaseOnEdges: true,
+      sensitivity: 1.5
+    },
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+    scrollbar: {
+      el: '.swiper-scrollbar',
+      draggable: true
+    }
+  });
+  var swiperListicleSimpleSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_6__["default"]('.js-swiper-listicle-simple-slider', {
+    // loop: true,
+    autoHeight: true,
+    speed: 300,
+    slidesPerView: 1,
+    grabCursor: true,
+    mousewheel: {
+      releaseOnEdges: true,
+      sensitivity: 1.5
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'fraction'
+    },
+    navigation: {
+      nextEl: '.swiper-next',
+      prevEl: '.swiper-prev'
+    }
+  });
+  var swiperListicleShopCarousel = new swiper_bundle__WEBPACK_IMPORTED_MODULE_6__["default"]('.js-swiper-listicle-shop-carousel', {
+    loop: true,
+    spaceBetween: 24,
+    autoHeight: true,
+    speed: 300,
+    slidesPerView: 2,
+    slidesPerGroup: 2,
+    grabCursor: true,
+    mousewheel: {
+      releaseOnEdges: true,
+      sensitivity: 1.5
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    }
+  });
 } // ================ trigger script when window.onload ================ 
 
 
@@ -11842,94 +11934,6 @@ document.body.addEventListener('htmx:afterSettle', function (evt) {
   // evt.detail.parameters['auth_token'] = getAuthToken(); // add a new parameter into the mi
   console.log('htmx:afterSettle init');
   initScript();
-});
-var swiperCarousel = new swiper_bundle__WEBPACK_IMPORTED_MODULE_6__["default"]('.js-swiper-carousel', {
-  // Optional parameters
-  // loop: true,
-  //   autoHeight: true,
-  speed: 300,
-  watchOverflow: true,
-  spaceBetween: 48,
-  slidesPerView: 'auto',
-  // slidesPerGroup: 4,
-  grabCursor: true,
-  freeMode: true,
-  freeModeSticky: true,
-  observer: true,
-  observeParents: true,
-  mousewheel: {
-    releaseOnEdges: true,
-    sensitivity: 1.5
-  },
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev'
-  },
-  scrollbar: {
-    el: '.swiper-scrollbar',
-    draggable: true
-  }
-});
-var swiperSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_6__["default"]('.js-swiper-slider', {
-  // Optional parameters
-  // loop: true,
-  // autoHeight: true,
-  speed: 300,
-  watchOverflow: true,
-  spaceBetween: 48,
-  slidesPerView: 'auto',
-  // slidesPerGroup: 3,
-  grabCursor: true,
-  freeMode: true,
-  freeModeSticky: true,
-  observer: true,
-  observeParents: true,
-  mousewheel: {
-    releaseOnEdges: true,
-    sensitivity: 1.5
-  },
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev'
-  },
-  scrollbar: {
-    el: '.swiper-scrollbar',
-    draggable: true
-  }
-});
-var swiperListicleSimpleSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_6__["default"]('.js-swiper-listicle-simple-slider', {
-  loop: true,
-  autoHeight: true,
-  speed: 300,
-  slidesPerView: 1,
-  grabCursor: true,
-  mousewheel: {
-    releaseOnEdges: true,
-    sensitivity: 1.5
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev'
-  }
-});
-var swiperListicleShopCarousel = new swiper_bundle__WEBPACK_IMPORTED_MODULE_6__["default"]('.js-swiper-listicle-shop-carousel', {
-  loop: true,
-  spaceBetween: 24,
-  autoHeight: true,
-  speed: 300,
-  slidesPerView: 2,
-  slidesPerGroup: 2,
-  grabCursor: true,
-  mousewheel: {
-    releaseOnEdges: true,
-    sensitivity: 1.5
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev'
-  }
 }); // need for calculation
 
 window.setTrueVw = function () {

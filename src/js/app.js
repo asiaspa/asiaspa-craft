@@ -12,6 +12,103 @@ function initScript() {
     console.log('init Script Run');
     sal();
     mediumZoom('[data-zoomable]')
+    const swiperCarousel = new Swiper('.js-swiper-carousel', {
+        // Optional parameters
+        // loop: true,
+        //   autoHeight: true,
+        speed: 300,
+        watchOverflow: true,
+        spaceBetween: 48,
+        slidesPerView: 'auto',
+        // slidesPerGroup: 4,
+        grabCursor: true,
+        freeMode: true,
+        freeModeSticky: true,
+        observer: true,
+        observeParents: true,
+        mousewheel: {
+            releaseOnEdges: true,
+            sensitivity: 1.5
+        },
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        scrollbar: {
+            el: '.swiper-scrollbar',
+            draggable: true
+        }
+    })
+
+    const swiperSlider = new Swiper('.js-swiper-slider', {
+        // Optional parameters
+        // loop: true,
+        // autoHeight: true,
+        speed: 300,
+        watchOverflow: true,
+        spaceBetween: 48,
+        slidesPerView: 'auto',
+        // slidesPerGroup: 3,
+        grabCursor: true,
+        freeMode: true,
+        freeModeSticky: true,
+        observer: true,
+        observeParents: true,
+        mousewheel: {
+            releaseOnEdges: true,
+            sensitivity: 1.5
+        },
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        scrollbar: {
+            el: '.swiper-scrollbar',
+            draggable: true
+        }
+    })
+
+    const swiperListicleSimpleSlider = new Swiper('.js-swiper-listicle-simple-slider', {
+        // loop: true,
+        autoHeight: true,
+        speed: 300,
+        slidesPerView: 1,
+        grabCursor: true,
+        mousewheel: {
+            releaseOnEdges: true,
+            sensitivity: 1.5
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'fraction',
+        },
+        navigation: {
+            nextEl: '.swiper-next',
+            prevEl: '.swiper-prev',
+        },
+    })
+
+    const swiperListicleShopCarousel = new Swiper('.js-swiper-listicle-shop-carousel', {
+        loop: true,
+        spaceBetween: 24,
+        autoHeight: true,
+        speed: 300,
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        grabCursor: true,
+        mousewheel: {
+            releaseOnEdges: true,
+            sensitivity: 1.5
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    })
+
+
 }
 
 // ================ trigger script when window.onload ================ 
@@ -29,97 +126,6 @@ document.body.addEventListener('htmx:afterSettle', function(evt) {
 
 
 
-const swiperCarousel = new Swiper('.js-swiper-carousel', {
-    // Optional parameters
-    // loop: true,
-    //   autoHeight: true,
-    speed: 300,
-    watchOverflow: true,
-    spaceBetween: 48,
-    slidesPerView: 'auto',
-    // slidesPerGroup: 4,
-    grabCursor: true,
-    freeMode: true,
-    freeModeSticky: true,
-    observer: true,
-    observeParents: true,
-    mousewheel: {
-        releaseOnEdges: true,
-        sensitivity: 1.5
-    },
-    // Navigation arrows
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-    scrollbar: {
-        el: '.swiper-scrollbar',
-        draggable: true
-    }
-})
-
-const swiperSlider = new Swiper('.js-swiper-slider', {
-    // Optional parameters
-    // loop: true,
-    // autoHeight: true,
-    speed: 300,
-    watchOverflow: true,
-    spaceBetween: 48,
-    slidesPerView: 'auto',
-    // slidesPerGroup: 3,
-    grabCursor: true,
-    freeMode: true,
-    freeModeSticky: true,
-    observer: true,
-    observeParents: true,
-    mousewheel: {
-        releaseOnEdges: true,
-        sensitivity: 1.5
-    },
-    // Navigation arrows
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-    scrollbar: {
-        el: '.swiper-scrollbar',
-        draggable: true
-    }
-})
-
-const swiperListicleSimpleSlider = new Swiper('.js-swiper-listicle-simple-slider', {
-    loop: true,
-    autoHeight: true,
-    speed: 300,
-    slidesPerView: 1,
-    grabCursor: true,
-    mousewheel: {
-        releaseOnEdges: true,
-        sensitivity: 1.5
-    },
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-})
-
-const swiperListicleShopCarousel = new Swiper('.js-swiper-listicle-shop-carousel', {
-    loop: true,
-    spaceBetween: 24,
-    autoHeight: true,
-    speed: 300,
-    slidesPerView: 2,
-    slidesPerGroup: 2,
-    grabCursor: true,
-    mousewheel: {
-        releaseOnEdges: true,
-        sensitivity: 1.5
-    },
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-})
 
 
 // need for calculation
