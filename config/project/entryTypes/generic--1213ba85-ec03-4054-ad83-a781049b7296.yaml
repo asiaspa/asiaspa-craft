@@ -133,24 +133,6 @@ fieldLayouts:
             width: 50
           -
             type: craft\fieldlayoutelements\HorizontalRule
-          -
-            fieldUid: 0c465ef4-3419-4c61-b509-3493ed02e3f3
-            instructions: ''
-            label: 'Related Story'
-            required: ''
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 50
-          -
-            fieldUid: 93e25175-322f-41f4-8314-40d076231cab
-            instructions: ''
-            label: 'Related Spa'
-            required: ''
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 50
         name: Relation
         sortOrder: 2
       -
