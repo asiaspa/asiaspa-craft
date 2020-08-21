@@ -23,14 +23,18 @@ module.exports = {
                 '300': 'var(--color-primary-300)',
                 '500': 'var(--color-primary-500)',
                 '700': 'var(--color-primary-700)',
-                '900': 'var(--color-primary-900)'
+            },
+            secondary: {
+                '100': 'var(--color-secondary-100)',
+                '300': 'var(--color-secondary-300)',
+                '500': 'var(--color-secondary-500)',
+                '700': 'var(--color-secondary-700)',
             },
             gray: {
                 '100': 'var(--color-gray-100)',
                 '300': 'var(--color-gray-300)',
                 '500': 'var(--color-gray-500)',
                 '700': 'var(--color-gray-700)',
-                '900': 'var(--color-gray-900)'
             },
             black: 'var(--color-black)',
             white: 'var(--color-white)',
@@ -57,7 +61,7 @@ module.exports = {
                     a: {
                         color: 'var(--color-primary-500)',
                         '&:hover': {
-                            color: 'var(--color-primary-300)',
+                            color: 'var(--color-primary-700)',
                         },
                     },
                 },

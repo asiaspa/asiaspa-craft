@@ -1,0 +1,15 @@
+{# ! top left button will show the current action #}
+
+<header class="fixed top-0 z-20 w-full transition duration-300 bg-black border-b border-gray-500 "
+        x-data="{ atTop: true}"
+        x-on:scroll.window.debounce="atTop = (window.pageYOffset > 1) ? false : true;"
+        :class="{'': atTop === true }">
+    <div class="flex flex-row items-center justify-between h-20 max-w-screen-xl mx-auto text-white px-edge ">
+        <a class="leading-tight" href="{{ siteUrl}}">AsiaSpa<br/>Awards<br/>2020</a>
+        <div class="flex space-x-6">
+        <a href="#enter">Enter</a>
+        <a class="text-gray-500" href="#nominations">Nominations</a>
+        <a class="text-gray-500" href="#winners">Winners</a>
+        </div>
+    </div>
+</header>

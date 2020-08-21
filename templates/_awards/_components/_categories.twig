@@ -1,0 +1,17 @@
+<section class="max-w-screen-md pt-32 mx-auto px-edge"> 
+    <h1 class="text-5xl font-hairline leading-none text-white font-display">
+        <span class="block">Awards</span>
+        <span class="block">Categories</span>
+    </h1>
+    <div class="pt-16 font-sans text-lg font-light tracking-wide text-white md:text-2xl">
+    {{ entry.asiaspaAwardsIntroduction}}
+    </div>
+</section>
+
+<section class="max-w-screen-xl pt-16 mx-auto px-edge"> 
+<div class="grid grid-cols-2 border-t border-l border-gray-700 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+    {% for category in entry.asiaspaAwardsAwardsCategories if category.level == 2 %}
+        <span class="px-4 py-2 text-sm text-white border-b border-r border-gray-700 md:text-base" data-tippy-content="{{ category.asiaspaAwardsCategoryCriteria }}">{{ category.title }}</span>
+    {% endfor %}
+</div>
+</section>

@@ -5,40 +5,10 @@ instructions: ''
 name: 'AsiaSpa Awards - Other Judges'
 searchable: false
 settings:
-  columns:
-    __assoc__:
-      -
-        - 8e22b5ce-635b-4aa7-9745-70baca4d30c4
-        -
-          __assoc__:
-            -
-              - width
-              - ''
-      -
-        - 4c840440-07d0-4ac2-8eac-d23837109ed8
-        -
-          __assoc__:
-            -
-              - width
-              - ''
-      -
-        - d63b538b-f7c2-4960-9347-8c9de51a229b
-        -
-          __assoc__:
-            -
-              - width
-              - ''
-      -
-        - bf8abcfa-32e6-42f6-9fdc-5241b23f6103
-        -
-          __assoc__:
-            -
-              - width
-              - ''
   contentTable: '{{%stc_asiaspaawardsotherjudges}}'
-  fieldLayout: table
+  fieldLayout: row
   maxRows: ''
-  minRows: '1'
+  minRows: ' 0'
   placeholderKey: null
   propagationMethod: all
   selectionLabel: ''

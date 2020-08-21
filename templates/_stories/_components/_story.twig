@@ -47,10 +47,10 @@
 </article>
 
 {% if prevEntry %}
-<div class="pb-16 border-b border-primary-300" s-target="this" s-swap="afterend" sprig s-trigger="revealed" s-push-url="{{ prevEntry.url }}">
+<div class="pb-16" s-target="this" s-swap="afterend" sprig s-trigger="revealed" s-push-url="{{ prevEntry.url }}">
 {% include '_components/_adblock' with {'adgroup': ['or', ad.adBillboard, ad.adLeaderboard]} %}
     <input type="hidden" name="entrySlug" value="{{ prevEntry.slug }}">
 </div>
 {% endif %} 
 
-<div class="invisible hidden">{{ entry | views_work_image }}</div> #}
+<div class="invisible hidden">{{ entry | views_work_image }}</div>

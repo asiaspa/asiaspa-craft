@@ -1,11 +1,11 @@
 contentColumnType: string(7)
 fieldGroup: f6ccb015-3533-491f-8f9c-775d16605b99
-handle: websiteColorPrimary900
+handle: websiteColorSecondary300
 instructions: ''
-name: 'Website - Color - Primary 900'
+name: 'Website - Color - Secondary 300'
 searchable: false
 settings:
-  defaultColor: '#2d2218'
+  defaultColor: '#eed4b8'
 translationKeyFormat: null
 translationMethod: none
 type: craft\fields\Color

@@ -1,0 +1,14 @@
+contentColumnType: string
+fieldGroup: a7b23ced-f8be-4c09-bba7-84b5e4552f75
+handle: spaAsiaspaAwardWinners
+instructions: ''
+name: asiaspaAwardsCategoryWinners
+searchable: true
+settings:
+  contentTable: '{{%matrixcontent_spaasiaspaawardwinners}}'
+  maxBlocks: ''
+  minBlocks: ''
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

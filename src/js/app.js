@@ -5,13 +5,18 @@ import "intersection-observer";
 import sal from 'sal.js';
 import mediumZoom from 'medium-zoom';
 import Swiper from 'swiper/bundle'; // import Swiper styles
-// import 'swiper/swiper-bundle.css';
+// import 'swiper/swiper-bundle.css';\
+import tippy from 'tippy.js';
+import 'tippy.js/dist/tippy.css'; 
+import lax from 'lax.js';
+
 
 // key - retrigger script after htmx works
 function initScript() {
     console.log('init Script Run');
     sal();
-    mediumZoom('[data-zoomable]')
+    mediumZoom('[data-zoomable]');
+    tippy('[data-tippy-content]');
     const swiperCarousel = new Swiper('.js-swiper-carousel', {
         // Optional parameters
         // loop: true,

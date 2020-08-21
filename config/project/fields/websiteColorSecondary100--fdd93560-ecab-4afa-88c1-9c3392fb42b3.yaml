@@ -1,11 +1,11 @@
 contentColumnType: string(7)
 fieldGroup: f6ccb015-3533-491f-8f9c-775d16605b99
-handle: websiteColorGray900
+handle: websiteColorSecondary100
 instructions: ''
-name: 'Website - Color - Gray 900'
+name: 'Website - Color - Secondary 100'
 searchable: false
 settings:
-  defaultColor: '#262626'
+  defaultColor: '#f7f5f3'
 translationKeyFormat: null
 translationMethod: none
 type: craft\fields\Color

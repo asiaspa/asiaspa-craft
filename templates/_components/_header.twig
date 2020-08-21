@@ -1,36 +1,35 @@
 {% set headerNodes = craft.navigate.raw('header ') %}
-<header class="sticky top-0 z-20 w-full h-16 transition duration-300 bg-white ">
-    {% embed "_containers/_container" %}
-    {% block content %}
-    <div class="relative flex justify-between w-full">
-        <div class="flex space-x-6">
-            <a class="block h-16 py-4" href="{{ siteUrl }}">
+
+<header class="sticky top-0 z-20 w-full transition duration-300"
+        x-data="{ atTop: true}"
+        x-on:scroll.window.debounce="atTop = (window.pageYOffset > 1) ? false : true;"
+        :class="{'bg-secondary-100': atTop === false }">
+    <div class="relative flex items-center justify-between h-20 max-w-screen-xl mx-auto px-edge">
+        <div class="flex items-center">
+            <a class="block h-20 py-6 mr-6" 
+                href="{{ siteUrl }}"
+                {% if not craft.app.request.segments|length %}:class="{'invisible': atTop === true }"{% endif %}>
                 {% if website.websiteLogoSimple | length %}
-                    <img class="block w-auto h-full" :class="{'hidden': atTop === true }" src="{{ rev(website.websiteLogoSimple[0].url()) }}"/>
-                {% else %}
-                    <span class="h-8 p-4 text-xl font-semibold tracking-tight">{{ siteName }}</span>
+                    <img class="block w-auto h-full" src="{{ rev(website.websiteLogoSimple[0].url()) }}" alt="{{ siteUrl }}" />
                 {% endif %}
             </a>
-            <ul class="hidden lg:flex">
-                {% for node in headerNodes %}
-                <li class="lg:inline-block">
-                    <a class="block p-4 text-2xl transition duration-300 lg:text-lg h-min-16 lg:inline-block hover:text-primary-500"
-                       href="{{ node.url }}">{{ node.name }}</a>
-                </li>
-                {% endfor %}
-            </ul>
         </div>
-        <div class="flex py-4 space-x-4">
-            <a href="#nav" class="flex flex-row space-x-2">
-                {% include "_components/_icon" with { 'icon':'icon-menu-search'} only %} 
-                <span>MENU</span>
+        <div class="hidden space-x-6 lg:flex">
+            {% for node in headerNodes %}
+                <a class="block transition duration-300 lg:text-base lg:inline-block hover:text-primary-500"
+                    href="{{ node.url }}">{{ node.name }}</a>
+            {% endfor %}
+        </div>
+        <div class="flex ">
+            <a href="#nav">
+                <span class="hidden md:inline-block">
+                {% include "_components/_icon" with { 'icon':'icon-zoom'} %} 
+                </span>
+                <span class="md:hidden">{{ 'MENU' |t }}</span>
             </a>
-             {# <a href="#aside" class="flex flex-row space-x-2">
-                {% include "_components/_icon" with { 'icon':'icon-menu-search'} only %} 
-                <span>SPA</span>
+            {# <a href="#spa">
+                {% include "_components/_icon" with { 'icon':'icon-zoom'} %} 
             </a> #}
         </div>
     </div>
-    {% endblock %}
-    {% endembed %}
 </header>

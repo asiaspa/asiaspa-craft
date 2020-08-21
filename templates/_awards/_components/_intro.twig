@@ -1,0 +1,19 @@
+<section class="max-w-screen-md pt-32 mx-auto px-edge" data-sal="slide-up"> 
+    <h1 class="text-5xl font-hairline leading-none text-white font-display">
+        <span class="block">AsiaSpa</span>
+        <span class="block">Awards</span>
+        <span class="block">2020</span>
+    </h1>
+    <div class="pt-16 font-sans text-lg font-hairline tracking-wide text-white md:text-2xl">{{ entry.asiaspaAwardsIntroduction}}</div>
+</section>
+
+<section class="relative pt-16 js-swiper-carousel swiper-container px-screen-lg">
+    <h1 class="absolute inset top-50 trasnform -translate-y-50">ABC</h1>
+    <div class="swiper-wrapper">
+        {% for image in entry.asiaspaAwardsIntroGallery %}
+        <div class="w-3/4 md:w-1/2 swiper-slide" data-sal="slide-left">
+            {% include "_components/_imager" with {'image': image, 'h':9, 'w':8 } %}
+        </div>
+        {% endfor %}
+    </h1>
+</section>

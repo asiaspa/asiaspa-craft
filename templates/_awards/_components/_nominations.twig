@@ -1,0 +1,41 @@
+<nav id="nominations" class="bg-black">
+    <div class="fixed top-0 z-20 w-full transition duration-300 bg-black border-b border-gray-500">
+        <div class="flex flex-row items-center justify-between h-20 max-w-screen-xl mx-auto text-white px-edge ">
+            <a class="leading-tight" href="{{ siteUrl}}">AsiaSpa<br/>Awards<br/>2020</a>
+            <span>Nominations</span>
+            <a class="text-white" href="#">Close</a>
+            </div>
+        </div>
+    </div>
+
+   <section class="max-w-screen-md pt-32 mx-auto px-edge" data-sal="slide-down"> 
+        <h1 class="text-5xl font-hairline leading-none text-white font-display">
+            <span class="block">The</span>
+            <span class="block">Nominations</span>
+        </h1>
+        <div class="pt-16 font-sans text-base font-hairline tracking-wide text-white ">{{ entry.asiaspaAwardsEnterBriefing}}</div>
+    </section>
+
+    <section class="max-w-screen-xl pt-16 mx-auto px-edge"> 
+        <div class="grid grid-cols-1 border-t border-l border-gray-700 md:grid-cols-2 lg:grid-cols-3 ">
+            {% for category in entry.asiaspaAwardsAwardsCategories if category.level == 2 %}
+                <div  class="px-4 py-2 border-b border-r border-gray-700 ">
+                    <span class="text-lg text-white md:text-xl">{{ category.title }}</span>
+                    <ul class="pt-4 pl-4 list-disc">
+                        <li class="text-gray-300 ">category.asiaspaAwardsCategoryNominees</li>
+                        <li class="text-gray-300 ">category.asiaspaAwardsCategoryNominees</li>
+                        <li class="text-gray-300 ">category.asiaspaAwardsCategoryNominees</li>
+                        <li class="text-gray-300 ">category.asiaspaAwardsCategoryNominees</li>
+                        <li class="text-gray-300 ">category.asiaspaAwardsCategoryNominees</li>
+                        <li class="text-gray-300 ">category.asiaspaAwardsCategoryNominees</li>
+                        <li class="text-gray-300 ">category.asiaspaAwardsCategoryNominees</li>
+                    {% for nominee in category.asiaspaAwardsCategoryNominees %}
+                        <li class="text-xs text-white">{{ nominee ?? '123' }}</li>
+                    {% endfor %}
+                    </ul>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+
+</nav>

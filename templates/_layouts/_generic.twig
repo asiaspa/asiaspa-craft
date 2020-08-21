@@ -6,16 +6,18 @@
 
 {# ------------------- Main  ------------------- #}
 {% set headerNodes = craft.navigate.raw('header ') %}
+
 {% include "_components/_nav" %}
+{% include "_components/_spa" %}
+
 {% include "_components/_header" %}
 <main>
     {% block main %}
     {% endblock %}
 </main>
 
-{# <aside id="aside" class="bg-primary-300 p-edge"><a href="#">close</a></aside> #}
 
 {# ------------------- Footer ------------------- #}
-{# {% include "_components/_footer" %} #}
+{% include "_components/_footer" %}
 
 {% endblock %}

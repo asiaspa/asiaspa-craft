@@ -1,44 +1,44 @@
 contentColumnType: string
 fieldGroup: c988c230-88d1-42da-86a6-8a60a7a243f8
-handle: asiaspaAwardsAsiaspaJudges
+handle: asiaspaAwardsJudges
 instructions: ''
-name: 'AsiaSpa Awards - AsiaSpa Judges'
+name: 'AsiaSpa Awards -  Judges'
 searchable: false
 settings:
   columns:
     __assoc__:
       -
-        - 8e22b5ce-635b-4aa7-9745-70baca4d30c4
+        - a52a4dce-a53b-4a38-9ddf-63194947ae39
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - 4c840440-07d0-4ac2-8eac-d23837109ed8
+        - 738718e7-9b2e-4db6-87fa-cd25bd444e7e
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - d63b538b-f7c2-4960-9347-8c9de51a229b
+        - 63dc5364-e9a2-4d07-a690-e61aefd6305c
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - bf8abcfa-32e6-42f6-9fdc-5241b23f6103
+        - a6e0f249-680b-4497-9aa2-c963dccf0f40
         -
           __assoc__:
             -
               - width
               - ''
-  contentTable: '{{%stc_asiaspaawardsasiaspajudges}}'
-  fieldLayout: table
+  contentTable: '{{%stc_asiaspaawardsjudges}}'
+  fieldLayout: row
   maxRows: ''
-  minRows: '1'
+  minRows: ' 0'
   placeholderKey: null
   propagationMethod: all
   selectionLabel: ''
