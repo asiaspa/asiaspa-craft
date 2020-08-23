@@ -1,7 +1,7 @@
 assets:
   tempSubpath: temp
   tempVolumeUid: 883ab42c-10f1-4e32-a559-61f23e4e3775
-dateModified: 1598008223
+dateModified: 1598168873
 email:
   fromEmail: asiaspa.dev@gmail.com
   fromName: AsiaSpa
@@ -25,10 +25,6 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
-  aws-s3:
-    edition: standard
-    enabled: true
-    schemaVersion: '1.2'
   blitz-recommendations:
     edition: standard
     enabled: true
@@ -56,6 +52,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  freeform:
+    edition: lite
+    enabled: true
+    schemaVersion: 3.0.7
   google-cloud:
     edition: standard
     enabled: true
@@ -150,6 +150,10 @@ plugins:
       unrestrictedApiKey: null
       w3wEnabled: ''
       w3wToken: ''
+  snitch:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.1.0
   splash:
     edition: standard
     enabled: true
