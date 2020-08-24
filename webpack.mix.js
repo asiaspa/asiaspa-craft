@@ -41,6 +41,12 @@ mix
     // ], 'web/dist/app.js')
     .setPublicPath('web/')
     .tailwind()
+    .version()
+    .webpackConfig({
+        plugins: [
+            new LaravelMixFilenameVersioning   
+        ]
+    })
     .clean({
         cleanOnceBeforeBuildPatterns:['dist/']
     })
@@ -52,12 +58,7 @@ mix
         folders: ['src', 'templates'],
         extensions: ['twig', 'html', 'js', 'php', 'vue'],
     })
-    .version()
-    .webpackConfig({
-        plugins: [
-            new LaravelMixFilenameVersioning   
-        ]
-    })
+
 }
 
 

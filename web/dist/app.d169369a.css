@@ -845,7 +845,7 @@ video {
 
 .prose {
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .prose p {
@@ -23967,7 +23967,7 @@ aside:target {
 
   .sm\:prose {
     font-size: 1rem;
-    line-height: 1.5;
+    line-height: 1.6;
   }
 
   .sm\:prose p {
@@ -46037,7 +46037,7 @@ aside:target {
 
   .md\:prose {
     font-size: 1rem;
-    line-height: 1.5;
+    line-height: 1.6;
   }
 
   .md\:prose p {
@@ -68107,7 +68107,7 @@ aside:target {
 
   .lg\:prose {
     font-size: 1rem;
-    line-height: 1.5;
+    line-height: 1.6;
   }
 
   .lg\:prose p {
@@ -90177,7 +90177,7 @@ aside:target {
 
   .xl\:prose {
     font-size: 1rem;
-    line-height: 1.5;
+    line-height: 1.6;
   }
 
   .xl\:prose p {

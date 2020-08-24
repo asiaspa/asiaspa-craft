@@ -42,7 +42,7 @@ module.exports = {
         typography: {
             default: {
                 css: {
-                    lineHeight: 1.5,
+                    lineHeight: 1.6,
                     color: 'var(--color-black)',
                     strong: {
                         fontWeight: '600'                    
