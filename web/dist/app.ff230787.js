@@ -19107,7 +19107,7 @@ function initScript() {
     }
   });
   var swiperListicleShopCarousel = new swiper_bundle__WEBPACK_IMPORTED_MODULE_6__["default"]('.js-swiper-listicle-shop-carousel', {
-    loop: true,
+    // loop: true,
     spaceBetween: 24,
     autoHeight: true,
     speed: 300,

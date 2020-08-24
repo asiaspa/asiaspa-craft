@@ -6,6 +6,7 @@ require('mix-tailwindcss');
 require('laravel-mix-purgecss');
 require('laravel-mix-workbox');
 
+
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -18,18 +19,18 @@ require('laravel-mix-workbox');
  */
 
 mix
-.browserSync({
-    // https: true,
-    proxy: 'http://asiaspa.test',
-    files: [
-        'web/**/*.+(html|twig)',
-        'templates/**/*.+(html|twig)',
-        'web/dist/**/*.+(js|css)',
-        'src/**/*.+(js|css)'
-        // 'laravel/resources/views/**/*.php'
-    ],
-    browser: 'Firefox Developer Edition'
-})
+    .browserSync({
+        // https: true,
+        proxy: 'http://asiaspa.test',
+        files: [
+            'web/**/*.+(html|twig)',
+            'templates/**/*.+(html|twig)',
+            'web/dist/**/*.+(js|css)',
+            'src/**/*.+(js|css)'
+            // 'laravel/resources/views/**/*.php'
+        ],
+        browser: 'Firefox Developer Edition'
+    })
     .sass('src/scss/app.scss', 'web/dist/')
     .js('src/js/app.js', 'web/dist/')
     .extract([
@@ -55,10 +56,15 @@ mix
 if (mix.inProduction()) {
 mix
     .purgeCss({
-        folders: ['src', 'templates'],
-        extensions: ['twig', 'html', 'js', 'php', 'vue'],
+        content: [
+            'templates/*.twig',
+            'templates/**/*.twig',
+            'templates/**/**/*.twig',
+            'templates/**/**/**/*.twig',
+            'src/js/*.js'
+        ],
+        whitelistPatterns: [/^sal-/]
     })
-
 }
 
 

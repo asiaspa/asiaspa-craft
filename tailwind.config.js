@@ -44,23 +44,32 @@ module.exports = {
                 css: {
                     lineHeight: 1.6,
                     color: 'var(--color-black)',
+                    fontWeight: 300,
                     strong: {
-                        fontWeight: '600'                    
+                        fontWeight: 600,
                     },
                     h1: {
-                        fontWeight: '600',
+                        fontWeight: 600,
                         fontFamily: 'var(--font-headline)'
                     },
                     h2: {
-                        fontWeight: '600',
+                        fontWeight: 600,
                         fontFamily: 'var(--font-headline)'
                     },
                     h3: {
-                        fontWeight: '600',
+                        fontWeight: 600,
                         fontFamily: 'var(--font-headline)'
                     },
                     h4: {
-                        fontWeight: '600',
+                        fontWeight: 600,
+                        fontFamily: 'var(--font-headline)'
+                    },
+                    h5: {
+                        fontWeight: 600,
+                        fontFamily: 'var(--font-headline)'
+                    },
+                    h6: {
+                        fontWeight: 600,
                         fontFamily: 'var(--font-headline)'
                     },
                     figcaption: {
@@ -77,12 +86,12 @@ module.exports = {
             },
             'lg': {
                 css: {
-                    lineHeight: 1.6,
+                    lineHeight: 1.7,
                 }
             },
             'xl': {
                 css: {
-                    lineHeight: 1.6,
+                    lineHeight: 1.7,
                 }
             },
         },
@@ -117,7 +126,7 @@ module.exports = {
     ],
     experimental: {
         extendedSpacingScale: true,
-        defaultLineHeights: true,
+        // defaultLineHeights: true,
         extendedFontSizeScale: true
     }
 }

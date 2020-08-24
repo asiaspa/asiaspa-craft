@@ -96,7 +96,7 @@ function initScript() {
     })
 
     const swiperListicleShopCarousel = new Swiper('.js-swiper-listicle-shop-carousel', {
-        loop: true,
+        // loop: true,
         spaceBetween: 24,
         autoHeight: true,
         speed: 300,

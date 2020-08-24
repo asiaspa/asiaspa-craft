@@ -961,6 +961,20 @@ video {
   margin-bottom: 0;
 }
 
+.prose {
+  font-weight: 300;
+}
+
+.prose h5 {
+  font-weight: 600;
+  font-family: var(--font-headline);
+}
+
+.prose h6 {
+  font-weight: 600;
+  font-family: var(--font-headline);
+}
+
 .prose figcaption {
   font-family: var(--font-sans);
   color: var(--color-gray-500);
@@ -1191,7 +1205,7 @@ video {
 
 .prose-lg {
   font-size: 1.125rem;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 .prose-lg p {
@@ -1414,7 +1428,7 @@ video {
 
 .prose-xl {
   font-size: 1.25rem;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 .prose-xl p {
@@ -7152,52 +7166,42 @@ aside:target {
 
 .text-xs {
   font-size: 0.75rem;
-  line-height: 1rem;
 }
 
 .text-sm {
   font-size: 0.875rem;
-  line-height: 1.25rem;
 }
 
 .text-base {
   font-size: 1rem;
-  line-height: 1.5rem;
 }
 
 .text-lg {
   font-size: 1.125rem;
-  line-height: 1.75rem;
 }
 
 .text-xl {
   font-size: 1.25rem;
-  line-height: 1.75rem;
 }
 
 .text-2xl {
   font-size: 1.5rem;
-  line-height: 2rem;
 }
 
 .text-3xl {
   font-size: 1.875rem;
-  line-height: 2.25rem;
 }
 
 .text-4xl {
   font-size: 2.25rem;
-  line-height: 2.5rem;
 }
 
 .text-5xl {
   font-size: 3rem;
-  line-height: 1;
 }
 
 .text-6xl {
   font-size: 4rem;
-  line-height: 1;
 }
 
 .text-7xl {
@@ -24083,6 +24087,20 @@ aside:target {
     margin-bottom: 0;
   }
 
+  .sm\:prose {
+    font-weight: 300;
+  }
+
+  .sm\:prose h5 {
+    font-weight: 600;
+    font-family: var(--font-headline);
+  }
+
+  .sm\:prose h6 {
+    font-weight: 600;
+    font-family: var(--font-headline);
+  }
+
   .sm\:prose figcaption {
     font-family: var(--font-sans);
     color: var(--color-gray-500);
@@ -24313,7 +24331,7 @@ aside:target {
 
   .sm\:prose-lg {
     font-size: 1.125rem;
-    line-height: 1.6;
+    line-height: 1.7;
   }
 
   .sm\:prose-lg p {
@@ -24536,7 +24554,7 @@ aside:target {
 
   .sm\:prose-xl {
     font-size: 1.25rem;
-    line-height: 1.6;
+    line-height: 1.7;
   }
 
   .sm\:prose-xl p {
@@ -29287,52 +29305,42 @@ aside:target {
 
   .sm\:text-xs {
     font-size: 0.75rem;
-    line-height: 1rem;
   }
 
   .sm\:text-sm {
     font-size: 0.875rem;
-    line-height: 1.25rem;
   }
 
   .sm\:text-base {
     font-size: 1rem;
-    line-height: 1.5rem;
   }
 
   .sm\:text-lg {
     font-size: 1.125rem;
-    line-height: 1.75rem;
   }
 
   .sm\:text-xl {
     font-size: 1.25rem;
-    line-height: 1.75rem;
   }
 
   .sm\:text-2xl {
     font-size: 1.5rem;
-    line-height: 2rem;
   }
 
   .sm\:text-3xl {
     font-size: 1.875rem;
-    line-height: 2.25rem;
   }
 
   .sm\:text-4xl {
     font-size: 2.25rem;
-    line-height: 2.5rem;
   }
 
   .sm\:text-5xl {
     font-size: 3rem;
-    line-height: 1;
   }
 
   .sm\:text-6xl {
     font-size: 4rem;
-    line-height: 1;
   }
 
   .sm\:text-7xl {
@@ -46153,6 +46161,20 @@ aside:target {
     margin-bottom: 0;
   }
 
+  .md\:prose {
+    font-weight: 300;
+  }
+
+  .md\:prose h5 {
+    font-weight: 600;
+    font-family: var(--font-headline);
+  }
+
+  .md\:prose h6 {
+    font-weight: 600;
+    font-family: var(--font-headline);
+  }
+
   .md\:prose figcaption {
     font-family: var(--font-sans);
     color: var(--color-gray-500);
@@ -46383,7 +46405,7 @@ aside:target {
 
   .md\:prose-lg {
     font-size: 1.125rem;
-    line-height: 1.6;
+    line-height: 1.7;
   }
 
   .md\:prose-lg p {
@@ -46606,7 +46628,7 @@ aside:target {
 
   .md\:prose-xl {
     font-size: 1.25rem;
-    line-height: 1.6;
+    line-height: 1.7;
   }
 
   .md\:prose-xl p {
@@ -51357,52 +51379,42 @@ aside:target {
 
   .md\:text-xs {
     font-size: 0.75rem;
-    line-height: 1rem;
   }
 
   .md\:text-sm {
     font-size: 0.875rem;
-    line-height: 1.25rem;
   }
 
   .md\:text-base {
     font-size: 1rem;
-    line-height: 1.5rem;
   }
 
   .md\:text-lg {
     font-size: 1.125rem;
-    line-height: 1.75rem;
   }
 
   .md\:text-xl {
     font-size: 1.25rem;
-    line-height: 1.75rem;
   }
 
   .md\:text-2xl {
     font-size: 1.5rem;
-    line-height: 2rem;
   }
 
   .md\:text-3xl {
     font-size: 1.875rem;
-    line-height: 2.25rem;
   }
 
   .md\:text-4xl {
     font-size: 2.25rem;
-    line-height: 2.5rem;
   }
 
   .md\:text-5xl {
     font-size: 3rem;
-    line-height: 1;
   }
 
   .md\:text-6xl {
     font-size: 4rem;
-    line-height: 1;
   }
 
   .md\:text-7xl {
@@ -68223,6 +68235,20 @@ aside:target {
     margin-bottom: 0;
   }
 
+  .lg\:prose {
+    font-weight: 300;
+  }
+
+  .lg\:prose h5 {
+    font-weight: 600;
+    font-family: var(--font-headline);
+  }
+
+  .lg\:prose h6 {
+    font-weight: 600;
+    font-family: var(--font-headline);
+  }
+
   .lg\:prose figcaption {
     font-family: var(--font-sans);
     color: var(--color-gray-500);
@@ -68453,7 +68479,7 @@ aside:target {
 
   .lg\:prose-lg {
     font-size: 1.125rem;
-    line-height: 1.6;
+    line-height: 1.7;
   }
 
   .lg\:prose-lg p {
@@ -68676,7 +68702,7 @@ aside:target {
 
   .lg\:prose-xl {
     font-size: 1.25rem;
-    line-height: 1.6;
+    line-height: 1.7;
   }
 
   .lg\:prose-xl p {
@@ -73427,52 +73453,42 @@ aside:target {
 
   .lg\:text-xs {
     font-size: 0.75rem;
-    line-height: 1rem;
   }
 
   .lg\:text-sm {
     font-size: 0.875rem;
-    line-height: 1.25rem;
   }
 
   .lg\:text-base {
     font-size: 1rem;
-    line-height: 1.5rem;
   }
 
   .lg\:text-lg {
     font-size: 1.125rem;
-    line-height: 1.75rem;
   }
 
   .lg\:text-xl {
     font-size: 1.25rem;
-    line-height: 1.75rem;
   }
 
   .lg\:text-2xl {
     font-size: 1.5rem;
-    line-height: 2rem;
   }
 
   .lg\:text-3xl {
     font-size: 1.875rem;
-    line-height: 2.25rem;
   }
 
   .lg\:text-4xl {
     font-size: 2.25rem;
-    line-height: 2.5rem;
   }
 
   .lg\:text-5xl {
     font-size: 3rem;
-    line-height: 1;
   }
 
   .lg\:text-6xl {
     font-size: 4rem;
-    line-height: 1;
   }
 
   .lg\:text-7xl {
@@ -90293,6 +90309,20 @@ aside:target {
     margin-bottom: 0;
   }
 
+  .xl\:prose {
+    font-weight: 300;
+  }
+
+  .xl\:prose h5 {
+    font-weight: 600;
+    font-family: var(--font-headline);
+  }
+
+  .xl\:prose h6 {
+    font-weight: 600;
+    font-family: var(--font-headline);
+  }
+
   .xl\:prose figcaption {
     font-family: var(--font-sans);
     color: var(--color-gray-500);
@@ -90523,7 +90553,7 @@ aside:target {
 
   .xl\:prose-lg {
     font-size: 1.125rem;
-    line-height: 1.6;
+    line-height: 1.7;
   }
 
   .xl\:prose-lg p {
@@ -90746,7 +90776,7 @@ aside:target {
 
   .xl\:prose-xl {
     font-size: 1.25rem;
-    line-height: 1.6;
+    line-height: 1.7;
   }
 
   .xl\:prose-xl p {
@@ -95497,52 +95527,42 @@ aside:target {
 
   .xl\:text-xs {
     font-size: 0.75rem;
-    line-height: 1rem;
   }
 
   .xl\:text-sm {
     font-size: 0.875rem;
-    line-height: 1.25rem;
   }
 
   .xl\:text-base {
     font-size: 1rem;
-    line-height: 1.5rem;
   }
 
   .xl\:text-lg {
     font-size: 1.125rem;
-    line-height: 1.75rem;
   }
 
   .xl\:text-xl {
     font-size: 1.25rem;
-    line-height: 1.75rem;
   }
 
   .xl\:text-2xl {
     font-size: 1.5rem;
-    line-height: 2rem;
   }
 
   .xl\:text-3xl {
     font-size: 1.875rem;
-    line-height: 2.25rem;
   }
 
   .xl\:text-4xl {
     font-size: 2.25rem;
-    line-height: 2.5rem;
   }
 
   .xl\:text-5xl {
     font-size: 3rem;
-    line-height: 1;
   }
 
   .xl\:text-6xl {
     font-size: 4rem;
-    line-height: 1;
   }
 
   .xl\:text-7xl {
