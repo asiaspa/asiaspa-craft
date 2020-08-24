@@ -2,7 +2,7 @@
 {% block content %}
 	<div class="flex flex-row justify-end mt-16">
         <div class="w-full md:w-10/12 lg:w-8/12" >
-            <div class="self-end font-serif prose-lg md:prose-xl text-primary-700">
+            <div class="self-end font-serif prose prose-lg md:prose-xl text-primary-700">
                 {% include "_stories/_components/_rich-text-editor" with {'richTextEditor': block.richTextEditor} %}
             </div>      
         </div>
@@ -10,3 +10,9 @@
 {% endblock %}
 {% endembed %}
 
+{# 
+<section class="max-w-screen-lg mx-auto mt-16 px-edge">
+    <div class="font-serif prose prose-lg md:prose-xl text-primary-700">
+        {% include "_stories/_components/_rich-text-editor" with {'richTextEditor': block.richTextEditor} %}
+    </div>
+</section> #}

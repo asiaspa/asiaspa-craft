@@ -42,21 +42,30 @@ module.exports = {
         typography: {
             default: {
                 css: {
+                    lineHeight: 1.5,
                     color: 'var(--color-black)',
                     strong: {
-                        fontWeight: '300'
+                        fontWeight: '600'                    
                     },
                     h1: {
-                        fontWeight: '300',
+                        fontWeight: '600',
+                        fontFamily: 'var(--font-headline)'
                     },
                     h2: {
-                        fontWeight: '300',
+                        fontWeight: '600',
+                        fontFamily: 'var(--font-headline)'
                     },
                     h3: {
-                        fontWeight: '300',
+                        fontWeight: '600',
+                        fontFamily: 'var(--font-headline)'
                     },
                     h4: {
-                        fontWeight: '300',
+                        fontWeight: '600',
+                        fontFamily: 'var(--font-headline)'
+                    },
+                    figcaption: {
+                        fontFamily: 'var(--font-sans)',
+                        color: 'var(--color-gray-500)'
                     },
                     a: {
                         color: 'var(--color-primary-500)',
@@ -65,6 +74,16 @@ module.exports = {
                         },
                     },
                 },
+            },
+            'lg': {
+                css: {
+                    lineHeight: 1.6,
+                }
+            },
+            'xl': {
+                css: {
+                    lineHeight: 1.6,
+                }
             },
         },
         extend: {
@@ -96,4 +115,9 @@ module.exports = {
         require('@tailwindcss/typography'),
         require('autoprefixer')
     ],
+    experimental: {
+        extendedSpacingScale: true,
+        defaultLineHeights: true,
+        extendedFontSizeScale: true
+    }
 }

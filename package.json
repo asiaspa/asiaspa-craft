@@ -30,7 +30,7 @@
     "clean-webpack-plugin": "^3.0.0",
     "cross-env": "^7.0.2",
     "glob-all": "^3.2.1",
-    "laravel-mix": "^5.0.4",
+    "laravel-mix": "^5.0.5",
     "laravel-mix-clean": "^0.1.0",
     "laravel-mix-filename-versioning": "^1.0.4",
     "laravel-mix-purgecss": "^5.0.0",
@@ -40,7 +40,7 @@
     "resolve-url-loader": "^3.1.1",
     "sass": "^1.26.10",
     "sass-loader": "^8.0.2",
-    "tailwindcss": "^1.7.2",
+    "tailwindcss": "^1.7.3",
     "vue-template-compiler": "^2.6.12",
     "workbox-webpack-plugin": "^5.1.3"
   },

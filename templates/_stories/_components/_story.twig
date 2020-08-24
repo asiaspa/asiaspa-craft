@@ -42,7 +42,7 @@
     {% endblock %}
     {% endembed %}
     
-    {% include '_components/_adblock' with {'adgroup': ['or', ad.adBillboard, ad.adLeaderboard]} %}
+    {# {% include '_components/_adblock' with {'adgroup': ['or', ad.adBillboard, ad.adLeaderboard]} %} #}
     {% include "_stories/_story-builder" with {'matrix': entry.storyBuilder } %}
 </article>
 

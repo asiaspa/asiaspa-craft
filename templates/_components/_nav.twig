@@ -1,4 +1,4 @@
-<nav id="nav" class="bg-secondary-100">
+<aside id="nav" class="fixed inset-0 z-50 overflow-y-auto transition duration-300 transform -translate-y-full bg-secondary-100">
     {% embed "_containers/_container" with { 'class': 'flex flex-col justify-between w-full min-h-full' } %}
     {% block content %}
     <div class="relative z-20 flex justify-between w-full">
@@ -39,4 +39,4 @@
     </div>
     {% endblock %}
     {% endembed %}
-</nav>
+</aside>

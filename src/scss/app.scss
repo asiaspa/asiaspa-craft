@@ -21,8 +21,7 @@
 .medium-zoom-image--opened  { z-index: 99;}
 
 body {
-    font-weight: 300;
-    letter-spacing: 0.025em;
+    // font-weight: 300;
     // height: 100vh;
     // overflow: hidden;
 }
@@ -32,26 +31,11 @@ main {
     // overflow: auto;
 }
 
-#nav,#spa,#enter,#nominations, #winners {
-    z-index: 999;
-    position: fixed;
-    top: 0;
-    bottom: 0; 
-    right: 0;
-    left: 0;
-    transition: transform .3s ease;
-    overflow-y: auto;
+aside {
     &:target {
-        transform: translateY(0) translateX(0);
+        transform: translate(0);
     }
 }
 
-#nav,#enter,#nominations, #winners  {
-    transform: translateY(-100%);
-}
-
-#spa {
-    transform: translateX(100%);
-}
 
 @tailwind utilities; 
