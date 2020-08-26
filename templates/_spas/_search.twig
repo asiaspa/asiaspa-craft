@@ -35,27 +35,29 @@
 
 {% endif %}
 
-{% if sprig.include %}
-<input sprig
-        s-trigger="keyup changed delay:500ms"
-        class="w-full px-3 py-2 appearance-none "
-        s-target="#results"
-        s-swap="outerHTML"
-        type="search"
-        name="query"
-        value="{{ query }}" />
+{% if sprig.include %}  
+<div class="max-w-screen-sm pl-edge">
+    <input sprig
+            class="max-w-screen-sm py-6 text-3xl text-black placeholder-black bg-transparent border-b border-gray-500 appearance-none mx-edge"
+            s-trigger="keyup changed delay:500ms"
+            s-target="#spa-results"
+            s-swap="outerHTML"
+            type="search"
+            name="query"
+            value="{{ query }}" />
+</div>
 {% endif %}
 
-<div class="flex flex-row w-full h-screen " id="results">
-    <div class="w-1/2 h-full bg-secondary-100 p-edge">
-        <h2> Results:{{ entries | length }}</h2>
-        <div class="grid grid-cols-1 gap-4 md:grid-cols-2" >
+<div class="flex flex-row w-full min-h-screen" id="spa-results">
+    <div class="w-full md:w-1/2 bg-secondary-100 p-edge">
+        {# <h2> Results:{{ entries | length }}</h2> #}
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-2" >
             {% for entry in entries %}
                 {% include "_spas/_spa-card" with {'entry': entry } %}
             {% endfor %}
         </div>
     </div>
-    <div class="w-1/2 h-full" id="spa-map" 
+    <div class="sticky top-0 hidden h-screen md:block md:w-1/2" id="spa-map" 
         data-centername="{{ entries|first.title|default('null') }}"
         data-centerlat="{{ entries|first.spaContactMap.lat|default('-25.63') }}"
         data-centerlng="{{ entries|first.spaContactMap.lng|default('131.044') }}"
@@ -64,11 +66,12 @@
             id: 'map',
             center: {lat: 22.533603, lng: 114.061573},
             options: {
-                disableDefaultUI: false,
-                draggable: false,
+                disableDefaultUI: true,
+                draggable: true
             },
         }) }}
         <script>
+        
         function loadMarkers() {
             var bounds = new google.maps.LatLngBounds();
             var spaMap = document.querySelector('#spa-map')
@@ -89,7 +92,7 @@
 					function( marker, i ) {
 						return function() {
 							var infowindow = new google.maps.InfoWindow();
-							infowindow.setContent( location[ 0 ] );
+							infowindow.setContent( location[0] );
 							infowindow.open( map, marker );
 						}
 					}

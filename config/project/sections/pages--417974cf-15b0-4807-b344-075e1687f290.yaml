@@ -18,7 +18,7 @@ siteSettings:
   5058e36f-39fa-4fe2-982d-2a6082be4a27:
     enabledByDefault: true
     hasUrls: true
-    template: _pages/_page.twig
+    template: _pages/_generic
     uriFormat: '{slug}'
 structure:
   maxLevels: 1

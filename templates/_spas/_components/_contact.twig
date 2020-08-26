@@ -1,1 +1,41 @@
-<div class="w-full h-64 mt-16 md:mt-0 bg-secondary-100"></div>
+<div class="w-full p-8 mt-16 md:mt-0 bg-secondary-100"> 
+    <div class="space-y-6">
+        <h2 class="text-3xl font-hairline font-headline">Make a Reservation</h2>
+        {% include "_components/_hr" %}
+        <div class="space-y-4 ">
+            {% if entry.spaContactAddress  is not empty %}
+            <div>
+                <h3 class="font-semibold">Address</h3>
+                <p>{{ entry.spaContactAddress }}</p>
+            </div>
+            {% endif %}
+            {% if entry.spaOpeningHours is not empty  %}
+            <div>
+                <h3 class="font-semibold">Opening Hours</h3>
+                <p>{{ entry.spaOpeningHours }}</p>
+            </div>
+            {% endif %}
+            {% if entry.spaContactEmail is not empty %}
+            <div>
+                <h3 class="font-semibold">Email</h3>
+                <a class="text-bg" href="mailto:{{ entry.spaContactEmail }}">{{ entry.spaContactEmail }}</a>
+            </div>
+            {% endif %}
+            {% if entry.spaContactWebsite is not empty %}
+            <div>
+                <h3 class="font-semibold">Website</h3>
+                <a class="text-bg" href="{{ entry.spaContactWebsite }}" target="_blank">{{ entry.spaContactWebsite }}</a>
+            </div>
+            {% endif %}
+
+            <div class="flex space-x-4">
+                {% if entry.spaContactFacebook is not empty %}
+                <a href="https://facebook.com/{{ entry.spaContactFacebook }}" target="_blank">{% include "_components/_icon" with { 'icon':'icon-logo-facebook', 'w': 32, 'h': 32} only %}</a>
+                {% endif %}
+                {% if entry.spaContactInstagram is not empty %}
+                <a href="https://instagram.com/{{ entry.spaContactInstagram }}" target="_blank">{% include "_components/_icon" with { 'icon':'icon-logo-instagram', 'w': 32, 'h': 32} only %}</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>

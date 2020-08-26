@@ -60,6 +60,15 @@ fieldLayouts:
           -
             type: craft\fieldlayoutelements\HorizontalRule
           -
+            fieldUid: d4b1abfe-50b2-47a3-a92f-4db8524d4dca
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
             fieldUid: 25ae8551-db14-40c5-9631-e1352ff4b706
             instructions: ''
             label: Detail
@@ -81,6 +90,15 @@ fieldLayouts:
         sortOrder: 1
       -
         elements:
+          -
+            fieldUid: 64bd3e74-2e5a-489e-b26b-b62cb6c4e8db
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
           -
             fieldUid: 0e66a768-2317-4f07-85c6-586256225f51
             instructions: null

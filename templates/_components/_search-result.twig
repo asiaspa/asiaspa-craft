@@ -21,7 +21,7 @@
 <input sprig
         s-trigger="keyup changed delay:500ms"
         class="w-full py-6 text-3xl text-black placeholder-black bg-transparent border-b border-gray-500 appearance-none"
-        s-target="#results"
+        s-target="#search-results"
         {# s-swap="outerHTML" #}
         placeholder="Search"
         type="search"
@@ -29,7 +29,7 @@
         value="{{ query }}" />
 {% endif %}
 
-<div id="results">
+<div id="search-results">
     {% if query is empty or entries | length == 0 %}
      <ul class="py-16">
         {% for node in craft.navigate.raw('header ') %}
