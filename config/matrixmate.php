@@ -7,27 +7,27 @@ return [
                 [
                     'label' => 'Listicle',
                     'types' => [
-                        'listicleImage', 
-                        'listicleSlider',
+                        'listicleSingleImage', 
+                        'listicleImageSlider',
                         'listicleEmbed',
-                        'listicleShopItem',
-                        'listicleShopCarousel'
+                        'listicleSingleProduct',
+                        'listicleMultipleProductCarousel'
                     ]
                 ],
                 [
-                    'label' => 'Story',
+                    'label' => 'Story - Left',
+                    'types' => [
+                        '56tr4', 
+                        'slider', 
+                        'embed' 
+                    ]
+                ],
+                [
+                    'label' => 'Story - Right',
                     'types' => [
                         'richTextEditor',
                         'introduction',
-                        'gallery', 
-                        'slider', 
-                        'embed', 
                         'blockquote',
-                    ]
-                ],
-                [
-                    'label' => 'Relation',
-                    'types' => [
                         'relatedStory', 
                     ]
                 ]

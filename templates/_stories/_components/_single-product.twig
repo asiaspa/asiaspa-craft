@@ -1,0 +1,13 @@
+<a class="flex flex-col justify-between h-auto mb-4 space-y-4 swiper-slide" href="{{ slide.hyperlink }}" target="_blank">
+	<div class="space-y-4">
+		{% if slide.image %}
+			{% include "_components/_imager" with {'image': slide.image[0] } %}
+		{% endif %}
+		<h3 class="text-xl tracking-wide font-headline">{{ slide.itemName }}</h3>
+		{% if slide.description is not empty %}<p>{{ slide.description }}</p>{% endif %}
+	</div>
+	<div class="flex items-center justify-between py-2 mt-4 border-b border-black">
+		<span class>Shop now</span>
+	    {% include "_components/_icon" with { 'icon':'icon-arrow-right', w:32, h:32 } %} 
+	</div>
+</a>

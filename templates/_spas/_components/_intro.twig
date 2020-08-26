@@ -1,0 +1,12 @@
+<div class="flex max-w-screen-lg mx-auto mt-32 px-edge">
+    {# <div class="w-1/2 md:w-2/12">
+        {% include "_components/_imager" with {'image':entry.spaLogo[0] } %}
+    </div> #}
+    <div class="w-full space-y-2 md:w-10/12">
+        <h1 class="text-2xl leading-tight tracking-wide font-headline md:text-3xl lg:text-4xl">{{ entry.title }}</h1>
+        <p class="flex space-x-1 text-gray-500">
+            {% include "_components/_icon" with {'icon': 'icon-map-pin'} %}
+            <span>{{ entry.spaContactAddress }}</span>
+        </p>
+    </div>
+</div>

@@ -1,15 +1,11 @@
+{% set mode = mode ?? 'pin' %}
 {% set caption = caption ?? false %}
-
 {% set zoom = zoom ?? '' %}
 {% set h = h | default(image.getHeight ?? 9 ) %}
 {% set w = w | default(image.getWidth ?? 8 ) %}
 {% set aspect = w / h %}
 {% set x = x | default(image.focalPoint.x ?? '0.5') %}
 {% set y = y | default(image.focalPoint.y ?? '0.5') %}
-
-
-{% if image | length %}
-
 {% set transformedImages = craft.imager.transformImage(
     image, 
     [{ width: 160 },{ width: 1920 }], 
@@ -17,24 +13,46 @@
     { fillTransforms: true }) 
 %}
 
-<figure class="w-full {{ class|default('') }}">
-    <div class="relative w-full overflow-hidden bg-primary-100" style="padding-bottom: {{ 1 / aspect * 100 }}%">
-        <img class="absolute w-full h-full lazyload pin"
-            src="{{ transformedImages | first }}" 
-            srcset="{{ transformedImages | first }}" 
-            data-srcset="{{ transformedImages | srcset }}"
-            data-sizes="auto"
-            {% if zoom %}data-zoomable{% endif %}
-        />
-    </div>
-    {% if caption %}
-    <figcaption class="relative block my-1 text-sm text-gray-500">{{ image.assetCaption ?? "" }}</figcaption>
-    {% endif %}
-</figure> 
+{% if image | length %}
 
+    {% set imagerParameter %}
+    src="{{ transformedImages | first }}" 
+    srcset="{{ transformedImages | first }}" 
+    data-srcset="{{ transformedImages | srcset }}"
+    data-sizes="auto"
+    data-aspectratio="{{ aspect }}"
+    alt="{{ image.title }}"
+    {% if zoom %}data-zoomable{% endif %}
+    {% endset %}
+
+    {% if mode == 'pin' %}
+    <figure class="w-full {{ class|default('') }}">
+        <div class="relative w-full overflow-hidden" style="padding-bottom: {{ 1 / aspect * 100 }}%">
+            <img class="absolute inset-0 w-full h-full lazyload"
+            {{ imagerParameter }}
+            />
+        </div>
+        {% if caption %}
+        <figcaption class="relative block my-1 text-sm text-gray-500">{{ image.assetCaption ?? "" }}</figcaption>
+        {% endif %}
+    </figure> 
+
+    {% elseif mode == 'fit' %}
+
+    <figure class="w-full h-full {{ class|default('') }}">
+        <img class="object-cover w-full h-full lazyload" 
+            style="object-position:{{x * 100 }}% {{y * 100}}%" 
+            {{ imagerParameter }}
+        />
+    </figure>
+
+    {% endif %}
+    
 {% else %}
-<div class="relative w-full overflow-hidden bg-primary-100" style="padding-bottom: {{ 1 / aspect * 100 }}%">
-    <div class="absolute w-full h-full pin object-fit-cover"></div>
-</div>
+
+    <div class="relative w-full overflow-hidden bg-primary-100" style="padding-bottom: {{ 1 / aspect * 100 }}%">
+        <div class="absolute w-full h-full pin object-fit-cover"></div>
+    </div>
 
 {% endif %}
+

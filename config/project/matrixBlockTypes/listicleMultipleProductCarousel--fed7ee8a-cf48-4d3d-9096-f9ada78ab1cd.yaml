@@ -1,0 +1,135 @@
+field: a9f00eab-73ff-4659-9b15-ee56aa8c8531
+fieldLayouts:
+  754eef24-cd6c-4ae4-b32c-c9abc560b5b8:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 672eb021-171d-4eee-81d0-fe90018c3534
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 8fd13f01-7952-450b-8ca6-325a4b4f4867
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 3c50f491-f27b-4d1e-a9f9-817ad051ece7
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  3c50f491-f27b-4d1e-a9f9-817ad051ece7:
+    contentColumnType: text
+    fieldGroup: null
+    handle: richTextEditor
+    instructions: ''
+    name: 'Rich Text Editor'
+    searchable: false
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      cleanupHtml: true
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: Simple.json
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+      showHtmlButtonForNonAdmins: ''
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  672eb021-171d-4eee-81d0-fe90018c3534:
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: ''
+    name: Heading
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  8fd13f01-7952-450b-8ca6-325a4b4f4867:
+    contentColumnType: string
+    fieldGroup: null
+    handle: slides
+    instructions: ''
+    name: Slides
+    searchable: false
+    settings:
+      columns:
+        __assoc__:
+          -
+            - c35b5513-a0d3-458a-8e1c-a3080b855c8d
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - 8997b296-7fc0-4c5d-9de0-2a7229c60a83
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - b633ffb7-1271-4b54-85be-a6edb1cedddb
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - 2ef9cd0d-784e-48bd-ae19-6f7b189072f7
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+      contentTable: '{{%stc_36_slides}}'
+      fieldLayout: row
+      maxRows: ''
+      minRows: ''
+      placeholderKey: null
+      propagationMethod: all
+      selectionLabel: ''
+      staticField: ''
+    translationKeyFormat: null
+    translationMethod: site
+    type: verbb\supertable\fields\SuperTableField
+handle: listicleMultipleProductCarousel
+name: 'Listicle / Multiple Product Carousel'
+sortOrder: 16

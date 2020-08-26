@@ -1,7 +1,7 @@
 contentColumnType: string
 fieldGroup: a7b23ced-f8be-4c09-bba7-84b5e4552f75
 handle: spaLogo
-instructions: 'Transparent / White background only.'
+instructions: 'White background only.'
 name: 'Spa - Logo'
 searchable: false
 settings:

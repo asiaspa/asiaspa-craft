@@ -4,10 +4,10 @@
     'slider:slide.heroImage',
     'gallery:gallery',
 
-    'listicleImage:image',
-    'listicleSlider:slides',
-    'listicleShopItem:image',
-    'listicleShopCarousel:slides.image'
+    'listicleSingleImage:image',
+    'listicleImageSlider:slides',
+    'listicleSingleProduct:image',
+    'listicleMultipleProductCarousel:slides.image'
 
 ]) %}
 
@@ -29,6 +29,8 @@
     {% if block.type.handle in listicleTypes %}
     {% set listicleNumber = listicleNumber + 1 %}
     {% endif %}
+    {# {% include  "_stories/_blocks/_" ~ block.type.handle | lower with {'block':block} %} #}
     {% include  "_stories/_blocks/_" ~ block.type.handle | lower with {'block':block} %}
+
 {% endfor %}
  

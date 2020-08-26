@@ -2,30 +2,14 @@
 Asiaspa website revamp project
 
 ## TODO
-- [ ] Refine Color Palette - most are not needed
 - [ ] Gmail sent/reply issue 
 - [ ] Register-service-worker
-- [ ] criticalcss
-- [ ] logo -> svg insert
 - [ ] slim the swiper js
 - [ ] searchit template query predefined
 - [ ] pagebulder - flip gallery
+- [ ] embed - caption issue
+- [ ] story left & right issue
 
-## Development Guideline
-### Twig Template Development
-#### File naming
-All file name must be `_{{ name }}.twig`
-For AMP, append `-amp` at the name. i.e. `_{{ name }}-amp.twig`
-The `_` enforcement implies all pages must be managed through the backend for better content maintainence.
-e.g.  HTTP: `_homepage.twig`, AMP: `_homepage-amp.twig`
-
-#### Usage of `extends`, `embed`, `include`, `macro` and `source`
-The folder structure and templates follow the following structure
-1. `extends` - to compose the frame of the page
-2. `embed` - to wrap the content in a container 
-3. `include` - to inject components
-4. `macro` - don't use macro. use `{% include {{  }} with { variable : value} only %}` instead.
-4. `source` - to directly inject code without processing with twig
 
 ## Security Protocol & Account Management
 Passwords is managed via Lastpass with 1 master password.

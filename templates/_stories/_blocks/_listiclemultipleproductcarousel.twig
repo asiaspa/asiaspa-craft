@@ -1,0 +1,25 @@
+{% embed "_stories/_blocks/_listicle" %}
+{% block listicle %}
+    {% if block.slides | length %}
+    <section class="w-full p-edge">
+    <div class="mb-16 js-swiper-product-carousel swiper-container">
+        <div class="flex swiper-wrapper">
+            {% for slide in block.slides %}
+                {% include "_stories/_components/_single-product.twig" %}
+            {% endfor %}
+        </div>
+        <div class="mt-8 text-right">
+            <button class="swiper-prev">
+                {% include "_components/_icon" with { 'icon':'icon-arrow-left','h':32,'w':32 } %}
+            </button>
+            <div class="relative inline mx-4 swiper-pagination"></div>
+            <button class="swiper-next">
+                {% include "_components/_icon" with { 'icon':'icon-arrow-right','h':32,'w':32 } %}
+            </button>
+        </div>
+    </div>
+    </section>
+    {% endif %}
+
+{% endblock %}
+{% endembed %}

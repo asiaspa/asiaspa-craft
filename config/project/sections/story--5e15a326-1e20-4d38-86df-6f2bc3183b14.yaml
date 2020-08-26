@@ -19,5 +19,5 @@ siteSettings:
     enabledByDefault: true
     hasUrls: true
     template: _stories/_generic.twig
-    uriFormat: 'story/{slug}'
+    uriFormat: '{{ storyCategory|first.slug ?? ''story'' }}/{slug}'
 type: channel

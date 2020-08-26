@@ -12,6 +12,7 @@ module.exports = {
         },
         fontFamily: {
             'sans': 'var(--font-sans)',
+            'sans-display': 'var(--font-sans-display)',
             'serif': 'var(--font-serif)',
             'headline': 'var(--font-headline)',
             'display': 'var(--font-display)'
@@ -49,27 +50,21 @@ module.exports = {
                         fontWeight: 600,
                     },
                     h1: {
-                        fontWeight: 600,
                         fontFamily: 'var(--font-headline)'
                     },
                     h2: {
-                        fontWeight: 600,
                         fontFamily: 'var(--font-headline)'
                     },
                     h3: {
-                        fontWeight: 600,
                         fontFamily: 'var(--font-headline)'
                     },
                     h4: {
-                        fontWeight: 600,
                         fontFamily: 'var(--font-headline)'
                     },
                     h5: {
-                        fontWeight: 600,
                         fontFamily: 'var(--font-headline)'
                     },
                     h6: {
-                        fontWeight: 600,
                         fontFamily: 'var(--font-headline)'
                     },
                     figcaption: {

@@ -107,7 +107,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: d8aa4d97-b648-46d5-8c4f-7cd5bd05380e
+            fieldUid: b4860f54-a0b3-4a0a-b83f-96c01b5e3818
             instructions: null
             label: null
             required: false
@@ -116,7 +116,36 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            type: craft\fieldlayoutelements\HorizontalRule
+            fieldUid: 11b198e7-27cf-4390-a11f-a7ff2f7f7bab
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Categories
+        sortOrder: 3
+      -
+        elements:
+          -
+            fieldUid: b670637b-b6cb-4564-819b-64a2c173367a
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: d8aa4d97-b648-46d5-8c4f-7cd5bd05380e
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
           -
             fieldUid: 123697cb-e398-4943-8570-7241dd6b451a
             instructions: null
@@ -127,7 +156,7 @@ fieldLayouts:
             warning: null
             width: 50
         name: Judges
-        sortOrder: 3
+        sortOrder: 4
       -
         elements:
           -
@@ -148,10 +177,12 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
+        name: Enter
+        sortOrder: 5
+      -
+        elements:
           -
-            type: craft\fieldlayoutelements\HorizontalRule
-          -
-            fieldUid: 11b198e7-27cf-4390-a11f-a7ff2f7f7bab
+            fieldUid: c98ff79d-4c15-4f7a-8e49-08c03fc67c04
             instructions: null
             label: null
             required: false
@@ -159,18 +190,23 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
-        name: Enter
-        sortOrder: 4
-      -
-        elements:
           -
             style: tip
             tip: 'To set up the list of nominees, you should create all the ''spa'' entry for all the nominees, and configure the ''asiaspa award - nominee'' field in the ''spa'' entry.'
             type: craft\fieldlayoutelements\Tip
         name: Nominee
-        sortOrder: 5
+        sortOrder: 6
       -
         elements:
+          -
+            fieldUid: 086ab778-59d7-43de-a0ef-80afb9d9f9ce
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
           -
             style: tip
             tip: 'To set up the list of nominees, you should create all the ''spa'' entry for all the winners, and configure the ''asiaspa award - winners'' field in the ''spa'' entry.'
@@ -185,7 +221,7 @@ fieldLayouts:
             warning: null
             width: 100
         name: Winners
-        sortOrder: 6
+        sortOrder: 7
 handle: generic
 hasTitleField: true
 name: generic

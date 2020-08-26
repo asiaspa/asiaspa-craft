@@ -35,7 +35,9 @@ mix
     .js('src/js/app.js', 'web/dist/')
     .extract([
         'alpinejs',
-        'lazysizes'
+        'lazysizes',
+        'medium-zoom',
+        'sal.js'
     ])
 // .scripts([
     //     'src/js/app.js'

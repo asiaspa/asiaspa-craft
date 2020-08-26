@@ -1,6 +1,6 @@
 {% set headerNodes = craft.navigate.raw('header ') %}
-
-<header class="sticky top-0 z-20 w-full mt-8 transition duration-300 border-secondary-300"
+ 
+<header class="sticky top-0 z-20 w-full transition duration-300 border-secondary-300"
         x-data="{ atTop: true}"
         x-on:scroll.window.debounce="atTop = (window.pageYOffset > 1) ? false : true;"
         :class="{'bg-secondary-100 border-b': atTop === false }">
@@ -16,7 +16,40 @@
         </div>
         <div class="hidden space-x-6 lg:flex">
             {% for node in headerNodes %}
-                <a class="text-lg tracking-wide transition duration-300 font-headline hover:text-primary-500"
+                <a class="text-lg tracking-wide transition duration-300 font-sans-display hover:text-primary-500"
+                    href="{{ node.url }}">{{ node.name }}</a>
+            {% endfor %}
+        </div>
+        <div class="flex ">
+            <a href="#nav">
+                <span class="hidden md:inline-block">
+                {% include "_components/_icon" with { 'icon':'icon-zoom'} %} 
+                </span>
+                <span class="md:hidden">
+                {% include "_components/_icon" with { 'icon':'icon-menu'} %} 
+                </span>
+            </a>
+            <a href="#spa">
+                <span>Spa Locator</span>
+                {# {% include "_components/_icon" with { 'icon':'icon-zoom'} %}  #}
+            </a>
+        </div>
+    </div>
+</header>
+ 
+
+{# <header class="sticky top-0 z-20 w-full transition duration-300 border-b border-secondary-300 bg-secondary-100">
+    <div class="relative flex items-center justify-between h-12 max-w-screen-xl mx-auto px-edge">
+        <div class="flex items-center">
+            <a class="block h-20 py-6 mr-6" href="{{ siteUrl }}">
+                {% if website.websiteLogoSimple | length %}
+                    <img class="block w-auto h-full" src="{{ rev(website.websiteLogoSimple[0].url()) }}" alt="{{ siteUrl }}" />
+                {% endif %}
+            </a>
+        </div>
+        <div class="hidden space-x-6 lg:flex">
+            {% for node in headerNodes %}
+                <a class="text-lg tracking-wide transition duration-300 font-sans-display hover:text-primary-500"
                     href="{{ node.url }}">{{ node.name }}</a>
             {% endfor %}
         </div>
@@ -27,9 +60,9 @@
                 </span>
                 <span class="md:hidden">{{ 'MENU' |t }}</span>
             </a>
-            {# <a href="#spa">
+            <a href="#spa">
                 {% include "_components/_icon" with { 'icon':'icon-zoom'} %} 
-            </a> #}
+            </a>
         </div>
     </div>
-</header>
+</header> #}
