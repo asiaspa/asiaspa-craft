@@ -10,7 +10,6 @@ fieldLayouts:
             autocapitalize: true
             autocomplete: false
             autocorrect: true
-            autofocus: false
             class: null
             disabled: false
             id: null
