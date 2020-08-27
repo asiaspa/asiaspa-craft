@@ -7,7 +7,6 @@ fieldLayouts:
             autocapitalize: true
             autocomplete: false
             autocorrect: true
-            autofocus: false
             class: null
             disabled: false
             id: null
@@ -37,15 +36,6 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
-          -
-            fieldUid: 51f3339a-5e27-4c65-95cf-82085401023d
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
         name: Content
         sortOrder: 1
       -
@@ -61,13 +51,13 @@ fieldLayouts:
             width: 100
         name: SEO
         sortOrder: 2
-handle: printIssue
-name: 'Print Issue'
+handle: print
+name: Print
 siteSettings:
   5058e36f-39fa-4fe2-982d-2a6082be4a27:
     hasUrls: true
-    template: _categories/_generic
-    uriFormat: 'print-issue/{slug}'
+    template: _categories/_issue
+    uriFormat: 'print/{slug}'
 structure:
   maxLevels: 1
   uid: d3a91e7b-dae5-4b4c-aa4b-54b1aeaee2f7

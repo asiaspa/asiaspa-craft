@@ -1,0 +1,57 @@
+{# ===================== Query ===================== #}
+{% do craft.app.elements.eagerLoadElements(className(category), [category], [
+        'printIssueCoverImage'
+]) %}
+
+{% set entriesQuery = craft.entries({
+    section : 'story',
+    with: [
+        'storyHeroImage',
+        'storyCategory',
+        'storyPrintIssue'
+    ],
+    limit:20
+}) %}
+
+{% set entries = entriesQuery.all() %}
+
+{# ===================== Content ===================== #}
+{% extends "_layouts/_generic" %}
+
+{% block main %}
+
+
+<section class="bg-secondary-100">
+    <div class="max-w-screen-xl mx-auto mt-16 p-edge">
+        <div class="flex flex-col md:flex-row">
+            <div class="w-full md:w-1/2">
+                <div class="p-edge">
+                    {% include "_components/_imager" with {'image': category.printIssueCoverImage[0] ?? null } %}
+                </div>
+            </div>
+            <div class="w-full md:w-1/2">
+                <h1 class="py-4 text-lg font-display lg:text-xl">{{ category.title }}</h1>
+                <a href="{{ url('/subscribe') }}" target="_blank">Subscribe</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% if entriesQuery.count() %}
+<section class="max-w-screen-xl mx-auto mt-16 p-edge">
+    <div class="grid grid-flow-row-dense grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        {% for entry in entries %}
+            <div {% if entry.storyLandscape %}class="md:col-span-2"{% endif %}>
+            {% include "_stories/_components/_story-card" with {
+                'entry': entry,
+                'layout': 'widelist sm:card md:widecard lg:widecard',
+                'size': 'sm',
+                'byline': true	
+            } %}
+            </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+</section>
+
+{% endblock %}
