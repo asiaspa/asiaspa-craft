@@ -5,19 +5,10 @@ instructions: ''
 name: 'AsiaSpa Awards - Awards Categories'
 searchable: true
 settings:
-  allowLimit: false
-  allowMultipleSources: false
-  allowSelfRelations: false
-  branchLimit: ''
-  limit: null
-  localizeRelations: false
-  selectionLabel: ''
-  showSiteMenu: true
-  source: 'group:f30eb0b3-b181-4162-a646-a4218d837a43'
-  sources: '*'
-  targetSiteId: null
-  validateRelatedElements: false
-  viewMode: null
+  contentTable: '{{%matrixcontent_asiaspaawardsawardscategories}}'
+  maxBlocks: ''
+  minBlocks: ''
+  propagationMethod: all
 translationKeyFormat: null
 translationMethod: site
-type: craft\fields\Categories
+type: craft\fields\Matrix

@@ -8,28 +8,28 @@ settings:
   columns:
     __assoc__:
       -
-        - a52a4dce-a53b-4a38-9ddf-63194947ae39
+        - 6278f4e7-4dc3-4acb-aa73-2d5003bab3d6
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - 738718e7-9b2e-4db6-87fa-cd25bd444e7e
+        - 31979d40-9175-4efc-b7db-34550f7ca98e
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - 63dc5364-e9a2-4d07-a690-e61aefd6305c
+        - 9f6c932d-8bfc-4cc6-b7db-a7b48023bec8
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - a6e0f249-680b-4497-9aa2-c963dccf0f40
+        - 84594b9f-fa1d-4fa7-be4c-87235cc06efc
         -
           __assoc__:
             -

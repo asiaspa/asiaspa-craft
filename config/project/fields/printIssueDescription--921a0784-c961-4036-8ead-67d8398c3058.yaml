@@ -1,0 +1,18 @@
+contentColumnType: text
+fieldGroup: 8cfd7cec-992b-4043-bab5-b9f4ac3bc2f9
+handle: printIssueDescription
+instructions: ''
+name: 'Print Issue - Description'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: '1'
+  placeholder: ''
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText
