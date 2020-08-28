@@ -1,11 +1,11 @@
-field: a9f00eab-73ff-4659-9b15-ee56aa8c8531
+field: 1383f2c8-f480-4dbf-8214-c554546f3f2b
 fieldLayouts:
-  95113fe0-7997-4f99-8b88-d19f9196d992:
+  c05b0c2c-b511-48bb-b919-18f2a7acf14a:
     tabs:
       -
         elements:
           -
-            fieldUid: 61c5a781-1a79-45ec-ae7b-615ff7152533
+            fieldUid: 47b78eee-26a2-4bf5-a380-3354130cca66
             instructions: null
             label: null
             required: false
@@ -14,16 +14,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 66ca315e-534a-4a16-b934-0419a88cd7a1
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-          -
-            fieldUid: 7afc02fc-2288-4e0f-a4b6-180a4023a071
+            fieldUid: 99438d2e-8763-429c-a327-6ebb43171682
             instructions: null
             label: null
             required: false
@@ -34,47 +25,18 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  61c5a781-1a79-45ec-ae7b-615ff7152533:
+  47b78eee-26a2-4bf5-a380-3354130cca66:
     contentColumnType: text
     fieldGroup: null
-    handle: heading
+    handle: question
     instructions: ''
-    name: Heading
-    searchable: false
-    settings:
-      byteLimit: null
-      charLimit: null
-      code: ''
-      columnType: null
-      initialRows: '4'
-      multiline: ''
-      placeholder: ''
-      uiMode: normal
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\PlainText
-  66ca315e-534a-4a16-b934-0419a88cd7a1:
-    contentColumnType: text
-    fieldGroup: null
-    handle: embed
-    instructions: ''
-    name: Embed
-    searchable: false
-    settings:
-      url: ''
-    translationKeyFormat: null
-    translationMethod: none
-    type: wrav\oembed\fields\OembedField
-  7afc02fc-2288-4e0f-a4b6-180a4023a071:
-    contentColumnType: text
-    fieldGroup: null
-    handle: richTextEditor
-    instructions: ''
-    name: 'Rich Text Editor'
-    searchable: false
+    name: Question
+    searchable: true
     settings:
       availableTransforms: '*'
-      availableVolumes: '*'
+      availableVolumes:
+        - 883ab42c-10f1-4e32-a559-61f23e4e3775
+        - 9f801622-9f26-40c9-9126-ac4041a76554
       cleanupHtml: true
       columnType: text
       configSelectionMode: choose
@@ -89,10 +51,37 @@ fields:
       showHtmlButtonForNonAdmins: ''
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
-      uiMode: enlarged
+      uiMode: normal
     translationKeyFormat: null
     translationMethod: none
     type: craft\redactor\Field
-handle: listicleEmbed
-name: 'Listicle / Embed'
-sortOrder: 16
+  99438d2e-8763-429c-a327-6ebb43171682:
+    contentColumnType: text
+    fieldGroup: null
+    handle: answer
+    instructions: ''
+    name: Answer
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes:
+        - 883ab42c-10f1-4e32-a559-61f23e4e3775
+        - 9f801622-9f26-40c9-9126-ac4041a76554
+      cleanupHtml: true
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: Simple.json
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+      showHtmlButtonForNonAdmins: ''
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field

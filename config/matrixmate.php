@@ -17,7 +17,7 @@ return [
                 [
                     'label' => 'Story - Left',
                     'types' => [
-                        '56tr4', 
+                        'gallery', 
                         'slider', 
                         'embed' 
                     ]
@@ -29,15 +29,17 @@ return [
                         'introduction',
                         'blockquote',
                         'relatedStory', 
+                        'form',
+
                     ]
                 ]
             ],
             'hiddenTypes' => [
-                'form', 
-                'qa',
                 'event', 
                 'imageHotspot',
-                'relatedSpa', 
+                'relatedSpa',
+                'timeline',
+                'qa'
             ]
         ]
     ]   

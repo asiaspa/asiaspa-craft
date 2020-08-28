@@ -115,4 +115,4 @@ fields:
     type: craft\fields\Assets
 handle: listicleImageSlider
 name: 'Listicle / Image Slider'
-sortOrder: 13
+sortOrder: 15

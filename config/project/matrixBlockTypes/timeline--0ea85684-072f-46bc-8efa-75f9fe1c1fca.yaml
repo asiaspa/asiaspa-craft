@@ -1,11 +1,11 @@
 field: a9f00eab-73ff-4659-9b15-ee56aa8c8531
 fieldLayouts:
-  e5b54909-cc62-4c99-80c1-6f0746748fb2:
+  26f15c10-ea86-4e0a-b1fb-ba958b69e90c:
     tabs:
       -
         elements:
           -
-            fieldUid: 4a336fb2-d2ca-4881-9be7-c91acb061b37
+            fieldUid: f9eac587-05cb-4bf8-a96d-84aae6610be5
             instructions: null
             label: null
             required: false
@@ -16,16 +16,25 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  4a336fb2-d2ca-4881-9be7-c91acb061b37:
-    contentColumnType: integer
+  f9eac587-05cb-4bf8-a96d-84aae6610be5:
+    contentColumnType: text
     fieldGroup: null
-    handle: form
+    handle: event
     instructions: ''
-    name: Form
+    name: Event
     searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
     translationKeyFormat: null
     translationMethod: none
-    type: Solspace\Freeform\FieldTypes\FormFieldType
-handle: form
-name: Form
-sortOrder: 10
+    type: craft\fields\PlainText
+handle: timeline
+name: Timeline
+sortOrder: 8

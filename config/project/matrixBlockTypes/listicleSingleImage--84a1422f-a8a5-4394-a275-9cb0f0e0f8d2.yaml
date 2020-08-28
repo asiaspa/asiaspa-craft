@@ -116,4 +116,4 @@ fields:
     type: craft\fields\Assets
 handle: listicleSingleImage
 name: 'Listicle / Single Image'
-sortOrder: 12
+sortOrder: 14

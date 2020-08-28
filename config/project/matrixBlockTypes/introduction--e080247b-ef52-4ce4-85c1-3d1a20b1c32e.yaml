@@ -42,7 +42,7 @@ fields:
       showHtmlButtonForNonAdmins: ''
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
-      uiMode: enlarged
+      uiMode: normal
     translationKeyFormat: null
     translationMethod: none
     type: craft\redactor\Field
