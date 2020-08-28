@@ -1,0 +1,12 @@
+contentColumnType: string(1000)
+fieldGroup: 42c35673-5056-457f-8057-e868f402a9e1
+handle: subscribeDigitalSubscriptionLink
+instructions: ''
+name: 'Subscribe - Digital Subscription Link'
+searchable: false
+settings:
+  maxLength: '1000'
+  placeholder: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Url

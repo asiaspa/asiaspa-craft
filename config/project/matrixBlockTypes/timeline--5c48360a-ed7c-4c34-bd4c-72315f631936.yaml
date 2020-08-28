@@ -1,0 +1,63 @@
+field: 13772a04-9e7b-48fd-bfea-292b51023c16
+fieldLayouts:
+  7da830f3-41e6-4794-8ae7-e906f8553c47:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: c7debb74-f481-49fc-bf60-f45549eac600
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  c7debb74-f481-49fc-bf60-f45549eac600:
+    contentColumnType: string
+    fieldGroup: null
+    handle: event
+    instructions: ''
+    name: Event
+    searchable: false
+    settings:
+      columns:
+        __assoc__:
+          -
+            - 57c9ef21-5efc-4e70-bdea-70eb092f0930
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - 7570d194-6b4c-4a03-89c9-860e365eddb9
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - 44a7ceab-d7ce-40e5-827d-faefb2fdc465
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+      contentTable: '{{%stc_47_event}}'
+      fieldLayout: row
+      maxRows: ''
+      minRows: ''
+      placeholderKey: null
+      propagationMethod: all
+      selectionLabel: ''
+      staticField: ''
+    translationKeyFormat: null
+    translationMethod: site
+    type: verbb\supertable\fields\SuperTableField
+handle: timeline
+name: Timeline
+sortOrder: 2

@@ -1,0 +1,6 @@
+adminOnly: 1
+allowSources: '*'
+enabledSiteGroups: '*'
+handle: footerList2
+levels: 1
+title: 'Footer List 2'

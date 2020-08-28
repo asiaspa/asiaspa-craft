@@ -1,0 +1,9 @@
+{{ craft.freeform.form(block.form.handle, {
+    labelClass: "form-label",
+    inputClass: "form-control",
+    instructionsBelowField: true,
+    submitClass: "btn btn-success",
+    overrideValues: {
+        hiddenFieldHandle: entry.id,
+    }
+}).render() }}

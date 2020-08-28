@@ -1,7 +1,7 @@
 assets:
   tempSubpath: temp
   tempVolumeUid: 883ab42c-10f1-4e32-a559-61f23e4e3775
-dateModified: 1598557373
+dateModified: 1598578258
 email:
   fromEmail: asiaspa.dev@gmail.com
   fromName: AsiaSpa
@@ -53,9 +53,60 @@ plugins:
     enabled: true
     schemaVersion: 1.0.0
   freeform:
-    edition: lite
+    edition: pro
     enabled: true
     schemaVersion: 3.0.7
+    settings:
+      ajaxByDefault: '1'
+      autoScrollToErrors: '1'
+      blockedEmails: null
+      blockedEmailsError: 'Invalid Email Address'
+      blockedIpAddresses: null
+      blockedKeywords: null
+      blockedKeywordsError: 'Invalid Entry Data'
+      customErrorMessage: null
+      customHoneypotName: null
+      defaultTemplates: ''
+      defaultView: submissions
+      emailTemplateDirectory: _email
+      emailTemplateStorage: db
+      fieldDisplayOrder: name
+      fillWithGet: '1'
+      footerScripts: false
+      formSubmitDisable: '1'
+      formSubmitExpiration: null
+      formTemplateDirectory: _form
+      formattingTemplate: _tailwindcss.twig
+      freeformHoneypot: true
+      freeformHoneypotEnhancement: false
+      hideBannerDemo: '1'
+      hideBannerOldFreeform: false
+      minimumSubmitTime: null
+      pluginName: Form
+      purgableSpamAgeInDays: null
+      purgableSubmissionAgeInDays: '0'
+      recaptchaBehaviour: display_error
+      recaptchaEnabled: false
+      recaptchaKey: null
+      recaptchaMinScore: 0.5
+      recaptchaSecret: null
+      recaptchaType: v2_checkbox
+      removeNewlines: ''
+      renderFormHtmlInCpViews: '1'
+      salesforce_client_id: null
+      salesforce_client_secret: null
+      salesforce_password: null
+      salesforce_username: null
+      scriptInsertLocation: footer
+      sessionEntryMaxCount: 50
+      sessionEntryTTL: 10800
+      showErrorsForBlockedEmails: false
+      showErrorsForBlockedKeywords: false
+      showTutorial: ''
+      spamFolderEnabled: false
+      spamProtectionBehaviour: simulate_success
+      submissionThrottlingCount: null
+      submissionThrottlingTimeFrame: null
   google-cloud:
     edition: standard
     enabled: true
@@ -167,33 +218,6 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
-  sprout-forms:
-    edition: pro
-    enabled: true
-    schemaVersion: 3.11.8
-    settings:
-      captchaSettings:
-        barrelstrength\sproutforms\captchas\DuplicateCaptcha:
-          enabled: 0
-        barrelstrength\sproutforms\captchas\HoneypotCaptcha:
-          enabled: 0
-          honeypotFieldName: sprout-forms-hc
-          honeypotScreenReaderMessage: 'Leave this field blank'
-        barrelstrength\sproutforms\captchas\JavascriptCaptcha:
-          enabled: 1
-      cleanupProbability: 1000
-      defaultSection: entries
-      enableEditFormEntryViaFrontEnd: false
-      enableSaveData: true
-      enableSaveDataDefaultValue: true
-      formTemplateId: barrelstrength\sproutforms\formtemplates\AccessibleTemplates
-      pluginNameOverride: ''
-      saveSpamToDatabase: false
-      showNotificationsTab: true
-      showReportsTab: true
-      spamLimit: 500
-      spamRedirectBehavior: redirectAsNormal
-      trackRemoteIp: false
   super-table:
     enabled: true
     schemaVersion: 2.2.1

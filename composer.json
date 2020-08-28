@@ -2,7 +2,6 @@
   "description": "asiaspa revamp project",
   "require": {
     "aelvan/mailchimp-subscribe": "3.0.2",
-    "barrelstrength/sprout-forms": "3.12.2",
     "born05/craft-imagehotspots": "1.0.0",
     "clubstudioltd/craft-asset-rev": "6.0.2",
     "craftcms/cms": "3.5.7",

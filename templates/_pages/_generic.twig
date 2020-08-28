@@ -4,9 +4,7 @@
 
 <section class="justify-center max-w-screen-lg mx-auto mt-16 p-edge ">
     <h1 class="text-4xl font-hairline leading-tight md:text-5xl font-display">{{ entry.title }}</h1>
-    <div class="mt-16 prose md:prose-lg">
-        {{ entry.pagesRichTextEditor }}
-    </div>
+    {% include "_pages/_page-builder" with {'matrix': entry.pageBuilder } %}
 </section>
 
 {% endblock %}

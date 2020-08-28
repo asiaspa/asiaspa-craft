@@ -1,20 +1,9 @@
-contentColumnType: string
+contentColumnType: integer
 fieldGroup: c988c230-88d1-42da-86a6-8a60a7a243f8
 handle: asiaspaAwardsEnterForm
 instructions: ''
 name: 'AsiaSpa Awards - Enter - Form'
 searchable: false
-settings:
-  allowSelfRelations: false
-  limit: ''
-  localizeRelations: false
-  selectionLabel: ''
-  showSiteMenu: true
-  source: null
-  sources: '*'
-  targetSiteId: null
-  validateRelatedElements: false
-  viewMode: null
 translationKeyFormat: null
-translationMethod: site
-type: barrelstrength\sproutforms\fields\Forms
+translationMethod: none
+type: Solspace\Freeform\FieldTypes\FormFieldType

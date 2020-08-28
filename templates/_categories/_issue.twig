@@ -28,32 +28,30 @@
 
 {% block main %}
 
-<section >
-    <div class="max-w-screen-xl mx-auto mt-16">
-        <div class="flex flex-col items-center md:flex-row -ml-screen-xl">
-            <div class="w-full md:w-1/2 lg:w-2/3 bg-secondary-100 ">
-                <div class="py-16 px-1/4 md:px-1/3 " data-sal="slide-up">
-                    {% include "_components/_imager" with {'image': category.printIssueCoverImage[0] ?? null} %}
-                </div>
+<section class="max-w-screen-xl mx-auto mt-16">
+    <div class="flex flex-col items-center md:flex-row -ml-screen-xl">
+        <div class="w-full md:w-1/2 lg:w-2/3 bg-secondary-100 ">
+            <div class="py-16 px-1/4 md:px-1/3 " data-sal="slide-up">
+                {% include "_components/_imager" with {'image': category.printIssueCoverImage[0] ?? null, 'zoom': true} %}
             </div>
-            <div class="w-full space-y-4 md:w-1/2 lg:w-5/12 p-edge">
-                <h1 class="text-4xl font-hairline font-display md:text-5xl">{{ category.title }}</h1>
-                <p>{{ category.printIssueDescription }}</p>
-                <div class="flex space-x-4">
-                    {% if not prevCat %}
-                    <a class="flex items-center justify-between space-x-2 border-b border-black" href="{{ prevCat.url ?? "" }}" target="_blank">
-                        {% include "_components/_icon" with { 'icon':'icon-arrow-left', w:48, h:48 } %} 
-                        <span>Prev Issue</span>
-                    </a>
-                    {% endif %}
-                    <a class="flex items-center justify-center flex-grow text-center border-b border-black mr-1/6" href="{{ url('/subscribe') }}" target="_blank">Subscribe</a>
-                    {% if not nextCat %}
-                    <a class="flex items-center justify-between h-12 space-x-2 transition duration-300 border-b border-black hover:text-primary-500 hover:border-primary-500" href="{{ nextCat.url ?? "" }}" target="_blank">
-                        <span>Next Issue</span>
-                        {% include "_components/_icon" with { 'icon':'icon-arrow-right', w:48, h:48 } %} 
-                    </a>                
-                    {% endif %}
-                </div>
+        </div>
+        <div class="w-full space-y-4 md:w-1/2 lg:w-5/12 p-edge">
+            <h1 class="text-4xl font-hairline font-display md:text-5xl">{{ category.title }}</h1>
+            <p>{{ category.printIssueDescription }}</p>
+            <div class="flex space-x-4">
+                {% if prevCat %}
+                <a class="flex items-center justify-between space-x-2 border-b border-black" href="{{ prevCat.url ?? "" }}" >
+                    {% include "_components/_icon" with { 'icon':'icon-arrow-left', w:48, h:48 } %} 
+                    <span>Prev Issue</span>
+                </a>
+                {% endif %}
+                <a class="flex items-center justify-center flex-grow text-center border-b border-black mr-1/6" href="{{ url('/subscribe') }}">Subscribe</a>
+                {% if  nextCat %}
+                <a class="flex items-center justify-between h-12 space-x-2 transition duration-300 border-b border-black hover:text-primary-500 hover:border-primary-500" href="{{ nextCat.url ?? "" }}" >
+                    <span>Next Issue</span>
+                    {% include "_components/_icon" with { 'icon':'icon-arrow-right', w:48, h:48 } %} 
+                </a>                
+                {% endif %}
             </div>
         </div>
     </div>

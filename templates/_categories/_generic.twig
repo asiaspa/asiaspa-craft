@@ -7,7 +7,7 @@
 {% endblock %}
 {% endembed %}
 
-{{ include("_pages/_layout-builder",{ matrix: category.layoutBuilder }) }}
+{% include "_categories/_layout-builder" with {'matrix': category.layoutBuilder } %}
 
 {{ sprig('_categories/_story-pagination', {categoryId: category.id}) }}
 {% endblock %}

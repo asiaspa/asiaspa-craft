@@ -1,0 +1,9 @@
+siteUid: null
+sortOrder: 6
+template: /_form-demo/bootstrap/view
+uriParts:
+  - _form-demo/bootstrap/
+  -
+    - slug
+    - '[^\/]+'
+uriPattern: '_form-demo/bootstrap/<slug:[^\/]+>'

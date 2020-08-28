@@ -1,14 +1,12 @@
 contentColumnType: text
-fieldGroup: 6ebe0a75-3257-417d-8c9b-c712a8dbf9c9
-handle: pagesRichTextEditor
+fieldGroup: 42c35673-5056-457f-8057-e868f402a9e1
+handle: subscribeRichTextEditor
 instructions: ''
-name: 'Pages - Rich Text Editor'
+name: 'Subscribe - Rich Text Editor'
 searchable: false
 settings:
   availableTransforms: '*'
-  availableVolumes:
-    - 883ab42c-10f1-4e32-a559-61f23e4e3775
-    - 9f801622-9f26-40c9-9126-ac4041a76554
+  availableVolumes: '*'
   cleanupHtml: true
   columnType: text
   configSelectionMode: choose
@@ -16,7 +14,7 @@ settings:
   manualConfig: ''
   purifierConfig: ''
   purifyHtml: '1'
-  redactorConfig: Standard.json
+  redactorConfig: Simple.json
   removeEmptyTags: '1'
   removeInlineStyles: '1'
   removeNbsp: '1'

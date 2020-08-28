@@ -30,6 +30,6 @@
 
 
 {% for block in matrix %}
-    {% include  "_pages/_blocks/_" ~ block.type | lower with {'block':block} %}
+    {% include  "_categories/_blocks/_" ~ block.type | lower with {'block':block} %}
 {% endfor %}
 
