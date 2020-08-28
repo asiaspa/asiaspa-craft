@@ -1,3 +1,7 @@
+{% set footer1Nodes = craft.navigate.raw('footerList1 ') %}
+{% set footer2Nodes = craft.navigate.raw('footerList2 ') %}
+
+
 <section class="z-10 mt-32 bg-secondary-300">
     <div class="grid max-w-screen-lg grid-cols-1 mx-auto md:grid-cols-2"> 
         <div class="py-16 mr-16 space-y-6 transform -translate-y-16 md:mr-0 p-edge bg-secondary-100">
@@ -10,12 +14,16 @@
                 <a>{% include "_components/_icon" with { 'icon':'icon-logo-linkedin', 'w': 24, 'h': 24 } only %}</a>
             </div>
             <div class="flex flex-col space-y-4">
-                <a>Advertise With Us</a>
-                <a>Contact Us</a>
+            {% for node in footer1Nodes %}
+                <a class="text-lg tracking-wide transition duration-300 font-sans-display hover:text-primary-500"
+                    href="{{ node.url }}">{{ node.name }}</a>
+            {% endfor %}
             </div>        
             <div class="flex flex-col space-y-4">
-                <a>Privacy Policy</a>
-                <a>Terms & Conditions</a>
+            {% for node in footer2Nodes %}
+                <a class="text-lg tracking-wide transition duration-300 font-sans-display hover:text-primary-500"
+                    href="{{ node.url }}">{{ node.name }}</a>
+            {% endfor %}
             </div>        
             <div class="col-span-2">
                 <span>© 2020 Copyright AsiaSpa site by Two2.Press </span>
