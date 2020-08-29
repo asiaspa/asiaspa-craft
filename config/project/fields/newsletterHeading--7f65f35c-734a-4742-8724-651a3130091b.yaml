@@ -1,0 +1,18 @@
+contentColumnType: text
+fieldGroup: 42c35673-5056-457f-8057-e868f402a9e1
+handle: newsletterHeading
+instructions: ''
+name: 'Newsletter Heading'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: ''
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText
