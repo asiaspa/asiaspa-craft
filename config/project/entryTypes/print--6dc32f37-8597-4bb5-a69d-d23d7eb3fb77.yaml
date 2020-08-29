@@ -45,15 +45,6 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
-          -
-            fieldUid: 3e17feb7-3d9a-4b18-a1fb-a3ed986f4b09
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
         name: Content
         sortOrder: 1
       -

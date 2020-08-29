@@ -50,7 +50,6 @@ fields:
       source: null
       sources:
         - 'volume:883ab42c-10f1-4e32-a559-61f23e4e3775'
-        - 'volume:9f801622-9f26-40c9-9126-ac4041a76554'
       targetSiteId: null
       useSingleFolder: false
       validateRelatedElements: false

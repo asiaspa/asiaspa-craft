@@ -1,0 +1,9 @@
+contentColumnType: text
+fieldGroup: 0a3d02f5-f5e6-4b6e-85c4-e6f83226cf91
+handle: adMediumRectangle
+instructions: 300x250
+name: 'Ad Medium Rectangle'
+searchable: false
+translationKeyFormat: null
+translationMethod: none
+type: doublesecretagency\adwizard\fields\AdGroups

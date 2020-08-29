@@ -1,0 +1,9 @@
+contentColumnType: text
+fieldGroup: 0a3d02f5-f5e6-4b6e-85c4-e6f83226cf91
+handle: adPremiumBillboard
+instructions: 970x250
+name: 'Ad Premium Billboard'
+searchable: false
+translationKeyFormat: null
+translationMethod: none
+type: doublesecretagency\adwizard\fields\AdGroups
