@@ -1,0 +1,7 @@
+{% set entry = craft.entries
+    .section('newsletter')
+    .with(['newsletterHeroImage'])
+    .one() 
+%}
+
+{% include "_newsletter/_component/_form" with {'entry': entry} %}

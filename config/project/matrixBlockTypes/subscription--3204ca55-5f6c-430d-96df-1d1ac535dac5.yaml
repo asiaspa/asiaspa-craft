@@ -1,11 +1,11 @@
 field: 51f3339a-5e27-4c65-95cf-82085401023d
 fieldLayouts:
-  31c26b24-b929-4087-81c7-a0b5526273d2:
+  bbaa08e3-780f-47dd-88fb-8bb029972399:
     tabs:
       -
         elements:
           -
-            fieldUid: 717c9e87-1ead-48d2-a195-264717a2edcd
+            fieldUid: b2f13b52-0015-4310-ae02-45d1b165ad51
             instructions: null
             label: null
             required: false
@@ -14,7 +14,7 @@ fieldLayouts:
             warning: null
             width: 50
           -
-            fieldUid: 039d64d6-bca3-4c7e-89a0-532b5cf728e3
+            fieldUid: 9afc6c74-dfc3-4efd-b207-400a1bdc454f
             instructions: null
             label: null
             required: false
@@ -25,7 +25,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  039d64d6-bca3-4c7e-89a0-532b5cf728e3:
+  9afc6c74-dfc3-4efd-b207-400a1bdc454f:
     contentColumnType: string
     fieldGroup: null
     handle: heroImage
@@ -58,7 +58,7 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Assets
-  717c9e87-1ead-48d2-a195-264717a2edcd:
+  b2f13b52-0015-4310-ae02-45d1b165ad51:
     contentColumnType: text
     fieldGroup: null
     handle: heading
@@ -77,6 +77,6 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-handle: newsletterSubscription
-name: 'Newsletter Subscription'
-sortOrder: 5
+handle: subscription
+name: Subscription
+sortOrder: 6
