@@ -15,17 +15,17 @@
 {% set prevEntry = entry.getPrev({section:'story', orderBy:'postDate' }) %}
 
 {% set placeholder = "" %}
-{% set sideCar = "lg:bg-secondary-100 lg:fixed lg:inset-0 lg:w-1/2 flex items-center justify-center" %}
+{% set sideCar = "md:bg-secondary-100 md:fixed md:inset-0 md:w-1/2 flex items-center justify-center" %}
 {# -------------------  content ------------------- #}
 <article class="flex">
-    <div class="hidden w-1/2 lg:block bg-secondary-100"></div>
-    <div class="flex flex-col justify-center w-full lg:w-1/2 px-edge lg:mt-96">
+    <div class="hidden w-1/2 md:block bg-secondary-100"></div>
+    <div class="flex flex-col justify-center w-full md:w-1/2 px-edge md:mt-96">
 
         {% include "_stories/_components/_story-hero" %}
         {% include "_stories/_story-builder" with {'matrix': entry.storyBuilder } %}
 
         {# tricks to restore hero image when scroll back #}
-        <section class="opacity-0 lg:mt-1/2 js-step lg:opacity-0">
+        <section class="opacity-0 md:mt-1/2 js-step md:opacity-0">
             <div class="{{ sideCar }}">
                 {% include "_components/_imager" with { 'image':entry.storyHeroImage[0], 'zoom':true, 'mode':'fit' } %}
             </div>

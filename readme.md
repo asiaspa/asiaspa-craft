@@ -10,6 +10,7 @@ Asiaspa website revamp project
 - [ ] embed - caption issue
 - [ ] story left & right issue
 - [ ] feedme issue, and move print from category to entries.
+- [ ] Modify the ad engine to be more automatic using better query
 
 ## Security Protocol & Account Management
 Passwords is managed via Lastpass with 1 master password.

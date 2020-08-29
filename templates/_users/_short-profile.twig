@@ -1,7 +1,19 @@
-{% if user %}
-<a class="flex items-center" href="{{ url('/user/' ~ user.title|url_encode ) }}">
+{% set defaultUser = craft.tags
+    .group('user')
+    .slug('AsiaSpa')
+    .with(['userProfilePic'])
+    .one()
+%}
+
+{% if user == null %}
+{% set user = defaultUser %}
+{% endif %}
+
+{% set entriesQuery = craft.entries.relatedTo(user) %}
+ 
+<a class="flex items-center" {% if entriesQuery.count() %} href="{{ url('/user/' ~ user.title|url_encode ) }}" {% endif %}>
     <div class="w-16 h-16 mr-4 overflow-hidden rounded-full" >
-        {% include "_components/_imager" with { image : user.userProfilePic[0] ?? '' , w : 1, h : 1 } %}
+        {% include "_components/_imager" with { image : user.userProfilePic[0] ?? null , w : 1, h : 1 } %}
     </div>
     <div>
         <p class="leading-none text-gray-900">{{ user.title }}</p>
@@ -10,4 +22,3 @@
         {% endif %}
     </div>
 </a>
-{% endif %}

@@ -1,8 +1,8 @@
 contentColumnType: string
 fieldGroup: 8cfd7cec-992b-4043-bab5-b9f4ac3bc2f9
-handle: printIssueCoverImage
+handle: printCoverImage
 instructions: ''
-name: 'Print Issue - Cover Image'
+name: 'Print - Cover Image'
 searchable: false
 settings:
   allowSelfRelations: false

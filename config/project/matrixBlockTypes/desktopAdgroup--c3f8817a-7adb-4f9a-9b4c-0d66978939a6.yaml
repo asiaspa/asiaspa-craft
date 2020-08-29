@@ -1,0 +1,31 @@
+field: 236205e4-f453-4ab0-83bd-745ec2cd3e2e
+fieldLayouts:
+  8842928d-b38d-4d5e-a7e9-08ed34dbaf04:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 10e35c1d-ed09-4943-92f7-5a9e6f1c9e0a
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  10e35c1d-ed09-4943-92f7-5a9e6f1c9e0a:
+    contentColumnType: text
+    fieldGroup: null
+    handle: adgroup
+    instructions: ''
+    name: Adgroup
+    searchable: false
+    translationKeyFormat: null
+    translationMethod: none
+    type: doublesecretagency\adwizard\fields\AdGroups
+handle: desktopAdgroup
+name: 'Desktop Adgroup'
+sortOrder: 1

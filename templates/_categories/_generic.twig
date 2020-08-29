@@ -1,13 +1,13 @@
 {% extends "_layouts/_generic" %}
 
 {% block main %}
-{% embed "_containers/_container" %}
-{% block content %}
-    <h1 class="py-4 font-serif text-lg lg:text-xl">{{ category.title }}</h1>
-{% endblock %}
-{% endembed %}
+
+    <div class="max-w-screen-xl mx-auto p-edge">
+        <h1 class="text-5xl font-hairline text-center font-display lg:text-6xl">{{ category.title }}</h1>
+    </div>
 
 {% include "_categories/_layout-builder" with {'matrix': category.layoutBuilder } %}
 
 {{ sprig('_categories/_story-pagination', {categoryId: category.id}) }}
+
 {% endblock %}

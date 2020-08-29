@@ -1,0 +1,14 @@
+contentColumnType: string
+fieldGroup: 0a3d02f5-f5e6-4b6e-85c4-e6f83226cf91
+handle: adBetweenSection
+instructions: ''
+name: 'Ad - Between Section'
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_adbetweensection}}'
+  maxBlocks: ''
+  minBlocks: ''
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix
