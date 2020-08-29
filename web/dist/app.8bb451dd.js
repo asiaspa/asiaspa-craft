@@ -19213,12 +19213,12 @@ function initScript() {
   }).onStepEnter(function (response) {
     document.querySelectorAll(".js-step").forEach(function (el) {
       if (el.isSameNode(response.element)) {} else {
-        el.classList.add("lg:opacity-0", "lg:invisible");
-        el.classList.remove("lg:opacity-100");
+        el.classList.add("md:opacity-0", "md:invisible");
+        el.classList.remove("md:opacity-100");
       }
     });
-    response.element.classList.remove("lg:opacity-0", "lg:invisible");
-    response.element.classList.add("lg:opacity-100");
+    response.element.classList.remove("md:opacity-0", "md:invisible");
+    response.element.classList.add("md:opacity-100");
   }).onStepExit(function (response) {}); // setup resize event
 
   window.addEventListener("resize", scroller.resize);
