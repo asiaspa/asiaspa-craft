@@ -2,20 +2,18 @@
 
 <section class="max-w-screen-xl mx-auto px-edge">
     <div class="flex items-start my-12 md:space-x-6 lg:space-x-12">
-        <div class="flex-grow">
+        <div class="flex-grow space-y-10 md:space-y-6">
             {% for entry in entries %}
-                <div class="py-2"> 
-                    {% include "_story/_component/_story-card" with {
-                        'entry': entry,
-                        'layout':'card sm:widelist md:widelist lg:widelist',
-                        'size': 'lg',
-                        'byline': true	
-                    } %}
-                </div>
+                {% include "_story/_component/_story-card" with {
+                    'entry': entry,
+                    'layout':'card sm:widelist md:widelist lg:widelist',
+                    'size': 'lg',
+                    'byline': true	
+                } %}
             {% endfor %}
         </div>
         <div class="sticky flex-none hidden md:block top-8"  >
-        {% include '_component/_adblock' with {'adgroup': ['or', ad.adHalfPage, ad.adMediumRectangle] } %}
+            {% include '_component/_adblock' with {'adgroup': ['or', ad.adHalfPage, ad.adMediumRectangle] } %}
         </div>
     </div>
 </section>
