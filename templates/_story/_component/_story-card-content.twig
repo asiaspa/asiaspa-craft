@@ -29,6 +29,6 @@
         {% endif %}
     </a>
     {% if byline == true %}
-        {% include "_user/_byline" %}
+        {% include "_user/_byline" with {'user': entry.storyByline[0] ?? null } %}
     {% endif %}
 </div>

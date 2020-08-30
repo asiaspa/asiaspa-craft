@@ -24,6 +24,12 @@
         'homeHeroStory.storyByline',
 ]) %}
 
+{# -------------------  query ------------------- #}
+{% set offset = offset ?? 0 %}
+{% set limit = limit ?? 5 %}
+
+
+
 {# -------------------  Content  ------------------- #}
 {% block main %}
 {% if entry.homeHeroStory %}
@@ -39,8 +45,12 @@
 {% endif %}
 
 {% include "_ad/_adblock" %}
-
 {% include "_category/_layout-builder" with {'matrix': entry.layoutBuilder } %}
-{{ sprig('_category/_story-filter') }}
+
+<div class="max-w-screen-xl pt-16 mx-auto px-edge">
+    <h3 class="inline-block pb-4 text-4xl border-b-2 font-display md:text-4xl border-primary-500">Latest Stories</h3>
+</div>
+
+{{ sprig("_story/_sprig/_pagination") }}
 
 {% endblock %}

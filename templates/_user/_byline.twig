@@ -1,15 +1,22 @@
-{% set storyByline %}
-    <p class="text-gray-500"><i>by</i> {{ entry.storyByline | length ? entry.storyByline[0].title : siteName }}</p>
-{% endset %}
 
-{% if entry.storyByline | length and entry.storyByline[0].userBio is not empty and entry.storyByline[0].userProfilePic is not empty %}
-<a class="text-bg" href="{{ url('/user/' ~ entry.storyByline[0].title|url_encode ) }}">
-    {{ storyByline }}
-</a>
-{% else %}
-{{ storyByline }}
+{% set defaultUser = craft.tags
+    .group('user')
+    .slug('AsiaSpa')
+    .with(['userProfilePic'])
+    .one()
+%}
+
+{% if user == null %}
+{% set user = defaultUser %}
 {% endif %}
 
+{% set entriesQuery = craft.entries.relatedTo(user) %}
 
-
-
+<a class="flex items-center" {% if entriesQuery.count() %} href="{{ url('/user/' ~ user.title|url_encode ) }}" {% endif %}>
+    <div class="w-8 h-8 mr-4 overflow-hidden rounded-full" >
+        {% include "_component/_imager" with { image : user.userProfilePic[0] ?? null , w : 1, h : 1 } %}
+    </div>
+    <div>
+        <p class="text-sm leading-none"><i>by </i> {{ user.title }}</p>
+    </div>
+</a>  

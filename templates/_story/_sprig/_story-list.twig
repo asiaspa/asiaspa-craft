@@ -1,0 +1,32 @@
+{% if entries %}
+
+<section class="max-w-screen-xl mx-auto px-edge">
+    <div class="flex items-start my-12 md:space-x-6 lg:space-x-12">
+        <div class="flex-grow">
+            {% for entry in entries %}
+                <div class="py-2"> 
+                    {% include "_story/_component/_story-card" with {
+                        'entry': entry,
+                        'layout':'card sm:widelist md:widelist lg:widelist',
+                        'size': 'lg',
+                        'byline': true	
+                    } %}
+                </div>
+            {% endfor %}
+        </div>
+        <div class="sticky flex-none hidden md:block top-8"  >
+        {% include '_component/_adblock' with {'adgroup': ['or', ad.adHalfPage, ad.adMediumRectangle] } %}
+        </div>
+    </div>
+</section>
+
+{# =================== Load more Ad ======================== #}
+{% if loop > 0 %}
+<div s-target="this" s-swap="afterend" sprig s-trigger="revealed">
+{% include '_component/_adblock' with {'adgroup': ['or', ad.adBillboard, ad.adLeaderboard]} %}
+    <input type="hidden" name="offset" value="{{ offset + limit }}">
+    <input type="hidden" name="loop" value="{{ loop - 1 }}">
+</div>
+{% endif %}
+
+{% endif %} 

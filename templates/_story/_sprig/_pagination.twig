@@ -1,0 +1,35 @@
+{# ! use a fake excludeId to resove the .id() issue#}
+
+{% minify %}
+{# -------------------  query ------------------- #}
+{% set relationId = relationId ?? null %}
+{% set excludeIds = excludeIds ?? '0' %}
+{% set excludeIdsString = excludeIds|split(',')|join(', not ') %}
+{% set offset = offset ?? 0 %}
+{% set limit = limit ?? 5 %}
+{% set loop = loop ?? 3 %}
+
+{% set entriesQuery = craft.entries()
+    .section('story')
+    .relatedTo(relationId)
+    .id('and, not ' ~ excludeIdsString )
+    .with([
+        'storyHeroImage',
+        'storyCategory',
+        'storyPrintIssue',
+        'storyTag',
+        'storyByline',
+        'storyByline.userProfilePic',
+
+    ])
+    .orderBy('postDate desc')
+    .offset(offset)
+    .limit(limit)
+%}
+
+{% set entries = entriesQuery.all() %}
+
+{# -------------------  content  ------------------- #}
+{% include "_story/_sprig/_story-list" with {'entries': entries} %}
+
+{% endminify %}

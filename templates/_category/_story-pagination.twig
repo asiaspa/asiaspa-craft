@@ -26,6 +26,6 @@
 {% set entries = entriesQuery.all() %}
 
 {# -------------------  content  ------------------- #}
-{% include "_story/_story-pagination" with {'entries': entries} %}
+{% include "_story/_sprig/_pagination" with {'entries': entries} %}
 
 {% endminify %}
