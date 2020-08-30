@@ -1,20 +1,5 @@
-{# <section class="max-w-screen-md pt-32 mx-auto px-edge"> 
-    <h1 class="text-5xl font-hairline leading-none text-white font-display">
-        <span class="block">Awards</span>
-        <span class="block">Categories</span>
-    </h1>
-    <div class="pt-16 font-sans text-lg font-light tracking-wide text-white md:text-2xl">
-    {{ entry.asiaspaAwardsIntroCategories}}
-    </div>
-</section>
-
-<section class="max-w-screen-xl pt-16 mx-auto px-edge"> 
-<div class="grid grid-cols-2 border-t border-l border-gray-700 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-    {% for category in entry.asiaspaAwardsAwardsCategories if category.level == 2 %}
-        <span class="px-4 py-2 text-sm text-white border-b border-r border-gray-700 md:text-base" data-tippy-content="{{ category.asiaspaAwardsCategoryCriteria }}">{{ category.title }}</span>
-    {% endfor %}
-</div>
-</section> #}
+{% set allCategories = entry.asiaspaAwardsAwardsCategories %}
+{% set allCategoriesByGroup = allCategories | group('categoryGroup.label') %}
 
 <aside id="awards" class="fixed inset-0 z-50 overflow-y-auto transition duration-300 transform -translate-y-full bg-black">
     <div class="fixed top-0 z-20 w-full transition duration-300 bg-black">
@@ -24,18 +9,34 @@
         </div>
     </div>
 
-   <section class="max-w-screen-md pt-32 mx-auto px-edge" data-sal="slide-down"> 
-        <h1 class="text-5xl font-hairline leading-none text-white font-display">
-            <span class="block">Enter</span>
-            <span class="block">The</span>
+   <section class="max-w-screen-lg py-32 mx-auto px-edge"> 
+        <h2 class="mb-8 text-6xl font-hairline leading-none text-white font-display">
             <span class="block">Awards</span>
-        </h1>
-        <div class="pt-16 font-sans text-base font-hairline tracking-wide text-white ">{{ entry.asiaspaAwardsIntroEnter}}</div>
-    </section>
+            <span class="block">Categories</span>
+        </h2>
 
-    <section class="max-w-screen-md pt-16 mx-auto px-edge" data-sal="slide-down"> 
-        <div class="pt-16 font-sans text-base font-hairline tracking-wide text-white ">
-        {{ 'enable form here' |t }}
+        <div x-data="{active:0}">
+        {% for group, categories in allCategoriesByGroup %}
+            <button class="flex items-center justify-between w-full py-4 my-4 text-white border-b border-white"
+                @click.prevent="active = {{ loop.index }}">
+                <span class="text-4xl font-hairline tracking-wide font-headline">{{ group }}</span>
+                <div>
+                    <span :class="{'hidden': active === {{ loop.index }} }">{% include "_component/_icon" with {"icon":"icon-plus", w:24, h:24}%}</span>
+                    <span :class="{'hidden': active !== {{ loop.index }} }">{% include "_component/_icon" with {"icon":"icon-minus", w:24, h:24} %}</span>
+                </div>
+            </button>
+            <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3"
+                x-show="active === {{ loop.index }}"
+                x-transition:enter-start="opacity-0 transform scale-y-0"
+                x-transition:enter-end="opacity-100 transform scale-y-100">
+            {% for category in categories %}
+                <div class="space-y-4">
+                    <h4 class="text-2xl tracking-wide text-white md:text-3xl font-headline">{{ category.categoryName}}</h4>
+                    <p class="font-sans text-white">{{ category.criteria }}</p>
+                </div>
+            {% endfor %}
+            </div>
+        {% endfor %}
         </div>
     </section>
 </aside>
