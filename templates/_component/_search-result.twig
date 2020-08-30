@@ -1,0 +1,65 @@
+{# -------- query ---------- #}
+{% set query = query ?? "" %}
+{% set offset = offset ?? 0 %}
+{% set limit = _limit ?? 12 %}
+
+{% set entriesQuery = craft.entries({
+    search: 'title:' ~ query ,
+    section : 'story',
+    offset: offset,
+    limit: limit,
+    with: [
+        'storyHeroImage',
+        'storyCategory',
+        'storyPrintIssue'
+    ]
+}) %}
+
+{% set entries = entriesQuery.all() %}
+
+{% if sprig.include %}
+<input sprig
+        s-trigger="keyup changed delay:500ms"
+        class="w-full py-6 text-3xl text-black placeholder-black bg-transparent border-b border-gray-500 appearance-none"
+        s-target="#search-results"
+        {# s-swap="outerHTML" #}
+        placeholder="Search"
+        type="search"
+        name="query"
+        value="{{ query }}" />
+{% endif %}
+
+<div id="search-results">
+    {% if query is empty or entries | length == 0 %}
+     <ul class="py-16">
+        {% for node in craft.navigate.raw('header ') %}
+        <li>
+            <a class="block text-6xl font-hairline tracking-wide transition duration-300 border-b border-primary-300 font-display hover:border-black"
+                href="{{ node.url }}">{{ node.name }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <div class="flex flex-wrap my-16 -mx-6">
+        {% for entry in entries %}
+            <div class="w-full px-6 py-4 md:py-6 sm:w-1/2 md:w-1/3 lg:w-1/4">
+            {% include "_story/_component/_story-card" with {
+                'entry': entry,
+                'layout': 'list sm:card md:card lg:card',
+                'size': 'md',
+                'byline': false	
+            } %}
+            </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    {% if entriesQuery.count() > (offset + limit) %}
+        <div s-target="this" s-swap="outerHTML">
+            <input type="hidden" name="offset" value="{{ offset + limit }}">
+            <button sprig>Load another</button>
+        </div>
+    {% endif %}
+
+
+</div>

@@ -56,7 +56,7 @@ name: Tag
 siteSettings:
   5058e36f-39fa-4fe2-982d-2a6082be4a27:
     hasUrls: true
-    template: /categories/_generic
+    template: _category/_generic
     uriFormat: 'tag/{slug}'
 structure:
   maxLevels: 1

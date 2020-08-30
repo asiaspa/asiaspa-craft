@@ -258,9 +258,9 @@
 
                 {% elseif field.type == "submit" %}
                     
-                    <button class="space-x-4 font-sans text-black transition duration-300 border-b border-black hover:border-primary-500 hover:text-primary-500">
+                    <button class="space-x-4 font-sans text-white transition duration-300 border-b border-white hover:border-primary-500 hover:text-primary-500">
                         <span>Submit</span>
-                        {% include "_components/_icon" with {'icon':'icon-arrow-right', w:48, h:48 } %}
+                        {% include "_component/_icon" with {'icon':'icon-arrow-right', w:48, h:48 } %}
                     <button> 
 
                     {# {{ field.render({ class: "border-black border-b text-black hover:border-primary-500 hover:text-primary-500 transition duration-300 text-black font-sans py-2 px-6  mr-2" }) }} #}

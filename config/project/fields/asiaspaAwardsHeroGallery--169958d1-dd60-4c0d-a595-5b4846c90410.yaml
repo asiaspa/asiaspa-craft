@@ -1,7 +1,7 @@
 contentColumnType: string
 fieldGroup: c988c230-88d1-42da-86a6-8a60a7a243f8
 handle: asiaspaAwardsHeroGallery
-instructions: ''
+instructions: 'Select 4 images'
 name: 'AsiaSpa Awards - Hero Gallery'
 searchable: false
 settings:
@@ -10,7 +10,7 @@ settings:
     - image
   defaultUploadLocationSource: 'volume:883ab42c-10f1-4e32-a559-61f23e4e3775'
   defaultUploadLocationSubpath: ''
-  limit: '12'
+  limit: '4'
   localizeRelations: false
   restrictFiles: '1'
   selectionLabel: ''

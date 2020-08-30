@@ -1,0 +1,47 @@
+{# -------------------  query ------------------- #}
+{% set entrySlug = entrySlug ?? entry.slug %}
+{% set entry = craft.entries
+    .section('story')
+    .slug(entrySlug)
+    .with([
+        'storyHeroImage',
+        'storyByline',
+        'storyByline.userProfilePic',
+        'storyCategory',
+        'storyPrintIssue',
+        'storyTag'
+    ]).one() %}
+
+{% set prevEntry = entry.getPrev({section:'story', orderBy:'postDate' }) %}
+
+{% set placeholder = "" %}
+{% set sideCar = "md:bg-secondary-100 md:fixed md:inset-0 md:w-1/2 flex items-center justify-center" %}
+{# -------------------  content ------------------- #}
+<article class="flex">
+    <div class="hidden w-1/2 md:block bg-secondary-100"></div>
+    <div class="flex flex-col justify-center w-full md:w-1/2 px-edge md:mt-96">
+
+        {% include "_story/_component/_story-hero" %}
+        {% include "_story/_component/_story-builder" with {'matrix': entry.storyBuilder } %}
+
+        {# tricks to restore hero image when scroll back #}
+        <section class="opacity-0 js-step md:opacity-0">
+            <div class="{{ sideCar }}">
+                {% include "_component/_imager" with { 'image':entry.storyHeroImage[0], 'zoom':true, 'mode':'fit' } %}
+            </div>
+        </section>
+    </div>
+</article>
+
+
+
+{% if prevEntry %}
+<section class="flex justify-end" s-target="this" s-swap="afterend" sprig s-trigger="revealed" s-push-url="{{ prevEntry.url }}">
+    <div class="w-full md:w-1/2">
+        <div class="relative z-50 pb-16 ">
+        {% include '_component/_adblock' with {'adgroup': ['or', ad.adBillboard, ad.adLeaderboard]} %}
+            <input type="hidden" name="entrySlug" value="{{ prevEntry.slug }}">
+        </div>
+    </div>
+</section>
+{% endif %} 

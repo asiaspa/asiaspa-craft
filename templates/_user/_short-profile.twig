@@ -1,0 +1,24 @@
+{% set defaultUser = craft.tags
+    .group('user')
+    .slug('AsiaSpa')
+    .with(['userProfilePic'])
+    .one()
+%}
+
+{% if user == null %}
+{% set user = defaultUser %}
+{% endif %}
+
+{% set entriesQuery = craft.entries.relatedTo(user) %}
+ 
+<a class="flex items-center" {% if entriesQuery.count() %} href="{{ url('/user/' ~ user.title|url_encode ) }}" {% endif %}>
+    <div class="w-16 h-16 mr-4 overflow-hidden rounded-full" >
+        {% include "_component/_imager" with { image : user.userProfilePic[0] ?? null , w : 1, h : 1 } %}
+    </div>
+    <div>
+        <p class="leading-none text-gray-900">{{ user.title }}</p>
+        {% if date %}
+        <p class="mt-2 text-gray-500">{{ date | date("M d, Y") }}</p>
+        {% endif %}
+    </div>
+</a>

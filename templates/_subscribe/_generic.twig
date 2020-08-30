@@ -8,6 +8,7 @@
 
 {% set printsQuery = craft.entries
    .section('print')
+   .search('*'~'issue'~'*')
    .with([
         'printCoverImage'
    ])
@@ -17,7 +18,7 @@
 {% set prints = printsQuery.all() %}
 
 {# ===================== Query ===================== #}
-{% extends "_layouts/_generic" %}
+{% extends "_layout/_generic" %}
 
 {% block main %}
 
@@ -25,20 +26,20 @@
     <div class="flex flex-col items-center md:flex-row -ml-screen-xl">
         <div class="w-full md:w-1/2 lg:w-2/3 bg-secondary-100 ">
             <div class="py-16 px-1/4 md:px-1/3 " data-sal="slide-up">
-                {% include "_components/_imager" with {'image': prints|first.printCoverImage[0] ?? null, 'zoom': true} %}
+                {% include "_component/_imager" with {'image': prints|first.printCoverImage[0] ?? null, 'zoom': true} %}
             </div>
         </div>
         <div class="w-full space-y-4 md:w-1/2 lg:w-5/12 p-edge">
             <h1 class="text-4xl font-hairline font-display md:text-5xl">{{ entry.title }}</h1>
             <div class="font-serif prose md:prose-lg">{{ entry.subscribeRichTextEditor }}</div>
             <div class="flex justify-between space-x-4">
-                <a class="flex items-center justify-between h-12 space-x-2 transition duration-300 border-b border-black hover:text-primary-500 hover:border-primary-500" href="{{ entry.subscribePhysicalSubscriptionLink}}" target="_blank" >
-                    {% include "_components/_icon" with { 'icon':'icon-arrow-left', w:48, h:48 } %} 
+                {# <a class="flex items-center justify-between h-12 space-x-2 transition duration-300 border-b border-black hover:text-primary-500 hover:border-primary-500" href="{{ entry.subscribePhysicalSubscriptionLink}}" target="_blank" >
+                    {% include "_component/_icon" with { 'icon':'icon-arrow-left', w:48, h:48 } %} 
                     <span>Physical Edition</span>
-                </a>                   
+                </a>                    #}
                 <a class="flex items-center justify-between h-12 space-x-2 transition duration-300 border-b border-black hover:text-primary-500 hover:border-primary-500" href="{{ entry.subscribeDigitalSubscriptionLink}}" target="_blank" >
-                    <span>Digital Edition</span>
-                    {% include "_components/_icon" with { 'icon':'icon-arrow-right', w:48, h:48 } %} 
+                    <span>Subscribe on Magzter</span>
+                    {% include "_component/_icon" with { 'icon':'icon-arrow-right', w:48, h:48 } %} 
                 </a>                
 
             </div>
@@ -54,7 +55,7 @@
         {% for print in prints %}
         <a class="flex flex-col space-y-2 text-center" href="{{ print.url }}"  target="_blank" data-sal="slide-up">
             <div class="p-4 md:p-12 bg-secondary-100">
-                {% include "_components/_imager" with {'image':print.printCoverImage[0] ?? null } %}
+                {% include "_component/_imager" with {'image':print.printCoverImage[0] ?? null } %}
             </div>
             <h3 class="text-lg font-light tracking-wide font-headline ">{{ print.title }}</h3>
         </a>

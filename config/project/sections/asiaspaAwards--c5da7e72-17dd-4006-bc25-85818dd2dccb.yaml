@@ -18,6 +18,6 @@ siteSettings:
   5058e36f-39fa-4fe2-982d-2a6082be4a27:
     enabledByDefault: true
     hasUrls: true
-    template: _awards/_generic
+    template: _award/_generic
     uriFormat: 'asiaspa-awards/{slug}'
 type: channel

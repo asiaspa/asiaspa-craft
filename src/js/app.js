@@ -1,22 +1,27 @@
+// module 
 import lazySizes from 'lazysizes';
 import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 import 'lazysizes/plugins/blur-up/ls.blur-up';
+
 import 'alpinejs';
 import "intersection-observer";
 import scrollama from "scrollama";
 import sal from 'sal.js';
-import mediumZoom from 'medium-zoom';
-import Swiper from 'swiper/bundle'; // import Swiper styles
-// import 'swiper/swiper-bundle.css';\
+import Chocolat from 'chocolat'
+// import mediumZoom from 'medium-zoom';
 import tippy from 'tippy.js';
 import 'tippy.js/dist/tippy.css'; 
-// import lax from 'lax.js';
+
+// not yet
+import Swiper from 'swiper/bundle'; // import Swiper styles
+// import 'swiper/swiper-bundle.css';
+
 
 // key - retrigger script after htmx works
 function initScript() {
     console.log('initScript() Run');
     sal();
-    mediumZoom('[data-zoomable]');
+    // mediumZoom('[data-zoomable]');
     tippy('[data-tippy-content]');
     
     const swiperCarousel = new Swiper('.js-swiper-carousel', {
@@ -142,15 +147,6 @@ function initScript() {
     })
 
 
-    // vertical
-    const swiperVerticalLoop = new Swiper('.js-swiper-vertical-loop', {
-        // loop: true,
-        // spaceBetween: 24,
-        direction: 'vertical',
-        // speed: 300,
-        // slidesPerView: 3,
-    })
-
     const scroller = scrollama();
     scroller.setup({
             step: ".js-step",
@@ -172,6 +168,10 @@ function initScript() {
 
     // setup resize event
     window.addEventListener("resize", scroller.resize)  ;
+
+    Chocolat(document.querySelectorAll('.chocolat-image'), {
+        // options here
+    })
 
 }
 

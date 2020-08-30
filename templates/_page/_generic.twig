@@ -1,0 +1,33 @@
+{% do craft.app.elements.eagerLoadElements(className(entry), [entry], [
+        'pageHeroImage'
+]) %}
+
+{% extends "_layout/_generic" %}
+
+{% block main %}
+
+{% set content %}
+    <h1 class="text-4xl font-hairline font-display md:text-5xl">{{ entry.title }}</h1>
+    {% include "_page/_page-builder" with {'matrix': entry.pageBuilder } %}
+{% endset %}
+
+{% if entry.pageHeroImage %}
+
+<section class="flex flex-col items-start max-w-screen-xl mx-auto lg:mt-16 lg:flex-row ">
+    <div class="w-full lg:sticky lg:w-1/2 lg:top-8">
+        {% include "_component/_imager" with { 'image': entry.pageHeroImage[0], 'zoom': true } %}
+    </div>
+    <div class="w-full lg:w-1/2 p-edge">
+        {{ content }}
+    </div>
+</section>
+
+{% else %}
+
+<section class="justify-center max-w-screen-lg mx-auto md:mt-8 p-edge">
+    {{ content }}
+</section>
+
+{% endif %}
+
+{% endblock %}

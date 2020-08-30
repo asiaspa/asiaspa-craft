@@ -1,0 +1,27 @@
+{% extends "_layout/_empty" %}
+
+{# -------------------  query ------------------- #}
+{% do craft.app.elements.eagerLoadElements(className(entry), [entry], [ 
+        'asiaspaAwardsIntroGallery',
+        'asiaspaAwardsJudges.profilePic',
+        'asiaspaAwardsJudgesOthers.profilePic',
+        'asiaspaAwardsSponsorship:logo',
+]) %}
+
+{% block main %}
+<div class="w-full min-h-screen" style="background: #111">
+{% include "_award/_component/_header" %}
+{% include "_award/_component/_intro" %}
+{% include "_award/_component/_judges" %}
+{# {% include "_award/_component/_sponsorship" %} #}
+
+{% include "_award/_component/_footer" %}
+
+</div>
+
+{% include "_award/_component/_awards" %}
+{% include "_award/_component/_enter" %}
+{% include "_award/_component/_nominees" %}
+{% include "_award/_component/_winners" %}
+
+{% endblock %}

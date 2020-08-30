@@ -1,0 +1,34 @@
+{% set break = false %}
+
+{%- set headlineStyle -%}
+{% for layout in layouts if not break %}
+{% set pattern = layout|split(':') %}
+{% set p = pattern|first == "" ? "" : pattern|first ~ ":" %}
+    {% if size == pattern|first %}
+        {% set break = true %}
+    {% endif %}
+    {% switch pattern|first %}
+        {% case '' %}{% if pattern|last == 'card' or pattern|last == 'widecard' %}text-xl {% else %}text-lg {% endif %}
+        {% case 'sm' %}{{ p }}text-xl
+        {% case 'md' %}{{ p }}text-2xl
+        {% case 'lg' %}{{ p }}text-3xl
+    {% endswitch %}
+{% endfor %}
+{%- endset -%}
+
+<div class="space-y-2">
+    <div class="space-x-4">
+        {% include "_category/_category-tag" with { category : entry.storyCategory } %}
+        {% include "_category/_category-tag" with { category : entry.storyPrintIssue } %}
+    </div>
+    <a class="space-y-4" href="{{ entry.url }}">
+        <h4 class="font-light leading-tight tracking-wide font-headline text-bg {{ headlineStyle }} ">{{ entry.title }}</h4>
+        {% if standfirst == true %}
+        {% include "_component/_hr" %}
+        <p class="text-sm md:text-base">{{ entry.storyStandfirst }}</p>
+        {% endif %}
+    </a>
+    {% if byline == true %}
+        {% include "_user/_byline" %}
+    {% endif %}
+</div>

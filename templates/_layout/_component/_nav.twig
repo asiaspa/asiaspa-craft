@@ -1,0 +1,42 @@
+<aside id="nav" class="fixed inset-0 z-50 overflow-y-auto transition duration-300 transform -translate-y-full bg-secondary-100">
+    {% embed "_container/_container" with { 'class': 'flex flex-col justify-between w-full min-h-full' } %}
+    {% block content %}
+    <div class="relative z-20 flex justify-between w-full">
+        <a class="block h-16 py-4" href="{{ siteUrl }}">
+            {% if website.websiteLogoSimple | length %}
+                <img class="block w-auto h-full" src="{{ rev(website.websiteLogoSimple[0].url()) }}"/>
+            {% else %}
+                <span class="h-8 p-4 text-xl font-semibold tracking-tight">{{ siteName }}</span>
+            {% endif %}
+        </a>
+        <div class="flex h-16 py-4">
+            <a href="#">CLOSE</a>
+        </div>
+    </div>
+    <div class="flex-grow" id="searchResult">
+        {{ sprig("_component/_search-result",{
+            offset: 0,
+            _limit: 12,
+        }) }}
+    </div>
+    <div class="flex flex-wrap pb-16 space-y-6 md:flex-no-wrap md:space-x-6 md:space-y-0">
+        <ul class="flex flex-row w-full space-x-4 md:w-1/4">
+            <li><a>{% include "_component/_icon" with { 'icon':'icon-logo-facebook', 'w': 32, 'h': 32} only %}</a></li>
+            <li><a>{% include "_component/_icon" with { 'icon':'icon-logo-instagram', 'w': 32, 'h': 32 } only %}</a></li>
+            <li><a>{% include "_component/_icon" with { 'icon':'icon-logo-linkedin', 'w': 32, 'h': 32 } only %}</a></li>
+        </ul>
+        <ul class="w-1/2 md:w-1/4">
+            <li><a>Advertise With Us</a></li>
+            <li><a>Contact Us</a></li>
+        </ul>
+        <ul class="w-1/2 md:w-1/4">
+            <li><a>Privacy Policy</a></li>
+            <li><a>Terms & Conditions</a></li>
+        </ul>        
+        <div class="w-full md:w-1/4">
+            <span>2020 Two2.Press. All rights reserved.</span>
+        </div>
+    </div>
+    {% endblock %}
+    {% endembed %}
+</aside>

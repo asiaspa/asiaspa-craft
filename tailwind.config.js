@@ -1,8 +1,11 @@
 module.exports = {
-    purge: {
-        // mode: 'all',
-        content: ['./templates/**/*.twig'],
-    },
+    // purge: {
+    //     content: [
+    //         'templates/*.twig',
+    //         'templates/**/*.twig',
+    //         'templates/**/**/*.twig'
+    //     ],
+    // },
     theme: {
         screens: {
             'sm': '640px',
@@ -27,9 +30,6 @@ module.exports = {
             },
             secondary: {
                 '100': 'var(--color-secondary-100)',
-                '300': 'var(--color-secondary-300)',
-                '500': 'var(--color-secondary-500)',
-                '700': 'var(--color-secondary-700)',
             },
             gray: {
                 '100': 'var(--color-gray-100)',
@@ -123,5 +123,8 @@ module.exports = {
         extendedSpacingScale: true,
         // defaultLineHeights: true,
         extendedFontSizeScale: true
+    },
+    future: {
+        removeDeprecatedGapUtilities: true,
     }
 }

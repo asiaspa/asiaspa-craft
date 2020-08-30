@@ -3,7 +3,6 @@ let mix = require('laravel-mix');
 const LaravelMixFilenameVersioning = require('laravel-mix-filename-versioning');
 require('laravel-mix-clean');
 require('mix-tailwindcss');
-require('laravel-mix-purgecss');
 require('laravel-mix-workbox');
 
 
@@ -36,12 +35,8 @@ mix
     .extract([
         'alpinejs',
         'lazysizes',
-        'medium-zoom',
-        'sal.js'
+        'medium-zoom'
     ])
-// .scripts([
-    //     'src/js/app.js'
-    // ], 'web/dist/app.js')
     .setPublicPath('web/')
     .tailwind()
     .version()
@@ -53,21 +48,26 @@ mix
     .clean({
         cleanOnceBeforeBuildPatterns:['dist/']
     })
+    .options({
+        terser: {
+            extractComments: false
+        }
+    })
+    
     // .generateSW()
 
-if (mix.inProduction()) {
-mix
-    .purgeCss({
-        content: [
-            'templates/*.twig',
-            'templates/**/*.twig',
-            'templates/**/**/*.twig',
-            'templates/**/**/**/*.twig',
-            'src/js/*.js'
-        ],
-        whitelistPatterns: [/^sal-/]
-    })
-}
+// if (mix.inProduction()) {
+// mix
+//     .purgeCss({
+//         content: [
+//             'templates/*.twig',
+//             'templates/**/*.twig',
+//             'templates/**/**/*.twig',
+//             'templates/**/**/**/*.twig'
+//         ],
+//         whitelistPatterns: [/^sal-/]
+//     })
+// }
 
 
 // Full API

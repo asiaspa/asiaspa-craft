@@ -1,0 +1,31 @@
+{# TODO: 
+    ! move Ad variable into global variable settings 
+    ! add subscription box if there is no ad
+    ! get away with the divider method
+#}  
+
+{% minify %}
+{# -------------------  query ------------------- #}
+{% set categoryId = categoryId ?? null %}
+{% set offset = offset ?? 0 %}
+{% set limit = limit ?? 5 %}
+
+{% set entriesQuery = craft.entries({
+    relatedTo: categoryId,
+    section : 'story',
+    offset: offset,
+    limit: limit,
+    with: [
+        'storyHeroImage',
+        'storyCategory',
+        'storyPrintIssue',
+        'storyTag'
+    ]
+}) %}
+
+{% set entries = entriesQuery.all() %}
+
+{# -------------------  content  ------------------- #}
+{% include "_story/_story-pagination" with {'entries': entries} %}
+
+{% endminify %}

@@ -1,0 +1,31 @@
+{% if entries %}
+
+{% embed "_container/_container"%}
+{% block content %}
+<div class="flex items-start my-12 md:space-x-6 lg:space-x-12">
+    <div class="flex-grow divide-y divide-primary-300">
+        {% for entry in entries %}
+            <div class="py-6"> 
+                {% include "_story/_component/_story-card" with {
+					'entry': entry,
+					'layout': 'widecard sm:widelist md:widelist lg:widelist',
+					'size': 'lg',
+					'byline': true	
+				} %}
+            </div>
+        {% endfor %}
+    </div>
+    <div class="sticky hidden md:block " style="top:96px;" >
+    {% include '_component/_adblock' with {'adgroup': ['or', ad.adHalfPage, ad.adMediumRectangle] } %}
+    </div>
+</div>
+
+{% endblock %}
+{% endembed %}
+
+{# =================== Load more Ad ======================== #}
+<div  s-target="this" s-swap="afterend" sprig s-trigger="revealed">
+{% include '_component/_adblock' with {'adgroup': ['or', ad.adBillboard, ad.adLeaderboard]} %}
+    <input type="hidden" name="offset" value="{{ offset + limit }}">
+</div>
+{% endif %} 

@@ -1,0 +1,9 @@
+<div class="mt-16 space-y-4">   
+    <h2 class="text-3xl font-hairline tracking-wide font-headline">Signature Treatment</h2>
+    {% include "_component/_hr" %}
+    {% for block in entry.spaService %}
+        <h3 class="text-xl font-headline md:text-2xl">{{ block.heading }}</h3>
+        <p class="font-sans">{{ block.description}}</p>
+        <p class="text-sm underline text-primary-700">{{ block.priceDuration }}</p>
+    {% endfor %}
+</div>

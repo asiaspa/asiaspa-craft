@@ -1,0 +1,11 @@
+<section class="py-24 mt-16 text-white bg-black">
+    <div class="px-6 pb-16 mx-auto lg:px-0 lg:max-w-screen-lg">
+        <p class="text-xl lg:text-2xl"> {{ 'Spa Locator'|t }}</p>
+        <div class="font-serif text-3xl lg:text-4xl">
+            <label> {{ 'Find the Best Spa in'|t }}</label>
+            <input class="w-64 p-2 bg-transparent border-b-2 border-white text-sans" type="text" placeholder="Location" value="Hong Kong" />
+        </div>
+    </div>
+{% include "_component/_slider" with { entries: spaListings, type: 'spa' } %}
+</section>
+

@@ -1,0 +1,19 @@
+<section class="my-16" x-data="{tab:1}">
+    {% embed "_container/_container" with {'breakpoint':'lg'} %}
+    {% block content %}
+    <div class="mt-16 mb-8 space-x-6">
+        {% for block in block.children.all() %}
+        <button :class="{'text-gray-500':tab != {{ loop.index }},'border-b-2 border-primary-500': tab === {{ loop.index }} }"
+                @click="tab={{ loop.index }}"
+                class="py-2 font-serif text-xl transition duration-300 md:text-2xl lg:text-3xl">{{ block.contentHeading }}</button>
+        {% endfor %}
+    </div>
+    {% endblock %}
+    {% endembed %}
+
+{% for block in block.children.all() %}
+    <div x-show="tab==={{ loop.index }}">
+        {% include "_page/_component/_" ~ block.type | lower with {'block':block} %}
+    </div>
+{% endfor %}
+</section>

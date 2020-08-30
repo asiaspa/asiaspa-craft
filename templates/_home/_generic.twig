@@ -5,7 +5,6 @@
     ! Make story carousel, story gallery to accept multiple entries source (becomes tab)
     ! Add Multicategory widget (tatler reference)
     ! Add Trending widget (allure.com reference)
-    ! Add Newsletter widget
     ! Add Spa Locator widget
     ! Add Subscription widget
     ! Add Print issue widget
@@ -13,7 +12,7 @@
     !text-underline using background style (https://codyhouse.co/ds/components/app/text-background-effects)
 #}
 
-{% extends "_layouts/_generic" %}
+{% extends "_layout/_generic" %}
 
 {# -------------------  query ------------------- #}
 {% do craft.app.elements.eagerLoadElements(className(entry), [entry], [
@@ -32,17 +31,16 @@
 {# logo #}
 <section class="bg-secondary-100">
     <div class="max-w-screen-xl mx-auto mb-32 -mt-20 px-edge">
-       {% include "_home/_components/_story-hero" %}
+       {% include "_home/_component/_story-hero" %}
     </div>
 </section>
 
 {# hero image #}
 {% endif %}
 
-{% include "_ads/_adblock" %}
+{% include "_ad/_adblock" %}
 
-
-{% include "_categories/_layout-builder" with {'matrix': entry.layoutBuilder } %}
-{{ sprig('_categories/_story-filter') }}
+{% include "_category/_layout-builder" with {'matrix': entry.layoutBuilder } %}
+{{ sprig('_category/_story-filter') }}
 
 {% endblock %}

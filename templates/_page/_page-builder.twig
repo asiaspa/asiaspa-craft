@@ -1,0 +1,10 @@
+{% set blocks = matrix.with([
+
+]) %}
+
+{% for block in matrix %}
+<section class="mt-16">
+    {% include  "_page/_block/_" ~ block.type | lower with {'block':block} %}
+</section>
+{% endfor %}
+

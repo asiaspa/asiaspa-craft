@@ -1,0 +1,22 @@
+{% if slider %}
+<div class="relative w-full h-full p-edge">
+	<div class="js-swiper-image-slider swiper-container">
+		<div class="swiper-wrapper">
+			{% for slide in slider %}
+			<div class="swiper-slide">
+				{% include "_component/_imager" with {'image': slide, 'zoom':true, 'caption': true} %}
+			</div>
+			{% endfor %}
+		</div>
+		<div class="text-right">
+			<button class="swiper-prev">
+				{% include "_component/_icon" with { 'icon':'icon-arrow-left','h':48,'w':48 } %}
+			</button>
+			<div class="relative inline mx-4 swiper-pagination"></div>
+			<button class="swiper-next">
+				{% include "_component/_icon" with { 'icon':'icon-arrow-right','h':48,'w':48 } %}
+			</button>
+		</div>
+	</div>
+</div>
+{% endif %}

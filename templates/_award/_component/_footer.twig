@@ -1,0 +1,17 @@
+{# {% set entries = craft.entries.section('asiaspaAwards').orderby('postDate desc').all() %} #}
+
+<section class="max-w-screen-xl py-16 mx-auto p-edge">
+    <div class="flex flex-col items-center justify-between text-white md:flex-row">
+        {# <div class="flex flex-col space-x-4 text-white md:flex-row">
+            <span>Awards Archive:</span>
+            {% for entry in entries %}
+                <a href="{{ entry.url }}">{{ entry.slug }}</a>
+            {% endfor %}
+        </div> #}
+        <a class="text-white border-white {{ globalStyle['button']}}" href="{{ siteUrl }}">
+            {% include "_component/_icon" with {'icon': 'icon-arrow-left', h:48, w:48} %}
+            <span>Back to AsiaSpa.com</span>
+        </a>
+        <span>© 2020 Copyright AsiaSpa site by Two2.Press</span>
+    </div>
+</section>

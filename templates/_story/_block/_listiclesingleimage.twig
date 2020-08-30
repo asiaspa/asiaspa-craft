@@ -1,0 +1,5 @@
+{% embed "_story/_block/_listicle" %}
+{% block listicle %}
+    {% include "_component/_imager" with { 'image':block.image[0] ?? '', 'zoom': true, 'caption': true } %}
+{% endblock %}
+{% endembed %}
