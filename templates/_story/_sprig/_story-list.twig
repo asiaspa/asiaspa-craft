@@ -18,13 +18,27 @@
     </div>
 </section>
 
+{{ offset }}
+ 
 {# =================== Load more Ad ======================== #}
 {% if loop > 0 %}
+
 <div s-target="this" s-swap="afterend" sprig s-trigger="revealed">
 {% include '_component/_adblock' with {'adgroup': ['or', ad.adBillboard, ad.adLeaderboard]} %}
     <input type="hidden" name="offset" value="{{ offset + limit }}">
     <input type="hidden" name="loop" value="{{ loop - 1 }}">
 </div>
+
+{% else %}
+
+ <button sprig s-vars="offset: {{ offset + limit }}" 
+    s-target="this" s-swap="outerHTML">
+    <div class="">
+        <span>Load More</span>
+        {% include "_component/_icon" with {'icon': 'icon-arrow-right', h:48, w:48} %}
+    </div>
+  </button>
+
 {% endif %}
 
 {% endif %} 

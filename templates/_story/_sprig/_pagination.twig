@@ -30,6 +30,45 @@
 {% set entries = entriesQuery.all() %}
 
 {# -------------------  content  ------------------- #}
-{% include "_story/_sprig/_story-list" with {'entries': entries} %}
+{# {% include "_story/_sprig/_story-list" with {'entries': entries} %} #}
+
+
+<section class="max-w-screen-xl mx-auto px-edge" id="pagination">
+    <div class="flex items-start my-12 md:space-x-6 lg:space-x-12">
+        <div class="flex-grow space-y-10 md:space-y-6">
+            {% for entry in entries %}
+                {% include "_story/_component/_story-card" with {
+                    'entry': entry,
+                    'layout':'card sm:widelist md:widelist lg:widelist',
+                    'size': 'lg',
+                    'byline': true	
+                } %}
+            {% endfor %}
+        </div>
+        <div class="sticky flex-none hidden md:block top-8"  >
+            {% include '_component/_adblock' with {'adgroup': ['or', ad.adHalfPage, ad.adMediumRectangle] } %}
+        </div>
+    </div>
+    
+    {% include '_component/_adblock' with {'adgroup': ['or', ad.adLeaderboard, ad.adBillboard] } %}
+ 
+</section>
+
+<button sprig 
+    {% if loop > 0 %}
+    s-vars="offset: {{ offset + limit }}, loop: {{ loop - 1 }}"
+    s-trigger="revealed" 
+    {% else %}
+    s-vars="offset: {{ offset + limit }}, loop: {{ loop + 3 }}"
+    {% endif %}
+    s-target="this" 
+    s-swap="outerHTML"
+    class="pl-screen-xl">
+    <div class="flex items-center justify-between h-12 space-x-4 tracking-wide text-black transition duration-300 border-b border-black hover:border-primary-500 hover:text-primary-500">
+        <span>Load More</span>
+        {% include "_component/_icon" with {'icon': 'icon-arrow-right', h:48, w:48} %}
+    </div> 
+</button>
+
 
 {% endminify %}
