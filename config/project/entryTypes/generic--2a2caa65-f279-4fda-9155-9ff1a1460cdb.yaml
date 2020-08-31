@@ -106,37 +106,6 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: b4860f54-a0b3-4a0a-b83f-96c01b5e3818
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-          -
-            fieldUid: 12570f9f-d945-4b47-b469-2c11fb90b92a
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-        name: Categories
-        sortOrder: 3
-      -
-        elements:
-          -
-            fieldUid: b670637b-b6cb-4564-819b-64a2c173367a
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-          -
             fieldUid: d8aa4d97-b648-46d5-8c4f-7cd5bd05380e
             instructions: null
             label: null
@@ -198,15 +167,6 @@ fieldLayouts:
             tip: 'To set up the list of nominees, you should create all the ''spa'' entry for all the nominees, and configure the ''asiaspa award - nominee'' field in the ''spa'' entry.'
             type: craft\fieldlayoutelements\Tip
           -
-            fieldUid: c98ff79d-4c15-4f7a-8e49-08c03fc67c04
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-          -
             fieldUid: e4e2cbc9-862a-4e2a-b4fb-e39739cde12b
             instructions: null
             label: null
@@ -223,24 +183,6 @@ fieldLayouts:
             style: tip
             tip: 'To set up the list of nominees, you should create all the ''spa'' entry for all the winners, and configure the ''asiaspa award - winners'' field in the ''spa'' entry.'
             type: craft\fieldlayoutelements\Tip
-          -
-            fieldUid: 086ab778-59d7-43de-a0ef-80afb9d9f9ce
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-          -
-            fieldUid: eaf56e37-6414-44dd-a6f3-0e50d529ba0b
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
           -
             fieldUid: 35afec06-b8b4-47a9-a1a0-2f2333c71c96
             instructions: null
