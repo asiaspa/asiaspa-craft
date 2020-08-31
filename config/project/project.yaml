@@ -1,7 +1,7 @@
 assets:
   tempSubpath: temp
   tempVolumeUid: 883ab42c-10f1-4e32-a559-61f23e4e3775
-dateModified: 1598845184
+dateModified: 1598846132
 email:
   fromEmail: asiaspa.dev@gmail.com
   fromName: AsiaSpa
@@ -16,6 +16,7 @@ plugins:
   ad-wizard:
     edition: standard
     enabled: true
+    licenseKey: $PLUGIN_ADWIZARD_LC
     schemaVersion: 2.1.0
   assetrev:
     edition: standard
@@ -40,6 +41,7 @@ plugins:
   easy-search:
     edition: standard
     enabled: false
+    licenseKey: $PLUGIN_EASYSEARCH_LC
     schemaVersion: 1.0.0
   elements-panel:
     edition: standard
@@ -62,6 +64,7 @@ plugins:
   freeform:
     edition: pro
     enabled: true
+    licenseKey: $PLUGIN_FREEFOM_LC
     schemaVersion: 3.0.7
     settings:
       ajaxByDefault: '1'
@@ -125,10 +128,12 @@ plugins:
   imagehotspots:
     edition: standard
     enabled: true
+    licenseKey: $PLUGIN_IMAGEHOTSPOT_LC
     schemaVersion: 1.0.0
   imager-x:
     edition: pro
     enabled: true
+    licenseKey: $PLUGIN_IMAGERX_LC
     schemaVersion: 3.0.0
   logs:
     edition: standard
@@ -153,6 +158,7 @@ plugins:
   navigate:
     edition: standard
     enabled: true
+    licenseKey: $PLUGIN_NAVIGATE_LC
     schemaVersion: 2.4.0
   navigation:
     edition: standard
@@ -175,14 +181,17 @@ plugins:
   retour:
     edition: standard
     enabled: true
+    licenseKey: $PLUGIN_RETOUR_LC
     schemaVersion: 3.0.9
   searchit:
     edition: standard
     enabled: false
+    licenseKey: $PLUGIN_SEARCHIT_LC
     schemaVersion: 1.0.4
   seomatic:
     edition: standard
     enabled: true
+    licenseKey: $PLUGIN_SEOMATIC_LC
     schemaVersion: 3.0.9
   sidebar-toggle:
     edition: standard
@@ -191,6 +200,7 @@ plugins:
   simplemap:
     edition: pro
     enabled: true
+    licenseKey: $PLUGIN_MAP_LC
     schemaVersion: 3.4.2
     settings:
       apiKey: null
@@ -255,6 +265,7 @@ plugins:
   views-work:
     edition: standard
     enabled: true
+    licenseKey: $PLUGIN_VIEWSWORK_LC
     schemaVersion: 1.0.0
 system:
   edition: pro
