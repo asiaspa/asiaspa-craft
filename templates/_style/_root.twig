@@ -1,29 +1,3 @@
-{# -------------------  Prefetch  ------------------- #}
-{% spaceless %}
-{% set prefetchUrls = [ 
-    alias("@assetsUrl"), 
-    alias("@imgixDefaultUrl"),
-    alias("@imgixExternalUrl")
-] %}
-{% set baseUrl = alias('@assetsUrl') ~ '/' %}
-{% endspaceless %}
-
-{# -------------------  Global variable  ------------------- #}
-{% set website = craft.globalSets()
-    .handle('website')
-    .with([
-        'websiteLogo',
-        'websiteLogoSimple'
-    ]).one() %}
-
-
-{# -------------  Tailwindcss Small Component Class  ---------------- #}
-{% set globalStyle = {
-    'button': 'flex items-center text-black tracking-wide justify-between border-b border-black  h-12 space-x-4 hover:border-primary-500 hover:text-primary-500 transition duration-300'
-} %}
-
-
-{# -------------  Tailwindcss CSS varible ---------------- #}
 <style>
 :root {
     --font-sans: "ivystyle-sans", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue","Arial", "Noto Sans", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -46,5 +20,3 @@
     --color-gray-700: {{ website.websiteColorGray700 }};
 }
 </style>
-
-{% block html %}{% endblock %}

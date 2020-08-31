@@ -17,13 +17,13 @@ settings:
   showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
-  singleUploadLocationSource: 'volume:4a49b85a-e6f1-4ee3-8085-cbfb50f5ce42'
-  singleUploadLocationSubpath: 'story/{slug}'
+  singleUploadLocationSource: 'volume:571cb7c1-00fa-4aef-9106-c5f0d93ffd03'
+  singleUploadLocationSubpath: '{slug}'
   source: null
   sources:
     - 'volume:571cb7c1-00fa-4aef-9106-c5f0d93ffd03'
   targetSiteId: null
-  useSingleFolder: false
+  useSingleFolder: true
   validateRelatedElements: false
   viewMode: large
 translationKeyFormat: null
