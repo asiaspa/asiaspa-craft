@@ -1,9 +1,12 @@
+{% set date = date ?? null %}
+
 {% set defaultUser = craft.tags
     .group('user')
     .slug('AsiaSpa')
     .with(['userProfilePic'])
     .one()
 %}
+
 
 {% if user == null %}
 {% set user = defaultUser %}
@@ -16,7 +19,7 @@
         {% include "_component/_imager" with { image : user.userProfilePic[0] ?? null , w : 1, h : 1 } %}
     </div>
     <div>
-        <p class="leading-none text-gray-900">{{ user.title }}</p>
+        <p class="leading-none text-gray-900">{{ 'by ' ~  user.title }}</p>
         {% if date %}
         <p class="mt-2 text-gray-500">{{ date | date("M d, Y") }}</p>
         {% endif %}

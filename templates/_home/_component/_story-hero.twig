@@ -24,6 +24,7 @@
             <h1 class="text-3xl font-hairline leading-tight tracking-wide md:text-4xl font-display">{{ homeHeroEntry.title }}</h1>
             {% include "_component/_hr" %}
             <p class="text-lg">{{ homeHeroEntry.storyStandfirst }}</p>
+            {% include "_user/_short-profile" with { 'user' : entry.storyByline[0] ?? '' } %}
         </a>
     </div>
 </div>

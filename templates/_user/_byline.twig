@@ -17,6 +17,6 @@
         {% include "_component/_imager" with { image : user.userProfilePic[0] ?? null , w : 1, h : 1 } %}
     </div>
     <div>
-        <p class="text-sm leading-none"><i>by </i> {{ user.title }}</p>
+        <p class="text-sm leading-none">{{  'by ' ~ user.title }}</p>
     </div>
 </a>  
