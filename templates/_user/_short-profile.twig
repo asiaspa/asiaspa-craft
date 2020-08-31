@@ -19,9 +19,11 @@
         {% include "_component/_imager" with { image : user.userProfilePic[0] ?? null , w : 1, h : 1 } %}
     </div>
     <div>
-        <p class="leading-none text-gray-900">{{ 'by ' ~  user.title }}</p>
         {% if date %}
+        <p class="leading-none text-gray-900">{{ user.title }}</p>
         <p class="mt-2 text-gray-500">{{ date | date("M d, Y") }}</p>
+        {% else %}
+        <p class="leading-none text-gray-900">{{ 'by ' ~ user.title }}</p>
         {% endif %}
     </div>
 </a>
