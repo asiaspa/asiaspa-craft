@@ -150,7 +150,6 @@ function initScript() {
     const scroller = scrollama();
     scroller.setup({
             step: ".js-step",
-            offset: 0.4
         })
         .onStepEnter(response => {
             document.querySelectorAll(".js-step").forEach((el) => {

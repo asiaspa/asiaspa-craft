@@ -24,7 +24,23 @@ fields:
     name: 'Q&A'
     searchable: false
     settings:
-      contentTable: '{{%stc_qa}}'
+      columns:
+        __assoc__:
+          -
+            - 47b78eee-26a2-4bf5-a380-3354130cca66
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - 99438d2e-8763-429c-a327-6ebb43171682
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+      contentTable: '{{%stc_49_qa}}'
       fieldLayout: row
       maxRows: ''
       minRows: ''

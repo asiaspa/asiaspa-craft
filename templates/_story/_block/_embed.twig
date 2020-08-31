@@ -9,10 +9,8 @@
 {% endswitch %}
 {%- endset -%}
 
-{% embed "_container/_container" with {'breakpoint': breakpoint } %} 
-{% block content %}
-<div class="pt-32">
-    {% include "_story/_component/_embed" %}
-</div>
-{% endblock %}
-{% endembed %}
+<section class="flex flex-col pt-16 transition duration-300 js-step md:opacity-0 md:invisible">
+     <div class="{{ sideCar }}">
+        {% include "_story/_component/_embed" %}
+    </div>
+</section>
