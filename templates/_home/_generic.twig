@@ -21,23 +21,16 @@
         'homeHeroStory.storyCategory',
         'homeHeroStory.storyPrintIssues',
         'homeHeroStory.storyTag',
-        'homeHeroStory.storyByline',
+        'homeHeroStory.storyByline'
 ]) %}
-
-{# -------------------  query ------------------- #}
-{% set offset = offset ?? 0 %}
-{% set limit = limit ?? 5 %}
-
-
 
 {# -------------------  Content  ------------------- #}
 {% block main %}
 {% if entry.homeHeroStory %}
-{% set homeHeroEntry = entry.homeHeroStory[0] %}
 {# logo #}
 <section class="bg-secondary-100">
     <div class="max-w-screen-xl mx-auto mb-32 -mt-20 px-edge">
-       {% include "_home/_component/_story-hero" %}
+       {% include "_home/_component/_story-hero" with {'entry': entry.homeHeroStory[0] ?? null } %}
     </div>
 </section>
 

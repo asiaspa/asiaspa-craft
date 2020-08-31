@@ -6,7 +6,7 @@
         :class="{'py-4': top === true }">
     <div class="relative flex items-center justify-between h-12 max-w-screen-xl mx-auto px-edge">
         <a class="flex items-center" class="block h-12 mr-6" href="{{ siteUrl }}">
-            {% if website.websiteLogo| length %}
+            {% if website.websiteLogo| length  and craft.app.request.url != '/' %}
                 <img class="block w-auto h-12 py-1" 
                 :class="{'hidden': top === false}"
                 src="{{ rev(website.websiteLogo[0].url()) }}" 

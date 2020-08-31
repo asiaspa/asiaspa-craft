@@ -1,30 +1,30 @@
  <div class="flex pt-8 md:pt-24">
-    {# <div class="relative z-10 w-8/12 sm:w-1/2 md:w-1/3 lg:w-1/4" style="transform:translateY(40%)">
+    <div class="relative z-10 w-8/12 sm:w-1/2 md:w-1/3 lg:w-1/4" style="transform:translateY(40%)">
     {% if website.websiteLogo | length  %}
         <img class="block w-auto h-full"
             src="{{ rev(website.websiteLogo[0].url()) }}" />
     {% endif %}
-    </div> #}
+    </div>
 </div>
 <div class="flex flex-col items-center md:flex-row sm:-mx-edge">
     <a class="w-full md:w-8/12" href="{{ entry.url }}">
         <div class="hidden -mb-16 md:block -ml-screen-xl"  >
-            {% include "_component/_imager" with { image: homeHeroEntry.storyHeroImage[0], w: 16, h: 9} %}
+            {% include "_component/_imager" with { image: entry.storyHeroImage[0], w: 16, h: 9} %}
         </div>
         <div class="block md:hidden">
-            {% include "_component/_imager" with { image: homeHeroEntry.storyHeroImage[0], w: 8, h: 9} %}
+            {% include "_component/_imager" with { image: entry.storyHeroImage[0], w: 8, h: 9} %}
         </div>
     </a>
     <div class="w-full py-8 space-y-4 sm:px-6 md:py-0 md:w-4/12">
         <div class="space-x-4">
-            {% include "_category/_category-tag" with { category : homeHeroEntry.storyCategory } %}
-            {% include "_category/_category-tag" with { category : homeHeroEntry.storyPrintIssue } %}
+            {% include "_category/_category-tag" with { category : entry.storyCategory } %}
+            {% include "_category/_category-tag" with { category : entry.storyPrintIssue } %}
         </div>
-        <a class="space-y-4 sm:pb-16" href="{{ homeHeroEntry.url }}">
-            <h1 class="text-3xl font-hairline leading-tight tracking-wide md:text-4xl font-display">{{ homeHeroEntry.title }}</h1>
+        <a class="space-y-4 sm:pb-16" href="{{ entry.url }}">
+            <h1 class="text-3xl font-hairline leading-tight tracking-wide md:text-4xl font-display">{{ entry.title }}</h1>
             {% include "_component/_hr" %}
-            <p class="text-lg">{{ homeHeroEntry.storyStandfirst }}</p>
-            {% include "_user/_short-profile" with { 'user' : entry.storyByline[0] ?? '' } %}
+            <p class="text-lg">{{ entry.storyStandfirst }}</p>
+            {% include "_user/_short-profile" with { 'user' : entry.storyByline[0] ?? null } %}
         </a>
     </div>
 </div>
