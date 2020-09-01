@@ -4,7 +4,7 @@
     <div class="flex items-start my-12 md:space-x-6 lg:space-x-12">
         <div class="flex-grow space-y-10 md:space-y-6">
             {% for entry in entries %}
-                {% include "_story/_component/_story-card" with {
+                {% include "_story/_card" with {
                     'entry': entry,
                     'layout':'card sm:widelist md:widelist lg:widelist',
                     'size': 'lg',

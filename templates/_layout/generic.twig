@@ -1,15 +1,11 @@
-{% extends "_layout/_extend/_web" %}
+{% extends "_layout/_frame/_web" %}
 
 {% block layout %}
 {# ------------------- Main  ------------------- #}
-{% include "_layout/_component/_nav" %}
+{% include "_layout/_nav" %}
 {% include "_spa/_aside" %}
 
-{# {% include "_layouts/_components/_promotion" %} #}
-{% include "_layout/_component/_header" %}
-
-
-
+{% include "_layout/_header" %}
 <main>
     {% block main %}
     {% endblock %}
@@ -18,7 +14,7 @@
 {# ------------------- Footer ------------------- #}
 {% set section = entry.getSection() | default(entry.getSection() ?? null) %}
 {% if section != 'Story' %}
-    {% include "_layout/_component/_footer" %}
+    {% include "_layout/_footer" %}
 {% endif %}
 
 {% endblock %}
