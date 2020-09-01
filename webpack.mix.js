@@ -5,7 +5,6 @@ require('laravel-mix-clean');
 require('mix-tailwindcss');
 require('laravel-mix-workbox');
 
-
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -37,7 +36,7 @@ mix
         'lazysizes',
         'medium-zoom'
     ])
-    .setPublicPath('web/')
+    .setPublicPath('web')
     .tailwind()
     .version()
     .webpackConfig({
@@ -55,19 +54,6 @@ mix
     })
     
     // .generateSW()
-
-// if (mix.inProduction()) {
-// mix
-//     .purgeCss({
-//         content: [
-//             'templates/*.twig',
-//             'templates/**/*.twig',
-//             'templates/**/**/*.twig',
-//             'templates/**/**/**/*.twig'
-//         ],
-//         whitelistPatterns: [/^sal-/]
-//     })
-// }
 
 
 // Full API

@@ -19777,10 +19777,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var sal_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! sal.js */ "./node_modules/sal.js/dist/sal.js");
 /* harmony import */ var sal_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(sal_js__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var chocolat__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! chocolat */ "./node_modules/chocolat/dist/js/chocolat.esm.js");
-/* harmony import */ var tippy_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! tippy.js */ "./node_modules/tippy.js/dist/tippy.esm.js");
-/* harmony import */ var tippy_js_dist_tippy_css__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! tippy.js/dist/tippy.css */ "./node_modules/tippy.js/dist/tippy.css");
-/* harmony import */ var tippy_js_dist_tippy_css__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(tippy_js_dist_tippy_css__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var swiper_bundle__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! swiper/bundle */ "./node_modules/swiper/swiper-bundle.esm.js");
+/* harmony import */ var medium_zoom__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! medium-zoom */ "./node_modules/medium-zoom/dist/medium-zoom.esm.js");
+/* harmony import */ var tippy_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! tippy.js */ "./node_modules/tippy.js/dist/tippy.esm.js");
+/* harmony import */ var tippy_js_dist_tippy_css__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! tippy.js/dist/tippy.css */ "./node_modules/tippy.js/dist/tippy.css");
+/* harmony import */ var tippy_js_dist_tippy_css__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(tippy_js_dist_tippy_css__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var swiper_bundle__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! swiper/bundle */ "./node_modules/swiper/swiper-bundle.esm.js");
 // module 
 
 
@@ -19789,7 +19790,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
- // import mediumZoom from 'medium-zoom';
+
 
 
  // not yet
@@ -19802,8 +19803,8 @@ function initScript() {
   console.log('initScript() Run');
   sal_js__WEBPACK_IMPORTED_MODULE_6___default()(); // mediumZoom('[data-zoomable]');
 
-  Object(tippy_js__WEBPACK_IMPORTED_MODULE_8__["default"])('[data-tippy-content]');
-  var swiperCarousel = new swiper_bundle__WEBPACK_IMPORTED_MODULE_10__["default"]('.js-swiper-carousel', {
+  Object(tippy_js__WEBPACK_IMPORTED_MODULE_9__["default"])('[data-tippy-content]');
+  var swiperCarousel = new swiper_bundle__WEBPACK_IMPORTED_MODULE_11__["default"]('.js-swiper-carousel', {
     // Optional parameters
     // loop: true,
     // autoHeight: true,
@@ -19831,7 +19832,7 @@ function initScript() {
       draggable: true
     }
   });
-  var swiperSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_10__["default"]('.js-swiper-slider', {
+  var swiperSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_11__["default"]('.js-swiper-slider', {
     // Optional parameters
     // loop: true,
     // autoHeight: true,
@@ -19859,7 +19860,7 @@ function initScript() {
       draggable: true
     }
   });
-  var swiperImageSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_10__["default"]('.js-swiper-image-slider', {
+  var swiperImageSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_11__["default"]('.js-swiper-image-slider', {
     // loop: true,
     // autoHeight: true,
     speed: 300,
@@ -19878,7 +19879,7 @@ function initScript() {
       prevEl: '.swiper-prev'
     }
   });
-  var swiperProductCarousel = new swiper_bundle__WEBPACK_IMPORTED_MODULE_10__["default"]('.js-swiper-product-carousel', {
+  var swiperProductCarousel = new swiper_bundle__WEBPACK_IMPORTED_MODULE_11__["default"]('.js-swiper-product-carousel', {
     // loop: true,
     spaceBetween: 24,
     // autoHeight: true,
@@ -19899,7 +19900,7 @@ function initScript() {
       prevEl: '.swiper-prev'
     }
   });
-  var swiperSpaCarousel = new swiper_bundle__WEBPACK_IMPORTED_MODULE_10__["default"]('.js-swiper-spa-carousel', {
+  var swiperSpaCarousel = new swiper_bundle__WEBPACK_IMPORTED_MODULE_11__["default"]('.js-swiper-spa-carousel', {
     // loop: true,
     spaceBetween: 24,
     // autoHeight: true,

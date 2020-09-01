@@ -8,7 +8,7 @@ import "intersection-observer";
 import scrollama from "scrollama";
 import sal from 'sal.js';
 import Chocolat from 'chocolat'
-// import mediumZoom from 'medium-zoom';
+import mediumZoom from 'medium-zoom';
 import tippy from 'tippy.js';
 import 'tippy.js/dist/tippy.css'; 
 

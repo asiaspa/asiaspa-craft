@@ -1,7 +1,14 @@
 module.exports = {
-    purge: [
-            './templates/**/*.twig'
+    purge: {
+        // enabled: true,
+        content: [
+            './templates/*.twig',
+            './templates/**/*.twig',
         ],
+        options: {
+            whitelist: [''],
+        },
+    },
     theme: {
         screens: {
             'sm': '640px',
@@ -84,7 +91,7 @@ module.exports = {
                 css: {
                     lineHeight: 1.7,
                 }
-            },
+            }
         },
         extend: {
             padding: {
