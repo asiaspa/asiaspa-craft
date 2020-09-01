@@ -4,7 +4,9 @@
     "italic",
     "link",
     "unorderedlist",
-    "orderedlist"
+    "orderedlist",
+    "redo",
+    "undo"
   ],
   "plugins": [
     "counter",
@@ -12,5 +14,6 @@
   ],
   "linkNewTab": false,
   "linkTarget": "_blank",
+  "pasteLinkTarget": "_blank",
   "toolbarFixed": true
 }

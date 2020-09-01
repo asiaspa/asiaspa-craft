@@ -1,0 +1,19 @@
+<section class="max-w-screen-md pt-32 mx-auto px-edge" data-sal="slide-up"> 
+    <h1 class="text-5xl font-hairline leading-none text-white font-display">
+        <span class="block">The</span>
+        <span class="block">Sponsorship</span>
+    </h1>
+    <div class="pt-16 font-sans text-lg font-light tracking-wide text-white md:text-2xl">
+        {{ 'Thanks for the contribution from these parties, we have successfully launch the AsiaSpa Award 2020'}}
+    </div>
+</section>
+
+<section class="max-w-screen-md pt-16 mx-auto px-edge" data-sal="slide-up"> 
+<div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+    {% for sponsor in entry.asiaspaAwardsSponsorship %}
+        <div class="flex items-center align-center" data-tippy-content="{{ sponsor.description }}">
+            {% include "_component/_imager" with {'image': sponsor.logo[0] } %}
+        </div>
+    {% endfor %}
+</div>
+</section>

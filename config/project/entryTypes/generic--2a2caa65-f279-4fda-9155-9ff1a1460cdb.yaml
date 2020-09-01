@@ -7,7 +7,6 @@ fieldLayouts:
             autocapitalize: true
             autocomplete: false
             autocorrect: true
-            autofocus: false
             class: null
             disabled: false
             id: null
@@ -94,28 +93,6 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            type: craft\fieldlayoutelements\HorizontalRule
-          -
-            fieldUid: 4c1ebe46-2710-44f3-ba56-e4d0e7a3135d
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 50
-          -
-            fieldUid: 123697cb-e398-4943-8570-7241dd6b451a
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 50
-          -
-            type: craft\fieldlayoutelements\HorizontalRule
-          -
             fieldUid: feb675da-2fb3-458d-912e-3bf9a45b80c2
             instructions: null
             label: null
@@ -126,6 +103,30 @@ fieldLayouts:
             width: 100
         name: Intro
         sortOrder: 2
+      -
+        elements:
+          -
+            fieldUid: d8aa4d97-b648-46d5-8c4f-7cd5bd05380e
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            type: craft\fieldlayoutelements\HorizontalRule
+          -
+            fieldUid: 123697cb-e398-4943-8570-7241dd6b451a
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Judges
+        sortOrder: 4
       -
         elements:
           -
@@ -158,15 +159,24 @@ fieldLayouts:
             warning: null
             width: 100
         name: Enter
-        sortOrder: 3
+        sortOrder: 5
       -
         elements:
           -
             style: tip
             tip: 'To set up the list of nominees, you should create all the ''spa'' entry for all the nominees, and configure the ''asiaspa award - nominee'' field in the ''spa'' entry.'
             type: craft\fieldlayoutelements\Tip
+          -
+            fieldUid: e4e2cbc9-862a-4e2a-b4fb-e39739cde12b
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: Nominee
-        sortOrder: 4
+        sortOrder: 6
       -
         elements:
           -
@@ -183,7 +193,7 @@ fieldLayouts:
             warning: null
             width: 100
         name: Winners
-        sortOrder: 5
+        sortOrder: 7
 handle: generic
 hasTitleField: true
 name: generic

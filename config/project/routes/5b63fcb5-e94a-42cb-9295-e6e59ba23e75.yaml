@@ -1,0 +1,13 @@
+siteUid: null
+sortOrder: 4
+template: /_form-demo/bootstrap/delete_submission
+uriParts:
+  - _form-demo/bootstrap/
+  -
+    - slug
+    - '[^\/]+'
+  - /submissions/delete/
+  -
+    - token
+    - \w+
+uriPattern: '_form-demo/bootstrap/<slug:[^\/]+>/submissions/delete/<token:\w+>'

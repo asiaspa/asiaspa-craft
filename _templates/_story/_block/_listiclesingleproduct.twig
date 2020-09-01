@@ -1,0 +1,8 @@
+{% embed "_story/_block/_listicle" %}
+{% block listicle %}
+    <div class="w-full md:w-1/2">
+    {% include "_story/_component/_single-product" with {'slide':block} %}
+    </div>
+{% endblock %}
+{% endembed %}
+

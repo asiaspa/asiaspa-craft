@@ -1,0 +1,104 @@
+field: c7debb74-f481-49fc-bf60-f45549eac600
+fieldLayouts:
+  d4715d48-6542-4066-bccd-ec80a42c29ef:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 57c9ef21-5efc-4e70-bdea-70eb092f0930
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 7570d194-6b4c-4a03-89c9-860e365eddb9
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 44a7ceab-d7ce-40e5-827d-faefb2fdc465
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  44a7ceab-d7ce-40e5-827d-faefb2fdc465:
+    contentColumnType: text
+    fieldGroup: null
+    handle: richTextEditor
+    instructions: ''
+    name: 'Rich Text Editor'
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes:
+        - 883ab42c-10f1-4e32-a559-61f23e4e3775
+        - 9f801622-9f26-40c9-9126-ac4041a76554
+      cleanupHtml: true
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: Standard.json
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+      showHtmlButtonForNonAdmins: ''
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  57c9ef21-5efc-4e70-bdea-70eb092f0930:
+    contentColumnType: text
+    fieldGroup: null
+    handle: time
+    instructions: ''
+    name: Time
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  7570d194-6b4c-4a03-89c9-860e365eddb9:
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: ''
+    name: Heading
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText

@@ -1,0 +1,77 @@
+{#  ! There is a issue enabling widecard and normal card 
+    ! The ratio cannot set to 16:9 due to spacing issue. This will need to reconsider the whole logic.
+#}
+
+
+{# ===================== Query ===================== #}
+{% do craft.app.elements.eagerLoadElements(className(entry), [entry], [
+        'printCoverImage'
+]) %}
+
+{% set prevEntry = entry.getPrev({section:'print', orderBy:'postDate' }) %}
+{% set nextEntry = entry.getNext({section:'print', orderBy:'postDate' }) %}
+
+{% set entriesQuery = craft.entries({ 
+    relatedTo: entry,
+    section : 'story',
+    with: [
+        'storyHeroImage',
+        'storyCategory',
+        'storyPrintIssue'
+    ],
+}) %}
+
+{% set entries = entriesQuery.all() %}
+
+{# ===================== Content ===================== #}
+{% extends "_layout/_generic" %}
+
+{% block main %}
+
+<section class="max-w-screen-xl mx-auto mt-16">
+    <div class="flex flex-col items-center md:flex-row -ml-screen-xl">
+        <div class="w-full md:w-1/2 lg:w-2/3 bg-secondary-100 ">
+            <div class="py-16 px-1/4 md:px-1/3 " data-sal="slide-up">
+                {% include "_component/_imager" with {'image': entry.printCoverImage[0] ?? null, 'zoom': true} %}
+            </div>
+        </div>
+        <div class="w-full space-y-4 md:w-1/2 lg:w-5/12 p-edge">
+            <h1 class="text-4xl font-hairline font-display md:text-5xl">{{ entry.title }}</h1>
+            <div class="font-serif prose md:prose-lg">{{ entry.printDescription }}</div>
+            <div class="flex space-x-4">
+                {% if prevEntry %}
+                <a class="flex items-center justify-between space-x-2 border-b border-black" href="{{ prevEntry.url }}" >
+                    {% include "_component/_icon" with { 'icon':'icon-arrow-left', w:48, h:48 } %} 
+                    <span>Prev Issue</span>
+                </a>
+                {% endif %}
+                <a class="flex items-center justify-center flex-grow text-center border-b border-black mr-1/6" href="{{ url('/subscribe') }}">Subscribe</a>
+                {% if nextEntry %}
+                <a class="flex items-center justify-between h-12 space-x-2 transition duration-300 border-b border-black hover:text-primary-500 hover:border-primary-500" href="{{ nextEntry.url}}" >
+                    <span>Next Issue</span>
+                    {% include "_component/_icon" with { 'icon':'icon-arrow-right', w:48, h:48 } %} 
+                </a>                
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+
+{% if entriesQuery.count() %}
+<section class="max-w-screen-xl mx-auto mt-16 p-edge">
+    <div class="grid grid-flow-row-dense grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        {% for entry in entries %}
+            <div>
+            {% include "_story/_components/_story-card" with {
+                'entry': entry,
+                'layout': 'list sm:card md:card lg:card',
+                'size': 'sm',
+                'byline': true	
+            } %}
+            </div>
+        {% endfor %}
+    </div>
+</section>
+{% endif %}
+
+{% endblock %}

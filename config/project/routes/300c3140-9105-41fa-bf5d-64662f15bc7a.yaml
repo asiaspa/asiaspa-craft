@@ -1,0 +1,10 @@
+siteUid: null
+sortOrder: 5
+template: /_form-demo/bootstrap/submissions
+uriParts:
+  - _form-demo/bootstrap/
+  -
+    - slug
+    - '[^\/]+'
+  - /submissions
+uriPattern: '_form-demo/bootstrap/<slug:[^\/]+>/submissions'

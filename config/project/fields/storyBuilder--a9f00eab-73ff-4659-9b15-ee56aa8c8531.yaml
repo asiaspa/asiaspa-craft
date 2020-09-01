@@ -3,7 +3,7 @@ fieldGroup: 847d91f3-2f4a-4f56-9f9d-40c20e080811
 handle: storyBuilder
 instructions: ''
 name: 'Story - Builder'
-searchable: true
+searchable: false
 settings:
   contentTable: '{{%matrixcontent_storybuilder_1}}'
   maxBlocks: ''

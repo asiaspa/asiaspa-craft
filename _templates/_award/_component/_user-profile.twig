@@ -1,0 +1,10 @@
+
+<div class="flex flex-col items-center flex-1 w-full text-center" data-tippy-content="{{ user.userBio }}">
+    <div class="flex-none w-full h-auto overflow-hidden rounded-full" >
+        <div>
+        {% include "_component/_imager" with { image : user.profilePic[0] ?? '' , w : 1, h : 1, x: 0.5, y: 0.3 } %}
+        </div>
+    </div> 
+    <p class="mt-2 text-base tracking-wide text-white font-headline">{{ user.judgesName }}</p>
+    <p class="mt-1 text-xs text-gray-300">{{ user.judgesTitle }}</p>
+</div>

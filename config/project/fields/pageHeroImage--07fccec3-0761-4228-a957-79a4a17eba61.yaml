@@ -1,0 +1,30 @@
+contentColumnType: string
+fieldGroup: 6ebe0a75-3257-417d-8c9b-c712a8dbf9c9
+handle: pageHeroImage
+instructions: 'Optional Landscape Image for layout'
+name: 'Page - Hero Image'
+searchable: false
+settings:
+  allowSelfRelations: false
+  allowedKinds: null
+  defaultUploadLocationSource: 'volume:883ab42c-10f1-4e32-a559-61f23e4e3775'
+  defaultUploadLocationSubpath: ''
+  limit: '1'
+  localizeRelations: false
+  restrictFiles: ''
+  selectionLabel: ''
+  showSiteMenu: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  singleUploadLocationSource: 'volume:f6b6a0a2-13b7-4a96-892e-19f882d66b20'
+  singleUploadLocationSubpath: ''
+  source: null
+  sources:
+    - 'volume:f6b6a0a2-13b7-4a96-892e-19f882d66b20'
+  targetSiteId: null
+  useSingleFolder: true
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Assets

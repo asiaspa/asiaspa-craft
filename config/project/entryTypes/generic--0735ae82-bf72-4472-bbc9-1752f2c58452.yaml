@@ -7,7 +7,6 @@ fieldLayouts:
             autocapitalize: true
             autocomplete: false
             autocorrect: true
-            autofocus: false
             class: null
             disabled: false
             id: null
@@ -29,10 +28,10 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: b357d9dd-f6da-4d5f-b00f-8769518e1b39
-            instructions: ''
-            label: 'Short Descritpion'
-            required: ''
+            fieldUid: fb5169da-b276-43d5-b40f-6c97842119e9
+            instructions: null
+            label: null
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
@@ -86,30 +85,12 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
+        name: Main
+        sortOrder: 1
+      -
+        elements:
           -
-            type: craft\fieldlayoutelements\HorizontalRule
-          -
-            fieldUid: e4e2cbc9-862a-4e2a-b4fb-e39739cde12b
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 50
-          -
-            fieldUid: eaf56e37-6414-44dd-a6f3-0e50d529ba0b
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 50
-          -
-            type: craft\fieldlayoutelements\HorizontalRule
-          -
-            fieldUid: 0c465ef4-3419-4c61-b509-3493ed02e3f3
+            fieldUid: 64bd3e74-2e5a-489e-b26b-b62cb6c4e8db
             instructions: null
             label: null
             required: false
@@ -117,10 +98,6 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
-        name: Main
-        sortOrder: 1
-      -
-        elements:
           -
             fieldUid: 0e66a768-2317-4f07-85c6-586256225f51
             instructions: null
@@ -162,6 +139,24 @@ fieldLayouts:
             instructions: null
             label: null
             required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 0166c227-f0bd-4401-b3f2-158361a0b26b
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 35b0e0c1-bf12-4a3f-9d04-7f84df42814b
+            instructions: null
+            label: null
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null

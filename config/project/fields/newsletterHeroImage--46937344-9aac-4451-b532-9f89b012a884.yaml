@@ -1,0 +1,33 @@
+contentColumnType: string
+fieldGroup: b3d816bc-8f24-4620-9c29-3cabc185b44e
+handle: newsletterHeroImage
+instructions: ''
+name: 'Newsletter Hero Image'
+searchable: false
+settings:
+  allowSelfRelations: false
+  allowedKinds:
+    - image
+  defaultUploadLocationSource: 'volume:883ab42c-10f1-4e32-a559-61f23e4e3775'
+  defaultUploadLocationSubpath: ''
+  limit: '1'
+  localizeRelations: false
+  restrictFiles: '1'
+  selectionLabel: ''
+  showSiteMenu: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  singleUploadLocationSource: 'volume:883ab42c-10f1-4e32-a559-61f23e4e3775'
+  singleUploadLocationSubpath: ''
+  source: null
+  sources:
+    - 'volume:883ab42c-10f1-4e32-a559-61f23e4e3775'
+    - 'volume:9f801622-9f26-40c9-9126-ac4041a76554'
+    - 'volume:571cb7c1-00fa-4aef-9106-c5f0d93ffd03'
+  targetSiteId: null
+  useSingleFolder: false
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Assets

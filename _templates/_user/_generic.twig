@@ -1,0 +1,23 @@
+{# !redirect away #}
+
+{% extends "_layout/_generic" %}
+{% block main %}
+
+{% set tag = craft.tags 
+    .group('user')
+    .title(tag)
+    .with([
+        'userProfilePic'
+    ])
+    .one()
+%} 
+
+{% if tag | length == 0 or tag.userBio == '' %}
+no users or no user bio
+{% else %}
+{% include "_user/_profile" with {'user': tag} %}
+{{ sprig('_user/_story-pagination', {'tag': tag.title}) }}
+
+{% endif %}
+{% endblock %}
+

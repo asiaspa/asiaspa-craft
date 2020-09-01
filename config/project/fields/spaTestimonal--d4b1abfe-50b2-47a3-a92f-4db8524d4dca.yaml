@@ -1,76 +1,14 @@
-contentColumnType: text
+contentColumnType: string
 fieldGroup: a7b23ced-f8be-4c09-bba7-84b5e4552f75
 handle: spaTestimonal
 instructions: ''
 name: 'Spa - Testimonal '
 searchable: false
 settings:
-  addRowLabel: 'Add a row'
-  columnType: text
-  columns:
-    __assoc__:
-      -
-        - col1
-        -
-          __assoc__:
-            -
-              - heading
-              - Label
-            -
-              - handle
-              - label
-            -
-              - width
-              - ''
-            -
-              - type
-              - singleline
-      -
-        - col2
-        -
-          __assoc__:
-            -
-              - heading
-              - Quote
-            -
-              - handle
-              - quote
-            -
-              - width
-              - ''
-            -
-              - type
-              - singleline
-      -
-        - col3
-        -
-          __assoc__:
-            -
-              - heading
-              - Cite
-            -
-              - handle
-              - cite
-            -
-              - width
-              - ''
-            -
-              - type
-              - singleline
-  defaults:
-    -
-      __assoc__:
-        -
-          - col1
-          - ''
-        -
-          - col2
-          - ''
-        -
-          - col3
-          - ''
-  maxRows: '1'
-  minRows: '1'
+  contentTable: '{{%matrixcontent_spatestimonal}}'
+  maxBlocks: '1'
+  minBlocks: '1'
+  propagationMethod: all
 translationKeyFormat: null
-translationMethod: none
-type: craft\fields\Table
+translationMethod: site
+type: craft\fields\Matrix

@@ -1,0 +1,25 @@
+{% extends "_layout/_generic" %}
+
+{# -------------------  query ------------------- #}
+{% do craft.app.elements.eagerLoadElements(className(entry), [entry], [
+        'spaLogo',
+        'spaGallery',
+        'spaService:image'
+]) %}
+
+{% block main %}
+
+{% include "_spa/_component/_intro" %}
+{% include "_spa/_component/_gallery" %}
+<section class="flex flex-col items-start max-w-screen-lg mx-auto mt-16 md:flex-row p-edge md:space-x-6">
+    <div class="w-full md:w-2/3">
+        {% include "_spa/_component/_rich-text-editor" %}
+        {% include "_spa/_component/_service" %}
+    </div>
+    <div class="sticky w-full top-8 md:w-1/3">
+    {% include "_spa/_component/_contact" %}
+    </div>
+</section>
+{% include "_spa/_component/_map" %}
+{% include "_spa/_component/_relation" %}
+{% endblock %}

@@ -1,0 +1,48 @@
+contentColumnType: string
+fieldGroup: c988c230-88d1-42da-86a6-8a60a7a243f8
+handle: asiaspaAwardsJudgesOthers
+instructions: ''
+name: 'AsiaSpa Awards - Judges - Others'
+searchable: false
+settings:
+  columns:
+    __assoc__:
+      -
+        - a52a4dce-a53b-4a38-9ddf-63194947ae39
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 738718e7-9b2e-4db6-87fa-cd25bd444e7e
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 63dc5364-e9a2-4d07-a690-e61aefd6305c
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - a6e0f249-680b-4497-9aa2-c963dccf0f40
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_asiaspaawardsjudgesothers}}'
+  fieldLayout: row
+  maxRows: ''
+  minRows: ' 0'
+  placeholderKey: null
+  propagationMethod: all
+  selectionLabel: ''
+  staticField: ''
+translationKeyFormat: null
+translationMethod: site
+type: verbb\supertable\fields\SuperTableField

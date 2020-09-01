@@ -1,0 +1,134 @@
+field: 123697cb-e398-4943-8570-7241dd6b451a
+fieldLayouts:
+  f4ea8d93-494a-407f-9465-2f02f2c8f565:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: a52a4dce-a53b-4a38-9ddf-63194947ae39
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 738718e7-9b2e-4db6-87fa-cd25bd444e7e
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 63dc5364-e9a2-4d07-a690-e61aefd6305c
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: a6e0f249-680b-4497-9aa2-c963dccf0f40
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  63dc5364-e9a2-4d07-a690-e61aefd6305c:
+    contentColumnType: text
+    fieldGroup: null
+    handle: userBio
+    instructions: ''
+    name: 'User Bio'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: '1'
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  738718e7-9b2e-4db6-87fa-cd25bd444e7e:
+    contentColumnType: text
+    fieldGroup: null
+    handle: judgesTitle
+    instructions: ''
+    name: 'Judges Title'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  a52a4dce-a53b-4a38-9ddf-63194947ae39:
+    contentColumnType: text
+    fieldGroup: null
+    handle: judgesName
+    instructions: ''
+    name: 'Judges Name'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  a6e0f249-680b-4497-9aa2-c963dccf0f40:
+    contentColumnType: string
+    fieldGroup: null
+    handle: profilePic
+    instructions: ''
+    name: 'Profile Pic'
+    searchable: true
+    settings:
+      allowSelfRelations: false
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:883ab42c-10f1-4e32-a559-61f23e4e3775'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: '1'
+      selectionLabel: ''
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:b790afbb-ab07-4fbd-bdfa-1fba3afb5fbd'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources:
+        - 'volume:b790afbb-ab07-4fbd-bdfa-1fba3afb5fbd'
+      targetSiteId: null
+      useSingleFolder: true
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets

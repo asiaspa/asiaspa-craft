@@ -1,0 +1,134 @@
+field: d8aa4d97-b648-46d5-8c4f-7cd5bd05380e
+fieldLayouts:
+  09ef5b33-4cc5-4391-995d-179ea81a83d8:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 6278f4e7-4dc3-4acb-aa73-2d5003bab3d6
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 31979d40-9175-4efc-b7db-34550f7ca98e
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 9f6c932d-8bfc-4cc6-b7db-a7b48023bec8
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 84594b9f-fa1d-4fa7-be4c-87235cc06efc
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  31979d40-9175-4efc-b7db-34550f7ca98e:
+    contentColumnType: text
+    fieldGroup: null
+    handle: judgesTitle
+    instructions: ''
+    name: 'Judges Title'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  6278f4e7-4dc3-4acb-aa73-2d5003bab3d6:
+    contentColumnType: text
+    fieldGroup: null
+    handle: judgesName
+    instructions: ''
+    name: 'Judges Name'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  84594b9f-fa1d-4fa7-be4c-87235cc06efc:
+    contentColumnType: string
+    fieldGroup: null
+    handle: profilePic
+    instructions: ''
+    name: 'Profile Pic'
+    searchable: true
+    settings:
+      allowSelfRelations: false
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:883ab42c-10f1-4e32-a559-61f23e4e3775'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: '1'
+      selectionLabel: ''
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:b790afbb-ab07-4fbd-bdfa-1fba3afb5fbd'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources:
+        - 'volume:b790afbb-ab07-4fbd-bdfa-1fba3afb5fbd'
+      targetSiteId: null
+      useSingleFolder: true
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  9f6c932d-8bfc-4cc6-b7db-a7b48023bec8:
+    contentColumnType: text
+    fieldGroup: null
+    handle: userBio
+    instructions: ''
+    name: 'User Bio'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: '1'
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText

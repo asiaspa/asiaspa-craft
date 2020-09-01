@@ -7,41 +7,39 @@ return [
                 [
                     'label' => 'Listicle',
                     'types' => [
-                        'listicleImage', 
-                        'listicleSlider',
+                        'listicleSingleImage', 
+                        'listicleImageSlider',
                         'listicleEmbed',
-                        'listicleShopItem',
-                        'listicleShopCarousel'
+                        'listicleSingleProduct',
+                        'listicleMultipleProductCarousel'
                     ]
                 ],
                 [
-                    'label' => 'Story',
+                    'label' => 'Story - Left',
                     'types' => [
-                        'richTextEditor',
                         'gallery', 
                         'slider', 
-                        'embed', 
-                        'qa', 
-                        'blockquote', 
-                        'form', 
-                        'event', 
-                        'imageHotspot'
+                        'embed' 
                     ]
                 ],
                 [
-                    'label' => 'Relation',
+                    'label' => 'Story - Right',
                     'types' => [
+                        'richTextEditor',
+                        'introduction',
+                        'blockquote',
                         'relatedStory', 
-                        'relatedSpa'
+                        'form',
+
                     ]
                 ]
             ],
             'hiddenTypes' => [
-                'form', 
-                'qa',
                 'event', 
                 'imageHotspot',
-                'relatedSpa', 
+                'relatedSpa',
+                'timeline',
+                'qa'
             ]
         ]
     ]   

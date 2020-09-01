@@ -1,0 +1,13 @@
+{% if block.sidecar %}
+<div id="trigger-{{ loop.index }}"
+     class="visible h-auto lg:invisible lg:h-0"
+     @scroll.window="innerhtml = 
+        document.querySelector('#trigger-{{ loop.index }}').getBoundingClientRect().top <= window.innerHeight/2 
+        ? document.querySelector('#trigger-{{ loop.index }}').innerHTML 
+        : innerhtml">
+    {% include "_story/_component/_" ~ type %}
+</div>
+
+{% else %}
+    {% include "_story/_component/_" ~ type %}
+{% endif %}

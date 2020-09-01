@@ -1,7 +1,13 @@
 module.exports = {
     purge: {
-        // mode: 'all',
-        content: ['./templates/**/*.twig'],
+        // enabled: true,
+        content: [
+            './templates/*.twig',
+            './templates/**/*.twig',
+        ],
+        options: {
+            whitelist: [''],
+        },
     },
     theme: {
         screens: {
@@ -12,6 +18,7 @@ module.exports = {
         },
         fontFamily: {
             'sans': 'var(--font-sans)',
+            'sans-display': 'var(--font-sans-display)',
             'serif': 'var(--font-serif)',
             'headline': 'var(--font-headline)',
             'display': 'var(--font-display)'
@@ -23,14 +30,15 @@ module.exports = {
                 '300': 'var(--color-primary-300)',
                 '500': 'var(--color-primary-500)',
                 '700': 'var(--color-primary-700)',
-                '900': 'var(--color-primary-900)'
+            },
+            secondary: {
+                '100': 'var(--color-secondary-100)',
             },
             gray: {
                 '100': 'var(--color-gray-100)',
                 '300': 'var(--color-gray-300)',
                 '500': 'var(--color-gray-500)',
                 '700': 'var(--color-gray-700)',
-                '900': 'var(--color-gray-900)'
             },
             black: 'var(--color-black)',
             white: 'var(--color-white)',
@@ -38,30 +46,52 @@ module.exports = {
         typography: {
             default: {
                 css: {
+                    lineHeight: 1.6,
                     color: 'var(--color-black)',
+                    fontWeight: 300,
                     strong: {
-                        fontWeight: '300'
+                        fontWeight: 600,
                     },
                     h1: {
-                        fontWeight: '300',
+                        fontFamily: 'var(--font-headline)'
                     },
                     h2: {
-                        fontWeight: '300',
+                        fontFamily: 'var(--font-headline)'
                     },
                     h3: {
-                        fontWeight: '300',
+                        fontFamily: 'var(--font-headline)'
                     },
                     h4: {
-                        fontWeight: '300',
+                        fontFamily: 'var(--font-headline)'
+                    },
+                    h5: {
+                        fontFamily: 'var(--font-headline)'
+                    },
+                    h6: {
+                        fontFamily: 'var(--font-headline)'
+                    },
+                    figcaption: {
+                        fontFamily: 'var(--font-sans)',
+                        color: 'var(--color-gray-500)'
                     },
                     a: {
                         color: 'var(--color-primary-500)',
                         '&:hover': {
-                            color: 'var(--color-primary-300)',
+                            color: 'var(--color-primary-700)',
                         },
                     },
                 },
             },
+            'lg': {
+                css: {
+                    lineHeight: 1.7,
+                }
+            },
+            'xl': {
+                css: {
+                    lineHeight: 1.7,
+                }
+            }
         },
         extend: {
             padding: {
@@ -92,4 +122,12 @@ module.exports = {
         require('@tailwindcss/typography'),
         require('autoprefixer')
     ],
+    experimental: {
+        extendedSpacingScale: true,
+        // defaultLineHeights: true,
+        extendedFontSizeScale: true
+    },
+    future: {
+        removeDeprecatedGapUtilities: true,
+    }
 }

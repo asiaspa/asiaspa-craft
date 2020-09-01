@@ -1,0 +1,35 @@
+<section class="flex flex-col max-w-screen-xl pt-32 mx-auto lg:flex-row p-edge" data-sal="slide-up"> 
+    <div class="w-full lg:w-1/5">
+    <h1 class="mb-8 text-6xl font-hairline leading-none text-white font-display">
+        <span class="block">The</span>
+        <span class="block">Judges</span>
+    </h1>
+    </div>
+    <div class="w-full space-y-12 lg:w-4/5">
+        <div class="grid grid-cols-2 gap-8 sm:grid-cols-4 md:grid-cols-6 ">
+            {% for user in entry.asiaspaAwardsJudges %}
+                {% include "_award/_component/_user-profile" %}
+            {% endfor %}
+        </div>
+        <hr/>
+         <div class="grid grid-cols-3 gap-8 sm:grid-cols-6 md:grid-cols-8">
+            {% for user in entry.asiaspaAwardsJudgesOthers %}
+                {% include "_award/_component/_user-profile" %}
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{# 
+<section class="max-w-screen-lg pt-16 mx-auto px-edge" data-sal="slide-up">
+    <h3 class="mb-8 text-xl text-center text-white text-headline">The AsiaSpa Team</h3>
+    <div class="grid grid-cols-2 gap-8 sm:grid-cols-4 ">
+
+    </div>
+</section>
+<section class="max-w-screen-lg pt-16 mx-auto px-edge" data-sal="slide-up">
+    <h3 class="mb-8 text-xl text-center text-white text-headline">The Expertise</h3>
+    <div class="grid grid-cols-3 gap-8 sm:grid-cols-6 ">
+
+    </div>
+</section> #}

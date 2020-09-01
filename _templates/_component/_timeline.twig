@@ -1,0 +1,17 @@
+
+<section class="relative mt-16">
+    <div class="absolute top-4 h-full border-r border-black left-1.5"></div>
+    <div >
+        {% for event in events %}
+        <div class="mt-6 space-y-2">
+            <div class="flex items-start space-x-6">
+                <div class="w-3 h-3 mt-2.5 bg-white border-black border z-10 rounded-full"></div>
+                <div class="flex-1 text-xl tracking-wide font-headline">{{ event.heading }}</div>
+            </div>
+            {% if event.heading is not empty %}
+            <div class="prose ml-9 md:prose-lg">{{ event.richTextEditor }}</div>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+</section>

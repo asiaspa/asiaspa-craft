@@ -1,0 +1,56 @@
+field: a9f00eab-73ff-4659-9b15-ee56aa8c8531
+fieldLayouts:
+  a35d4980-025f-4161-9952-94f363e94ade:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 1383f2c8-f480-4dbf-8214-c554546f3f2b
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  1383f2c8-f480-4dbf-8214-c554546f3f2b:
+    contentColumnType: string
+    fieldGroup: null
+    handle: qA
+    instructions: ''
+    name: 'Q&A'
+    searchable: false
+    settings:
+      columns:
+        __assoc__:
+          -
+            - 47b78eee-26a2-4bf5-a380-3354130cca66
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - 99438d2e-8763-429c-a327-6ebb43171682
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+      contentTable: '{{%stc_49_qa}}'
+      fieldLayout: row
+      maxRows: ''
+      minRows: ''
+      placeholderKey: null
+      propagationMethod: all
+      selectionLabel: ''
+      staticField: ''
+    translationKeyFormat: null
+    translationMethod: site
+    type: verbb\supertable\fields\SuperTableField
+handle: qa
+name: 'Q&A'
+sortOrder: 9

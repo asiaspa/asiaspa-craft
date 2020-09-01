@@ -1,0 +1,9 @@
+<div class="flex flex-wrap w-full">
+	{% for image in gallery %}
+	{% set aspect = image.width*300 / (image.height )  %}
+	<div class="relative m-1" style="width:{{ aspect }}px ;flex-grow:{{ aspect }}">
+		{% include "_component/_imager" with { 'image' : image, 'zoom': true } %}
+	</div>
+	{% endfor %}
+	{# <div class="m-1 " style="flex-grow: 999999999; min-width: 200px;"></div> #}
+</div>

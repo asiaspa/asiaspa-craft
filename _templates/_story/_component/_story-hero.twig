@@ -1,0 +1,16 @@
+<section class="mt-8">
+    {% include "_category/_category-tag" with { 'category': entry.storyCategory} %}  
+    <div class="space-y-6">
+        <h1 class="text-4xl font-hairline leading-tight md:text-5xl font-display">{{ entry.title }}</h1>
+        {% include "_component/_hr" %}
+        <h2 class="mt-4 font-sans text-lg md:text-xl">{{ entry.storyStandfirst }}</h2>
+        <div class="mt-4">
+            {% include "_user/_short-profile" with { 'user' : entry.storyByline[0] ?? '', 'date' : entry.postDate } %}
+        </div>
+    </div>
+</section>
+<section class="mt-8 -mx-edge md:m-0 js-step transition duration-300 {% if not sprig.include %}md:opacity-0 {% endif %}">
+    <div class="{{ sideCar }}">
+        {% include "_component/_imager" with { 'image':entry.storyHeroImage[0], 'zoom':true, 'mode':'fit' } %}
+    </div>
+</section>

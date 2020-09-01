@@ -1,0 +1,35 @@
+{# TODO: Need to exclude items #}
+{% set excludeIds = [] %}
+
+{% set blocks = matrix.with([
+    'adblock.adgroup',
+
+    'heroStory',
+    'heroStory:heroStory.storyHeroImage',
+    'heroStory:heroStory.storyCategory',
+    'heroStory:heroStory.storyPrintIssue',
+    'heroStory:heroStory.storyByline',
+
+    'storyCarousel',
+    'storyCarousel:sourceStories',
+    'storyCarousel:sourceStories.storyHeroImage',
+    'storyCarousel:sourceStories.storyCategory',
+    'storyCarousel:sourceStories.storyPrintIssue',
+    'storyCarousel:sourceStories.storyByline',
+    'storyCarousel:entriesFromCategory',
+    'storyCarousel:entriesFromprintIssue',
+    'storyCarousel:entriesFromTag',
+
+    'storyGallery',
+    'storyGallery:sourceStories.storyHeroImage',
+    'storyGallery:sourceStories.storyCategory',
+    'storyGallery:sourceStories.storyPrintIssue',
+    'storyGallery:sourceStories.storyByline'
+
+]) %}
+
+
+{% for block in matrix %}
+    {% include  "_category/_block/_" ~ block.type | lower with {'block':block} %}
+{% endfor %}
+

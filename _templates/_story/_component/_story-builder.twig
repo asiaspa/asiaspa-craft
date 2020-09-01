@@ -1,0 +1,36 @@
+{# ------------------- Eager Loading  ------------------- #}
+
+{% set blocks = matrix.with([
+    'slider:slide.heroImage',
+    'gallery:gallery',
+
+    'listicleSingleImage:image',
+    'listicleImageSlider:slides',
+    'listicleSingleProduct:image',
+    'listicleMultipleProductCarousel:slides.image'
+
+]) %}
+
+{# ------------------- Set Listicle Counter ------------------- #}
+{% set listicleTypes = [] %}
+{% for block in blocks %}
+{% if block.type.handle not in listicleTypes and 'listicle' in block.type.handle %}
+{% set listicleTypes = listicleTypes |merge([block.type.handle]) %}
+{% endif %}
+{% endfor %}
+
+{% set listicleCount = clone(blocks)
+    .type(listicleTypes)
+    .count()
+%}
+{% set listicleNumber = 0 %}
+
+{% for block in matrix %}
+    {% if block.type.handle in listicleTypes %}
+    {% set listicleNumber = listicleNumber + 1 %}
+    {% endif %}
+    {# {% include  "_stories/_blocks/_" ~ block.type.handle | lower with {'block':block} %} #}
+    {% include  "_story/_block/_" ~ block.type.handle | lower with {'block':block} %}
+
+{% endfor %}
+ 

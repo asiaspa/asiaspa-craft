@@ -1,0 +1,8 @@
+<section class="flex flex-col items-center max-w-screen-md mt-16 space-y-8">
+        {% include "_component/_hr" %}
+        <blockquote class="text-4xl font-hairline leading-tight tracking-wide text-center font-display lg:text-5xl">
+            {{ '“' ~ block.quote ~ '”' }}
+        </blockquote>
+        {% if block.cite is not empty %}<cite class="text-lg not-italic text-gray-500">{{ block.cite }}</cite>{% endif %}
+        {% include "_component/_hr" %}
+</section>

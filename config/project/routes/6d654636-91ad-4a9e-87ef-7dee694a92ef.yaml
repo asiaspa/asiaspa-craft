@@ -1,0 +1,13 @@
+siteUid: null
+sortOrder: 3
+template: /_form-demo/bootstrap/edit_submission
+uriParts:
+  - _form-demo/bootstrap/
+  -
+    - slug
+    - '[^\/]+'
+  - /submissions/edit/
+  -
+    - token
+    - \w+
+uriPattern: '_form-demo/bootstrap/<slug:[^\/]+>/submissions/edit/<token:\w+>'

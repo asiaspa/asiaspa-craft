@@ -1,0 +1,27 @@
+<aside id="enter" class="fixed inset-0 z-50 overflow-y-auto transition duration-300 transform -translate-y-full bg-black">
+    <div class="fixed top-0 z-20 w-full transition duration-300 bg-black ">
+        <div class="flex flex-row items-center justify-end h-20 max-w-screen-xl mx-auto text-white px-edge ">
+            <a class="text-white" href="#">Close</a>
+            </div>
+        </div>
+    </div>
+
+   <section class="max-w-screen-lg pt-32 mx-auto px-edge"> 
+        <h1 class="mb-8 text-6xl font-hairline leading-none text-white font-display">
+            <span class="block">Enter</span>
+            <span class="block">The</span>
+            <span class="block">Awards</span>
+        </h1>
+        <div class="font-serif text-base font-light text-white md:text-lg">
+            {{ entry.asiaspaAwardsIntroEnter}}
+        </div>
+    </section>
+
+    <section class="max-w-screen-md pt-16 mx-auto px-edge" > 
+        <div class="pt-16 pb-64 font-sans text-base font-hairline tracking-wide text-white ">
+        {% if entry.asiaspaAwardsEnterForm is not null %}
+            {% include "_form/_form-rendering" with {'form': entry.asiaspaAwardsEnterForm.handle } %}
+        {% endif %}
+        </div>
+    </section>
+</aside>

@@ -1,0 +1,31 @@
+contentColumnType: string
+fieldGroup: 8cfd7cec-992b-4043-bab5-b9f4ac3bc2f9
+handle: printCoverImage
+instructions: ''
+name: 'Print - Cover Image'
+searchable: false
+settings:
+  allowSelfRelations: false
+  allowedKinds:
+    - image
+  defaultUploadLocationSource: 'volume:883ab42c-10f1-4e32-a559-61f23e4e3775'
+  defaultUploadLocationSubpath: ''
+  limit: '1'
+  localizeRelations: false
+  restrictFiles: '1'
+  selectionLabel: 'Select the Hero Image'
+  showSiteMenu: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  singleUploadLocationSource: 'volume:4a49b85a-e6f1-4ee3-8085-cbfb50f5ce42'
+  singleUploadLocationSubpath: 'story/{slug}'
+  source: null
+  sources:
+    - 'volume:7192ae17-65b0-458e-b081-14015da9059e'
+  targetSiteId: null
+  useSingleFolder: false
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Assets

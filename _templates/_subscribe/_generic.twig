@@ -1,0 +1,67 @@
+{# ===================== Query ===================== #}
+{# {% do craft.app.elements.eagerLoadElements(className(entry), [entry], [
+        'printIssueCoverImage'
+]) %} #}
+
+{# {% set prevCat = craft.categories.prevSiblingOf(category).one() %}  #}
+{# {% set nextCat = craft.categories.nextSiblingOf(category).one() %}  #}
+
+{% set printsQuery = craft.entries
+   .section('print')
+   .search('*'~'issue'~'*')
+   .with([
+        'printCoverImage'
+   ])
+   .orderBy('postDate desc')
+ %}
+
+{% set prints = printsQuery.all() %}
+
+{# ===================== Query ===================== #}
+{% extends "_layout/_generic" %}
+
+{% block main %}
+
+<section class="max-w-screen-xl mx-auto md:mt-16">
+    <div class="flex flex-col items-center md:flex-row -ml-screen-xl">
+        <div class="w-full md:w-1/2 lg:w-2/3 bg-secondary-100 ">
+            <div class="py-16 px-1/4 md:px-1/3 " data-sal="slide-up">
+                {% include "_component/_imager" with {'image': prints|first.printCoverImage[0] ?? null, 'zoom': true} %}
+            </div>
+        </div>
+        <div class="w-full space-y-4 md:w-1/2 lg:w-5/12 p-edge">
+            <h1 class="text-4xl font-hairline font-display md:text-5xl">{{ entry.title }}</h1>
+            <div class="font-serif prose md:prose-lg">{{ entry.subscribeRichTextEditor }}</div>
+            <div class="flex justify-between space-x-4">
+                {# <a class="flex items-center justify-between h-12 space-x-2 transition duration-300 border-b border-black hover:text-primary-500 hover:border-primary-500" href="{{ entry.subscribePhysicalSubscriptionLink}}" target="_blank" >
+                    {% include "_component/_icon" with { 'icon':'icon-arrow-left', w:48, h:48 } %} 
+                    <span>Physical Edition</span>
+                </a>                    #}
+                <a class="flex items-center justify-between h-12 space-x-2 transition duration-300 border-b border-black hover:text-primary-500 hover:border-primary-500" href="{{ entry.subscribeDigitalSubscriptionLink}}" target="_blank" >
+                    <span>Subscribe on Magzter</span>
+                    {% include "_component/_icon" with { 'icon':'icon-arrow-right', w:48, h:48 } %} 
+                </a>                
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="max-w-screen-xl m-16 mx-auto px-edge">
+    {% for year, prints in prints | group('postDate.year') %}
+        <h3 class="my-8 text-3xl font-hairline font-headline">{{ year }}</h3>
+        <div class="grid grid-cols-3 gap-4 md:gap-6 md:grid-cols-4 lg:grid-cols-6">
+        {% for print in prints %}
+        <a class="flex flex-col space-y-2 text-center" href="{{ print.url }}"  target="_blank" data-sal="slide-up">
+            <div class="p-4 md:p-12 bg-secondary-100">
+                {% include "_component/_imager" with {'image':print.printCoverImage[0] ?? null } %}
+            </div>
+            <h3 class="text-lg font-light tracking-wide font-headline ">{{ print.title }}</h3>
+        </a>
+        {% endfor %}
+        </div>
+    {% endfor %}
+</section>
+
+{% endblock %}

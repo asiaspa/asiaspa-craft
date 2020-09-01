@@ -1,0 +1,49 @@
+{#  TODO:
+    ! user routing
+
+    ! Collect exclude IDs 
+    ! Make story carousel, story gallery to accept multiple entries source (becomes tab)
+    ! Add Multicategory widget (tatler reference)
+    ! Add Trending widget (allure.com reference)
+    ! Add Spa Locator widget
+    ! Add Subscription widget
+    ! Add Print issue widget
+
+    !text-underline using background style (https://codyhouse.co/ds/components/app/text-background-effects)
+#}
+
+{% extends "_layout/_generic" %}
+
+{# -------------------  query ------------------- #}
+{% do craft.app.elements.eagerLoadElements(className(entry), [entry], [
+        'homeHeroStory',
+        'homeHeroStory.storyHeroImage',
+        'homeHeroStory.storyCategory',
+        'homeHeroStory.storyPrintIssues',
+        'homeHeroStory.storyTag',
+        'homeHeroStory.storyByline'
+]) %}
+
+{# -------------------  Content  ------------------- #}
+{% block main %}
+{% if entry.homeHeroStory %}
+{# logo #}
+<section class="bg-secondary-100">
+    <div class="max-w-screen-xl mx-auto mb-32 -mt-20 px-edge">
+       {% include "_home/_component/_story-hero" with {'entry': entry.homeHeroStory[0] ?? null } %}
+    </div>
+</section>
+
+{# hero image #}
+{% endif %}
+
+{% include "_ad/_adblock" %}
+{% include "_category/_layout-builder" with {'matrix': entry.layoutBuilder } %}
+
+<div class="max-w-screen-xl pt-16 mx-auto px-edge">
+    <h3 class="inline-block pb-4 text-4xl font-hairline border-b-2 font-display md:text-5xl border-primary-500">Latest Stories</h3>
+</div>
+
+{{ sprig("_story/_sprig/_pagination") }}
+
+{% endblock %}

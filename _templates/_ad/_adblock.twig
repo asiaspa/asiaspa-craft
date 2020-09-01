@@ -1,0 +1,42 @@
+{# {% set testkey = "websiteTypekitId" %} #}
+
+{# {% set fields = craft.sections.getSectionByHandle('news').getEntryTypes()[0].getFieldLayout().getFields() %} #}
+
+{# {% set field = website.getFields(testkey)[0] %} #}
+{# {{ field }} #}
+
+{# {% if placement is defined and placement is not null %}
+
+{% set adgroupMobile = [] %}
+{% set adgroupDesktop = [] %}
+
+{% for block in globals.(placement) %}
+    {% switch block.handle %}
+        {% case "desktopAdgroup" %}
+        {% set adgroupDesktop = adgroupDesktop | append(block.adgroup.handle) %}
+        {% case "desktopAdgroup" %}
+        {% set adgroupMobile = adgroupMobile| append(block.adgroup.handle) %}
+     {% endswitch %}
+{% endfor %}
+
+{% set adDesktopQuery = craft.adWizard.ads
+    .group('or', adgroupDesktop)
+    .orderBy('Rand()')
+    .onlyValid()
+    .one()
+ %}
+
+{% set adMobileQuery = craft.adWizard.ads
+    .group('or', adgroupMobile)
+    .orderBy('Rand()')
+    .onlyValid()
+    .one()
+%}
+
+<div class="flex justify-center my-16">
+    {{ adDesktopQuery.displayAd() }}
+</div>
+
+{% endif %}
+
+{% endif %} #}

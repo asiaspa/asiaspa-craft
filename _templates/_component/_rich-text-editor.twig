@@ -1,0 +1,5 @@
+{{ richTextEditor | replace({
+    '<img': '<img class="lazyload" data-zoom',
+    'http:':'https:',
+    'storage.googleapis.com/asiaspa':'asiaspa.imgix.net'
+}) | raw }}

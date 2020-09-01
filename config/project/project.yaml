@@ -1,7 +1,7 @@
 assets:
   tempSubpath: temp
   tempVolumeUid: 883ab42c-10f1-4e32-a559-61f23e4e3775
-dateModified: 1597815704
+dateModified: 1598950973
 email:
   fromEmail: asiaspa.dev@gmail.com
   fromName: AsiaSpa
@@ -16,6 +16,7 @@ plugins:
   ad-wizard:
     edition: standard
     enabled: true
+    licenseKey: $PLUGIN_ADWIZARD_LC
     schemaVersion: 2.1.0
   assetrev:
     edition: standard
@@ -25,10 +26,6 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
-  aws-s3:
-    edition: standard
-    enabled: true
-    schemaVersion: '1.2'
   blitz-recommendations:
     edition: standard
     enabled: true
@@ -41,6 +38,11 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  easy-search:
+    edition: standard
+    enabled: false
+    licenseKey: $PLUGIN_EASYSEARCH_LC
+    schemaVersion: 1.0.0
   elements-panel:
     edition: standard
     enabled: true
@@ -52,10 +54,69 @@ plugins:
     settings:
       expandSingles: '1'
       redirectToEntry: '1'
+  feed-me:
+    enabled: true
+    schemaVersion: 2.1.2
   field-manager:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  freeform:
+    edition: pro
+    enabled: true
+    licenseKey: $PLUGIN_FREEFOM_LC
+    schemaVersion: 3.0.7
+    settings:
+      ajaxByDefault: '1'
+      autoScrollToErrors: '1'
+      blockedEmails: null
+      blockedEmailsError: 'Invalid Email Address'
+      blockedIpAddresses: null
+      blockedKeywords: null
+      blockedKeywordsError: 'Invalid Entry Data'
+      customErrorMessage: null
+      customHoneypotName: null
+      defaultTemplates: ''
+      defaultView: submissions
+      emailTemplateDirectory: _email
+      emailTemplateStorage: db
+      fieldDisplayOrder: name
+      fillWithGet: '1'
+      footerScripts: false
+      formSubmitDisable: '1'
+      formSubmitExpiration: null
+      formTemplateDirectory: _form
+      formattingTemplate: _tailwindcss.twig
+      freeformHoneypot: true
+      freeformHoneypotEnhancement: false
+      hideBannerDemo: '1'
+      hideBannerOldFreeform: false
+      minimumSubmitTime: null
+      pluginName: Form
+      purgableSpamAgeInDays: null
+      purgableSubmissionAgeInDays: '0'
+      recaptchaBehaviour: display_error
+      recaptchaEnabled: false
+      recaptchaKey: null
+      recaptchaMinScore: 0.5
+      recaptchaSecret: null
+      recaptchaType: v2_checkbox
+      removeNewlines: ''
+      renderFormHtmlInCpViews: '1'
+      salesforce_client_id: null
+      salesforce_client_secret: null
+      salesforce_password: null
+      salesforce_username: null
+      scriptInsertLocation: footer
+      sessionEntryMaxCount: 50
+      sessionEntryTTL: 10800
+      showErrorsForBlockedEmails: false
+      showErrorsForBlockedKeywords: false
+      showTutorial: ''
+      spamFolderEnabled: false
+      spamProtectionBehaviour: simulate_success
+      submissionThrottlingCount: null
+      submissionThrottlingTimeFrame: null
   google-cloud:
     edition: standard
     enabled: true
@@ -67,10 +128,12 @@ plugins:
   imagehotspots:
     edition: standard
     enabled: true
+    licenseKey: $PLUGIN_IMAGEHOTSPOT_LC
     schemaVersion: 1.0.0
   imager-x:
     edition: pro
     enabled: true
+    licenseKey: $PLUGIN_IMAGERX_LC
     schemaVersion: 3.0.0
   logs:
     edition: standard
@@ -95,6 +158,7 @@ plugins:
   navigate:
     edition: standard
     enabled: true
+    licenseKey: $PLUGIN_NAVIGATE_LC
     schemaVersion: 2.4.0
   navigation:
     edition: standard
@@ -117,14 +181,17 @@ plugins:
   retour:
     edition: standard
     enabled: true
+    licenseKey: $PLUGIN_RETOUR_LC
     schemaVersion: 3.0.9
   searchit:
     edition: standard
-    enabled: true
+    enabled: false
+    licenseKey: $PLUGIN_SEARCHIT_LC
     schemaVersion: 1.0.4
   seomatic:
     edition: standard
     enabled: true
+    licenseKey: $PLUGIN_SEOMATIC_LC
     schemaVersion: 3.0.9
   sidebar-toggle:
     edition: standard
@@ -133,6 +200,7 @@ plugins:
   simplemap:
     edition: pro
     enabled: true
+    licenseKey: $PLUGIN_MAP_LC
     schemaVersion: 3.4.2
     settings:
       apiKey: null
@@ -150,6 +218,10 @@ plugins:
       unrestrictedApiKey: null
       w3wEnabled: ''
       w3wToken: ''
+  snitch:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.1.0
   splash:
     edition: standard
     enabled: true
@@ -163,33 +235,6 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
-  sprout-forms:
-    edition: pro
-    enabled: true
-    schemaVersion: 3.11.8
-    settings:
-      captchaSettings:
-        barrelstrength\sproutforms\captchas\DuplicateCaptcha:
-          enabled: 0
-        barrelstrength\sproutforms\captchas\HoneypotCaptcha:
-          enabled: 0
-          honeypotFieldName: sprout-forms-hc
-          honeypotScreenReaderMessage: 'Leave this field blank'
-        barrelstrength\sproutforms\captchas\JavascriptCaptcha:
-          enabled: 1
-      cleanupProbability: 1000
-      defaultSection: entries
-      enableEditFormEntryViaFrontEnd: false
-      enableSaveData: true
-      enableSaveDataDefaultValue: true
-      formTemplateId: barrelstrength\sproutforms\formtemplates\AccessibleTemplates
-      pluginNameOverride: ''
-      saveSpamToDatabase: false
-      showNotificationsTab: true
-      showReportsTab: true
-      spamLimit: 500
-      spamRedirectBehavior: redirectAsNormal
-      trackRemoteIp: false
   super-table:
     enabled: true
     schemaVersion: 2.2.1
@@ -220,30 +265,11 @@ plugins:
   views-work:
     edition: standard
     enabled: true
+    licenseKey: $PLUGIN_VIEWSWORK_LC
     schemaVersion: 1.0.0
-  workflow:
-    edition: standard
-    enabled: true
-    schemaVersion: 2.1.5
-    settings:
-      editorNotesRequired: ''
-      editorNotifications: '1'
-      editorNotificationsOptions: ''
-      editorUserGroup: 023d7185-42c7-404d-80de-c5204d985b64
-      enabledSections:
-        - 5e15a326-1e20-4d38-86df-6f2bc3183b14
-        - c2929640-5995-4a0b-b490-deb3c54ab6d4
-      publisherNotesRequired: ''
-      publisherNotifications: '1'
-      publisherUserGroup: c56709c7-c3a2-404c-8fba-15175819c9d4
-      reviewerNotifications: '1'
-      reviewerUserGroups:
-        -
-          - c56709c7-c3a2-404c-8fba-15175819c9d4
-      selectedPublishers: '*'
 system:
   edition: pro
   live: true
   name: $SITE_NAME
-  schemaVersion: 3.5.12
+  schemaVersion: 3.5.13
   timeZone: Asia/Hong_Kong

@@ -3,7 +3,6 @@ let mix = require('laravel-mix');
 const LaravelMixFilenameVersioning = require('laravel-mix-filename-versioning');
 require('laravel-mix-clean');
 require('mix-tailwindcss');
-require('laravel-mix-purgecss');
 require('laravel-mix-workbox');
 
 /*
@@ -18,47 +17,43 @@ require('laravel-mix-workbox');
  */
 
 mix
-.browserSync({
-    // https: true,
-    proxy: 'http://asiaspa.test',
-    files: [
-        'web/**/*.+(html|twig)',
-        'templates/**/*.+(html|twig)',
-        'web/dist/**/*.+(js|css)',
-        'src/**/*.+(js|css)'
-        // 'laravel/resources/views/**/*.php'
-    ],
-    browser: 'Firefox Developer Edition'
-})
+    .browserSync({
+        // https: true,
+        proxy: 'http://asiaspa.test',
+        files: [
+            'web/**/*.+(html|twig)',
+            'templates/**/*.+(html|twig)',
+            'web/dist/**/*.+(js|css)',
+            'src/**/*.+(js|css)'
+            // 'laravel/resources/views/**/*.php'
+        ],
+        browser: 'Firefox Developer Edition'
+    })
     .sass('src/scss/app.scss', 'web/dist/')
     .js('src/js/app.js', 'web/dist/')
     .extract([
         'alpinejs',
-        'lazysizes'
+        'lazysizes',
+        'medium-zoom'
     ])
-// .scripts([
-    //     'src/js/app.js'
-    // ], 'web/dist/app.js')
-    .setPublicPath('web/')
+    .setPublicPath('web')
     .tailwind()
-    .clean({
-        cleanOnceBeforeBuildPatterns:['dist/']
-    })
-    // .generateSW()
-
-if (mix.inProduction()) {
-mix
-    .purgeCss({
-        folders: ['src', 'templates'],
-        extensions: ['twig', 'html', 'js', 'php', 'vue'],
-    })
     .version()
     .webpackConfig({
         plugins: [
             new LaravelMixFilenameVersioning   
         ]
     })
-}
+    .clean({
+        cleanOnceBeforeBuildPatterns:['dist/']
+    })
+    .options({
+        terser: {
+            extractComments: false
+        }
+    })
+    
+    // .generateSW()
 
 
 // Full API

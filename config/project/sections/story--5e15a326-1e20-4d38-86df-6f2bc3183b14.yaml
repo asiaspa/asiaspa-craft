@@ -16,8 +16,8 @@ previewTargets:
 propagationMethod: all
 siteSettings:
   5058e36f-39fa-4fe2-982d-2a6082be4a27:
-    enabledByDefault: true
+    enabledByDefault: false
     hasUrls: true
-    template: _stories/_generic.twig
-    uriFormat: 'story/{slug}'
+    template: _story/_generic.twig
+    uriFormat: '{{ storyCategory|first.slug ?? ''story'' }}/{slug}'
 type: channel

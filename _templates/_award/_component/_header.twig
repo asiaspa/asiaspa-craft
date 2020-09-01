@@ -1,0 +1,30 @@
+{# ! top left button will show the current action #}
+
+<header class="fixed top-0 z-20 w-full " 
+        style="background: #111"
+        x-data="{top: true}"
+        x-on:scroll.window="top = (window.pageYOffset > 1) ? false : true;">
+    <div class="flex flex-row items-center justify-between h-20 max-w-screen-xl mx-auto text-white px-edge ">
+        <div>
+            <a class="leading-none transition duration-300 opacity-0" 
+            :class="{'opacity-0': top === true}"
+            href="#">
+                <span class="block">AsiaSpa</span>
+                <span class="block">Awards</span>
+                <span class="block">2020</span>
+            </a>
+        </div>
+        <a class="text-white border-white {{ globalStyle['button'] }}" href="#enter">
+            <span>Nominate Now</span>
+            {% include "_component/_icon" with {'icon': 'icon-arrow-right', w:48, h:48} %}
+        </a>
+        <a class="hidden" href="#nominees">
+            Nominees
+            {% include "_component/_icon" with {'icon': 'icon-arrow-right', w:48, h:48} %}
+        </a>
+        <a class="hidden" href="#winners">
+            Winners
+            {% include "_component/_icon" with {'icon': 'icon-arrow-right', w:48, h:48} %}
+        </a>
+    </div>
+</header>

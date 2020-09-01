@@ -1,8 +1,0 @@
-{% set entry = block.heroStory[0] %}
-{% if entry|length %}
-    {% include "_stories/_story-hero.twig" with {'entry': entry} %}
-{% endif %} 
-
-{# ------------------- Record ID ------------------- #}
-{# {% set excludeIds = excludeIds|merge([story.id])%}
-{{ dump(excludeIds)}} #}
