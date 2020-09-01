@@ -19922,8 +19922,7 @@ function initScript() {
   });
   var scroller = scrollama__WEBPACK_IMPORTED_MODULE_5___default()();
   scroller.setup({
-    step: ".js-step",
-    offset: 0.4
+    step: ".js-step"
   }).onStepEnter(function (response) {
     document.querySelectorAll(".js-step").forEach(function (el) {
       if (el.isSameNode(response.element)) {} else {

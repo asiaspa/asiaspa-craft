@@ -1,12 +1,7 @@
 module.exports = {
-    purge: {
-        content: [
-            'templates/*.twig',
-            'templates/**/*.twig',
-            'templates/**/**/*.twig',
-            'templates/**/**/**/*.twig'
+    purge: [
+            './templates/**/*.twig'
         ],
-    },
     theme: {
         screens: {
             'sm': '640px',

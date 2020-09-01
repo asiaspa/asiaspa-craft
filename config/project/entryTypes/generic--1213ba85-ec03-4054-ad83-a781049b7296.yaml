@@ -131,7 +131,14 @@ fieldLayouts:
             warning: null
             width: 50
           -
-            type: craft\fieldlayoutelements\HorizontalRule
+            fieldUid: 07b4d748-dabf-4fd7-9bc1-e3fd5015b52b
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: Relation
         sortOrder: 2
       -
