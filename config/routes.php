@@ -19,5 +19,5 @@
  */
 
 return [
-    'author/<tag>' => ['template' => '_user/_generic'],
+    'author/<tag>' => ['template' => '_user/generic'],
 ];
