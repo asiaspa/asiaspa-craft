@@ -1,7 +1,7 @@
 assets:
   tempSubpath: temp
   tempVolumeUid: 883ab42c-10f1-4e32-a559-61f23e4e3775
-dateModified: 1599014885
+dateModified: 1599015226
 email:
   fromEmail: asiaspa.dev@gmail.com
   fromName: AsiaSpa
@@ -67,7 +67,7 @@ plugins:
           __assoc__:
             -
               - uriPattern
-              - '*'
+              - '.*'
       injectScriptEvent: DOMContentLoaded
       integrations:
         - putyourlightson\blitz\drivers\integrations\FeedMeIntegration

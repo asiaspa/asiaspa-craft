@@ -29,6 +29,7 @@
 /public/assets/*
 /web/assets/*
 /web/cpresources/*
+/web/cache/*
 
 # IMAGER TRANSFORMS
 /public/imager/*
