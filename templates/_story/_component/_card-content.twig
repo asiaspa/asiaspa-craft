@@ -8,27 +8,31 @@
         {% set break = true %}
     {% endif %}
     {% switch pattern|first %}
-        {% case '' %}{% if pattern|last == 'card' or pattern|last == 'widecard' %}text-xl {% else %}text-lg {% endif %}
-        {% case 'sm' %}{{ p }}text-xl
-        {% case 'md' %}{{ p }}text-2xl
-        {% case 'lg' %}{{ p }}text-3xl
+        {% case '' %}{% if pattern|last == 'card' or pattern|last == 'widecard' %}text-2xl {% else %}text-lg {% endif %}
+        {% case 'sm' %}{{ p }}text-3xl
+        {% case 'md' %}{{ p }}text-3xl
+        {% case 'lg' %}{{ p }}text-4xl
     {% endswitch %}
 {% endfor %}
 {%- endset -%}
 
-<div class="space-y-2">
-    <div class="space-x-4">
-        {% include "_category/_category-tag" with { category : entry.storyCategory } %}
-        {% include "_category/_category-tag" with { category : entry.storyPrintIssue } %}
+<div class="space-y-4">
+    <div class="space-x-4 text-sm">
+        {% if entry.storyCategory %}
+        <a class="block text-sm font-sans-display text-primary-700" href="{{ entry.storyCategory[0].url }}">{{ entry.storyCategory[0].title }}</a>
+        {% endif %}
+        {% if entry.storyPrintIssue %}
+        <a class="block text-sm font-sans-display text-bg text-primary-700" href="{{ entry.storyPrintIssue[0].url }}">{{ entry.storyPrintIssue[0].title }}</a>
+        {% endif %}
     </div>
     <a class="space-y-4" href="{{ entry.url }}">
-        <h4 class="font-light leading-tight tracking-wide font-headline text-bg {{ headlineStyle }} ">{{ entry.title }}</h4>
-        {% if standfirst == true %}
+        <h4 class="font-hairline leading-tight font-headline text-bg {{ headlineStyle }} ">{{ entry.title }}</h4>
+        {% if standfirst %}
         {% include "_component/_hr" %}
         <p class="text-sm md:text-base">{{ entry.storyStandfirst }}</p>
         {% endif %}
     </a>
-    {% if byline == true %}
+    {% if byline  %}
         {% include "_user/_byline" with {'user': entry.storyByline[0] ?? null } %}
     {% endif %}
 </div>
