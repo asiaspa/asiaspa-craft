@@ -1,7 +1,7 @@
 assets:
   tempSubpath: temp
   tempVolumeUid: 883ab42c-10f1-4e32-a559-61f23e4e3775
-dateModified: 1599014053
+dateModified: 1599014885
 email:
   fromEmail: asiaspa.dev@gmail.com
   fromName: AsiaSpa
@@ -26,6 +26,61 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  blitz:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.6.6
+    settings:
+      apiKey: ''
+      cacheControlHeader: 'public, s-maxage=31536000, max-age=0'
+      cacheDuration: null
+      cacheElementQueries: true
+      cacheElements: true
+      cachePurgerType: putyourlightson\blitz\drivers\purgers\DummyPurger
+      cacheStorageSettings:
+        __assoc__:
+          -
+            - folderPath
+            - '@webroot/cache/blitz'
+          -
+            - createGzipFiles
+            - ''
+      cacheStorageType: putyourlightson\blitz\drivers\storage\FileStorage
+      cacheWarmerSettings:
+        __assoc__:
+          -
+            - concurrency
+            - '3'
+      cacheWarmerType: putyourlightson\blitz\drivers\warmers\GuzzleWarmer
+      cachingEnabled: '1'
+      clearCacheAutomatically: '1'
+      customSiteUris: ''
+      debug: false
+      deployerType: putyourlightson\blitz\drivers\deployers\DummyDeployer
+      driverJobPriority: 100
+      excludedQueryStringParams:
+        - gclid
+        - fbclid
+      excludedUriPatterns: ''
+      includedUriPatterns:
+        -
+          __assoc__:
+            -
+              - uriPattern
+              - '*'
+      injectScriptEvent: DOMContentLoaded
+      integrations:
+        - putyourlightson\blitz\drivers\integrations\FeedMeIntegration
+        - putyourlightson\blitz\drivers\integrations\SeomaticIntegration
+      mutexTimeout: 1
+      outputComments: true
+      queryStringCaching: '0'
+      refreshCacheAutomaticallyForGlobals: true
+      refreshCacheJobPriority: 10
+      refreshCacheWhenElementSavedNotLive: false
+      refreshCacheWhenElementSavedUnchanged: false
+      sendPoweredByHeader: true
+      warmCacheAutomatically: '1'
   blitz-recommendations:
     edition: standard
     enabled: true
