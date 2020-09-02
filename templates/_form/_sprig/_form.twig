@@ -1,0 +1,10 @@
+{% if sprig.request %}
+    <form sprig s-action="mud-module/default/mailchimp-subscribe" s-method="post">
+        <input type="hidden" name="{{ craft.snaptcha.fieldName }}" value="{{ craft.snaptcha.fieldValue }}">
+        <input type="text" name="email" required />
+        <input type="submit" value="Submit" />
+    </form>
+{% else %}
+    <form sprig s-trigger="load"></form>
+    123
+{% endif %}

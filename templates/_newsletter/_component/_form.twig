@@ -1,27 +1,47 @@
 {% set inputClass = "tracking-wide w-full py-2 placeholder-black bg-transparent border-b border-black" %}
+{% set subscribeResponse = mailchimpSubscribe is defined and mailchimpSubscribe.action == 'subscribe' ? mailchimpSubscribe : null %}
 
-<div class="grid grid-cols-2 gap-4">
-    <div class="col-span-2 md:mr-0">
-        <p class="text-3xl font-hairline tracking-wide lg:text-4xl font-display">{{ entry.newsletterHeading }}</p>
+<form action="" method="post">
+    <div class="text-primary-700">
+        <input type="hidden" name="action" value="mailchimp-subscribe/audience/subscribe">
+        {{ craft.blitz.csrfInput() }}
+        
+        {% if subscribeResponse %}
+            {% if subscribeResponse.success %}
+                <p>Subscribed successfully!</p>
+            {% else %}
+                <p>An error occured: {{ subscribeResponse.message }}</p>
+            {% endif %}
+        {% endif %}
     </div>
-    <div class="col-span-2 md:mr-0">
-        <p class="font-serif text-sm font-light md:text-base">{{ entry.newsletterStandfirst }}</p>
+    <div class="grid grid-cols-2 gap-4">
+        <div class="col-span-2 md:mr-0">
+            <p class="text-3xl font-hairline tracking-wide lg:text-4xl font-display">{{ entry.newsletterHeading }}</p>
+        </div>
+        <div class="col-span-2 md:mr-0">
+            <p class="font-serif text-sm font-light md:text-base">{{ entry.newsletterStandfirst }}</p>
+        </div>
+        <div>
+            <input class="{{ inputClass}}" id="firstNameInput" type="text" name="merge_fields[FNAME]" 
+                {% if subscribeResponse and not subscribeResponse.success %}value="{{ subscribeResponse.values.FNAME ?? '' }}"{% endif %}/>
+        </div>
+        <div>
+            <input class="{{ inputClass}}" id="lastNameInput" type="text" name="merge_fields[LNAME]" 
+                {% if subscribeResponse and not subscribeResponse.success %}value="{{ subscribeResponse.values.LNAME ?? '' }}"{% endif %}/>    </div>
+        <div class="col-span-2">
+            <label for="emailInput"{% if subscribeResponse and subscribeResponse.errorCode=='1000' %} class="error"{% endif %}>
+                <input class="{{ inputClass}}"  id="emailInput" type="text" name="email" 
+                {% if subscribeResponse and not subscribeResponse.success %}value="{{ subscribeResponse.values.email ?? '' }}"{% endif %}/>
+            </label>
+            
+        </div>
+        <div class="col-span-2">
+            <input type="checkbox" id="privacy" name="privacy" value="0">
+            <label for="privacy" class="text-sm">I agree to the <a class="text-bg" href="{{ url('/privacy-policy') }}">Privacy Policy</a></label>
+        </div>
+        <button class="flex items-center justify-between h-12 col-start-2 space-x-2 transition duration-300 border-b border-black appearance-none hover:text-primary-500 hover:border-primary-500" href="{{ entry.subscribeDigitalSubscriptionLink}}" type="submit">
+            <span>Subscribe</span>
+            {% include "_component/_icon" with { 'icon':'icon-arrow-right', w:48, h:48 } %} 
+        </button>  
     </div>
-    <div>
-        <input class="{{ inputClass}}" id="firstName" type="text" name="firstName" placeholder="First Name">
-    </div>
-    <div>
-        <input  class="{{ inputClass}}" id="lastName" type="text" name="lastName" placeholder="Last Name">
-    </div>
-    <div class="col-span-2">
-        <input class="{{ inputClass}}" id="email" type="email" name="email" placeholder="youremail@domain.com">
-    </div>
-    <div class="col-span-2">
-        <input type="checkbox" id="privacy" name="privacy" value="0">
-        <label for="privacy" class="text-sm">I agree to the <a class="text-bg" href="{{ url('/privacy-policy') }}">Privacy Policy</a></label>
-    </div>
-    <button class="flex items-center justify-between h-12 col-start-2 space-x-2 transition duration-300 border-b border-black appearance-none hover:text-primary-500 hover:border-primary-500" href="{{ entry.subscribeDigitalSubscriptionLink}}" type="submit">
-        <span>Subscribe</span>
-        {% include "_component/_icon" with { 'icon':'icon-arrow-right', w:48, h:48 } %} 
-    </button>      
-</div>
+</form>

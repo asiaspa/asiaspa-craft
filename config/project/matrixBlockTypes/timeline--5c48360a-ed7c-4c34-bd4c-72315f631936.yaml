@@ -47,7 +47,7 @@ fields:
                 -
                   - width
                   - ''
-      contentTable: '{{%stc_47_event}}'
+      contentTable: '{{%stc_46_event}}'
       fieldLayout: row
       maxRows: ''
       minRows: ''
