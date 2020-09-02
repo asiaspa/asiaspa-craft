@@ -5,7 +5,7 @@
         <h3 class="pb-2 text-xl font-light tracking-wide font-headline">{{ "Related Stories" |t }}</h3>
         <div class="grid grid-cols-1 gap-4 sm:grid-cols-3 ">
         {% for entry in block.story %}
-            {% include "_story/_component/_story-card" with {
+            {% include "_story/_card" with {
                 'entry': entry,
                 'layout': 'list sm:card md:list lg:card',
                 'size': 'sm',

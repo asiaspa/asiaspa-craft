@@ -49,7 +49,7 @@
 		{% for entry in entries %}
 			{% if entry.storyLandscape %}
 			<div class="w-10/12 swiper-slide sm:w-1/2 md:w-2/3 lg:w-1/2">
-				{% include "_story/_component/_story-card" with {
+				{% include "_story/_card" with {
 					'entry': entry,
 					'layout': 'card sm:card md:widecard lg:widecard',
 					'size': 'md',
@@ -58,7 +58,7 @@
 			</div>
 			{% else %}
 			<div class="w-10/12 swiper-slide sm:w-1/2 md:w-1/3 lg:w-1/4" >
-				{% include "_story/_component/_story-card" with {
+				{% include "_story/_card" with {
 					'entry': entry,
 					'layout': 'card sm:card md:card lg:card',
 					'size': 'md',

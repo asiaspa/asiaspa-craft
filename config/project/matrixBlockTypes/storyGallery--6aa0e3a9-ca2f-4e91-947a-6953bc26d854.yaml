@@ -23,24 +23,6 @@ fieldLayouts:
             warning: null
             width: 25
           -
-            fieldUid: 427f0d5d-b61a-46ba-a4e4-129e5b0356ff
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 25
-          -
-            fieldUid: 099fa088-bcfc-4245-b8eb-d89f14eb2e01
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 25
-          -
             fieldUid: 4ea4fb28-13d9-4c5c-b2f9-fece1ed0e9cf
             instructions: null
             label: null
@@ -52,30 +34,6 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  099fa088-bcfc-4245-b8eb-d89f14eb2e01:
-    contentColumnType: string
-    fieldGroup: null
-    handle: sourcePrintIssue
-    instructions: ''
-    name: 'Source - Print Issue'
-    searchable: false
-    settings:
-      allowLimit: false
-      allowMultipleSources: false
-      allowSelfRelations: false
-      branchLimit: '1'
-      limit: null
-      localizeRelations: false
-      selectionLabel: ''
-      showSiteMenu: true
-      source: 'group:f30eb0b3-b181-4162-a646-a4218d837a43'
-      sources: '*'
-      targetSiteId: null
-      validateRelatedElements: false
-      viewMode: null
-    translationKeyFormat: null
-    translationMethod: site
-    type: craft\fields\Categories
   0f76637a-5172-4397-aa8c-2cfbc9f7ebcd:
     contentColumnType: string
     fieldGroup: null
@@ -98,30 +56,6 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Entries
-  427f0d5d-b61a-46ba-a4e4-129e5b0356ff:
-    contentColumnType: string
-    fieldGroup: null
-    handle: sourceCategory
-    instructions: ''
-    name: 'Source - Category'
-    searchable: false
-    settings:
-      allowLimit: false
-      allowMultipleSources: false
-      allowSelfRelations: false
-      branchLimit: '1'
-      limit: null
-      localizeRelations: false
-      selectionLabel: ''
-      showSiteMenu: true
-      source: 'group:b85be20d-3d22-431f-a700-c2d63cf40881'
-      sources: '*'
-      targetSiteId: null
-      validateRelatedElements: false
-      viewMode: null
-    translationKeyFormat: null
-    translationMethod: site
-    type: craft\fields\Categories
   4ea4fb28-13d9-4c5c-b2f9-fece1ed0e9cf:
     contentColumnType: boolean
     fieldGroup: null

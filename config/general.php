@@ -39,7 +39,7 @@ return [
     ],
     'defaultTokenDuration' => 'P2W',
     'enableCsrfProtection' => true,
-    // 'errorTemplatePrefix' => 'errors/',
+    'errorTemplatePrefix' => '_error/',
     // 'generateTransformsBeforePageLoad' => true,
     'maxCachedCloudImageSize' => 3000,
     'maxUploadFileSize' => '100M',
@@ -48,7 +48,6 @@ return [
     'usePathInfo' => true,
 
     'dev' => [
-        // existing settings ...
         'backupCommand' => getenv('BACKUP_COMMAND'),
         'restoreCommand' => getenv('RESTORE_COMMAND'),
     ],

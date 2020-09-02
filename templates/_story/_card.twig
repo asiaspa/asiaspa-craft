@@ -1,0 +1,27 @@
+{% if entry %}
+
+{#  ! layout: specific all size if the element goes up to that size 
+    ! scale: specific the element scale on the website #}
+
+{% set layout = layout ?? 'list sm:list md:list lg:list' %}
+{% set size = size ?? 'lg' %}
+{% set standfirst = standfirst ?? true %}
+{% set byline = byline ?? true %}
+
+{% embed "_story/_component/_card-container" %}
+{% block image %}
+    {% include "_story/_component/_card-image" %}
+{% endblock %}
+{% block content %}
+    {% include "_story/_component/_card-content" %}
+{% endblock %}
+{% endembed %}
+
+{% endif %}
+
+
+
+{#  ! hotfix on purgeCss 
+    <div class="self-center w-full pt-4 pl-0 sm:w-full sm:pt-2 sm:pl-0 md:w-full md:pt-2 md:pl-0 lg:w-full lg:pt-2 lg:pl-0 sm:w-1/2 sm:pt-0 sm:pl-4 md:w-1/2 md:pt-0 md:pl-4 lg:w-2/3 lg:pt-0 lg:pl-6">1</div>
+#}
+
