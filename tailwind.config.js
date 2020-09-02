@@ -6,7 +6,7 @@ module.exports = {
             './templates/**/*.twig',
         ],
         options: {
-            whitelist: [''],
+            whitelist: [/^lazyload/],
         },
     },
     theme: {

@@ -1,12 +1,12 @@
 // module 
 import lazySizes from 'lazysizes';
 import 'lazysizes/plugins/parent-fit/ls.parent-fit';
-import 'lazysizes/plugins/blur-up/ls.blur-up';
+// import 'lazysizes/plugins/blur-up/ls.blur-up';
 
 import 'alpinejs';
 import "intersection-observer";
 import scrollama from "scrollama";
-import sal from 'sal.js';
+// import sal from 'sal.js';
 import Chocolat from 'chocolat'
 import mediumZoom from 'medium-zoom';
 import tippy from 'tippy.js';
@@ -20,8 +20,8 @@ import Swiper from 'swiper/bundle'; // import Swiper styles
 // key - retrigger script after htmx works
 function initScript() {
     console.log('initScript() Run');
-    sal();
-    // mediumZoom('[data-zoomable]');
+    // sal();
+    mediumZoom('[data-zoomable]');
     tippy('[data-tippy-content]');
     
     const swiperCarousel = new Swiper('.js-swiper-carousel', {

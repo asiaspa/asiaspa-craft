@@ -1,12 +1,13 @@
 // lazyload effect
 .lazyload,
 .lazyloading {
-	filter: blur(8px);
-	transform: scale(1.05);
-	transition: filter .5s ease-out, transform .5s ease-out ;
+	// filter: blur(8px);
+	opacity: 0;
+	// transform: scale(1.05);
+	transition: opacity .3s ease-out;
 }
 .lazyloaded {
-	filter: blur(0px);
-	transition: filter .5s ease-out, transform .5s ease-out ;
-	transform: none;
+	// filter: blur(0px);
+	opacity: 1;
+	transition: opacity .3s ease-out ;
 }
