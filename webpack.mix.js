@@ -1,6 +1,6 @@
 let mix = require('laravel-mix');
 
-const LaravelMixFilenameVersioning = require('laravel-mix-filename-versioning');
+// const LaravelMixFilenameVersioning = require('laravel-mix-filename-versioning');
 require('laravel-mix-clean');
 require('mix-tailwindcss');
 require('laravel-mix-workbox');
@@ -39,11 +39,11 @@ mix
     .setPublicPath('web')
     .tailwind()
     .version()
-    .webpackConfig({
-        plugins: [
-            new LaravelMixFilenameVersioning   
-        ]
-    })
+    // .webpackConfig({
+    //     plugins: [
+    //         new LaravelMixFilenameVersioning   
+    //     ]
+    // })
     .clean({
         cleanOnceBeforeBuildPatterns:['dist/']
     })

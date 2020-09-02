@@ -1,6 +1,6 @@
 {
-    "/dist/app.js": "/dist/app.808dfe65.js",
-    "/dist/app.css": "/dist/app.d2c2f331.css",
-    "/dist/manifest.js": "/dist/manifest.3c768977.js",
-    "/dist/vendor.js": "/dist/vendor.85a8f10e.js"
+    "/dist/app.js": "/dist/app.js?id=808dfe65c1632adb8b5f",
+    "/dist/app.css": "/dist/app.css?id=d2c2f33147f8062fea44",
+    "/dist/manifest.js": "/dist/manifest.js?id=3c768977c2574a34506e",
+    "/dist/vendor.js": "/dist/vendor.js?id=85a8f10e52916f6cf89d"
 }
