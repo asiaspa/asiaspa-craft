@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6a1612525239f832e75d9dfb7d3d6d84",
+    "content-hash": "7940dbfa2aa3a695a8ddff2da3141c0d",
     "packages": [
         {
             "name": "aelvan/mailchimp-subscribe",
@@ -9543,11 +9543,11 @@
         },
         {
             "name": "verbb/formie",
-            "version": "1.2.4",
+            "version": "1.2.5",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/verbb/formie/zipball/3789a5c37b5fd2ec29c888d4a3e8e88634863993",
-                "reference": "3789a5c37b5fd2ec29c888d4a3e8e88634863993",
+                "url": "https://api.github.com/repos/verbb/formie/zipball/adec7f6010ef7fda2e2aa9643988291e2f2afcba",
+                "reference": "adec7f6010ef7fda2e2aa9643988291e2f2afcba",
                 "shasum": ""
             },
             "require": {
@@ -9601,7 +9601,7 @@
                 "docs": "https://github.com/verbb/formie",
                 "rss": "https://github.com/verbb/formie/commits/v2.atom"
             },
-            "time": "2020-09-03T10:48:47+00:00"
+            "time": "2020-09-04T01:23:34+00:00"
         },
         {
             "name": "verbb/super-table",

@@ -34,7 +34,7 @@
     {% set listicleNumber = listicleNumber + 1 %}
     {% endif %}
     {# {% include  "_stories/_blocks/_" ~ block.type.handle | lower with {'block':block} %} #}
-    {% include  "_story/_block/_" ~ block.type.handle | lower with {'block':block} %}
+    {% include  "_story/_block/_" ~ block.type.handle | lower ignore missing with {'block':block} %}
 
 {% endfor %}
  
