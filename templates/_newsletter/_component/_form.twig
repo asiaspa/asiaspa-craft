@@ -22,15 +22,15 @@
             <p class="font-serif text-sm font-light md:text-base">{{ entry.newsletterStandfirst }}</p>
         </div>
         <div>
-            <input class="{{ inputClass}}" id="firstNameInput" type="text" name="merge_fields[FNAME]" 
+            <input class="{{ inputClass}}" id="firstNameInput" type="text" name="merge_fields[FNAME]" placeholder="First Name"
                 {% if subscribeResponse and not subscribeResponse.success %}value="{{ subscribeResponse.values.FNAME ?? '' }}"{% endif %}/>
         </div>
         <div>
-            <input class="{{ inputClass}}" id="lastNameInput" type="text" name="merge_fields[LNAME]" 
+            <input class="{{ inputClass}}" id="lastNameInput" type="text" name="merge_fields[LNAME]" placeholder="Last Name"
                 {% if subscribeResponse and not subscribeResponse.success %}value="{{ subscribeResponse.values.LNAME ?? '' }}"{% endif %}/>    </div>
         <div class="col-span-2">
             <label for="emailInput"{% if subscribeResponse and subscribeResponse.errorCode=='1000' %} class="error"{% endif %}>
-                <input class="{{ inputClass}}"  id="emailInput" type="text" name="email" 
+                <input class="{{ inputClass}}"  id="emailInput" type="text" name="email" placeholder="Email Address"
                 {% if subscribeResponse and not subscribeResponse.success %}value="{{ subscribeResponse.values.email ?? '' }}"{% endif %}/>
             </label>
             
