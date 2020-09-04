@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f3c5b0979c888f968de59a345f1a9d3b",
+    "content-hash": "6a1612525239f832e75d9dfb7d3d6d84",
     "packages": [
         {
             "name": "aelvan/mailchimp-subscribe",
@@ -60,11 +60,11 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.151.4",
+            "version": "3.151.5",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/08d8e5540bdef23127fec4787270d9d12ccc8117",
-                "reference": "08d8e5540bdef23127fec4787270d9d12ccc8117",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/d38bd349560bbbb25b0991950c858fabff1280b3",
+                "reference": "d38bd349560bbbb25b0991950c858fabff1280b3",
                 "shasum": ""
             },
             "require": {
@@ -136,7 +136,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2020-09-01T18:17:03+00:00"
+            "time": "2020-09-02T18:18:35+00:00"
         },
         {
             "name": "born05/craft-imagehotspots",
@@ -2408,21 +2408,21 @@
         },
         {
             "name": "guzzlehttp/oauth-subscriber",
-            "version": "0.4.0",
+            "version": "0.3.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/oauth-subscriber/zipball/47b4b9cd0b31a6733a3cc500d4285a8363502485",
-                "reference": "47b4b9cd0b31a6733a3cc500d4285a8363502485",
+                "url": "https://api.github.com/repos/guzzle/oauth-subscriber/zipball/04960cdef3cd80ea401d6b0ca8b3e110e9bf12cf",
+                "reference": "04960cdef3cd80ea401d6b0ca8b3e110e9bf12cf",
                 "shasum": ""
             },
             "require": {
-                "guzzlehttp/guzzle": "^6.0|^7.0",
+                "guzzlehttp/guzzle": "~6.0",
                 "php": ">=5.5.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "0.4-dev"
+                    "dev-master": "0.3-dev"
                 }
             },
             "autoload": {
@@ -2446,7 +2446,7 @@
                 "Guzzle",
                 "oauth"
             ],
-            "time": "2020-07-01T06:28:13+00:00"
+            "time": "2015-08-15T19:44:28+00:00"
         },
         {
             "name": "guzzlehttp/promises",
@@ -3519,26 +3519,33 @@
         },
         {
             "name": "league/oauth1-client",
-            "version": "1.7.0",
+            "version": "1.8.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/oauth1-client/zipball/fca5f160650cb74d23fc11aa570dd61f86dcf647",
-                "reference": "fca5f160650cb74d23fc11aa570dd61f86dcf647",
+                "url": "https://api.github.com/repos/thephpleague/oauth1-client/zipball/f6a37f18c03f81f2bf7c465c3f4299410d8463da",
+                "reference": "f6a37f18c03f81f2bf7c465c3f4299410d8463da",
                 "shasum": ""
             },
             "require": {
-                "guzzlehttp/guzzle": "^6.0",
-                "php": ">=5.5.0"
+                "ext-json": "*",
+                "ext-openssl": "*",
+                "guzzlehttp/guzzle": "^6.0|^7.0",
+                "php": ">=7.1"
+            },
+            "suggest": {
+                "ext-simplexml": "For decoding XML-based responses."
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0-dev"
+                    "dev-master": "1.0-dev",
+                    "dev-develop": "2.0-dev"
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "League\\OAuth1\\": "src/"
+                    "League\\OAuth1\\Client\\": "src/",
+                    "League\\OAuth1\\Client\\Tests\\": "tests/"
                 }
             },
             "license": [
@@ -3567,7 +3574,7 @@
                 "tumblr",
                 "twitter"
             ],
-            "time": "2016-08-17T00:36:58+00:00"
+            "time": "2020-09-02T23:17:13+00:00"
         },
         {
             "name": "league/oauth2-client",
@@ -6158,11 +6165,11 @@
         },
         {
             "name": "putyourlightson/craft-sprig",
-            "version": "1.0.0-beta.12",
+            "version": "1.0.0-beta.13",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/putyourlightson/craft-sprig/zipball/966e6aa5bd610be46214a701e3066f350c2a7ee4",
-                "reference": "966e6aa5bd610be46214a701e3066f350c2a7ee4",
+                "url": "https://api.github.com/repos/putyourlightson/craft-sprig/zipball/828f72fe738c831097054b9b02f56296f91cbc55",
+                "reference": "828f72fe738c831097054b9b02f56296f91cbc55",
                 "shasum": ""
             },
             "require": {
@@ -6192,7 +6199,7 @@
                 "source": "https://github.com/putyourlightson/craft-sprig",
                 "issues": "https://github.com/putyourlightson/craft-sprig/issues"
             },
-            "time": "2020-08-31T23:18:45+00:00"
+            "time": "2020-09-03T07:15:11+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
@@ -6580,11 +6587,11 @@
         },
         {
             "name": "spacecatninja/imager-x",
-            "version": "v3.1.7",
+            "version": "v3.2.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spacecatninja/craft-imager-x/zipball/cd1867093b7d8058388a032bd854eeedb8a88d48",
-                "reference": "cd1867093b7d8058388a032bd854eeedb8a88d48",
+                "url": "https://api.github.com/repos/spacecatninja/craft-imager-x/zipball/19359be295bf2c7925238c221c8800dd3c882ab8",
+                "reference": "19359be295bf2c7925238c221c8800dd3c882ab8",
                 "shasum": ""
             },
             "require": {
@@ -6640,7 +6647,7 @@
                 "docs": "http://imager-x.spacecat.ninja/",
                 "issues": "https://github.com/spacecatninja/craft-imager-x/issues"
             },
-            "time": "2020-09-02T08:49:04+00:00"
+            "time": "2020-09-03T19:35:06+00:00"
         },
         {
             "name": "ssnepenthe/color-utils",
@@ -6707,11 +6714,11 @@
         },
         {
             "name": "stripe/stripe-php",
-            "version": "v7.50.0",
+            "version": "v7.51.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/0195e3dcc34123df9a441069dbf08db17c3b025d",
-                "reference": "0195e3dcc34123df9a441069dbf08db17c3b025d",
+                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/879a3545126ebc77218c53d2055572b7e473fbcf",
+                "reference": "879a3545126ebc77218c53d2055572b7e473fbcf",
                 "shasum": ""
             },
             "require": {
@@ -6755,7 +6762,7 @@
                 "payment processing",
                 "stripe"
             ],
-            "time": "2020-08-28T20:17:35+00:00"
+            "time": "2020-09-02T21:04:02+00:00"
         },
         {
             "name": "studioespresso/craft-navigate",
@@ -7010,11 +7017,6 @@
         {
             "name": "symfony/console",
             "version": "v5.1.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/console.git",
-                "reference": "186f395b256065ba9b890c0a4e48a91d598fa2cf"
-            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/console/zipball/186f395b256065ba9b890c0a4e48a91d598fa2cf",
@@ -7275,11 +7277,6 @@
         {
             "name": "symfony/event-dispatcher",
             "version": "v5.1.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/event-dispatcher.git",
-                "reference": "94871fc0a69c3c5da57764187724cdce0755899c"
-            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/94871fc0a69c3c5da57764187724cdce0755899c",
@@ -7417,11 +7414,6 @@
         {
             "name": "symfony/filesystem",
             "version": "v5.1.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/filesystem.git",
-                "reference": "f7b9ed6142a34252d219801d9767dedbd711da1a"
-            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/filesystem/zipball/f7b9ed6142a34252d219801d9767dedbd711da1a",
@@ -7481,11 +7473,6 @@
         {
             "name": "symfony/finder",
             "version": "v5.1.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/finder.git",
-                "reference": "2b765f0cf6612b3636e738c0689b29aa63088d5d"
-            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/finder/zipball/2b765f0cf6612b3636e738c0689b29aa63088d5d",
@@ -8274,11 +8261,6 @@
         {
             "name": "symfony/process",
             "version": "v4.4.13",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/process.git",
-                "reference": "65e70bab62f3da7089a8d4591fb23fbacacb3479"
-            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/process/zipball/65e70bab62f3da7089a8d4591fb23fbacacb3479",
@@ -8337,11 +8319,6 @@
         {
             "name": "symfony/property-access",
             "version": "v5.1.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/property-access.git",
-                "reference": "c2a95da4d3b88523d00903a3d04636717766d674"
-            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/property-access/zipball/c2a95da4d3b88523d00903a3d04636717766d674",
@@ -8419,11 +8396,6 @@
         {
             "name": "symfony/property-info",
             "version": "v5.1.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/property-info.git",
-                "reference": "a10524dfdadc418c2e4b52667be7d6421b7da26f"
-            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/property-info/zipball/a10524dfdadc418c2e4b52667be7d6421b7da26f",
@@ -8581,11 +8553,6 @@
         {
             "name": "symfony/string",
             "version": "v5.1.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/string.git",
-                "reference": "0de4cc1e18bb596226c06a82e2e7e9bc6001a63a"
-            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/string/zipball/0de4cc1e18bb596226c06a82e2e7e9bc6001a63a",
@@ -8666,11 +8633,6 @@
         {
             "name": "symfony/translation",
             "version": "v5.1.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/translation.git",
-                "reference": "917b02cdc5f33e0309b8e9d33ee1480b20687413"
-            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/translation/zipball/917b02cdc5f33e0309b8e9d33ee1480b20687413",
@@ -8828,11 +8790,6 @@
         {
             "name": "symfony/var-dumper",
             "version": "v4.4.13",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "1bef32329f3166486ab7cb88599cae4875632b99"
-            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/var-dumper/zipball/1bef32329f3166486ab7cb88599cae4875632b99",
@@ -8919,11 +8876,6 @@
         {
             "name": "symfony/yaml",
             "version": "v4.4.13",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/yaml.git",
-                "reference": "e2a69525b11a33be51cb00b8d6d13a9258a296b1"
-            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/yaml/zipball/e2a69525b11a33be51cb00b8d6d13a9258a296b1",
@@ -9591,11 +9543,11 @@
         },
         {
             "name": "verbb/formie",
-            "version": "1.2.2",
+            "version": "1.2.4",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/verbb/formie/zipball/dda377a12cbab034d9d2887ab67eaa1f2735752a",
-                "reference": "dda377a12cbab034d9d2887ab67eaa1f2735752a",
+                "url": "https://api.github.com/repos/verbb/formie/zipball/3789a5c37b5fd2ec29c888d4a3e8e88634863993",
+                "reference": "3789a5c37b5fd2ec29c888d4a3e8e88634863993",
                 "shasum": ""
             },
             "require": {
@@ -9605,7 +9557,7 @@
                 "ezyang/htmlpurifier": "^4.13",
                 "fzaninotto/faker": "^1.9",
                 "giggsey/libphonenumber-for-php": "^8.12",
-                "guzzlehttp/oauth-subscriber": "^0.4.0",
+                "guzzlehttp/oauth-subscriber": "^0.3.0",
                 "html2text/html2text": "^4.3",
                 "league/html-to-markdown": "^4.10",
                 "league/oauth1-client": "^1.7",
@@ -9649,7 +9601,7 @@
                 "docs": "https://github.com/verbb/formie",
                 "rss": "https://github.com/verbb/formie/commits/v2.atom"
             },
-            "time": "2020-09-02T13:29:38+00:00"
+            "time": "2020-09-03T10:48:47+00:00"
         },
         {
             "name": "verbb/super-table",

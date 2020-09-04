@@ -1,7 +1,7 @@
 assets:
   tempSubpath: temp
   tempVolumeUid: 883ab42c-10f1-4e32-a559-61f23e4e3775
-dateModified: 1599145872
+dateModified: 1599179071
 email:
   fromEmail: asiaspa.dev@gmail.com
   fromName: AsiaSpa
@@ -53,7 +53,7 @@ plugins:
             - concurrency
             - '3'
       cacheWarmerType: putyourlightson\blitz\drivers\warmers\GuzzleWarmer
-      cachingEnabled: ''
+      cachingEnabled: '1'
       clearCacheAutomatically: '1'
       customSiteUris: ''
       debug: false
@@ -124,12 +124,11 @@ plugins:
     schemaVersion: 1.0.0
   formie:
     edition: standard
-    enabled: false
+    enabled: true
     schemaVersion: 1.0.9
   freeform:
     edition: pro
-    enabled: true
-    licenseKey: $PLUGIN_FREEFOM_LC
+    enabled: false
     schemaVersion: 3.0.8
     settings:
       ajaxByDefault: '1'
@@ -232,6 +231,12 @@ plugins:
   oembed:
     enabled: true
     schemaVersion: 1.0.1
+    settings:
+      enableCache: '1'
+      enableGdpr: ''
+      enableNotifications: ''
+      notificationEmail: ''
+      previewHidden: '1'
   queue-manager:
     edition: standard
     enabled: true
