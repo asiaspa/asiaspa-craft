@@ -1,11 +1,12 @@
 {% extends "_layout/_frame/_web" %}
 
-{% set currentPageType = entry.getSection() | default(entry.getSection() ?? null) %}
+{% set currentPageType = entry.getSection().handle | default(entry.getSection().handle ?? null) %}
 
 {% block layout %}
 {# ------------------- Aside ------------------- #}
-{% if currentPageType != 'Search' %}
-    {% include "_layout/_component/_search" %}
+
+{% if  currentPageType != 'search' and currentPageType != 'error' %}
+    {% include "_layout/_component/_search" with {'isAside': true } %}
 {% endif %}
 
 

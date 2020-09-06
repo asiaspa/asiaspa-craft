@@ -1,5 +1,5 @@
 enableVersioning: true
-handle: error404
+handle: error
 name: 'Error - 404'
 previewTargets:
   -

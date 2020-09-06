@@ -28,7 +28,7 @@ fieldLayouts:
             width: 100
         name: Content
         sortOrder: 1
-handle: error404
+handle: error
 hasTitleField: true
 name: 'Error - 404'
 section: 7d75d1ca-8555-48a8-b0d9-6d478ef80628

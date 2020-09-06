@@ -28,7 +28,7 @@
             <a class="tracking-wide transition duration-300 font-sans-display hover:text-primary-500"
                 href="{{ node.url }}">{{ node.name }}</a>
             {% endfor %}
-            {% if currentPageType != 'Search' %}
+            {% if  currentPageType != 'search' and currentPageType != 'error' %}
             <a class="transition duration-300 hover:text-primary-700" href="#search">{% include "_component/_icon" with { 'icon':'zoom-24'} %}</a>
             {% endif %}
             <a class="transition duration-300 md:hidden hover:text-primary-700" href="#nav">{% include "_component/_icon" with { 'icon':'menu-24'} %}</a>

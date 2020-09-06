@@ -1,48 +1,28 @@
+{% extends "_layout/_generic" %}
+
 {# set 404 page content model #}
 {% if entry is not defined %}
-    {% set entry = craft.entries.uri('404').first() %}
+    {% set entry = craft.entries.uri('404').one() %}
 {% endif %}
 
-{# get query #}
-{% set legacyUrl = craft.app.request.absoluteUrl %}
+{# try to find matching entry first #}
 {% set lastSeg =  craft.app.request.segments|last %}
-
-{# get story #}
 {% set entriesQuery = craft.entries
     .section('story')
     .slug(lastSeg)
 %}
-
 {% if entriesQuery.count %}
 {% redirect url(entriesQuery.one().url) %}
-{% else %}
-{% redirect url(siteUrl) %}
-
 {% endif %}
 
 
-{# get similar stories #}
-{# {% set similarStoriesQuery = craft.entries
-    .section('story')
-    .search('*'~lastSeg~'*')
-%}
+{# ------------------ if no matching try searching ------------------ #}
+{% block main %}
+<section class="max-w-screen-xl mx-auto text-center p-edge">
+    <h1 class="font-hairline text-7xl font-display">404</h1>
+    <p>Page not founded.</p>
+</section>
 
-{% if similarStoriesQuery.count() %}
-{% set similarStories = similarStoriesQuery.all() %}
-<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-    {% for entry in similarStories %}
-    {% include "_story/_card" with {
-        'entry': entry,
-        'layout':'card sm:card md:card lg:card',
-        'size': 'md',
-        'byline': true	
-    } %}
-    {% endfor %}
-</div>
-{% endif %} #}
+{{ sprig("_search/_sprig/_query", {'isAside': false , 'q': lastSeg }) }}
 
-
-{# 
-
-{% set redirectUrl = legacyUrl|replace({ (lastSeg): '' }) %}
-<a href="{{ redirectUrl }}">{{ redirectUrl }}</a> #}
+{% endblock %}

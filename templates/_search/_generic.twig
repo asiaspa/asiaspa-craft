@@ -1,5 +1,8 @@
 {% extends "_layout/_generic" %}
 
+{% set isAside = false %}
+{% set q = craft.app.request.getParam('q')|default(null) %}
+
 {% block main %}
-{% include "_search/_search" %}
+{{ sprig("_search/_sprig/_query", {'isAside': isAside, 'q': q }) }}
 {% endblock %}

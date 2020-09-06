@@ -1,10 +1,11 @@
-{% set menuControl = menuControl|default('true') %}
-{% set q = q ?? craft.app.request.getParam('q')|default(null) %}
+{% set isAside = isAside|default(false) %}
+{% set q = q|default(null) %}
+
 
 {% if sprig.include %}
 <section class="sticky top-0 z-20 bg-white">
     {# toggle #}
-    {% if menuControl  %}
+    {% if isAside %}
     <a class="absolute top-0 left-0 block h-12 py-4 pl-screen-xl" href="#">
         {% if website.websiteLogoSimple | length %}
         <img class="w-auto h-12"
