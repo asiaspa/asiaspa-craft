@@ -1,0 +1,4 @@
+{% set showControl = showControl|default(false) %}
+{% set q = q|default(null) %}
+
+{{ sprig("_search/_sprig/_query", {"showControl": showControl, "q": q }) }}

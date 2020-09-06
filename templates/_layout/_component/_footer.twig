@@ -1,33 +1,21 @@
-{% set footer1Nodes = craft.navigate.raw('footerList1 ') %}
-{% set footer2Nodes = craft.navigate.raw('footerList2 ') %}
+{% set footerNodes = craft.navigate.raw('footerList') %}
 
-
-<section class="relative z-10 mt-32 bg-secondary-100">
-    <div class="grid max-w-screen-lg grid-cols-1 mx-auto md:grid-cols-2"> 
-        <div class="py-8 space-y-6 p-edge ">
-        {% include "_newsletter/_block"  with {'layout': 'form' }%}
-        </div>
-        <div class="grid grid-cols-2 gap-6 p-edge">       
-            <div class="flex col-span-2 space-x-6 s">
-                <a href="{{ seomatic.site.sameAsLinks['facebook']['url'] }}">{% include "_component/_icon" with { 'icon':'icon-logo-facebook', 'w': 24, 'h': 24} only %}</a>
-                <a href="{{ seomatic.site.sameAsLinks['instagram']['url'] }}">{% include "_component/_icon" with { 'icon':'icon-logo-instagram', 'w': 24, 'h': 24 } only %}</a>
-                <a href="{{ seomatic.site.sameAsLinks['linkedin']['url'] }}">{% include "_component/_icon" with { 'icon':'icon-logo-linkedin', 'w': 24, 'h': 24 } only %}</a>
-            </div>
-            <div class="flex flex-col space-y-4">
-            {% for node in footer1Nodes %}
-                <a class="text-lg tracking-wide transition duration-300 font-sans-display hover:text-primary-500"
+<footer class="sticky inset-x-0 bottom-0 py-8 text-white bg-black">
+    {# {% include "_newsletter/_block"  with {'layout': 'full' }%} #}
+    <div class="max-w-screen-xl mx-auto space-y-4 px-edge"> 
+        <div class="flex flex-col justify-between space-y-6 md:space-y-0 md:space-x-6 md:flex-row">
+            <div class="flex justify-center col-span-2 space-x-6 md:justify-end ">
+                <a href="{{ seomatic.site.sameAsLinks['facebook']['url'] }}">{% include "_component/_icon" with { 'icon':'logo-facebook-24'} only %}</a>
+                <a href="{{ seomatic.site.sameAsLinks['instagram']['url'] }}">{% include "_component/_icon" with { 'icon':'logo-instagram-24'} only %}</a>
+                <a href="{{ seomatic.site.sameAsLinks['linkedin']['url'] }}">{% include "_component/_icon" with { 'icon':'logo-linkedin-24' } only %}</a>
+            </div>    
+            <div class="flex flex-col space-y-2 text-center md:flex-row md:space-x-4 md:space-y-0 sm:text-right">
+            {% for node in footerNodes %}
+                <a class="text-sm transition duration-300 hover:text-primary-500"
                     href="{{ node.url }}">{{ node.name }}</a>
             {% endfor %}
-            </div>        
-            <div class="flex flex-col space-y-4">
-            {% for node in footer2Nodes %}
-                <a class="text-lg tracking-wide transition duration-300 font-sans-display hover:text-primary-500"
-                    href="{{ node.url }}">{{ node.name }}</a>
-            {% endfor %}
-            </div>        
-            <div class="col-span-2">
-                <span>© 2020 Copyright AsiaSpa site by Two2.Press</span>
-            </div>
+            </div> 
         </div>
+        <span class="block text-sm text-center text-gray-700 md:text-right">© {{ now.year}} Copyright AsiaSpa site by Two2.Press</span>
     </div>
-</section>
+</footer>

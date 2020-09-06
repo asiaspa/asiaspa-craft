@@ -40,7 +40,7 @@
     <div class="w-full md:w-1/2">
         <div class="relative z-50 pb-16 ">
         {% include '_component/_adblock' with {'adgroup': ['or', ad.adBillboard, ad.adLeaderboard]} %}
-            <input type="hidden" name="entrySlug" value="{{ prevEntry.slug }}">
+            <input type="hidden" name="entryId" value="{{ prevEntry.sourceId }}">
         </div>
     </div>
 </section>

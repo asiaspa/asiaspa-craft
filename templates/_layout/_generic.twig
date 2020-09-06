@@ -6,7 +6,7 @@
 {# ------------------- Aside ------------------- #}
 
 {% if  currentPageType != 'search' and currentPageType != 'error' %}
-    {% include "_layout/_component/_search" with {'isAside': true } %}
+    {% include "_layout/_component/_search"  %}
 {% endif %}
 
 
@@ -17,7 +17,7 @@
 {# ------------------- Layout  ------------------- #}
 {% include "_layout/_component/_header" %}
 
-<main>
+<main class="relative z-10 min-h-screen pb-16 bg-white border-b">
     {% block main %}
     {% endblock %}
 </main>

@@ -23,6 +23,6 @@
     <p>Page not founded.</p>
 </section>
 
-{{ sprig("_search/_sprig/_query", {'isAside': false , 'q': lastSeg }) }}
+{% include "_search/_search" with {"showControl": false, "q": lastSeg } %}
 
 {% endblock %}

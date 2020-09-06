@@ -1,11 +1,10 @@
-{% set isAside = isAside|default(false) %}
+{% set showControl = showControl|default(false) %}
 {% set q = q|default(null) %}
-
 
 {% if sprig.include %}
 <section class="sticky top-0 z-20 bg-white">
     {# toggle #}
-    {% if isAside %}
+    {% if showControl %}
     <a class="absolute top-0 left-0 block h-12 py-4 pl-screen-xl" href="#">
         {% if website.websiteLogoSimple | length %}
         <img class="w-auto h-12"
@@ -34,7 +33,6 @@
 </section>
 {% endif %}
 
-
 <section id="search-query">
 {% if q %}
 
@@ -45,6 +43,6 @@
 %}
 
 <h2 class="pt-4 pb-8 text-3xl font-hairline pl-screen-xl font-headline">Found {{ entries.count() }} Results</h2>
-{{ sprig("_search/_sprig/_result", {'q': q}) }}
+{{ sprig("_search/_sprig/_pagination", {'q': q }) }}
 {% endif %}
 </section>
