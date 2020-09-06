@@ -1,7 +1,7 @@
 assets:
   tempSubpath: temp
   tempVolumeUid: 883ab42c-10f1-4e32-a559-61f23e4e3775
-dateModified: 1599404393
+dateModified: 1599409615
 email:
   fromEmail: asiaspa.dev@gmail.com
   fromName: AsiaSpa
@@ -279,8 +279,8 @@ plugins:
       disablePopulateMissingFieldData: false
       geoLocationAutoRedirect: false
       geoLocationCacheDuration: 5270400
-      geoLocationService: none
-      geoLocationToken: ''
+      geoLocationService: ipstack
+      geoLocationToken: 1cc1e5755977c9485defe6e77655b41c
       geoService: google
       geoToken: AIzaSyCLIh-0zZUM7jtfeGBqtoumMP2B8lgsssM
       mapTiles: google.roadmap

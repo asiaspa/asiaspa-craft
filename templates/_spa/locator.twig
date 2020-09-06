@@ -1,5 +1,62 @@
 {% extends "_layout/_empty" %}
 {% set q = q|default(null) %}
 {% block main %}
-    {{ sprig("_spa/_sprig/_query", {'q':q }) }}
+    {% set userLocation = craft.maps.getUserLocation() %}
+    {{ sprig("_spa/_sprig/_query", {
+        'q':q, 
+        'userLat': userLocation.lat,
+        'userLng': userLocation.lng,
+        'userAddress': userLocation.address
+    }) }}
+
+<script>  
+function loadMarkers() {
+    var bounds = new google.maps.LatLngBounds();
+    var spaMap = document.querySelector('#spa-map')
+    const spasArray = JSON.parse(spaMap.dataset.markers);
+    console.log(spasArray)
+    for (let i = 0; i < spasArray.length; i++) {
+        var location = spasArray[i];
+        var position = new google.maps.LatLng( location[1], location[2]);
+        bounds.extend(position);
+        var marker = new google.maps.Marker({
+            animation: google.maps.Animation.DROP,
+            map: map, 
+            position: position,
+            title: location[ 0 ]
+        });
+        
+        google.maps.event.addListener( marker, 'click', ( 
+            function( marker, i ) {
+                return function() {
+                    var infowindow = new google.maps.InfoWindow();
+                    infowindow.setContent( location[0] );
+                    infowindow.open( map, marker );
+                }
+            }
+        )( marker, i ) );
+        // fit map to bounds
+        // map.fitBounds( bounds );
+    }
+}
+
+window.onload = function() {
+    loadMarkers()
+};
+
+document.body.addEventListener('htmx:afterSettle', function() {
+    var spaMap = document.querySelector('#spa-map')
+    console.log(spaMap.dataset.centername)
+    const center = { lat: Number(spaMap.dataset.centerlat), lng: Number(spaMap.dataset.centerlng)};
+    console.log(center);
+    init_map(); 
+    map.setCenter(center);
+    loadMarkers()
+
+});
+</script>
+<style>
+    #map {width:100%; height:100%}
+</style>
+
 {% endblock %}
