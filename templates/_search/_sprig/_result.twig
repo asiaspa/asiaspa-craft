@@ -1,0 +1,53 @@
+{# --------------- query --------------- #}
+{% set q = q|default(null) %}
+{% set offset = offset|default(0) %}
+{% set limit = limit|default(8) %}
+
+{# --------------- search - result  --------------- #}
+
+{% set entries = craft.entries() 
+    .section('story')
+    .search(q)
+    .with([
+        'storyHeroImage',
+        'storyCategory',
+        'storyPrintIssue'
+    ])
+    .orderBy('score')
+    .offset(offset)
+    .limit(limit)
+    .all()
+%}
+
+{% if entries %}
+<div class="bg-white" id="search-results">
+    <div class="max-w-screen-xl pb-8 mx-auto space-y-4 px-edge">
+        {# <h2 class="text-3xl tracking-wide font-headline" >Find {{entries|length }} results</h2> #}
+        <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 ">
+        {% for entry in entries %}
+            {% include "_story/_card" with {
+                'entry': entry,
+                'layout':'list sm:card md:card lg:card',
+                'size': 'sm',
+                'standfirst': false,
+                'byline': false
+            } %}
+        {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% if entries | length == limit %}
+<button sprig 
+    s-vars="offset: {{ offset + limit }}"
+    s-target="this" 
+    s-swap="outerHTML"
+    class="pb-16 pl-screen-xl ">
+    <div class="flex items-center justify-between h-12 space-x-4 tracking-wide text-black transition duration-300 border-b border-black hover:border-primary-500 hover:text-primary-500">
+        <span>Load More</span>
+        {% include "_component/_icon" with {'icon': 'arrow-right-48'} %}
+    </div> 
+</button> 
+{% endif %}
+
+{% endif %}

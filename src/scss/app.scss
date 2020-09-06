@@ -33,6 +33,12 @@ main {
     // overflow: auto;
 }
 
+body {
+    &:target {
+        overflow-y: hidden;
+    }
+}
+
 aside {
     &:target {
         transform: translate(0);

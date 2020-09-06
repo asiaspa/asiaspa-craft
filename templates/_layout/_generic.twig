@@ -1,11 +1,19 @@
 {% extends "_layout/_frame/_web" %}
 
+{% set currentPageType = entry.getSection() | default(entry.getSection() ?? null) %}
+
 {% block layout %}
-{# ------------------- Main  ------------------- #}
-{% include "_layout/_component/_nav" %}
-{% include "_spa/_aside" %}
+{# ------------------- Aside ------------------- #}
+{% if currentPageType != 'Search' %}
+    {% include "_layout/_component/_search" %}
+{% endif %}
+
+
+{# {% include "_spa/_aside"  ignore missing %} #}
 
 {# {% include "_layouts/_components/_promotion" %} #}
+
+{# ------------------- Layout  ------------------- #}
 {% include "_layout/_component/_header" %}
 
 <main>
@@ -14,8 +22,7 @@
 </main>
 
 {# ------------------- Footer ------------------- #}
-{% set section = entry.getSection() | default(entry.getSection() ?? null) %}
-{% if section != 'Story' %}
+{% if currentPageType != 'Story' %}
     {% include "_layout/_component/_footer" %}
 {% endif %}
 

@@ -1,7 +1,7 @@
 contentColumnType: string
 fieldGroup: f6ccb015-3533-491f-8f9c-775d16605b99
 handle: websiteLogo
-instructions: 'SVG only.'
+instructions: 'SVG with size max 128*48px. Adjust the spacing in your SVG if it looks too tight in <header>'
 name: 'Website Logo'
 searchable: true
 settings:
@@ -13,7 +13,7 @@ settings:
   limit: '1'
   localizeRelations: false
   restrictFiles: '1'
-  selectionLabel: 'Upload Logo'
+  selectionLabel: 'Upload SVG'
   showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
@@ -25,7 +25,7 @@ settings:
   targetSiteId: null
   useSingleFolder: true
   validateRelatedElements: false
-  viewMode: large
+  viewMode: list
 translationKeyFormat: null
 translationMethod: site
 type: craft\fields\Assets

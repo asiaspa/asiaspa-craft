@@ -2653,6 +2653,10 @@ body.chocolat-open > .chocolat-image-wrapper {
   z-index: 99;
 }
 
+body:target {
+  overflow-y: hidden;
+}
+
 aside:target {
   transform: translate(0);
 }

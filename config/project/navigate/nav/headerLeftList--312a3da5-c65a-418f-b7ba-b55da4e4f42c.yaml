@@ -1,6 +1,6 @@
 adminOnly: 1
 allowSources: '*'
 enabledSiteGroups: '*'
-handle: footerList1
+handle: headerLeftList
 levels: 1
-title: 'Footer List 1'
+title: 'Header - Left List'

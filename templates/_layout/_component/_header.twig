@@ -1,72 +1,38 @@
-{% set headerNodes = craft.navigate.raw('header') %}
- 
-<header class="sticky top-0 z-20 w-full py-4 transition-all duration-300 border-gray-100 bg-secondary-100"
-        x-data="{ top: true }"
-        x-on:scroll.window="top = (window.pageYOffset > 1) ? false : true;"
-        :class="{'py-4': top === true }">
-    <div class="relative flex items-center justify-between h-12 max-w-screen-xl mx-auto px-edge">
-        <a class="flex items-center" class="block h-12 mr-6" href="{{ siteUrl }}">
-            {% if website.websiteLogo| length  and craft.app.request.url != '/' %}
-                <img class="block w-auto h-12 py-1" 
-                :class="{'hidden': top === false}"
-                src="{{ rev(website.websiteLogo[0].url()) }}" 
-                    />
-            {% endif %}
-            {% if website.websiteLogoSimple | length %}
-                <img class="hidden block w-auto h-12 "
-                :class="{'hidden': top === true }"
-                 src="{{ rev(website.websiteLogoSimple[0].url()) }}"  />
-            {% endif %}
-        </a>
-        <div class="absolute items-center hidden space-x-6 transform -translate-x-1/2 left-1/2 lg:flex">
-            {% for node in headerNodes %}
-                <a class="text-lg tracking-wide transition duration-300 font-sans-display hover:text-primary-500"
-                    href="{{ node.url }}">{{ node.name }}</a>
-            {% endfor %}
-        </div>
-        <div class="flex flex-row space-x-6">
-            {# <a href="#spa" class="text-lg tracking-wide transition duration-300 font-sans-display hover:text-primary-500">
-                <span>Spa Locator</span>
-            </a> #}
-            <a href="#nav">
-                <span class="hidden md:inline-block">
-                {% include "_component/_icon" with { 'icon':'icon-zoom'} %} 
-                </span>
-                <span class="md:hidden">
-                {% include "_component/_icon" with { 'icon':'icon-menu-search'} %} 
-                </span>
-            </a>
+{% set headerLeftList = craft.navigate.raw('headerLeftList') %}
+{% set headerRightList = craft.navigate.raw('headerRightList') %}
 
-        </div>
-    </div>
-</header>
- 
-
-{# <header class="sticky top-0 z-20 w-full transition duration-300 border-b border-secondary-300 bg-secondary-100">
-    <div class="relative flex items-center justify-between h-12 max-w-screen-xl mx-auto px-edge">
-        <div class="flex items-center">
-            <a class="block h-20 py-6 mr-6" href="{{ siteUrl }}">
+<header class="sticky top-0 z-20 w-full py-4 overflow-y-auto transition-all duration-300 bg-secondary-100" x-data="{ top: true }"
+    x-on:scroll.window="top = (window.pageYOffset > 1) ? false : true;" :class="{'py-4': top === true }">
+    <div class="relative flex items-center justify-between h-12 max-w-screen-xl mx-auto px-edge ">
+        
+        {# -- left -- #}
+        <div class="flex flex-row items-center flex-none space-x-4">
+            <a class="relative w-32 h-12" href="{{ siteUrl }}">
+                {% if website.websiteLogo| length  and craft.app.request.url != '/' %}
+                <img class="absolute inset-0 w-auto h-12" x-show.transition.opacity="top"
+                    src="{{ rev(website.websiteLogo[0].url()) }}" />
+                {% endif %}
                 {% if website.websiteLogoSimple | length %}
-                    <img class="block w-auto h-full" src="{{ rev(website.websiteLogoSimple[0].url()) }}" alt="{{ siteUrl }}" />
+                <img class="absolute inset-0 w-auto h-12" x-show.transition.opacity="!top"
+                    src="{{ rev(website.websiteLogoSimple[0].url()) }}" />
                 {% endif %}
             </a>
         </div>
-        <div class="hidden space-x-6 lg:flex">
-            {% for node in headerNodes %}
-                <a class="text-lg tracking-wide transition duration-300 font-sans-display hover:text-primary-500"
-                    href="{{ node.url }}">{{ node.name }}</a>
+        
+        {# -- center -- #}
+        {% include "_layout/_component/_nav" %}
+        
+        {# -- right -- #}
+        <div class="flex flex-row items-center flex-none space-x-4">
+            {% for node in headerRightList %}
+            <a class="tracking-wide transition duration-300 font-sans-display hover:text-primary-500"
+                href="{{ node.url }}">{{ node.name }}</a>
             {% endfor %}
+            {% if currentPageType != 'Search' %}
+            <a class="transition duration-300 hover:text-primary-700" href="#search">{% include "_component/_icon" with { 'icon':'zoom-24'} %}</a>
+            {% endif %}
+            <a class="transition duration-300 md:hidden hover:text-primary-700" href="#nav">{% include "_component/_icon" with { 'icon':'menu-24'} %}</a>
         </div>
-        <div class="flex ">
-            <a href="#nav">
-                <span class="hidden md:inline-block">
-                {% include "_components/_icon" with { 'icon':'icon-zoom'} %} 
-                </span>
-                <span class="md:hidden">{{ 'MENU' |t }}</span>
-            </a>
-            <a href="#spa">
-                {% include "_components/_icon" with { 'icon':'icon-zoom'} %} 
-            </a>
-        </div>
+
     </div>
-</header> #}
+</header>

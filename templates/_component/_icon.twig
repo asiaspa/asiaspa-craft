@@ -1,3 +1,15 @@
-<svg class="inline-block flex-none  {{ class|default("") }}" style="fill: currentColor;" viewBox="0 0 {{ w|default('24') }} {{ h|default('24') }}" title="{{ icon }}" role="img" width="{{ w|default('24') }}px" height="{{ h|default('24') }}px">
+{% if icon %} 
+
+{# --------------- check integer --------------- #}
+{% if icon|split('-')|last matches '/^\\d+$/' %}
+{% set size = icon|split('-')|last %}
+{% else %}
+{% set size = 24 %}
+{% endif %}
+
+{# --------------- html code --------------- #}
+<svg class="{{ class|default("") }}" style="fill: currentColor;" viewBox="0 0 {{ size }} {{ size }}" title="{{ icon }}" role="img" width="{{ size }}px" height="{{ size }}px">
 	<use href="{{ '#' ~ icon }}" xlink:href="{{ '#' ~ icon }}"></use>
 </svg>
+
+{% endif %}

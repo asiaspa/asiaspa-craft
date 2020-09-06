@@ -1,0 +1,49 @@
+{% set menuControl = menuControl|default('true') %}
+{% set q = q ?? craft.app.request.getParam('q')|default(null) %}
+
+{% if sprig.include %}
+<section class="sticky top-0 z-20 bg-white">
+    {# toggle #}
+    {% if menuControl  %}
+    <a class="absolute top-0 left-0 block h-12 py-4 pl-screen-xl" href="#">
+        {% if website.websiteLogoSimple | length %}
+        <img class="w-auto h-12"
+            src="{{ rev(website.websiteLogoSimple[0].url()) }}" />
+        {% endif %}
+    </a>
+    <a class="absolute top-0 right-0 block h-12 py-8 transition duration-300 hover:text-primary-700 pr-screen-xl " href="#">
+        {% include "_component/_icon" with { 'icon':'close-24'} %}
+    </a>
+    {% endif %}
+    {# search form #}
+    <div class="max-w-screen-sm px-24 py-4 mx-auto ">
+        <form action="{{ url("search") }}" class="flex justify-between py-4 border-b border-black">
+        <input class="w-full appearance-none bg-transparentrounded-none"
+            sprig
+            s-trigger="keyup changed"
+            s-target="#search-query"
+            s-swap="outerHTML"
+            type="text"
+            name="q"
+            value="{{ q }}"
+            placeholder="Search Stories">
+            <button type="submit">{% include "_component/_icon" with {"icon":"zoom-24"} %}</button>
+        </form>
+    </div>
+</section>
+{% endif %}
+
+
+<section id="search-query">
+{% if q %}
+
+{% set entries = craft.entries() 
+    .section('story')
+    .search(q)
+    .orderBy('score')
+%}
+
+<h2 class="pt-4 pb-8 text-3xl font-hairline pl-screen-xl font-headline">Found {{ entries.count() }} Results</h2>
+{{ sprig("_search/_sprig/_result", {'q': q}) }}
+{% endif %}
+</section>

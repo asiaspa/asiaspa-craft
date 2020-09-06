@@ -1,7 +1,7 @@
 contentColumnType: string
 fieldGroup: f6ccb015-3533-491f-8f9c-775d16605b99
 handle: websiteLogoSimple
-instructions: ''
+instructions: 'SVG with size max 48*48px. Adjust the spacing in your SVG if it looks too tight in <header>'
 name: 'Website Logo Simple'
 searchable: false
 settings:
