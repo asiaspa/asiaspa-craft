@@ -8,8 +8,8 @@
                 <a href="{{ entry.url }}">{{ entry.slug }}</a>
             {% endfor %}
         </div> #}
-        <a class="text-white border-white {{ globalStyle['button']}}" href="{{ siteUrl }}">
-            {% include "_component/_icon" with {'icon': 'icon-arrow-left', h:48, w:48} %}
+        <a class="text-white border-white {{ include("_style/_button") }}" href="{{ siteUrl }}">
+            {% include "_component/_icon" with {'icon': 'arrow-left-48'} %}
             <span>Back to AsiaSpa.com</span>
         </a>
         <span>© 2020 Copyright AsiaSpa site by Two2.Press</span>

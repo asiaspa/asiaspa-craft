@@ -1,18 +1,25 @@
 {% set images = entry.asiaspaAwardsHeroGallery %}
 
 <section class="flex flex-col items-center max-w-screen-xl pt-16 mx-auto lg:space-x-16 lg:flex-row px-edge"> 
-    <div class="w-full space-y-8 lg:w-1/3">
-        <h1 class="text-6xl font-hairline leading-none text-white lg:text-8xl font-display">
-            <span class="block">AsiaSpa</span>
-            <span class="block">Awards</span>
-            <span class="block">2020</span>
-        </h1>
+    <div class="w-full pt-8 space-y-8 lg:w-1/3 ">
+        <div class="flex items-center space-x-6">
+            <div class="w-24">
+                {% include "_component/_imager" with {'image': entry.asiaspaAwardsLogo[0] ?? null } %}
+            </div>
+            <div class="w-3/4">
+                <h1 class="text-5xl font-hairline leading-none text-white font-display">
+                    <span class="block">AsiaSpa</span>
+                    <span class="block">Awards</span>
+                    <span class="block">2020</span>
+                </h1>
+            </div>
+        </div>
         <div class="font-serif text-base font-light text-white md:text-lg">
             {{ entry.asiaspaAwardsIntroAwards}}
         </div>
-        <a href="#awards" class="text-white border-white {{ globalStyle['button']}}">
+        <a href="#awards" class="text-white border-white  {{ include("_style/_button") }}">
             <span>Browse Awards Categories</span>
-            {% include "_component/_icon" with {'icon': 'icon-arrow-right', h:48, w:48} %}
+            {% include "_component/_icon" with {'icon': 'arrow-right-48'} %}
         </a>
     </div>
     <div class="w-full lg:w-2/3">

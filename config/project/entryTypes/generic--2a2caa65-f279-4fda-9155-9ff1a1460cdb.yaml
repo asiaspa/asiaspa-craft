@@ -74,6 +74,15 @@ fieldLayouts:
       -
         elements:
           -
+            fieldUid: d0f086e9-01b3-47cd-bfe4-e5ec5fcade0e
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
             fieldUid: 169958d1-dd60-4c0d-a595-5b4846c90410
             instructions: null
             label: null
@@ -125,7 +134,7 @@ fieldLayouts:
             warning: null
             width: 100
         name: Judges
-        sortOrder: 4
+        sortOrder: 3
       -
         elements:
           -
@@ -158,7 +167,7 @@ fieldLayouts:
             warning: null
             width: 100
         name: Enter
-        sortOrder: 5
+        sortOrder: 4
       -
         elements:
           -
@@ -175,7 +184,7 @@ fieldLayouts:
             warning: null
             width: 100
         name: Nominee
-        sortOrder: 6
+        sortOrder: 5
       -
         elements:
           -
@@ -192,7 +201,7 @@ fieldLayouts:
             warning: null
             width: 100
         name: Winners
-        sortOrder: 7
+        sortOrder: 6
 handle: generic
 hasTitleField: true
 name: generic

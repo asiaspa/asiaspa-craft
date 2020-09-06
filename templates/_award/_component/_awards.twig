@@ -21,8 +21,12 @@
                 @click.prevent="active !== {{ loop.index }} ? active = {{ loop.index }} : active = null">
                 <span class="text-4xl font-hairline tracking-wide font-headline">{{ group }}</span>
                 <div>
-                    <span :class="{'hidden': active === {{ loop.index }} }">{% include "_component/_icon" with {"icon":"icon-plus", w:24, h:24}%}</span>
-                    <span :class="{'hidden': active !== {{ loop.index }} }">{% include "_component/_icon" with {"icon":"icon-minus", w:24, h:24} %}</span>
+                    <span :class="{'hidden': active === {{ loop.index }} }">
+                     {% include "_component/_icon" with {"icon":"plus-24" } %}
+                    </span>
+                    <span :class="{'hidden': active !== {{ loop.index }} }">
+                    {% include "_component/_icon" with {"icon":"minus-24" } %}
+                    </span>
                 </div>
             </button>
             <div class="grid grid-cols-1 gap-8 overflow-hidden transition-all duration-300 md:grid-cols-2 lg:grid-cols-3 max-h-0" x-ref="accordion{{ loop.index }}"

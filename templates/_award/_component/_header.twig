@@ -6,25 +6,30 @@
         x-on:scroll.window="top = (window.pageYOffset > 1) ? false : true;">
     <div class="flex flex-row items-center justify-between h-20 max-w-screen-xl mx-auto text-white px-edge ">
         <div>
-            <a class="leading-none transition duration-300 opacity-0" 
+            <a class="flex items-center space-x-4 leading-none transition duration-300 opacity-0" 
             :class="{'opacity-0': top === true}"
             href="#">
-                <span class="block">AsiaSpa</span>
-                <span class="block">Awards</span>
-                <span class="block">2020</span>
+                <div class="w-8">
+                    {% include "_component/_imager" with {'image': entry.asiaspaAwardsLogo[0] ?? null } %}
+                </div>
+                <div>
+                    <span class="block">AsiaSpa</span>
+                    <span class="block">Awards</span>
+                    <span class="block">2020</span>
+                </div>
             </a>
         </div>
-        <a class="text-white border-white {{ globalStyle['button'] }}" href="#enter">
-            <span>Nominate Now</span>
-            {% include "_component/_icon" with {'icon': 'icon-arrow-right', w:48, h:48} %}
+        <a class="text-white border-white {{ include("_style/_button") }}" href="#enter">
+            <span>Enter Now</span>
+            {% include "_component/_icon" with {'icon': 'arrow-right-48'} %}
         </a>
         <a class="hidden" href="#nominees">
             Nominees
-            {% include "_component/_icon" with {'icon': 'icon-arrow-right', w:48, h:48} %}
+            {% include "_component/_icon" with {'icon': 'arrow-right-48'} %}
         </a>
         <a class="hidden" href="#winners">
             Winners
-            {% include "_component/_icon" with {'icon': 'icon-arrow-right', w:48, h:48} %}
+            {% include "_component/_icon" with {'icon': 'arrow-right-48'} %}
         </a>
     </div>
 </header>
