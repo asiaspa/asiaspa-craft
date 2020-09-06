@@ -1,5 +1,5 @@
 {% extends "_layout/_empty" %}
-
+{% set q = q|default(null) %}
 {% block main %}
-    {{ sprig("_spa/_sprig/_search") }}
+    {{ sprig("_spa/_sprig/_query", {'q':q }) }}
 {% endblock %}

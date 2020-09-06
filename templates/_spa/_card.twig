@@ -1,26 +1,35 @@
-{% if entry | length %}
-
-	<a class="w-full pb-8 space-y-2 border-b" {% if entry.status('live') %}href="{{ entry.url }}{% endif %}">
-		{% if entry.status('live')  %}
-			{% include "_component/_imager" with { image : entry.spaListingGallery[0] ?? '', w : 16, h : 9 } %}
-		{% endif %}
-		<h3 class="text-2xl font-light tracking-wide font-headline ">{{ entry.title }}</h3>
-		{% if entry.status('live')  %}
+{% if entry %}
+	{% if entry.status(live) %}
+	<a class="w-full pb-8 space-y-2 border-b" href="{{ entry.url }}" target="blank" rel="noopener noreferrer">
+		{% include "_component/_imager" with { image : entry.spaGallery[0] ?? mull, w : 16, h : 9 } %}
+		<h3 class="text-2xl font-hairline tracking-wide font-headline ">{{ entry.title }}</h3>
 		<p>{{ entry.spaStandfirst }}</p>
-		{% endif %}
 		<div class="flex items-start justify-start space-x-4">
-			{% include "_component/_icon" with {'icon':'icon-map-pin-16', w:16, h:16} %}
+			{% include "_component/_icon" with {'icon':'map-pin-16'} %}
 			<span class="text-sm">{{ entry.spaContactAddress }}</span>
 		</div>
 		<div class="flex items-center justify-start space-x-4">
-			{% include "_component/_icon" with {'icon':'icon-phone-16', w:16, h:16} %}
+			{% include "_component/_icon" with {'icon':'phone-16'} %}
 			<span class="text-sm">{{ entry.spaContactPhoneNumber }}</span>
 		</div>
-		{% if entry.status('live')  %}
 		<button type="button" class="{{ source('_style/_button') }}">
 			<span>Read More</span>
-			{% include "_component/_icon" with {'icon':'icon-arrow-right', w:48, h:48} %}
+			{% include "_component/_icon" with {'icon':'arrow-right-48'} %}
 		</button>
-		{% endif %}
 	</a>
+
+	{% else %}
+	<div class="w-full pb-8 space-y-2 border-b">
+		<h3 class="text-2xl font-hairline tracking-wide font-headline ">{{ entry.title }}</h3>
+		<div class="flex items-start justify-start space-x-4">
+			{% include "_component/_icon" with {'icon':'map-pin-16'} %}
+			<span class="text-sm">{{ entry.spaContactAddress }}</span>
+		</div>
+		<div class="flex items-center justify-start space-x-4">
+			{% include "_component/_icon" with {'icon':'phone-16'} %}
+			<span class="text-sm">{{ entry.spaContactPhoneNumber }}</span>
+		</div>
+	</div>
+	{% endif %}
+
 {% endif %}

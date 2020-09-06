@@ -5,20 +5,21 @@
 <section class="sticky top-0 z-20 bg-white">
     {# toggle #}
     {% if showControl %}
-    <a class="absolute top-0 left-0 block h-12 py-4 pl-screen-xl" href="#">
+    <a class="absolute top-0 left-0 block h-20 py-4 pl-screen-xl" href="#">
         {% if website.websiteLogoSimple | length %}
         <img class="w-auto h-12"
             src="{{ rev(website.websiteLogoSimple[0].url()) }}" />
         {% endif %}
     </a>
-    <a class="absolute top-0 right-0 block h-12 py-8 transition duration-300 hover:text-primary-700 pr-screen-xl " href="#">
+    <a class="absolute top-0 right-0 block h-20 py-8 transition duration-300 hover:text-primary-700 pr-screen-xl " href="#">
         {% include "_component/_icon" with { 'icon':'close-24'} %}
     </a>
     {% endif %}
+    
     {# search form #}
     <div class="max-w-screen-sm px-24 py-4 mx-auto ">
-        <form action="{{ url("search") }}" class="flex justify-between py-4 border-b border-black">
-        <input class="w-full appearance-none bg-transparentrounded-none"
+        <form action="{{ url("search") }}" class="flex justify-between border-b border-black">
+        <input class="w-full h-12 appearance-none bg-transparentrounded-none"
             sprig
             s-trigger="keyup changed"
             s-target="#search-query"

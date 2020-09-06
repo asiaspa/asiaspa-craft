@@ -1,9 +1,10 @@
-{% set query = query ?? 'hong kong' %}
+{% set userLocation = craft.maps.getUserLocation() %}
+{% set q = q|default(userLocation.address) %}
 {% set entries = entries ?? [] %}
 {% set locationEntries = locationEntries ?? [] %}
 {# {% set coordinates = [] %} #}
 
-{% if query %}
+{% if q %}
 {% set entriesIds = [] %}
 {% set locationIds = [] %}
 
@@ -11,7 +12,7 @@
 {% set entriesIds = craft.entries 
     .section('spa')
     .status(['live','pending','expired'])
-    .title('*' ~ query ~ '*')
+    .title('*' ~ q ~ '*')
     .ids() 
 %}
 
@@ -19,7 +20,7 @@
     .section('spa')
     .status(['live','pending','expired'])
     .spaContactMap({
-        location: query,
+        location: q,
         radius: 100,
         unit: 'm',
     })
@@ -43,24 +44,40 @@
 {%- endfor -%}]
 {% endset %}
 
-
 {% endif %}
 
-{% if sprig.include %}  
-<div class="sticky top-0 z-20 flex items-end w-1/2 h-20 py-4 mx-auto md:w-1/3">
-    <input sprig
-        class="block w-full py-1 mx-auto text-lg text-black placeholder-black bg-transparent border-b border-black appearance-none "
-        s-trigger="keyup changed delay:500ms"
-        s-target="#spa-results"
-        s-swap="outerHTML"
-        type="search"
-        name="query"
-        value="{{ query }}" />
-</div>
+
+
+{% if sprig.include %}
+<section class="sticky top-0 z-20 bg-white">
+    <a class="absolute top-0 left-0 block h-20 py-4 pl-screen-xl" href="">
+        {% if website.websiteLogoSimple | length %}
+        <img class="w-auto h-12"
+            src="{{ rev(website.websiteLogoSimple[0].url()) }}" />
+        {% endif %}
+    </a>
+    
+    {# search form #}
+    <div class="max-w-screen-sm px-24 py-4 mx-auto ">
+        <div class="flex items-center justify-between border-b border-black">
+        <input class="w-full h-12 appearance-none bg-transparentrounded-none"
+            sprig
+            s-trigger="keyup changed"
+            s-target="#spa-results"
+            s-swap="outerHTML"
+            type="search"
+            name="q"
+            value="{{ q }}" 
+            placeholder="Search Spa">
+            <span class="block">{% include "_component/_icon" with {"icon":"zoom-24"} %}</span>
+        </div>
+    </div>
+</section>
 {% endif %}
 
-<div class="flex flex-row w-full min-h-screen" id="spa-results">
-    <div class="sticky top-0 hidden h-screen -mt-20 md:block md:w-1/2" id="spa-map" 
+
+<div class="fixed inset-0 flex flex-row mt-20" id="spa-results">
+    <div class="md:block md:w-1/2" id="spa-map" 
         data-centername="{{ entries|first.title|default('null') }}"
         data-centerlat="{{ entries|first.spaContactMap.lat|default('-25.63') }}"
         data-centerlng="{{ entries|first.spaContactMap.lng|default('131.044') }}"
@@ -75,8 +92,10 @@
         }) }}
     </div>
     
-    <div class="w-full md:w-1/2 p-edge">
-        <h2 class="mb-8"> Showing {{ entries | length }} spa results.</h2>
+    <div class="w-full overflow-y-auto md:w-1/2 px-edge">
+    {{ userLocation.address }}
+
+        <h2 class="pb-8 text-3xl font-hairline font-headline">Showing {{ entries | length }} Results</h2>
         <div class="grid gap-8 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2" >
             {% for group, entries in entriesByStatus %}
                 {% for entry in entries %}
