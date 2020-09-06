@@ -2,19 +2,34 @@
 
 <footer class="sticky inset-x-0 bottom-0 py-8 text-white bg-black">
     {# {% include "_newsletter/_block"  with {'layout': 'full' }%} #}
-    <div class="max-w-screen-xl mx-auto space-y-4 px-edge"> 
+    <div class="max-w-screen-xl mx-auto space-y-4 px-edge">
         <div class="flex flex-col justify-between space-y-6 md:space-y-0 md:space-x-6 md:flex-row">
+
             <div class="flex justify-center col-span-2 space-x-6 md:justify-end ">
-                <a href="{{ seomatic.site.sameAsLinks['facebook']['url'] }}">{% include "_component/_icon" with { 'icon':'logo-facebook-24'} only %}</a>
-                <a href="{{ seomatic.site.sameAsLinks['instagram']['url'] }}">{% include "_component/_icon" with { 'icon':'logo-instagram-24'} only %}</a>
-                <a href="{{ seomatic.site.sameAsLinks['linkedin']['url'] }}">{% include "_component/_icon" with { 'icon':'logo-linkedin-24' } only %}</a>
-            </div>    
+                <a href="{{ seomatic.site.sameAsLinks['facebook']['url'] }}"
+                   target="_blank" rel="noopener noreferrer">
+                    {% include "_component/_icon" with { 'icon':'logo-facebook-24'} only %}
+                </a>
+                <a href="{{ seomatic.site.sameAsLinks['instagram']['url'] }}"
+                   target="_blank" rel="noopener noreferrer">
+                    {% include "_component/_icon" with { 'icon':'logo-instagram-24'} only %}
+                </a>
+                <a href="{{ seomatic.site.sameAsLinks['linkedin']['url'] }}"
+                   target="_blank" rel="noopener noreferrer">
+                    {% include "_component/_icon" with { 'icon':'logo-linkedin-24' } only %}
+                </a>
+            </div>
+
             <div class="flex flex-col space-y-2 text-center md:flex-row md:space-x-4 md:space-y-0 sm:text-right">
-            {% for node in footerNodes %}
+                {% for node in footerNodes %}
                 <a class="text-sm transition duration-300 hover:text-primary-500"
-                    href="{{ node.url }}">{{ node.name }}</a>
-            {% endfor %}
-            </div> 
+                   {% if node.blank %}target="_blank" rel="noopener noreferrer" {% endif %}
+                   href="{{ node.url }}">
+                   {{ node.name }}
+                </a>
+                {% endfor %}
+            </div>
+            
         </div>
         <span class="block text-sm text-center text-gray-700 md:text-right">© {{ now.year}} Copyright AsiaSpa site by Two2.Press</span>
     </div>

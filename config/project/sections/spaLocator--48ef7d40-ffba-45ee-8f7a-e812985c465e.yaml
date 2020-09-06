@@ -18,6 +18,6 @@ siteSettings:
   5058e36f-39fa-4fe2-982d-2a6082be4a27:
     enabledByDefault: true
     hasUrls: true
-    template: _spa/_locator
+    template: _spa/locator
     uriFormat: spa-locator
 type: single

@@ -37,9 +37,10 @@
                     {% include "_component/_icon" with { 'icon':'icon-arrow-left', w:48, h:48 } %} 
                     <span>Physical Edition</span>
                 </a>                    #}
-                <a class="flex items-center justify-between h-12 space-x-2 transition duration-300 border-b border-black hover:text-primary-500 hover:border-primary-500" href="{{ entry.subscribeDigitalSubscriptionLink}}" target="_blank" >
+                <a class="flex items-center justify-between h-12 space-x-2 transition duration-300 border-b border-black hover:text-primary-500 hover:border-primary-500" href="{{ entry.subscribeDigitalSubscriptionLink}}" target="_blank" rel="
+                noreferrer noopener">
                     <span>Subscribe on Magzter</span>
-                    {% include "_component/_icon" with { 'icon':'icon-arrow-right', w:48, h:48 } %} 
+                    {% include "_component/_icon" with { 'icon':'arrow-right-48'} %} 
                 </a>                
 
             </div>

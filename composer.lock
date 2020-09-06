@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "999d33397f18773603fedf9dee586ff0",
+    "content-hash": "1b67b173a7f30043433e7e2ef3b75b58",
     "packages": [
         {
             "name": "aelvan/mailchimp-subscribe",
@@ -4612,57 +4612,6 @@
                 "enum"
             ],
             "time": "2020-02-14T08:15:52+00:00"
-        },
-        {
-            "name": "nav33d/craft-activitylog",
-            "version": "1.0.1",
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Nav33d/craft-activitylog/zipball/274f8b62209c84a9d6f1a5fd07c340b55b052635",
-                "reference": "274f8b62209c84a9d6f1a5fd07c340b55b052635",
-                "shasum": ""
-            },
-            "require": {
-                "craftcms/cms": "^3.0.0"
-            },
-            "type": "craft-plugin",
-            "extra": {
-                "name": "Activity Log",
-                "handle": "activitylog",
-                "schemaVersion": "1.0.0",
-                "hasCpSettings": true,
-                "hasCpSection": true,
-                "changelogUrl": "https://raw.githubusercontent.com/nav33d/craft-activitylog/v1/CHANGELOG.md",
-                "class": "nav33d\\activitylog\\ActivityLog"
-            },
-            "autoload": {
-                "psr-4": {
-                    "nav33d\\activitylog\\": "src/"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Naveed Ziarab",
-                    "homepage": "https://naveedziarab.co.uk/"
-                }
-            ],
-            "description": "Log activity inside Craft CMS control panel",
-            "keywords": [
-                "activitylog",
-                "cms",
-                "craft",
-                "craft-plugin",
-                "craftcms",
-                "craftcms3"
-            ],
-            "support": {
-                "docs": "https://github.com/nav33d/craft-activitylog/blob/v1/README.md",
-                "issues": "https://github.com/nav33d/craft-activitylog/issues"
-            },
-            "time": "2019-05-31T17:28:47+00:00"
         },
         {
             "name": "nesbot/carbon",

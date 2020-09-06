@@ -1,15 +1,23 @@
 {% set headerLeftList = craft.navigate.raw('headerLeftList') %}
 
-<aside id="nav" class="fixed inset-0 z-30 flex flex-row transition duration-300 transform translate-x-full md:inset-auto md:relative md:items-center md:flex-grow md:translate-x-0 ">
-    
+<aside id="nav"
+       class="fixed inset-0 z-30 flex flex-row transition duration-300 transform translate-x-full md:inset-auto md:relative md:items-center md:flex-grow md:translate-x-0 ">
+
     <a class="block w-1/4 md:hidden" href="#"></a>
     {# menu part #}
-    <div class="relative flex flex-col w-3/4 pt-16 space-y-4 bg-white px-edge md:bg-transparent md:flex-row md:space-x-6 md:items-center md:justify-center md:w-full md:p-0 md:space-y-0 ">
-        <a class="absolute top-0 right-0 block h-12 py-8 transition duration-300 md:hidden hover:text-primary-700 pr-screen-xl " href="#">
+
+    <div class="relative flex flex-col w-3/4 pt-16 space-y-4 bg-white px-edge md:bg-transparent md:flex-row md:space-x-6 md:items-center md:justify-center md:w-full md:p-0 md:space-y-0">
+        <a class="absolute top-0 right-0 block h-12 py-8 transition duration-300 md:hidden hover:text-primary-700 pr-screen-xl" href="#">
             {% include "_component/_icon" with { 'icon':'close-24'} %}
         </a>
+
         {% for node in headerLeftList %}
-        <a class="block text-2xl tracking-wide transition duration-300 md:p-0 md:text-base font-sans-display hover:text-primary-500" href="{{ node.url }}">{{ node.name }}</a>
+        <a class="block text-2xl tracking-wide transition duration-300 md:p-0 md:text-base font-sans-display hover:text-primary-500"
+           {% if node.blank %}
+           target="_blank"
+           rel="noopener noreferrer"
+           {% endif %}
+           href="{{ node.url }}">{{ node.name }}</a>
         {% endfor %}
     </div>
 

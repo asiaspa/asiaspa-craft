@@ -41,7 +41,7 @@
             <div class="flex space-x-4">
                 {% if prevEntry %}
                 <a class="flex items-center justify-between space-x-2 border-b border-black" href="{{ prevEntry.url }}" >
-                    {% include "_component/_icon" with { 'icon':'icon-arrow-left', w:48, h:48 } %} 
+                    {% include "_component/_icon" with { 'icon':'arrow-left-48' } %} 
                     <span>Prev Issue</span>
                 </a>
                 {% endif %}
@@ -49,7 +49,7 @@
                 {% if nextEntry %}
                 <a class="flex items-center justify-between h-12 space-x-2 transition duration-300 border-b border-black hover:text-primary-500 hover:border-primary-500" href="{{ nextEntry.url}}" >
                     <span>Next Issue</span>
-                    {% include "_component/_icon" with { 'icon':'icon-arrow-right', w:48, h:48 } %} 
+                    {% include "_component/_icon" with { 'icon':'arrow-right-48' } %} 
                 </a>                
                 {% endif %}
             </div>

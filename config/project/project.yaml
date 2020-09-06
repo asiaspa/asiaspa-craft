@@ -1,7 +1,7 @@
 assets:
   tempSubpath: temp
   tempVolumeUid: 883ab42c-10f1-4e32-a559-61f23e4e3775
-dateModified: 1599380374
+dateModified: 1599401908
 email:
   fromEmail: asiaspa.dev@gmail.com
   fromName: AsiaSpa
@@ -129,7 +129,7 @@ plugins:
   freeform:
     edition: pro
     enabled: true
-    licenseKey: '$PLUGIN_FREEFORM_LC '
+    licenseKey: $PLUGIN_FREEFORM_LC
     schemaVersion: 3.0.8
     settings:
       ajaxByDefault: '1'

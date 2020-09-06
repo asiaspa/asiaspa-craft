@@ -2658,6 +2658,7 @@ body:target {
 }
 
 aside:target {
+  opacity: 1 !important;
   transform: translate(0);
 }
 
