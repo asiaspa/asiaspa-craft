@@ -99,8 +99,6 @@
     </div>
     
     <div class="w-full overflow-y-auto md:w-1/2 px-edge">
-    user location = {{ userLocation.address }}
-
         <h2 class="pb-8 text-3xl font-hairline font-headline">Showing {{ entries | length }} Results</h2>
         <div class="grid gap-8 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2" >
             {% for group, entries in entriesByStatus %}
