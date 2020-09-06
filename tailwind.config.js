@@ -8,6 +8,7 @@ module.exports = {
         options: {
             whitelist: [/^lazyload/],
         },
+        preserveHtmlElements: true
     },
     theme: {
         screens: {

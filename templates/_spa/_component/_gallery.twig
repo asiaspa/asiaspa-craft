@@ -2,17 +2,17 @@
 	<div class="swiper-wrapper">
 		{% for image in entry.spaGallery %}
         <div class="block swiper-slide" >
-            {% include "_component/_imager" with {'image':image, 'zoom': true } %}
+            {% include "_component/_imager" with {'image':image,'w':4, 'h':3, 'zoom': true } %}
         </div>
 		{% endfor %}
 	</div>
-    <div class="text-right">
+    <div class="flex items-center justify-end">
         <button class="swiper-prev">
-            {% include "_component/_icon" with { 'icon':'icon-arrow-left','h':32,'w':32 } %}
+            {% include "_component/_icon" with { 'icon':'arrow-left-48' } %}
         </button>
-        <div class="relative inline mx-4 swiper-pagination"></div>
+        <div class="relative bottom-0 inline w-auto mx-4 swiper-pagination swiper-pagination-fraction"></div>
         <button class="swiper-next">
-            {% include "_component/_icon" with { 'icon':'icon-arrow-right','h':32,'w':32 } %}
+            {% include "_component/_icon" with { 'icon':'arrow-right-48' } %}
         </button>
     </div>
 </div>
