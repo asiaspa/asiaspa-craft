@@ -1,0 +1,9 @@
+enabled: '1'
+handle: entry
+name: Entry
+settings:
+  defaultAuthorId: null
+  entryTypeId: null
+sortOrder: 3
+tokenId: null
+type: verbb\formie\integrations\elements\Entry

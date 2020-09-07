@@ -1,0 +1,9 @@
+enabled: '1'
+handle: googlePlacesApi
+name: 'Google Places API'
+settings:
+  apiKey: AIzaSyCLIh-0zZUM7jtfeGBqtoumMP2B8lgsssM
+  options: ''
+sortOrder: 2
+tokenId: null
+type: verbb\formie\integrations\addressproviders\Google
