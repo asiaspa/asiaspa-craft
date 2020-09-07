@@ -37,8 +37,10 @@
 {# hero image #}
 {% endif %}
 
-{% include "_ad/_adblock" %}
+{# {% include "_ad/_adblock" %} #}
 {% include "_category/_layout-builder" with {'matrix': entry.layoutBuilder } %}
+
+{% include "_spa/_block" %}
 
 <div class="max-w-screen-xl pt-16 mx-auto px-edge">
     <h3 class="inline-block pb-4 text-4xl font-hairline border-b-2 font-display md:text-5xl border-primary-500">Latest Stories</h3>

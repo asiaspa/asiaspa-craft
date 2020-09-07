@@ -47,9 +47,9 @@ fields:
   3785f85a-d93b-47a3-aa02-003f4edef64f:
     contentColumnType: string
     fieldGroup: null
-    handle: sourceStories
+    handle: stories
     instructions: 'Max 12 Entries'
-    name: 'Source - Stories'
+    name: Stories
     searchable: false
     settings:
       allowSelfRelations: false

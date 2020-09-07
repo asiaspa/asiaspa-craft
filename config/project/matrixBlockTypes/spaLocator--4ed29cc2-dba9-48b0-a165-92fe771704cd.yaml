@@ -1,0 +1,43 @@
+field: 51f3339a-5e27-4c65-95cf-82085401023d
+fieldLayouts:
+  ad30c6c6-2349-4dad-b904-92e8afd55ab0:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 0afb44ff-3d71-4915-8ccb-931ca3c6660a
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  0afb44ff-3d71-4915-8ccb-931ca3c6660a:
+    contentColumnType: string
+    fieldGroup: null
+    handle: entry
+    instructions: ''
+    name: Entry
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      limit: '1'
+      localizeRelations: false
+      selectionLabel: ''
+      showSiteMenu: true
+      source: null
+      sources:
+        - 'section:c2929640-5995-4a0b-b490-deb3c54ab6d4'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+handle: spaLocator
+name: 'Spa Locator'
+sortOrder: 5

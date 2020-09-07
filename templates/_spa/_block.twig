@@ -1,0 +1,35 @@
+{% set spaEntry = craft.entries
+    .section('spa')
+    .id(49092)
+    .with([
+        'spaGallery',
+    ])
+    .limit(8)
+    .one()
+ %}
+
+<section class="max-w-screen-xl pt-16 mx-auto">
+    <div class="flex flex-col md:flex-row md:items-end">       
+        <div class="w-full md:w-4/12">
+            <figure class="mr-16 bg-primary-300 md:mr-0 md:mt-0" >
+                <div class="opacity-75" style="filter: grayscale(100%) brightness(115%)">
+                    <img class="lazyload " data-src="{{ spaEntry.spaContactMap.img({ height: 900,width: 800}) }}">
+                </div>
+            </figure>
+        </div>
+        <div class="w-full md:w-5/12">
+            <div class="relative z-10 ml-16 -mt-64 md:mt-0 md:-mx-32">
+            {% include "_component/_imager" with {'image': spaEntry.spaGallery[0] ?? null,w:3,h:2 } %}
+            </div>
+        </div>
+        <div class="w-full md:w-4/12 ">
+            <div class="relative z-10 flex flex-col items-start mr-16 -mt-16 space-y-4 md:-ml-32 p-edge bg-secondary-100 md:mr-0">
+                <h3 class="text-3xl font-hairline md:text-4xl font-headline">Find the best Spa for your next journey</h3>
+                <a href="{{ url('spa-locator') }}" class=" {{ include("_style/_button") }}">
+                    <span>Spa Locator</span>
+                    {% include "_component/_icon" with {'icon': 'arrow-right-48'} %}
+                </a>
+            </dov?
+        </div>
+    </div>
+</section>
