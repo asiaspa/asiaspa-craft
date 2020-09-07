@@ -18,7 +18,8 @@
         </div>
         <div class="w-full md:w-4/12 ">
             <div class="relative z-10 flex flex-col items-start mr-16 -mt-16 space-y-4 md:-ml-32 p-edge bg-secondary-100 md:mr-0">
-                <h3 class="text-3xl font-hairline md:text-4xl font-headline">Find the best Spa for your next journey</h3>
+                <h3 class="text-3xl font-hairline md:text-4xl font-headline">{{ entry.heading }}</h3>
+                <p>{{ entry.standfirst }}</p>
                 <a href="{{ url('spa-locator') }}" class=" {{ include("_style/_button") }}">
                     <span>Spa Locator</span>
                     {% include "_component/_icon" with {'icon': 'arrow-right-48'} %}
