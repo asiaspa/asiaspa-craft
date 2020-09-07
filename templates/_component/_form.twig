@@ -1,0 +1,34 @@
+{# {{ craft.freeform.form(form, {
+    labelClass: "form-label",
+    inputClass: "form-control",
+    instructionsBelowField: true,
+    submitClass: "btn btn-success",
+    overrideValues: {
+        hiddenFieldHandle: entry.id,
+    }
+}).render() }} #}
+
+
+
+
+{# {{ craft.formie.renderForm('repeater') }} #}
+
+{# {% do craft.formie.registerAssets('repeater') %} #}
+
+{% set form = form|default('repeater') %}
+
+<div id="form-{{ form }}">
+    {{ craft.formie.renderForm(form) }}
+    <script>
+    window.addEventListener("load", function () {
+        var csrfInput = document.querySelector('#form-{{ form }} form input[name="CRAFT_CSRF_TOKEN"]');
+        fetch('/actions/blitz/csrf/token')
+        .then(result => { return result.text(); })
+        .then(result => {
+            console.log(result);
+            csrfInput.value = result;
+        });
+    })
+    </script>
+</div>
+

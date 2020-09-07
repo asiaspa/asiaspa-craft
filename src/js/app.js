@@ -7,7 +7,7 @@ import 'alpinejs';
 import "intersection-observer";
 import scrollama from "scrollama";
 // import sal from 'sal.js';
-import Chocolat from 'chocolat'
+// import Chocolat from 'chocolat'
 import mediumZoom from 'medium-zoom';
 import tippy from 'tippy.js';
 import 'tippy.js/dist/tippy.css'; 
@@ -15,6 +15,9 @@ import 'tippy.js/dist/tippy.css';
 // not yet
 import Swiper from 'swiper/bundle'; // import Swiper styles
 // import 'swiper/swiper-bundle.css';
+
+// formie
+import Formie from '../../vendor/verbb/formie/src/web/assets/frontend/src/js/formie-lib';
 
 
 // key - retrigger script after htmx works
@@ -168,28 +171,30 @@ function initScript() {
     // setup resize event
     window.addEventListener("resize", scroller.resize)  ;
 
-    Chocolat(document.querySelectorAll('.chocolat-image'), {
-        // options here
-    })
+    // initForms()
+    // document.addEventListener('onFormieInit', (e) => {
+    //     console.log('formie init');
+    //     let Formie = e.detail.formie;
+    // });
 
+    // Chocolat(document.querySelectorAll('.chocolat-image'), { })
 }
 
 // ================ trigger script when window.onload ================ 
-window.onload = function () {
+// window.onload = function () {
+//     console.log('window onload');
+//     initScript();
+// }
+window.addEventListener("load", function(){
     console.log('window onload');
     initScript();
-    
-}
+});
 
 // ================ trigger script when htmx loaded ================
 document.body.addEventListener('htmx:afterSettle', function(evt) {
-    console.log('htmx:afterSettle init')
+    console.log('htmx:afterSettle')
     initScript()
 });
-
-
-
-
 
 // need for calculation
 window.setTrueVw = function () {
