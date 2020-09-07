@@ -1,37 +1,3 @@
-{# ------------------- Query ------------------- 
-
-{% set entriesIds = [] %}
-{% for entry in block.sourceStories %}
-{% set entriesIds = entriesIds | merge([entry.id]) %}
-{% endfor %}
-
-{% set entriesIdsString = entriesIds | join(', not ') %}
-{% set source = block.entriesFromCategory ?? (block.entriesFromPrintIssue ?? block.entriesFromTag) %}
-
-{% set sourceEntriesIds = craft.entries
-    .relatedTo(source)
-    .id('and, not ' ~ entriesIdsString)
-    .limit(8 - entriesIds | length )
-    .ids
-%}
-
-{% set entriesIds = entriesIds | merge(sourceEntriesIds) %}
-
-{% set entriesQuery = craft.entries
-    .section('story')
-    .id(entriesIds)
-    .with([
-        'storyHeroImage',
-        'storycategory',
-        'storyPrintIssue',
-        'storyByline',
-        'author'
-    ])
-%}
-
-{% set entries = entriesQuery.all() %}
-#}
-
 {% set entries = block.stories %}
 
 {# ------------------- Content ------------------- #}
