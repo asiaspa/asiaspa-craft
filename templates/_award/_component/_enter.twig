@@ -20,7 +20,7 @@
     <section class="max-w-screen-md pt-16 mx-auto px-edge" > 
         <div class="pt-16 pb-64 font-sans text-base font-hairline tracking-wide text-white ">
         {% if entry.asiaspaAwardsEnterForm is not null %}
-            {% include "_component/_freeform" with {'form': entry.asiaspaAwardsEnterForm.handle } %}
+            {% include "_form/_form-rendering" with {'form': entry.asiaspaAwardsEnterForm.handle } %}
         {% endif %}
         </div>
     </section>
