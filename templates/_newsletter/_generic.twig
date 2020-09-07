@@ -2,6 +2,23 @@
 {% extends "_layout/_generic" %}
 
 {% block main %}  
+
+{# temp solution #}
+{% if craft.app.request.getParam('success') != null %} 
+
+<section class="flex flex-col items-center max-w-screen-xl py-16 mx-auto space-y-4 text-center p-edge">
+    <h1 class="text-5xl font-hairline font-display">Thank you for signing up!</h1>
+    <p>You will hear from us shortly.</p>
+    
+    <a class="mt-16 {{ include("_style/_button") }} " href="{{ siteUrl }}">
+        <span>Go Back to AsiaSpa.com</span>
+        {% include "_component/_icon" with {'icon': 'arrow-right-48'} %}
+    </a>
+</section>
+
+{% endif %}
+
+
 <section class="py-16">
     {% include "_newsletter/_block" %}
 </section>
