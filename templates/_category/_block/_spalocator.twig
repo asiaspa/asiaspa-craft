@@ -21,7 +21,7 @@
                 <h3 class="text-3xl font-hairline md:text-4xl font-headline">{{ block.heading }}</h3>
                 <p>{{ block.standfirst }}</p>
                 <a href="{{ url('spa-locator') }}" class=" {{ include("_style/_button") }}">
-                    <span>Spa Locator</span>
+                    <span>{{ block.callToActionButton|default('Spa Locator') }}</span>
                     {% include "_component/_icon" with {'icon': 'arrow-right-48'} %}
                 </a>
             </div>
