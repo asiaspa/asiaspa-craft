@@ -48,6 +48,9 @@
     </div>
 </section>
 
+<section class="pt-16">
+{% include '_newsletter/_block' with {'layout': 'full' } %}
+</section>
 
 <section class="max-w-screen-xl m-16 mx-auto px-edge">
     {% for year, prints in prints | group('postDate.year') %}

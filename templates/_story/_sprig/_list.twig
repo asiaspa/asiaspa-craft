@@ -18,7 +18,7 @@
     </div>
     
     {% if loop == 3 %}
-    {% include '_newsletter/_block' with {'layouyt': 'full' } %}
+    {% include '_newsletter/_block' with {'layout': 'full' } %}
     {% else %}
     {% include '_component/_adblock' with {'adgroup': ['or', ad.adLeaderboard, ad.adBillboard] } %}
     {% endif %}

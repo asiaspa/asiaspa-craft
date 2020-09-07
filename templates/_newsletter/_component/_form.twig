@@ -4,11 +4,13 @@
 <form action="" method="post">
     <div class="text-primary-700">
         <input type="hidden" name="action" value="mailchimp-subscribe/audience/subscribe">
+        {{ redirectInput('newsletter') }}
         {{ craft.blitz.csrfInput() }}
         
         {% if subscribeResponse %}
             {% if subscribeResponse.success %}
-                <p>Subscribed successfully!</p>
+                <span class="text-2xl font-hairline font-headline">Thank you for signing up! </span>
+                
             {% else %}
                 <p>An error occured: {{ subscribeResponse.message }}</p>
             {% endif %}
