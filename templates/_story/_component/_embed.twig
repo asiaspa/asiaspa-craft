@@ -1,8 +1,9 @@
 {# ! aspect ratio #}
 
 {{ block.embed.render({
-    params: { 
+    
         hidecaption: true
-    } 
-}) }}
+    
+}) | replace({'data-instgrm-captioned': ''}) | raw }}
 <p class="text-sm font-hairline text-gray-500">{{ block.caption }}</p>
+{# {{ block.embed.render | raw }} #}
