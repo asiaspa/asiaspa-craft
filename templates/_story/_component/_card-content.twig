@@ -9,7 +9,7 @@
     {% endif %}
     {% switch pattern|first %}
         {% case '' %}{% if pattern|last == 'card' or pattern|last == 'widecard' %}text-2xl {% else %}text-lg {% endif %}
-        {% case 'sm' %}{{ p }}text-3xl
+        {% case 'sm' %}{{ p }}text-2xl
         {% case 'md' %}{{ p }}text-3xl
         {% case 'lg' %}{{ p }}text-4xl
     {% endswitch %}

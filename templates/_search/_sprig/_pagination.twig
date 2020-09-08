@@ -23,7 +23,7 @@
 <div class="bg-white" id="search-results">
     <div class="max-w-screen-xl pb-8 mx-auto space-y-4 px-edge">
         {# <h2 class="text-3xl tracking-wide font-headline" >Find {{entries|length }} results</h2> #}
-        <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 ">
+        <div class="grid items-start grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {% for entry in entries %}
             {% include "_story/_card" with {
                 'entry': entry,
