@@ -4,9 +4,9 @@
     {% set userLocation = craft.maps.getUserLocation() %}
     {{ sprig("_spa/_sprig/_query", {
         'q':q, 
-        'userLat': userLocation.lat,
-        'userLng': userLocation.lng,
-        'userAddress': userLocation.address
+        'userLat': userLocation.lat?? null,
+        'userLng': userLocation.lng ?? null,
+        'userAddress': userLocation.address ?? null
     }) }}
 
 <script>  
