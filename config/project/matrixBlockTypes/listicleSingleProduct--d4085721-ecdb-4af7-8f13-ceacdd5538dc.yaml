@@ -167,4 +167,4 @@ fields:
     type: craft\fields\PlainText
 handle: listicleSingleProduct
 name: 'Listicle / Single Product'
-sortOrder: 17
+sortOrder: 16

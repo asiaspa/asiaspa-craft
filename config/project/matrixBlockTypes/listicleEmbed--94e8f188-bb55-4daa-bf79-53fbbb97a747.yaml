@@ -97,4 +97,4 @@ fields:
     type: craft\redactor\Field
 handle: listicleEmbed
 name: 'Listicle / Embed'
-sortOrder: 16
+sortOrder: 15

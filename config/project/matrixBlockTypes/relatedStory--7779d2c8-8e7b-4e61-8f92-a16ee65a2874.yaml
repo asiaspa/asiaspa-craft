@@ -40,4 +40,4 @@ fields:
     type: craft\fields\Entries
 handle: relatedStory
 name: 'Related Story'
-sortOrder: 12
+sortOrder: 11

@@ -15,7 +15,7 @@
 
 {# {% do craft.formie.registerAssets('repeater') %} #}
 
-{% set form = form ?? null %}
+{% set form = form ?? 'null' %}
 
 {% if form %}
 <div id="form-{{ form.one().handle }}">
