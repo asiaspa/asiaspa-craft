@@ -15,7 +15,7 @@
 {% set entriesIds = craft.entries 
     .section('spa')
     .status(['live','pending','expired'])
-    .search(q)
+    .title(q)
     .ids() 
 %}
 
@@ -64,18 +64,16 @@
     </a>
     {# search form #}
     <div class="max-w-screen-sm px-24 py-4 mx-auto ">
-        <div class="flex items-center justify-between border-b border-black">
-        <input class="w-full h-12 appearance-none bg-transparentrounded-none"
-            sprig
-            s-trigger="keyup changed"
-            s-target="#spa-results"
-            s-swap="outerHTML"
-            type="search"
-            name="q"
-            value="{{ q }}" 
-            placeholder="Search Spa">
-            <span class="block">{% include "_component/_icon" with {"icon":"zoom-24"} %}</span>
-        </div>
+        <form sprig  s-target="#spa-results"
+                s-swap="outerHTML" class="flex items-center justify-between border-b border-black">
+                
+            <input class="w-full h-12 appearance-none bg-transparentrounded-none"
+                type="search"
+                name="q"
+                value="" 
+                placeholder="Search Spa">
+            <button class="block">{% include "_component/_icon" with {"icon":"zoom-24"} %}</button>
+        </form>
     </div>
 </section>
 {% endif %}

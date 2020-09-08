@@ -1,7 +1,7 @@
 {% if entry %}
 	{% if entry.status() == 'live' %}
 	<a class="w-full pb-8 space-y-2 border-b" href="{{ entry.url }}" target="blank" rel="noopener noreferrer">
-		{% include "_component/_imager" with { image : entry.spaGallery[0] ?? mull, w : 16, h : 9 } %}
+		{% include "_component/_imager" with { image : entry.spaGallery[0] ?? null, w : 16, h : 9 } %}
 		<h3 class="text-2xl font-hairline tracking-wide font-headline ">{{ entry.title }}</h3>
 		<p>{{ entry.spaStandfirst }}</p>
 		<div class="flex items-start justify-start space-x-4">

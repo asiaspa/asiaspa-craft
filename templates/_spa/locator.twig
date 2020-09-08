@@ -1,12 +1,12 @@
 {% extends "_layout/_empty" %}
-{% set q = q|default(null) %}
+{% set q = q ?? null %}
 {% block main %}
     {% set userLocation = craft.maps.getUserLocation() %}
     {{ sprig("_spa/_sprig/_query", {
         'q':q, 
-        'userLat': userLocation.lat,
-        'userLng': userLocation.lng,
-        'userAddress': userLocation.address
+        'userLat': userLocation.lat ?? null,
+        'userLng': userLocation.lng ?? null,
+        'userAddress': userLocation.addres ?? null
     }) }}
 
 <script>  
