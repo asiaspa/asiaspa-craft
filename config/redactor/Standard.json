@@ -11,37 +11,32 @@
         "video",
         "line",
         "redo",
-        "undo"
-    ],
-    "formattingHide": [
-        "pre", "h3", "h4", "h5", "h6"
+        "undo",
+        "html"
     ],
     "plugins": [
         "fullscreen", 
         "video",
         "counter",
-        
         "definedlinks",
         "filemanager",
         "handle",
-        "imagemanager",
         "limiter",
-        
         "table",
-
         "variable",
-        "widget",
         "redactor-split"
     ],
- 
     "linkNewTab": false,
     "linkTarget": "_blank",
     "pasteLinkTarget": "_blank",
     "toolbarFixed": true,
-    "_plugin-buttons": [
+    "formattingHide": [
+        "pre", "h3", "h4", "h5", "h6"
+    ],
+    "_buttons": [
         "file"
     ],
-    "_plugin-comments": [
+    "_plugin": [
         "clips",
         "fontcolor",
         "fontfamily",
@@ -49,6 +44,9 @@
         "properties",
         "specialchars",
         "textdirection",
-        "textexpander"
+        "textexpander",
+        "imagemanager"
+
+
     ]
 }

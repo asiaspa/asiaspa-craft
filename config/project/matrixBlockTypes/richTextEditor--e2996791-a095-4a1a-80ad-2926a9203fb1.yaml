@@ -33,7 +33,7 @@ fields:
       configSelectionMode: choose
       defaultTransform: ''
       manualConfig: ''
-      purifierConfig: ''
+      purifierConfig: standard.json
       purifyHtml: '1'
       redactorConfig: Standard.json
       removeEmptyTags: '1'

@@ -232,7 +232,7 @@ fields:
       configSelectionMode: choose
       defaultTransform: ''
       manualConfig: ''
-      purifierConfig: ''
+      purifierConfig: standard.json
       purifyHtml: '1'
       redactorConfig: Simple.json
       removeEmptyTags: '1'

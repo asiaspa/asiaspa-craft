@@ -3,7 +3,7 @@
     {% include "_component/_hr" %}
     {% for block in entry.spaService %}
     <div class="flex space-x-6">
-        {% if block.image %}
+        {% if block.image | length %}
         <div class="w-1/3">
             {% include "_component/_imager" with {'image': block.image[0] ?? null, 'zoom': true } %}
         </div>

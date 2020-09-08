@@ -12,7 +12,7 @@ settings:
   configSelectionMode: choose
   defaultTransform: ''
   manualConfig: ''
-  purifierConfig: ''
+  purifierConfig: standard.json
   purifyHtml: '1'
   redactorConfig: Simple.json
   removeEmptyTags: '1'
@@ -21,7 +21,7 @@ settings:
   showHtmlButtonForNonAdmins: ''
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
-  uiMode: enlarged
+  uiMode: normal
 translationKeyFormat: null
 translationMethod: none
 type: craft\redactor\Field
