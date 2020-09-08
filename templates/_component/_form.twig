@@ -22,7 +22,7 @@
     {{ craft.formie.renderForm(form.one()) }}
     <script>
     window.addEventListener("load", function () {
-        var csrfInput = document.querySelector('#form-{{ form }} form input[name="CRAFT_CSRF_TOKEN"]');
+        var csrfInput = document.querySelector('#form-{{ form.one().handle }} form input[name="CRAFT_CSRF_TOKEN"]');
         fetch('/actions/blitz/csrf/token')
         .then(result => { return result.text(); })
         .then(result => {
