@@ -17,15 +17,10 @@
         <div class="font-serif text-base font-light text-white md:text-lg">
             {{ entry.asiaspaAwardsIntroAwards}}
         </div>
-        <a href="#awards" class="text-white border-white  {{ include("_style/_button") }}">
+        <a href="#awards" class="text-white border-white {{ include("_style/_button") }}">
             <span>Browse Awards Categories</span>
             {% include "_component/_icon" with {'icon': 'arrow-right-48'} %}
         </a>
-
-        <span class="items-center self-start hidden pt-8 pb-8 space-x-4 text-white md:flex md:pt-32 justify">
-            {% include "_award/_component/_scroll" %}
-            <span>Meet the Judges</span>
-        </span>
     </div>
     <div class="w-full lg:w-2/3">
         <div class="grid grid-cols-3 gap-4 py-8 " data-sal="slide-up">

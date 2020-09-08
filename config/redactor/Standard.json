@@ -4,8 +4,7 @@
         "bold",
         "italic", 
         "underline",
-        "unorderedlist", 
-        "orderedlist", 
+        "lists",
         "link", 
         "image", 
         "video",
@@ -20,20 +19,31 @@
         "counter",
         "definedlinks",
         "filemanager",
-        "handle",
-        "limiter",
+
         "table",
-        "variable",
         "redactor-split"
     ],
+    "formattingAdd": {
+        "lead": {
+            "title": "Lead",
+            "api": "module.block.format",
+            "args": {
+                "tag": "p",
+                "class": "lead"
+            }
+        }
+    },
+    "formattingHide": [
+        "pre", "h1", "h5", "h6"
+    ],
+    "imageResizable": true,
+    "imagePosition": true,
     "linkNewTab": false,
     "linkTarget": "_blank",
     "pasteLinkTarget": "_blank",
     "toolbarFixed": true,
-    "formattingHide": [
-        "pre", "h3", "h4", "h5", "h6"
-    ],
-    "_buttons": [
+
+    "buttonsHide": [
         "file"
     ],
     "_plugin": [
@@ -45,8 +55,9 @@
         "specialchars",
         "textdirection",
         "textexpander",
-        "imagemanager"
-
-
+        "imagemanager",
+        "handle",
+        "limiter",
+        "variable"
     ]
 }
