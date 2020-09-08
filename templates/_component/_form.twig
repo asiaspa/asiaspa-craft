@@ -15,10 +15,10 @@
 
 {# {% do craft.formie.registerAssets('repeater') %} #}
 
-{% set form = form|default('repeater') %}
+{# {% set form = form ?? null %} #}
 
-<div id="form-{{ form }}">
-    {{ craft.formie.renderForm(form) }}
+<div id="form-{{ form.one().handle }}">
+    {{ craft.formie.renderForm(form.one()) }}
     <script>
     window.addEventListener("load", function () {
         var csrfInput = document.querySelector('#form-{{ form }} form input[name="CRAFT_CSRF_TOKEN"]');

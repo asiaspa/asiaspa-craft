@@ -17,15 +17,26 @@ fieldLayouts:
         sortOrder: 1
 fields:
   4a336fb2-d2ca-4881-9be7-c91acb061b37:
-    contentColumnType: integer
+    contentColumnType: string
     fieldGroup: null
     handle: form
     instructions: ''
     name: Form
     searchable: false
+    settings:
+      allowSelfRelations: false
+      limit: '1'
+      localizeRelations: false
+      selectionLabel: ''
+      showSiteMenu: true
+      source: null
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
     translationKeyFormat: null
-    translationMethod: none
-    type: Solspace\Freeform\FieldTypes\FormFieldType
+    translationMethod: site
+    type: verbb\formie\fields\Forms
 handle: form
 name: Form
 sortOrder: 10
