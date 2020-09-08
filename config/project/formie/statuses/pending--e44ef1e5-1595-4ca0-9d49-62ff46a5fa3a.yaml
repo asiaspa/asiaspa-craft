@@ -1,6 +1,5 @@
 color: yellow
-description: ''
 handle: pending
-isDefault: false
+isDefault: '0'
 name: Pending
 sortOrder: 2

@@ -1,6 +1,5 @@
 color: grey
-description: ''
 handle: closed
-isDefault: false
+isDefault: '0'
 name: Closed
 sortOrder: 4
