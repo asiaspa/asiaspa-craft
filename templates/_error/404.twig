@@ -23,6 +23,6 @@
     <p>Page not founded.</p>
 </section>
 
-{% include "_search/_search" with {"showControl": false, "q": lastSeg } %}
+{% include "_search/_search" with {"showControl": false, "q": lastSeg|replace({'-':' '}) } %}
 
 {% endblock %}
