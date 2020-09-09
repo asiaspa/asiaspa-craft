@@ -11,6 +11,10 @@
 </section>
 <section class="mt-8 -mx-edge md:m-0 js-step transition duration-300 {% if not sprig.include %}md:opacity-0 {% endif %}">
     <div class="{{ sideCar }}">
+        {% if entry.storyLandscape %}
+        {% include "_component/_imager" with { 'image':entry.storyHeroImage[0] ?? null, 'zoom':true } %}
+        {% else %}
         {% include "_component/_imager" with { 'image':entry.storyHeroImage[0] ?? null, 'zoom':true, 'mode':'fit' } %}
+        {% endif %}
     </div>
 </section>
