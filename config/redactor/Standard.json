@@ -36,8 +36,6 @@
     "formattingHide": [
         "pre", "h1", "h5", "h6"
     ],
-    "imageResizable": true,
-    "imagePosition": true,
     "linkNewTab": false,
     "linkTarget": "_blank",
     "pasteLinkTarget": "_blank",

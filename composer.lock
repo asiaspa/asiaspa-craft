@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "626186155ed8e28ffb0bd417c90a0987",
+    "content-hash": "2c6f640cc83bd8c34b9c67be1e56d4da",
     "packages": [
         {
             "name": "aelvan/mailchimp-subscribe",
@@ -4021,6 +4021,62 @@
             "time": "2020-08-28T19:41:55+00:00"
         },
         {
+            "name": "masterminds/html5",
+            "version": "2.7.3",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Masterminds/html5-php/zipball/aad73dbfefd71d46072138109ce1288d96c329cc",
+                "reference": "aad73dbfefd71d46072138109ce1288d96c329cc",
+                "shasum": ""
+            },
+            "require": {
+                "ext-ctype": "*",
+                "ext-dom": "*",
+                "ext-libxml": "*",
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.7-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Masterminds\\": "src"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matt Butcher",
+                    "email": "technosophos@gmail.com"
+                },
+                {
+                    "name": "Matt Farina",
+                    "email": "matt@mattfarina.com"
+                },
+                {
+                    "name": "Asmir Mustafic",
+                    "email": "goetas@gmail.com"
+                }
+            ],
+            "description": "An HTML5 parser and serializer.",
+            "homepage": "http://masterminds.github.io/html5-php",
+            "keywords": [
+                "HTML5",
+                "dom",
+                "html",
+                "parser",
+                "querypath",
+                "serializer",
+                "xml"
+            ],
+            "time": "2020-07-05T07:53:37+00:00"
+        },
+        {
             "name": "maxmind-db/reader",
             "version": "v1.7.0",
             "dist": {
@@ -4198,6 +4254,60 @@
                 "issues": "https://github.com/mmikkel/CpFieldInspect-Craft/issues"
             },
             "time": "2020-08-20T20:19:26+00:00"
+        },
+        {
+            "name": "mmikkel/retcon",
+            "version": "2.2.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mmikkel/Retcon-Craft/zipball/07eb048c5bd08a055b498511ca3a2c49a87f5037",
+                "reference": "07eb048c5bd08a055b498511ca3a2c49a87f5037",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0-RC1",
+                "masterminds/html5": "^2.3",
+                "symfony/css-selector": "^3.3.6",
+                "symfony/dom-crawler": "^3.3.6"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Retcon",
+                "handle": "retcon",
+                "schemaVersion": "1.0.0",
+                "hasCpSettings": false,
+                "hasCpSection": false,
+                "changelogUrl": "https://raw.githubusercontent.com/mmikkel/Retcon-Craft/master/CHANGELOG.md",
+                "components": [],
+                "class": "mmikkel\\retcon\\Retcon"
+            },
+            "autoload": {
+                "psr-4": {
+                    "mmikkel\\retcon\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mats Mikkel Rummelhoff",
+                    "homepage": "https://vaersaagod.no"
+                }
+            ],
+            "description": "Powerful Twig filters for mutating and querying HTML",
+            "keywords": [
+                "cms",
+                "craft",
+                "craft-plugin",
+                "craftcms",
+                "retcon"
+            ],
+            "support": {
+                "docs": "https://github.com/mmikkel/Retcon-Craft/blob/master/README.md",
+                "issues": "https://github.com/mmikkel/Retcon-Craft/issues"
+            },
+            "time": "2020-07-19T16:32:23+00:00"
         },
         {
             "name": "monachilada/craft-matrixtoolbar",

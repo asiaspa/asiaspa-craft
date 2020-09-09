@@ -1,3 +1,5 @@
+{# ! need to use `craft.imager.isAnimated(myAsset)` to check if its animated #}
+
 {% set mode = mode ?? 'pin' %}
 {% set caption = caption ?? false %}
 {% set zoom = zoom ?? '' %}
@@ -10,7 +12,8 @@
     image, 
     [{ width: 160 },{ width: 1920 }], 
     { ratio: aspect }, 
-    { fillTransforms: true })
+    { fillTransforms: true },
+    { imgixProfile: 'default' })
 %}
 
 {% if image | length %}

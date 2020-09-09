@@ -10,9 +10,11 @@ use craft\helpers\App;
 
  return [
     'transformer' => 'imgix',
+    'useForNativeTransforms' => true,
     'useForCpThumbs' => true,
-    'fillTransform' => 160,
+    'fillInterval' => 160,
     'imgixApiKey' => App::env('IMGIX_API_KEY'),
+    'imgixProfile' => 'external',
     'imgixConfig' => [
         'default' => [
             'domain' => App::env('IMGIX_DEFAULT_URL'),
@@ -33,12 +35,12 @@ use craft\helpers\App;
             'defaultParams' => ['auto'=>'compress,format', 'q'=>80],
         ]
     ],
-    'storage' => 'gcs',
+    'storages' => ['gcs'],
     'storageConfig' => [
         'gcs' => [
-            'keyFile' => App::env('GCS_KEY_URL'),
+            'keyFile' => App::env('GCS_KEY'),
             'bucket' =>  App::env('GCS_BUCKET'),
-            'folder' => 'trasnforms'
+            'folder' => 'transforms'
         ]
     ]
 ];
