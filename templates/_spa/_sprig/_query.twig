@@ -9,16 +9,42 @@
 
 {% if q %}
 {% set entriesIds = [] %}
+{% set countryIds = [] %}
+{% set cityIds = [] %}
 {% set locationIds = [] %}
 
 {# ----------------- get list of entries ----------------- #}
-{% set entriesIds = craft.entries 
+{# {% set entriesIds = craft.entries 
     .section('spa')
     .status(['live','pending','expired'])
     .title('*'~q~'*')
     .ids() 
-%}
+%} #}
 
+
+{% set countryIds = craft.entries
+    .section('spa')
+    .status(['live','pending','expired'])
+    .spaContactMap({
+        location: null,
+        country: q
+    })
+    .ids() 
+%}
+{# 
+
+{% set cityIds = craft.entries
+    .section('spa')
+    .status(['live','pending','expired'])
+    .spaContactMap({
+        city: q,
+        radius: 50,
+        unit: 'km',
+    })
+    .ids() 
+%} #}
+
+{# 
 {% set locationIds = craft.entries
     .section('spa')
     .status(['live','pending','expired'])
@@ -28,9 +54,9 @@
         unit: 'km',
     })
     .ids() 
-%}
+%} #}
 
-{% set entriesIds = entriesIds | merge(locationIds) %}
+{% set entriesIds = entriesIds | merge(countryIds) | merge(cityIds) | merge(locationIds) %}
 
 {% set entries = craft.entries
     .section('spa')
@@ -64,7 +90,7 @@
     </a>
     {# search form #}
     <div class="max-w-screen-sm px-24 py-4 mx-auto ">
-        <form sprig  s-target="#spa-results"
+        <form sprig s-target="#spa-results"
                 s-swap="outerHTML" class="flex items-center justify-between border-b border-black">
                 
             <input class="w-full h-12 px-4 appearance-none bg-transparentrounded-none"
@@ -97,6 +123,8 @@
     </div>
     
     <div class="w-full overflow-y-auto md:w-1/2 px-edge">
+        {{ q }}
+
         <h2 class="pb-8 text-3xl font-hairline font-headline">Showing {{ entries | length }} Results</h2>
         <div class="grid gap-8 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2" >
             {% for group, entries in entriesByStatus %}
