@@ -52,7 +52,7 @@
 
     {# ------------------- Head JS ------------------- #}
     {# Polyfills detected by User - Agent as per: https: //polyfill.io/v2/docs/examples#feature-detection -- #}
-    <script src="https://cdn.polyfill.io/v3/polyfill.min.js?callback=polyfillsAreLoaded&flags=gated" defer async />
+    <script src="https://cdn.polyfill.io/v3/polyfill.min.js?callback=polyfillsAreLoaded&flags=gated" defer async></script>
     {# Handle tabs gracefully as per https://hackernoon.com/removing-that-ugly-focus-ring-and-keeping-it-too-6c8727fefcd2 #}
     {{ source("_layout/_snippet/_tab-handler.twig") }}
     {{ source("_layout/_snippet/_tiny-cookie.min.js") }}
@@ -74,9 +74,9 @@
     {% endblock %}
 
     {{ sprig.script }}
-    <script src="{{ rev('/dist/manifest.js') }}"> </script>
-    <script src="{{ rev('/dist/vendor.js') }}"> </script>
-    <script src="{{ rev('/dist/app.js') }}"> </script>
+    <script src="{{ rev('/dist/manifest.js') }}"></script>
+    <script src="{{ rev('/dist/vendor.js') }}"></script>
+    <script src="{{ rev('/dist/app.js') }}"></script>
 </body>
 
 </html>

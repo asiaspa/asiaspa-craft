@@ -1,4 +1,4 @@
-<section class="mt-16" data-sal="slide-up">
+<section class="mt-16">
 	{% if entry.storyListicleNumbering %}
 	<div class="inline-block mr-4">
 		<span class="text-5xl font-hairline md:text-6xl text-primary-500 font-display ">{{ listicleNumber }}</span>
@@ -12,7 +12,7 @@
 		{% block listicle %}{% endblock %}
 	</div>
 </section>
-<section class="mt-8" data-sal="slide-up">
+<section class="mt-8">
 	<div class="font-serif prose md:prose-lg">
 		{% include "_story/_component/_rich-text-editor" with {'richTextEditor': block.richTextEditor} %}
 	</div>

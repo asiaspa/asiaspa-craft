@@ -3,12 +3,13 @@
     body:not(.user-is-tabbing) input:focus,
     body:not(.user-is-tabbing) select:focus,
     body:not(.user-is-tabbing) textarea:focus {
-        outline: none;
+        outline: none; !important
     }
 </style>
 
 <script>
     function handleFirstTab(e) {
+        console.log('handleFirstTab')
         if (e.keyCode === 9) {
             document.body.classList.add('user-is-tabbing');
             window.removeEventListener('keydown', handleFirstTab);
@@ -16,6 +17,7 @@
         }
     }
     function handleMouseDownOnce() {
+        console.log('handleMouseDownOnce')
         document.body.classList.remove('user-is-tabbing');
         window.removeEventListener('mousedown', handleMouseDownOnce);
         window.addEventListener('keydown', handleFirstTab);

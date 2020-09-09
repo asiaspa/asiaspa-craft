@@ -1,7 +1,7 @@
 contentColumnType: string
 fieldGroup: 847d91f3-2f4a-4f56-9f9d-40c20e080811
 handle: storyTag
-instructions: ''
+instructions: 'Please select only 1 tag'
 name: 'Story - Tag'
 searchable: false
 settings:

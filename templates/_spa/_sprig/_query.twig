@@ -15,7 +15,7 @@
 {% set entriesIds = craft.entries 
     .section('spa')
     .status(['live','pending','expired'])
-    .title(q)
+    .title('*'~q~'*')
     .ids() 
 %}
 
@@ -67,7 +67,7 @@
         <form sprig  s-target="#spa-results"
                 s-swap="outerHTML" class="flex items-center justify-between border-b border-black">
                 
-            <input class="w-full h-12 appearance-none bg-transparentrounded-none"
+            <input class="w-full h-12 px-4 appearance-none bg-transparentrounded-none"
                 type="search"
                 name="q"
                 value="" 

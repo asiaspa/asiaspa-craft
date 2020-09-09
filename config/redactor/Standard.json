@@ -35,7 +35,7 @@
     },
     "formattingHide": [
         "pre", "h1", "h5", "h6"
-    ],
+    ], 
     "linkNewTab": false,
     "linkTarget": "_blank",
     "pasteLinkTarget": "_blank",

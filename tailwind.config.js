@@ -54,26 +54,41 @@ module.exports = {
                         fontWeight: 600,
                     },
                     h1: {
-                        fontFamily: 'var(--font-headline)'
+                        fontFamily: 'var(--font-headline)',
+                        fontWeight: 300,
+                        letterSpacing: '0.025em',
+                        color: 'var(--color-black)',
                     },
                     h2: {
-                        fontFamily: 'var(--font-headline)'
+                        fontFamily: 'var(--font-headline)',
+                        fontWeight: 100,
+                        letterSpacing: '0.025em',
+                        color: 'var(--color-black)',
                     },
                     h3: {
-                        fontFamily: 'var(--font-headline)'
+                        fontFamily: 'var(--font-headline)',
+                        fontWeight: 100,
+                        letterSpacing: '0.025em',
+                        color: 'var(--color-black)',
                     },
                     h4: {
-                        fontFamily: 'var(--font-headline)'
+                        fontFamily: 'var(--font-headline)',
+                        fontWeight: 300,
+                        letterSpacing: '0.025em',
+                        color: 'var(--color-black)',
+
                     },
                     h5: {
-                        fontFamily: 'var(--font-headline)'
+                        fontFamily: 'var(--font-headline)',
+                        fontWeight: 300,
+                        letterSpacing: '0.025em',
+                        color: 'var(--color-black)',
                     },
                     h6: {
-                        fontFamily: 'var(--font-headline)'
-                    },
-                    figcaption: {
-                        fontFamily: 'var(--font-sans)',
-                        color: 'var(--color-gray-500)'
+                        fontFamily: 'var(--font-headline)',
+                        fontWeight: 300,
+                        letterSpacing: '0.025em',
+                        color: 'var(--color-black)',
                     },
                     a: {
                         color: 'var(--color-primary-500)',
@@ -81,6 +96,14 @@ module.exports = {
                             color: 'var(--color-primary-700)',
                         },
                     },
+                    figcaption: {
+                        fontFamily: 'var(--font-sans)',
+                        color: 'var(--color-gray-700)'
+                    },
+                    blockquote: {
+                        fontFamily: 'var(--font-headline)',
+                        color: 'var(--color-black)'
+                    }
                 },
             },
             'lg': {
