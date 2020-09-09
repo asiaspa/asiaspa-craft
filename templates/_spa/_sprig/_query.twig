@@ -14,15 +14,15 @@
 {% set locationIds = [] %}
 
 {# ----------------- get list of entries ----------------- #}
-{# {% set entriesIds = craft.entries 
+{% set entriesIds = craft.entries 
     .section('spa')
     .status(['live','pending','expired'])
     .title('*'~q~'*')
     .ids() 
-%} #}
+%}
 
 
-{% set countryIds = craft.entries
+{# {% set countryIds = craft.entries
     .section('spa')
     .status(['live','pending','expired'])
     .spaContactMap({
@@ -30,7 +30,7 @@
         country: q
     })
     .ids() 
-%}
+%} #}
 {# 
 
 {% set cityIds = craft.entries
@@ -44,7 +44,7 @@
     .ids() 
 %} #}
 
-{# 
+
 {% set locationIds = craft.entries
     .section('spa')
     .status(['live','pending','expired'])
@@ -54,7 +54,7 @@
         unit: 'km',
     })
     .ids() 
-%} #}
+%}
 
 {% set entriesIds = entriesIds | merge(countryIds) | merge(cityIds) | merge(locationIds) %}
 
