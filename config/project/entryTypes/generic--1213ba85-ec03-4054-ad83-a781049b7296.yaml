@@ -39,6 +39,15 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            fieldUid: 3f41492f-97e1-4608-8456-655f094e4284
+            instructions: ''
+            label: 'Sponsor Note'
+            required: ''
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
             fieldUid: 65bad440-2ce9-4205-93f3-4f17fc67fa67
             instructions: 'Double Click to edit Bio & upload profile pic.'
             label: Byline
@@ -48,16 +57,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 3f41492f-97e1-4608-8456-655f094e4284
-            instructions: ''
-            label: 'Sponsor Note'
-            required: ''
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-          -
-            heading: Layout
+            heading: 'Hero Image'
             type: craft\fieldlayoutelements\Heading
           -
             fieldUid: 02d38f73-db56-4fab-a533-0dc7400f81fe
@@ -67,7 +67,7 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
-            width: 100
+            width: 50
           -
             fieldUid: c704e0b8-fa98-4653-a2a2-ef9937e6764a
             instructions: ''
@@ -78,6 +78,9 @@ fieldLayouts:
             warning: null
             width: 50
           -
+            heading: Content
+            type: craft\fieldlayoutelements\Heading
+          -
             fieldUid: 3c6974ea-4e49-4ab8-a603-0751e5cfd4bf
             instructions: ''
             label: 'Set Number for Listicles'
@@ -85,10 +88,7 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
-            width: 50
-          -
-            heading: Content
-            type: craft\fieldlayoutelements\Heading
+            width: 100
           -
             fieldUid: a9f00eab-73ff-4659-9b15-ee56aa8c8531
             instructions: ''
@@ -123,7 +123,7 @@ fieldLayouts:
           -
             fieldUid: 10f6975d-b749-4638-ac0b-6bf072495899
             instructions: ''
-            label: Print
+            label: 'Print Issue'
             required: ''
             tip: null
             type: craft\fieldlayoutelements\CustomField
