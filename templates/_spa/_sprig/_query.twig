@@ -44,7 +44,7 @@
     .ids() 
 %} #}
 
-
+{# 
 {% set locationIds = craft.entries
     .section('spa')
     .status(['live','pending','expired'])
@@ -54,7 +54,7 @@
         unit: 'km',
     })
     .ids() 
-%}
+%} #}
 
 {% set entriesIds = entriesIds | merge(countryIds) | merge(cityIds) | merge(locationIds) %}
 
@@ -97,6 +97,7 @@
                 type="search"
                 name="q"
                 value="" 
+                autocomplete="off"
                 placeholder="Search Spa">
             <button class="block">{% include "_component/_icon" with {"icon":"zoom-24"} %}</button>
         </form>
@@ -116,7 +117,7 @@
             id: 'map',
             center: {lat: entries|first.spaContactMap.lat|default(userLat), lng: entries|first.spaContactMap.lng|default(userLng)},
             options: {
-                disableDefaultUI: true,
+                disableDefaultUI: false,
                 draggable: true
             },
         }) }}
