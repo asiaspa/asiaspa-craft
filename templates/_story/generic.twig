@@ -1,5 +1,7 @@
 {% extends "_layout/_generic" %}
 {# ------------------- main ------------------- #}
 {% block main %}
-    {{ sprig("_story/_sprig/_story", {'entryId': entry.sourceId }) }}
+{{ sprig("_story/_sprig/_story", {'entryId': entry.sourceId }) }}
+
+
 {% endblock %}

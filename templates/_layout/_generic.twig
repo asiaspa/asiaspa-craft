@@ -5,9 +5,9 @@
 {% block layout %}
 {# ------------------- Aside ------------------- #}
 
-{% if  currentPageType != 'search' and currentPageType != 'error' %}
+{# {% if  currentPageType != 'search' and currentPageType != 'error' %}
     {% include "_layout/_component/_search"  %}
-{% endif %}
+{% endif %} #}
 
 
 {# {% include "_spa/_aside"  ignore missing %} #}
@@ -15,7 +15,7 @@
 {# {% include "_layouts/_components/_promotion" %} #}
 
 {# ------------------- Layout  ------------------- #}
-{% include "_layout/_component/_header" %}
+{# {% include "_layout/_component/_header" %} #}
 
 <main class="relative z-10 min-h-screen pb-16 bg-white border-b">
     {% block main %}
@@ -23,8 +23,8 @@
 </main>
 
 {# ------------------- Footer ------------------- #}
-{% if currentPageType != 'Story' %}
+{# {% if currentPageType != 'Story' %}
     {% include "_layout/_component/_footer" %}
-{% endif %}
+{% endif %} #}
 
 {% endblock %}
