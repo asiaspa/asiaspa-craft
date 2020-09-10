@@ -4,8 +4,13 @@
 </head>
 
 <body>
-    {# {% include "_component/_form" with {'form': 'location'} %} #}
-{{ craft.formie.renderForm('testForm') }}
+{% set form = craft.formie.forms({ handle: 'asiaspaAwardsNominationForm' }) %}
+
+{% include "_component/_form" with {'form':form} %}
+
+
+
+{# {{ craft.formie.renderForm('asiaspaAwardsNominationForm') }} #}
 
 </body>
 
