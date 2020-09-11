@@ -19,7 +19,7 @@
 {% set sideCar = "md:bg-secondary-100 md:fixed md:inset-0 md:w-1/2 flex items-center justify-center" %}
 
 {# -------------------  content ------------------- #}
-{# <article class="flex">
+<article class="flex">
     <div class="hidden w-1/2 md:block bg-secondary-100"></div>
     <div class="flex flex-col justify-center w-full md:w-1/2 px-edge md:mt-96">
         
@@ -43,6 +43,6 @@
         </div>
     </div>
 </section>
-{% endif %}  #}
-{% set form = craft.formie.forms({ handle: 'asiaspaAwardsNominationForm' }) %}
-{% include "_component/_form" with {'form':form} %}
+{% endif %} 
+{# {% set form = craft.formie.forms({ handle: 'asiaspaAwardsNominationForm' }) %}
+{% include "_component/_form" with {'form':form} %} #}

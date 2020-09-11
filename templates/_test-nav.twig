@@ -1,10 +1,3 @@
-<html>
-
-<head>
-</head>
-
-<body>
-{# {% include "_test-nav" %} #}
 {% profile 'beforeimport' %}
 {% set nodes = craft.navigation.nodes()
     .handle('header')
@@ -23,21 +16,3 @@
 
 
 {% endprofile %}
-
-
-
-{# form #}
-
-{% set form = craft.formie.forms({ handle: 'asiaspaAwardsNominationForm' }) %}
-
-{% include "_component/_form" with {'form':form} %}
-
-
-
-
-
-{# {{ craft.formie.renderForm('asiaspaAwardsNominationForm') }} #}
-
-</body>
-
-</html>
