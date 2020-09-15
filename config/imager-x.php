@@ -12,6 +12,7 @@ use craft\helpers\App;
     'transformer' => 'imgix',
     'useForNativeTransforms' => true,
     'useForCpThumbs' => true,
+    'fillTransforms' => true,
     'fillInterval' => 160,
     'imgixApiKey' => App::env('IMGIX_API_KEY'),
     'imgixProfile' => 'external',

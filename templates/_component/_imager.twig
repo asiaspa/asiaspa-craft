@@ -10,14 +10,12 @@
 {% set y = y | default(image.focalPoint.y ?? '0.5')%}
 {% set transformedImages = craft.imager.transformImage(
     image, 
-    [{ width: 160 },{ width: 1920 }], 
-    { ratio: aspect }, 
-    { fillTransforms: true },
+    [{ width: 160},{width: 1920}],
+    { ratio: aspect, fillIntervals: true }, 
     { imgixProfile: 'default' })
 %}
 
 {% if image | length %}
-
     {% set imagerParameter %}
     src="{{ transformedImages | first }}" 
     srcset="{{ transformedImages | first }}" 
