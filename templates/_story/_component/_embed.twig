@@ -1,6 +1,9 @@
 {# ! aspect ratio #}
 
-{{ block.embed.render() | replace({'data-instgrm-captioned': ''}) | raw }}
+{{ block.embed.render() 
+    | replace({'data-instgrm-captioned': ''}) 
+    | retconRemove( 'p' )
+    | retconRemove( 'script' )
+    | raw 
+}}
 <p class="text-sm font-hairline text-gray-500">{{ block.caption }}</p>
-
-
