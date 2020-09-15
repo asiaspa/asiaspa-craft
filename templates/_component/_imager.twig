@@ -11,7 +11,7 @@
 {% set transformedImages = craft.imager.transformImage(
     image, 
     [{ width: 160},{width: 1920}],
-    { ratio: aspect, fillIntervals: true }, 
+    { ratio: aspect, fillTransforms: true }, 
     { imgixProfile: 'default' })
 %}
 
