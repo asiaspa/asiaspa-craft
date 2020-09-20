@@ -17,7 +17,30 @@
 
 {% set form = form ?? null %}
 
-{% if form %}
+{% set formie = craft.formie.forms.handle('contactForm').one() %}
+
+{% if formie %}
+{{ craft.formie.renderForm(form) }}
+<script>
+    // Wait until the DOM is ready
+    document.addEventListener('DOMContentLoaded', (event) => {
+        // Fetch the form we want to deal with
+        let $form = document.querySelector('#formie-form-{{ form.id }}');
+
+        // Find the CSRF token hidden input, so we can replace it
+        let $csrfInput = $form.querySelector('input[name="CRAFT_CSRF_TOKEN"]');
+
+        // Fetch the new token for the form and replace the CSRF input with our new one
+        fetch('/actions/formie/csrf/input')
+            .then(result => { return result.text(); })
+            .then(result => { $csrfInput.outerHTML = result; });
+    });
+</script>
+{% endif %}
+
+{# original one use blitz functions to set up csrf #}
+
+{#  
 <div id="form-{{ form.one().handle }}">
     {{ craft.formie.renderForm(form.one()) }}
     <script>
@@ -31,6 +54,8 @@
         });
     })
     </script>
-</div>
-{% endif %}
+</div> #}
+
+
+
 
