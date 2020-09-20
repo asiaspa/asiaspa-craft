@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9b74c20b636ca46500338ef03c03293c",
+    "content-hash": "b3538487264aea3a866039fca3ab4c7c",
     "packages": [
         {
             "name": "aelvan/mailchimp-subscribe",
@@ -60,16 +60,11 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.154.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "370d1a58004fbeb3896ec48489677e90e653b12f"
-            },
+            "version": "3.154.6",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/370d1a58004fbeb3896ec48489677e90e653b12f",
-                "reference": "370d1a58004fbeb3896ec48489677e90e653b12f",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/83a1382930359e4d4f4c9187239f059d5b282520",
+                "reference": "83a1382930359e4d4f4c9187239f059d5b282520",
                 "shasum": ""
             },
             "require": {
@@ -81,22 +76,6 @@
                 "guzzlehttp/psr7": "^1.4.1",
                 "mtdowling/jmespath.php": "^2.5",
                 "php": ">=5.5"
-            },
-            "require-dev": {
-                "andrewsville/php-token-reflection": "^1.4",
-                "aws/aws-php-sns-message-validator": "~1.0",
-                "behat/behat": "~3.0",
-                "doctrine/cache": "~1.4",
-                "ext-dom": "*",
-                "ext-openssl": "*",
-                "ext-pcntl": "*",
-                "ext-sockets": "*",
-                "nette/neon": "^2.3",
-                "paragonie/random_compat": ">= 2",
-                "phpunit/phpunit": "^4.8.35|^5.4.3",
-                "psr/cache": "^1.0",
-                "psr/simple-cache": "^1.0",
-                "sebastian/comparator": "^1.2.3"
             },
             "suggest": {
                 "aws/aws-php-sns-message-validator": "To validate incoming SNS notifications",
@@ -119,7 +98,6 @@
                     "src/functions.php"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "Apache-2.0"
             ],
@@ -141,7 +119,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2020-09-10T18:12:09+00:00"
+            "time": "2020-09-18T18:16:42+00:00"
         },
         {
             "name": "born05/craft-imagehotspots",
@@ -376,11 +354,11 @@
         },
         {
             "name": "commerceguys/addressing",
-            "version": "v1.0.8",
+            "version": "v1.0.9",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/commerceguys/addressing/zipball/cf202c913c10d85085ab5ed9ec88607e312839ce",
-                "reference": "cf202c913c10d85085ab5ed9ec88607e312839ce",
+                "url": "https://api.github.com/repos/commerceguys/addressing/zipball/7f6b8780ae20862529a0ceaaf102a3f7ff740b91",
+                "reference": "7f6b8780ae20862529a0ceaaf102a3f7ff740b91",
                 "shasum": ""
             },
             "require": {
@@ -419,7 +397,7 @@
                 "localization",
                 "postal"
             ],
-            "time": "2020-05-26T11:04:04+00:00"
+            "time": "2020-09-12T12:15:49+00:00"
         },
         {
             "name": "composer/ca-bundle",
@@ -794,11 +772,11 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "3.5.9",
+            "version": "3.5.11.1",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/23a16c91afcdd2ec31491944de69593b6b27bd41",
-                "reference": "23a16c91afcdd2ec31491944de69593b6b27bd41",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/946a7df05545fb2533a668e0227bfc0030831ec9",
+                "reference": "946a7df05545fb2533a668e0227bfc0030831ec9",
                 "shasum": ""
             },
             "require": {
@@ -830,12 +808,12 @@
                 "seld/cli-prompt": "^1.0.3",
                 "symfony/yaml": "^3.2|^4.0",
                 "true/punycode": "^2.1.0",
-                "twig/twig": "~2.12.0",
+                "twig/twig": "~2.12.5 || ~2.13.1",
                 "voku/portable-utf8": "^5.4.28",
                 "voku/stringy": "^6.2.2",
                 "webonyx/graphql-php": "^0.12.0",
                 "yii2tech/ar-softdelete": "^1.0.2",
-                "yiisoft/yii2": "~2.0.36.0",
+                "yiisoft/yii2": "~2.0.38.0",
                 "yiisoft/yii2-debug": "^2.1.0",
                 "yiisoft/yii2-queue": "~2.3.0",
                 "yiisoft/yii2-swiftmailer": "^2.1.0"
@@ -879,7 +857,7 @@
                 "docs": "https://craftcms.com/docs/3.x/",
                 "rss": "https://github.com/craftcms/cms/releases.atom"
             },
-            "time": "2020-09-08T19:50:38+00:00"
+            "time": "2020-09-18T22:07:13+00:00"
         },
         {
             "name": "craftcms/feed-me",
@@ -2179,11 +2157,11 @@
         },
         {
             "name": "google/auth",
-            "version": "v1.12.0",
+            "version": "v1.13.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/google-auth-library-php/zipball/74cad289014f7ef747618480f6b59f6303357f34",
-                "reference": "74cad289014f7ef747618480f6b59f6303357f34",
+                "url": "https://api.github.com/repos/googleapis/google-auth-library-php/zipball/173191f5defd1d9ae8bdfc28da31b63eb73dd34e",
+                "reference": "173191f5defd1d9ae8bdfc28da31b63eb73dd34e",
                 "shasum": ""
             },
             "require": {
@@ -2194,14 +2172,6 @@
                 "psr/cache": "^1.0",
                 "psr/http-message": "^1.0"
             },
-            "require-dev": {
-                "guzzlehttp/promises": "0.1.1|^1.3",
-                "kelvinmo/simplejwt": "^0.2.5",
-                "phpseclib/phpseclib": "^2",
-                "phpunit/phpunit": "^4.8.36|^5.7",
-                "sebastian/comparator": ">=1.2.3",
-                "squizlabs/php_codesniffer": "^3.5"
-            },
             "suggest": {
                 "phpseclib/phpseclib": "May be used in place of OpenSSL for signing strings or for token management. Please require version ^2."
             },
@@ -2211,7 +2181,6 @@
                     "Google\\Auth\\": "src"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "Apache-2.0"
             ],
@@ -2222,7 +2191,7 @@
                 "google",
                 "oauth2"
             ],
-            "time": "2020-09-08T16:33:56+00:00"
+            "time": "2020-09-18T20:03:05+00:00"
         },
         {
             "name": "google/cloud-core",
@@ -3259,26 +3228,18 @@
         },
         {
             "name": "laminas/laminas-zendframework-bridge",
-            "version": "1.1.0",
+            "version": "1.1.1",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-zendframework-bridge/zipball/4939c81f63a8a4968c108c440275c94955753b19",
-                "reference": "4939c81f63a8a4968c108c440275c94955753b19",
+                "url": "https://api.github.com/repos/laminas/laminas-zendframework-bridge/zipball/6ede70583e101030bcace4dcddd648f760ddf642",
+                "reference": "6ede70583e101030bcace4dcddd648f760ddf642",
                 "shasum": ""
             },
             "require": {
                 "php": "^5.6 || ^7.0 || ^8.0"
             },
-            "require-dev": {
-                "phpunit/phpunit": "^5.7 || ^6.5 || ^7.5 || ^8.1 || ^9.3",
-                "squizlabs/php_codesniffer": "^3.5"
-            },
             "type": "library",
             "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev",
-                    "dev-develop": "1.1.x-dev"
-                },
                 "laminas": {
                     "module": "Laminas\\ZendFrameworkBridge"
                 }
@@ -3291,7 +3252,6 @@
                     "Laminas\\ZendFrameworkBridge\\": "src//"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -3302,13 +3262,7 @@
                 "laminas",
                 "zf"
             ],
-            "funding": [
-                {
-                    "url": "https://funding.communitybridge.org/projects/laminas-project",
-                    "type": "community_bridge"
-                }
-            ],
-            "time": "2020-08-18T16:34:51+00:00"
+            "time": "2020-09-14T14:23:00+00:00"
         },
         {
             "name": "league/csv",
@@ -4705,11 +4659,6 @@
         {
             "name": "nesbot/carbon",
             "version": "2.39.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "326efde1bc09077a26cb77f6e2e32e13f06c27f2"
-            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/326efde1bc09077a26cb77f6e2e32e13f06c27f2",
@@ -5473,11 +5422,11 @@
         },
         {
             "name": "phpdocumentor/reflection-docblock",
-            "version": "5.2.1",
+            "version": "5.2.2",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/d870572532cd70bc3fab58f2e23ad423c8404c44",
-                "reference": "d870572532cd70bc3fab58f2e23ad423c8404c44",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/069a785b2141f5bcf49f3e353548dc1cce6df556",
+                "reference": "069a785b2141f5bcf49f3e353548dc1cce6df556",
                 "shasum": ""
             },
             "require": {
@@ -5486,9 +5435,6 @@
                 "phpdocumentor/reflection-common": "^2.2",
                 "phpdocumentor/type-resolver": "^1.3",
                 "webmozart/assert": "^1.9.1"
-            },
-            "require-dev": {
-                "mockery/mockery": "~1.3.2"
             },
             "type": "library",
             "extra": {
@@ -5501,7 +5447,6 @@
                     "phpDocumentor\\Reflection\\": "src"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -5516,23 +5461,20 @@
                 }
             ],
             "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
-            "time": "2020-08-15T11:14:08+00:00"
+            "time": "2020-09-03T19:13:55+00:00"
         },
         {
             "name": "phpdocumentor/type-resolver",
-            "version": "1.3.0",
+            "version": "1.4.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/e878a14a65245fbe78f8080eba03b47c3b705651",
-                "reference": "e878a14a65245fbe78f8080eba03b47c3b705651",
+                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/6a467b8989322d92aa1c8bf2bebcc6e5c2ba55c0",
+                "reference": "6a467b8989322d92aa1c8bf2bebcc6e5c2ba55c0",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.2 || ^8.0",
                 "phpdocumentor/reflection-common": "^2.0"
-            },
-            "require-dev": {
-                "ext-tokenizer": "*"
             },
             "type": "library",
             "extra": {
@@ -5545,7 +5487,6 @@
                     "phpDocumentor\\Reflection\\": "src"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -5556,7 +5497,7 @@
                 }
             ],
             "description": "A PSR-5 based resolver of Class names, Types and Structural Element Names",
-            "time": "2020-06-27T10:12:23+00:00"
+            "time": "2020-09-17T18:55:26+00:00"
         },
         {
             "name": "phpoffice/phpspreadsheet",
@@ -6319,11 +6260,11 @@
         },
         {
             "name": "putyourlightson/craft-sprig",
-            "version": "1.0.0-beta.13",
+            "version": "1.0.0-beta.16",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/putyourlightson/craft-sprig/zipball/828f72fe738c831097054b9b02f56296f91cbc55",
-                "reference": "828f72fe738c831097054b9b02f56296f91cbc55",
+                "url": "https://api.github.com/repos/putyourlightson/craft-sprig/zipball/fae2f3c4ba6df4855589638753870f9686b54f83",
+                "reference": "fae2f3c4ba6df4855589638753870f9686b54f83",
                 "shasum": ""
             },
             "require": {
@@ -6353,7 +6294,7 @@
                 "source": "https://github.com/putyourlightson/craft-sprig",
                 "issues": "https://github.com/putyourlightson/craft-sprig/issues"
             },
-            "time": "2020-09-03T07:15:11+00:00"
+            "time": "2020-09-18T20:14:25+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
@@ -6741,11 +6682,11 @@
         },
         {
             "name": "spacecatninja/imager-x",
-            "version": "v3.2.0",
+            "version": "v3.2.1",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spacecatninja/craft-imager-x/zipball/19359be295bf2c7925238c221c8800dd3c882ab8",
-                "reference": "19359be295bf2c7925238c221c8800dd3c882ab8",
+                "url": "https://api.github.com/repos/spacecatninja/craft-imager-x/zipball/6fefdb95ffe4a89507921171219033546287db7c",
+                "reference": "6fefdb95ffe4a89507921171219033546287db7c",
                 "shasum": ""
             },
             "require": {
@@ -6801,7 +6742,7 @@
                 "docs": "http://imager-x.spacecat.ninja/",
                 "issues": "https://github.com/spacecatninja/craft-imager-x/issues"
             },
-            "time": "2020-09-03T19:35:06+00:00"
+            "time": "2020-09-12T18:41:16+00:00"
         },
         {
             "name": "ssnepenthe/color-utils",
@@ -6912,11 +6853,11 @@
         },
         {
             "name": "studioespresso/craft-navigate",
-            "version": "2.7.0",
+            "version": "2.7.1",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/studioespresso/craft3-navigate/zipball/c7f5015d887113d5bc8a388d528bb9c0f853aef5",
-                "reference": "c7f5015d887113d5bc8a388d528bb9c0f853aef5",
+                "url": "https://api.github.com/repos/studioespresso/craft3-navigate/zipball/392848f878125f1e221182bbb481771e4ed18277",
+                "reference": "392848f878125f1e221182bbb481771e4ed18277",
                 "shasum": ""
             },
             "require": {
@@ -6963,7 +6904,7 @@
                 "docs": "https://github.com/studioespresso/craft3-navigate/blob/master/README.md",
                 "issues": "https://github.com/studioespresso/craft3-navigate/issues"
             },
-            "time": "2020-08-29T17:50:17+00:00"
+            "time": "2020-09-17T14:48:14+00:00"
         },
         {
             "name": "sunra/php-simple-html-dom-parser",
@@ -9308,26 +9249,22 @@
         },
         {
             "name": "twig/twig",
-            "version": "v2.12.5",
+            "version": "v2.13.1",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/18772e0190734944277ee97a02a9a6c6555fcd94",
-                "reference": "18772e0190734944277ee97a02a9a6c6555fcd94",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/57e96259776ddcacf1814885fc3950460c8e18ef",
+                "reference": "57e96259776ddcacf1814885fc3950460c8e18ef",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.0",
+                "php": ">=7.1.3",
                 "symfony/polyfill-ctype": "^1.8",
                 "symfony/polyfill-mbstring": "^1.3"
-            },
-            "require-dev": {
-                "psr/container": "^1.0",
-                "symfony/phpunit-bridge": "^4.4|^5.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.12-dev"
+                    "dev-master": "2.13-dev"
                 }
             },
             "autoload": {
@@ -9338,7 +9275,6 @@
                     "Twig\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -9364,7 +9300,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2020-02-11T15:31:23+00:00"
+            "time": "2020-08-05T15:09:04+00:00"
         },
         {
             "name": "unionco/calendarize",
@@ -9680,11 +9616,11 @@
         },
         {
             "name": "verbb/formie",
-            "version": "1.2.10",
+            "version": "1.2.14",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/verbb/formie/zipball/dee5173a503b5d86cf4bb58817118d1279daaf75",
-                "reference": "dee5173a503b5d86cf4bb58817118d1279daaf75",
+                "url": "https://api.github.com/repos/verbb/formie/zipball/5711fd8c4c41cecfc6b43c01397142424a9275ee",
+                "reference": "5711fd8c4c41cecfc6b43c01397142424a9275ee",
                 "shasum": ""
             },
             "require": {
@@ -9738,7 +9674,7 @@
                 "docs": "https://github.com/verbb/formie",
                 "rss": "https://github.com/verbb/formie/commits/v2.atom"
             },
-            "time": "2020-09-10T10:58:38+00:00"
+            "time": "2020-09-17T13:45:06+00:00"
         },
         {
             "name": "verbb/navigation",
@@ -10724,11 +10660,11 @@
         },
         {
             "name": "yiisoft/yii2",
-            "version": "2.0.36",
+            "version": "2.0.38",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/a557111ea6c27794b98c98b76ff3f127eb55f309",
-                "reference": "a557111ea6c27794b98c98b76ff3f127eb55f309",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/fd01e747cc66a049ec105048f0ab8dfbdf60bf4b",
+                "reference": "fd01e747cc66a049ec105048f0ab8dfbdf60bf4b",
                 "shasum": ""
             },
             "require": {
@@ -10758,7 +10694,6 @@
                     "yii\\": ""
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -10815,21 +10750,7 @@
                 "framework",
                 "yii2"
             ],
-            "funding": [
-                {
-                    "url": "https://github.com/yiisoft",
-                    "type": "github"
-                },
-                {
-                    "url": "https://opencollective.com/yiisoft",
-                    "type": "open_collective"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/yiisoft/yii2",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2020-07-07T21:45:32+00:00"
+            "time": "2020-09-14T21:52:10+00:00"
         },
         {
             "name": "yiisoft/yii2-composer",
