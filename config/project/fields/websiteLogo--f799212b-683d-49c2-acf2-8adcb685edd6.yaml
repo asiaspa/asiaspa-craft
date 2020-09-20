@@ -12,6 +12,7 @@ settings:
   defaultUploadLocationSubpath: branding/
   limit: '1'
   localizeRelations: false
+  previewMode: full
   restrictFiles: '1'
   selectionLabel: 'Upload SVG'
   showSiteMenu: true

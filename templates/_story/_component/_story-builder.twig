@@ -1,5 +1,6 @@
 {# ------------------- Eager Loading  ------------------- #}
 
+
 {% set blocks = matrix.with([
     'slider:slide.heroImage',
     'gallery:gallery',
@@ -29,7 +30,7 @@
 %}
 {% set listicleNumber = 0 %}
 
-{% for block in matrix %}
+{% for block in matrix.all() %}
     {% if block.type.handle in listicleTypes %}
     {% set listicleNumber = listicleNumber + 1 %}
     {% endif %}

@@ -1,7 +1,7 @@
 assets:
   tempSubpath: temp
   tempVolumeUid: 883ab42c-10f1-4e32-a559-61f23e4e3775
-dateModified: 1599780155
+dateModified: 1600618107
 email:
   fromEmail: asiaspa.dev@gmail.com
   fromName: AsiaSpa
@@ -236,7 +236,7 @@ plugins:
     licenseKey: $PLUGIN_NAVIGATE_LC
     schemaVersion: 2.4.0
   navigation:
-    enabled: true
+    enabled: false
     schemaVersion: 1.0.19
   oembed:
     enabled: true

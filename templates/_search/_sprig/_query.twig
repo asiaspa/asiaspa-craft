@@ -1,7 +1,7 @@
 {% set showControl = showControl|default(false) %}
 {% set q = q|default(null) %}
 
-{% if sprig.include %}
+{% if sprig.isInclude %}
 <section class="sticky top-0 z-20 bg-white">
     {# toggle #}
     {% if showControl %}
