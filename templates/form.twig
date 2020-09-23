@@ -2,21 +2,7 @@
 
 {% block main %}
 
-
-<div class="p-edge">
-    <span>This form use sprig to ajax load </span>
-        {{ sprig("_ajax-form", {'formhandle':'testform1'} )}}
-</div>
-<hr/>
-<div class="p-edge" >
-    <span>This form use import to load </span>
-        {% include "_ajax-form" with {'formhandle': 'testform2' } %}
-</div>  
-
-{# 
-<hr/>
-
 {% include "_script.twig" %}
-{{ sprig ("_script.twig") }} #}
+{{ sprig ("_script.twig") }} 
 
 {% endblock %}
