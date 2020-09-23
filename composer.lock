@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "51e97a3165eaa3d2a43bdac8223c67bb",
+    "content-hash": "9a10a3359cd465880816155d03b5e32c",
     "packages": [
         {
             "name": "aelvan/mailchimp-subscribe",
@@ -60,11 +60,11 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.154.6",
+            "version": "3.154.7",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/83a1382930359e4d4f4c9187239f059d5b282520",
-                "reference": "83a1382930359e4d4f4c9187239f059d5b282520",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/fa2bf35b5d80e9597e5a2cd7e337eeeb44d09d9c",
+                "reference": "fa2bf35b5d80e9597e5a2cd7e337eeeb44d09d9c",
                 "shasum": ""
             },
             "require": {
@@ -119,7 +119,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2020-09-18T18:16:42+00:00"
+            "time": "2020-09-21T18:12:58+00:00"
         },
         {
             "name": "born05/craft-imagehotspots",
@@ -6682,11 +6682,11 @@
         },
         {
             "name": "spacecatninja/imager-x",
-            "version": "v3.2.1",
+            "version": "v3.2.2",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spacecatninja/craft-imager-x/zipball/6fefdb95ffe4a89507921171219033546287db7c",
-                "reference": "6fefdb95ffe4a89507921171219033546287db7c",
+                "url": "https://api.github.com/repos/spacecatninja/craft-imager-x/zipball/27b1d080cf1f4c2f655b6b66b03157e0eadb7e8d",
+                "reference": "27b1d080cf1f4c2f655b6b66b03157e0eadb7e8d",
                 "shasum": ""
             },
             "require": {
@@ -6742,7 +6742,7 @@
                 "docs": "http://imager-x.spacecat.ninja/",
                 "issues": "https://github.com/spacecatninja/craft-imager-x/issues"
             },
-            "time": "2020-09-12T18:41:16+00:00"
+            "time": "2020-09-22T10:12:44+00:00"
         },
         {
             "name": "ssnepenthe/color-utils",
@@ -9616,11 +9616,11 @@
         },
         {
             "name": "verbb/formie",
-            "version": "1.2.14",
+            "version": "1.2.16",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/verbb/formie/zipball/5711fd8c4c41cecfc6b43c01397142424a9275ee",
-                "reference": "5711fd8c4c41cecfc6b43c01397142424a9275ee",
+                "url": "https://api.github.com/repos/verbb/formie/zipball/16c5d7724544fb2ff80f12a3bf92ffeb7b3dab52",
+                "reference": "16c5d7724544fb2ff80f12a3bf92ffeb7b3dab52",
                 "shasum": ""
             },
             "require": {
@@ -9674,7 +9674,7 @@
                 "docs": "https://github.com/verbb/formie",
                 "rss": "https://github.com/verbb/formie/commits/v2.atom"
             },
-            "time": "2020-09-17T13:45:06+00:00"
+            "time": "2020-09-22T06:25:25+00:00"
         },
         {
             "name": "verbb/navigation",

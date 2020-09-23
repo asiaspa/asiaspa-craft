@@ -1,46 +1,15 @@
-<html>
+{% extends "_layout/_empty" %}
 
-<head>
-{# {% do seomatic.config.renderEnabled(false) %} #}
-
-</head>
-
-<body>
-{# {% include "_test-nav" %} #}
-{% profile 'beforeimport' %}
-
-{% set nodes = craft.navigation.nodes()
-    .handle('header')
-    .level(1)
-    .all()
-%}
-
-<ul class="lg:flex-grow">
-    {% nav node in nodes %}
-    <li class="lg:inline-block">
-        <a class="block p-4 text-2xl transition duration-300 lg:text-xl h-min-16 lg:inline-block hover:text-primary-500"
-            href="{{ node.url }}">{{ node.title }}</a>
-    </li>
-    {% endnav %}
-</ul>
+{% block main %}
 
 
-{% endprofile %}
+ <div>
+    <span>This form use sprig to load  </span>
+        {{ sprig("_ajaxform")}}
+    </div>
+    {# <div >
+    <span>This form use import to load  </span>
+        {% include "_ajaxform" %}
+    </div>   #}
 
-
-
-{# form #}
-{# 
-{% set form = 'asiaspaAwardsNominationForm'  %}
-
-{% include "_component/_form" with {'form':form} %} #}
-
-
-
-
-
-{# {{ craft.formie.renderForm('asiaspaAwardsNominationForm') }} #}
-
-</body>
-
-</html>
+{% endblock %}

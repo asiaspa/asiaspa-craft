@@ -4,6 +4,7 @@
 {% set blocks = matrix.with([
     'slider:slide.heroImage',
     'gallery:gallery',
+    'form:form',
 
     'listicleSingleImage:image',
     'listicleImageSlider:slides',
@@ -36,6 +37,5 @@
     {% endif %}
     {# {% include  "_stories/_blocks/_" ~ block.type.handle | lower with {'block':block} %} #}
     {% include  "_story/_block/_" ~ block.type.handle | lower ignore missing with {'block':block} %}
-
 {% endfor %}
  
