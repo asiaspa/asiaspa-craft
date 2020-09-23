@@ -1,4 +1,4 @@
-enabled: '1'
+enabled: true
 handle: entry
 name: Entry
 settings:
