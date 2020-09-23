@@ -1,2 +1,2 @@
-       {% set form = craft.formie.forms({ handle: 'testform' }).one() %}
-        {% include "_component/_form" with {'form': form } %}
+{% set form = craft.formie.forms({ handle: formhandle }).one() %}
+{% include "_component/_form" with {'form': form } %}
