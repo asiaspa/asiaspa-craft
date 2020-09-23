@@ -3,14 +3,14 @@
 {% block main %}
 
 
-<div>
+<div class="p-edge">
     <span>This form use sprig to ajax load </span>
-        {{ sprig("_ajax-form")}}
+        {{ sprig("_ajax-form", {'form':'testform1'} )}}
 </div>
 <hr/>
-<div >
+<div class="p-edge" >
     <span>This form use import to load </span>
-        {% include "_ajax-form" %}
+        {% include "_ajax-form" with {'form': 'testform2' } %}
 </div>  
 
 {% endblock %}
