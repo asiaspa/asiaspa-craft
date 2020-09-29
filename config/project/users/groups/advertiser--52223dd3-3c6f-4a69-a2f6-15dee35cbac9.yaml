@@ -2,30 +2,30 @@ description: ''
 handle: advertiser
 name: 'Advertiser '
 permissions:
-  - accesssitewhensystemisoff
+  - accesscp
   - accesscpwhensystemisoff
   - accessplugin-ad-wizard
-  - accesscp
-  - 'publishentries:73c18577-4ee7-4d1d-be3f-133db7de04c5'
-  - 'publishpeerentrydrafts:73c18577-4ee7-4d1d-be3f-133db7de04c5'
-  - 'deletepeerentrydrafts:73c18577-4ee7-4d1d-be3f-133db7de04c5'
-  - 'editpeerentrydrafts:73c18577-4ee7-4d1d-be3f-133db7de04c5'
-  - 'editentries:73c18577-4ee7-4d1d-be3f-133db7de04c5'
-  - 'saveassetinvolume:24d9488c-1c58-436d-abd8-a556676705be'
+  - accesssitewhensystemisoff
   - 'createfoldersinvolume:24d9488c-1c58-436d-abd8-a556676705be'
   - 'deletefilesandfoldersinvolume:24d9488c-1c58-436d-abd8-a556676705be'
-  - 'replacefilesinvolume:24d9488c-1c58-436d-abd8-a556676705be'
-  - 'editimagesinvolume:24d9488c-1c58-436d-abd8-a556676705be'
-  - 'editpeerfilesinvolume:24d9488c-1c58-436d-abd8-a556676705be'
-  - 'replacepeerfilesinvolume:24d9488c-1c58-436d-abd8-a556676705be'
+  - 'deletepeerentrydrafts:73c18577-4ee7-4d1d-be3f-133db7de04c5'
   - 'deletepeerfilesinvolume:24d9488c-1c58-436d-abd8-a556676705be'
+  - 'editentries:73c18577-4ee7-4d1d-be3f-133db7de04c5'
+  - 'editimagesinvolume:24d9488c-1c58-436d-abd8-a556676705be'
+  - 'editpeerentrydrafts:73c18577-4ee7-4d1d-be3f-133db7de04c5'
+  - 'editpeerfilesinvolume:24d9488c-1c58-436d-abd8-a556676705be'
   - 'editpeerimagesinvolume:24d9488c-1c58-436d-abd8-a556676705be'
+  - 'publishentries:73c18577-4ee7-4d1d-be3f-133db7de04c5'
+  - 'publishpeerentrydrafts:73c18577-4ee7-4d1d-be3f-133db7de04c5'
+  - 'replacefilesinvolume:24d9488c-1c58-436d-abd8-a556676705be'
+  - 'replacepeerfilesinvolume:24d9488c-1c58-436d-abd8-a556676705be'
+  - 'saveassetinvolume:24d9488c-1c58-436d-abd8-a556676705be'
+  - sproutforms-editentries
+  - sproutforms-editforms
+  - sproutforms-editnotifications
+  - sproutforms-editreports
+  - sproutforms-viewentries
+  - sproutforms-viewnotifications
+  - sproutforms-viewreports
   - 'viewpeerfilesinvolume:24d9488c-1c58-436d-abd8-a556676705be'
   - 'viewvolume:24d9488c-1c58-436d-abd8-a556676705be'
-  - sproutforms-editforms
-  - sproutforms-editentries
-  - sproutforms-viewentries
-  - sproutforms-editnotifications
-  - sproutforms-viewnotifications
-  - sproutforms-editreports
-  - sproutforms-viewreports

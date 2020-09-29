@@ -4,14 +4,9 @@
 
 {% block layout %}
 {# ------------------- Aside ------------------- #}
-{% if  currentPageType != 'search' and currentPageType != 'error' %}
+{% if currentPageType != 'search' and currentPageType != 'error' %}
     {% include "_layout/_component/_search"  %}
 {% endif %}
-
-
-{# {% include "_spa/_aside"  ignore missing %} #}
-
-{# {% include "_layouts/_components/_promotion" %} #}
 
 {# ------------------- Layout  ------------------- #}
 {% include "_layout/_component/_header" %}

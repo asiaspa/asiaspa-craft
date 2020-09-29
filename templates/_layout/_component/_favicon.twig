@@ -1,0 +1,19 @@
+{% set sizes = [16, 32, 48, 180, 192] %}
+
+{% if website.websiteLogoSimple | length  and website.websiteLogoSimple[0].kind == 'image' %}
+{% for size in sizes %}
+{% set transform = craft.imager.transformImage(
+    website.websiteLogoSimple[0], 
+    { width: size },
+    { imgixProfile: 'default' }
+) %}
+
+{{ tag('link', {
+   rel: 'icon',
+   sizes: size~'x'~size,
+   type: 'image/png',
+   href: transform,
+}) }}
+
+{% endfor %}
+{% endif %}
