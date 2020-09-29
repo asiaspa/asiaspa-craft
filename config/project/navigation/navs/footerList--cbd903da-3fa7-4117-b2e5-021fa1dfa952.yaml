@@ -1,0 +1,9 @@
+handle: footerList
+instructions: ''
+maxNodes: ''
+name: 'Footer - List'
+propagateNodes: false
+sortOrder: 3
+structure:
+  maxLevels: null
+  uid: 1189a280-e412-4ba2-ab4f-9c5467e25052

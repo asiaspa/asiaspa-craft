@@ -1,0 +1,9 @@
+handle: headerLeftList
+instructions: ''
+maxNodes: ''
+name: 'Header - Left List'
+propagateNodes: false
+sortOrder: 1
+structure:
+  maxLevels: '1'
+  uid: bb3b3c51-fc66-48eb-964d-f300fdccd2fb

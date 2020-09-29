@@ -4,6 +4,7 @@ Asiaspa website revamp project
 ## Transition Document
 - [ ] Discuss service level agreement
 - [ ] Runcloud $8, Google Cloud, Digital Ocean, Imgix - all billing settings
+- [ ] Credentials for Gmail & Lastpass
 - [ ] Invoice for August & September
 - [ ] Invoice for Licenses
 - [ ] Invoice for Dev cost
@@ -12,13 +13,10 @@ Asiaspa website revamp project
 
 ## TODO
 - [ ] Gmail sent/reply issue 
-- [ ] Register-service-worker
 - [ ] slim the swiper js
 - [ ] searchit template query predefined
 - [ ] pagebulder - flip gallery
-- [ ] embed - caption issue
-- [ ] story left & right issue
-- [ ] feedme issue, and move print from category to entries.
+- [ ] embed - instagram API issue
 - [ ] Modify the ad engine to be more automatic using better query
 - [ ] Move suppliment issues to bottom
 

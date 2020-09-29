@@ -1,4 +1,8 @@
-{% set headerLeftList = craft.navigate.raw('headerLeftList') %}
+{% set headerLeftList = craft.navigation.nodes()
+    .handle('headerLeftList')
+    .level(1)
+    .all()
+%}
 
 <aside id="nav"
        class="fixed inset-0 z-50 flex flex-row transition duration-300 transform translate-x-full md:inset-auto md:relative md:items-center md:flex-grow md:translate-x-0 ">
@@ -11,14 +15,14 @@
             {% include "_component/_icon" with { 'icon':'close-24'} %}
         </a>
 
-        {% for node in headerLeftList %}
+        {% nav node in headerLeftList %}
         <a class="block text-2xl tracking-wide transition duration-300 md:p-0 md:text-base font-sans-display hover:text-primary-500"
-           {% if node.blank %}
+           {% if node.newWindow %}
            target="_blank"
            rel="noopener noreferrer"
            {% endif %}
-           href="{{ node.url }}">{{ node.name }}</a>
-        {% endfor %}
+           href="{{ node.url }}">{{ node.title }}</a>
+        {% endnav %}
     </div>
 
 </aside>

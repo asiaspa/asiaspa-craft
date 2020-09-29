@@ -1,0 +1,9 @@
+handle: headerRightList
+instructions: ''
+maxNodes: ''
+name: 'Header - Right List '
+propagateNodes: false
+sortOrder: 2
+structure:
+  maxLevels: '1'
+  uid: 2b6d687b-ca76-4603-877d-95d10233a52d
