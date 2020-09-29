@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2e8bf60dd98f062895a509a8f668fa5e",
+    "content-hash": "aa6981381c21f30822805952909e67c8",
     "packages": [
         {
             "name": "aelvan/mailchimp-subscribe",
@@ -9489,11 +9489,11 @@
         },
         {
             "name": "verbb/navigation",
-            "version": "1.3.29",
+            "version": "1.3.31",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/verbb/navigation/zipball/01084bc37198a56d59636b4642ee0d0be76621eb",
-                "reference": "01084bc37198a56d59636b4642ee0d0be76621eb",
+                "url": "https://api.github.com/repos/verbb/navigation/zipball/5d3f25841998e1b015edd3f54a48d650751857e9",
+                "reference": "5d3f25841998e1b015edd3f54a48d650751857e9",
                 "shasum": ""
             },
             "require": {
@@ -9537,7 +9537,7 @@
                 "docs": "https://github.com/verbb/navigation",
                 "rss": "https://github.com/verbb/navigation/commits/v2.atom"
             },
-            "time": "2020-09-16T11:30:41+00:00"
+            "time": "2020-09-29T00:15:19+00:00"
         },
         {
             "name": "verbb/super-table",

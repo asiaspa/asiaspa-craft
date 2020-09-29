@@ -1,6 +1,15 @@
 # Brief
 Asiaspa website revamp project
 
+## Transition Document
+- [ ] Discuss service level agreement
+- [ ] Runcloud $8, Google Cloud, Digital Ocean, Imgix - all billing settings
+- [ ] Invoice for August & September
+- [ ] Invoice for Licenses
+- [ ] Invoice for Dev cost
+- [ ] 
+
+
 ## TODO
 - [ ] Gmail sent/reply issue 
 - [ ] Register-service-worker
