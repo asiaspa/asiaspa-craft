@@ -1,8 +1,8 @@
 contentColumnType: string
-fieldGroup: c988c230-88d1-42da-86a6-8a60a7a243f8
-handle: asiaspaAwardsEnterForm
+fieldGroup: f6ccb015-3533-491f-8f9c-775d16605b99
+handle: newsletterForm
 instructions: ''
-name: 'AsiaSpa Awards - Enter - Form'
+name: 'Newsletter - Form'
 searchable: false
 settings:
   allowSelfRelations: false

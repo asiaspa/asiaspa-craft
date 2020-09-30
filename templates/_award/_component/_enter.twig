@@ -20,8 +20,14 @@
     <section class="max-w-screen-md pt-16 mx-auto px-edge" > 
         <div class="pt-16 pb-64 font-sans text-base font-hairline tracking-wide text-white ">
         {% if entry.asiaspaAwardsEnterForm is not null %}
-            {% include "_form/_form-rendering" with {'form': entry.asiaspaAwardsEnterForm.handle } %}
+            {% include "_component/_form" with {'form': entry.asiaspaAwardsEnterForm.one() } %}
         {% endif %}
         </div>
     </section>
 </aside>
+
+<!-- hotfix-->
+<style>
+.fui-heading, .fui-label, .fui-legend { color: white;}
+
+</style>

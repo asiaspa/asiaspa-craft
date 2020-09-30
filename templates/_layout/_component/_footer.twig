@@ -1,5 +1,8 @@
-{% set footerNodes = craft.navigate.raw('footerList') %}
-
+{% set footerList = craft.navigation.nodes()
+    .handle('footerList')
+    .level(1)
+    .all()
+%}
 <footer class="sticky inset-x-0 bottom-0 py-8 text-white bg-black">
     {# {% include "_newsletter/_block"  with {'layout': 'full' }%} #}
     <div class="max-w-screen-xl mx-auto space-y-4 px-edge">
@@ -21,11 +24,11 @@
             </div>
 
             <div class="flex flex-col space-y-2 text-center md:flex-row md:space-x-4 md:space-y-0 sm:text-right">
-                {% for node in footerNodes %}
+                {% for node in footerList %}
                 <a class="text-sm transition duration-300 hover:text-primary-500"
-                   {% if node.blank %}target="_blank" rel="noopener noreferrer" {% endif %}
+                   {% if node.newWindow %}target="_blank" rel="noopener noreferrer" {% endif %}
                    href="{{ node.url }}">
-                   {{ node.name }}
+                   {{ node.title }}
                 </a>
                 {% endfor %}
             </div>
