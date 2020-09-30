@@ -1,9 +1,13 @@
-contentColumnType: integer
+contentColumnType: string
 fieldGroup: a7b23ced-f8be-4c09-bba7-84b5e4552f75
 handle: spaAsiaspaPerksForm
 instructions: ''
 name: 'Spa - AsiaSpa Perks - Form'
 searchable: false
+settings:
+  errorMessage: 'Component class ''Solspace\Freeform\FieldTypes\FormFieldType'' belongs to a disabled plugin (Freeform).'
+  expectedType: Solspace\Freeform\FieldTypes\FormFieldType
+  settings: null
 translationKeyFormat: null
 translationMethod: none
-type: Solspace\Freeform\FieldTypes\FormFieldType
+type: craft\fields\MissingField
